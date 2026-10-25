@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第33題 · 二進制表示</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第33題</span>
+    <h1>把 2 的冪之和寫成二進制</h1>
+    <p class="sub">指數律 · 位值</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $11+2^{6}+2^{10}+2^{11}=$
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$110001001011_{2}$</li>
+      <li><span class="ol">B</span>$110100100011_{2}$</li>
+      <li><span class="ol">C</span>$1100001001011_{2}$</li>
+      <li><span class="ol">D</span>$1101001000011_{2}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把 11 拆成 2 的冪</div>
+      <div class="rule">
+        <span class="rule-name">二進制展開</span>
+        <span class="rule-math">\(N=a_{k}2^{k}+a_{k-1}2^{k-1}+\cdots+a_{1}2^{1}+a_{0}2^{0}\)</span>
+        <span class="rule-why">每個 $a_i$ 只能是 $0$ 或 $1$，位置 $i$ 有值就寫 $1$。</span>
+      </div>
+      其餘三項已經是 2 的冪，只有 11 要拆：
+      \[11=8+2+1=2^{3}+2^{1}+2^{0}.\]
+      所以整條式一共有六個位帶值：$2^{11},2^{10},2^{6},2^{3},2^{1},2^{0}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由高位到低位逐格填 1 或 0</div>
+      <div class="rule">
+        <span class="rule-name">最高位</span>
+        <span class="rule-math">\(2^{11}=2048,\quad 2^{12}=4096\)</span>
+        <span class="rule-why">總和的最高位是 $2^{11}$，所以答案是 12 位二進制數。</span>
+      </div>
+      由 $2^{11}$ 排到 $2^{0}$：有值的位寫 $1$，其餘寫 $0$：
+      \[
+      \begin{array}{c|cccccccccccc}
+      \text{位} & 11&10&9&8&7&6&5&4&3&2&1&0\\ \hline
+      a_i & 1&1&0&0&0&1&0&0&1&0&1&1
+      \end{array}
+      \]
+      即 $110001001011_{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用位數與總值排除其他選項</div>
+      <div class="rule">
+        <span class="rule-name">選項檢查</span>
+        <span class="rule-math">\(2^{11}+2^{10}+2^{6}+2^{3}+2^{1}+2^{0}=3147\)</span>
+        <span class="rule-why">先看位數，再看有值的位是否吻合。</span>
+      </div>
+      總值 $=3147$，而 $2^{11}<3147<2^{12}$，所以答案必須是 12 位。
+      選項 C、D 都是 13 位（首位對應 $2^{12}=4096$），直接排除。
+      選項 B 在 $2^{9}$ 位寫了 $1$，但題目沒有 $2^{9}$，亦排除。
+      故答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$110001001011_{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $5+2^{4}+2^{7}$ 的二進制表示。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$10010101_{2}$</li>
+        <li><span class="ol">B</span>$10011001_{2}$</li>
+        <li><span class="ol">C</span>$10100101_{2}$</li>
+        <li><span class="ol">D</span>$11010101_{2}$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 拆開 5：$5=4+1=2^{2}+2^{0}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 有值的位為 $2^{7},2^{4},2^{2},2^{0}$，由 $2^{7}$ 排到 $2^{0}$ 得 $10010101_{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算：$128+16+4+1=149$，與 $5+16+128$ 相符，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$10010101_{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q31.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q35.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

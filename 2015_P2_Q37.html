@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第37題 · 等比數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第37題</span>
+    <h1>等比數列：公比可正可負</h1>
+    <p class="sub">等比數列 · 無窮等比級數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $x_n$ 為等比數列的第 $n$ 項。若 $x_6=216$ 且 $x_8=96$，下列何者必然正確？
+      <ul class="romans">
+        <li><b>I.</b> $x_3=729$</li>
+        <li><b>II.</b> $\dfrac{x_5}{x_7}>1$</li>
+        <li><b>III.</b> $x_2+x_4+x_6+\cdots+x_{2n}<2015$</li>
+      </ul>
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>只有 I</li>
+      <li><span class="ol">B</span>只有 II</li>
+      <li><span class="ol">C</span>只有 I 及 III</li>
+      <li><span class="ol">D</span>只有 II 及 III</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用兩項相除求公比</div>
+      <div class="rule">
+        <span class="rule-name">等比數列通項</span>
+        <span class="rule-math">\(x_n=ar^{\,n-1},\qquad \dfrac{x_8}{x_6}=r^{2}\)</span>
+        <span class="rule-why">相隔兩項，比值就是 $r^{2}$，只可肯定 $r^{2}$，不可肯定 $r$ 的符號。</span>
+      </div>
+      \[r^{2}=\frac{x_8}{x_6}=\frac{96}{216}=\frac{4}{9}
+      \quad\Rightarrow\quad r=\pm\frac{2}{3}.\]
+      留意 $r$ 可以是負數，這一點決定第 I 項陳述是否成立。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項檢驗三個陳述</div>
+      <div class="rule">
+        <span class="rule-name">「必然正確」的含義</span>
+        <span class="rule-math">\(\text{對所有可能的 } r \text{ 都成立才算 true}\)</span>
+        <span class="rule-why">只要有一個合法的 $r$ 令陳述不成立，該陳述就不是必然正確。</span>
+      </div>
+      <b>I.</b> $x_3=\dfrac{x_6}{r^{3}}$。若 $r=\dfrac{2}{3}$，$x_3=216\div\dfrac{8}{27}=729$；
+      但若 $r=-\dfrac{2}{3}$，$x_3=-729$。所以 I 不必然正確。<br><br>
+      <b>II.</b> $\dfrac{x_5}{x_7}=\dfrac{1}{r^{2}}=\dfrac{9}{4}>1$，與 $r$ 的符號無關，必然正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用無窮等比級數檢驗第 III 項</div>
+      <div class="rule">
+        <span class="rule-name">無窮等比級數和</span>
+        <span class="rule-math">\(S=\dfrac{a}{1-r^{2}}\quad(|r^{2}|<1)\)</span>
+        <span class="rule-why">$x_2,x_4,x_6,\dots$ 本身是等比數列，公比為 $r^{2}=\dfrac{4}{9}$。</span>
+      </div>
+      先求 $x_2$：$x_2=\dfrac{x_6}{r^{4}}=216\div\dfrac{16}{81}=1093.5$。
+      數列 $x_2,x_4,x_6,\dots$ 的首項為 $x_2$、公比為 $r^{2}=\dfrac{4}{9}$，故
+      \[S=\frac{1093.5}{1-\frac{4}{9}}=\frac{1093.5}{5/9}=1968.3<2015.\]
+      部分和必小於這個總和，所以 III 必然正確。<br>
+      故只有 II 及 III 正確，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（只有 II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $y_n$ 為等比數列的第 $n$ 項，且各項均為正數。若 $y_5=48$ 且 $y_7=12$，求 $y_3$ 及 $y_2+y_4+y_6+\cdots$ 的無窮和。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$y_3=192$，和 $=256$</li>
+        <li><span class="ol">B</span>$y_3=192$，和 $=512$</li>
+        <li><span class="ol">C</span>$y_3=96$，和 $=512$</li>
+        <li><span class="ol">D</span>$y_3=96$，和 $=256$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $r^{2}=\dfrac{y_7}{y_5}=\dfrac{12}{48}=\dfrac{1}{4}$；各項為正，故 $r=\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y_3=\dfrac{y_5}{r^{2}}=48\div\dfrac{1}{4}=192$。</div>
+          <div class="p-step"><b>第 3 步.</b> $y_2=\dfrac{y_3}{r}=384$；$y_2,y_4,y_6,\dots$ 公比為 $r^{2}=\dfrac{1}{4}$，和 $=\dfrac{384}{1-\frac{1}{4}}=512$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$y_3=192$，和 $=512$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q36.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

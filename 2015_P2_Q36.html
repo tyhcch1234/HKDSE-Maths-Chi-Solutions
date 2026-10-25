@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第36題 · 不等式與線性規劃</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第36題</span>
+    <h1>陰影區域的三個條件</h1>
+    <p class="sub">不等式 · 線性規劃</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示一個陰影區域（包括邊界）。若 $(a,b)$ 為陰影區域內的一點，下列何者正確？
+      <ul class="romans">
+        <li><b>I.</b> $a \le 4$</li>
+        <li><b>II.</b> $a \ge b-5$</li>
+        <li><b>III.</b> $a \ge 10-2b$</li>
+      </ul>
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>只有 I 及 II</li>
+      <li><span class="ol">B</span>只有 I 及 III</li>
+      <li><span class="ol">C</span>只有 II 及 III</li>
+      <li><span class="ol">D</span>I、II 及 III</li>
+    </ol>
+    <figure style="margin:12px 0;text-align:center;">
+      <img src="figures/2015_P2_Q36.png" alt="原卷附圖" style="max-width:100%;height:auto;border:1px solid #e2e8f0;border-radius:10px;background:#fff;">
+      <figcaption style="font-size:.8rem;color:#64748b;margin-top:6px;">圖：陰影區域及其三條邊界</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出三條邊界線</div>
+      <div class="rule">
+        <span class="rule-name">邊界寫成等式</span>
+        <span class="rule-math">\(x=4,\qquad y=x+5,\qquad x+2y=10\)</span>
+        <span class="rule-why">把每個不等式的「$\le$、$\ge$」換成「$=$」，就是圍成區域的直線。</span>
+      </div>
+      三條線兩兩相交，圍成一個三角形，三個頂點為
+      \[(4,\,9),\qquad (4,\,3),\qquad (0,\,5).\]
+      例如 $x=4$ 與 $y=x+5$ 交於 $(4,9)$；$x=4$ 與 $x+2y=10$ 交於 $(4,3)$；
+      $y=x+5$ 與 $x+2y=10$ 交於 $(0,5)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">取區域內一點判斷不等式方向</div>
+      <div class="rule">
+        <span class="rule-name">代入檢驗</span>
+        <span class="rule-math">\((a,b)=(2,\,4)\in\) 陰影區域</span>
+        <span class="rule-why">用一個明顯在區域內的點，就能定出每個不等式的方向。</span>
+      </div>
+      取 $(2,4)$：
+      I. $a=2\le 4$ ✓，方向為 $a\le 4$（區域在 $x=4$ 的左邊）。<br>
+      II. $b=4$，$a+5=7$，即 $b\le a+5$，改寫成 $a\ge b-5$ ✓。<br>
+      III. $a+2b=2+8=10$，即 $a+2b\ge 10$，改寫成 $a\ge 10-2b$ ✓。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用三個頂點覆核</div>
+      <div class="rule">
+        <span class="rule-name">線性函數的極值在頂點</span>
+        <span class="rule-math">\(a+2b\ \text{在頂點取最小／最大值}\)</span>
+        <span class="rule-why">線性不等式的成立範圍由頂點決定，逐個頂點檢查最穩妥。</span>
+      </div>
+      <table style="border-collapse:collapse;font-size:.95rem;">
+        <tr><th style="padding:4px 10px;border:1px solid #dbe4f0;">頂點</th>
+            <th style="padding:4px 10px;border:1px solid #dbe4f0;">I. $a\le4$</th>
+            <th style="padding:4px 10px;border:1px solid #dbe4f0;">II. $a\ge b-5$</th>
+            <th style="padding:4px 10px;border:1px solid #dbe4f0;">III. $a\ge 10-2b$</th></tr>
+        <tr><td style="padding:4px 10px;border:1px solid #dbe4f0;">$(4,9)$</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\le4$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\ge4$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\ge-8$ ✓</td></tr>
+        <tr><td style="padding:4px 10px;border:1px solid #dbe4f0;">$(4,3)$</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\le4$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\ge-2$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$4\ge4$ ✓</td></tr>
+        <tr><td style="padding:4px 10px;border:1px solid #dbe4f0;">$(0,5)$</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$0\le4$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$0\ge0$ ✓</td><td style="padding:4px 10px;border:1px solid #dbe4f0;">$0\ge0$ ✓</td></tr>
+      </table>
+      三個條件在三個頂點都成立，故 I、II、III 全部正確，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 陰影區域由 $x\ge 0$、$y\ge 0$ 及 $x+y\le 6$ 圍成（包括邊界）。若 $(a,b)$ 為區域內一點，下列何者正確？<br>
+        I. $a\le 6$　II. $b\le 6$　III. $a+b\le 6$</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>只有 I 及 II</li>
+        <li><span class="ol">B</span>只有 I 及 III</li>
+        <li><span class="ol">C</span>只有 II 及 III</li>
+        <li><span class="ol">D</span>I、II 及 III</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 區域的頂點為 $(0,0)$、$(6,0)$、$(0,6)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 因 $b\ge 0$，由 $a+b\le 6$ 得 $a\le 6-b\le 6$，故 I 成立；同理 II 成立。</div>
+          <div class="p-step"><b>第 3 步.</b> III 就是邊界本身，當然成立。答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q35.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q37.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

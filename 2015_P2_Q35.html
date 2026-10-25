@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第35題 · 複數的實部與虛部</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第35題</span>
+    <h1>複數何時是實數</h1>
+    <p class="sub">$i$ 的冪 · 實部與虛部</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $z=(a+5)i^{6}+(a-3)i^{7}$，其中 $a$ 為實數。若 $z$ 為實數，則 $a=$
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$-5$</li>
+      <li><span class="ol">B</span>$-3$</li>
+      <li><span class="ol">C</span>$3$</li>
+      <li><span class="ol">D</span>$5$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $i$ 的冪化到最簡</div>
+      <div class="rule">
+        <span class="rule-name">$i$ 的冪的週期</span>
+        <span class="rule-math">\(i^{2}=-1,\quad i^{4}=1,\quad i^{6}=i^{4}\cdot i^{2}=-1,\quad i^{7}=i^{6}\cdot i=-i\)</span>
+        <span class="rule-why">用 $i^{4}=1$ 把指數減到 0 至 3。</span>
+      </div>
+      所以
+      \[i^{6}=-1,\qquad i^{7}=-i.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分開寫成實部與虛部</div>
+      <div class="rule">
+        <span class="rule-name">標準式</span>
+        <span class="rule-math">\(z=\text{實部}+\text{虛部}\cdot i\)</span>
+        <span class="rule-why">只有當虛部等於 0，$z$ 才是實數。</span>
+      </div>
+      代入：
+      \[z=(a+5)(-1)+(a-3)(-i)=-(a+5)-(a-3)i.\]
+      實部 $=-(a+5)$，虛部 $=-(a-3)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">令虛部為零</div>
+      <div class="rule">
+        <span class="rule-name">實數條件</span>
+        <span class="rule-math">\(\operatorname{Im}(z)=0\)</span>
+        <span class="rule-why">虛部是 $i$ 的係數，它為 0 時 $i$ 項整項消失。</span>
+      </div>
+      \[-(a-3)=0\;\Rightarrow\;a=3.\]
+      此時 $z=-(3+5)=-8$，確實是實數。
+      對照選項，答案為 <b>C</b>。<br>
+      留意選項 A 的 $-5$ 是令「實部」為零的答案，題目問的是實數，要看虛部。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$a=3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $w=(b-2)i^{5}+(b+7)i^{6}$，其中 $b$ 為實數。若 $w$ 為實數，則 $b=$</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$2$</li>
+        <li><span class="ol">B</span>$-2$</li>
+        <li><span class="ol">C</span>$7$</li>
+        <li><span class="ol">D</span>$-7$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $i^{5}=i^{4}\cdot i=i$，$i^{6}=i^{4}\cdot i^{2}=-1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $w=(b-2)i-(b+7)$，虛部為 $b-2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 令 $b-2=0$，得 $b=2$，此時 $w=-9$ 為實數，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$b=2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q33.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q36.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
