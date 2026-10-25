@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第1題 · 指數定律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第1題</span>
+    <h1>指數定律</h1>
+    <p class="sub">3分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{m^{-12}n^{8}}{n^{3}}$，並以正指數表示答案。<span class="marks">(3 分)</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出原式，觀察各底數的分佈</div>
+      原式為
+\[ \frac{m^{-12}\,n^{8}}{n^{3}}. \]
+留意底數 $m$ 只出現於分子，而底數 $n$ 同時出現於分子和分母。<div class="hint">先分辨哪個底數需要用到指數律：這裡 $n$ 出現了兩次，所以先對 $n$ 用商的指數律。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">對 $n$ 應用商的指數律</div>
+      <div class="rule">
+        <span class="rule-name">商的指數律</span>
+        <span class="rule-math">\(\dfrac{a^{m}}{a^{n}}=a^{m-n}\quad(a\neq 0)\)</span>
+        <span class="rule-why">同底數相除，指數相減。</span>
+      </div>
+      同底數相除，指數相減：
+\[ \frac{n^{8}}{n^{3}}=n^{8-3}=n^{5}. \]
+於是原式變成
+\[ \frac{m^{-12}\,n^{8}}{n^{3}}=m^{-12}\,n^{8-3}=m^{-12}\,n^{5}. \]
+<div class="hint">用分子的指數減分母的指數：$8-3=5$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把負指數化為正指數</div>
+      <div class="rule">
+        <span class="rule-name">負指數定律</span>
+        <span class="rule-math">\(a^{-n}=\dfrac{1}{a^{n}},\qquad \dfrac{1}{a^{-n}}=a^{n}\)</span>
+        <span class="rule-why">負指數的作用是把底數搬過分數線的另一邊。</span>
+      </div>
+      由 $m^{-k}=\dfrac{1}{m^{k}}$，得
+\[ m^{-12}\,n^{5}=\frac{1}{m^{12}}\,n^{5}=\frac{n^{5}}{m^{12}}. \]
+<div class="hint">負指數只是把底數「反」過分數線，指數本身變成正數。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出最後答案</div>
+      \[ \frac{m^{-12}\,n^{8}}{n^{3}}=\frac{n^{5}}{m^{12}}. \]
+此時所有指數均為正數。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{m^{-12}n^{8}}{n^{3}}=\dfrac{n^{5}}{m^{12}}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{x^{-7}y^{9}}{y^{4}}$，並以正指數表示答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 對底數 $y$ 用商的指數律：$\dfrac{y^{9}}{y^{4}}=y^{9-4}=y^{5}$，所以原式為 $x^{-7}y^{5}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 對 $x^{-7}$ 用負指數定律：$x^{-7}=\dfrac{1}{x^{7}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 因此原式 $=\dfrac{y^{5}}{x^{7}}$，所有指數均為正數。</div>
+          <div class="p-ans">答案：$\dfrac{y^{5}}{x^{7}}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

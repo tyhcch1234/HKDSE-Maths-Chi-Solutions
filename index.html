@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港中學文憑試 數學（必修部分）題解 — 中文版</title>
+<style>
+:root { --bg:#ffffff; --fg:#1a1a1a; --muted:#6b7280; --border:#e5e7eb; --link:#2563eb; --accent-bg:#eff6ff; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f1115; --fg:#e5e7eb; --muted:#9ca3af; --border:#2a2f38; --link:#60a5fa; --accent-bg:#16233b; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+main { max-width:860px; margin:0 auto; padding:24px 20px 64px; }
+h1 { font-size:1.4rem; margin:0 0 4px; }
+.sub { color:var(--muted); font-size:.9rem; margin:0 0 18px; }
+.years { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
+.years a { display:inline-block; padding:7px 14px; border:1px solid var(--border); border-radius:999px;
+  text-decoration:none; color:var(--link); font-size:.9rem; font-weight:600; background:var(--bg); }
+.years a:hover { border-color:var(--link); }
+.years a.active { background:var(--link); border-color:var(--link); color:#fff; }
+.year-section { display:none; }
+.year-section.active { display:block; }
+h2.year-head { font-size:1.25rem; font-weight:800; margin:0 0 6px; color:var(--fg); }
+h2.topic-head { font-size:1.05rem; font-weight:800; margin:26px 0 8px; color:var(--fg);
+  border-left:4px solid var(--link); padding-left:10px; }
+h3.paper-label { font-size:.85rem; font-weight:600; margin:20px 0 8px; color:var(--muted); }
+.paper-label .cnt { font-weight:400; opacity:.7; }
+.group { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+a.chip { display:inline-block; min-width:52px; text-align:center; padding:6px 10px;
+  border:1px solid var(--link); border-radius:8px; text-decoration:none; color:var(--link); font-size:.9rem; }
+a.chip:hover { background:var(--accent-bg); }
+.topnav { margin:0 0 18px; font-size:.9rem; }
+.topnav a { color:var(--link); text-decoration:none; margin-right:14px; }
+</style>
+</head>
+<body>
+<main>
+<h1>香港中學文憑試 數學（必修部分）題解</h1>
+<p class="sub">中文版 · 共 4 題（陸續更新）</p>
+<p class="topnav"><a href="DSE_Maths_By_Topic.html">按課題瀏覽 →</a></p>
+<nav class="years"><a href="#y2012" data-year="2012" onclick="showYear(2012);return false;">2012</a></nav>
+
+<section id="y2012" class="year-section"><h2 class="year-head">2012</h2><h3 class="paper-label">卷一 <span class="cnt">4 題</span></h3><div class="group"><a class="chip" href="2012_P1_Q1.html">第1題</a><a class="chip" href="2012_P1_Q2.html">第2題</a><a class="chip" href="2012_P1_Q3.html">第3題</a><a class="chip" href="2012_P1_Q4.html">第4題</a></div></section>
+
+</main>
+<script>
+(function(){
+  var pills = document.querySelectorAll('.years a[data-year]');
+  var sections = document.querySelectorAll('.year-section');
+  function showYear(y){
+    sections.forEach(function(s){ s.classList.toggle('active', s.id === 'y'+y); });
+    pills.forEach(function(a){ a.classList.toggle('active', +a.getAttribute('data-year') === y); });
+  }
+  pills.forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault(); showYear(+a.getAttribute('data-year'));
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+  showYear(sections.length ? +sections[0].id.replace('y','') : null);
+  window.showYear = showYear;
+})();
+</script>
+</body>
+</html>

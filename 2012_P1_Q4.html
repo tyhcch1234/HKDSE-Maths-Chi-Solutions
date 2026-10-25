@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第4題 · 百分數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第4題</span>
+    <h1>百分數</h1>
+    <p class="sub">4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      佩玲的日薪較志偉高 $20\%$，而志偉的日薪較遜儀低 $20\%$。已知志偉的日薪為 $\$480$。
+      <p>(a) 求佩玲的日薪。</p>
+      <p>(b) 誰的日薪最高？試解釋你的答案。 <span class="marks">(4 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">整理已知資料</div>
+      志偉的日薪已直接給出：
+$$\text{志偉}=\$480$$
+佩玲較志偉高 $20\%$，即乘以 $(1+20\%)$。
+志偉較遜儀低 $20\%$，即志偉是遜儀的 $80\%$。
+<div class="hint">「高／低於」提示你哪一個數值才是原值（即 $100\%$ 的基準）。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 求佩玲的日薪</div>
+      <div class="rule">
+        <span class="rule-name">百分數增加</span>
+        <span class="rule-math">\(\text{新值}=(1+r\%)\times\text{原值}\)</span>
+        <span class="rule-why">增加 \(20\%\) 即乘以 \(1+0.2=1.2\)；基準（100%）是志偉的日薪。</span>
+      </div>
+      佩玲的日薪
+$$=480\times(1+20\%)$$
+$$=480\times1.2=576$$
+所以佩玲的日薪為 $\$576$。
+<div class="hint">加 $20\%$ 就是乘 $1.2$。（1M + 1A）</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 設 $x$ 為遜儀的日薪</div>
+      <div class="rule">
+        <span class="rule-name">由百分數變化反求原值</span>
+        <span class="rule-math">\(\text{原值}=\dfrac{\text{新值}}{1-r\%}\)</span>
+        <span class="rule-why">要「還原」一個減少，應該除以倍數而不是乘；此處的基準是遜儀的日薪，不是志偉的。</span>
+      </div>
+      志偉較遜儀低 $20\%$，即志偉是遜儀日薪的 $80\%$：
+$$x(1-20\%)=480$$
+<div class="hint">$100\%$ 的基準是遜儀的日薪，並非志偉的日薪。（1M）</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解出 $x$（遜儀的日薪）</div>
+      $$x=\frac{480}{1-20\%}=\frac{480}{0.8}$$
+$$x=600$$
+<div class="hint">除以 $0.8$ 就是把 $20\%$ 的減幅還原。（1A）</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">比較並作結論</div>
+      佩玲 $=\$576$，志偉 $=\$480$，遜儀 $=\$600$。
+因為 $600>576>480$：
+遜儀的日薪最高。（1A）
+<div class="hint">在較大的數上減 $20\%$，減去的金額也較大，所以「較高者低 $20\%$」的那一位，最後反而是最高。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 佩玲的日薪為 $\$576$。<br>
+      (b) 遜儀的日薪最高（遜儀 $=\$600$，佩玲 $=\$576$，志偉 $=\$480$）。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 佩玲的日薪較志偉高 $20\%$，而志偉的日薪較遜儀低 $25\%$。志偉每日賺 $\$720$。(a) 求佩玲的日薪。(b) 誰賺得最多？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 佩玲較志偉高 $20\%$：佩玲 $=720\times(1+20\%)=720\times1.2=\$864$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $x$ 為遜儀的日薪。志偉較遜儀低 $25\%$：$x(1-25\%)=720$。</div>
+          <div class="p-step"><b>第 3 步.</b> 所以 $x=\dfrac{720}{0.75}=\$960$。</div>
+          <div class="p-step"><b>第 4 步.</b> 比較：遜儀 $\$960$ > 佩玲 $\$864$ > 志偉 $\$720$，故遜儀賺得最多。留意較大基數的 $25\%$ 金額，大於較小基數的 $20\%$ 金額。</div>
+          <div class="p-ans">答案：(a) $\$864$　(b) 遜儀（$\$960$），因為 $960>864>720$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q3.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q5.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

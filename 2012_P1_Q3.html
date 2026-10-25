@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第3題 · 因式分解</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第3題</span>
+    <h1>因式分解</h1>
+    <p class="sub">3分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      因式分解
+      <p>(a) $x^{2}-6xy+9y^{2}$</p>
+      <p>(b) $x^{2}-6xy+9y^{2}+7x-21y$ <span class="marks">(3 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">辨認完全平方</div>
+      <div class="rule">
+        <span class="rule-name">完全平方恆等式</span>
+        <span class="rule-math">\((a-b)^{2}=a^{2}-2ab+b^{2}\)</span>
+        <span class="rule-why">先檢查首尾兩項是否平方，再確認中間項正好是 \(-2ab\)。此處 \(a=x\)、\(b=3y\)。</span>
+      </div>
+      (a) 部分有三項，先看看首尾兩項是否完全平方：
+$$x^{2}=(x)^{2},\qquad 9y^{2}=(3y)^{2},\qquad -6xy=-2\cdot(x)(3y).$$
+這正好符合 $(a-b)^{2}=a^{2}-2ab+b^{2}$ 的形式，其中 $a=x$、$b=3y$。
+<div class="hint">中間項必須剛好是兩個平方根之積的兩倍——此處 $2\cdot x\cdot 3y=6xy$，而符號是負。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">完成 (a) 部分的因式分解</div>
+      $$x^{2}-6xy+9y^{2}=(x-3y)^{2}$$
+所以這個三項式的平方根就是單一因式 $(x-3y)$，這也是 (b) 部分的關鍵積木。
+<div class="hint">完全平方三項式只有一個重複的因式，正好用來處理下一部分。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 部分：把四項分組</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        <span class="rule-math">\(7x-21y=7(x-3y)\)</span>
+        <span class="rule-why">先在前三項造出 (a) 的完全平方，再在餘下兩項找出公因式。</span>
+      </div>
+      $$x^{2}-6xy+9y^{2}+7x-21y$$
+前三項就是 (a) 部分的完全平方；餘下兩項有公因式：
+$$7x-21y=7(x-3y)$$
+<div class="hint">$7x-21y$ 有公因式 $7$，提出後出現括號 $(x-3y)$，與前面的平方完全配合。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">以整個括號為公因式提取</div>
+      <div class="rule">
+        <span class="rule-name">乘法對加法的分配律</span>
+        <span class="rule-math">\(AB+AC=A(B+C)\)</span>
+        <span class="rule-why">把整個括號 \((x-3y)\) 看成單一字母 \(A\)，它是兩項的公因式。</span>
+      </div>
+      把前三項寫成平方，然後提取公因式：
+$$=(x-3y)^{2}+7(x-3y)$$
+把 $(x-3y)$ 當作公因式：
+$$=(x-3y)\big[(x-3y)+7\big]$$
+<div class="hint">可以想成 $A^{2}+7A=A(A+7)$，其中 $A=x-3y$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">化簡並驗算</div>
+      $$=(x-3y)(x-3y+7)$$
+展開驗算：$(x-3y)(x-3y)+7(x-3y)=x^{2}-6xy+9y^{2}+7x-21y$ ✓
+<div class="hint">四項式的因式分解，最穩妥是用心展開一次，確認中間的交叉項都回來了。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x^{2}-6xy+9y^{2}=(x-3y)^{2}$<br>
+      (b) $x^{2}-6xy+9y^{2}+7x-21y=(x-3y)(x-3y+7)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 (a) $9p^{2}-30pq+25q^{2}$；(b) $9p^{2}-30pq+25q^{2}+6p-10q$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 辨認完全平方：$9p^{2}=(3p)^{2}$、$25q^{2}=(5q)^{2}$，且 $-30pq=-2(3p)(5q)$，所以 (a) 為 $(3p-5q)^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 把 (b) 看成「平方 + 餘項」：$9p^{2}-30pq+25q^{2}+6p-10q=(3p-5q)^{2}+2(3p-5q)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提取公因式 $A=3p-5q$：$(3p-5q)^{2}+2(3p-5q)=(3p-5q)\big[(3p-5q)+2\big]$。</div>
+          <div class="p-step"><b>第 4 步.</b> 化簡得 $(3p-5q)(3p-5q+2)$；展開驗算得 $9p^{2}-30pq+25q^{2}+6p-10q$ ✓。</div>
+          <div class="p-ans">答案：(a) $(3p-5q)^{2}$　(b) $(3p-5q)(3p-5q+2)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q2.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q4.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
