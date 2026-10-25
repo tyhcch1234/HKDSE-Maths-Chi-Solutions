@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第45題 · 統計：平均數、分佈域與方差</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第45題</span>
+    <h1>統計：平均數、分佈域與方差</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $m_1$、$r_1$ 及 $v_1$ 分別為一組數 $\{x_1,x_2,x_3,\ldots,x_{100}\}$ 的平均值、分佈域及方差。若 $m_2$、$r_2$ 及 $v_2$ 分別為數組 $\{x_1,x_2,x_3,\ldots,x_{100},m_1\}$ 的平均值、分佈域及方差，則下列何者必定正確？<br>
+      <p>I. $m_1=m_2$</p><br>
+      <p>II. $r_1=r_2$</p><br>
+      <p>III. $v_1=v_2$</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">平均值：加入平均數後仍然相同</div>
+      <div class="rule">
+        <span class="rule-name">平均值的定義</span>
+        <span class="rule-math">\(m=\dfrac{x_1+x_2+\cdots+x_n}{n}\)</span>
+        <span class="rule-why">加入一個新數據後，總和與項數同時增加，要重新計算平均值。</span>
+      </div>
+      原本 $100$ 個數的總和是 $100m_1$。<br>加入 $m_1$ 後共有 $101$ 個數：
+\[ m_2=\frac{100m_1+m_1}{101}=\frac{101m_1}{101}=m_1. \]
+I 正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分佈域：平均數不會超出原本範圍</div>
+      <div class="rule">
+        <span class="rule-name">分佈域</span>
+        <span class="rule-math">\(r=x_{\max}-x_{\min}\)</span>
+        <span class="rule-why">分佈域只取決於最大值與最小值；只要新加入的數不超出這兩端，分佈域就不變。</span>
+      </div>
+      平均值必介於最小值與最大值之間：$x_{\min}\le m_1\le x_{\max}$。<br>
+所以加入 $m_1$ 不會改變最大值與最小值，$r_2=r_1$。<br>
+II 正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">方差：項數變多，方差變小</div>
+      <div class="rule">
+        <span class="rule-name">方差的定義</span>
+        <span class="rule-math">\(v=\dfrac{\sum (x_i-m)^{2}}{n}\)</span>
+        <span class="rule-why">方差是「每個數據與平均值的差距平方」的平均，除以項數。</span>
+      </div>
+      $m_1$ 與平均值相差 $0$，所以平方和沒有增加，<br>但項數由 $100$ 增至 $101$：
+\[ v_2=\frac{100v_1+0}{101}=\frac{100}{101}v_1. \]
+只要 $v_1\ne 0$，就有 $v_2\ne v_1$，<br>所以 III 不正確。<br>
+只有 I 及 II 正確，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $m_1$、$r_1$ 及 $v_1$ 分別為一組數 $\{x_1,x_2,\ldots,x_{9}\}$ 的平均值、分佈域及方差。若 $m_2$、$r_2$ 及 $v_2$ 分別為數組 $\{x_1,x_2,\ldots,x_{9},m_1\}$ 的平均值、分佈域及方差，則下列何者必定正確？<br>
+      <p>I. $m_1=m_2$</p><br>
+      <p>II. $r_1=r_2$</p><br>
+      <p>III. $v_1=v_2$</p></div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $m_2=\dfrac{9m_1+m_1}{10}=m_1$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 平均值介於最小值與最大值之間，加入後極值不變，故 $r_2=r_1$，<br>II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $v_2=\dfrac{9v_1}{10}\ne v_1$（除非 $v_1=0$），III 不正確，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q44.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

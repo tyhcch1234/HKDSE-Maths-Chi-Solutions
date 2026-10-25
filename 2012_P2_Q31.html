@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第31題 · 多項式的 H.C.F. 與 L.C.M.</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第31題</span>
+    <h1>多項式的 H.C.F. 與 L.C.M.</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      三個代數式的 H.C.F. 及 L.C.M. 分別為 $ab^2$ 及 $4a^4b^5c^6$。若第一個代數式及第二個代數式分別為 $2a^2b^4c$ 及 $4a^4b^2c^6$，則第三個代數式是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$ab^2$</li><li><span class="ol">B</span>$ab^5$</li><li><span class="ol">C</span>$2ab^2c$</li><li><span class="ol">D</span>$2ab^5c$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">逐個質因數寫出指數</div>
+      <div class="rule">
+        <span class="rule-name">質因數分解</span>
+        <span class="rule-math">\(N=2^{p}a^{q}b^{r}c^{s}\)</span>
+        <span class="rule-why">把每個代數式寫成同一組質因數的冪，之後只比較指數。</span>
+      </div>
+      兩個已知的代數式寫成
+\[ 2a^2b^4c=2^{1}a^{2}b^{4}c^{1},\qquad 4a^4b^2c^6=2^{2}a^{4}b^{2}c^{6}. \]
+設第三個代數式為 $2^{p}a^{q}b^{r}c^{s}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">H.C.F. 給出每個指數的下限</div>
+      <div class="rule">
+        <span class="rule-name">H.C.F. 取最小指數</span>
+        <span class="rule-math">\(\text{H.C.F.}=2^{\min}a^{\min}b^{\min}c^{\min}\)</span>
+        <span class="rule-why">H.C.F. 是三個數共同擁有的部分，所以每個質因數取三個指數中的最小者。</span>
+      </div>
+      由 H.C.F. $=ab^2=2^{0}a^{1}b^{2}c^{0}$：<br>
+$2$：$\min(1,2,p)=0\Rightarrow p=0$；<br>
+$a$：$\min(2,4,q)=1\Rightarrow q=1$；<br>
+$c$：$\min(1,6,s)=0\Rightarrow s=0$。<br>
+$b$ 只知 $\min(4,2,r)=2$，即 $r\ge 2$，仍未定。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">L.C.M. 定出 $b$ 的指數</div>
+      <div class="rule">
+        <span class="rule-name">L.C.M. 取最大指數</span>
+        <span class="rule-math">\(\text{L.C.M.}=2^{\max}a^{\max}b^{\max}c^{\max}\)</span>
+        <span class="rule-why">L.C.M. 要能被三個數同時整除，所以每個質因數取三個指數中的最大者。</span>
+      </div>
+      由 L.C.M. $=4a^4b^5c^6$：$b$：$\max(4,2,r)=5\Rightarrow r=5$。<br>
+其餘核對：$2$：$\max(1,2,0)=2$ ✓；$a$：$\max(2,4,1)=4$ ✓；$c$：$\max(1,6,0)=6$ ✓。<br>
+所以第三個代數式為 $2^{0}a^{1}b^{5}c^{0}=ab^{5}$，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$ab^5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 三個代數式的 H.C.F. 及 L.C.M. 分別為 $3xy^2$ 及 $18x^3y^4z$。若第一個及第二個代數式分別為 $3xy^3$ 及 $6x^2y^4$，則第三個代數式是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$9x^3y^2z$</li><li><span class="ol">B</span>$18x^3y^2z$</li><li><span class="ol">C</span>$9x^3y^4z$</li><li><span class="ol">D</span>$9x^2y^2z$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩式寫成 $3xy^3=3^{1}x^{1}y^{3}$ 及 $6x^2y^4=2^{1}\cdot3^{1}x^{2}y^{4}$，設第三式為 $2^{p}\cdot3^{q}x^{r}y^{s}z^{t}$。</div>
+          <div class="p-step"><b>第 2 步.</b> H.C.F. $=3xy^2$ 給出 $p=0$、$q\ge1$、$r\ge1$、$s=2$（已知兩式的 $z$ 指數皆為 $0$，<br>故 $t$ 由 L.C.M. 決定）。</div>
+          <div class="p-step"><b>第 3 步.</b> L.C.M. $=18x^3y^4z=2\cdot3^{2}x^{3}y^{4}z$ 給出 $q=2$、$r=3$、$t=1$，<br>故第三式為 $3^{2}x^{3}y^{2}z=9x^3y^2z$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$9x^3y^2z$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q30.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q32.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

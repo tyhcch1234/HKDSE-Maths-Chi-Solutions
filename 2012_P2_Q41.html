@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第41題 · 圓形幾何</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第41題</span>
+    <h1>圓形幾何</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$PQ$ 為圓 $ABC$ 於 $O$ 的切線，其中 $O$ 為半圓 $PBQ$ 的圓心。已知 $BCP$ 為一直線。若 $\angle BPQ=12^{\circ}$，則 $\angle BAC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$18^{\circ}$</li><li><span class="ol">B</span>$24^{\circ}$</li><li><span class="ol">C</span>$54^{\circ}$</li><li><span class="ol">D</span>$36^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q41.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用半圓與等腰三角形求 $\angle BOQ$</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的圓周角</span>
+        <span class="rule-math">\(PQ=\text{diameter}\ \Longrightarrow\ \angle PBQ=90^{\circ}\)</span>
+        <span class="rule-why">$PQ$ 為半圓的直徑，半圓上的圓周角是直角。</span>
+      </div>
+      $B$ 在半圓 $PBQ$ 上、$PQ$ 為直徑，故 $\angle PBQ=90^{\circ}$。<br>
+在 $\triangle BPQ$ 中：$\angle BQP=180^{\circ}-90^{\circ}-12^{\circ}=78^{\circ}$。<br>
+又 $OB=OQ$（同為半徑），所以 $\angle OBQ=\angle OQB=78^{\circ}$，得
+\[ \angle BOQ=180^{\circ}-78^{\circ}-78^{\circ}=24^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">切線與弦的夾角</div>
+      <div class="rule">
+        <span class="rule-name">切線與弦的夾角（弓形角）</span>
+        <span class="rule-math">\(\angle(\text{tangent},\ \text{chord }OB)=\angle OAB\)</span>
+        <span class="rule-why">切線與弦所夾的角，等於該弦在另一弓形所張的圓周角。</span>
+      </div>
+      $PQ$ 於 $O$ 與圓 $ABC$ 相切，$OB$ 為該圓的弦。<br>切線 $PQ$ 與弦 $OB$ 的夾角就是 $\angle BOQ=24^{\circ}$，故
+\[ \angle OAB=24^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同弓形的圓周角補上另一部分</div>
+      <div class="rule">
+        <span class="rule-name">同弓形的圓周角</span>
+        <span class="rule-math">\(\angle OAC=\angle OBC\quad(\text{same chord }OC)\)</span>
+        <span class="rule-why">同一條弦在同一個弓形內所張的圓周角都相等。</span>
+      </div>
+      $OB=OP$（同為半徑），$\triangle OBP$ 為等腰三角形，故
+\[ \angle OBP=\angle OPB=12^{\circ}. \]
+因 $B$、$C$、$P$ 共線，$\angle OBC=12^{\circ}$，<br>由同弓形得 $\angle OAC=12^{\circ}$。<br>
+射線 $AO$ 把 $\angle BAC$ 分成兩份：
+\[ \angle BAC=\angle OAB+\angle OAC=24^{\circ}+12^{\circ}=36^{\circ}. \]
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$36^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$PQ$ 為圓 $ABC$ 於 $O$ 的切線，$O$ 為半圓 $PBQ$ 的圓心，$BCP$ 為一直線。若 $\angle BPQ=18^{\circ}$，則 $\angle BAC=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$36^{\circ}$</li><li><span class="ol">B</span>$48^{\circ}$</li><li><span class="ol">C</span>$54^{\circ}$</li><li><span class="ol">D</span>$72^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同前：$\angle PBQ=90^{\circ}$，$\angle BQP=72^{\circ}$，$\triangle OBQ$ 等腰，故 $\angle BOQ=180^{\circ}-72^{\circ}-72^{\circ}=36^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 切線與弦 $OB$ 的夾角等於 $\angle OAB$，故 $\angle OAB=36^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $OB=OP$ 使 $\angle OBC=\angle OPB=18^{\circ}$，同弓形得 $\angle OAC=18^{\circ}$，故 $\angle BAC=36^{\circ}+18^{\circ}=54^{\circ}$，<br>答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$54^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q40.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q42.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

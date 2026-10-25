@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第32題 · 指數與對數函數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第32題</span>
+    <h1>指數與對數函數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示 $x$ 與 $\log_3 y$ 之間的線性關係。若 $y=mn^{x}$，則 $n=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{81}$</li><li><span class="ol">B</span>$\dfrac{1}{9}$</li><li><span class="ol">C</span>$9$</li><li><span class="ol">D</span>$81$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q32.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩邊取對數，把曲線變成直線</div>
+      <div class="rule">
+        <span class="rule-name">對數律</span>
+        <span class="rule-math">\(\log(mn^{x})=\log m+x\log n\)</span>
+        <span class="rule-why">乘積的對數可拆成兩個對數相加，指數 $x$ 則拉到係數的位置。</span>
+      </div>
+      對 $y=mn^{x}$ 取以 $3$ 為底的對數：
+\[ \log_3 y=\log_3 m+x\log_3 n. \]
+對比直線方程 $Y=c+mx$（此處 $Y=\log_3 y$），<br>可知 $\log_3 m$ 是截距，$\log_3 n$ 是斜率。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $y$ 軸截距讀出 $m$</div>
+      <div class="rule">
+        <span class="rule-name">直線的截距</span>
+        <span class="rule-math">\(Y=b+mx\ \Longrightarrow\ Y(0)=b\)</span>
+        <span class="rule-why">直線與 $Y$ 軸相交處 $x=0$，該處的 $Y$ 值就是截距。</span>
+      </div>
+      圖中直線與 $\log_3 y$ 軸交於 $4$，即
+\[ \log_3 m=4\;\Longrightarrow\;m=3^{4}=81. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由斜率求 $n$</div>
+      <div class="rule">
+        <span class="rule-name">斜率公式</span>
+        <span class="rule-math">\(m=\dfrac{y_2-y_1}{x_2-x_1}\)</span>
+        <span class="rule-why">直線上兩點的坐標都可以從圖直接讀出，斜率就是 $\log_3 n$。</span>
+      </div>
+      直線通過 $(-2,0)$ 及 $(0,4)$，故
+\[ \log_3 n=\frac{4-0}{0-(-2)}=2\;\Longrightarrow\;n=3^{2}=9. \]
+答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中直線顯示 $x$ 與 $\log_2 y$ 的線性關係，且直線通過 $(0,3)$ 及 $(3,9)$。若 $y=mn^{x}$，則 $n=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$8$</li><li><span class="ol">D</span>$16$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 取以 $2$ 為底的對數：$\log_2 y=\log_2 m+x\log_2 n$，斜率為 $\log_2 n$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜率 $=\dfrac{9-3}{3-0}=2$，故 $\log_2 n=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 得 $n=2^{2}=4$（順帶 $\log_2 m=3$，即 $m=8$），答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q31.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q33.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

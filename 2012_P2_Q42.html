@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第42題 · 圓與直線的交點</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第42題</span>
+    <h1>圓與直線的交點</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      求 $k$ 的取值範圍，使圓 $x^{2}+y^{2}+2x-4y-13=0$ 與直線 $x-y+k=0$ 相交於兩個相異點。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-9<k<3$</li><li><span class="ol">B</span>$-3<k<9$</li><li><span class="ol">C</span>$k<-9$ 或 $k>3$</li><li><span class="ol">D</span>$k<-3$ 或 $k>9$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由直線方程解出 $y$</div>
+      <div class="rule">
+        <span class="rule-name">代入消元</span>
+        <span class="rule-math">\(x-y+k=0\iff y=x+k\)</span>
+        <span class="rule-why">把直線寫成 $y=\cdots$，代入圓方程便可消去 $y$，只餘一個未知數。</span>
+      </div>
+      由 $x-y+k=0$ 得 $y=x+k$，代入圓方程：
+\[ x^{2}+(x+k)^{2}+2x-4(x+k)-13=0. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">整理成二次方程</div>
+      <div class="rule">
+        <span class="rule-name">展開並合併同類項</span>
+        <span class="rule-math">\(2x^{2}+2(k-1)x+(k^{2}-4k-13)=0\)</span>
+        <span class="rule-why">合併後得到一條以 $x$ 為未知數的二次方程，它的根就是交點的 $x$ 坐標。</span>
+      </div>
+      \[ x^{2}+x^{2}+2kx+k^{2}+2x-4x-4k-13=0 \]
+\[ 2x^{2}+2(k-1)x+(k^{2}-4k-13)=0. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩個相異交點即判別式為正</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">\(\Delta=b^{2}-4ac>0\iff\text{2 distinct real roots}\)</span>
+        <span class="rule-why">每個實根對應一個交點，所以「相異兩點」等於二次方程有兩個相異實根。</span>
+      </div>
+      \[ \Delta=\left[2(k-1)\right]^{2}-4(2)(k^{2}-4k-13)>0 \]
+\[ 4(k-1)^{2}-8(k^{2}-4k-13)>0 \]
+\[ -4k^{2}+24k+108>0\;\Longrightarrow\;k^{2}-6k-27<0 \]
+\[ (k+3)(k-9)<0\;\Longrightarrow\;-3<k<9. \]
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$-3<k<9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $k$ 的取值範圍，使圓 $x^{2}+y^{2}-2x-4y-4=0$ 與直線 $y=k$ 相交於兩個相異點。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-1<k<5$</li><li><span class="ol">B</span>$-5<k<1$</li><li><span class="ol">C</span>$k<-1$ 或 $k>5$</li><li><span class="ol">D</span>$-3<k<3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 配方得圓心 $(1,2)$、半徑 $r=\sqrt{1+4+4}=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 直線 $y=k$ 與圓心相距 $|k-2|$，相交於兩相異點即距離小於半徑：$|k-2|<3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解得 $-1<k<5$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$-1<k<5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q41.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q43.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

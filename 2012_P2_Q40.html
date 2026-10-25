@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第40題 · 立體圖形中的角</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第40題</span>
+    <h1>立體圖形中的角</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示一正四面體 $ABCD$。求平面 $ABC$ 與平面 $BCD$ 的夾角（準確至最接近的度）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$48^{\circ}$</li><li><span class="ol">B</span>$53^{\circ}$</li><li><span class="ol">C</span>$60^{\circ}$</li><li><span class="ol">D</span>$71^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q40.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在交線上作兩條垂線</div>
+      <div class="rule">
+        <span class="rule-name">兩平面的夾角</span>
+        <span class="rule-math">\(l\perp AM,\quad l\perp DM\ \Longrightarrow\ \angle AMD\)</span>
+        <span class="rule-why">在交線 $l$ 的同一點，分別於兩個平面內作 $l$ 的垂線，兩條垂線的夾角就是兩平面的夾角。</span>
+      </div>
+      兩平面的交線是 $BC$。<br>取 $BC$ 的中點 $M$，連 $AM$、$DM$。<br>
+因為 $\triangle ABC$ 與 $\triangle DBC$ 都是等邊三角形，中線同時是高：
+\[ AM\perp BC,\qquad DM\perp BC. \]
+所以所求的角就是 $\angle AMD$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">設稜長求三條邊</div>
+      <div class="rule">
+        <span class="rule-name">等邊三角形的高</span>
+        <span class="rule-math">\(h=\dfrac{\sqrt3}{2}a\)</span>
+        <span class="rule-why">正四面體四個面都是等邊三角形，中線長可由邊長直接算出。</span>
+      </div>
+      設稜長為 $2$（方便計算，答案與稜長無關）：
+\[ AM=DM=\frac{\sqrt3}{2}(2)=\sqrt3,\qquad AD=2. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用餘弦公式求夾角</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        <span class="rule-math">\(\cos C=\dfrac{a^{2}+b^{2}-c^{2}}{2ab}\)</span>
+        <span class="rule-why">已知三角形 $AMD$ 的三邊，用餘弦公式便可求出 $\angle AMD$。</span>
+      </div>
+      \[ \cos\angle AMD=\frac{AM^{2}+DM^{2}-AD^{2}}{2\cdot AM\cdot DM}=\frac{3+3-4}{2(3)}=\frac{1}{3}. \]
+\[ \angle AMD=\cos^{-1}\frac{1}{3}\approx 70.53^{\circ}\approx 71^{\circ}. \]
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$71^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中顯示一正四面體 $ABCD$，其中 $G$ 為底面 $BCD$ 的中心。求稜 $AB$ 與底面 $BCD$ 的夾角（準確至最接近的度）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$35^{\circ}$</li><li><span class="ol">B</span>$45^{\circ}$</li><li><span class="ol">C</span>$55^{\circ}$</li><li><span class="ol">D</span>$71^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 稜與平面的夾角，就是稜與它在該平面上的投影的夾角；$AG\perp$ 底面，<br>故投影為 $BG$，所求為 $\angle ABG$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設稜長為 $2$，則 $AG=\sqrt{\dfrac{2}{3}}\times 2=\dfrac{2\sqrt6}{3}\approx1.633$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\sin\angle ABG=\dfrac{AG}{AB}=\dfrac{1.633}{2}\approx0.8165$，故 $\angle ABG\approx54.7^{\circ}\approx55^{\circ}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$55^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q39.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q41.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

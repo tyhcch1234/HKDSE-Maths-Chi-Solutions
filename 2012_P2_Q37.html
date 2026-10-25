@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第37題 · 等差數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第37題</span>
+    <h1>等差數列</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a_n$ 為一等差數列的第 $n$ 項。若 $a_{18}=26$ 及 $a_{23}=61$，則下列何者正確？<br>
+      <p>I. $a_{14}<0$</p><br>
+      <p>II. $a_1-a_2<0$</p><br>
+      <p>III. $a_1+a_2+a_3+\cdots+a_{27}>0$</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由兩項之差求公差</div>
+      <div class="rule">
+        <span class="rule-name">等差數列的通項</span>
+        <span class="rule-math">\(a_n=a_1+(n-1)d\)</span>
+        <span class="rule-why">第 $18$ 項到第 $23$ 項相隔 $5$ 項，兩者之差就是 $5d$。</span>
+      </div>
+      \[ a_{23}-a_{18}=61-26=35=5d\;\Longrightarrow\;d=7. \]
+再由 $a_{18}=a_1+17d$：
+\[ a_1=26-17(7)=-93. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I 及 II</div>
+      <div class="rule">
+        <span class="rule-name">公差為正</span>
+        <span class="rule-math">\(d>0\ \Longrightarrow\ a_{n+1}>a_n\)</span>
+        <span class="rule-why">公差是正數，數列逐項遞增，所以前一項必定小於後一項。</span>
+      </div>
+      I：$a_{14}=-93+13(7)=-2<0$ ✓。<br>
+II：$a_1-a_2=-d=-7<0$ ✓（其實只要 $d>0$，此式必成立）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 III</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        <span class="rule-math">\(S_n=\dfrac{n}{2}\left[2a_1+(n-1)d\right]\)</span>
+        <span class="rule-why">首項與末項的平均乘以項數，即為等差數列之和。</span>
+      </div>
+      \[ S_{27}=\frac{27}{2}\left[2(-93)+26(7)\right]=\frac{27}{2}(-186+182)=-54<0. \]
+III 不成立。<br>所以只有 I 及 II 正確，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a_n$ 為一等差數列的第 $n$ 項。若 $a_{10}=8$ 及 $a_{16}=32$，則下列何者正確？<br>
+      <p>I. $a_4<0$</p><br>
+      <p>II. $a_1-a_2<0$</p><br>
+      <p>III. $a_1+a_2+a_3+\cdots+a_{20}>0$</p></div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $a_{16}-a_{10}=24=6d$，故 $d=4$；<br>再由 $a_{10}=a_1+9d$ 得 $a_1=8-36=-28$。</div>
+          <div class="p-step"><b>第 2 步.</b> I：$a_4=-28+3(4)=-16<0$ ✓。<br>II：$a_1-a_2=-d=-4<0$ ✓。</div>
+          <div class="p-step"><b>第 3 步.</b> III：$S_{20}=\dfrac{20}{2}\left[2(-28)+19(4)\right]=10(-56+76)=200>0$ ✓。<br>三項全部正確，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q36.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

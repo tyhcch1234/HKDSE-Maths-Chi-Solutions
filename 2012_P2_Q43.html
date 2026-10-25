@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第43題 · 組合</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第43題</span>
+    <h1>組合</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某話劇社由 $12$ 名男生及 $8$ 名女生組成。若從中選出 $5$ 名學生參加比賽，而隊伍中至少有 $1$ 名女生，問可組成多少支不同的隊伍？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3\,960$</li><li><span class="ol">B</span>$14\,712$</li><li><span class="ol">C</span>$15\,448$</li><li><span class="ol">D</span>$15\,504$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">「至少一名女生」用補集處理</div>
+      <div class="rule">
+        <span class="rule-name">補集的想法</span>
+        <span class="rule-math">\(N(\text{at least 1 girl})=N(\text{all})-N(\text{all boys})\)</span>
+        <span class="rule-why">「至少一名女生」要分五種情況，倒不如用全部減去「一名女生都沒有」。</span>
+      </div>
+      全社共 $12+8=20$ 人，任選 $5$ 人的方法數為 $C^{20}_{5}$；<br>
+其中「全男」即從 $12$ 名男生中選 $5$ 人，方法數為 $C^{12}_{5}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">計算兩個組合數</div>
+      <div class="rule">
+        <span class="rule-name">組合數</span>
+        <span class="rule-math">\(C^{n}_{r}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">選出的隊伍不計次序，所以用組合而非排列。</span>
+      </div>
+      \[ C^{20}_{5}=\frac{20\times19\times18\times17\times16}{5\times4\times3\times2\times1}=15\,504, \]
+\[ C^{12}_{5}=\frac{12\times11\times10\times9\times8}{5\times4\times3\times2\times1}=792. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相減得答案</div>
+      <div class="rule">
+        <span class="rule-name">減法原理</span>
+        <span class="rule-math">\(15\,504-792=14\,712\)</span>
+        <span class="rule-why">全部方法減去不合條件的方法，就是符合條件的方法數。</span>
+      </div>
+      \[ 15\,504-792=14\,712. \]
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$14\,712$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班有 $10$ 名男生及 $6$ 名女生。若從中選出 $4$ 名學生參加活動，而其中至少有 $1$ 名女生，問可組成多少個不同的組合？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1\,610$</li><li><span class="ol">B</span>$1\,820$</li><li><span class="ol">C</span>$210$</li><li><span class="ol">D</span>$3\,360$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部 $16$ 人中選 $4$ 人：$C^{16}_{4}=1\,820$。</div>
+          <div class="p-step"><b>第 2 步.</b> 「全男」即從 $10$ 名男生中選 $4$ 人：$C^{10}_{4}=210$。</div>
+          <div class="p-step"><b>第 3 步.</b> 至少一名女生：$1\,820-210=1\,610$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$1\,610$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q42.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q44.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

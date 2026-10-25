@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第44題 · 概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第44題</span>
+    <h1>概率</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某盒內有六個球，分別標有 $7$、$8$、$8$、$9$、$9$ 及 $9$。約翰每次隨機從盒中抽出一個球，抽出後不放回，直至抽到 $9$ 為止。求他恰好需要抽三次的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{1}{6}$</li><li><span class="ol">C</span>$\dfrac{1}{8}$</li><li><span class="ol">D</span>$\dfrac{3}{20}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「恰好三次」翻譯成事件</div>
+      <div class="rule">
+        <span class="rule-name">不放回抽樣</span>
+        <span class="rule-math">\(P(A\cap B)=P(A)\,P(B\mid A)\)</span>
+        <span class="rule-why">不放回時，前一次抽走了球，下一次的分母要少 1，分子亦要按抽走的號碼調整。</span>
+      </div>
+      恰好抽三次才抽到 $9$，即：<br>
+第 1 次不是 $9$，第 2 次不是 $9$，第 3 次是 $9$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐次寫出概率</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">\(\dfrac{3}{6}\times\dfrac{2}{5}\times\dfrac{3}{4}\)</span>
+        <span class="rule-why">三個事件要同時發生，逐次把條件概率相乘。</span>
+      </div>
+      六個球中只有三個 $9$，非 $9$ 的球有 $7$、$8$、$8$ 共三個：<br>
+第 1 次非 $9$：$\dfrac{3}{6}$；<br>
+第 2 次非 $9$（餘 $5$ 個球、非 $9$ 剩 $2$ 個）：$\dfrac{2}{5}$；<br>
+第 3 次是 $9$（餘 $4$ 個球、$9$ 仍有 $3$ 個）：$\dfrac{3}{4}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相乘並約簡</div>
+      <div class="rule">
+        <span class="rule-name">分數相乘</span>
+        <span class="rule-math">\(\dfrac{3}{6}\times\dfrac{2}{5}\times\dfrac{3}{4}=\dfrac{18}{120}\)</span>
+        <span class="rule-why">分子乘分子、分母乘分母，最後約至最簡。</span>
+      </div>
+      \[ \frac{3}{6}\times\frac{2}{5}\times\frac{3}{4}=\frac{18}{120}=\frac{3}{20}. \]
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{3}{20}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某盒內有七個球，分別標有 $6$、$7$、$7$、$8$、$8$、$8$ 及 $8$。每次隨機抽出一個球，抽出後不放回，直至抽到 $8$ 為止。求恰好需要抽三次的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{4}{35}$</li><li><span class="ol">B</span>$\dfrac{2}{7}$</li><li><span class="ol">C</span>$\dfrac{1}{5}$</li><li><span class="ol">D</span>$\dfrac{8}{35}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 恰好三次即：首兩次非 $8$，第三次是 $8$。<br>非 $8$ 的球有 $6$、$7$、$7$ 共三個。</div>
+          <div class="p-step"><b>第 2 步.</b> 第 1 次非 $8$：$\dfrac{3}{7}$；<br>第 2 次非 $8$：$\dfrac{2}{6}$；<br>第 3 次是 $8$：$\dfrac{4}{5}$。</div>
+          <div class="p-step"><b>第 3 步.</b> \[ \frac{3}{7}\times\frac{2}{6}\times\frac{4}{5}=\frac{24}{210}=\frac{4}{35}, \] 答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{4}{35}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q43.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q45.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

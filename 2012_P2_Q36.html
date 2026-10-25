@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第36題 · 不等式與線性規劃</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第36題</span>
+    <h1>不等式與線性規劃</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中陰影部分（包括邊界）由直線 $y=3$、$y=x+3$ 及 $y=6-2x$ 圍成。若 $(h,k)$ 為陰影區域內的一點，則下列何者正確？<br>
+      <p>I. $k\ge 3$</p><br>
+      <p>II. $h-k\ge -3$</p><br>
+      <p>III. $2h+k\le 6$</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q36.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三條邊界寫成不等式</div>
+      <div class="rule">
+        <span class="rule-name">直線的上方與下方</span>
+        <span class="rule-math">\(k\le mh+c\)</span>
+        <span class="rule-why">點在直線 $y=mx+c$ 的下方，即 $y$ 值較小，故 $k\le mh+c$；在上方則相反。</span>
+      </div>
+      陰影區域是直線圍成的三角形：<br>
+在 $y=3$ 之上：$k\ge 3$；<br>
+在 $y=x+3$ 之下：$k\le h+3$，即 $h-k\ge -3$；<br>
+在 $y=6-2x$ 之下：$k\le 6-2h$，即 $2h+k\le 6$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項對照</div>
+      <div class="rule">
+        <span class="rule-name">不等式的移項</span>
+        <span class="rule-math">\(k\le h+3\iff h-k\ge -3\)</span>
+        <span class="rule-why">兩邊同時加 $h$、減 $k$，不等號方向不變。</span>
+      </div>
+      I：$k\ge3$ ✓（正是 $y=3$ 以上的條件）。<br>
+II：$h-k\ge-3$ ✓（正是 $y=x+3$ 以下的條件）。<br>
+III：$2h+k\le6$ ✓（正是 $y=6-2x$ 以下的條件）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用三個頂點覆核</div>
+      <div class="rule">
+        <span class="rule-name">邊界點滿足等式</span>
+        <span class="rule-math">\((0,3),\ (1.5,3),\ (1,4)\)</span>
+        <span class="rule-why">三角形三個頂點是兩條邊界的交點，代入三個不等式應全部成立。</span>
+      </div>
+      $y=3$ 與 $y=x+3$ 交於 $(0,3)$；$y=3$ 與 $y=6-2x$ 交於 $(1.5,3)$；$y=x+3$ 與 $y=6-2x$ 交於 $(1,4)$。<br>
+以 $(1,4)$ 覆核：$4\ge3$ ✓、$1-4=-3\ge-3$ ✓、$2(1)+4=6\le6$ ✓。<br>
+三項全部正確，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某區域由直線 $y=1$、$y=2x-3$ 及 $y=7-x$ 圍成。若 $(h,k)$ 為該區域內的一點，則下列何者正確？<br>
+      <p>I. $k\ge 1$</p><br>
+      <p>II. $2h-k\le 3$</p><br>
+      <p>III. $h+k\le 7$</p></div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 在 $y=1$ 之上得 $k\ge1$；<br>在 $y=2x-3$ 之上得 $k\ge2h-3$，即 $2h-k\le3$；<br>在 $y=7-x$ 之下得 $k\le7-h$，即 $h+k\le7$。</div>
+          <div class="p-step"><b>第 2 步.</b> 三條不等式的方向都與區域位置一致，故 I、II、III 皆正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 以交點 $\left(\dfrac{10}{3},\dfrac{11}{3}\right)$ 覆核：$k=\dfrac{11}{3}\ge1$ ✓、$2h-k=3\le3$ ✓、$h+k=7\le7$ ✓，<br>答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q37.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
