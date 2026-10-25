@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第13題 · 立體度量與相似</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第13題</span>
+    <h1>立體度量與相似</h1>
+    <p class="sub">(a) 5 分；<br>(b) 2 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      工場內有 $2$ 個相同的實心金屬直圓柱，底半徑為 $R$ cm。它們被熔化並重鑄成 $27$ 個相同的較小實心直圓柱，底半徑為 $r$ cm、高為 $10$ cm。已知較大圓柱的底面積是較小圓柱的 $9$ 倍。<br>
+(a) 求<br>(i) $r:R$；<br>(ii) 較大圓柱的高。<br>
+(b) 一名技工聲稱較小圓柱與較大圓柱相似。你是否同意？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 由底面積之比求半徑之比</div>
+      <div class="rule">
+        <span class="rule-name">相似圖形的面積比</span>
+        <span class="rule-math">\(\dfrac{A_{1}}{A_{2}}=\left(\dfrac{l_{1}}{l_{2}}\right)^{2}\)</span>
+        <span class="rule-why">兩個圓形底面相似，面積比是半徑比的平方。</span>
+      </div>
+      設圓的半徑為 $\rho$，底面積為 $\pi\rho^{2}$，故
+\[ \frac{\pi R^{2}}{\pi r^{2}}=\frac{9}{1}\quad\Longrightarrow\quad \left(\frac{R}{r}\right)^{2}=9. \]
+半徑是長度，<br>取正平方根：$\dfrac{R}{r}=3$，即 $r:R=1:3$。<br>
+注意不要直接把面積比 $9:1$ 當成半徑比 $9:1$；<br>平方關係是這類題目最常見的失分位。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(ii) 熔化重鑄 → 體積不變</div>
+      <div class="rule">
+        <span class="rule-name">圓柱的體積</span>
+        <span class="rule-math">\(V=\pi r^{2}h\)</span>
+        <span class="rule-why">熔化重鑄只改變形狀，金屬的總體積保持不變，可用來列方程。</span>
+      </div>
+      設較大圓柱的高為 $h$ cm。<br>
+熔化重鑄前後體積相等：
+\[ 2\pi R^{2}h=27\pi r^{2}(10). \]
+由 (a)(i) 知 $R=3r$，<br>即 $R^{2}=9r^{2}$，代入：
+\[ 2\pi(9r^{2})h=270\pi r^{2}. \]
+兩邊同除以 $18\pi r^{2}$（$r\neq0$），得 $h=15$。<br>
+所以較大圓柱的高為 $15$ cm。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 比較半徑比與高之比，判斷是否相似</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的判別</span>
+        <span class="rule-math">\(\dfrac{r_{1}}{r_{2}}=\dfrac{h_{1}}{h_{2}}\)</span>
+        <span class="rule-why">兩個圓柱相似，若且唯若所有對應長度（半徑、高）都成同一比例。</span>
+      </div>
+      較小與較大圓柱的半徑比：$\dfrac{r}{R}=\dfrac{1}{3}$。<br>
+較小與較大圓柱的高之比：$\dfrac{10}{15}=\dfrac{2}{3}$。<br>
+因為 $\dfrac{1}{3}\neq\dfrac{2}{3}$，對應長度不成同一比例，所以兩個圓柱不相似。<br>
+若把體積比也一併檢查：大圓柱體積為 $\pi(9r^{2})(15)=135\pi r^{2}$，小圓柱為 $\pi r^{2}(10)=10\pi r^{2}$，<br>體積比 $27:2$ 並非 $1^{3}:3^{3}=1:27$，同樣說明兩者不相似。<br>
+技工的聲稱錯誤 —— 不同意。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a)(i) $r:R=1:3$；<br>(ii) $15$ cm　(b) 不同意：半徑比 $1:3$ 與高之比 $2:3$ 不相等，故兩圓柱不相似。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $3$ 個相同的實心金屬直圓柱（底半徑 $R$ cm）被熔鑄成 $24$ 個相同的小直圓柱（底半徑 $r$ cm、高 $8$ cm）。已知大圓柱的底面積是小圓柱的 $4$ 倍。<br>
+(a) 求 $r:R$ 及大圓柱的高。<br>
+(b) 小圓柱與大圓柱是否相似？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 底面積比 $4:1$，故 $\left(\dfrac{R}{r}\right)^{2}=4$，取正根得 $R=2r$，<br>即 $r:R=1:2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 體積不變：$3\pi R^{2}h=24\pi r^{2}(8)$。<br>代入 $R^{2}=4r^{2}$：$12\pi r^{2}h=192\pi r^{2}$，故 $h=16$ cm。</div>
+          <div class="p-step"><b>第 3 步.</b> 半徑比 $1:2$，高之比 $8:16=1:2$，兩者相等，故小圓柱與大圓柱相似 —— 同意。</div>
+          <div class="p-ans">答案：<br>(a) $r:R=1:2$，高 $=16$ cm　(b) 同意：半徑比與高之比同為 $1:2$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

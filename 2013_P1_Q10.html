@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第10題 · 莖葉圖與概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第10題</span>
+    <h1>莖葉圖與概率</h1>
+    <p class="sub">(a) 2分 (b) 4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      委員會 A 各成員的年齡如下：
+      \[ 17,\ 18,\ 21,\ 21,\ 22,\ 22,\ 22,\ 23,\ 23,\ 23,\ 31,\ 31,\ 34,\ 35,\ 36,\ 47,\ 47,\ 58,\ 68,\ 69 \]
+      <p>(a) 寫出委員會 A 成員年齡的中位數及眾數。</p><br>
+      <p>(b) 下面的莖葉圖顯示委員會 B 成員年齡的分布，已知該分布的範圍為 47。</p><br>
+      <p>(i) 求 $a$ 及 $b$。</p><br>
+      <p>(ii) 從每個委員會各隨機選出一名成員作為該委員會的代表。若兩名代表的年齡相差超過 40，他們便可參加比賽。求他們可參加比賽的概率。</p>
+    </div>
+    <figure class="fig"><img src="figures/2013_P1_Q10.png" alt="題目附圖"><figcaption>委員會 B 年齡的莖葉圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 20 個數據，中位數取第 10、11 個的平均</div>
+      <div class="rule">
+        <span class="rule-name">中位數（數據個數為偶數）</span>
+        <span class="rule-math">\(n\ \text{even}:\ \text{median}=\dfrac{x_{n/2}+x_{n/2+1}}{2}\)</span>
+        <span class="rule-why">委員會 A 有 $20$ 個數據，中位數是正中間兩個數據的平均值。</span>
+      </div>
+      委員會 A 的年齡已由小至大排列，共 $20$ 個：
+\[ 17,18,21,21,22,22,22,23,23,\underbrace{23}_{10}, \underbrace{31}_{11},31,34,35,36,47,47,58,68,69. \]
+第 $10$ 個是 $23$，<br>第 $11$ 個是 $31$，所以<br>
+中位數
+\[ =\frac{23+31}{2}=27. \]
+眾數：$22$ 出現 $3$ 次，$23$ 亦出現 $3$ 次，<br>是出現次數最多的兩個，故眾數為 $22$ 及 $23$。<br>
+<div class="hint">數數據時不要漏掉 $21$ 和 $47$ 各兩次；眾數可以有多於一個。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b)(i) 用「範圍 $=47$」求 $a$ 與 $b$</div>
+      <div class="rule">
+        <span class="rule-name">全距（範圍）</span>
+        <span class="rule-math">\(R=x_{\max}-x_{\min}\)</span>
+        <span class="rule-why">莖葉圖中最小的數是 $20+a$、最大的是 $60+b$，用範圍便可列出一條方程。</span>
+      </div>
+      莖 $2$ 的葉為 $a,5,6,7$，故最小年齡為 $20+a$（$0\le a\le5$）；<br>
+莖 $6$ 的葉為 $7,b$，故最大年齡為 $60+b$（$7\le b\le9$）。<br>
+由範圍為 $47$：
+\[ (60+b)-(20+a)=47\;\Longrightarrow\;b-a=7. \]
+因為 $b$ 是一位數字（$b\le9$）、$a\ge0$，<br>逐一檢查得
+\[ (a,b)=(0,7),\ (1,8),\ (2,9). \]
+<div class="hint">$a=3$ 時 $b=10$ 不是一位數字，所以只有三組解。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(ii) 數出有利的配對，再求概率</div>
+      <div class="rule">
+        <span class="rule-name">概率的定義</span>
+        <span class="rule-math">\(P(E)=\dfrac{\text{number of favourable outcomes}}{\text{total number of outcomes}}\)</span>
+        <span class="rule-why">兩名代表是各自獨立、等可能地選出，故可用「有利配對數 ÷ 總配對數」。</span>
+      </div>
+      委員會 B 共 $13$ 人，年齡為 $20+a$、$25$、$26$、$27$、$33$、$33$、$38$、$43$、$51$、$52$、$59$、$67$、$60+b$；<br>
+委員會 A 共 $20$ 人，總配對數 $=20\times13=260$。<br>
+年齡相差超過 $40$，必須「一老一少」，逐組數：<br>
+(1) A 的大齡 $68,69$（$2$ 人）配 B 的小齡 $20+a,25,26,27$（$4$ 人）：$68-27=41>40$，<br>共 $2\times4=8$ 對。<br>
+(2) B 的大齡 $67$ 與 $60+b$（$2$ 人）配 A 的小齡 $17,18,21,21,22,22,22,23,23,23$（$10$ 人）：$67-26=41>40$，<br>共 $2\times10=20$ 對。<br>
+(3) B 的 $59$ 配 A 的 $17$ 及 $18$：$59-18=41>40$，<br>共 $2$ 對。<br>
+其餘組合（例如 A 的 $21$ 至 $58$ 配 B 的 $20$ 至 $59$）相差都不超過 $40$。<br>
+（$a$、$b$ 的取值不影響計數：$20+a\le22$，而 $60+b\ge67$。<br>）<br>
+有利配對共 $8+20+2=30$，故
+\[ P=\frac{30}{260}=\frac{3}{26}. \]
+<div class="hint">$67-27=40$ 只是「等於」$40$，不合「超過 $40$」，所以 A 要不大於 $26$ 才能配 B 的 $67$。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 中位數 $=27$，眾數 $=22$ 及 $23$<br><br>
+      (b)(i) $(a,b)=(0,7)$、$(1,8)$ 或 $(2,9)$<br><br>
+      (b)(ii) $\dfrac{3}{26}$（$\dfrac{30}{260}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 12 名成員的年齡為
+      \[ 22,\ 24,\ 24,\ 25,\ 28,\ 29,\ 31,\ 34,\ 34,\ 36,\ 45,\ 51 \]
+      <p>(a) 寫出中位數及眾數。</p><br>
+      <p>(b) 某會的莖葉圖中，最小年齡為 $20+a$、最大年齡為 $40+b$，其中 $a$、$b$ 為葉的數字。已知範圍為 $25$，求所有可能的 $(a,b)$。</p></div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $n=12$，中位數為第 $6$ 與第 $7$ 個數據的平均：$\dfrac{29+31}{2}=30$。</div>
+          <div class="p-step"><b>第 2 步.</b> $24$ 與 $34$ 各出現 $2$ 次，次數最多，<br>故眾數為 $24$ 及 $34$。</div>
+          <div class="p-step"><b>第 3 步.</b> 範圍 $=(40+b)-(20+a)=20+(b-a)=25$，故 $b-a=5$；<br>配合 $0\le a\le5$、$7\le b\le9$，得 $(a,b)=(2,7)$、$(3,8)$、$(4,9)$。</div>
+          <div class="p-ans">答案：<br>(a) 中位數 $=30$，眾數 $=24$ 及 $34$　(b) $(a,b)=(2,7)$、$(3,8)$ 或 $(4,9)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q9.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q11.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

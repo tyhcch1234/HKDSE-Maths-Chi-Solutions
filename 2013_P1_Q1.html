@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第1題 · 指數定律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第1題</span>
+    <h1>指數定律</h1>
+    <p class="sub">3分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{x^{20}y^{13}}{(x^{5}y)^{6}}$，並以正指數表示答案。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把分母的括號展開</div>
+      <div class="rule">
+        <span class="rule-name">積的乘方</span>
+        <span class="rule-math">\((ab)^{n}=a^{n}b^{n}\)</span>
+        <span class="rule-why">括號內是兩個因數相乘，指數 $6$ 要逐個因數乘上去，不能只乘 $x$。</span>
+      </div>
+      分母是 $(x^{5}y)^{6}$，括號內兩個因數都要各自升到 6 次方：
+\[ (x^{5}y)^{6}=x^{5\times6}\,y^{1\times6}=x^{30}y^{6}. \]
+留意 $y$ 的指數是「隱形」的 $1$，<br>很多同學就是漏了它而寫成 $x^{30}y$。<br>
+這樣分母就變成單項式 $x^{30}y^{6}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同底相除，指數相減</div>
+      <div class="rule">
+        <span class="rule-name">同底數冪相除</span>
+        <span class="rule-math">\(\dfrac{a^{m}}{a^{n}}=a^{m-n}\quad(a\neq 0)\)</span>
+        <span class="rule-why">分子、分母現在都只有 $x$ 和 $y$ 兩個底，逐個底把指數相減即可。</span>
+      </div>
+      改寫成分數後：
+\[ \frac{x^{20}y^{13}}{(x^{5}y)^{6}}=\frac{x^{20}y^{13}}{x^{30}y^{6}}. \]
+對 $x$ 與 $y$ 分別用同一條法則：
+\[ x^{20-30}=x^{-10},\qquad y^{13-6}=y^{7}. \]
+所以原式 $=x^{-10}y^{7}$。<br>
+<div class="hint">相減時是「分子指數減分母指數」，次序倒轉就會把正負號弄錯。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把負指數改寫成倒數</div>
+      <div class="rule">
+        <span class="rule-name">負指數</span>
+        <span class="rule-math">\(a^{-n}=\dfrac{1}{a^{n}}\)</span>
+        <span class="rule-why">題目要求「以正指數表示」，所以要把 $x^{-10}$ 搬到分母。</span>
+      </div>
+      $y$ 的指數 $7$ 已是正數，只需處理 $x^{-10}$：
+\[ x^{-10}y^{7}=\frac{1}{x^{10}}\cdot y^{7}=\frac{y^{7}}{x^{10}}. \]
+負指數不會令整個式子變成負數，<br>只是把底數移到分數的另一邊。<br>
+最後答案：$\dfrac{y^{7}}{x^{10}}$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{y^{7}}{x^{10}}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{a^{18}b^{7}}{(a^{4}b)^{5}}$，並以正指數表示答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開分母：$(a^{4}b)^{5}=a^{4\times5}\,b^{1\times5}=a^{20}b^{5}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同底相除，指數相減：$a^{18-20}=a^{-2}$，$b^{7-5}=b^{2}$，故原式 $=a^{-2}b^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 把負指數搬到分母：$a^{-2}b^{2}=\dfrac{b^{2}}{a^{2}}$。</div>
+          <div class="p-ans">答案：$\dfrac{b^{2}}{a^{2}}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

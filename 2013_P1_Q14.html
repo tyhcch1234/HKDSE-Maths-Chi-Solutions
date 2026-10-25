@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第14題 · 圓與直線</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第14題</span>
+    <h1>圓與直線</h1>
+    <p class="sub">全題 8 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 的方程為 $x^{2}+y^{2}-12x-34y+225=0$。設 $R$ 為 $C$ 的圓心。<br>
+(a) 寫出 $R$ 的坐標。<br>
+(b) 直線 $L$ 的方程為 $4x+3y+50=0$。已知 $C$ 與 $L$ 不相交。設 $P$ 為 $L$ 上的一點，使 $P$ 與 $R$ 的距離最小。<br>
+(i) 求 $P$ 與 $R$ 的距離。<br>
+(ii) 設 $Q$ 為 $C$ 上的一個動點。當 $Q$ 與 $P$ 的距離最小時，(1) 描述 $P$、$Q$、$R$ 三點的幾何關係；(2) 求 $\triangle OPQ$ 的面積與 $\triangle OQR$ 的面積之比，其中 $O$ 為原點。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方求圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        <span class="rule-math">\((x-h)^{2}+(y-k)^{2}=r^{2}\)</span>
+        <span class="rule-why">把一般式配方成標準式，圓心與半徑便一目了然。</span>
+      </div>
+      對 $x$ 與 $y$ 分別配方：
+\[ x^{2}-12x=(x-6)^{2}-36,\qquad y^{2}-34y=(y-17)^{2}-289. \]
+代入原式：
+\[ (x-6)^{2}+(y-17)^{2}-36-289+225=0 \]
+\[ (x-6)^{2}+(y-17)^{2}=100. \]
+所以圓心 $R=(6,17)$，<br>半徑 $r=\sqrt{100}=10$。<br>
+（配方時把常數項整理清楚是關鍵：$-36-289+225=-100$，移項後右邊才是 $100$。<br>）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b)(i) 用垂直關係定出 $P$，再求 $PR$</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直的直線</span>
+        <span class="rule-math">\(m_{1}m_{2}=-1\)</span>
+        <span class="rule-why">$P$ 是 $L$ 上最接近 $R$ 的點，所以 $RP$ 垂直於 $L$。</span>
+      </div>
+      $L$：$4x+3y+50=0$ 的斜率為 $-\dfrac{4}{3}$，故 $RP$ 的斜率為 $\dfrac{3}{4}$。<br>
+設 $P=(h,k)$。<br>因 $P$ 在 $L$ 上：
+\[ 4h+3k+50=0. \]
+又 $RP$ 的斜率為 $\dfrac{3}{4}$：
+\[ \frac{k-17}{h-6}=\frac{3}{4}\quad\Longrightarrow\quad 4k-68=3h-18\quad\Longrightarrow\quad 3h-4k+50=0. \]
+解 $\begin{cases}4h+3k+50=0\\ 3h-4k+50=0\end{cases}$，<br>得 $h=-14$、$k=2$，即 $P=(-14,\,2)$（驗算：$4(-14)+3(2)+50=0$ ✓）。<br>
+於是
+\[ PR=\sqrt{(-14-6)^{2}+(2-17)^{2}}=\sqrt{400+225}=25. \]
+也可用點到直線的距離直接核對：$\dfrac{|4(6)+3(17)+50|}{\sqrt{4^{2}+3^{2}}}=\dfrac{125}{5}=25$ ✓。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(ii) 定出 $Q$ 的位置，再用等高三角形比較面積</div>
+      <div class="rule">
+        <span class="rule-name">等高三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{[OPQ]}{[OQR]}=\dfrac{PQ}{QR}\)</span>
+        <span class="rule-why">$P$、$Q$、$R$ 共線，兩個三角形以 $PQ$、$QR$ 為底時，由 $O$ 到直線 $PR$ 的高相同。</span>
+      </div>
+      $Q$ 在圓上且與 $P$ 的距離最小，故 $Q$ 在線段 $PR$ 上，<br>且 $RQ=r=10$。<br>
+(1) 因此 $P$、$Q$、$R$ 三點共線，且 $Q$ 位於 $P$ 與 $R$ 之間。<br>
+(2) 由 $PR=25$、$RQ=10$：
+\[ PQ=PR-RQ=25-10=15,\qquad QR=10. \]
+兩個三角形以 $PQ$、$QR$ 為底，<br>頂點同為 $O$，而 $P$、$Q$、$R$ 共線，所以由 $O$ 到直線 $PR$ 的垂直距離（高）相同：
+\[ \frac{[OPQ]}{[OQR]}=\frac{PQ}{QR}=\frac{15}{10}=\frac{3}{2}. \]
+即面積比為 $3:2$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $R=(6,\,17)$　(b)(i) $PR=25$　(b)(ii)(1) $P$、$Q$、$R$ 共線，且 $Q$ 在 $P$ 與 $R$ 之間；(2) $3:2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 的方程為 $x^{2}+y^{2}-10x-8y+32=0$，圓心為 $R$。<br>
+(a) 求 $R$ 的坐標及圓的半徑。<br>
+(b) 直線 $L$：$4x+3y-82=0$ 與 $C$ 不相交。$P$ 為 $L$ 上最接近 $R$ 的點。<br>
+(i) 求 $PR$。<br>
+(ii) $Q$ 為 $C$ 上最接近 $P$ 的點，求 $\triangle OPQ$ 與 $\triangle OQR$ 的面積之比（$O$ 為原點）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 配方：$(x-5)^{2}+(y-4)^{2}=25+16-32=9$，故 $R=(5,\,4)$，半徑 $r=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $L$ 的斜率為 $-\dfrac{4}{3}$，故 $RP$ 的斜率為 $\dfrac{3}{4}$：$\dfrac{k-4}{h-5}=\dfrac{3}{4}$ 且 $4h+3k-82=0$，<br>解得 $P=(13,\,10)$，$PR=\sqrt{8^{2}+6^{2}}=10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $Q$ 在線段 $PR$ 上，$RQ=3$，故 $PQ=10-3=7$；<br>兩三角形同高，面積比 $=PQ:QR=7:3$。</div>
+          <div class="p-ans">答案：<br>(a) $R=(5,\,4)$，$r=3$　(b)(i) $10$；<br>(ii) $7:3$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q13.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q15.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

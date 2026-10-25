@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第7題 · 全等與相似三角形</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第7題</span>
+    <h1>全等與相似三角形</h1>
+    <p class="sub">4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 1 中，$ABCD$ 為四邊形。對角線 $AC$ 與 $BD$ 相交於 $E$。已知 $BE=CE$ 及 $\angle BAC=\angle BDC$。<br>
+      <p>(a) 證明 $\triangle ABC\cong\triangle DCB$。</p><br>
+      <p>(b) 考慮圖 1 中的三角形。</p><br>
+      <p>(i) 共有多少對全等三角形？</p><br>
+      <p>(ii) 共有多少對相似三角形？</p>
+    </div>
+    <figure class="fig"><img src="figures/2013_P1_Q7.png" alt="題目附圖"><figcaption>圖 1（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由 $BE=CE$ 得等腰三角形的底角相等</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        <span class="rule-math">\(BE=CE\;\Longrightarrow\;\angle EBC=\angle ECB\)</span>
+        <span class="rule-why">$\triangle BCE$ 中兩腰相等，等邊所對的角便相等，這是全等證明中第一對相等的角。</span>
+      </div>
+      在 $\triangle BCE$ 中 $BE=CE$，故（等腰三角形底角相等）
+\[ \angle EBC=\angle ECB. \]
+而 $A$、$E$、$C$ 共線，$B$、$E$、$D$ 共線，<br>所以
+\[ \angle EBC=\angle DBC,\qquad \angle ECB=\angle ACB. \]
+於是得到關鍵的一對角：
+\[ \angle ACB=\angle DBC. \]
+<div class="hint">寫證明時要把「$\angle ECB$ 與 $\angle ACB$ 是同一個角」這一步寫清楚，否則理由不完整。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用 AAS 證明 $\triangle ABC\cong\triangle DCB$</div>
+      <div class="rule">
+        <span class="rule-name">AAS 全等判定</span>
+        <span class="rule-math">\(\angle A=\angle D,\ \angle C=\angle B,\ BC=CB\;\Longrightarrow\;\triangle ABC\cong\triangle DCB\)</span>
+        <span class="rule-why">兩對角相等再加一條對應邊相等，就足以判定兩個三角形全等。</span>
+      </div>
+      在 $\triangle ABC$ 與 $\triangle DCB$ 中，逐項列出：<br>
+$\angle ACB=\angle DBC$（由 $BE=CE$ 得等腰三角形底角相等）；<br>
+$\angle BAC=\angle BDC$（已知）；<br>
+$BC=CB$（公共邊）。<br>
+兩角及一條對應邊相等，所以
+\[ \triangle ABC\cong\triangle DCB \quad (\text{AAS}). \]
+由此亦得對應邊相等：$AB=DC$、$AC=DB$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 數出全等對與相似對</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形判定（SAS）</span>
+        <span class="rule-math">\(\dfrac{AE}{CE}=\dfrac{DE}{BE},\ \angle AED=\angle CEB\;\Longrightarrow\;\triangle AED\sim\triangle BEC\)</span>
+        <span class="rule-why">兩邊成比例而夾角相等，兩三角形便相似；全等只是相似比為 $1$ 的特例，所以全等對必是相似對。</span>
+      </div>
+      先數全等（3 對）：<br>
+$\triangle ABC\cong\triangle DCB$（(a)）；<br>
+$\triangle ABE\cong\triangle DCE$：由 $AB=DC$、$BE=CE$、$AE=AC-CE=DB-BE=DE$（SSS）；<br>
+$\triangle ABD\cong\triangle DCA$：由 $AB=DC$、$BD=CA$、$AD$ 公共（SSS）。<br>
+再數相似（4 對）：上述 3 對全等三角形都是相似對；<br>另外
+\[ AE=DE,\quad BE=CE\;\Longrightarrow\;\frac{AE}{CE}=\frac{DE}{BE}, \]
+加上對頂角 $\angle AED=\angle BEC$，故 $\triangle AED\sim\triangle BEC$（SAS）。<br>
+因 $AD\neq BC$，這一對並不全等，是額外的一對。<br>
+所以 (b)(i) $3$ 對，(b)(ii) $4$ 對。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 由 $BE=CE$ 得 $\angle ACB=\angle DBC$，配合 $\angle BAC=\angle BDC$（已知）及公共邊 $BC=CB$，得 $\triangle ABC\cong\triangle DCB$（AAS）。<br><br>
+      (b)(i) $3$ 對（$\triangle ABC\cong\triangle DCB$、$\triangle ABE\cong\triangle DCE$、$\triangle ABD\cong\triangle DCA$）<br><br>
+      (b)(ii) $4$ 對（上述 3 對，加上 $\triangle AED\sim\triangle BEC$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABCD$ 為四邊形，對角線 $AC$、$BD$ 交於 $E$，已知 $BE=CE$、$\angle BAC=\angle BDC$，且 $AE=5$、$BE=8$、$BC=11$。<br>(a) 證明 $\triangle ABE\cong\triangle DCE$。<br>(b) 證明 $\triangle AED\sim\triangle BEC$，並求 $AD$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 先證 $\triangle ABC\cong\triangle DCB$（AAS），得 $AB=DC$、$AC=DB$，故 $AE=AC-CE=DB-BE=DE$。</div>
+          <div class="p-step"><b>第 2 步.</b> 於是 $\triangle ABE\cong\triangle DCE$（SSS：$AB=DC$、$BE=CE$、$AE=DE$）。</div>
+          <div class="p-step"><b>第 3 步.</b> 在 $\triangle AED$ 與 $\triangle BEC$ 中，$\angle AED=\angle BEC$（對頂角）且 $\dfrac{AE}{CE}=\dfrac{DE}{BE}=\dfrac{5}{8}$，<br>故 $\triangle AED\sim\triangle BEC$（SAS），相似比 $5:8$，得 $AD=\dfrac{5}{8}\times11=6.875$。</div>
+          <div class="p-ans">答案：<br>(a) 以 SSS 證得 $\triangle ABE\cong\triangle DCE$。<br>(b) $\triangle AED\sim\triangle BEC$（SAS），相似比 $5:8$，$AD=6.875$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

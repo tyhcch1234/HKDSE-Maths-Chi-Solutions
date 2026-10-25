@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第11題 · 部分變分</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第11題</span>
+    <h1>部分變分</h1>
+    <p class="sub">(a) 4 分；<br>(b) 2 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個托盤的周界為 $\ell$ 米時，其重量為 $W$ 克。已知 $W$ 是兩部分之和，其中一部分與 $\ell$ 成正比，另一部分與 $\ell^{2}$ 成正比。當 $\ell=1$ 時 $W=181$；當 $\ell=2$ 時 $W=402$。<br>
+(a) 求周界為 $1.2$ 米的托盤的重量。<br>
+(b) 若一個托盤重 $594$ 克，求該托盤的周界。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「兩部分之和」寫成部分變分式</div>
+      <div class="rule">
+        <span class="rule-name">部分變分</span>
+        <span class="rule-math">\(z=k_{1}x+k_{2}x^{2}\)</span>
+        <span class="rule-why">一部分與 $\ell$ 成正比、另一部分與 $\ell^{2}$ 成正比，兩部分相加便是這種形式。</span>
+      </div>
+      設 $W=h\ell+k\ell^{2}$，其中 $h$、$k$ 為非零常數。<br>
+「兩部分之和」指兩個正比關係相加，不是相乘，所以不會出現 $\ell^{3}$ 項，<br>也不會把 $\ell$ 與 $\ell^{2}$ 合成一個正比。<br>
+把題目給的兩組數據代入：
+\[ \ell=1:\quad h+k=181 \quad\cdots(1) \]
+\[ \ell=2:\quad 2h+4k=402 \]
+第二式各項除以 $2$，<br>得 $h+2k=201\quad\cdots(2)$，這樣兩式的 $h$ 係數就相同了。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解聯立方程求 $h$ 與 $k$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\(a_{1}x+b_{1}y=c_{1},\qquad a_{2}x+b_{2}y=c_{2}\)</span>
+        <span class="rule-why">$(1)$ 與 $(2)$ 的 $h$ 係數已經相同，兩式相減即可消去 $h$。</span>
+      </div>
+      $(2)-(1)$：$k=201-181=20$。<br>
+代回 $(1)$：$h=181-20=161$。<br>
+所以 $W=161\ell+20\ell^{2}$，$h$、$k$ 都是正數，符合「重量隨周界增加」的實際情況。<br>
+留意 $(1)$ 與 $(2)$ 必須先整理成同一個 $h$ 係數才好相減，<br>否則容易在減號上出錯。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入求<br>(a)，再解二次方程求<br>(b)</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘法</span>
+        <span class="rule-math">\(acx^{2}+(ad+bc)x+bd=(ax+b)(cx+d)\)</span>
+        <span class="rule-why">第 (b) 部要解 $20\ell^{2}+161\ell-594=0$，用十字相乘可直接分解。</span>
+      </div>
+      (a) 取 $\ell=1.2$：
+\[ W=161(1.2)+20(1.2)^{2}=193.2+20(1.44)=193.2+28.8=222. \]
+即重量為 $222$ 克。<br>
+(b) 取 $W=594$：
+\[ 20\ell^{2}+161\ell-594=0. \]
+十字相乘得 $20\ell^{2}+161\ell-594=(4\ell-11)(5\ell+54)$（交叉項 $216\ell-55\ell=161\ell$）。<br>
+故 $\ell=\dfrac{11}{4}$ 或 $\ell=-\dfrac{54}{5}$。<br>
+周界是長度，必須 $\ell>0$，所以捨去負根，得 $\ell=\dfrac{11}{4}=2.75$ 米。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $222$ 克　(b) $\dfrac{11}{4}$ 米（即 $2.75$ 米）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一件貨物的包裝成本為 $C$ 元，它是兩部分之和：一部分與 $w$ 米成正比，另一部分與 $w^{2}$ 成正比。當 $w=1$ 時 $C=175$；當 $w=2$ 時 $C=400$。<br>
+(a) 求 $w=1.6$ 時的成本。<br>
+(b) 若成本為 $1000$ 元，求 $w$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $C=hw+kw^{2}$。<br>代入 $(1,175)$ 與 $(2,400)$：$h+k=175$、$2h+4k=400$，即 $h+2k=200$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩式相減得 $k=25$，代回得 $h=150$，故 $C=150w+25w^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> (a) $w=1.6$：$C=150(1.6)+25(2.56)=240+64=304$。<br>
+(b) $C=1000$：$25w^{2}+150w-1000=0$，即 $w^{2}+6w-40=0$，$(w+10)(w-4)=0$。<br>因 $w>0$，故 $w=4$。</div>
+          <div class="p-ans">答案：<br>(a) $304$ 元　(b) $w=4$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第12題 · 多項式恆等式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第12題</span>
+    <h1>多項式恆等式</h1>
+    <p class="sub">(a) 4 分；<br>(b) 3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=3x^{3}-7x^{2}+kx-8$，其中 $k$ 為常數。已知 $f(x)\equiv (x-2)(ax^{2}+bx+c)$，其中 $a$、$b$、$c$ 為常數。<br>
+(a) 求 $a$、$b$ 及 $c$。<br>
+(b) 有人聲稱方程 $f(x)=0$ 的所有根都是實數。你是否同意？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開右邊，整理成降冪形式</div>
+      <div class="rule">
+        <span class="rule-name">多項式乘法（分配律）</span>
+        <span class="rule-math">\((x+p)(ax^{2}+bx+c)=ax^{3}+(b+ap)x^{2}+(c+bp)x+cp\)</span>
+        <span class="rule-why">這是 $p=-2$ 的情形，先把右邊化成一條三次多項式，才能逐項比較。</span>
+      </div>
+      逐項相乘：
+\[ (x-2)(ax^{2}+bx+c)=ax^{3}+bx^{2}+cx-2ax^{2}-2bx-2c \]
+\[ =ax^{3}+(b-2a)x^{2}+(c-2b)x-2c. \]
+把 $p=-2$ 代入公式卡：$x^{2}$ 的係數是 $b+ap=b-2a$，$x$ 的係數是 $c+bp=c-2b$，<br>常數項是 $cp=-2c$，結果一致。<br>
+整理時要按 $x^{3}$、$x^{2}$、$x$、常數的次序排列，同類項才不會看漏。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">比較係數，求出 $a$、$b$、$c$</div>
+      <div class="rule">
+        <span class="rule-name">比較係數法</span>
+        <span class="rule-math">\(a_{n}x^{n}+\cdots+a_{0}\equiv b_{n}x^{n}+\cdots+b_{0}\ \Longrightarrow\ a_{i}=b_{i}\)</span>
+        <span class="rule-why">恆等式對所有 $x$ 成立，所以兩邊同次項的係數必須相等。</span>
+      </div>
+      比較 $x^{3}$ 項：$a=3$。<br>
+比較常數項：$-2c=-8\ \Rightarrow\ c=4$。<br>
+比較 $x^{2}$ 項：$b-2a=-7\ \Rightarrow\ b-6=-7\ \Rightarrow\ b=-1$。<br>
+順便可由 $x$ 項求出 $k=c-2b=4+2=6$，與題目所給的 $f(x)$ 一致，<br>可作驗算。<br>
+於是 $f(x)=(x-2)(3x^{2}-x+4)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">第 (b) 部：用判別式檢查二次因子有沒有實根</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">\(\Delta=b^{2}-4ac\)</span>
+        <span class="rule-why">三次方程已有一個因式 $x-2$，其餘的根全由二次因子 $3x^{2}-x+4$ 決定。</span>
+      </div>
+      由 $(x-2)(3x^{2}-x+4)=0$，其中一個根是 $x=2$；<br>其餘的根來自
+\[ 3x^{2}-x+4=0,\qquad a=3,\ b=-1,\ c=4. \]
+\[ \Delta=(-1)^{2}-4(3)(4)=1-48=-47<0. \]
+判別式為負，二次方程沒有實根；<br>又因 $a=3>0$，$3x^{2}-x+4$ 恆為正，不會再提供實根。<br>
+所以 $f(x)=0$ 只有 $x=2$ 一個實根，其餘兩個根是複數，聲稱錯誤 —— 不同意。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $a=3$，$b=-1$，$c=4$（並得 $k=6$）　(b) 不同意：$\Delta=(-1)^{2}-4(3)(4)=-47<0$，$3x^{2}-x+4=0$ 無實根，故 $f(x)=0$ 並非所有根皆為實數。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $(x-3)(2x^{2}+bx+c)\equiv 2x^{3}-5x^{2}+x-12$。<br>
+(a) 求 $b$ 及 $c$。<br>
+(b) 某學生聲稱 $f(x)=2x^{3}-5x^{2}+x-12$ 有三個實根。你是否同意？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$(x-3)(2x^{2}+bx+c)=2x^{3}+(b-6)x^{2}+(c-3b)x-3c$。</div>
+          <div class="p-step"><b>第 2 步.</b> 比較 $x^{2}$ 項：$b-6=-5$，故 $b=1$；<br>比較常數項：$-3c=-12$，故 $c=4$。<br>驗算 $x$ 項：$c-3b=4-3=1$ ✓。</div>
+          <div class="p-step"><b>第 3 步.</b> 對 $2x^{2}+x+4=0$：$\Delta=1^{2}-4(2)(4)=-31<0$，無實根。<br>故 $f(x)=0$ 只有 $x=3$ 一個實根，不同意。</div>
+          <div class="p-ans">答案：<br>(a) $b=1$，$c=4$　(b) 不同意：$\Delta=-31<0$，只有一個實根 $x=3$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

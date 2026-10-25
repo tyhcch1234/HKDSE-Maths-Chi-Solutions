@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第3題 · 因式分解</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第3題</span>
+    <h1>因式分解</h1>
+    <p class="sub">3分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      因式分解<br>
+      <p>(a) $4m^{2}-25n^{2}$，</p><br>
+      <p>(b) $4m^{2}-25n^{2}+6m-15n$。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 把兩項都寫成完全平方，用平方差</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">\(A^{2}-B^{2}=(A-B)(A+B)\)</span>
+        <span class="rule-why">兩項相減而各自都是平方，正是平方差的形式，可以直接分解。</span>
+      </div>
+      $4m^{2}=(2m)^{2}$，而 $25n^{2}=(5n)^{2}$，故
+\[ 4m^{2}-25n^{2}=(2m)^{2}-(5n)^{2}. \]
+取 $A=2m$、$B=5n$：
+\[ 4m^{2}-25n^{2}=(2m-5n)(2m+5n). \]
+<div class="hint">平方差分解後，兩個括號只差中間的符號；若兩個括號完全一樣，就代表這一步做錯了。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 把後兩項抽出公因數 $3$</div>
+      <div class="rule">
+        <span class="rule-name">提取公因數</span>
+        <span class="rule-math">\(AB+AC=A(B+C)\)</span>
+        <span class="rule-why">$6m$ 與 $15n$ 的公因數是 $3$，抽出後餘下 $2m-5n$，正好與 (a) 的括號相同。</span>
+      </div>
+      先重用 (a) 的結果，把首兩項寫成 $(2m-5n)(2m+5n)$，再處理後兩項：
+\[ 4m^{2}-25n^{2}+6m-15n=(2m-5n)(2m+5n)+6m-15n. \]
+而 $6m-15n=3(2m-5n)$，<br>所以
+\[ =(2m-5n)(2m+5n)+3(2m-5n). \]
+關鍵是刻意製造一個「共同括號」，令整條式子可以當成兩組同類項。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">抽出共同括號 $(2m-5n)$ 並驗算</div>
+      <div class="rule">
+        <span class="rule-name">分組分解法</span>
+        <span class="rule-math">\(AX+AY=A(X+Y)\)</span>
+        <span class="rule-why">兩組都含 $(2m-5n)$，把它當作 $A$，餘下的 $(2m+5n)$ 與 $3$ 合併成第二個括號。</span>
+      </div>
+      以 $(2m-5n)$ 為公因數：
+\[ =(2m-5n)\big[(2m+5n)+3\big]=(2m-5n)(2m+5n+3). \]
+驗算：$(2m-5n)(2m+5n+3)=4m^{2}-25n^{2}+6m-15n$ ✓。<br>
+所以 (a) $(2m-5n)(2m+5n)$，(b) $(2m-5n)(2m+5n+3)$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(2m-5n)(2m+5n)$<br><br>
+      (b) $(2m-5n)(2m+5n+3)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解<br>
+      <p>(a) $9p^{2}-16q^{2}$，</p><br>
+      <p>(b) $9p^{2}-16q^{2}+6p-8q$。</p></div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9p^{2}=(3p)^{2}$、$16q^{2}=(4q)^{2}$，用平方差得 (a) $9p^{2}-16q^{2}=(3p-4q)(3p+4q)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 後兩項抽公因數：$6p-8q=2(3p-4q)$，故 (b) $=(3p-4q)(3p+4q)+2(3p-4q)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 以 $(3p-4q)$ 為公因數抽出：$(3p-4q)\big[(3p+4q)+2\big]=(3p-4q)(3p+4q+2)$。</div>
+          <div class="p-ans">答案：<br>(a) $(3p-4q)(3p+4q)$　(b) $(3p-4q)(3p+4q+2)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q2.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q4.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

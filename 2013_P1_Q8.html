@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第8題 · 誤差與估算</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第8題</span>
+    <h1>誤差與估算</h1>
+    <p class="sub">5分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一包海鹽若其重量量得為 $100\text{ g}$（準確至最接近的 g），便稱為「標準裝」。<br>
+      <p>(a) 求一包標準裝海鹽可能的最小重量。</p><br>
+      <p>(b) 32 包標準裝海鹽的總重量，是否可能量得為 $3.1\text{ kg}$（準確至最接近的 $0.1\text{ kg}$）？試解釋你的答案。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由「準確至最接近的 g」求最大絕對誤差</div>
+      <div class="rule">
+        <span class="rule-name">最大絕對誤差</span>
+        <span class="rule-math">\(\text{max. absolute error}=\tfrac{1}{2}\times\text{smallest division}\)</span>
+        <span class="rule-why">量度值準確至最接近的 g，即刻度每格 $1\text{ g}$，誤差最多是半格。</span>
+      </div>
+      準確至最接近的 g 表示刻度每 $1\text{ g}$ 一格，故<br>
+最大絕對誤差
+\[ =\frac{1}{2}\times1\ \text{g}=0.5\ \text{g}. \]
+所以一包量得 $100\text{ g}$ 的海鹽，真正重量 $w$ 滿足
+\[ 99.5\text{ g}\le w<100.5\text{ g}. \]
+<div class="hint">「準確至最接近的 $x$」永遠是「$\dfrac{x}{2}$ 的上下各半格」，不是整整一格。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 取下限作為最小可能重量</div>
+      <div class="rule">
+        <span class="rule-name">量度的下限</span>
+        <span class="rule-math">\(x_{\min}=x-\text{max. absolute error}\)</span>
+        <span class="rule-why">要求最小可能重量，就要由量得值減去最大絕對誤差。</span>
+      </div>
+      \[ x_{\min}=100-0.5=99.5\text{ g}. \]
+同理上限為 $100.5\text{ g}$。<br>
+所以 (a) 的答案是一包標準裝海鹽最小重 $99.5\text{ g}$（即 $0.0995\text{ kg}$）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求 32 包的最輕總重並判斷</div>
+      <div class="rule">
+        <span class="rule-name">單位換算</span>
+        <span class="rule-math">\(1\ \text{kg}=1000\ \text{g}\)</span>
+        <span class="rule-why">題目的判斷標準以 kg 給出，先要把克的總重換成 kg 才能比較。</span>
+      </div>
+      總重量最小時，每包都取最輕的 $99.5\text{ g}$：
+\[ 99.5\times32=3184\text{ g}=3.184\text{ kg}. \]
+若總重量量得 $3.1\text{ kg}$（準確至最接近的 $0.1\text{ kg}$），<br>真值必須在
+\[ 3.05\text{ kg}\le W<3.15\text{ kg} \]
+之內。<br>但即使最輕的總重 $3.184\text{ kg}$ 也已超過 $3.15\text{ kg}$。<br>
+另一方面，最重的總重為 $100.5\times32=3216\text{ g}=3.216\text{ kg}$，<br>
+所以無論如何，總重量只會量得 $3.2\text{ kg}$（準確至最接近的 $0.1\text{ kg}$）。<br>
+因此 (b) 的答案是不可能。<br>
+<div class="hint">「是否可能」這類問題，只需比較最極端的情況（此處為最輕總重）與聲稱的範圍。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $99.5\text{ g}$<br><br>
+      (b) 不可能。32 包的最輕總重為 $99.5\times32=3184\text{ g}=3.184\text{ kg}$，已超出 $3.1\text{ kg}$ 所對應的範圍 $3.05\text{ kg}\le W<3.15\text{ kg}$；實際總重量只會量得 $3.2\text{ kg}$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一包糖的重量標示為 $400\text{ g}$（準確至最接近的 $10\text{ g}$）。<br>
+      <p>(a) 求一包糖可能的最小重量。</p><br>
+      <p>(b) 20 包這樣的糖總重量，是否可能量得為 $7.8\text{ kg}$（準確至最接近的 $0.1\text{ kg}$）？試解釋。</p></div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 刻度每 $10\text{ g}$ 一格，最大絕對誤差 $=\dfrac{1}{2}\times10=5\text{ g}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 最小重量 $=400-5=395\text{ g}$（即 $0.395\text{ kg}$）。</div>
+          <div class="p-step"><b>第 3 步.</b> 20 包的最小總重 $=395\times20=7900\text{ g}=7.9\text{ kg}$，而 $7.8\text{ kg}$（準確至 $0.1\text{ kg}$）要求總重在 $7.75\text{ kg}$ 至 $7.85\text{ kg}$ 之間；$7.9\text{ kg}$ 已超出，<br>故不可能。</div>
+          <div class="p-ans">答案：<br>(a) $395\text{ g}$　(b) 不可能（最輕總重已是 $7.9\text{ kg}$，只會量得 $7.9\text{ kg}$）。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

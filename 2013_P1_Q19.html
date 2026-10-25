@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第19題 · 遞歸數列與等比數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第19題</span>
+    <h1>遞歸數列與等比數列</h1>
+    <p class="sub">(a) 4 分；<br>(b) 5 分；<br>(c) 4 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某城市正在研究公共房屋的發展。已知第 $1$ 年年底所有公共房屋單位的總樓面面積為 $9\times10^{6}$ m$^{2}$；其後每年新建公共房屋單位的總樓面面積是上一年年底總樓面面積的 $r\%$，其中 $r$ 為常數；而每年被拆卸的公共房屋單位的總樓面面積為 $3\times10^{5}$ m$^{2}$。已知第 $3$ 年年底所有公共房屋單位的總樓面面積為 $1.026\times10^{7}$ m$^{2}$。<br>
+(a)(i) 以 $r$ 表示第 $2$ 年年底所有公共房屋單位的總樓面面積。<br>
+(ii) 求 $r$。<br>
+(b)(i) 以 $n$ 表示第 $n$ 年年底所有公共房屋單位的總樓面面積。<br>
+(ii) 在第幾年年底，所有公共房屋單位的總樓面面積首次超過 $4\times10^{7}$ m$^{2}$？<br>
+(c) 假設第 $n$ 年年底所需的公共房屋總樓面面積為 $\left(a(1.21)^{n}+b\right)$ m$^{2}$，其中 $a$、$b$ 為常數。研究結果顯示：第 $1$ 年年底為 $1\times10^{7}$ m$^{2}$，第 $2$ 年年底為 $1.063\times10^{7}$ m$^{2}$。一名研究助理聲稱，根據上述假設，在某一年年底，所有公共房屋單位的總樓面面積會大於所需的總樓面面積。該聲稱是否正確？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">建立遞歸關係，求<br>(a)(i)</div>
+      <div class="rule">
+        <span class="rule-name">遞歸關係</span>
+        <span class="rule-math">\(A_{n}=\left(1+\dfrac{r}{100}\right)A_{n-1}-3\times10^{5}\)</span>
+        <span class="rule-why">每年「先增加 $r\%$、再拆卸 $3	imes10^{5}$ m$^{2}$」，正好是一條一階遞歸關係。</span>
+      </div>
+      設 $A_{n}$ 為第 $n$ 年年底的總樓面面積（m$^{2}$）。
+\[ A_{1}=9\times10^{6},\qquad A_{n}=\left(1+\frac{r}{100}\right)A_{n-1}-3\times10^{5}\quad(n\ge2). \]
+(a)(i) 取 $n=2$：
+\[ A_{2}=9\times10^{6}\left(1+\frac{r}{100}\right)-3\times10^{5} \]
+\[ =9\times10^{6}+9\times10^{4}r-3\times10^{5}=8.7\times10^{6}+9\times10^{4}r \]
+\[ =\left(870+9r\right)\times10^{4}\ \text{m}^{2}. \]
+留意 $9\times10^{6}\times\dfrac{r}{100}=9\times10^{4}r$，<br>不要寫成 $9\times10^{5}r$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(ii) 代入第 3 年數據解二次方程</div>
+      <div class="rule">
+        <span class="rule-name">二次公式</span>
+        <span class="rule-math">\(u=\dfrac{-b\pm\sqrt{b^{2}-4ac}}{2a}\)</span>
+        <span class="rule-why">把 $1+\dfrac{r}{100}$ 記作 $u$ 後，條件式就成為一條關於 $u$ 的二次方程。</span>
+      </div>
+      對 $A_{3}$ 再套用一次遞歸關係，並代入 $A_{3}=1.026\times10^{7}$：
+\[ \left(9\times10^{6}\left(1+\frac{r}{100}\right)-3\times10^{5}\right)\left(1+\frac{r}{100}\right)-3\times10^{5}=1.026\times10^{7}. \]
+令 $u=1+\dfrac{r}{100}$，<br>則 $r=100(u-1)$，而由 (a)(i)
+\[ A_{2}=8.7\times10^{6}+9\times10^{4}r=8.7\times10^{6}+9\times10^{6}(u-1)=9\times10^{6}u-3\times10^{5}. \]
+代入得
+\[ \left(9\times10^{6}u-3\times10^{5}\right)u-3\times10^{5}=1.026\times10^{7}. \]
+全式除以 $10^{5}$：$90u^{2}-3u-3=102.6$，<br>即
+\[ 150u^{2}-5u-176=0. \]
+\[ u=\frac{5\pm\sqrt{25+4(150)(176)}}{2(150)}=\frac{5\pm325}{300}, \]
+故 $u=\dfrac{11}{10}$ 或 $u=-\dfrac{16}{15}$。<br>因 $u=1+\dfrac{r}{100}>0$，捨去負根，得 $u=1.1$，即 $r=10$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 展開遞歸求通項，(c) 用判別式否定聲稱</div>
+      <div class="rule">
+        <span class="rule-name">等比數列求和</span>
+        <span class="rule-math">\(\sum_{k=0}^{n-2}(1.1)^{k}=\dfrac{(1.1)^{n-1}-1}{1.1-1}\)</span>
+        <span class="rule-why">把遞歸關係逐層展開後，每年被拆卸的 $3	imes10^{5}$ 會形成一個等比數列，需要求和化簡。</span>
+      </div>
+      (b)(i) 取 $r=10$，則 $A_{n}=1.1A_{n-1}-3\times10^{5}$。<br>逐層展開：
+\[ A_{n}=9\times10^{6}(1.1)^{n-1}-3\times10^{5}\sum_{k=0}^{n-2}(1.1)^{k} \]
+\[ =9\times10^{6}(1.1)^{n-1}-3\times10^{5}\cdot\frac{(1.1)^{n-1}-1}{0.1} \]
+\[ =9\times10^{6}(1.1)^{n-1}-3\times10^{6}\left((1.1)^{n-1}-1\right)=\left(6(1.1)^{n-1}+3\right)\times10^{6}. \]
+（驗算：$n=1$ 得 $9\times10^{6}$；$n=3$ 得 $(6\times1.21+3)\times10^{6}=1.026\times10^{7}$ ✓）<br>
+(b)(ii) 要求 $A_{n}>4\times10^{7}$：
+\[ \left(6(1.1)^{n-1}+3\right)\times10^{6}>4\times10^{7}\quad\Longrightarrow\quad (1.1)^{n-1}>\frac{37}{6}. \]
+兩邊取對數：$n-1>\dfrac{\log\frac{37}{6}}{\log1.1}\approx19.087$，<br>即 $n>20.087$，最小整數為 $n=21$。<br>
+驗算：$A_{20}\approx3.97\times10^{7}<4\times10^{7}$，$A_{21}\approx4.34\times10^{7}>4\times10^{7}$，故為第 $21$ 年年底。<br>
+(c) 由 $N_{1}=1\times10^{7}$、$N_{2}=1.063\times10^{7}$：
+\[ 1.21a+b=1\times10^{7},\qquad 1.4641a+b=1.063\times10^{7}. \]
+相減：$0.2541a=6.3\times10^{5}$，得 $a=\dfrac{300}{121}\times10^{6}$；<br>再得 $b=1\times10^{7}-1.21a=7\times10^{6}$。<br>
+聲稱要求存在 $n$ 使 $A_{n}>N_{n}$。<br>因 $6(1.1)^{n-1}=\dfrac{60}{11}(1.1)^{n}$，令 $x=(1.1)^{n}>0$，把不等式同除以 $10^{6}$ 再乘 $121$：
+\[ 660x-484>300x^{2}\quad\Longleftrightarrow\quad 75x^{2}-165x+121<0. \]
+但 $\Delta=(-165)^{2}-4(75)(121)=27225-36300=-9075<0$，<br>且首項係數 $75>0$，故 $75x^{2}-165x+121>0$ 對所有實數 $x$ 成立。<br>
+所以該不等式無解，即 $A_{n}$ 在任何一年都不大於 $N_{n}$，聲稱不正確。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a)(i) $(870+9r)\times10^{4}$ m$^{2}$；<br>(ii) $r=10$　(b)(i) $A_{n}=\left(6(1.1)^{n-1}+3\right)\times10^{6}$ m$^{2}$；<br>(ii) 第 $21$ 年年底　(c) $a=\dfrac{300}{121}\times10^{6}$、$b=7\times10^{6}$；$75x^{2}-165x+121$ 的判別式為 $-9075<0$，不等式無解，故聲稱不正確。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某林場第 $1$ 年年底有 $5\times10^{5}$ 棵樹。每年樹木數量比上一年年底增加 $r\%$，同時有 $2\times10^{4}$ 棵被砍伐。第 $3$ 年年底有 $6.76\times10^{5}$ 棵。<br>
+(a) 求 $r$。<br>
+(b) 求第 $n$ 年年底的樹木數量。<br>
+(c) 求樹木數量首次超過 $10^{6}$ 的年份。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $A_{n}$ 為第 $n$ 年年底的數量：$A_{1}=5\times10^{5}$，$A_{n}=A_{n-1}(1+r\%)-2\times10^{4}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 令 $u=1+r\%$：$A_{3}=5\times10^{5}u^{2}-2\times10^{4}u-2\times10^{4}=6.76\times10^{5}$，化簡得 $125u^{2}-5u-174=0$，$u=\dfrac{5\pm295}{250}$，取 $u=1.2$，<br>故 $r=20$。</div>
+          <div class="p-step"><b>第 3 步.</b> 展開遞歸：$A_{n}=5\times10^{5}(1.2)^{n-1}-2\times10^{4}\cdot\dfrac{(1.2)^{n-1}-1}{0.2}=\left(4(1.2)^{n-1}+1\right)\times10^{5}$。<br>
+(c) 需 $(1.2)^{n-1}>2.25$，取對數得 $n-1>4.448$，即 $n>5.448$，故為第 $6$ 年。</div>
+          <div class="p-ans">答案：<br>(a) $r=20$　(b) $\left(4(1.2)^{n-1}+1\right)\times10^{5}$ 棵　(c) 第 $6$ 年年底</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q18.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

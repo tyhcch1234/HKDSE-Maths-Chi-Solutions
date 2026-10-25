@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第4題 · 聯立方程應用</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第4題</span>
+    <h1>聯立方程應用</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      7 個梨和 3 個橙共售 $47$ 元，而 5 個梨和 6 個橙共售 $49$ 元。求一個梨的售價。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數，把每句條件寫成一條方程</div>
+      <div class="rule">
+        <span class="rule-name">聯立二元一次方程</span>
+        <span class="rule-math">\(a_{1}x+b_{1}y=c_{1},\qquad a_{2}x+b_{2}y=c_{2}\)</span>
+        <span class="rule-why">有兩個未知售價，兩次不同的購物各給出一條方程，正好可以聯立求解。</span>
+      </div>
+      設一個梨售 $x$ 元，一個橙售 $y$ 元。<br>
+「7 個梨和 3 個橙共售 $47$ 元」：
+\[ 7x+3y=47 \qquad \cdots (1) \]
+「5 個梨和 6 個橙共售 $49$ 元」：
+\[ 5x+6y=49 \qquad \cdots (2) \]
+單價乘數量等於總價，<br>每句說話就變成一條方程。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 (1) 乘 2，再與 (2) 相減消去 $y$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\(k\,(a_{1}x+b_{1}y)=k\,c_{1}\)</span>
+        <span class="rule-why">把其中一個未知數的係數湊成相同，兩式相減就能消去它，只剩一個未知數。</span>
+      </div>
+      $y$ 的係數是 $3$ 和 $6$，把 (1) 全式乘 $2$：
+\[ 14x+6y=94 \qquad \cdots (1') \]
+$(1')-(2)$ 消去 $y$：
+\[ (14x+6y)-(5x+6y)=94-49, \]
+\[ 9x=45. \]
+<div class="hint">若兩式直接相加，$y$ 會變成 $9y$，消不掉；要先把係數湊成相同。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $x$，並代回驗算</div>
+      <div class="rule">
+        <span class="rule-name">解一元一次方程</span>
+        <span class="rule-math">\(ax=b\;\Longrightarrow\;x=\dfrac{b}{a}\quad(a\neq0)\)</span>
+        <span class="rule-why">得到 $9x=45$ 後，兩邊同除係數 $9$ 便得 $x$。</span>
+      </div>
+      \[ x=\frac{45}{9}=5. \]
+代回 (1) 檢查：$7(5)+3y=47\Rightarrow 3y=12\Rightarrow y=4$，<br>
+再代回 (2)：$5(5)+6(4)=25+24=49$ ✓。<br>
+所以一個梨售 $5$ 元（順帶得一個橙售 $4$ 元）。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>一個梨售 $5$ 元（$x=5$，$y=4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 3 個蘋果和 4 個橙共售 $46$ 元，而 5 個蘋果和 2 個橙共售 $44$ 元。求一個蘋果和一個橙的售價。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設一個蘋果售 $x$ 元、一個橙售 $y$ 元，得 $3x+4y=46\cdots(1)$ 及 $5x+2y=44\cdots(2)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 把 (2) 乘 $2$：$10x+4y=88\cdots(2')$，再 $(2')-(1)$ 得 $7x=42$，<br>故 $x=6$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代回 (1)：$18+4y=46$，得 $y=7$。<br>驗算 $5(6)+2(7)=44$ ✓。</div>
+          <div class="p-ans">答案：一個蘋果售 $6$ 元，一個橙售 $7$ 元</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q3.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q5.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第9題 · 平均數與標準差</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第9題</span>
+    <h1>平均數與標準差</h1>
+    <p class="sub">5分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的棒形圖顯示公司 $D$ 員工的家庭成員人數分布。<br>
+      <p>(a) 求上述分布的平均數、四分位距及標準差。</p><br>
+      <p>(b) 公司 $D$ 一名家庭成員人數為 7 的員工離職。求此事令公司 $D$ 員工家庭成員人數的標準差出現的改變。</p>
+    </div>
+    <figure class="fig"><img src="figures/2013_P1_Q9.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由棒形圖讀出頻數，求平均數</div>
+      <div class="rule">
+        <span class="rule-name">加權平均數</span>
+        <span class="rule-math">\(\bar{x}=\dfrac{\sum fx}{\sum f}\)</span>
+        <span class="rule-why">每個 $x$ 值要按它的頻數 $f$ 加權，再除以總人數。</span>
+      </div>
+      由圖讀出各頻數（家庭成員人數 $x$ 與頻數 $f$ 一一對應）：
+\[ x:\quad 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7 \]
+\[ f:\quad 4,\ 16,\ 20,\ 16,\ 8,\ 4,\ 2 \]
+總人數 $\sum f=4+16+20+16+8+4+2=70$。
+\[ \sum fx=1(4)+2(16)+3(20)+4(16)+5(8)+6(4)+7(2)=238, \]
+\[ \bar{x}=\frac{238}{70}=3.4. \]
+<div class="hint">留意平均值是 $3.4$，不是 $3.5$（$3.5$ 是 $x=3$ 與 $x=4$ 的分界，並非本分布的平均數）。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用累積頻數找 $Q_1$、$Q_3$，求四分位距</div>
+      <div class="rule">
+        <span class="rule-name">四分位距</span>
+        <span class="rule-math">\(\text{IQR}=Q_{3}-Q_{1}\)</span>
+        <span class="rule-why">四分位距只取中間一半數據的跨度，比全距不易受極端值影響。</span>
+      </div>
+      累積頻數依次為 $4,\,20,\,40,\,56,\,64,\,68,\,70$。<br>
+下四分位數：$70\times25\%=17.5$，取第 $18$ 個數據；<br>
+第 $18$ 個落在 $x=2$ 一組（累積由 $5$ 至 $20$），<br>故 $Q_1=2$。<br>
+上四分位數：$70\times75\%=52.5$，取第 $53$ 個數據；<br>
+第 $53$ 個落在 $x=4$ 一組（累積由 $41$ 至 $56$），<br>故 $Q_3=4$。
+\[ \text{IQR}=4-2=2. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求標準差，並計算<br>(b) 的改變</div>
+      <div class="rule">
+        <span class="rule-name">標準差（頻數表）</span>
+        <span class="rule-math">\(\sigma=\sqrt{\dfrac{\sum fx^{2}}{\sum f}-\bar{x}^{2}}\)</span>
+        <span class="rule-why">已知 $\sum f$、$\sum fx^{2}$ 與平均數，便可直接代入這條公式，不必逐個數據減平均數。</span>
+      </div>
+      先算
+\[ \sum fx^{2}=1^{2}(4)+2^{2}(16)+3^{2}(20)+4^{2}(16)+5^{2}(8)+6^{2}(4)+7^{2}(2)=946, \]
+\[ \sigma=\sqrt{\frac{946}{70}-3.4^{2}}=\sqrt{13.5143-11.56}=\sqrt{1.9543}\approx1.40. \]
+(b) 一名家庭成員人數為 7 的員工離職，<br>即刪去一個 $x=7$：
+\[ \sum f'=69,\quad \sum fx'=238-7=231,\quad \sum fx^{2}{}'=946-49=897. \]
+\[ \bar{x}'=\frac{231}{69}=3.3478\ldots,\qquad \sigma'=\sqrt{\frac{897}{69}-\left(\frac{231}{69}\right)^{2}}=\sqrt{13-11.2079}\approx1.3387. \]
+標準差的改變
+\[ 1.3980-1.3387=0.0593 \quad(\text{3 s.f.}), \]
+即標準差減少了約 $0.0593$。<br>
+<div class="hint">$7$ 遠高於平均數 $3.4$，刪去它會令數據更集中，所以標準差下降。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 平均數 $=3.4$，四分位距 $=2$，標準差 $\approx1.40$<br><br>
+      (b) 標準差減少約 $0.0593$（由 $1.3980$ 減至 $1.3387$，準確至 3 位有效數字）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 40 個家庭的成員人數 $x$ 的頻數如下：$x=1,2,3,4,5$ 的頻數分別為 $3,9,16,9,3$。求該分布的平均數、四分位距及標準差。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\sum f=3+9+16+9+3=40$，$\sum fx=1(3)+2(9)+3(16)+4(9)+5(3)=120$，故平均數 $=\dfrac{120}{40}=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 累積頻數為 $3,\,12,\,28,\,37,\,40$；$Q_1$ 取第 $10$ 個（$x=2$），$Q_3$ 取第 $30$ 個（$x=4$），<br>故 $\text{IQR}=4-2=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\sum fx^{2}=1(3)+4(9)+9(16)+16(9)+25(3)=402$，故 $\sigma=\sqrt{\dfrac{402}{40}-3^{2}}=\sqrt{10.05-9}=\sqrt{1.05}\approx1.02$。</div>
+          <div class="p-ans">答案：平均數 $=3$，四分位距 $=2$，標準差 $\approx1.02$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

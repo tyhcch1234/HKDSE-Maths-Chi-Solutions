@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第15題 · 標準分與中位數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷一 · 第15題</span>
+    <h1>標準分與中位數</h1>
+    <p class="sub">(a) 2 分；<br>(b) 2 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的箱線圖顯示某班學生在一次測驗中的分數（以分為單位）的分佈。Susan 取得最高分，而 Tom 在該測驗中取得 $65$ 分。Susan 與 Tom 在該測驗的標準分分別為 $3$ 與 $0.5$。<br>
+(a) 求該分佈的平均數。<br>
+(b) Susan 聲稱在該測驗中，至少有一半學生的標準分為負數。你是否同意？試解釋。
+    </div>
+    <figure class="fig"><img src="figures/2013_P1_Q15.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由標準分的定義列出兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">標準分</span>
+        <span class="rule-math">\(z=\dfrac{x-\mu}{\sigma}\)</span>
+        <span class="rule-why">題目把「分數」與「標準分」連起來，用這條定義就能把 $90$、$65$ 寫成含 $\mu$、$\sigma$ 的方程。</span>
+      </div>
+      由箱線圖可知最高分為 $90$ 分，而 Susan 取得最高分，<br>故 Susan 的分數是 $90$；<br>Tom 的分數是 $65$。<br>
+設該分佈的平均數為 $\mu$、標準差為 $\sigma$（$\sigma>0$）。<br>
+Susan：
+\[ \frac{90-\mu}{\sigma}=3\quad\Longrightarrow\quad 90-\mu=3\sigma. \]
+Tom：
+\[ \frac{65-\mu}{\sigma}=0.5\quad\Longrightarrow\quad 65-\mu=0.5\sigma. \]
+標準分是「距離平均數多少個標準差」，<br>所以 $z>0$ 代表高於平均，$z<0$ 代表低於平均。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解聯立方程，求 $\mu$ 與 $\sigma$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\(a_{1}x+b_{1}y=c_{1},\qquad a_{2}x+b_{2}y=c_{2}\)</span>
+        <span class="rule-why">兩式的左邊都含 $-\mu$，相減即可先消去 $\mu$。</span>
+      </div>
+      把兩式相減：
+\[ (90-\mu)-(65-\mu)=3\sigma-0.5\sigma \]
+\[ 25=2.5\sigma\quad\Longrightarrow\quad \sigma=10. \]
+代回 $90-\mu=3\sigma$：
+\[ 90-\mu=30\quad\Longrightarrow\quad \mu=60. \]
+所以平均數為 $60$ 分（標準差為 $10$ 分）。<br>
+先求 $\sigma$ 再求 $\mu$ 是最省步驟的次序，因為相減後只剩一個未知數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用中位數判斷「至少一半」</div>
+      <div class="rule">
+        <span class="rule-name">中位數的定義</span>
+        <span class="rule-math">\(P(X\le m)\ge\dfrac{1}{2}\)</span>
+        <span class="rule-why">中位數 $m$ 的意義就是「至少一半數據不超過它」，正好用來回答「至少一半學生」的問題。</span>
+      </div>
+      由箱線圖讀出中位數為 $55$ 分（箱內的豎線）。<br>
+按中位數的定義，至少有半數學生的分數 $\le 55$。<br>
+而平均數 $\mu=60$，所以這批學生的分數都低於平均數，其標準分
+\[ z=\frac{x-60}{10}<0 \]
+為負數。<br>
+因此至少有一半學生的標準分是負數，Susan 的聲稱正確 —— 同意。<br>
+注意：判斷負標準分只需比較分數與平均數，不必知道標準差。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $60$ 分　(b) 同意：中位數 $55<$ 平均數 $60$，故至少一半學生的分數低於平均數，標準分為負。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在一次測驗中，Peter 的 $88$ 分標準分為 $2$，Mary 的 $61$ 分標準分為 $-1$。<br>
+(a) 求該分佈的平均數與標準差。<br>
+(b) 已知中位數為 $66$ 分。有老師聲稱至少一半學生的標準分為負數。你是否同意？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設平均數 $\mu$、標準差 $\sigma$：$\dfrac{88-\mu}{\sigma}=2$ 及 $\dfrac{61-\mu}{\sigma}=-1$，<br>即 $88-\mu=2\sigma$、$61-\mu=-\sigma$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩式相減：$27=3\sigma$，故 $\sigma=9$；<br>代回得 $\mu=88-2(9)=70$。</div>
+          <div class="p-step"><b>第 3 步.</b> 中位數 $66<70=\mu$，故至少一半學生的分數不超過 $66$，<br>即低於平均數，標準分為負 —— 同意。</div>
+          <div class="p-ans">答案：<br>(a) $\mu=70$，$\sigma=9$　(b) 同意：中位數低於平均數，故至少一半學生的標準分為負。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P1_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P1_Q16.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
