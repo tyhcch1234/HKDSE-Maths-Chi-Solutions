@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第31題 · 有理函數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第31題</span>
+    <h1>有理函數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡
+\[\frac{1}{x^{2}-2x+1}-\frac{1}{x^{2}+x-2}=\]
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{(x-1)(x+2)}$</li><li><span class="ol">B</span>$\dfrac{1}{(x-1)^{2}(x+2)}$</li><li><span class="ol">C</span>$\dfrac{3}{(x-1)^{2}(x+2)}$</li><li><span class="ol">D</span>$\dfrac{2x+1}{(x-1)^{2}(x+2)}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把兩個分母分解</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘</span>
+        <span class="rule-math">\(x^{2}+(p+q)x+pq=(x+p)(x+q)\)</span>
+        <span class="rule-why">要找兩個數相乘為 $-2$、相加為 $1$，即 $2$ 與 $-1$，故 $x^{2}+x-2=(x+2)(x-1)$。</span>
+      </div>
+      第一個分母是完全平方：
+\[x^{2}-2x+1=(x-1)^{2}.\]
+第二個分母用十字相乘，$2+(-1)=1$ 且 $2\times(-1)=-2$：
+\[x^{2}+x-2=(x+2)(x-1).\]
+所以原式為
+\[\frac{1}{(x-1)^{2}}-\frac{1}{(x+2)(x-1)}.\]
+分子全為 $1$，<br>通分後分子不會再出現 $x^{2}$ 項，故答案的分母必為 $(x-1)^{2}(x+2)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">取最小公倍式通分</div>
+      <div class="rule">
+        <span class="rule-name">代數式的最小公倍式</span>
+        <span class="rule-math">\(\text{LCM}\big((x-1)^{2},\ (x+2)(x-1)\big)=(x-1)^{2}(x+2)\)</span>
+        <span class="rule-why">每個因式取最高次冪：$(x-1)$ 取二次，$(x+2)$ 取一次。</span>
+      </div>
+      公分母為 $(x-1)^{2}(x+2)$。<br>第一個分數乘 $\dfrac{x+2}{x+2}$，第二個乘 $\dfrac{x-1}{x-1}$：
+\[\frac{x+2}{(x-1)^{2}(x+2)}-\frac{x-1}{(x-1)^{2}(x+2)}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併分子，$x$ 項互相抵消</div>
+      <div class="rule">
+        <span class="rule-name">同分母分數相減</span>
+        <span class="rule-math">\(\dfrac{a}{c}-\dfrac{b}{c}=\dfrac{a-b}{c}\)</span>
+        <span class="rule-why">分母相同時只需把分子相減，但要保留括號，讓減號作用於整個 $(x-1)$。</span>
+      </div>
+      \[\frac{(x+2)-(x-1)}{(x-1)^{2}(x+2)}=\frac{x+2-x+1}{(x-1)^{2}(x+2)}=\frac{3}{(x-1)^{2}(x+2)}.\]
+分子剩下常數 $3$，故答案為 <b>C</b>。<br>
+（快速核算：取 $x=0$，原式 $=1-\left(-\dfrac12\right)=1.5$，而 $\dfrac{3}{1\times2}=1.5$，吻合。<br>）
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{3}{(x-1)^{2}(x+2)}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡
+\[\frac{1}{x^{2}-6x+9}-\frac{1}{x^{2}-9}=\]</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{(x-3)(x+3)}$</li><li><span class="ol">B</span>$\dfrac{2}{(x-3)^{2}(x+3)}$</li><li><span class="ol">C</span>$\dfrac{4}{(x-3)^{2}(x+3)}$</li><li><span class="ol">D</span>$\dfrac{6}{(x-3)^{2}(x+3)}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分解分母：$x^{2}-6x+9=(x-3)^{2}$，$x^{2}-9=(x-3)(x+3)$，故原式 $=\dfrac{1}{(x-3)^{2}}-\dfrac{1}{(x-3)(x+3)}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 公分母為 $(x-3)^{2}(x+3)$，通分得 $\dfrac{(x+3)-(x-3)}{(x-3)^{2}(x+3)}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 分子 $(x+3)-(x-3)=6$，故結果為 $\dfrac{6}{(x-3)^{2}(x+3)}$（代 $x=0$ 核對：$\dfrac19-\left(-\dfrac19\right)=\dfrac29=\dfrac{6}{9\times3}$），<br>答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（$\dfrac{6}{(x-3)^{2}(x+3)}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q30.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
