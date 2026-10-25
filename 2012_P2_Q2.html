@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第2題 · 恆等式與多項式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第2題</span>
+    <h1>恆等式與多項式</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $(4x+y)^{2}-(4x-y)^{2}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$2y^{2}$</li><li><span class="ol">C</span>$8xy$</li><li><span class="ol">D</span>$16xy$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出這是「平方相減」</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">\(A^{2}-B^{2}=(A+B)(A-B)\)</span>
+        <span class="rule-why">兩個平方相減，可因式分解成「和」乘「差」，中間項會全部抵消。</span>
+      </div>
+      把 $4x+y$ 看成 $A$、$4x-y$ 看成 $B$，則
+\[ (4x+y)^{2}-(4x-y)^{2}=\big[(4x+y)+(4x-y)\big]\big[(4x+y)-(4x-y)\big]. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡兩個括號</div>
+      <div class="rule">
+        <span class="rule-name">合併同類項</span>
+        <span class="rule-math">\((A+B)+(A-B)=2A,\qquad (A+B)-(A-B)=2B\)</span>
+        <span class="rule-why">一個括號相加、一個括號相減，只剩 $A$ 或只剩 $B$。</span>
+      </div>
+      \[ (4x+y)+(4x-y)=8x, \qquad (4x+y)-(4x-y)=2y. \]
+所以
+\[ (4x+y)^{2}-(4x-y)^{2}=(8x)(2y)=16xy. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用完全平方公式覆核</div>
+      直接展開亦可：
+\[ (4x+y)^{2}=16x^{2}+8xy+y^{2},\qquad (4x-y)^{2}=16x^{2}-8xy+y^{2}. \]
+相減後 $16x^{2}$ 與 $y^{2}$ 抵消，只剩 $8xy-(-8xy)=16xy$，與上面結果一致。對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$16xy$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $(3a+b)^{2}-(3a-b)^{2}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$6ab$</li><li><span class="ol">C</span>$12ab$</li><li><span class="ol">D</span>$18a^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 用平方差：$(3a+b)^{2}-(3a-b)^{2}=\big[(3a+b)+(3a-b)\big]\big[(3a+b)-(3a-b)\big]$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡括號：$(3a+b)+(3a-b)=6a$，$(3a+b)-(3a-b)=2b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相乘：$(6a)(2b)=12ab$，即答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$12ab$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q1.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q3.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

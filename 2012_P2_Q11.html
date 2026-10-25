@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第11題 · 平均數（加權）</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第11題</span>
+    <h1>平均數（加權）</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      小麗執行一項 $7$ 小時的打字工作。她在首 $3$ 小時及最後 $4$ 小時的平均打字速率分別為每分鐘 $63$ 字及每分鐘 $56$ 字。求她在該 $7$ 小時的平均打字速率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>每分鐘 $17$ 字</li><li><span class="ol">B</span>每分鐘 $35$ 字</li><li><span class="ol">C</span>每分鐘 $59$ 字</li><li><span class="ol">D</span>每分鐘 $60$ 字</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把速率換成「字數」</div>
+      <div class="rule">
+        <span class="rule-name">速率 × 時間 = 數量</span>
+        <span class="rule-math">\(\text{words}=\text{rate}\times\text{minutes}\)</span>
+        <span class="rule-why">平均速率是「總量 ÷ 總時間」，所以要先分別算出兩段的實際字數。</span>
+      </div>
+      首 $3$ 小時 $=3\times 60=180$ 分鐘，打字總數為
+\[ 63\times 180=11340, \]
+即 $11340$ 字。最後 $4$ 小時 $=4\times 60=240$ 分鐘，打字總數為
+\[ 56\times 240=13440, \]
+即 $13440$ 字。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">總字數除以總時間</div>
+      <div class="rule">
+        <span class="rule-name">加權平均</span>
+        <span class="rule-math">\(\bar{x}=\dfrac{\sum f_{i}x_{i}}{\sum f_{i}}\)</span>
+        <span class="rule-why">兩段時間長短不同，要用時間作權重；不可直接把 $63$ 與 $56$ 取平均。</span>
+      </div>
+      兩段合計
+\[ 11340+13440=24780, \]
+即 $24780$ 字。總時間 $=7\times 60=420$ 分鐘，故平均速率為
+\[ \frac{24780}{420}=59, \]
+即每分鐘 $59$ 字。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查與常見錯誤</div>
+      $59$ 介乎 $56$ 與 $63$ 之間，而且較接近 $56$（因為 $4$ 小時比 $3$ 小時長），合理。
+若誤把 $63$ 與 $56$ 直接平均，會得 $\dfrac{63+56}{2}=59.5$，並不在選項中；選項 $17$ 與 $35$ 則是把時間與速率胡亂相加、相減的陷阱。對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（每分鐘 $59$ 字）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一輛車首 $2$ 小時的平均速率為 $60\text{ km/h}$，最後 $3$ 小時的平均速率為 $80\text{ km/h}$。求它在這 $5$ 小時的平均速率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$68\text{ km/h}$</li><li><span class="ol">B</span>$70\text{ km/h}$</li><li><span class="ol">C</span>$72\text{ km/h}$</li><li><span class="ol">D</span>$75\text{ km/h}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 首段路程 $=60\times 2=120\text{ km}$；次段路程 $=80\times 3=240\text{ km}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 總路程 $=360\text{ km}$，總時間 $=5$ 小時。</div>
+          <div class="p-step"><b>第 3 步.</b> 平均速率 $=\dfrac{360}{5}=72\text{ km/h}$，即答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$72\text{ km/h}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

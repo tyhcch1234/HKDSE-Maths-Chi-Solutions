@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第28題 · 概率與幹葉圖</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第28題</span>
+    <h1>概率與幹葉圖</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的幹葉圖顯示一群文娛中心的會員的年歲的分佈。
+      <p>從該群中隨機選出一名會員。求所選出的會員的年歲不小於 $74$ 的概率。</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0.2$</li><li><span class="ol">B</span>$0.3$</li><li><span class="ol">C</span>$0.7$</li><li><span class="ol">D</span>$0.8$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q28.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從幹葉圖點算總人數</div>
+      <div class="rule">
+        <span class="rule-name">讀幹葉圖</span>
+        <span class="rule-math">\(\text{stem}\times 10+\text{leaf}\)</span>
+        <span class="rule-why">幹是十位、葉是個位，每片葉代表一個人。</span>
+      </div>
+      逐行點算：$5$ 行有 $5$ 片葉、$6$ 行有 $8$ 片、$7$ 行有 $6$ 片、$8$ 行沒有葉、$9$ 行有 $1$ 片。
+\[ n=5+8+6+0+1=20. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">點算年歲不小於 $74$ 的人</div>
+      <div class="rule">
+        <span class="rule-name">不小於的含義</span>
+        <span class="rule-math">\(\text{age}\ge 74\)</span>
+        <span class="rule-why">「不小於」包括 $74$ 本身，$74$ 這片葉要計算在內。</span>
+      </div>
+      $7$ 行中 $74$、$74$、$76$、$77$、$79$ 共 $5$ 人（$73$ 不合）；$9$ 行中 $91$ 共 $1$ 人。
+\[ 5+1=6. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率</div>
+      \[ P=\frac{6}{20}=0.3. \]
+若誤把「大於 $74$」理解為不含 $74$，只會數到 $4+1=5$ 人，得 $0.25$，不在選項內，可見 $74$ 必須計算。對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$0.3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一組按大小排列的數據為：$12,\ 15,\ 15,\ 18,\ 21,\ 23,\ 23,\ 25,\ 28,\ 30$。從該組數據中隨機選出一個，求所選出的數不小於 $25$ 的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0.2$</li><li><span class="ol">B</span>$0.3$</li><li><span class="ol">C</span>$0.5$</li><li><span class="ol">D</span>$0.7$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 數據共 $10$ 個。</div>
+          <div class="p-step"><b>第 2 步.</b> 不小於 $25$ 的有 $25$、$28$、$30$ 共 $3$ 個。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{3}{10}=0.3$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$0.3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q27.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q29.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

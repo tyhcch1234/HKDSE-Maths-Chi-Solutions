@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第17題 · 面積比</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第17題</span>
+    <h1>面積比</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 為一平行四邊形。$E$ 及 $F$ 分別為 $AB$ 及 $CD$ 上的點。$AD$ 的延線與 $EF$ 的延線相交於 $G$。已知 $DF:FC=3:4$ 及 $AD:DG=1:1$。若 $\triangle DFG$ 的面積為 $3$ cm$^{2}$，則平行四邊形 $ABCD$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$12$ cm$^{2}$</li><li><span class="ol">B</span>$14$ cm$^{2}$</li><li><span class="ol">C</span>$18$ cm$^{2}$</li><li><span class="ol">D</span>$21$ cm$^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q17.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $AD:DG$ 連起 $\triangle ADF$ 與 $\triangle DFG$</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{[ADF]}{[DFG]}=\dfrac{AD}{DG}\)</span>
+        <span class="rule-why">兩三角形同以 $F$ 為頂點、底邊落在同一條直線 $AG$ 上，高相同，面積比即底邊比。</span>
+      </div>
+      $A$、$D$、$G$ 共線。$\triangle ADF$ 與 $\triangle DFG$ 的高都是 $F$ 到直線 $AG$ 的距離，故
+\[ \frac{[ADF]}{[DFG]}=\frac{AD}{DG}=1, \]
+即 $[ADF]=[DFG]=3$ cm$^{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $DF:FC$ 求 $\triangle ACD$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">同頂點三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{[ADF]}{[ACF]}=\dfrac{DF}{FC}\)</span>
+        <span class="rule-why">兩三角形同以 $A$ 為頂點、底邊 $DF$、$FC$ 都在直線 $DC$ 上，高相同。</span>
+      </div>
+      $DF:FC=3:4$，所以
+\[ \frac{[ADF]}{[ACF]}=\frac{3}{4}\;\Longrightarrow\;[ACF]=\frac{4}{3}\times 3=4\text{ cm}^{2}. \]
+於是
+\[ [ACD]=[ADF]+[ACF]=3+4=7\text{ cm}^{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對角線把平行四邊形分成兩個全等三角形</div>
+      <div class="rule">
+        <span class="rule-name">平行四邊形的面積</span>
+        <span class="rule-math">\([ABCD]=2\,[ACD]\)</span>
+        <span class="rule-why">對角線 $AC$ 把平行四邊形分成兩個全等三角形。</span>
+      </div>
+      \[ [ABCD]=2\times 7=14\text{ cm}^{2}. \]
+幾何意義：$AD:DG=1:1$ 令 $\triangle ADF$ 與 $\triangle DFG$ 等積，$DF:FC=3:4$ 再把面積放大 $\dfrac{7}{3}$ 倍，最後乘 $2$。對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$14$ cm$^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$ABCD$ 為一平行四邊形。$F$ 為 $CD$ 上的點，$AD$ 的延線與 $BF$ 的延線相交於 $G$。已知 $DF:FC=2:3$ 及 $AD:DG=2:1$。若 $\triangle DFG$ 的面積為 $2$ cm$^{2}$，則平行四邊形 $ABCD$ 的面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12$ cm$^{2}$</li><li><span class="ol">B</span>$20$ cm$^{2}$</li><li><span class="ol">C</span>$25$ cm$^{2}$</li><li><span class="ol">D</span>$30$ cm$^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle ADF$ 與 $\triangle DFG$ 同高，$[ADF]:[DFG]=AD:DG=2:1$，故 $[ADF]=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle ADF$ 與 $\triangle ACF$ 同高，$[ADF]:[ACF]=DF:FC=2:3$，故 $[ACF]=6$，$[ACD]=10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $[ABCD]=2\times 10=20$ cm$^{2}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$20$ cm$^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

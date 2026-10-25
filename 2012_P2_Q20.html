@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第20題 · 圓形性質</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第20題</span>
+    <h1>圓形性質</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$O$ 為圓 $ABCD$ 的圓心。若 $\angle BAO=28^\circ$、$\angle BCD=114^\circ$ 及 $\angle CDO=42^\circ$，則 $\angle ABC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$90^\circ$</li><li><span class="ol">B</span>$96^\circ$</li><li><span class="ol">C</span>$100^\circ$</li><li><span class="ol">D</span>$138^\circ$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q20.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用圓周角定出弧 $BAD$</div>
+      <div class="rule">
+        <span class="rule-name">圓周角定理</span>
+        <span class="rule-math">\(\angle BCD=\tfrac{1}{2}\,\widehat{BAD}\)</span>
+        <span class="rule-why">圓周角等於所對弧的圓心角的一半，即弧的度數是圓周角的兩倍。</span>
+      </div>
+      $\angle BCD$ 所對的是弧 $BAD$（由 $B$ 經 $A$ 到 $D$），所以
+\[ \widehat{BAD}=2\times 114^\circ=228^\circ. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用等腰三角形求兩個圓心角</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形的底角</span>
+        <span class="rule-math">\(\angle AOB=180^\circ-2\angle BAO,\qquad \angle COD=180^\circ-2\angle CDO\)</span>
+        <span class="rule-why">$OA=OB=OC=OD$ 都是半徑，兩個三角形都是等腰三角形。</span>
+      </div>
+      在 $\triangle AOB$ 中 $OA=OB$，故 $\angle ABO=\angle BAO=28^\circ$：
+\[ \widehat{AB}=\angle AOB=180^\circ-2(28^\circ)=124^\circ. \]
+在 $\triangle COD$ 中 $OC=OD$，故 $\angle OCD=\angle CDO=42^\circ$：
+\[ \widehat{CD}=\angle COD=180^\circ-2(42^\circ)=96^\circ. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求弧 $AD$，再求 $\angle ABC$</div>
+      <div class="rule">
+        <span class="rule-name">弧的加法</span>
+        <span class="rule-math">\(\widehat{AD}=\widehat{BAD}-\widehat{AB}\)</span>
+        <span class="rule-why">整段弧等於各分段的總和，先補出缺少的一段。</span>
+      </div>
+      \[ \widehat{AD}=228^\circ-124^\circ=104^\circ. \]
+$\angle ABC$ 所對的弧是 $ADC$，即 $\widehat{AD}+\widehat{DC}$：
+\[ \angle ABC=\frac{1}{2}(104^\circ+96^\circ)=100^\circ. \]
+覆核：四段弧 $124^\circ+104^\circ+96^\circ+36^\circ=360^\circ$，各角與圖相符。對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\angle ABC=100^\circ$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$O$ 為圓 $ABCD$ 的圓心。若 $\angle BAO=20^\circ$、$\angle BCD=110^\circ$ 及 $\angle CDO=30^\circ$，則 $\angle ABC=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$90^\circ$</li><li><span class="ol">B</span>$100^\circ$</li><li><span class="ol">C</span>$110^\circ$</li><li><span class="ol">D</span>$120^\circ$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\widehat{BAD}=2\angle BCD=220^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\widehat{AB}=180^\circ-2(20^\circ)=140^\circ$，$\widehat{CD}=180^\circ-2(30^\circ)=120^\circ$，故 $\widehat{AD}=220^\circ-140^\circ=80^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABC=\dfrac{1}{2}(\widehat{AD}+\widehat{DC})=\dfrac{1}{2}(80^\circ+120^\circ)=100^\circ$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$\angle ABC=100^\circ$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q19.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q21.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

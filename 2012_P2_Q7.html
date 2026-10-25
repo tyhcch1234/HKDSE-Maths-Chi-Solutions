@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第7題 · 一元一次不等式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第7題</span>
+    <h1>一元一次不等式</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $15+4x<3$ 或 $9-2x>1$ 的解為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x<-3$</li><li><span class="ol">B</span>$x>-3$</li><li><span class="ol">C</span>$x<4$</li><li><span class="ol">D</span>$x>4$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">解第一條不等式</div>
+      <div class="rule">
+        <span class="rule-name">不等式移項</span>
+        <span class="rule-math">\(A+c<B\;\Longleftrightarrow\;A<B-c\)</span>
+        <span class="rule-why">兩邊同加或同減一個數，不等號方向不變。</span>
+      </div>
+      \[ 15+4x<3\;\Longrightarrow\;4x<3-15=-12\;\Longrightarrow\;x<-3. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第二條不等式</div>
+      <div class="rule">
+        <span class="rule-name">除以負數要反號</span>
+        <span class="rule-math">\(-ka<b\ \ (k>0)\;\Longleftrightarrow\;a>-\dfrac{b}{k}\)</span>
+        <span class="rule-why">兩邊同乘或同除一個負數，不等號方向要顛倒。</span>
+      </div>
+      \[ 9-2x>1\;\Longrightarrow\;-2x>-8\;\Longrightarrow\;x<4. \]
+<div class="hint">最後一步兩邊同除 $-2$，所以 $>$ 變成 $<$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">「或」代表取聯集</div>
+      <div class="rule">
+        <span class="rule-name">或＝聯集</span>
+        <span class="rule-math">\(P\cup Q\)</span>
+        <span class="rule-why">「或」表示只要其中一個條件成立便算符合，所以取兩段解集的聯集。</span>
+      </div>
+      兩段解集為 $x<-3$ 與 $x<4$。因為 $x<-3$ 的數全部也小於 $4$，所以
+\[ \{x<-3\}\cup\{x<4\}=\{x<4\}. \]
+即解為 $x<4$。對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$x<4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $2x+5<1$ 或 $3-x>6$ 的解為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x<-2$</li><li><span class="ol">B</span>$x<-3$</li><li><span class="ol">C</span>$x>-2$</li><li><span class="ol">D</span>$x>-3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條：$2x+5<1\;\Longrightarrow\;2x<-4\;\Longrightarrow\;x<-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$3-x>6\;\Longrightarrow\;-x>3\;\Longrightarrow\;x<-3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取聯集：$x<-3$ 的解全部滿足 $x<-2$，故解為 $x<-2$，即答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$x<-2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

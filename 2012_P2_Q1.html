@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第1題 · 指數定律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第1題</span>
+    <h1>指數定律</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\dfrac{(2x^{4})^{3}}{2x^{5}}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3x^{2}$</li><li><span class="ol">B</span>$3x^{7}$</li><li><span class="ol">C</span>$4x^{7}$</li><li><span class="ol">D</span>$4x^{59}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先化簡分子的括號</div>
+      <div class="rule">
+        <span class="rule-name">積的乘方</span>
+        <span class="rule-math">\((ab)^{n}=a^{n}b^{n}\)</span>
+        <span class="rule-why">括號內每個因數都要各自乘方，係數 $2$ 也不例外。</span>
+      </div>
+      <div class="rule">
+        <span class="rule-name">冪的乘方</span>
+        <span class="rule-math">\((a^{m})^{n}=a^{mn}\)</span>
+        <span class="rule-why">一個冪再取冪，指數相乘。</span>
+      </div>
+      分子是 $(2x^{4})^{3}$，把係數與 $x$ 分開處理：
+\[ (2x^{4})^{3}=2^{3}\cdot(x^{4})^{3}=8x^{12}. \]
+<div class="hint">常見錯誤：只把 $x$ 乘方而漏掉係數，或把 $2^{3}$ 誤寫成 $2\times 3$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分子除以分母</div>
+      <div class="rule">
+        <span class="rule-name">商的指數律</span>
+        <span class="rule-math">\(\dfrac{a^{m}}{a^{n}}=a^{m-n}\quad(a\neq 0)\)</span>
+        <span class="rule-why">同底數相除，指數相減；係數則直接相除。</span>
+      </div>
+      原式變成
+\[ \frac{8x^{12}}{2x^{5}}=\frac{8}{2}\cdot\frac{x^{12}}{x^{5}}=4x^{12-5}=4x^{7}. \]
+<div class="hint">$2x^{5}$ 即是 $2^{1}x^{5}$，所以係數部分是 $8\div 2=4$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">驗算</div>
+      取 $x=2$ 檢查：左邊 $=\dfrac{(2\cdot 16)^{3}}{2\cdot 32}=\dfrac{32768}{64}=512$，右邊 $=4\cdot 2^{7}=512$，兩者相等。
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$4x^{7}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $\dfrac{(3x^{2})^{3}}{9x^{4}}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3x^{2}$</li><li><span class="ol">B</span>$3x^{3}$</li><li><span class="ol">C</span>$27x^{2}$</li><li><span class="ol">D</span>$9x^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 先化簡分子：$(3x^{2})^{3}=3^{3}(x^{2})^{3}=27x^{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 再與分母相除：$\dfrac{27x^{6}}{9x^{4}}=\dfrac{27}{9}x^{6-4}=3x^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算（取 $x=1$）：左邊 $=\dfrac{27}{9}=3$，右邊 $=3$，相等。</div>
+          <div class="p-ans">答案：<b>A</b>（$3x^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

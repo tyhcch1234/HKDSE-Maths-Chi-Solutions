@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第8題 · 百分數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第8題</span>
+    <h1>百分數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在某公司，$37.5\%$ 的僱員為女性。若 $60\%$ 的男僱員及 $80\%$ 的女僱員均已婚，則該公司中已婚僱員所佔的百分數為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$32.5\%$</li><li><span class="ol">B</span>$45\%$</li><li><span class="ol">C</span>$55\%$</li><li><span class="ol">D</span>$67.5\%$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先求男僱員所佔的百分數</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        <span class="rule-math">\(100\%-37.5\%=62.5\%\)</span>
+        <span class="rule-why">全體只有男、女兩類，所以男生比例是 $100\%$ 減去女生比例。</span>
+      </div>
+      女性佔 $37.5\%$，故男性佔
+\[ 100\%-37.5\%=62.5\%. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分別算出已婚男、女所佔的百分數</div>
+      <div class="rule">
+        <span class="rule-name">部分佔全體的比例</span>
+        <span class="rule-math">\(\text{part}=\text{share}\times\text{rate}\)</span>
+        <span class="rule-why">「男的 $60\%$ 已婚」是相對男僱員而言，要再乘男僱員佔全體的比例（比例 × 比率）。</span>
+      </div>
+      已婚男僱員佔全體
+\[ 62.5\%\times 60\%=37.5\%, \]
+已婚女僱員佔全體
+\[ 37.5\%\times 80\%=30\%. \]
+兩者相加：
+\[ 37.5\%+30\%=67.5\%. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合理性檢查</div>
+      $67.5\%$ 介乎 $60\%$ 與 $80\%$ 之間，而且較接近 $60\%$，因為男性佔多數（$62.5\%$），符合預期。
+（選項 $45\%$ 是把兩個百分比胡亂相加後減半的典型錯誤。）對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$67.5\%$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某校 $40\%$ 的學生為男生。若 $25\%$ 的男生及 $55\%$ 的女生均戴眼鏡，則該校戴眼鏡的學生所佔的百分數為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$40\%$</li><li><span class="ol">B</span>$43\%$</li><li><span class="ol">C</span>$45\%$</li><li><span class="ol">D</span>$48\%$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 女生佔 $100\%-40\%=60\%$。</div>
+          <div class="p-step"><b>第 2 步.</b> 戴眼鏡的男生佔全體 $40\%\times 25\%=10\%$；戴眼鏡的女生佔全體 $60\%\times 55\%=33\%$。</div>
+          <div class="p-step"><b>第 3 步.</b> 合計 $10\%+33\%=43\%$，即答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$43\%$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第27題 · 概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第27題</span>
+    <h1>概率</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      9★◆ 為三位數，其中 ★ 及 ◆ 均為 $0$ 至 $9$（包括 $0$ 及 $9$）內的整數。求該三位數可被 $5$ 整除的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{5}$</li><li><span class="ol">B</span>$\dfrac{7}{33}$</li><li><span class="ol">C</span>$\dfrac{20}{99}$</li><li><span class="ol">D</span>$\dfrac{19}{100}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清所有可能的數</div>
+      <div class="rule">
+        <span class="rule-name">乘法計數原理</span>
+        <span class="rule-math">\(10\times 10=100\)</span>
+        <span class="rule-why">★ 與 ◆ 各有 $10$ 個取值，互相獨立。</span>
+      </div>
+      百位數字固定為 $9$，★、◆ 各可取 $0$ 至 $9$，所以樣本空間共有
+\[ 10\times 10=100 \]
+個三位數（★ $=0$ 時仍是三位數，例如 $907$，不可剔除）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數清可被 $5$ 整除的數</div>
+      <div class="rule">
+        <span class="rule-name">被 $5$ 整除的判別法</span>
+        <span class="rule-math">\(5\mid N\iff\text{last digit}\in\{0,5\}\)</span>
+        <span class="rule-why">只有個位數字決定能否被 $5$ 整除。</span>
+      </div>
+      個位 ◆ 只能是 $0$ 或 $5$（$2$ 種），★ 仍有 $10$ 種：
+\[ 2\times 10=20 \]
+個。例如 $900$、$905$、$910$、$915$ 等。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率並約簡</div>
+      \[ P=\frac{20}{100}=\frac{1}{5}. \]
+留意 $\dfrac{20}{99}$ 是誤以為 ★ 不能取 $0$（分母 $9\times 11$）的產物，屬於干擾項。覆核：$20$ 個中 $10$ 個以 $0$ 結尾、$10$ 個以 $5$ 結尾 ✓。對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{1}{5}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 7★◆ 為三位數，其中 ★ 及 ◆ 均為 $0$ 至 $9$（包括 $0$ 及 $9$）內的整數。求該三位數可被 $2$ 整除的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{2}{5}$</li><li><span class="ol">C</span>$\dfrac{5}{9}$</li><li><span class="ol">D</span>$\dfrac{1}{4}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 樣本空間共 $10\times 10=100$ 個數（★ 可取 $0$）。</div>
+          <div class="p-step"><b>第 2 步.</b> 可被 $2$ 整除即個位為偶數（$0,2,4,6,8$），共 $5$ 種，故有 $5\times 10=50$ 個。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{50}{100}=\dfrac{1}{2}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q26.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q28.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

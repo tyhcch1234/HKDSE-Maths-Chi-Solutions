@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第12題 · 數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第12題</span>
+    <h1>數列</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，第 $1$ 個圖案包含 $1$ 粒點子。對任意正整數 $n$，第 $(n+1)$ 個圖案是由第 $n$ 個圖案加上 $n$ 粒點子所組成。求第 $8$ 個圖案的點子數目。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$22$</li><li><span class="ol">B</span>$29$</li><li><span class="ol">C</span>$36$</li><li><span class="ol">D</span>$37$</li></ol>
+    <figure class="fig"><img src="figures/2012_P2_Q12.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把文字化成遞推關係</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係</span>
+        <span class="rule-math">\(T(n+1)=T(n)+n,\qquad T(1)=1\)</span>
+        <span class="rule-why">由第 $n$ 個圖案到第 $(n+1)$ 個圖案，每次加上 $n$ 粒，所以相鄰兩項的差是 $n$。</span>
+      </div>
+      設 $T(n)$ 為第 $n$ 個圖案的點子數目。題意即
+\[ T(n+1)=T(n)+n,\qquad T(1)=1. \]
+由圖可見：$T(1)=1$、$T(2)=2$、$T(3)=4$、$T(4)=7$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項加出第 $8$ 項</div>
+      <div class="rule">
+        <span class="rule-name">累加的差</span>
+        <span class="rule-math">\(T(8)=T(1)+1+2+3+4+5+6+7\)</span>
+        <span class="rule-why">由 $T(1)$ 走到 $T(8)$ 共加了 $n=1,2,\ldots,7$ 這 $7$ 個差。</span>
+      </div>
+      \[ T(8)=1+1+2+3+4+5+6+7. \]
+逐項寫出亦可：
+\[ 1,\ 2,\ 4,\ 7,\ 11,\ 16,\ 22,\ 29. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用等差和公式覆核</div>
+      <div class="rule">
+        <span class="rule-name">首 $n$ 個正整數之和</span>
+        <span class="rule-math">\(1+2+\cdots+n=\dfrac{n(n+1)}{2}\)</span>
+        <span class="rule-why">把 $1$ 到 $7$ 的和用公式一次算出，避免逐項加錯。</span>
+      </div>
+      $1+2+\cdots+7=\dfrac{7\times 8}{2}=28$，所以
+\[ T(8)=1+28=29. \]
+<div class="hint">選項 $22$ 是 $T(7)$，$36$ 與 $37$ 則是漏加 $1$ 或把差當成 $8$ 的陷阱。</div>
+對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$29$ 粒）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某數列中，第 $1$ 個圖案有 $1$ 粒點子，而第 $(n+1)$ 個圖案比第 $n$ 個圖案多 $2n$ 粒點子。求第 $6$ 個圖案的點子數目。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$25$</li><li><span class="ol">B</span>$31$</li><li><span class="ol">C</span>$36$</li><li><span class="ol">D</span>$41$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 遞推關係：$T(n+1)=T(n)+2n$，$T(1)=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $T(1)$ 到 $T(6)$ 共加 $2(1)+2(2)+2(3)+2(4)+2(5)=2\times 15=30$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $T(6)=1+30=31$。逐項檢查：$1,3,7,13,21,31$ ✓，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$31$ 粒）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

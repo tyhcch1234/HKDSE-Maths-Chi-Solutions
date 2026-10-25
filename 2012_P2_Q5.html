@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第5題 · 聯立方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · 第5題</span>
+    <h1>聯立方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $m+2n+6=2m-n=7$，則 $n=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-4$</li><li><span class="ol">B</span>$-1$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$11$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把連等式拆成兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">連等式的意義</span>
+        <span class="rule-math">\(A=B=C\;\Longrightarrow\;A=C\ \text{and}\ B=C\)</span>
+        <span class="rule-why">三個量相等，表示任意兩者都相等，可拆成兩條方程。</span>
+      </div>
+      由 $m+2n+6=7$ 得
+\[ m+2n=1. \tag{1} \]
+由 $2m-n=7$ 得
+\[ 2m-n=7. \tag{2} \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">消去 $m$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\((1)-2\times(2):\quad (m+2n)-2(2m-n)=1-14\)</span>
+        <span class="rule-why">把其中一條方程乘上適當倍數，可使某個未知數的係數相同，再相減消去它。</span>
+      </div>
+      由 $(2)$ 得 $m=\dfrac{7+n}{2}$，代入 $(1)$：
+\[ \frac{7+n}{2}+2n=1. \]
+兩邊乘 $2$：
+\[ 7+n+4n=2\;\Longrightarrow\;5n=-5\;\Longrightarrow\;n=-1. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $m$ 並驗算</div>
+      代回 $(2)$：$2m-(-1)=7\;\Longrightarrow\;2m=6\;\Longrightarrow\;m=3$。
+檢查連等式：$m+2n+6=3-2+6=7$，而 $2m-n=6+1=7$，三式皆等於 $7$。對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$n=-1$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $3a+2b+4=2a+b=10$，則 $a=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$14$</li><li><span class="ol">B</span>$6$</li><li><span class="ol">C</span>$-6$</li><li><span class="ol">D</span>$-14$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 拆成兩條方程：$3a+2b+4=10$ 即 $3a+2b=6$；另一條為 $2a+b=10$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由第二條得 $b=10-2a$，代入第一條：$3a+2(10-2a)=6$，即 $-a+20=6$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解得 $a=14$（此時 $b=-18$）。驗算：$3(14)+2(-18)+4=10$，$2(14)-18=10$，即答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$a=14$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P2_Q4.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P2_Q6.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
