@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第15題 · 面積與畢氏定理</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第15題</span>
+    <h1>面積與畢氏定理</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$N$ 為 $AC$ 上的一點，$E$ 為 $DN$ 上的一點，且 $DN\perp AC$、$BC\perp AB$。若 $CD=10\ \text{cm}$、$AE=13\ \text{cm}$、$BC=16\ \text{cm}$、$DN=6\ \text{cm}$ 及 $EN=5\ \text{cm}$，則 $\Delta ABC$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$24\ \text{cm}^{2}$</li><li><span class="ol">B</span>$30\ \text{cm}^{2}$</li><li><span class="ol">C</span>$96\ \text{cm}^{2}$</li><li><span class="ol">D</span>$192\ \text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q15.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\Delta CDN$ 中求 $CN$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(a^{2}+b^{2}=c^{2}\)</span>
+        <span class="rule-why">$\Delta CDN$ 在 $N$ 處成直角，斜邊是 $CD=10$，可用畢氏定理求 $CN$。</span>
+      </div>
+      圖中 $DN\perp AC$，所以 $\Delta CDN$ 在 $N$ 處是直角，<br>斜邊為 $CD=10$ cm，一股為 $DN=6$ cm：
+\[CN=\sqrt{CD^{2}-DN^{2}}=\sqrt{10^{2}-6^{2}}=\sqrt{64}=8\ \text{cm}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\Delta AEN$ 中求 $AN$，再加出 $AC$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理與共線相加</span>
+        <span class="rule-math">\(AN=\sqrt{AE^{2}-EN^{2}},\qquad AC=AN+NC\)</span>
+        <span class="rule-why">$E$ 在 $DN$ 上，故 $EN\perp AC$；$A$、$N$、$C$ 共線且 $N$ 在兩者之間。</span>
+      </div>
+      因為 $E$ 在 $DN$ 上，而 $DN\perp AC$，所以 $EN$ 也垂直 $AC$，$\Delta AEN$ 在 $N$ 處是直角，<br>斜邊 $AE=13$ cm：
+\[AN=\sqrt{13^{2}-5^{2}}=\sqrt{144}=12\ \text{cm}.\]
+$A$、$N$、$C$ 共線且 $N$ 在 $A$ 與 $C$ 之間，<br>所以
+\[AC=AN+NC=12+8=20\ \text{cm}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $AB$ 再算面積</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形面積</span>
+        <span class="rule-math">\(\text{Area}=\tfrac{1}{2}\times\text{base}\times\text{height}\)</span>
+        <span class="rule-why">$\angle ABC=90^{\circ}$，故 $AB$ 與 $BC$ 正好是底與高。</span>
+      </div>
+      $\Delta ABC$ 在 $B$ 處成直角，斜邊 $AC=20$ cm、一股 $BC=16$ cm：
+\[AB=\sqrt{20^{2}-16^{2}}=\sqrt{144}=12\ \text{cm}.\]
+所以
+\[\text{Area}=\frac{1}{2}\times12\times16=96\ \text{cm}^{2}.\]
+對照選項，<br>答案為 <b>C</b>。<br>選項 D 的 $192$ 是漏掉 $\dfrac{1}{2}$ 的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$96\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$N$ 為 $AC$ 上的一點，$E$ 為 $DN$ 上的一點，且 $DN\perp AC$、$BC\perp AB$。若 $CD=17\ \text{cm}$、$DN=8\ \text{cm}$、$AE=17\ \text{cm}$、$EN=8\ \text{cm}$ 及 $BC=24\ \text{cm}$，則 $\Delta ABC$ 的面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$216\ \text{cm}^{2}$</li><li><span class="ol">B</span>$108\ \text{cm}^{2}$</li><li><span class="ol">C</span>$180\ \text{cm}^{2}$</li><li><span class="ol">D</span>$240\ \text{cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 在直角 $\Delta CDN$ 中：$CN=\sqrt{17^{2}-8^{2}}=\sqrt{225}=15\ \text{cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 在直角 $\Delta AEN$ 中：$AN=\sqrt{17^{2}-8^{2}}=15\ \text{cm}$，故 $AC=15+15=30\ \text{cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在直角 $\Delta ABC$ 中：$AB=\sqrt{30^{2}-24^{2}}=18\ \text{cm}$，面積 $=\dfrac{1}{2}(18)(24)=216\ \text{cm}^{2}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$216\ \text{cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

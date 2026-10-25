@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第10題 · 複利息</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第10題</span>
+    <h1>複利息</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某人把 ＄50 000 存入銀行，年利率 6%，為期 3 年，每季複利一次。求本利和（準確至最接近的元）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>＄59 000</li><li><span class="ol">B</span>＄59 551</li><li><span class="ol">C</span>＄59 755</li><li><span class="ol">D</span>＄59 781</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求出每期利率與期數</div>
+      <div class="rule">
+        <span class="rule-name">每期利率與期數</span>
+        <span class="rule-math">\(i=\dfrac{r}{n},\qquad N=nt\)</span>
+        <span class="rule-why">每季複利即 $n=4$，要把年利率與年數換算成「每季」的單位。</span>
+      </div>
+      「每季複利一次」表示一年計息 4 次：
+\[i=\frac{6\%}{4}=1.5\%=0.015,\qquad N=3\times4=12.\]
+即共 12 期，<br>每期利率 $1.5\%$。<br>
+若誤用 $n=1$（每年複利），就會把利息算得過少。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入複利息公式</div>
+      <div class="rule">
+        <span class="rule-name">複利息公式</span>
+        <span class="rule-math">\(A=P\left(1+\dfrac{r}{n}\right)^{nt}\)</span>
+        <span class="rule-why">已知本金 ＄50 000、$r=6\%$、$n=4$、$t=3$，直接代入即可。</span>
+      </div>
+      \[A=P\left(1+\frac{r}{n}\right)^{nt}=50\,000\left(1+\frac{6\%}{4}\right)^{3\times4}=50\,000(1.015)^{12}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算並取至最接近的元</div>
+      <div class="rule">
+        <span class="rule-name">四捨五入至整數</span>
+        <span class="rule-math">\(50\,000(1.015)^{12}=59\,780.908\ldots\approx59\,781\)</span>
+        <span class="rule-why">小數第一位是 $9$，所以元位要進 $1$。</span>
+      </div>
+      \[(1.015)^{12}=1.195618\ldots\]
+\[A=50\,000\times1.195618\ldots=59\,780.908\ldots\]
+取至最接近的元：
+\[A\approx59\,781.\]
+驗算：利息約 ＄9 781，<br>對本金 ＄50 000 的三年總增長約 $19.56\%$，與每年 $6\%$ 複利相符。<br>
+對照選項，答案為 <b>D</b>。<br>選項 B 的 ＄59 551 是只按單利或按年複利（$50\,000(1.06)^{3}$）的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（＄59 781）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某人把 ＄20 000 存入銀行，年利率 4%，為期 2 年，每半年複利一次。求本利和（準確至最接近的元）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>＄21 600</li><li><span class="ol">B</span>＄21 648</li><li><span class="ol">C</span>＄21 649</li><li><span class="ol">D</span>＄21 666</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每半年複利一次：每期利率 $=\dfrac{4\%}{2}=2\%$，期數 $=2\times2=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A=20\,000(1.02)^{4}=20\,000\times1.08243216=21\,648.64\ldots$</div>
+          <div class="p-step"><b>第 3 步.</b> 取至最接近的元得 ＄21 649，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（＄21 649）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q9.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q11.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

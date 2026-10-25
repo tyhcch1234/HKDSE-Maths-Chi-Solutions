@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第8題 · 二次函數圖像</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第8題</span>
+    <h1>二次函數圖像</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示 $y=a(x+b)^{2}$ 的圖像，其中 $a$、$b$ 為常數。下列何者正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$a>0$ 且 $b&lt;0$</li><li><span class="ol">B</span>$a&lt;0$ 且 $b&lt;0$</li><li><span class="ol">C</span>$a>0$ 且 $b>0$</li><li><span class="ol">D</span>$a&lt;0$ 且 $b>0$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q8.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由開口方向判斷 $a$ 的符號</div>
+      <div class="rule">
+        <span class="rule-name">二次函數的開口方向</span>
+        <span class="rule-math">\(y=ax^{2}+\cdots:\quad a>0\iff\text{opens upward},\quad a&lt;0\iff\text{opens downward}\)</span>
+        <span class="rule-why">圖中的拋物線開口向上，所以首項係數 $a$ 是正數。</span>
+      </div>
+      圖中的曲線是 U 形、兩臂向上，屬於開口向上。<br>
+在 $y=a(x+b)^{2}$ 中，$a$ 是首項係數，控制開口方向：
+\[a>0\iff\text{opens upward},\qquad a&lt;0\iff\text{opens downward}.\]
+所以
+\[a>0.\]
+可以用 $y=x^{2}$（$a=1>0$）與 $y=-x^{2}$（$a=-1&lt;0$）作對照。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出頂點位置</div>
+      <div class="rule">
+        <span class="rule-name">頂點式</span>
+        <span class="rule-math">\(y=a(x-h)^{2}+k\ \Longrightarrow\ \text{vertex }(h,k)\)</span>
+        <span class="rule-why">$y=a(x+b)^{2}$ 已是頂點式，可立即讀出頂點的坐標。</span>
+      </div>
+      把 $y=a(x+b)^{2}$ 寫成標準頂點式：
+\[y=a\left(x-(-b)\right)^{2}+0,\]
+所以頂點是 $(-b,\,0)$，<br>即頂點落在 $x$ 軸上。<br>
+圖中曲線只與 $x$ 軸接觸一次，該接觸點就是頂點，而且它在原點的左邊（負 $x$ 方向），<br>即
+\[-b&lt;0.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解不等式得 $b$ 的符號</div>
+      <div class="rule">
+        <span class="rule-name">乘以負數要反號</span>
+        <span class="rule-math">\(-b&lt;0\ \Longrightarrow\ b>0\)</span>
+        <span class="rule-why">兩邊同乘 $-1$ 時不等式方向反轉，故由 $-b&lt;0$ 得 $b>0$。</span>
+      </div>
+      由 $-b&lt;0$，兩邊乘 $-1$ 並反號：
+\[b>0.\]
+所以 $a>0$ 且 $b>0$。<br>
+驗算：$y$ 截距為 $y(0)=ab^{2}>0$，圖中曲線與 $y$ 軸交於正 $y$ 值，<br>與結論一致。<br>
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$a>0$ 且 $b>0$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某圖顯示 $y=a(x+b)^{2}$ 的圖像，其中 $a$、$b$ 為常數。該曲線開口向下，並在正 $x$ 軸上一點與 $x$ 軸接觸。下列何者正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$a>0$ 且 $b&lt;0$</li><li><span class="ol">B</span>$a&lt;0$ 且 $b&lt;0$</li><li><span class="ol">C</span>$a>0$ 且 $b>0$</li><li><span class="ol">D</span>$a&lt;0$ 且 $b>0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 開口向下，所以首項係數 $a&lt;0$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y=a(x+b)^{2}$ 的頂點為 $(-b,\,0)$，即曲線與 $x$ 軸的接觸點。</div>
+          <div class="p-step"><b>第 3 步.</b> 接觸點在正 $x$ 軸上，故 $-b>0$，乘以 $-1$ 反號得 $b&lt;0$，<br>答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$a&lt;0$ 且 $b&lt;0$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

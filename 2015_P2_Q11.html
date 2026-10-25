@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第11題 · 比與比例</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第11題</span>
+    <h1>比與比例</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a$、$b$、$c$ 為非零數。若 $a:c=5:3$ 且 $b:c=3:2$，則 $(a+c):(b+c)=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$7:5$</li><li><span class="ol">B</span>$8:5$</li><li><span class="ol">C</span>$16:15$</li><li><span class="ol">D</span>$19:15$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出兩個比之中的共同量</div>
+      <div class="rule">
+        <span class="rule-name">等值比（同乘一數）</span>
+        <span class="rule-math">\(a:c=5:3=\dfrac{5}{3},\qquad b:c=3:2=\dfrac{3}{2}\)</span>
+        <span class="rule-why">兩個比都以 $c$ 為共同量，但數值不同，要先化成同一個 $c$ 值。</span>
+      </div>
+      兩個比分別是
+\[a:c=5:3,\qquad b:c=3:2.\]
+共同的量是 $c$，但在第一個比中是 $3$ 份，<br>在第二個比中是 $2$ 份，單位不同，不能直接拼在一起。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $c$ 的份數化成相同</div>
+      <div class="rule">
+        <span class="rule-name">取最小公倍數統一份數</span>
+        <span class="rule-math">\(a:c=10:6,\qquad b:c=9:6\quad(\text{LCM}(3,2)=6)\)</span>
+        <span class="rule-why">把第一個比乘 $2$、第二個比乘 $3$，$c$ 的份數就同樣是 $6$。</span>
+      </div>
+      $3$ 與 $2$ 的最小公倍數是 $6$：
+\[a:c=5:3=10:6,\qquad b:c=3:2=9:6.\]
+比同乘一個非零數，<br>比值不變，所以這樣做不影響答案。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫成三項比並求 $(a+c):(b+c)$</div>
+      <div class="rule">
+        <span class="rule-name">三項比與相加</span>
+        <span class="rule-math">\(a:b:c=10:9:6\ \Longrightarrow\ (a+c):(b+c)=(10+6):(9+6)\)</span>
+        <span class="rule-why">三項比中所有份數共用同一單位，所以可以直接把對應的份數相加。</span>
+      </div>
+      因為 $c$ 在兩個比中都是 $6$ 份：
+\[a:b:c=10:9:6.\]
+於是
+\[a+c=10+6=16,\qquad b+c=9+6=15,\]
+\[(a+c):(b+c)=16:15.\]
+驗算：取 $a=10,\ b=9,\ c=6$，<br>得 $(a+c):(b+c)=16:15$，且 $a:c=10:6=5:3$、$b:c=9:6=3:2$，符合題意。<br>
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$16:15$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a$、$b$、$c$ 為非零數。若 $a:c=3:2$ 且 $b:c=5:4$，則 $(a+c):(b+c)=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$10:9$</li><li><span class="ol">B</span>$9:10$</li><li><span class="ol">C</span>$5:4$</li><li><span class="ol">D</span>$11:9$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $2$ 與 $4$ 的最小公倍數是 $4$，把第一個比乘 $2$：$a:c=6:4$，<br>而 $b:c=5:4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 故 $a:b:c=6:5:4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $(a+c):(b+c)=(6+4):(5+4)=10:9$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$10:9$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

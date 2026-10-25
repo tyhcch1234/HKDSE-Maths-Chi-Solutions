@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第12題 · 聯變</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第12題</span>
+    <h1>聯變</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $z$ 隨 $x^{3}$ 及 $y^{2}$ 而變。當 $x=2$ 且 $y=1$ 時，$z=14$。當 $x=3$ 且 $y=-2$ 時，$z=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-189$</li><li><span class="ol">B</span>$-126$</li><li><span class="ol">C</span>$126$</li><li><span class="ol">D</span>$189$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出聯變式</div>
+      <div class="rule">
+        <span class="rule-name">聯變</span>
+        <span class="rule-math">\(z=kx^{3}y^{2}\quad(k\neq0\ \text{is a constant})\)</span>
+        <span class="rule-why">$z$ 同時隨 $x^{3}$ 與 $y^{2}$ 而變，所以兩者相乘再乘上常數 $k$。</span>
+      </div>
+      「$z$ 隨 $x^{3}$ 及 $y^{2}$ 而變」表示
+\[z=kx^{3}y^{2},\]
+其中 $k$ 是非零常數。<br>
+注意 $y^{2}$ 不是 $y$，指數 $2$ 必須保留，這正是本題的分水嶺。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用已知數據求變分常數</div>
+      <div class="rule">
+        <span class="rule-name">求變分常數</span>
+        <span class="rule-math">\(k=\dfrac{z}{x^{3}y^{2}}\)</span>
+        <span class="rule-why">把 $x=2$、$y=1$、$z=14$ 代入，即可解出 $k$。</span>
+      </div>
+      代入 $x=2$、$y=1$、$z=14$：
+\[14=k(2)^{3}(1)^{2}=8k,\]
+\[k=\frac{14}{8}=\frac{7}{4}.\]
+所以
+\[z=\frac{7}{4}x^{3}y^{2}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入新數值求 $z$</div>
+      <div class="rule">
+        <span class="rule-name">代入變分式</span>
+        <span class="rule-math">\(z=\dfrac{7}{4}(3)^{3}(-2)^{2}\)</span>
+        <span class="rule-why">$(-2)^{2}=4$ 是正數，所以最後的 $z$ 必為正數。</span>
+      </div>
+      當 $x=3$、$y=-2$：
+\[z=\frac{7}{4}(3)^{3}(-2)^{2}=\frac{7}{4}\times27\times4=189.\]
+因為 $y$ 的指數是偶數 $2$，$(-2)^{2}=4>0$，<br>所以 $z$ 為正數；<br>若誤把 $y^{2}$ 當作 $y$，就會得到 $-189$ 這個陷阱答案。<br>
+對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$189$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $x^{2}$ 及 $y^{3}$ 而變。當 $x=2$ 且 $y=1$ 時，$z=12$。當 $x=1$ 且 $y=-2$ 時，$z=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-24$</li><li><span class="ol">B</span>$24$</li><li><span class="ol">C</span>$-12$</li><li><span class="ol">D</span>$12$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $z=kx^{2}y^{3}$；<br>代入 $x=2,\ y=1,\ z=12$ 得 $12=4k$，故 $k=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 所以 $z=3x^{2}y^{3}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $x=1,\ y=-2$：$z=3(1)^{2}(-2)^{3}=3\times(-8)=-24$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$-24$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

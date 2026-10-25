@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第4題 · 有效數字與小數位</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第4題</span>
+    <h1>有效數字與小數位</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列哪一項是正確的？<br>
+$0.0023456789=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0.002345$（準確至 6 個小數位）</li><li><span class="ol">B</span>$0.002347$（準確至 6 個小數位）</li><li><span class="ol">C</span>$0.0023456$（準確至 5 個有效數字）</li><li><span class="ol">D</span>$0.00234568$（準確至 6 個有效數字）</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由第一個非零數字開始數有效數字</div>
+      <div class="rule">
+        <span class="rule-name">有效數字的起算點</span>
+        <span class="rule-math">\(0.0023456789:\ \text{first s.f.}=2\ \text{(the 3rd decimal place)}\)</span>
+        <span class="rule-why">前面的 0 只是定位用的，不算有效數字，所以要由 $2$ 開始數。</span>
+      </div>
+      小數點後的開頭兩個 $0$ 只是佔位，不是有效數字。<br>
+由第一個非零數字 $2$ 開始數：
+\[2,\ 3,\ 4,\ 5,\ 6,\ 7,\ 8,\ 9\]
+共 8 個數字，所以 $0.0023456789$ 有 8 個有效數字；<br>而小數點後共有 10 位。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用下一位數字決定進位或捨去</div>
+      <div class="rule">
+        <span class="rule-name">捨入規則</span>
+        <span class="rule-math">\(d\ge5\ \Longrightarrow\ \text{round up},\qquad d&lt;5\ \Longrightarrow\ \text{round down}\)</span>
+        <span class="rule-why">取 6 個有效數字時，第 7 個數字是 $8$，大於等於 $5$，所以要進位。</span>
+      </div>
+      取 6 個有效數字，即在 $0.00234567$ 之後切斷，看下一位 $8$：
+\[0.00234567\,|\,89\ \longrightarrow\ 0.00234568.\]
+因為 $8\ge5$，<br>第 6 個有效數字 $7$ 要加 $1$ 變成 $8$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分清「小數位」與「有效數字」</div>
+      <div class="rule">
+        <span class="rule-name">小數位與有效數字之別</span>
+        <span class="rule-math">\(6\ \text{d.p.}\to0.002346,\qquad 6\ \text{s.f.}\to0.00234568\)</span>
+        <span class="rule-why">小數位由小數點後第一位數起，有效數字由第一個非零數字數起，兩者答案不同。</span>
+      </div>
+      若取 6 個小數位，$0.002345\,|\,6789$ 的下一位是 $6\ge5$，得 $0.002346$；<br>這與 6 個有效數字所得的 $0.00234568$ 並不相同。<br>
+原卷選項 C 把 $0.002346$ 說成「準確至 6 個有效數字」，描述與數值互相矛盾（$0.002346$ 其實只有 4 個有效數字），<br>故此處按同一精神改寫成自洽的 $0.0023456$（5 個有效數字）。<br>
+對照各項，只有 <b>D</b> 的數值與準確度都正確。<br>
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$0.00234568$，準確至 6 個有效數字）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列哪一項是正確的？<br>
+$0.00047362581=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0.0004736$（4 個有效數字）</li><li><span class="ol">B</span>$0.000474$（6 個小數位）</li><li><span class="ol">C</span>$0.0004$（4 個小數位）</li><li><span class="ol">D</span>$0.00047363$（6 個有效數字）</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一個有效數字是 $4$，之後依次是 $7,\ 3,\ 6,\ 2,\ 5,\ 8,\ 1$，共 8 個有效數字。</div>
+          <div class="p-step"><b>第 2 步.</b> 取 4 個有效數字即在 $4,7,3,6$ 後切斷，下一位是 $2&lt;5$，<br>故捨去：$0.0004736$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取 6 個小數位要看第 7 位小數 $8$，得 $0.000474$，<br>與 4 個有效數字不同，故只有 <b>A</b> 正確。</div>
+          <div class="p-ans">答案：<b>A</b>（$0.0004736$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q3.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q5.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

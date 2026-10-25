@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第13題 · 數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第13題</span>
+    <h1>數列</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，第 1 個圖案由 5 點組成。對任意正整數 $n$，第 $(n+1)$ 個圖案由第 $n$ 個圖案加上 4 點而成。求第 6 個圖案中點的數目。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$21$</li><li><span class="ol">B</span>$25$</li><li><span class="ol">C</span>$29$</li><li><span class="ol">D</span>$33$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q13.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">判斷這是等差數列</div>
+      <div class="rule">
+        <span class="rule-name">等差數列</span>
+        <span class="rule-math">\(T(n)=T(1)+(n-1)d\quad(d=\text{common difference})\)</span>
+        <span class="rule-why">每個圖案都比前一個多 4 點，公差固定，屬等差數列。</span>
+      </div>
+      設 $T(n)$ 為第 $n$ 個圖案中點的數目。<br>
+題意是「第 $(n+1)$ 個 = 第 $n$ 個 $+4$」，即
+\[T(n+1)-T(n)=4,\]
+所以公差 $d=4$，<br>而首項 $T(1)=5$。<br>
+圖中亦可見：每個圖案都是在十字形的四臂各加一點，因此每次固定加 4 點。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出通項</div>
+      <div class="rule">
+        <span class="rule-name">等差數列通項</span>
+        <span class="rule-math">\(T(n)=5+4(n-1)=4n+1\)</span>
+        <span class="rule-why">代入首項 $5$ 與公差 $4$ 化簡，便可用任何 $n$ 直接計算。</span>
+      </div>
+      \[T(n)=5+4(n-1)=4n+1.\]
+核對：$T(1)=4(1)+1=5$，$T(2)=9$，$T(3)=13$，與逐次加 4 的結果一致。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $n=6$</div>
+      <div class="rule">
+        <span class="rule-name">求指定項</span>
+        <span class="rule-math">\(T(6)=4(6)+1=25\)</span>
+        <span class="rule-why">把 $n=6$ 代入通項，即得第 6 個圖案的點數。</span>
+      </div>
+      第 6 個圖案較第 1 個多加了 5 次，每次 4 點：
+\[T(6)=5+4\times5=25.\]
+用通項驗算：$4(6)+1=25$，<br>相同。<br>
+對照選項，答案為 <b>B</b>。<br>選項 A 的 $21$ 是漏加一次（只加 4 次）的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$25$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某圖案序列中，第 1 個圖案由 3 點組成，而對任意正整數 $n$，第 $(n+1)$ 個圖案由第 $n$ 個圖案加上 5 點而成。求第 8 個圖案中點的數目。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$38$</li><li><span class="ol">B</span>$33$</li><li><span class="ol">C</span>$43$</li><li><span class="ol">D</span>$40$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 公差 $d=5$，首項 $T(1)=3$，故 $T(n)=3+5(n-1)=5n-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第 8 個圖案較第 1 個多加 7 次：$3+5\times7=38$。</div>
+          <div class="p-step"><b>第 3 步.</b> 用通項驗算：$5(8)-2=38$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$38$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

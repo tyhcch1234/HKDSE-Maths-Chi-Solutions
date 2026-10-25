@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第2題 · 指數律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第2題</span>
+    <h1>指數律</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\dfrac{(3y^{6})^{4}}{3y^{2}}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$4y^{5}$</li><li><span class="ol">B</span>$4y^{8}$</li><li><span class="ol">C</span>$27y^{12}$</li><li><span class="ol">D</span>$27y^{22}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先處理分子的冪</div>
+      <div class="rule">
+        <span class="rule-name">冪的乘方</span>
+        <span class="rule-math">\((a^{m})^{n}=a^{mn}\)</span>
+        <span class="rule-why">$(y^{6})^{4}$ 要把指數相乘，得 $y^{24}$。</span>
+      </div>
+      分子是 $(3y^{6})^{4}$，括號內整個乘積都要取 $4$ 次方。<br>
+先看 $y$ 的部分，指數相乘：
+\[(y^{6})^{4}=y^{6\times4}=y^{24}.\]
+常見錯誤是寫成 $y^{10}$（把指數相加），<br>或只把 $y$ 取冪而漏掉係數 $3$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">係數也要取冪</div>
+      <div class="rule">
+        <span class="rule-name">積的乘方</span>
+        <span class="rule-math">\((ab)^{n}=a^{n}b^{n}\)</span>
+        <span class="rule-why">係數 $3$ 與 $y^{6}$ 都要各自取 $4$ 次方，得 $3^{4}=81$。</span>
+      </div>
+      把 $4$ 次方分配給括號內每個因數：
+\[(3y^{6})^{4}=3^{4}\cdot(y^{6})^{4}=81y^{24}.\]
+於是原式變成
+\[\frac{(3y^{6})^{4}}{3y^{2}}=\frac{81y^{24}}{3y^{2}}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">係數相除、指數相減</div>
+      <div class="rule">
+        <span class="rule-name">同底數冪相除</span>
+        <span class="rule-math">\(\dfrac{a^{m}}{a^{n}}=a^{m-n}\quad(a\neq0)\)</span>
+        <span class="rule-why">$y^{24}\div y^{2}$ 的指數相減得 $y^{22}$，係數則 $81\div3=27$。</span>
+      </div>
+      把分數拆成係數與 $y$ 兩部分：
+\[\frac{81y^{24}}{3y^{2}}=\frac{81}{3}\cdot\frac{y^{24}}{y^{2}}=27y^{24-2}=27y^{22}.\]
+驗算：取 $y=1$，<br>原式 $=\dfrac{3^{4}}{3}=27$，而 $27\times1^{22}=27$，相符。<br>
+對照選項，答案為 <b>D</b>。<br>選項 C 的 $y^{12}$ 是把指數相除（$24\div2$）的錯誤結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$27y^{22}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{(2y^{5})^{3}}{4y^{7}}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2y^{8}$</li><li><span class="ol">B</span>$2y^{15}$</li><li><span class="ol">C</span>$8y^{8}$</li><li><span class="ol">D</span>$2y^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 積的乘方與冪的乘方：$(2y^{5})^{3}=2^{3}(y^{5})^{3}=8y^{15}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 拆成兩部分：$\dfrac{8y^{15}}{4y^{7}}=\dfrac{8}{4}\cdot\dfrac{y^{15}}{y^{7}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 同底數冪相除，指數相減：$2y^{15-7}=2y^{8}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$2y^{8}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q1.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q3.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

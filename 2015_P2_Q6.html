@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第6題 · 一元一次不等式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第6題</span>
+    <h1>一元一次不等式</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列哪一個是
+\[18+7x>4\quad\text{or}\quad 5-2x&lt;3\]
+的解？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x>-2$</li><li><span class="ol">B</span>$x>-1$</li><li><span class="ol">C</span>$x>1$</li><li><span class="ol">D</span>$x>4$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先解第一條不等式</div>
+      <div class="rule">
+        <span class="rule-name">不等式加減性質</span>
+        <span class="rule-math">\(A>B\ \Longrightarrow\ A-c>B-c\)</span>
+        <span class="rule-why">兩邊同減 $18$ 不會改變不等號的方向，可把 $x$ 的項獨立出來。</span>
+      </div>
+      \[18+7x>4\]
+兩邊同減 $18$：
+\[7x>4-18=-14.\]
+兩邊同除以正數 $7$，<br>不等號方向不變：
+\[x>-2.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第二條不等式，留意反號</div>
+      <div class="rule">
+        <span class="rule-name">除以負數要反號</span>
+        <span class="rule-math">\(k&lt;0:\quad A>B\ \Longrightarrow\ \dfrac{A}{k}&lt;\dfrac{B}{k}\)</span>
+        <span class="rule-why">最後一步要除以 $-2$，是負數，所以不等號要由 $&lt;$ 變成 $>$。</span>
+      </div>
+      \[5-2x&lt;3\]
+兩邊同減 $5$：
+\[-2x&lt;3-5=-2.\]
+兩邊同除以 $-2$（負數），<br>不等號反向：
+\[x>\frac{-2}{-2}=1.\]
+若忘記反號而寫成 $x&lt;1$，就會把答案收窄成空集，<br>是最常見的陷阱。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">「或」代表取聯集</div>
+      <div class="rule">
+        <span class="rule-name">解集的聯集</span>
+        <span class="rule-math">\(\{x:x>-2\}\cup\{x:x>1\}=\{x:x>-2\}\)</span>
+        <span class="rule-why">題目用「或」，所以取兩個解集的聯集；較窄的集合已被較寬的包含。</span>
+      </div>
+      第一條的解是 $x>-2$，第二條的解是 $x>1$。<br>
+所有大於 $1$ 的數本來就大於 $-2$，所以
+\[\{x:x>-2\}\cup\{x:x>1\}=\{x:x>-2\}.\]
+驗算：取 $x=0$，$18+0=18>4$ 成立，<br>所以 $0$ 必須在答案內，只有 $x>-2$ 符合。<br>
+對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$x>-2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列哪一個是
+\[12+4x>8\quad\text{or}\quad 6-3x&lt;0\]
+的解？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x>2$</li><li><span class="ol">B</span>$x>-1$</li><li><span class="ol">C</span>$x>1$</li><li><span class="ol">D</span>$x>-2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條：$4x>8-12=-4$，兩邊除以 $4>0$，得 $x>-1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$-3x&lt;-6$，兩邊除以 $-3$（負數）要反號，得 $x>2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取聯集：$\{x:x>-1\}\cup\{x:x>2\}=\{x:x>-1\}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$x>-1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q5.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q7.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

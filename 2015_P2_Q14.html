@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第14題 · 誤差與估算</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第14題</span>
+    <h1>誤差與估算</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      有一袋白沙糖，袋中白沙糖的重量量得為 5 kg（準確至最接近的 kg）。若把該袋白沙糖分成 $n$ 包，每包白沙糖的重量量得為 10 g（準確至最接近的 g），求 $n$ 的最大可能值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$429$</li><li><span class="ol">B</span>$500$</li><li><span class="ol">C</span>$578$</li><li><span class="ol">D</span>$579$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由最大絕對誤差寫出整袋重量的範圍</div>
+      <div class="rule">
+        <span class="rule-name">最大絕對誤差</span>
+        <span class="rule-math">\(E=\tfrac{1}{2}d,\qquad x-E\le\text{true value}&lt;x+E\)</span>
+        <span class="rule-why">「準確至最接近的 kg」表示 $d=1$，所以真值在 $5\pm0.5$ kg 之內。</span>
+      </div>
+      設袋中白沙糖的真正重量為 $W$ kg。<br>量得 5 kg 準確至最接近的 kg，即 $d=1$：
+\[4.5\le W&lt;5.5.\]
+換成克：
+\[4500\le1000W&lt;5500.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出每包重量的下限</div>
+      <div class="rule">
+        <span class="rule-name">每包的真值範圍</span>
+        <span class="rule-math">\(9.5\le w_{i}&lt;10.5\quad(\text{each packet, in g})\)</span>
+        <span class="rule-why">想 $n$ 最大，就要假設每包都盡量輕，所以用下限 $9.5$ g。</span>
+      </div>
+      設第 $i$ 包的真重量為 $w_{i}$ g。<br>量得 10 g 準確至最接近的 g：
+\[9.5\le w_{i}&lt;10.5.\]
+$n$ 包加起來就是整袋的重量，<br>重量不會消失：
+\[w_{1}+w_{2}+\cdots+w_{n}=1000W.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解不等式取最大整數</div>
+      <div class="rule">
+        <span class="rule-name">取最大整數</span>
+        <span class="rule-math">\(9.5n\le1000W&lt;5500\ \Longrightarrow\ n&lt;\dfrac{5500}{9.5}=578.9\ldots\)</span>
+        <span class="rule-why">$n$ 必須是整數且嚴格小於 $578.9$，所以最大是 $578$。</span>
+      </div>
+      因為每包至少 $9.5$ g：
+\[9.5n\le w_{1}+\cdots+w_{n}=1000W&lt;5500,\]
+\[n&lt;\frac{5500}{9.5}=578.94\ldots\]
+所以 $n$ 最大為 $578$。<br>
+驗算：$578\times9.5=5491&lt;5500$，可行；$579\times9.5=5500.5$，超過整袋重量的上限，不可行。<br>
+對照選項，答案為 <b>C</b>。<br>選項 D 的 $579$ 是忽略嚴格不等號、直接把 $578.9$ 進位的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$578$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 有一袋麵粉，袋中麵粉的重量量得為 8 kg（準確至最接近的 kg）。若把該袋麵粉分成 $n$ 包，每包麵粉的重量量得為 25 g（準確至最接近的 g），求 $n$ 的最大可能值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$340$</li><li><span class="ol">B</span>$346$</li><li><span class="ol">C</span>$347$</li><li><span class="ol">D</span>$350$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 整袋真重量 $W$ 滿足 $7.5\le W&lt;8.5$ kg，即 $7500\le1000W&lt;8500$ g。</div>
+          <div class="p-step"><b>第 2 步.</b> 每包至少 $24.5$ g，故 $24.5n&lt;8500$，得 $n&lt;346.93\ldots$</div>
+          <div class="p-step"><b>第 3 步.</b> $n$ 為整數且嚴格小於 $346.9$，最大為 $346$；<br>驗算 $347\times24.5=8501.5>8500$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$346$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q13.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q15.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

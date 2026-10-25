@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第7題 · 二次方程的根</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第7題</span>
+    <h1>二次方程的根</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\beta$ 是方程
+\[4\beta^{2}-5\beta-1=0\]
+的根，則 $7+10\beta-8\beta^{2}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5$</li><li><span class="ol">B</span>$7$</li><li><span class="ol">C</span>$9$</li><li><span class="ol">D</span>$11$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">「根」就是能使方程成立的值</div>
+      <div class="rule">
+        <span class="rule-name">根的定義</span>
+        <span class="rule-math">\(f(\beta)=0\ \Longrightarrow\ 4\beta^{2}-5\beta-1=0\)</span>
+        <span class="rule-why">把 $\beta$ 代回原方程，便得到一個關於 $\beta$ 的恆等關係，可直接使用。</span>
+      </div>
+      因為 $\beta$ 是 $4\beta^{2}-5\beta-1=0$ 的根，代入後方程成立：
+\[4\beta^{2}-5\beta-1=0.\]
+不需要解出 $\beta$ 的實際值（它是無理數），<br>只要利用這條關係。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把方程整理成可代入的組合</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        <span class="rule-math">\(4\beta^{2}-5\beta-1=0\ \Longrightarrow\ 4\beta^{2}-5\beta=1\)</span>
+        <span class="rule-why">把 $-1$ 移到右邊，就得到 $4\beta^{2}-5\beta$ 這一個組合的值。</span>
+      </div>
+      兩邊加 $1$：
+\[4\beta^{2}-5\beta=1.\]
+留意目標式 $7+10\beta-8\beta^{2}$ 的二次與一次項，<br>正好是這個組合的 $-2$ 倍：
+\[-8\beta^{2}+10\beta=-2\left(4\beta^{2}-5\beta\right).\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">配湊係數後代入</div>
+      <div class="rule">
+        <span class="rule-name">配湊已知組合</span>
+        <span class="rule-math">\(7+10\beta-8\beta^{2}=7-2\left(4\beta^{2}-5\beta\right)\)</span>
+        <span class="rule-why">$-2$ 倍剛剛求得的組合，再加 $7$，即可把目標式化為數值。</span>
+      </div>
+      \[7+10\beta-8\beta^{2}=7-2\left(4\beta^{2}-5\beta\right)=7-2(1)=5.\]
+另一種寫法更直接：
+\[7+10\beta-8\beta^{2}=-2\left(4\beta^{2}-5\beta-1\right)+5=-2(0)+5=5.\]
+對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\beta$ 是方程
+\[2\beta^{2}+3\beta-4=0\]
+的根，則 $5-6\beta-4\beta^{2}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$5$</li><li><span class="ol">C</span>$-3$</li><li><span class="ol">D</span>$-13$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $\beta$ 是根，得 $2\beta^{2}+3\beta-4=0$，即 $2\beta^{2}+3\beta=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 配湊：$5-6\beta-4\beta^{2}=5-2\left(2\beta^{2}+3\beta\right)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $2\beta^{2}+3\beta=4$：$5-2(4)=-3$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$-3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
