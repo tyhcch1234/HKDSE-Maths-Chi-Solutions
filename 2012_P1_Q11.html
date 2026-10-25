@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第11題 · 變分</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第11題</span>
+    <h1>變分</h1>
+    <p class="sub">6分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $C$ 為一表面面積是 $A\text{ m}^{2}$ 的罐的髹漆成本。已知 $C$ 為兩部分之和，一部分為常數，而另一部分隨 $A$ 正變。當 $A=2$ 時，$C=62$；當 $A=6$ 時，$C=74$。
+      <p>(a) 求一表面面積是 $13\text{ m}^{2}$ 的罐的髹漆成本。 <span class="marks">(4 分)</span></p>
+      <p>(b) 有一較大的罐與 (a) 所描述的罐相似。若該較大的罐的體積為 (a) 所描述的罐的 $8$ 倍，求該較大的罐的髹漆成本。 <span class="marks">(2 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出部分變的關係式</div>
+      <div class="rule">
+        <span class="rule-name">部分變</span>
+        <span class="rule-math">\(C=r+sA\)</span>
+        <span class="rule-why">一部分為常數 $r$，另一部分隨 $A$ 正變，即 $sA$；$r$、$s$ 為非零常數。</span>
+      </div>
+      「$C$ 為兩部分之和，一部分為常數，而另一部分隨 $A$ 正變」即
+\[ C=r+sA, \]
+其中 $r$、$s$ 為非零常數。
+<div class="hint">常數部分 $r$ 可理解為最低收費（例如開工費），$sA$ 則按表面面積按比例增加。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入兩組已知數據</div>
+      以 $A=2$、$C=62$ 及 $A=6$、$C=74$ 代入 $C=r+sA$：
+\[ r+2s=62 \qquad \cdots(1) \]
+\[ r+6s=74 \qquad \cdots(2) \]
+兩組數據正好給出兩個未知數 $r$、$s$ 的兩條一次方程。
+<div class="hint">每個「當 $A=\ldots$ 時，$C=\ldots$」都可以寫成一條方程。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $r$ 及 $s$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\((2)-(1):\; 4s=12\)</span>
+        <span class="rule-why">兩式相減可消去 $r$，先求得 $s$，再代回求 $r$。</span>
+      </div>
+      $(2)-(1)$：
+\[ (r+6s)-(r+2s)=74-62 \]
+\[ 4s=12 \qquad\Longrightarrow\qquad s=3. \]
+代入 $(1)$：
+\[ r+2(3)=62 \qquad\Longrightarrow\qquad r=56. \]
+所以
+\[ C=56+3A. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a) 求 $A=13$ 時的髹漆成本</div>
+      把 $A=13$ 代入 $C=56+3A$：
+\[ C=56+3(13)=56+39=95. \]
+即表面面積是 $13\text{ m}^{2}$ 的罐，髹漆成本為 $\$95$。
+<div class="hint">這部分共 $4$ 分，寫出 $C=56+3A$ 之後再代入，才可得足方法分。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 由體積比求長度比</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的體積比</span>
+        <span class="rule-math">\(\dfrac{V_{1}}{V_{2}}=k^{3}\)</span>
+        <span class="rule-why">長度比為 $k:1$ 時，體積比為 $k^{3}:1$。</span>
+      </div>
+      兩罐相似，設長度比為 $k:1$，則體積比為 $k^{3}:1$。已知體積比為 $8$：
+\[ k^{3}=8 \qquad\Longrightarrow\qquad k=2. \]
+<div class="hint">體積是三次方，所以由體積比開立方便得長度比。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 求較大罐的表面面積</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的表面面積比</span>
+        <span class="rule-math">\(\dfrac{A_{1}}{A_{2}}=k^{2}\)</span>
+        <span class="rule-why">表面面積是二維的量，隨長度比的平方變化。</span>
+      </div>
+      長度比為 $2:1$，故表面面積比為
+\[ k^{2}=2^{2}=4. \]
+(a) 的罐表面面積為 $13\text{ m}^{2}$，所以較大的罐的表面面積為
+\[ 4\times13=52\text{ m}^{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b) 求較大罐的髹漆成本</div>
+      用同一個成本模型 $C=56+3A$，代入 $A=52$：
+\[ C=56+3(52)=56+156=212. \]
+即該較大的罐的髹漆成本為 $\$212$。
+<div class="hint">常數部分 $\$56$ 不隨表面面積改變，所以不可把 $\$95$ 直接乘以 $4$。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\$95$<br>
+      (b) $\$212$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\$C$ 為一塊金屬板髹漆的成本，其表面面積為 $A\text{ m}^{2}$。已知 $C$ 為兩部分之和，一部分為常數，而另一部分隨 $A$ 正變。當 $A=4$ 時，$C=90$；當 $A=10$ 時，$C=150$。(a) 求表面面積是 $16\text{ m}^{2}$ 的金屬板的髹漆成本。(b) 有另一塊與上述金屬板相似的金屬板，其體積為上述金屬板的 $8$ 倍。求該較大金屬板的髹漆成本。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $C=r+sA$。代入數據：$r+4s=90$ …(1)，$r+10s=150$ …(2)。</div>
+          <div class="p-step"><b>第 2 步.</b> $(2)-(1)$：$6s=60$，故 $s=10$；代回 (1) 得 $r=90-40=50$。所以 $C=50+10A$。</div>
+          <div class="p-step"><b>第 3 步.</b> (a) $C=50+10(16)=50+160=\$210$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) 體積比為 $8=2^{3}$，故長度比 $k=2$，表面面積比 $k^{2}=4$。</div>
+          <div class="p-step"><b>第 5 步.</b> 較大金屬板的表面面積 $=4\times16=64\text{ m}^{2}$，故 $C=50+10(64)=50+640=\$690$。</div>
+          <div class="p-ans">答案：(a) $\$210$　(b) $\$690$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
