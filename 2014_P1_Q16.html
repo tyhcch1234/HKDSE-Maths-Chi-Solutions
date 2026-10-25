@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第16題 · 等差數列與不等式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第16題</span>
+    <h1>等差數列與不等式</h1>
+    <p class="sub">4 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 5 中，第 1 個圖案由 $3$ 個點組成。對任意正整數 $n$，第 $(n+1)$ 個圖案由第 $n$ 個圖案加上 $2$ 個點而成。求最小的 $m$ 值，使得首 $m$ 個圖案中的點總數超過 $6888$。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q16.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把點數寫成等差數列的通項</div>
+      <div class="rule">
+        <span class="rule-name">等差數列的通項</span>
+        <span class="rule-math">\(a_{n}=a+(n-1)d\)</span>
+        <span class="rule-why">每個圖案比前一個多 $2$ 個點，故點數成等差數列，首項 $3$、公差 $2$。</span>
+      </div>
+      首項 $a=3$、公差 $d=2$，故第 $n$ 個圖案的點數<br>
+
+\[ a_{n}=3+(n-1)\times 2=2n+1. \]
+<br>
+核對：$a_{1}=3$、$a_{2}=5$、$a_{3}=7$，與圖 5 相符。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求首 $m$ 個圖案的點總數</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        <span class="rule-math">\(S_{n}=\dfrac{n}{2}\,(a_{1}+a_{n})\)</span>
+        <span class="rule-why">首 $m$ 個圖案的點數是等差數列之和，首項 $3$、末項 $2m+1$。</span>
+      </div>
+      \[ S_{m}=3+5+7+\cdots+(2m+1), \]
+<br>
+共有 $m$ 項，故<br>
+
+\[ S_{m}=\frac{m}{2}\left(3+(2m+1)\right)=\frac{m}{2}(2m+4)=m(m+2)=m^{2}+2m. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解二次不等式並取最小整數</div>
+      <div class="rule">
+        <span class="rule-name">二次不等式的解法</span>
+        <span class="rule-math">\((x-\alpha)(x-\beta)>0,\ \alpha&lt;\beta\ \Longrightarrow\ x&lt;\alpha\ \text{or}\ x>\beta\)</span>
+        <span class="rule-why">把 $m^{2}+2m-6888$ 因式分解後，正值出現在兩根之外；而 $m$ 必須是正整數。</span>
+      </div>
+      要求總數超過 $6888$：<br>
+
+\[ m^{2}+2m>6888\ \Longrightarrow\ m^{2}+2m-6888>0. \]
+<br>
+因 $82-84=-2$、$82\times 84=6888$，<br>
+
+\[ (m-82)(m+84)>0\ \Longrightarrow\ m&lt; -84\ \text{or}\ m>82. \]
+<br>
+$m$ 為正整數，故 $m\ge 83$。<br>
+<br>
+驗算：$S_{82}=82\times 84=6888$，並未超過；$S_{83}=83\times 85=7055>6888$。<br>故最小的 $m$ 為 $83$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>\(m=83\)</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某序列的第 1 個圖案由 $5$ 個點組成，其後每個圖案比前一個多 $2$ 個點。求最小的 $m$ 值，使得首 $m$ 個圖案中的點總數超過 $5000$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 點數成等差數列，首項 $5$、公差 $2$，故 $a_{n}=2n+3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $S_{m}=\dfrac{m}{2}\left(5+(2m+3)\right)=m(m+4)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解 $m^{2}+4m>5000$：$68\times 72=4896$ 未超過，$69\times 73=5037>5000$，故 $m=69$。</div>
+          <div class="p-ans">答案：\(m=69\)</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q15.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q17.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

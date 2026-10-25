@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第18題 · 線性規劃</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第18題</span>
+    <h1>線性規劃</h1>
+    <p class="sub">(a) 4 分 (b) 4 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      (a) 圖 7 中，直線 $L_{1}$ 的方程為 $6x+7y=900$，直線 $L_{2}$ 的 $x$ 截距為 $180$。$L_{1}$ 與 $L_{2}$ 相交於點 $(45,90)$。陰影區域（包括邊界）代表一組不等式的解。求該不等式組。<br>
+(b) 一間工廠生產 $X$ 及 $Y$ 兩款衣櫃。每個 $X$ 款衣櫃需要 $6$ 個工時裝配及 $2$ 個工時包裝，而每個 $Y$ 款衣櫃需要 $7$ 個工時裝配及 $3$ 個工時包裝。在某個月，該工廠有 $900$ 個裝配工時及 $360$ 個包裝工時可用。生產一個 $X$ 款衣櫃及一個 $Y$ 款衣櫃的利潤分別為 ＄440 及 ＄665。一名工人聲稱該月的總利潤可超過 ＄80 000。你是否同意？試解釋。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q18.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先求 $L_{2}$ 的方程</div>
+      <div class="rule">
+        <span class="rule-name">兩點式</span>
+        <span class="rule-math">\(y-y_{1}=\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\,(x-x_{1})\)</span>
+        <span class="rule-why">已知 $L_{2}$ 過 $(180,0)$ 與 $(45,90)$ 兩點，用兩點式即得方程。</span>
+      </div>
+      $L_{2}$ 的斜率<br>
+
+\[ \frac{90-0}{45-180}=\frac{90}{-135}=-\frac{2}{3}, \]
+<br>
+故<br>
+
+\[ y-0=-\frac{2}{3}(x-180)\ \Longrightarrow\ 2x+3y=360. \]
+<br>
+核對交點：$2(45)+3(90)=90+270=360$，正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 由陰影位置決定不等號方向</div>
+      <div class="rule">
+        <span class="rule-name">以測試點判斷半平面</span>
+        <span class="rule-math">\(F(x,y)\le k\ \text{is the side containing the origin if}\ F(0,0)\le k\)</span>
+        <span class="rule-why">原點 $(0,0)$ 在陰影區內，代入兩條直線即可判斷應取「小於等於」。</span>
+      </div>
+      陰影區域位於第一象限，故<br>
+
+\[ x\ge 0,\qquad y\ge 0. \]
+<br>
+以原點測試：$6(0)+7(0)=0\le 900$、$2(0)+3(0)=0\le 360$，而原點在陰影區內，故陰影在兩條直線的下方：<br>
+
+\[ 6x+7y\le 900,\qquad 2x+3y\le 360. \]
+<br>
+所求不等式組為<br>
+
+\[ x\ge 0,\quad y\ge 0,\quad 6x+7y\le 900,\quad 2x+3y\le 360. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 檢驗各頂點的利潤</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃的最優值出現在頂點</span>
+        <span class="rule-math">\(P=ax+by\ \text{takes its maximum at a vertex of the feasible region}\)</span>
+        <span class="rule-why">利潤函數 $P=440x+665y$ 是線性的，故最大值必在可行區域的某個頂點取得。</span>
+      </div>
+      由 (a) 的條件，可行區域的頂點為<br>
+
+\[ (0,0),\quad (150,0),\quad (0,120),\quad (45,90), \]
+<br>
+其中 $(45,90)$ 是兩條直線的交點，$(150,0)$ 來自 $6x=900$，$(0,120)$ 來自 $3y=360$。<br>
+<br>
+逐點計算 $P=440x+665y$：<br>
+
+\[ (0,0):\ 0,\qquad (150,0):\ 440\times150=66000, \]
+
+\[ (0,120):\ 665\times120=79800,\qquad (45,90):\ 440\times45+665\times90=79650. \]
+<br>
+最大利潤為 ＄79 800（$x=0$、$y=120$），不超過 ＄80 000，<br>故不同意該工人的聲稱。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x\ge0$、$y\ge0$、$6x+7y\le900$、$2x+3y\le360$ (b) 不同意：最大利潤為 ＄79 800（生產 $X$ 款 $0$ 個、$Y$ 款 $120$ 個），不超過 ＄80 000</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b><br>(a) 圖中直線 $L_{1}$ 的方程為 $3x+4y=240$，直線 $L_{2}$ 的 $x$ 截距為 $120$，$L_{1}$ 與 $L_{2}$ 相交於 $(40,30)$。陰影區域（包括邊界）代表一組不等式的解，求該不等式組。<br>
+(b) 一間工廠生產 $X$ 及 $Y$ 兩款書架。每個 $X$ 款需 $3$ 個工時裝配及 $3$ 個工時包裝，每個 $Y$ 款需 $4$ 個工時裝配及 $8$ 個工時包裝。該月有 $240$ 個裝配工時及 $360$ 個包裝工時可用。每個 $X$ 款及 $Y$ 款的利潤分別為 ＄350 及 ＄600。有人聲稱該月總利潤可超過 ＄31 500。你是否同意？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $L_{2}$ 過 $(120,0)$ 與 $(40,30)$，斜率 $=\dfrac{30}{-80}=-\dfrac{3}{8}$，<br>故 $L_{2}:3x+8y=360$；<br>陰影含原點且在兩線下方，得 $x\ge0$、$y\ge0$、$3x+4y\le240$、$3x+8y\le360$。</div>
+          <div class="p-step"><b>第 2 步.</b> 頂點為 $(0,0)$、$(80,0)$、$(0,45)$ 及交點 $(40,30)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=350x+600y$：$(0,0)\to0$、$(80,0)\to28000$、$(0,45)\to27000$、$(40,30)\to32000$；<br>最大值 ＄32 000 超過 ＄31 500，故同意該聲稱。</div>
+          <div class="p-ans">答案：<br>(a) $x\ge0$、$y\ge0$、$3x+4y\le240$、$3x+8y\le360$ (b) 同意：最大利潤為 ＄32 000（$x=40$、$y=30$），超過 ＄31 500</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q17.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q19.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第12題 · 圓方程與軌跡</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第12題</span>
+    <h1>圓方程與軌跡</h1>
+    <p class="sub">(a) 2 分 (b) 5 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 通過點 $A(6,11)$，且 $C$ 的圓心為點 $G(0,3)$。<br>
+(a) 求 $C$ 的方程。<br>
+(b) $P$ 為直角坐標平面上的一個動點，使得 $AP=GP$。設 $P$ 的軌跡為 $\Gamma$。<br>
+(i) 求 $\Gamma$ 的方程。<br>
+(ii) 描述 $\Gamma$ 與線段 $AG$ 的幾何關係。<br>
+(iii) 若 $\Gamma$ 與 $C$ 相交於 $Q$ 及 $R$，求四邊形 $AQGR$ 的周界。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先求圓 $C$ 的半徑</div>
+      <div class="rule">
+        <span class="rule-name">兩點間的距離公式</span>
+        <span class="rule-math">\(d=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}\)</span>
+        <span class="rule-why">圓心到圓上一點的距離就是半徑，故用距離公式由 $G$ 與 $A$ 求 $r$。</span>
+      </div>
+      圓心 $G(0,3)$，圓上一點 $A(6,11)$，故<br>
+
+\[ r=\sqrt{(6-0)^{2}+(11-3)^{2}}=\sqrt{36+64}=\sqrt{100}=10. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 寫出圓的方程</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        <span class="rule-math">\((x-h)^{2}+(y-k)^{2}=r^{2}\)</span>
+        <span class="rule-why">已知圓心 $(h,k)$ 及半徑 $r$，直接代入標準式即得圓的方程。</span>
+      </div>
+      圓心為 $G(0,3)$、半徑為 $10$，代入標準式：<br>
+
+\[ (x-0)^{2}+(y-3)^{2}=10^{2}, \]
+<br>
+即<br>
+
+\[ C:\ x^{2}+(y-3)^{2}=100. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 軌跡是 $AG$ 的垂直平分線，再求周界</div>
+      <div class="rule">
+        <span class="rule-name">與兩定點等距的軌跡</span>
+        <span class="rule-math">\(AP=GP\ \Longleftrightarrow\ P\ \text{lies on the perpendicular bisector of}\ AG\)</span>
+        <span class="rule-why">到 $A$ 與 $G$ 距離相等的點，全體就是線段 $AG$ 的垂直平分線。</span>
+      </div>
+      (i) 取 $AG$ 的中點<br>
+
+\[ M=\left(\frac{6+0}{2},\frac{11+3}{2}\right)=(3,7), \]
+<br>
+而 $AG$ 的斜率 $=\dfrac{11-3}{6-0}=\dfrac{4}{3}$，故垂直平分線的斜率為 $-\dfrac{3}{4}$。<br>
+
+\[ y-7=-\frac{3}{4}(x-3)\ \Longrightarrow\ 4y-28=-3x+9\ \Longrightarrow\ \Gamma:\ 3x+4y-37=0. \]
+<br>
+(ii) 由上述作法，$\Gamma$ 通過 $AG$ 的中點 $M(3,7)$ 且垂直於 $AG$，<br>故 $\Gamma$ 是線段 $AG$ 的垂直平分線。<br>
+<br>
+(iii) $Q$ 在 $\Gamma$ 上，故 $QA=QG$；$R$ 在 $\Gamma$ 上，<br>故 $RA=RG$。<br>又 $Q$、$R$ 都在圓 $C$ 上，而 $C$ 的圓心是 $G$、半徑是 $10$，<br>所以 $QG=RG=10$。<br>
+<br>
+因此四邊形的四條邊<br>
+
+\[ QA=QG=10,\qquad RA=RG=10,\qquad QG=10,\qquad RG=10, \]
+
+\[ \text{perimeter of }AQGR=10+10+10+10=40. \]
+<br>
+（不需要求出 $Q$、$R$ 的坐標。<br>）
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x^{2}+(y-3)^{2}=100$ (b)(i) $3x+4y-37=0$ (b)(ii) $\Gamma$ 是線段 $AG$ 的垂直平分線 (b)(iii) $40$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 通過點 $A(12,16)$，且 $C$ 的圓心為原點 $G(0,0)$。<br>
+(a) 求 $C$ 的方程。<br>
+(b) $P$ 為直角坐標平面上的一個動點，使得 $AP=GP$，設 $P$ 的軌跡為 $\Gamma$。<br>
+(i) 求 $\Gamma$ 的方程。<br>
+(ii) 描述 $\Gamma$ 與線段 $AG$ 的幾何關係。<br>
+(iii) 若 $\Gamma$ 與 $C$ 相交於 $Q$ 及 $R$，求四邊形 $AQGR$ 的周界。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 半徑 $=\sqrt{12^{2}+16^{2}}=20$，故 (a) $C:\ x^{2}+y^{2}=400$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AG$ 的中點為 $(6,8)$，斜率 $=\dfrac{16}{12}=\dfrac{4}{3}$，故垂直平分線斜率 $=-\dfrac{3}{4}$，<br>得 (b)(i) $\Gamma:\ 3x+4y-50=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b)(ii) $\Gamma$ 是線段 $AG$ 的垂直平分線；<br>(b)(iii) $Q$、$R$ 在 $\Gamma$ 上故 $QA=QG$、$RA=RG$，<br>又在圓上故 $QG=RG=20$，周界 $=4\times20=80$。</div>
+          <div class="p-ans">答案：<br>(a) $x^{2}+y^{2}=400$ (b)(i) $3x+4y-50=0$ (b)(ii) $\Gamma$ 是線段 $AG$ 的垂直平分線 (b)(iii) $80$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

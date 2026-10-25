@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第11題 · 箱形圖與統計量</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第11題</span>
+    <h1>箱形圖與統計量</h1>
+    <p class="sub">(a) 3 分 (b) 3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某畫廊共有 $33$ 幅畫作。下面的箱形圖顯示該畫廊畫作價格（以千元為單位）的分佈。已知該分佈的平均值為 $53$ 千元。<br>
+(a) 求上述分佈的全距及四分位數間距。<br>
+(b) 現有價格（以千元為單位）分別為 $32$、$34$、$58$ 及 $59$ 的四幅畫作捐贈給一所博物館。求畫廊內餘下畫作價格的平均值及中位數。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q11.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從箱形圖讀出五個統計量</div>
+      <div class="rule">
+        <span class="rule-name">箱形圖的五數概括</span>
+        <span class="rule-math">\(\text{min},\ Q_{1},\ Q_{2},\ Q_{3},\ \text{max}\)</span>
+        <span class="rule-why">箱形圖的兩端鬚、盒子的兩邊及盒內中位線，正好給出最小值、下四分位數、中位數、上四分位數及最大值。</span>
+      </div>
+      箱形圖的讀法：左鬚末端是最小值，右鬚末端是最大值，盒子左右兩邊是 $Q_{1}$ 與 $Q_{3}$，<br>盒內豎線是中位數。<br>
+
+\[ \text{min}=18,\qquad Q_{1}=42,\qquad Q_{2}=55,\qquad Q_{3}=63,\qquad \text{max}=91. \]
+<br>
+題目另外給出平均值為 $53$ 千元及畫作數目 $33$，這兩個資料在 (b) 部才用到。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 全距與四分位數間距</div>
+      <div class="rule">
+        <span class="rule-name">全距與四分位數間距</span>
+        <span class="rule-math">\(\text{range}=\text{max}-\text{min},\qquad \text{IQR}=Q_{3}-Q_{1}\)</span>
+        <span class="rule-why">全距量度整個分佈的總差距，四分位數間距量度中間 $50\%$ 資料的差距。</span>
+      </div>
+      全距由最遠的兩幅畫作決定：<br>
+
+\[ \text{range}=91-18=73\ \text{(thousand dollars)}. \]
+<br>
+四分位數間距只看中間一半的資料，不受極端價格影響：<br>
+
+\[ \text{IQR}=Q_{3}-Q_{1}=63-42=21\ \text{(thousand dollars)}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 先求總和，再算新的平均數與中位數</div>
+      <div class="rule">
+        <span class="rule-name">平均數與總和</span>
+        <span class="rule-math">\(\text{total}=\text{mean}\times n,\qquad \text{mean}=\dfrac{\text{total}}{n}\)</span>
+        <span class="rule-why">把原來的總和減去四幅捐出畫作的價格，再除以餘下的畫作數目。</span>
+      </div>
+      原本 $33$ 幅畫作的總價：<br>
+
+\[ \text{total}=33\times 53=1749\ \text{(thousand dollars)}. \]
+<br>
+四幅捐出的畫作共值<br>
+
+\[ 32+34+58+59=183\ \text{(thousand dollars)}, \]
+<br>
+故餘下 $29$ 幅的總價為 $1749-183=1566$，新的平均數<br>
+
+\[ \text{mean}=\frac{1566}{29}=54\ \text{(thousand dollars)}. \]
+<br>
+中位數方面：原本 $33$ 個數據的中位數是第 $17$ 個數據 $55$。<br>捐出的 $32$ 與 $34$ 在 $55$ 之下，而 $58$ 與 $59$ 在 $55$ 之上，<br>即中位數左右各少了兩個數據，餘下 $29$ 個數據的中位數仍是第 $15$ 個數據 $55$。<br>
+<br>
+（注意分母由 $33$ 變成 $29$，不可只用 $53$ 減去四個價格的平均。<br>）
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 全距 $=73$ 千元；四分位數間距 $=21$ 千元 (b) 平均數 $=54$ 千元；中位數 $=55$ 千元（不變）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某畫廊共有 $27$ 幅畫作。箱形圖顯示畫作價格（以千元為單位）的分佈，其最小值為 $20$、$Q_{1}=34$、中位數 $=48$、$Q_{3}=62$、最大值為 $96$，且平均值為 $48$ 千元。<br>
+(a) 求該分佈的全距及四分位數間距。<br>
+(b) 價格為 $30$、$34$、$71$ 及 $80$（千元）的四幅畫作被捐贈。求餘下畫作價格的平均值，並判斷中位數有否改變。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) 全距 $=96-20=76$ 千元；<br>四分位數間距 $=62-34=28$ 千元。</div>
+          <div class="p-step"><b>第 2 步.</b> 原有總價 $=27\times 48=1296$ 千元，捐出四幅共 $30+34+71+80=215$ 千元，<br>餘下總價 $=1296-215=1081$ 千元。</div>
+          <div class="p-step"><b>第 3 步.</b> 餘下 $23$ 幅，平均數 $=\dfrac{1081}{23}=47$ 千元；$30$、$34$ 在 $48$ 之下而 $71$、$80$ 在 $48$ 之上，<br>中位數左右各少兩個數據，故中位數不變，仍為 $48$ 千元。</div>
+          <div class="p-ans">答案：<br>(a) 全距 $=76$ 千元；四分位數間距 $=28$ 千元 (b) 平均數 $=47$ 千元；中位數不變，仍為 $48$ 千元</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

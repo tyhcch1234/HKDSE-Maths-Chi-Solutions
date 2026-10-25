@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第15題 · 對數與線性關係</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第15題</span>
+    <h1>對數與線性關係</h1>
+    <p class="sub">3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 4 顯示 $\log_{4}x$ 與 $\log_{8}y$ 之間的線性關係。該圖像的斜率及在水平軸上的截距分別為 $-\dfrac{1}{3}$ 及 $3$。以 $y=Ax^{k}$ 的形式表示 $x$ 與 $y$ 的關係，其中 $A$ 及 $k$ 為常數。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q15.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用斜率與截距寫出直線方程</div>
+      <div class="rule">
+        <span class="rule-name">點斜式</span>
+        <span class="rule-math">\(Y-Y_{1}=m\,(X-X_{1})\)</span>
+        <span class="rule-why">把 $\log_{4}x$ 記作 $X$、$\log_{8}y$ 記作 $Y$，圖像就是斜率 $-\dfrac{1}{3}$、過 $(3,0)$ 的直線。</span>
+      </div>
+      令 $X=\log_{4}x$、$Y=\log_{8}y$。<br>直線過水平軸上的 $(3,0)$，斜率為 $-\dfrac{1}{3}$，故<br>
+
+\[ Y-0=-\frac{1}{3}(X-3), \]
+<br>
+即<br>
+
+\[ \log_{8}y=-\frac{1}{3}\log_{4}x+1. \]
+<br>
+注意兩軸用不同底數（$4$ 與 $8$），不可把它當成同一底的直線。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用換底公式把底數化成自然對數</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        <span class="rule-math">\(\log_{a}b=\dfrac{\ln b}{\ln a}\)</span>
+        <span class="rule-why">把 $\log_{8}y$ 與 $\log_{4}x$ 都換成自然對數，才能比較係數並改寫成 $y=Ax^{k}$。</span>
+      </div>
+      由換底公式，$\log_{8}y=\dfrac{\ln y}{\ln 8}$、$\log_{4}x=\dfrac{\ln x}{\ln 4}$，代入上式：<br>
+
+\[ \frac{\ln y}{\ln 8}=-\frac{1}{3}\cdot\frac{\ln x}{\ln 4}+1. \]
+<br>
+兩邊乘 $\ln 8$：<br>
+
+\[ \ln y=-\frac{\ln 8}{3\ln 4}\ln x+\ln 8. \]
+<br>
+因為 $\ln 8=3\ln 2$、$\ln 4=2\ln 2$，<br>
+
+\[ \frac{\ln 8}{3\ln 4}=\frac{3\ln 2}{3\times 2\ln 2}=\frac{1}{2}, \]
+<br>
+故<br>
+
+\[ \ln y=-\frac{1}{2}\ln x+\ln 8. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">還原成 $y=Ax^{k}$ 並驗算</div>
+      <div class="rule">
+        <span class="rule-name">對數與指數互換</span>
+        <span class="rule-math">\(\ln y=c\ \Longleftrightarrow\ y=e^{c}\)</span>
+        <span class="rule-why">把整條對數式寫成單一對數後，兩邊取指數即得 $y$ 與 $x$ 的關係。</span>
+      </div>
+      上式可寫成<br>
+
+\[ \ln y=\ln 8-\frac{1}{2}\ln x=\ln\left(8x^{-\frac{1}{2}}\right), \]
+<br>
+兩邊取指數：<br>
+
+\[ y=8x^{-\frac{1}{2}}. \]
+<br>
+故 $A=8$、$k=-\dfrac{1}{2}$。<br>
+<br>
+驗算：取 $x=4^{3}=64$，則 $\log_{4}x=3$，由圖像得 $\log_{8}y=0$，即 $y=1$；<br>而 $8(64)^{-\frac{1}{2}}=\dfrac{8}{8}=1$，相符。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>\(y=8x^{-\frac{1}{2}}\)，即 \(A=8\)、\(k=-\dfrac{1}{2}\)</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中顯示 $\log_{3}x$ 與 $\log_{9}y$ 之間的線性關係。該圖像的斜率為 $-\dfrac{1}{2}$，在水平軸上的截距為 $2$。以 $y=Ax^{k}$ 的形式表示 $x$ 與 $y$ 的關係，其中 $A$ 及 $k$ 為常數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 令 $X=\log_{3}x$、$Y=\log_{9}y$：$\log_{9}y=-\dfrac{1}{2}(X-2)=1-\dfrac{1}{2}\log_{3}x$。</div>
+          <div class="p-step"><b>第 2 步.</b> 換底：$\dfrac{\ln y}{\ln 9}=-\dfrac{1}{2}\cdot\dfrac{\ln x}{\ln 3}+1$，乘 $\ln 9$ 得 $\ln y=-\dfrac{\ln 9}{2\ln 3}\ln x+\ln 9=-\ln x+\ln 9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取指數得 $y=9x^{-1}$，即 $A=9$、$k=-1$（驗算 $x=3$ 時 $y=3$，<br>與 $\log_{9}3=\dfrac{1}{2}$ 相符）。</div>
+          <div class="p-ans">答案：\(y=9x^{-1}\)，即 \(A=9\)、\(k=-1\)</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q16.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

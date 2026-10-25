@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第19題 · 概率、期望值與無窮級數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第19題</span>
+    <h1>概率、期望值與無窮級數</h1>
+    <p class="sub">(a) 3 分 (b)(i) 3 分 (b)(ii) 3 分 (b)(iii) 4 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      Ada 與 Billy 進行一個包含兩回合的遊戲。第一回合中，Ada 與 Billy 輪流擲一枚勻稱骰子，首先擲得「3」者勝出第一回合。Ada 與 Billy 進行第一回合，並由 Ada 先擲。<br>
+(a) 求 Ada 勝出第一回合的概率。<br>
+(b) 在遊戲的第二回合，球被逐一投進一個裝有八條並排管子的裝置（見圖 8）。當球被投進裝置時，它隨機落入其中一條管子。每條管子最多可容納三個球。<br>
+第二回合的玩家採用以下兩個選項之一。<br>
+選項 1：逐一投進兩個球。若兩球落入同一條管子，可得 10 個代幣；若兩球落入兩條相鄰的管子，可得 5 個代幣；否則得 0 個代幣。<br>
+選項 2：逐一投進三個球。若三球落入同一條管子，可得 50 個代幣；若三球落入三條相鄰的管子，可得 10 個代幣；若三球落入兩條相鄰的管子，可得 5 個代幣；否則得 0 個代幣。<br>
+(i) 若第二回合的玩家採用選項 1，求所得代幣數目的期望值。<br>
+(ii) 第二回合的玩家應採用哪一個選項，才可使所得代幣數目的期望值最大？試解釋。<br>
+(iii) 只有第一回合的勝出者才玩第二回合。已知第二回合的玩家採用可使所得代幣數目的期望值最大的選項。Billy 聲稱 Ada 在遊戲中得不到任何代幣的概率超過 $0.9$。該聲稱是否正確？試解釋。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q19.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 把 Ada 各次勝出的概率加起來</div>
+      <div class="rule">
+        <span class="rule-name">無窮等比級數</span>
+        <span class="rule-math">\(S_{\infty}=\dfrac{a}{1-r}\quad (|r|<1)\)</span>
+        <span class="rule-why">Ada 在第 $1$、$2$、$3$… 次投擲勝出的概率成等比數列，公比為 $\left(\dfrac{5}{6}
+ight)^{2}$。</span>
+      </div>
+      Ada 在自己第 $k$ 次投擲勝出，意即之前 $2(k-1)$ 次投擲（Ada、Billy 各 $k-1$ 次）都沒有擲得「3」，<br>然後 Ada 擲得「3」：<br>
+
+\[ P(\text{Ada wins on her }k\text{-th throw})=\left(\frac{5}{6}\right)^{2(k-1)}\cdot\frac{1}{6}. \]
+<br>
+故<br>
+
+\[ P(\text{Ada wins})=\frac{1}{6}+\left(\frac{5}{6}\right)^{2}\frac{1}{6}+\left(\frac{5}{6}\right)^{4}\frac{1}{6}+\cdots \]
+
+\[ =\frac{1}{6}\left[1+\frac{25}{36}+\left(\frac{25}{36}\right)^{2}+\cdots\right]=\frac{1}{6}\cdot\frac{1}{1-\frac{25}{36}}=\frac{1}{6}\cdot\frac{36}{11}=\frac{6}{11}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b)(i) 逐項計算選項 1 的期望值</div>
+      <div class="rule">
+        <span class="rule-name">期望值</span>
+        <span class="rule-math">\(E(X)=\sum x\,P(X=x)\)</span>
+        <span class="rule-why">把每個代幣數目乘以其概率再相加；兩個球各有 $8$ 個選擇，共 $8^{2}$ 個等可能結果。</span>
+      </div>
+      兩球逐一投進，共 $8\times8=64$ 個等可能結果。<br>
+<br>
+同一條管子：$8$ 個結果，概率 $=\dfrac{8}{64}=\dfrac{1}{8}$。<br>
+<br>
+兩條相鄰的管子：$7$ 對相鄰管子，每對有 $2$ 個次序，共 $14$ 個結果，<br>概率 $=\dfrac{14}{64}=\dfrac{7}{32}$。<br>
+<br>
+故<br>
+
+\[ E_{1}=10\times\frac{1}{8}+5\times\frac{7}{32}=\frac{5}{4}+\frac{35}{32}=\frac{75}{32}=2.34375. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(ii)(iii) 比較兩個選項，再用全概率求 Ada 無代幣的概率</div>
+      <div class="rule">
+        <span class="rule-name">全概率定理</span>
+        <span class="rule-math">\(P(A)=P(A\mid W)P(W)+P(A\mid L)P(L)\)</span>
+        <span class="rule-why">把「Ada 得不到代幣」分成「Ada 勝出第一回合」與「Billy 勝出第一回合」兩種情形相加。</span>
+      </div>
+      (ii) 選項 2：三球共 $8^{3}=512$ 個等可能結果。<br>
+<br>
+同一條管子：$8$ 個結果；<br>三條相鄰的管子：$6$ 組連續三條，每組 $3!$ 個次序，共 $36$ 個結果；<br>兩條相鄰的管子：$7$ 對管子，每對有 $2^{3}-2=6$ 個結果，共 $42$ 個結果。<br>故<br>
+
+\[ E_{2}=50\times\frac{8}{512}+10\times\frac{36}{512}+5\times\frac{42}{512}=\frac{400+360+210}{512}=\frac{485}{256}\approx1.895. \]
+<br>
+因 $E_{1}=\dfrac{75}{32}=\dfrac{600}{256}>\dfrac{485}{256}=E_{2}$，應採用選項 1。<br>
+<br>
+(iii) 採用選項 1 時，Ada 得到代幣的概率為 $\dfrac{1}{8}+\dfrac{7}{32}=\dfrac{11}{32}$，<br>故得不到代幣的概率為 $1-\dfrac{11}{32}=\dfrac{21}{32}$。<br>
+<br>
+若 Billy 勝出第一回合（概率 $\dfrac{5}{11}$），Ada 根本不玩第二回合，<br>必得 $0$ 個代幣。<br>由全概率定理，<br>
+
+\[ P(\text{Ada gets no tokens})=\frac{5}{11}\times1+\frac{6}{11}\times\frac{21}{32}=\frac{5}{11}+\frac{63}{176}=\frac{143}{176}=\frac{13}{16}=0.8125. \]
+<br>
+$0.8125$ 不超過 $0.9$，故 Billy 的聲稱不正確。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{6}{11}$ (b)(i) $\dfrac{75}{32}$（$=2.34375$） (b)(ii) 應採用選項 1，因 $\dfrac{600}{256}>\dfrac{485}{256}$ (b)(iii) 不正確：$P(\text{Ada gets no tokens})=\dfrac{13}{16}=0.8125$，不超過 $0.9$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> Ada 與 Billy 輪流擲一枚勻稱骰子，首先擲得偶數者勝出，由 Ada 先擲。<br>
+(a) 求 Ada 勝出的概率。<br>
+(b) 另一回合中，球逐一投進一個裝有六條並排管子的裝置，每條管子最多可容納三個球，玩家採用以下其中一個選項。<br>
+選項 A：投進兩個球。同管得 12 個代幣，兩條相鄰管子得 6 個代幣，否則 0 個。<br>
+選項 B：投進三個球。同管得 60 個代幣，三條相鄰管子得 12 個代幣，兩條相鄰管子得 6 個代幣，否則 0 個。<br>
+(i) 求選項 A 所得代幣數目的期望值。<br>
+(ii) 應採用哪個選項才可使期望值最大？試解釋。<br>
+(iii) 只有勝出者才玩這一回合，並採用期望值最大的選項。聲稱「Ada 得不到任何代幣的概率超過 0.9」是否正確？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $P(\text{Ada wins})=\dfrac{1}{2}+\left(\dfrac{1}{2}\right)^{3}+\left(\dfrac{1}{2}\right)^{5}+\cdots=\dfrac{\frac{1}{2}}{1-\frac{1}{4}}=\dfrac{2}{3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> (b)(i) 共 $6^{2}=36$ 個結果：同管 $6$ 個、相鄰 $5\times2=10$ 個，<br>故 $E_{A}=12\times\dfrac{6}{36}+6\times\dfrac{10}{36}=2+\dfrac{5}{3}=\dfrac{11}{3}$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b)(ii) 共 $6^{3}=216$ 個結果：同管 $6$ 個、三條相鄰 $4\times6=24$ 個、兩條相鄰 $5\times(2^{3}-2)=30$ 個，$E_{B}=\dfrac{60\times6+12\times24+6\times30}{216}=\dfrac{23}{6}>\dfrac{11}{3}$，<br>故選 B。<br>(iii) $P(\text{no tokens})=\dfrac{1}{3}+\dfrac{2}{3}\left(1-\dfrac{30}{216}\right)=\dfrac{1}{3}+\dfrac{2}{3}\times\dfrac{31}{36}=\dfrac{49}{54}\approx0.907>0.9$，聲稱正確。</div>
+          <div class="p-ans">答案：<br>(a) $\dfrac{2}{3}$ (b)(i) $\dfrac{11}{3}$ (b)(ii) 選項 B，因 $\dfrac{23}{6}>\dfrac{11}{3}$ (b)(iii) 正確：概率為 $\dfrac{49}{54}\approx0.907>0.9$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q18.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

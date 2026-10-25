@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第13題 · 部分變分</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第13題</span>
+    <h1>部分變分</h1>
+    <p class="sub">(a) 4 分 (b) 4 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $f(x)$ 為兩部分之和，其中一部分隨 $x^{2}$ 正變，另一部分為常數。設 $f(2)=59$ 及 $f(7)=-121$。<br>
+(a) 求 $f(6)$。<br>
+(b) $A(6,a)$ 及 $B(-6,b)$ 為曲線 $y=f(x)$ 上的點。求 $\triangle ABC$ 的面積，其中 $C$ 為 $x$ 軸上的一點。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「部分變分」寫成方程並解出常數</div>
+      <div class="rule">
+        <span class="rule-name">部分變分</span>
+        <span class="rule-math">\(f(x)=px^{2}+q\)</span>
+        <span class="rule-why">一部分隨 $x^{2}$ 正變、另一部分為常數，正好對應兩個待定常數 $p$ 與 $q$。</span>
+      </div>
+      設<br>
+
+\[ f(x)=px^{2}+q, \]
+<br>
+其中 $p$、$q$ 為非零常數。<br>代入已知值得<br>
+
+\[ f(2)=59:\quad 4p+q=59\quad\cdots(1), \]
+
+\[ f(7)=-121:\quad 49p+q=-121\quad\cdots(2). \]
+<br>
+$(2)-(1)$：<br>
+
+\[ 45p=-180\ \Longrightarrow\ p=-4, \]
+<br>
+代回 $(1)$：$4(-4)+q=59$，故 $q=75$。<br>於是<br>
+
+\[ f(x)=75-4x^{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 求 $f(6)$，(b) 順便得 $a$ 與 $b$</div>
+      <div class="rule">
+        <span class="rule-name">偶函數的對稱性</span>
+        <span class="rule-math">\(f(-x)=f(x)\)</span>
+        <span class="rule-why">式子只含 $x^{2}$，故圖像關於 $y$ 軸對稱，$B(-6,b)$ 與 $A(6,a)$ 同高。</span>
+      </div>
+      (a) 直接代入 $x=6$：<br>
+
+\[ f(6)=75-4(6)^{2}=75-144=-69. \]
+<br>
+(b) 因 $A(6,a)$ 在曲線 $y=f(x)$ 上，<br>
+
+\[ a=f(6)=-69. \]
+<br>
+又 $f$ 只含 $x^{2}$，故 $f(-6)=f(6)$，即<br>
+
+\[ b=f(-6)=75-4(-6)^{2}=75-144=-69, \]
+<br>
+所以 $a=b=-69$，$A$、$B$ 關於 $y$ 軸對稱。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 以 $AB$ 為底求三角形面積</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">\(\text{area}=\dfrac{1}{2}\times\text{base}\times\text{height}\)</span>
+        <span class="rule-why">$A$、$B$ 同高，$AB$ 是水平線段，故以 $AB$ 為底、以 $C$ 到 $y=-69$ 的距離為高。</span>
+      </div>
+      $A(6,-69)$ 與 $B(-6,-69)$ 的 $y$ 坐標相同，故 $AB$ 水平：<br>
+
+\[ AB=6-(-6)=12. \]
+<br>
+$C$ 在 $x$ 軸上，即 $y=0$，它到直線 $y=-69$ 的垂直距離為 $69$（與 $C$ 在 $x$ 軸上的位置無關）。<br>
+
+\[ \text{area of }\triangle ABC=\frac{1}{2}\times12\times69=414. \]
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $f(6)=-69$ (b) $a=b=-69$，$\triangle ABC$ 的面積 $=414$ 平方單位</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $g(x)$ 為兩部分之和，其中一部分隨 $x^{2}$ 正變，另一部分為常數。設 $g(1)=27$ 及 $g(4)=-18$。<br>
+(a) 求 $g(2)$。<br>
+(b) $A(2,a)$ 及 $B(-2,b)$ 為曲線 $y=g(x)$ 上的點，$C$ 為 $x$ 軸上的一點。求 $\triangle ABC$ 的面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $g(x)=px^{2}+q$：$p+q=27$ 及 $16p+q=-18$，相減得 $15p=-45$，<br>故 $p=-3$、$q=30$，即 $g(x)=30-3x^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $g(2)=30-3(4)=18$；<br>(b) $a=g(2)=18$，$b=g(-2)=30-3(4)=18$，故 $AB$ 水平。</div>
+          <div class="p-step"><b>第 3 步.</b> $AB=2-(-2)=4$，$C$ 在 $x$ 軸上到 $y=18$ 的高為 $18$，<br>面積 $=\dfrac{1}{2}\times4\times18=36$ 平方單位。</div>
+          <div class="p-ans">答案：<br>(a) $g(2)=18$ (b) $a=b=18$，$\triangle ABC$ 的面積 $=36$ 平方單位</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
