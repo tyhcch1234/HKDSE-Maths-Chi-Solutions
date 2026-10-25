@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第5題 · 方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第5題</span>
+    <h1>方程</h1>
+    <p class="sub">4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在設有 6 個展區的展覽中心內有 132 名保安員。各個展區均有相同人數的保安員。在每個展區內，女保安員均較男保安員多 4 名。求在該展覽中心內男保安員的人數。<span class="marks">(4 分)</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設定未知數</div>
+      設 $x$ 為展覽中心內男保安員的人數。
+<div class="hint">先為題目要求的那個量設一個字母，之後所有關係都用它表示。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $x$ 表示女保安員的人數</div>
+      每個展區內女保安員較男保安員多 $4$ 名，6 個展區合共多 $6\times4=24$ 名。
+所以女保安員有 $(x+24)$ 名。
+<div class="hint">「每區相差 4 名」要乘以展區數目 $6$，才是全中心的總差額。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">建立方程</div>
+      <div class="rule">
+        <span class="rule-name">由總和建立方程</span>
+        <span class="rule-math">部份$_1$ + 部份$_2$ = 總數</span>
+        <span class="rule-why">男、女保安員合起來就是全部 132 名。</span>
+      </div>
+      保安員總數 $=132$：
+\[ x+(x+24)=132 \]
+男保安員 + 女保安員 = 保安員總數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解方程</div>
+      <div class="rule">
+        <span class="rule-name">一元一次方程的平衡法</span>
+        <span class="rule-math">\(ax+b=c\;\Longrightarrow\;x=\dfrac{c-b}{a}\quad(a\neq0)\)</span>
+        <span class="rule-why">先合併同類項，再把兩邊同除以未知數的係數。</span>
+      </div>
+      \[ x+x+24=132 \]
+\[ 2x=132-24=108 \]
+\[ x=\frac{108}{2}=54 \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗算並作答</div>
+      男 $=54$，女 $=54+24=78$，而 $54+78=132$ ✓
+所以展覽中心內男保安員有 54 名。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>男保安員有 **54** 名。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某校共有 $150$ 名學生，分為 $5$ 班，每班人數相同。每班女生均較男生多 $6$ 名。求該校男生的人數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $x$ 為男生人數。每班女生較男生多 $6$ 名，5 班共多 $5\times6=30$ 名，故女生有 $(x+30)$ 名。</div>
+          <div class="p-step"><b>第 2 步.</b> 建立方程：$x+(x+30)=150$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2x=150-30=120$，所以 $x=60$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：60 名男生、90 名女生，合共 150 名；每班有 $90\div5=18$ 名女生、$60\div5=12$ 名男生，相差 6 名 ✓。</div>
+          <div class="p-ans">答案：男生有 $60$ 名。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q4.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q6.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

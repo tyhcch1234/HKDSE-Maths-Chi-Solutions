@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第7題 · 統計學</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第7題</span>
+    <h1>統計學</h1>
+    <p class="sub">4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的框線圖顯示某田徑學會的一大群學生完成 $100\text{ m}$ 賽跑所需時間的分佈：
+      <p>該分佈的四分位數間距及分佈域分別為 $3.2\text{ s}$ 及 $6.8\text{ s}$。</p>
+      <p>(a) 求 $a$ 及 $b$。</p>
+      <p>(b) 該些學生參與某訓練課程。現知在訓練後，該些學生完成 $100\text{ m}$ 賽跑的最長所需時間較訓練前少 $2.9\text{ s}$。教練宣稱在訓練後，至少 $25\%$ 的學生完成 $100\text{ m}$ 賽跑的所需時間有改善。你是否同意？試解釋你的答案。 <span class="marks">(4 分)</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2012_P1_Q7.png" alt="題目附圖"><figcaption>框線圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從框線圖讀出五個數</div>
+      由圖可知：下四分位數 $Q_1=12.1\text{ s}$，中位數 $=13.2\text{ s}$，上四分位數 $Q_3=b$，最小值 $=a$，最大值 $=18.1\text{ s}$。
+<div class="hint">框線圖要讀六個位置：箱的左右兩邊（$Q_1$、$Q_3$）、箱內的中位數線，以及兩條觸鬚的末端（最小值、最大值）。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用四分位數間距求 $b$</div>
+      <div class="rule">
+        <span class="rule-name">四分位數間距</span>
+        <span class="rule-math">\(\text{IQR}=Q_3-Q_1\)</span>
+        <span class="rule-why">IQR 就是箱的寬度，即中間 50% 數據的分佈範圍。</span>
+      </div>
+      \[ \text{IQR}=Q_3-Q_1=b-12.1=3.2 \]
+\[ b=12.1+3.2=15.3 \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用分佈域求 $a$</div>
+      <div class="rule">
+        <span class="rule-name">分佈域</span>
+        <span class="rule-math">\(\text{分佈域}=\text{最大值}-\text{最小值}\)</span>
+        <span class="rule-why">用兩條觸鬚的末端，不是箱的兩邊。</span>
+      </div>
+      \[ 18.1-a=6.8 \]
+\[ a=18.1-6.8=11.3 \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 把新的最長所需時間與 $Q_3$ 比較</div>
+      訓練前最長所需時間為 $18.1\text{ s}$；訓練後少了 $2.9\text{ s}$：
+\[ 18.1-2.9=15.2\text{ s} \]
+而訓練前的上四分位數 $Q_3=15.3\text{ s}$，即原本最慢的 $25\%$ 學生，所需時間都在 $15.3\text{ s}$ 以上。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">解讀比較結果</div>
+      <div class="rule">
+        <span class="rule-name">上四分位數的意義</span>
+        <span class="rule-math">\(Q_3\) 切出數據中最高（最慢）的 \(25\%\)</span>
+        <span class="rule-why">若新的最大值低於原來的 $Q_3$，則原本最慢的一整批人都必須已改善。</span>
+      </div>
+      新的最長所需時間 $15.2\text{ s}$ **小於** 訓練前的 $Q_3=15.3\text{ s}$。
+換句話說，原本所需時間高於 $15.3\text{ s}$ 的整批學生（佔 $25\%$），現在的所需時間都低於 $15.3\text{ s}$，即這批人全部都有改善。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">作結論</div>
+      由於至少 $25\%$ 的學生成績有改善，故**同意**教練的宣稱。
+<div class="hint">關鍵一步：把「新的最大值」與「原來的 $Q_3$」比較，而不是與原來的中位數比較。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $a=11.3\text{ s}$，$b=15.3\text{ s}$。<br>
+      (b) 同意——訓練後最長所需時間 $15.2\text{ s}$ 小於原來的上四分位數 $15.3\text{ s}$，故最慢的 $25\%$ 學生全部有改善。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某框線圖顯示一群學生 $100\text{ m}$ 賽跑的所需時間（秒），已知下四分位數為 $22.4$、中位數為 $25.0$、最大值為 $31.8$；四分位數間距為 $4.6$，分佈域為 $10.2$。(a) 求上四分位數 $Q_3$ 及最小值。(b) 訓練後最長所需時間較之前少 $5.1$ 秒，這是否證明至少 $25\%$ 的學生有改善？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $Q_3=Q_1+\text{IQR}=22.4+4.6=27.0$ 秒。</div>
+          <div class="p-step"><b>第 2 步.</b> 最小值 $=$ 最大值 $-$ 分佈域 $=31.8-10.2=21.6$ 秒。</div>
+          <div class="p-step"><b>第 3 步.</b> 訓練後最長所需時間為 $31.8-5.1=26.7$ 秒。</div>
+          <div class="p-step"><b>第 4 步.</b> 因為 $26.7<27.0=Q_3$（訓練前），原本最慢的 $25\%$ 全部低於 $27.0$ 秒，即有改善。</div>
+          <div class="p-step"><b>第 5 步.</b> 結論：是，至少 $25\%$ 的學生有改善。</div>
+          <div class="p-ans">答案：(a) $Q_3=27.0$ 秒，最小值 $=21.6$ 秒。　(b) 是，因為 $26.7<27.0=Q_3$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
