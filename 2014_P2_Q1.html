@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第1題 · 指數定律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第1題</span>
+    <h1>指數定律</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $(2n^{3})^{-5}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{32n^{2}}$</li><li><span class="ol">B</span>$\dfrac{1}{32n^{15}}$</li><li><span class="ol">C</span>$\dfrac{1}{10n^{125}}$</li><li><span class="ol">D</span>$\dfrac{1}{10n^{243}}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把括號內的兩個因數分開</div>
+      <div class="rule">
+        <span class="rule-name">積的次冪</span>
+        <span class="rule-math">\((ab)^{m}=a^{m}b^{m}\)</span>
+        <span class="rule-why">括號內是 $2$ 與 $n^{3}$ 的乘積，外層的 $-5$ 要同時作用在每一個因數上。</span>
+      </div>
+      括號內不是單一項，而是 $2$ 與 $n^{3}$ 相乘。<br>
+先把它看成 $2\cdot n^{3}$：
+\[ (2n^{3})^{-5}=(2\cdot n^{3})^{-5}. \]
+套用積的次冪，$-5$ 分派給兩個因數：
+\[ (2n^{3})^{-5}=2^{-5}\cdot (n^{3})^{-5}. \]
+常見錯誤是只把 $-5$ 加在 $n^{3}$ 上，<br>留下 $2$ 原封不動；<br>指數要作用在每一個因數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">冪的冪：指數相乘</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        <span class="rule-math">\((a^{m})^{n}=a^{mn}\)</span>
+        <span class="rule-why">$(n^{3})^{-5}$ 是「冪再取冪」，指數相乘而不是相加。</span>
+      </div>
+      處理 $(n^{3})^{-5}$：
+\[ (n^{3})^{-5}=n^{3\times(-5)}=n^{-15}. \]
+若把指數相加會得到 $n^{-2}$，<br>那正是選項 A 的來源。<br>
+所以原式變成
+\[ 2^{-5}\cdot n^{-15}. \]
+數字部分與字母部分已經分開，可以各自處理。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用負指數定律寫成倒數</div>
+      <div class="rule">
+        <span class="rule-name">負指數定律</span>
+        <span class="rule-math">\(a^{-m}=\dfrac{1}{a^{m}}\)</span>
+        <span class="rule-why">兩個指數都是負數，要用倒數把它們變成正指數。</span>
+      </div>
+      分別把負指數搬到分母：
+\[ 2^{-5}=\dfrac{1}{2^{5}}=\dfrac{1}{32},\qquad n^{-15}=\dfrac{1}{n^{15}}. \]
+兩者相乘：
+\[ (2n^{3})^{-5}=\dfrac{1}{32}\cdot\dfrac{1}{n^{15}}=\dfrac{1}{32n^{15}}. \]
+對照選項，<br>答案為 <b>B</b>。<br>
+選項 C、D 的分母出現 $10$，是把 $2^{5}=32$ 誤當成 $10$；<br>選項 A 的 $n^{-2}$ 則是指數相加的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\dfrac{1}{32n^{15}}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $k\ne 0$，$\left(4k^{2}\right)^{-3}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{12k^{6}}$</li><li><span class="ol">B</span>$\dfrac{1}{64k^{6}}$</li><li><span class="ol">C</span>$\dfrac{1}{64k^{5}}$</li><li><span class="ol">D</span>$\dfrac{1}{4k^{6}}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 積的次冪：$\left(4k^{2}\right)^{-3}=4^{-3}\left(k^{2}\right)^{-3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 冪的冪：$\left(k^{2}\right)^{-3}=k^{-6}$，而 $4^{-3}=\dfrac{1}{64}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $\left(4k^{2}\right)^{-3}=\dfrac{1}{64k^{6}}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{1}{64k^{6}}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第3題 · 恆等式與代值法</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第3題</span>
+    <h1>恆等式與代值法</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $p$、$q$ 為常數，且
+\[ p\,x(x-1)+x^{2}\equiv q\,x(x-2)+4x, \]
+則 $p=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">恆等式可以代入任意值</div>
+      <div class="rule">
+        <span class="rule-name">恆等式的代值原理</span>
+        <span class="rule-math">\(f(x)\equiv g(x)\ \Rightarrow\ f(a)=g(a)\)</span>
+        <span class="rule-why">兩邊對所有 $x$ 都相等，所以代入任何一個方便的數都成立。</span>
+      </div>
+      符號 $\equiv$ 表示不論 $x$ 取何值，左右兩邊都相等。<br>
+因此可以挑一個令 $p$ 或 $q$ 消失的 $x$ 代入。<br>
+右邊的 $q$ 項是 $q\,x(x-2)$，只要 $x=2$ 就會變成 $0$：
+\[ x(x-2)=0\quad\text{when }x=2. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入 $x=2$ 消去 $q$</div>
+      <div class="rule">
+        <span class="rule-name">零乘積性質</span>
+        <span class="rule-math">\(a\cdot 0=0\)</span>
+        <span class="rule-why">取 $x=2$ 令 $x(x-2)$ 這一項變成 $0$，含 $q$ 的整項就消失。</span>
+      </div>
+      在恆等式兩邊同時代入 $x=2$：
+\[ p(2)(1)+4=q(2)(0)+8, \]
+即
+\[ 2p+4=8. \]
+右邊的 $q$ 項確實被 $x-2=0$ 消掉了。<br>
+若想消去 $p$，就改代 $x=1$，因為那裡 $x(x-1)=0$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $p$ 並用比較係數核對</div>
+      <div class="rule">
+        <span class="rule-name">比較係數</span>
+        <span class="rule-math">\(Ax^{2}+Bx\equiv Cx^{2}+Dx\ \Rightarrow\ A=C,\ B=D\)</span>
+        <span class="rule-why">恆等式兩邊同次項的係數必須相等，可以用來核對代值法的結果。</span>
+      </div>
+      由 $2p+4=8$ 得
+\[ 2p=4,\qquad p=2. \]
+核對：展開左邊得 $(p+1)x^{2}-px$，<br>右邊得 $qx^{2}+(4-2q)x$。<br>
+比較 $x^{2}$ 項係數：$p+1=q$，故 $q=3$。<br>
+比較 $x$ 項係數：$-p=4-2q$，即 $-2=4-6$，成立。<br>
+對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$p=2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $p$、$q$ 為常數，且 $p\,x(x-1)+3x^{2}\equiv q\,x(x-2)+7x$，則 $p=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 這是恆等式，可代入任意 $x$；<br>取 $x=2$ 令 $x(x-2)=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $x=2$：$p(2)(1)+3(4)=0+14$，即 $2p+12=14$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解得 $p=1$，答案 <b>A</b>。<br>（核對：$p+3=q$ 給 $q=4$，$x$ 項 $-p=7-2q=-1$ 亦成立。<br>）</div>
+          <div class="p-ans">答案：<b>A</b>（$p=1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q2.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q4.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

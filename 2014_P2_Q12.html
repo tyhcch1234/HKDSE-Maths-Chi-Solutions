@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第12題 · 連比的比較</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第12題</span>
+    <h1>連比的比較</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知
+\[ \dfrac{4}{5a}=\dfrac{5}{7b}=\dfrac{7}{9c}, \]
+其中 $a$、$b$、$c$ 均為正數。下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$a&lt;b&lt;c$</li><li><span class="ol">B</span>$a&lt;c&lt;b$</li><li><span class="ol">C</span>$b&lt;a&lt;c$</li><li><span class="ol">D</span>$b&lt;c&lt;a$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">引入共同的比值 $k$</div>
+      <div class="rule">
+        <span class="rule-name">連等於常數</span>
+        <span class="rule-math">\(\dfrac{4}{5a}=\dfrac{5}{7b}=\dfrac{7}{9c}=k\)</span>
+        <span class="rule-why">三個分式相等，就設它們同為 $k$，把三條關係一次寫出。</span>
+      </div>
+      由於 $a$、$b$、$c$ 皆為正數，$k$ 也是正數。<br>
+把連等式拆成三條：
+\[ \dfrac{4}{5a}=k,\qquad \dfrac{5}{7b}=k,\qquad \dfrac{7}{9c}=k. \]
+這樣每個未知數都可以單獨解出來。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $a$、$b$、$c$ 寫成 $k$ 的式子</div>
+      <div class="rule">
+        <span class="rule-name">解分式方程</span>
+        <span class="rule-math">\(\dfrac{p}{qa}=k\ \Rightarrow\ a=\dfrac{p}{qk}\)</span>
+        <span class="rule-why">交叉相乘後把 $a$ 孤立在一邊，就能用同一個 $k$ 表示三個數。</span>
+      </div>
+      逐條交叉相乘：
+\[ 4=5ak\ \Rightarrow\ a=\dfrac{4}{5k}=0.8\cdot\dfrac{1}{k}, \]
+\[ 5=7bk\ \Rightarrow\ b=\dfrac{5}{7k}\approx 0.714\cdot\dfrac{1}{k}, \]
+\[ 7=9ck\ \Rightarrow\ c=\dfrac{7}{9k}\approx 0.778\cdot\dfrac{1}{k}. \]
+三個數都是「正係數乘 $\dfrac{1}{k}$」，<br>所以比較係數即可，不必知道 $k$ 的實際值。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較三個係數的大小</div>
+      <div class="rule">
+        <span class="rule-name">同分母比較</span>
+        <span class="rule-math">\(\dfrac{4}{5}=\dfrac{252}{315},\ \dfrac{5}{7}=\dfrac{225}{315},\ \dfrac{7}{9}=\dfrac{245}{315}\)</span>
+        <span class="rule-why">把三個分數通分成同一分母，分子的大小次序就是係數的次序。</span>
+      </div>
+      通分後比較分子：
+\[ 225&lt;245&lt;252, \]
+即
+\[ \dfrac{5}{7}&lt;\dfrac{7}{9}&lt;\dfrac{4}{5}. \]
+係數 $\dfrac{1}{k}>0$，<br>故大小次序不變：
+\[ b&lt;c&lt;a. \]
+對照選項，答案為 <b>D</b>。<br>
+取 $k=1$ 也可快速核對：$a=0.8$、$b\approx 0.714$、$c\approx 0.778$，確實 $b&lt;c&lt;a$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$b&lt;c&lt;a$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知
+\[ \dfrac{2}{3p}=\dfrac{3}{5q}=\dfrac{5}{8r}, \]
+其中 $p$、$q$、$r$ 均為正數。下列哪項正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$p&lt;q&lt;r$</li><li><span class="ol">B</span>$p&lt;r&lt;q$</li><li><span class="ol">C</span>$q&lt;r&lt;p$</li><li><span class="ol">D</span>$r&lt;q&lt;p$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設三式同為 $k>0$，則 $p=\dfrac{2}{3k}$、$q=\dfrac{3}{5k}$、$r=\dfrac{5}{8k}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 比較係數：$\dfrac{2}{3}\approx 0.667$、$\dfrac{3}{5}=0.6$、$\dfrac{5}{8}=0.625$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $q&lt;r&lt;p$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$q&lt;r&lt;p$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

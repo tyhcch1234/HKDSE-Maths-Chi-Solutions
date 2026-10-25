@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第5題 · 拋物線的係數意義</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第5題</span>
+    <h1>拋物線的係數意義</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為 $y=mx^{2}+n$ 的圖像，其中 $m$、$n$ 為常數。下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$m&lt;0$ 且 $n&lt;0$</li><li><span class="ol">B</span>$m&lt;0$ 且 $n>0$</li><li><span class="ol">C</span>$m>0$ 且 $n&lt;0$</li><li><span class="ol">D</span>$m>0$ 且 $n>0$</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q5.png" alt="題目附圖"><figcaption>圖（按原卷重繪）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由開口方向判斷 $m$ 的正負</div>
+      <div class="rule">
+        <span class="rule-name">開口方向與首項係數</span>
+        <span class="rule-math">\(y=ax^{2}+bx+c:\ a>0\)</span>
+        <span class="rule-why">$y=mx^{2}+n$ 的首項係數是 $m$，開口向上就表示 $m>0$。</span>
+      </div>
+      圖中的拋物線向上開口，兩端向上無限延伸。<br>
+首項係數為正時，$x^{2}$ 項在主導，$|x|$ 越大 $y$ 越大，<br>圖像向上。<br>
+所以
+\[ m>0. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $y$ 截距判斷 $n$ 的正負</div>
+      <div class="rule">
+        <span class="rule-name">$y$ 截距</span>
+        <span class="rule-math">\(y(0)=n\)</span>
+        <span class="rule-why">把 $x=0$ 代入，$x^{2}$ 項消失，剩下的常數就是 $y$ 截距。</span>
+      </div>
+      在 $y=mx^{2}+n$ 中令 $x=0$：
+\[ y(0)=m(0)^{2}+n=n. \]
+圖中拋物線與 $y$ 軸的交點在原點之下，<br>
+即 $y$ 截距是負數，故
+\[ n&lt;0. \]
+另一個佐證：圖像與 $x$ 軸有兩個交點，<br>代表 $mx^{2}+n=0$ 有兩個實根，亦要求 $-\dfrac{n}{m}>0$，與 $m>0$、$n&lt;0$ 一致。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併兩個結論</div>
+      <div class="rule">
+        <span class="rule-name">同時成立</span>
+        <span class="rule-math">\(m>0\ \text{and}\ n&lt;0\)</span>
+        <span class="rule-why">把開口方向與 $y$ 截距兩個結論同時保留，就是答案。</span>
+      </div>
+      $m$ 為正、$n$ 為負：
+\[ m>0,\qquad n&lt;0. \]
+對照選項，<br>答案為 <b>C</b>。<br>
+若只看到「向上」就選了含 $m>0$ 的選項，仍要再檢查 $y$ 截距的符號，<br>才能排除 D。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$m>0$ 且 $n&lt;0$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知拋物線 $y=ax^{2}+b$ 向下開口，且與 $y$ 軸交於 $(0,-3)$。下列哪項正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$a&lt;0$ 且 $b=-3$</li><li><span class="ol">B</span>$a>0$ 且 $b=-3$</li><li><span class="ol">C</span>$a&lt;0$ 且 $b=3$</li><li><span class="ol">D</span>$a>0$ 且 $b=3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 向下開口表示首項係數為負：$a&lt;0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 令 $x=0$ 得 $y=b$，故 $y$ 截距就是 $b$；<br>交點 $(0,-3)$ 給 $b=-3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 所以 $a&lt;0$ 且 $b=-3$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$a&lt;0$ 且 $b=-3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q4.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q6.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

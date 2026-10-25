@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第8題 · 聯立一次方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第8題</span>
+    <h1>聯立一次方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      2 個碗和 3 隻杯的售價為 506 元。若 5 個碗的售價與 4 隻杯的售價相同，則一個碗的售價是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>88 元</li><li><span class="ol">B</span>92 元</li><li><span class="ol">C</span>110 元</li><li><span class="ol">D</span>115 元</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數並列出兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">列方程</span>
+        <span class="rule-math">\(2b+3c=506,\qquad 5b=4c\)</span>
+        <span class="rule-why">兩種貨品分別設為 $b$、$c$ 元，把「總價」與「等價」兩個條件各寫成一條方程。</span>
+      </div>
+      設一個碗售 $b$ 元，一隻杯售 $c$ 元。<br>
+總價的條件：
+\[ 2b+3c=506. \]
+等價的條件（5 個碗與 4 隻杯同價）：
+\[ 5b=4c. \]
+兩條方程、兩個未知數，<br>可用代入法解。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用代入法消去 $c$</div>
+      <div class="rule">
+        <span class="rule-name">代入消元法</span>
+        <span class="rule-math">\(c=\dfrac{5b}{4}\)</span>
+        <span class="rule-why">第二條方程只含一次項，容易把 $c$ 寫成 $b$ 的倍數再代回總價方程。</span>
+      </div>
+      由 $5b=4c$ 得
+\[ c=\dfrac{5b}{4}. \]
+代回總價方程：
+\[ 2b+3\left(\dfrac{5b}{4}\right)=506, \]
+\[ \dfrac{8b+15b}{4}=506, \]
+\[ 23b=2024. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $b$ 並驗算</div>
+      <div class="rule">
+        <span class="rule-name">一元一次方程</span>
+        <span class="rule-math">\(23b=2024\ \Rightarrow\ b=88\)</span>
+        <span class="rule-why">係數化為 $1$ 即得 $b$，再代回原式檢查兩個條件是否同時成立。</span>
+      </div>
+      解得
+\[ b=\dfrac{2024}{23}=88. \]
+於是
+\[ c=\dfrac{5\times 88}{4}=110. \]
+驗算：$2(88)+3(110)=176+330=506$，且 $5(88)=440=4(110)$，<br>兩個條件都成立。<br>
+對照選項，答案為 <b>A</b>。<br>
+選項 110 元是一隻杯的價錢，不是碗的價錢。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（88 元）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 4 隻杯和 5 隻碟的售價為 154 元。若 2 隻杯的售價與 3 隻碟的售價相同，則一隻杯的售價是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>14 元</li><li><span class="ol">B</span>18 元</li><li><span class="ol">C</span>21 元</li><li><span class="ol">D</span>24 元</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設杯價 $c$ 元、碟價 $s$ 元：$4c+5s=154$，$2c=3s$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $2c=3s$ 得 $c=\dfrac{3}{2}s$，代入得 $4\left(\dfrac{3}{2}s\right)+5s=11s=154$，故 $s=14$。</div>
+          <div class="p-step"><b>第 3 步.</b> 杯價 $c=\dfrac{3}{2}\times 14=21$ 元，驗算 $4(21)+5(14)=154$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（21 元）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

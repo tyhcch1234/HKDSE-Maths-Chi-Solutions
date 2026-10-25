@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第13題 · 變分</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第13題</span>
+    <h1>變分</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $z$ 隨 $x$ 反變，並隨 $y$ 的立方正變，下列哪項必定為常數？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$xy^{3}z$</li><li><span class="ol">B</span>$x^{3}yz^{3}$</li><li><span class="ol">C</span>$\dfrac{y^{3}}{xz}$</li><li><span class="ol">D</span>$\dfrac{y}{x^{3}z^{3}}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把文字翻譯成方程</div>
+      <div class="rule">
+        <span class="rule-name">正變與反變</span>
+        <span class="rule-math">\(z=\dfrac{k\,y^{3}}{x}\)</span>
+        <span class="rule-why">「隨 $y$ 的立方正變」把 $y^{3}$ 放在分子，「隨 $x$ 反變」把 $x$ 放在分母。</span>
+      </div>
+      正變：$z\propto y^{3}$；<br>反變：$z\propto\dfrac{1}{x}$。<br>
+兩者合起來（稱為聯變）：
+\[ z=\dfrac{k\,y^{3}}{x}, \]
+其中 $k$ 是一個非零常數。<br>
+判斷「哪項為常數」，就是問哪個組合可以把 $x$、$y$、$z$ 全部消掉，<br>只剩 $k$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把方程整理成 $k$ 的表達式</div>
+      <div class="rule">
+        <span class="rule-name">分離常數</span>
+        <span class="rule-math">\(k=\dfrac{xz}{y^{3}}\)</span>
+        <span class="rule-why">把 $k$ 單獨移到一邊，另一邊就是「必定為常數」的那個組合的倒數。</span>
+      </div>
+      由 $z=\dfrac{k y^{3}}{x}$，兩邊乘 $x$：
+\[ xz=k\,y^{3}. \]
+兩邊除以 $y^{3}$：
+\[ k=\dfrac{xz}{y^{3}}=\dfrac{1}{\dfrac{y^{3}}{xz}}. \]
+所以 $\dfrac{y^{3}}{xz}$ 恆等於 $\dfrac{1}{k}$，<br>與 $x$、$y$ 的取值無關。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查其餘選項含變數</div>
+      <div class="rule">
+        <span class="rule-name">消去檢驗</span>
+        <span class="rule-math">\(\dfrac{y^{3}}{xz}=\dfrac{1}{k}\)</span>
+        <span class="rule-why">只有能把 $x$、$y$ 完全消掉的組合才是常數，其餘都仍含變數。</span>
+      </div>
+      逐個檢查（把 $z=\dfrac{ky^{3}}{x}$ 代入）：
+\[ xy^{3}z=xy^{3}\cdot\dfrac{ky^{3}}{x}=k\,y^{6}, \]
+\[ x^{3}yz=x^{3}y\cdot\dfrac{ky^{3}}{x}=k\,x^{2}y^{4}, \]
+\[ \dfrac{y}{x^{3}z^{3}}=\dfrac{y}{x^{3}}\cdot\dfrac{x^{3}}{k^{3}y^{9}}=\dfrac{1}{k^{3}y^{8}}. \]
+三者都仍含 $x$ 或 $y$，<br>只有 $\dfrac{y^{3}}{xz}$ 是純常數。<br>
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{y^{3}}{xz}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $z$ 隨 $x$ 的平方正變，並隨 $y$ 反變，下列哪項必定為常數？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{x^{2}}{yz}$</li><li><span class="ol">B</span>$\dfrac{z}{x^{2}y}$</li><li><span class="ol">C</span>$\dfrac{x^{2}z}{y}$</li><li><span class="ol">D</span>$\dfrac{yz}{x^{2}}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 翻譯成方程：$z=\dfrac{k x^{2}}{y}$，其中 $k$ 為非零常數。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩邊乘 $y$ 再除以 $x^{2}$：$k=\dfrac{yz}{x^{2}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $\dfrac{yz}{x^{2}}$ 恆等於 $k$，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（$\dfrac{yz}{x^{2}}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

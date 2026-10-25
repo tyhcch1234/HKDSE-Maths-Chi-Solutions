@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第15題 · 平面圖形的面積</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第15題</span>
+    <h1>平面圖形的面積</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$AB=AE$ 且 $\angle BAE=\angle BCD=\angle CDE=90^{\circ}$。若 $BC=CD=DE=16\ \text{cm}$，則五邊形 $ABCDE$ 的面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$71\\ \\text{cm}^{2}$</li><li><span class="ol">B</span>$128\\ \\text{cm}^{2}$</li><li><span class="ol">C</span>$192\\ \\text{cm}^{2}$</li><li><span class="ol">D</span>$224\\ \\text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q15.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出 $BCDE$ 是正方形</div>
+      <div class="rule">
+        <span class="rule-name">正方形的判定</span>
+        <span class="rule-math">\(BC=CD=DE,\ \angle BCD=\angle CDE=90^{\circ}\)</span>
+        <span class="rule-why">三邊相等且有兩個相鄰直角，就足以確定 $BCDE$ 是邊長 16 cm 的正方形。</span>
+      </div>
+      在四邊形 $BCDE$ 中，$\angle BCD=\angle CDE=90^{\circ}$，兩角都是直角。<br>
+於是 $BC\parallel DE$，且 $BC=DE=16$，一組對邊平行且相等，所以 $BCDE$ 是平行四邊形。<br>
+再加上 $CD=16$ 與直角，四邊相等、四角皆為直角，故 $BCDE$ 是正方形，
+\[ BE=16\ \text{cm}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在等腰直角三角形 $ABE$ 中求兩腰</div>
+      <div class="rule">
+        <span class="rule-name">等腰直角三角形的邊比</span>
+        <span class="rule-math">\(AB=AE=\dfrac{BE}{\sqrt{2}}\)</span>
+        <span class="rule-why">斜邊 $BE$ 對着 $90^{\circ}$，兩腰相等，用 45°-45°-90° 的比例即可。</span>
+      </div>
+      $AB=AE$ 且 $\angle BAE=90^{\circ}$，所以 $\angle ABE=\angle AEB=45^{\circ}$。<br>
+用餘弦（或 45°-45°-90° 的比例 $1:1:\sqrt{2}$）：
+\[ AB=BE\cos 45^{\circ}=16\times\dfrac{1}{\sqrt{2}}=8\sqrt{2}\ \text{cm}, \]
+\[ AE=AB=8\sqrt{2}\ \text{cm}. \]
+兩腰不一定等於 8 cm：斜邊是 16，<br>腰要除以 $\sqrt{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用正方形減去三角形求五邊形面積</div>
+      <div class="rule">
+        <span class="rule-name">面積相減</span>
+        <span class="rule-math">\([ABCDE]=[BCDE]-[ABE]\)</span>
+        <span class="rule-why">五邊形是正方形挖去頂部三角形 $ABE$，兩塊面積相減即可。</span>
+      </div>
+      正方形 $BCDE$ 的面積：
+\[ 16^{2}=256\ \text{cm}^{2}. \]
+三角形 $ABE$ 以兩腰為底與高（因為夾角是直角）：
+\[ \dfrac{1}{2}\left(8\sqrt{2}\right)\left(8\sqrt{2}\right)=\dfrac{1}{2}\times 128=64\ \text{cm}^{2}. \]
+所以
+\[ [ABCDE]=256-64=192\ \text{cm}^{2}. \]
+對照選項，<br>答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$192\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 五邊形 $ABCDE$ 中，$BCDE$ 是邊長 $20\ \text{cm}$ 的正方形，$AB=AE$ 且 $\angle BAE=90^{\circ}$。求五邊形 $ABCDE$ 的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$200\\ \\text{cm}^{2}$</li><li><span class="ol">B</span>$280\\ \\text{cm}^{2}$</li><li><span class="ol">C</span>$300\\ \\text{cm}^{2}$</li><li><span class="ol">D</span>$320\\ \\text{cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 正方形 $BCDE$ 的面積 $=20^{2}=400\\ \\text{cm}^{2}$，且 $BE=20\\ \\text{cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 等腰直角三角形 $ABE$ 的兩腰 $AB=AE=\\dfrac{20}{\\sqrt{2}}=10\\sqrt{2}$，面積 $=\\dfrac{1}{2}(10\\sqrt{2})^{2}=100\\ \\text{cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 五邊形面積 $=400-100=300\\ \\text{cm}^{2}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$300\\ \\text{cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第14題 · 遞推數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第14題</span>
+    <h1>遞推數列</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a_{n}$ 為某數列的第 $n$ 項。若 $a_{2}=7$、$a_{4}=63$ 且對任意正整數 $n$ 有
+\[ a_{n+2}=a_{n+1}+a_{n}, \]
+則 $a_{5}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$56$</li><li><span class="ol">B</span>$70$</li><li><span class="ol">C</span>$91$</li><li><span class="ol">D</span>$119$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀懂遞推關係的意思</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係</span>
+        <span class="rule-math">\(a_{n+2}=a_{n+1}+a_{n}\)</span>
+        <span class="rule-why">每一項都是前兩項之和，所以知道相鄰兩項就能一直往前推。</span>
+      </div>
+      把 $n=2$ 代入：
+\[ a_{4}=a_{3}+a_{2}. \]
+這個式子把已知的 $a_{4}$、$a_{2}$ 與未知的 $a_{3}$ 連起來，<br>正好可以解 $a_{3}$。<br>
+注意不是 $a_{4}=a_{3}+a_{1}$：遞推關係只涉及緊接的兩項。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $a_{4}=a_{3}+a_{2}$ 求 $a_{3}$</div>
+      <div class="rule">
+        <span class="rule-name">解一次方程</span>
+        <span class="rule-math">\(63=a_{3}+7\)</span>
+        <span class="rule-why">把已知值代入遞推關係，就得到一條只含 $a_{3}$ 的方程。</span>
+      </div>
+      代入 $a_{4}=63$、$a_{2}=7$：
+\[ 63=a_{3}+7, \]
+\[ a_{3}=56. \]
+數列首幾項依次為 $\ldots,\ 7,\ 56,\ 63,\ \ldots$，<br>每一步都在累加。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">再推一步得 $a_{5}$</div>
+      <div class="rule">
+        <span class="rule-name">向前推一項</span>
+        <span class="rule-math">\(a_{5}=a_{4}+a_{3}\)</span>
+        <span class="rule-why">要求 $a_{5}$，把 $n=3$ 代入遞推關係，用剛求得的 $a_{3}$ 與已知的 $a_{4}$。</span>
+      </div>
+      以 $n=3$ 代入：
+\[ a_{5}=a_{4}+a_{3}=63+56=119. \]
+驗算：$7+56=63=a_{4}$，$56+63=119=a_{5}$，<br>與遞推關係一致。<br>
+對照選項，答案為 <b>D</b>。<br>
+選項 A 的 $56$ 是 $a_{3}$，只是中途結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$119$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a_{n}$ 為某數列的第 $n$ 項。若 $a_{3}=11$、$a_{5}=29$ 且 $a_{n+2}=a_{n+1}+a_{n}$，則 $a_{6}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$40$</li><li><span class="ol">B</span>$47$</li><li><span class="ol">C</span>$58$</li><li><span class="ol">D</span>$76$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $a_{5}=a_{4}+a_{3}$ 得 $29=a_{4}+11$，故 $a_{4}=18$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $a_{6}=a_{5}+a_{4}$ 得 $a_{6}=29+18=47$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算：$a_{4}=a_{3}+a_{2}$ 給 $18=11+a_{2}$，即 $a_{2}=7$，數列首幾項為 $7,11,18,29,47$，<br>遞推關係完全吻合，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$47$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q13.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q15.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
