@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第26題 · 圓的方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第26題</span>
+    <h1>圓的方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若圓
+\[ x^{2}+y^{2}-8x+ky-214=0 \]
+的一條直徑通過點 $(6,\ -5)$，且該直徑的斜率為 $-4$，則 $k=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$13$</li><li><span class="ol">D</span>$70$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由一般式讀出圓心</div>
+      <div class="rule">
+        <span class="rule-name">圓的一般式的圓心</span>
+        <span class="rule-math">\(x^{2}+y^{2}+Dx+Ey+F=0\ \Longrightarrow\ \text{centre}\left(-\dfrac{D}{2},\ -\dfrac{E}{2}\right)\)</span>
+        <span class="rule-why">把 $x^{2}-8x$ 與 $y^{2}+ky$ 分別配方，即得圓心坐標（含未知的 $k$）。</span>
+      </div>
+      對 $x$ 配方：$x^{2}-8x=(x-4)^{2}-16$。<br>
+對 $y$ 配方：$y^{2}+ky=\left(y+\dfrac{k}{2}\right)^{2}-\dfrac{k^{2}}{4}$。<br>
+所以圓心是
+\[ C\left(4,\ -\frac{k}{2}\right). \]
+直徑必通過圓心，所以「直徑通過 $(6,-5)$」等於「$C$、$(6,-5)$ 在同一條直線上」。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用斜率公式列方程</div>
+      <div class="rule">
+        <span class="rule-name">斜率公式</span>
+        <span class="rule-math">\(m=\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\)</span>
+        <span class="rule-why">直徑連接圓心 $C$ 與點 $(6,-5)$，其斜率已知為 $-4$，代入即成方程。</span>
+      </div>
+      取 $C\left(4,-\dfrac{k}{2}\right)$ 與 $P(6,-5)$，斜率為 $-4$：
+\[ \frac{-5-\left(-\dfrac{k}{2}\right)}{6-4}=-4, \]
+即
+\[ \frac{-5+\dfrac{k}{2}}{2}=-4. \]
+分子分母要按同一方向相減，<br>顛倒次序會令符號全錯。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $k$ 並驗算</div>
+      <div class="rule">
+        <span class="rule-name">一元一次方程</span>
+        <span class="rule-math">\(\dfrac{-5+\dfrac{k}{2}}{2}=-4\ \Longrightarrow\ k=-6\)</span>
+        <span class="rule-why">兩邊乘 $2$ 再乘 $2$，逐步解出 $k$，最後代回圓心檢查斜率。</span>
+      </div>
+      兩邊乘 $2$：
+\[ -5+\frac{k}{2}=-8, \]
+\[ \frac{k}{2}=-3, \]
+\[ k=-6. \]
+驗算：$k=-6$ 時圓心為 $(4,3)$，<br>由 $(4,3)$ 到 $(6,-5)$ 的斜率
+\[ \frac{-5-3}{6-4}=\frac{-8}{2}=-4, \]
+符合題意。<br>對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-6$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若圓 $x^{2}+y^{2}+6x+ky-100=0$ 的一條直徑通過點 $(2,\ 7)$，且該直徑的斜率為 $2$，則 $k=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$6$</li><li><span class="ol">C</span>$12$</li><li><span class="ol">D</span>$14$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓心為 $\left(-3,\ -\dfrac{k}{2}\right)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜率：$\dfrac{7-\left(-\dfrac{k}{2}\right)}{2-(-3)}=2$，即 $\dfrac{7+\dfrac{k}{2}}{5}=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 得 $7+\dfrac{k}{2}=10$，故 $\dfrac{k}{2}=3$，$k=6$；<br>驗算圓心 $(-3,-3)$ 到 $(2,7)$ 的斜率 $=\dfrac{10}{5}=2$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$6$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q25.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q27.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

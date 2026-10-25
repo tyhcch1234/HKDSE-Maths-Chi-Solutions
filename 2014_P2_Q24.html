@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第24題 · 軌跡與直線方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第24題</span>
+    <h1>軌跡與直線方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      直線 $L_{1}$ 與 $L_{2}$ 的方程分別為
+\[ 2x+3y=5 \quad\text{and}\quad 4x+6y=7. \]
+若 $P$ 是直角坐標平面上的動點，使 $P$ 到 $L_{1}$ 的垂直距離等於 $P$ 到 $L_{2}$ 的垂直距離，則 $P$ 的軌跡是一
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>圓</li><li><span class="ol">B</span>正方形</li><li><span class="ol">C</span>拋物線</li><li><span class="ol">D</span>直線</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先判斷兩線的關係</div>
+      <div class="rule">
+        <span class="rule-name">平行線的條件</span>
+        <span class="rule-math">\(m_{1}=m_{2}\ \text{and}\ c_{1}\neq c_{2}\)</span>
+        <span class="rule-why">兩線斜率相同但截距不同，故 $L_{1}\parallel L_{2}$ 且並不重合，軌跡才有意義。</span>
+      </div>
+      把兩線寫成斜截式：
+\[ L_{1}:\ y=-\frac{2}{3}x+\frac{5}{3},\qquad L_{2}:\ y=-\frac{2}{3}x+\frac{7}{6}. \]
+兩者斜率同為 $-\dfrac{2}{3}$，<br>而截距 $\dfrac{5}{3}\neq\dfrac{7}{6}$，所以 $L_{1}\parallel L_{2}$ 且互不重合。<br>
+到兩條平行線等距的點，全在它們的「中間線」上。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「距離相等」寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">點到直線的距離</span>
+        <span class="rule-math">\(d=\dfrac{|ax+by+c|}{\sqrt{a^{2}+b^{2}}}\)</span>
+        <span class="rule-why">把兩條距離相等寫成一條方程，平方後絕對值也一併去掉。</span>
+      </div>
+      設 $P=(x,y)$。<br>寫成一般式：
+\[ L_{1}:\ 2x+3y-5=0,\qquad L_{2}:\ 4x+6y-7=0. \]
+距離相等：
+\[ \frac{|2x+3y-5|}{\sqrt{13}}=\frac{|4x+6y-7|}{\sqrt{52}}. \]
+因為 $\sqrt{52}=2\sqrt{13}$，兩邊平方後化簡：
+\[ 4(2x+3y-5)^{2}=(4x+6y-7)^{2}, \]
+即
+\[ (4x+6y-10)^{2}=(4x+6y-7)^{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程並判斷軌跡的形狀</div>
+      <div class="rule">
+        <span class="rule-name">平方相等的處理</span>
+        <span class="rule-math">\(u^{2}=v^{2}\ \Longleftrightarrow\ u=v\ \text{or}\ u=-v\)</span>
+        <span class="rule-why">令 $u=4x+6y-10$、$v=4x+6y-7$，第一種情況不可能，第二種給出一條直線。</span>
+      </div>
+      令 $u=4x+6y-10$、$v=4x+6y-7$。<br>
+情況 1：$u=v$ 得 $-10=-7$，無解。<br>
+情況 2：$u=-v$：
+\[ 4x+6y-10=-4x-6y+7 \quad\Longrightarrow\quad 8x+12y=17, \]
+即
+\[ 4x+6y=\frac{17}{2}. \]
+這是一條與 $L_{1}$、$L_{2}$ 平行的直線，<br>即兩線的「中間線」。<br>
+$\,x$、$\,y$ 只出現一次，方程是線性的，所以軌跡是直線，不是圓、正方形或拋物線。<br>
+對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（直線）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L_{1}$ 與 $L_{2}$ 的方程分別為 $2x-y=1$ 及 $4x-2y=7$。若 $P$ 是直角坐標平面上的動點，使 $P$ 到 $L_{1}$ 的垂直距離等於 $P$ 到 $L_{2}$ 的垂直距離，則 $P$ 的軌跡是一</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>直線</li><li><span class="ol">B</span>圓</li><li><span class="ol">C</span>拋物線</li><li><span class="ol">D</span>正方形</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩線斜率同為 $2$，但截距不同（$y=2x-1$ 與 $y=2x-\dfrac{7}{2}$），<br>故 $L_{1}\parallel L_{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 距離相等且平方：$4(2x-y-1)^{2}=(4x-2y-7)^{2}$，令 $t=2x-y$，得 $2(t-1)=\pm(2t-7)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2t-2=2t-7$ 無解；$2t-2=-2t+7$ 給 $t=\dfrac{9}{4}$，即 $2x-y=\dfrac{9}{4}$，<br>是一條與兩線平行的直線，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（直線）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q23.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q25.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第21題 · 圓心與內心</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第21題</span>
+    <h1>圓心與內心</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$O$ 是圓 $ABCDEF$ 的圓心。$\triangle PQR$ 與該圓相交於 $A$、$B$、$C$、$D$、$E$ 和 $F$。若 $\angle QPR=38^{\circ}$ 且 $AB=CD=EF$，則 $\angle QOR=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$100^{\circ}$</li><li><span class="ol">B</span>$123^{\circ}$</li><li><span class="ol">C</span>$112^{\circ}$</li><li><span class="ol">D</span>$109^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q21.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">等弦離圓心等距，認出內心</div>
+      <div class="rule">
+        <span class="rule-name">等弦與圓心等距</span>
+        <span class="rule-math">\(AB=CD=EF\ \Longrightarrow\ d(O,AB)=d(O,CD)=d(O,EF)\)</span>
+        <span class="rule-why">等長的弦到圓心的距離相等，於是 $O$ 與三邊 $PQ$、$QR$、$RP$ 等距。</span>
+      </div>
+      弦 $AB$、$CD$、$EF$ 分別落在 $\triangle PQR$ 的三邊上。<br>因為三弦等長，圓心到三弦的距離相等：
+\[ d(O,AB)=d(O,CD)=d(O,EF). \]
+換句話說，$O$ 與 $\triangle PQR$ 三邊等距，<br>所以 $O$ 是 $\triangle PQR$ 的內心，<br>
+$OP$、$OQ$、$OR$ 分別平分 $\angle P$、$\angle Q$、$\angle R$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle Q$ 與 $\angle R$ 之和</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        <span class="rule-math">\(\angle P+\angle Q+\angle R=180^{\circ}\)</span>
+        <span class="rule-why">已知 $\angle P=38^{\circ}$，即可得 $\angle Q+\angle R=142^{\circ}$，只需它們的和。</span>
+      </div>
+      在 $\triangle PQR$ 中：
+\[ \angle PQR+\angle PRQ=180^{\circ}-38^{\circ}=142^{\circ}. \]
+由第 1 步，$OQ$、$OR$ 是角平分線，<br>所以
+\[ \angle OQR=\frac{1}{2}\angle PQR,\qquad \angle ORQ=\frac{1}{2}\angle PRQ. \]
+兩者相加得
+\[ \angle OQR+\angle ORQ=\frac{142^{\circ}}{2}=71^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle OQR$ 中求 $\angle QOR$</div>
+      <div class="rule">
+        <span class="rule-name">圓心角與圓周角關係的推論</span>
+        <span class="rule-math">\(\angle QOR=90^{\circ}+\tfrac{1}{2}\angle QPR\)</span>
+        <span class="rule-why">內心對一邊所張的角等於 $90^{\circ}$ 加半個頂角，可直接代入 $\angle P=38^{\circ}$ 驗算。</span>
+      </div>
+      在 $\triangle OQR$ 中：
+\[ \angle QOR=180^{\circ}-\left(\angle OQR+\angle ORQ\right)=180^{\circ}-71^{\circ}=109^{\circ}. \]
+用公式核對：
+\[ \angle QOR=90^{\circ}+\frac{38^{\circ}}{2}=90^{\circ}+19^{\circ}=109^{\circ}. \]
+兩法一致，<br>對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$109^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $O$ 是圓的圓心，$\triangle PQR$ 與該圓相交於 $A$、$B$、$C$、$D$、$E$ 和 $F$，其中 $AB$、$CD$、$EF$ 分別落在 $PQ$、$QR$、$RP$ 上。若 $\angle QPR=44^{\circ}$ 且 $AB=CD=EF$，則 $\angle QOR=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$100^{\circ}$</li><li><span class="ol">B</span>$112^{\circ}$</li><li><span class="ol">C</span>$124^{\circ}$</li><li><span class="ol">D</span>$136^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 三弦等長，故 $O$ 與三邊等距，$O$ 是 $\triangle PQR$ 的內心，$OQ$、$OR$ 為角平分線。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle Q+\angle R=180^{\circ}-44^{\circ}=136^{\circ}$，故 $\angle OQR+\angle ORQ=68^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle QOR=180^{\circ}-68^{\circ}=112^{\circ}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$112^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q20.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q22.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

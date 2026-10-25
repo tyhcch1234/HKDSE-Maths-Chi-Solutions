@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第19題 · 三角恆等式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第19題</span>
+    <h1>三角恆等式</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\left(\cos(90^{\circ}+\theta)+1\right)\left(\sin(360^{\circ}-\theta)-1\right)=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-\cos^{2}\theta$</li><li><span class="ol">B</span>$\cos^{2}\theta$</li><li><span class="ol">C</span>$-\sin^{2}\theta$</li><li><span class="ol">D</span>$\sin^{2}\theta$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用誘導角公式化簡兩個因式</div>
+      <div class="rule">
+        <span class="rule-name">誘導角公式</span>
+        <span class="rule-math">\(\cos(90^{\circ}+\theta)=-\sin\theta,\qquad \sin(360^{\circ}-\theta)=-\sin\theta\)</span>
+        <span class="rule-why">從 $90^{\circ}$ 與 $360^{\circ}$ 兩條軸量角，兩個函數都變成 $-\sin\theta$。</span>
+      </div>
+      把角看成由 $90^{\circ}$ 軸與 $360^{\circ}$ 軸量起：
+\[ \cos(90^{\circ}+\theta)=-\sin\theta, \]
+\[ \sin(360^{\circ}-\theta)=-\sin\theta. \]
+兩個因式都只剩 $\sin\theta$ 的項，<br>複雜的角就消失了。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入並用平方差展開</div>
+      <div class="rule">
+        <span class="rule-name">平方差公式</span>
+        <span class="rule-math">\((a+b)(a-b)=a^{2}-b^{2}\)</span>
+        <span class="rule-why">把 $-\sin\theta$ 看成 $a$、$1$ 看成 $b$，兩個因式正是平方差的形式。</span>
+      </div>
+      代入後：
+\[ \left(-\sin\theta+1\right)\left(-\sin\theta-1\right). \]
+取 $a=-\sin\theta$、$b=1$，用平方差：
+\[ (-\sin\theta)^{2}-1^{2}=\sin^{2}\theta-1. \]
+注意 $(-\sin\theta)^{2}=+\sin^{2}\theta$，<br>符號不要寫成負。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用平方關係收尾</div>
+      <div class="rule">
+        <span class="rule-name">平方關係</span>
+        <span class="rule-math">\(\sin^{2}\theta+\cos^{2}\theta=1\)</span>
+        <span class="rule-why">把 $\sin^{2}\theta-1$ 寫成 $-(1-\sin^{2}\theta)$，就換成 $-\cos^{2}\theta$。</span>
+      </div>
+      由 $\sin^{2}\theta+\cos^{2}\theta=1$ 得 $1-\sin^{2}\theta=\cos^{2}\theta$，所以
+\[ \sin^{2}\theta-1=-(1-\sin^{2}\theta)=-\cos^{2}\theta. \]
+原式化簡為 $-\cos^{2}\theta$，<br>對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-\cos^{2}\theta$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $\left(\cos(90^{\circ}-\theta)-1\right)\left(\cos(90^{\circ}+\theta)-1\right)=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\cos^{2}\theta$</li><li><span class="ol">B</span>$-\cos^{2}\theta$</li><li><span class="ol">C</span>$\sin^{2}\theta$</li><li><span class="ol">D</span>$-\sin^{2}\theta$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 誘導角公式：$\cos(90^{\circ}-\theta)=\sin\theta$，$\cos(90^{\circ}+\theta)=-\sin\theta$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入得 $(\sin\theta-1)(-\sin\theta-1)=-(\sin\theta-1)(\sin\theta+1)=-(\sin^{2}\theta-1)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 由 $\sin^{2}\theta+\cos^{2}\theta=1$，得 $1-\sin^{2}\theta=\cos^{2}\theta$，故原式 $=\cos^{2}\theta$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\cos^{2}\theta$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q18.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q20.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

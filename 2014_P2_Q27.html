@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第27題 · 概率與二次方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第27題</span>
+    <h1>概率與二次方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個盒內有 $m$ 個黃球和 $20$ 個黑球。若從盒中隨機抽出一個球，抽出黃球的概率是 $\dfrac{1}{m}$，求 $m$ 的值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$5$</li><li><span class="ol">C</span>$15$</li><li><span class="ol">D</span>$25$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出抽中黃球的概率</div>
+      <div class="rule">
+        <span class="rule-name">事件的概率</span>
+        <span class="rule-math">\(P(E)=\dfrac{\text{favourable}}{\text{total}}\)</span>
+        <span class="rule-why">盒中共有 $m+20$ 個球，其中 $m$ 個是黃球，故概率是 $\dfrac{m}{m+20}$。</span>
+      </div>
+      球的總数是 $m+20$，黃球有 $m$ 個：
+\[ P(\text{yellow})=\frac{m}{m+20}. \]
+題目給這個概率等於 $\dfrac{1}{m}$，<br>於是
+\[ \frac{m}{m+20}=\frac{1}{m}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">交叉相乘得二次方程</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        <span class="rule-math">\(\dfrac{a}{b}=\dfrac{c}{d}\ \Longrightarrow\ ad=bc\)</span>
+        <span class="rule-why">因 $m\neq0$ 且 $m+20\neq0$，可把分母乘到對方分子上，得到二次方程。</span>
+      </div>
+      交叉相乘：
+\[ m\cdot m=1\cdot(m+20), \]
+\[ m^{2}=m+20, \]
+\[ m^{2}-m-20=0. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程並剔除不合理的根</div>
+      <div class="rule">
+        <span class="rule-name">因式分解與零積性質</span>
+        <span class="rule-math">\((m-5)(m+4)=0\ \Longrightarrow\ m=5\ \text{or}\ m=-4\)</span>
+        <span class="rule-why">球的數目必須是正整數，所以負根要捨去。</span>
+      </div>
+      找兩數相乘為 $-20$、相加為 $-1$：
+\[ (m-5)(m+4)=0, \]
+得 $m=5$ 或 $m=-4$。<br>
+$m$ 是黃球數目，必須為正整數，故捨去 $-4$，得 $m=5$。<br>
+驗算：$P(\text{yellow})=\dfrac{5}{25}=\dfrac{1}{5}$，正是 $\dfrac{1}{m}$。<br>
+對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$m=5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個盒內有 $m$ 個白球和 $12$ 個黑球。若從盒中隨機抽出一個球，抽出白球的概率是 $\dfrac{1}{m}$，求 $m$ 的值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$12$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共有 $m+12$ 個球，故 $P(\text{white})=\dfrac{m}{m+12}=\dfrac{1}{m}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 交叉相乘：$m^{2}=m+12$，即 $m^{2}-m-12=0$，分解得 $(m-4)(m+3)=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m=4$ 或 $m=-3$；<br>球數必須為正，故 $m=4$，驗算 $\dfrac{4}{16}=\dfrac{1}{4}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$m=4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q26.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

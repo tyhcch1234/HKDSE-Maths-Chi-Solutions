@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第17題 · 相似三角形與面積比</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第17題</span>
+    <h1>相似三角形與面積比</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$B$ 是 $AC$ 上的一點，使 $AB:BC=3:2$。已知 $AE\parallel BD$。若 $\triangle BCD$ 與 $\triangle CDE$ 的面積分別為 $4\text{ cm}^{2}$ 和 $8\text{ cm}^{2}$，則梯形 $ABDE$ 的面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$18\text{ cm}^{2}$</li><li><span class="ol">B</span>$21\text{ cm}^{2}$</li><li><span class="ol">C</span>$27\text{ cm}^{2}$</li><li><span class="ol">D</span>$33\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q17.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">延長 $CD$ 交 $AE$ 於 $H$，造出相似三角形</div>
+      <div class="rule">
+        <span class="rule-name">AAA 相似判定</span>
+        <span class="rule-math">\(\angle A=\angle P,\ \angle B=\angle Q\ \Rightarrow\ \triangle ABC\sim\triangle PQR\)</span>
+        <span class="rule-why">$AE\parallel BD$ 給出同位角，加上公共角 $\angle C$，即可用 AAA 證 $\triangle ACH\sim\triangle BCD$。</span>
+      </div>
+      延長 $CD$ 與 $AE$ 相交於 $H$。<br>
+因為 $AE\parallel BD$，同位角相等：$\angle CAH=\angle CBD$、$\angle CHA=\angle CDB$，又共用 $\angle C$，<br>故
+\[ \triangle ACH\sim\triangle BCD\quad(\text{AAA}). \]
+對應邊的比（相似比）為
+\[ \frac{AC}{BC}=\frac{AB+BC}{BC}=\frac{3+2}{2}=\frac{5}{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用面積比求 $\triangle ACH$ 與 $ABDH$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{S_{1}}{S_{2}}=\left(\dfrac{\text{side}_{1}}{\text{side}_{2}}\right)^{2}\)</span>
+        <span class="rule-why">相似比是 $\frac{5}{2}$ 時，面積比是 $\dfrac{25}{4}$，不是 $\dfrac{5}{2}$。</span>
+      </div>
+      面積比等於相似比的平方：
+\[ \frac{[ACH]}{[BCD]}=\left(\frac{5}{2}\right)^{2}=\frac{25}{4}. \]
+已知 $[BCD]=4$，所以
+\[ [ACH]=4\times\frac{25}{4}=25\text{ cm}^{2}. \]
+由圖，$ABDH$ 是 $\triangle ACH$ 挖去 $\triangle BCD$：
+\[ [ABDH]=25-4=21\text{ cm}^{2}. \]
+$21$ 只是四邊形 $ABDH$ 的面積，<br>還不是整個梯形。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用同高三角形補上 $\triangle DHE$</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{[DHE]}{[CDE]}=\dfrac{HD}{DC}\)</span>
+        <span class="rule-why">$\triangle DHE$ 與 $\triangle CDE$ 以 $HD$、$DC$ 為底且由 $E$ 引出的高相同，故面積比等於底長比。</span>
+      </div>
+      由相似三角形，$\dfrac{HC}{DC}=\dfrac{AC}{BC}=\dfrac{5}{2}$，所以
+\[ HD=HC-DC=\frac{5}{2}DC-DC=\frac{3}{2}DC, \]
+即 $HD:DC=3:2$。<br>
+$\triangle DHE$ 與 $\triangle CDE$ 同高（由 $E$ 垂直落 $HDC$），面積與底成正比：
+\[ [DHE]=8\times\frac{3}{2}=12\text{ cm}^{2}. \]
+梯形 $ABDE$ 由 $ABDH$ 與 $\triangle DHE$ 合成：
+\[ [ABDE]=21+12=33\text{ cm}^{2}. \]
+對照選項，<br>答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$33\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $B$ 是 $AC$ 上的一點，使 $AB:BC=1:2$，且 $AE\parallel BD$。若 $\triangle BCD$ 與 $\triangle CDE$ 的面積分別為 $8\text{ cm}^{2}$ 和 $6\text{ cm}^{2}$，則梯形 $ABDE$ 的面積是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$10\text{ cm}^{2}$</li><li><span class="ol">B</span>$13\text{ cm}^{2}$</li><li><span class="ol">C</span>$15\text{ cm}^{2}$</li><li><span class="ol">D</span>$18\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 延長 $CD$ 交 $AE$ 於 $H$，由 $AE\parallel BD$ 得 $\triangle ACH\sim\triangle BCD$，<br>相似比為 $\dfrac{AC}{BC}=\dfrac{1+2}{2}=\dfrac{3}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 面積比 $=\left(\dfrac{3}{2}\right)^{2}=\dfrac{9}{4}$，故 $[ACH]=8\times\dfrac{9}{4}=18$，$[ABDH]=18-8=10\text{ cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{HC}{DC}=\dfrac{3}{2}$，得 $HD:DC=1:2$，故 $[DHE]=6\times\dfrac{1}{2}=3$，於是 $[ABDE]=10+3=13\text{ cm}^{2}$，<br>答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$13\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
