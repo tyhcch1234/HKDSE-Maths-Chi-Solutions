@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第6題 · 二次方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第6題</span>
+    <h1>二次方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $k$ 為常數，解方程<br>
+$x^{2}=9k^{2}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=3k$</li><li><span class="ol">B</span>$x=-3k$</li><li><span class="ol">C</span>$x=3k$　或　$x=-3k$</li><li><span class="ol">D</span>$x=0$　或　$x=3k$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把右邊看成一個完全平方</div>
+      <div class="rule">
+        <span class="rule-name">完全平方</span>
+        <span class="rule-math">\((3k)^{2}=9k^{2}\)</span>
+        <span class="rule-why">認出 $9k^{2}=(3k)^{2}$，方程就變成「平方等於平方」，可以用平方差處理。</span>
+      </div>
+      方程是 \[ x^{2}=9k^{2}. \]
+這裡 $k$ 是常數（一個固定的數），<br>未知數只有 $x$，所以右邊其實是一個數的平方：
+\[ 9k^{2}=(3k)^{2}. \]
+留意 $(-3k)^{2}=9k^{2}$ 也成立，<br>暫時不要急著開方，開方會漏掉負的那一支。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">移項成平方差並分解</div>
+      <div class="rule">
+        <span class="rule-name">平方差公式</span>
+        <span class="rule-math">\(a^{2}-b^{2}=(a-b)(a+b)\)</span>
+        <span class="rule-why">$x^{2}-(3k)^{2}$ 正是 $a^{2}-b^{2}$ 的形式，取 $a=x$、$b=3k$。</span>
+      </div>
+      \[ x^{2}-9k^{2}=0, \]
+\[ x^{2}-(3k)^{2}=0, \]
+\[ (x-3k)(x+3k)=0. \]
+分解後左邊是一個乘積，這樣才可以用「零積」的性質。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用零積性質取出兩個根</div>
+      <div class="rule">
+        <span class="rule-name">零積性質</span>
+        <span class="rule-math">\(AB=0\ \Rightarrow\ A=0\ \text{or}\ B=0\)</span>
+        <span class="rule-why">兩個因式的乘積為 $0$，代表至少有一個因式是 $0$。</span>
+      </div>
+      \[ x-3k=0\quad\text{or}\quad x+3k=0, \]
+\[ x=3k\quad\text{or}\quad x=-3k. \]
+二次方程一定有兩個根，只寫 $x=3k$ 就等於漏了一半答案（選項 A、B 就是這樣來的）。<br>
+驗算：$(3k)^{2}=9k^{2}$，$(-3k)^{2}=9k^{2}$，兩者都成立，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$x=3k$ 或 $x=-3k$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $m$ 為常數，解方程 $4x^{2}=25m^{2}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x=\dfrac{5m}{2}$　或　$x=-\dfrac{5m}{2}$</li><li><span class="ol">B</span>$x=\dfrac{5m}{2}$</li><li><span class="ol">C</span>$x=\dfrac{2m}{5}$　或　$x=-\dfrac{2m}{5}$</li><li><span class="ol">D</span>$x=0$　或　$x=\dfrac{5m}{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩邊都是平方：$4x^{2}=(2x)^{2}$，$25m^{2}=(5m)^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 平方差：$(2x-5m)(2x+5m)=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 零積性質：$2x=5m$ 或 $2x=-5m$，即 $x=\pm\dfrac{5m}{2}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$x=\dfrac{5m}{2}$ 或 $x=-\dfrac{5m}{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q5.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q7.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

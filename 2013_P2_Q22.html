@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第22題 · 三角比</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第22題</span>
+    <h1>三角比</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在 $\triangle ABC$ 中，$AB:BC:AC=8:15:17$。求 $\cos A:\cos C$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$8:15$</li><li><span class="ol">B</span>$8:17$</li><li><span class="ol">C</span>$15:8$</li><li><span class="ol">D</span>$17:8$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先判斷這是直角三角形</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        <span class="rule-math">\(8^{2}+15^{2}=17^{2}\ \Longrightarrow\ \angle B=90^{\circ}\)</span>
+        <span class="rule-why">三邊成比例時可縮放成 $8$、$15$、$17$；最短兩邊的平方和等於最長邊的平方，代表直角在對最長邊 $AC$ 的頂點 $B$。</span>
+      </div>
+      把三邊看成 $8k$、$15k$、$17k$：
+\[ 8^{2}+15^{2}=64+225=289=17^{2}, \]
+所以 $AB^{2}+BC^{2}=AC^{2}$，<br>由逆定理知 $\angle ABC=90^{\circ}$，斜邊是 $AC$。<br>
+有了直角，$\cos A$ 與 $\cos C$ 就可以直接用「鄰邊比斜邊」求。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分別寫出 $\cos A$ 與 $\cos C$</div>
+      <div class="rule">
+        <span class="rule-name">餘弦的定義</span>
+        <span class="rule-math">\(\cos\theta=\dfrac{\text{adjacent}}{\text{hypotenuse}}\)</span>
+        <span class="rule-why">在直角三角形中，一個銳角的餘弦就是它的鄰邊除以斜邊。</span>
+      </div>
+      對銳角 $A$，鄰邊是 $AB$、斜邊是 $AC$：
+\[ \cos A=\frac{AB}{AC}=\frac{8}{17}. \]
+對銳角 $C$，<br>鄰邊是 $BC$、斜邊仍是 $AC$：
+\[ \cos C=\frac{BC}{AC}=\frac{15}{17}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把兩個餘弦寫成比</div>
+      <div class="rule">
+        <span class="rule-name">同分母的比</span>
+        <span class="rule-math">\(\frac{8}{17}:\frac{15}{17}=8:15\)</span>
+        <span class="rule-why">兩項同乘 $17$ 不改變比值，公分母可以直接消去。</span>
+      </div>
+      \[ \cos A:\cos C=\frac{8}{17}:\frac{15}{17}=8:15. \]
+對照選項，答案為 <b>A</b>。<br>
+若誤把 $\cos A$ 寫成 $\dfrac{BC}{AC}=\dfrac{15}{17}$，就會得到 $15:8$（選項 C）；<br>記住 $\cos A$ 的鄰邊是 $AB$ 而不是 $BC$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$8:15$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中，$AB:BC:AC=5:12:13$。求 $\cos A:\cos C$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$5:12$</li><li><span class="ol">B</span>$5:13$</li><li><span class="ol">C</span>$12:5$</li><li><span class="ol">D</span>$13:5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $5^{2}+12^{2}=25+144=169=13^{2}$，故 $\angle ABC=90^{\circ}$，斜邊為 $AC$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\cos A=\dfrac{AB}{AC}=\dfrac{5}{13}$，$\cos C=\dfrac{BC}{AC}=\dfrac{12}{13}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩項同乘 $13$ 得 $\cos A:\cos C=5:12$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$5:12$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q21.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q23.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

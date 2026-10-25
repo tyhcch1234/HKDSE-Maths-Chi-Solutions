@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第30題 · 圓形圖比較</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第30題</span>
+    <h1>圓形圖比較</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的圓形圖顯示文具店 $X$ 與文具店 $Y$ 在某個月的文具銷售利潤分佈。下列何者必然正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>在該月，文具店 $X$ 鉛筆銷售的利潤與文具店 $Y$ 的相同。</li><li><span class="ol">B</span>在該月，文具店 $X$ 原子筆與筆記簿銷售的利潤合計，少於該店間尺與鉛筆銷售的利潤合計。</li><li><span class="ol">C</span>$k=14$</li><li><span class="ol">D</span>$\theta=36^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q30.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把兩個圓形圖補完</div>
+      <div class="rule">
+        <span class="rule-name">圓形圖的角和</span>
+        <span class="rule-math">\(\sum\theta=360^{\circ},\qquad \sum p=100\%\)</span>
+        <span class="rule-why">一個完整的圓形圖代表全部利潤，所以各扇形的角相加為 $360^{\circ}$、百分比相加為 $100\%$。</span>
+      </div>
+      店 $X$（用角度）：
+\[ 60^{\circ}+36^{\circ}+68^{\circ}+\theta+162^{\circ}=360^{\circ}\ \Longrightarrow\ \theta=34^{\circ}. \]
+店 $Y$（用百分比）：
+\[ 16\%+10\%+12\%+k\%+46\%=100\%\ \Longrightarrow\ k=16. \]
+所以 $k=16\neq 14$，<br>選項 C 錯誤；$\theta=34^{\circ}\neq 36^{\circ}$，選項 D 錯誤。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">百分比相同 ≠ 金額相同</div>
+      <div class="rule">
+        <span class="rule-name">扇形所代表的金額</span>
+        <span class="rule-math">\(\text{amount}=p\times P\)</span>
+        <span class="rule-why">扇形只給出佔比，實際金額要乘以該店的總利潤；兩店總利潤未知，佔比相同也不能推出金額相同。</span>
+      </div>
+      鉛筆在店 $X$ 的佔比：
+\[ \frac{36^{\circ}}{360^{\circ}}=10\%. \]
+鉛筆在店 $Y$ 的佔比是 $10\%$，<br>兩者相同。<br>
+但金額分別是 $0.10\,P_X$ 和 $0.10\,P_Y$，<br>
+其中 $P_X$、$P_Y$ 分別是兩店的總利潤。<br>題目沒有說 $P_X=P_Y$，所以兩筆金額不一定相等，選項 A 不是「必然」正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同一間店內可直接比較扇形角</div>
+      <div class="rule">
+        <span class="rule-name">同一圓形圖內的角度比較</span>
+        <span class="rule-math">\(\frac{\theta_1}{360^{\circ}}\lessgtr\frac{\theta_2}{360^{\circ}}\ \Longleftrightarrow\ \theta_1\lessgtr\theta_2\)</span>
+        <span class="rule-why">同一間店的兩個扇形共用同一個總利潤，所以比較角度就等於比較金額。</span>
+      </div>
+      在店 $X$ 內比較：<br>
+原子筆 $+$ 筆記簿 $=60^{\circ}+34^{\circ}=94^{\circ}$；<br>
+間尺 $+$ 鉛筆 $=68^{\circ}+36^{\circ}=104^{\circ}$。<br>
+因為 $94^{\circ}<104^{\circ}$，所以首者金額較少，選項 B 必然正確。<br>
+對照選項，答案為 <b>B</b>。<br>
+關鍵分別：跨店比較要看「佔比 × 總額」，同店比較只看扇形角。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（店 $X$ 原子筆與筆記簿的利潤合計少於間尺與鉛筆的合計）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某月兩間文具店 $X$、$Y$ 的利潤分佈如下。$X$：原子筆 $25\%$、鉛筆 $20\%$、間尺 $35\%$、筆記簿 $12\%$、其他 $8\%$。$Y$（以角度表示）：原子筆 $90^{\circ}$、鉛筆 $72^{\circ}$、間尺 $126^{\circ}$、其他 $36^{\circ}$、筆記簿 $\theta$。下列何者必然正確？<br>
+I. 兩店原子筆銷售的利潤相同。<br>
+II. 店 $X$ 鉛筆與筆記簿的利潤合計少於間尺與原子筆的合計。<br>
+III. $\theta=36^{\circ}$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 II 和 III</li><li><span class="ol">D</span>只有 I 和 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 店 $Y$ 的角相加：$90^{\circ}+72^{\circ}+126^{\circ}+36^{\circ}+\theta=360^{\circ}$，故 $\theta=36^{\circ}$，III 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> I：原子筆佔比都是 $25\%$，但兩店總利潤未知，金額不一定相同，<br>I 不必然正確。</div>
+          <div class="p-step"><b>第 3 步.</b> II：店 $X$ 內鉛筆 $+$ 筆記簿 $=20\%+12\%=32\%$，<br>間尺 $+$ 原子筆 $=35\%+25\%=60\%$，$32\%<60\%$，II 正確；<br>答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（只有 II 和 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q29.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

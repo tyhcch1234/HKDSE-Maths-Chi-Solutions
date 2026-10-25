@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第25題 · 圓的方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第25題</span>
+    <h1>圓的方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 的方程為 $2x^{2}+2y^{2}-4x+8y-5=0$。點 $P$ 與 $Q$ 的坐標分別為 $(-1,\ 2)$ 及 $(4,\ 0)$。下列何者正確？<br>
+I. $C$ 的半徑為 $5$。<br>
+II. $PQ$ 的中點在 $C$ 之外。<br>
+III. 若 $G$ 為 $C$ 的圓心，則 $\angle PGQ$ 為銳角。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 和 III</li><li><span class="ol">D</span>只有 II 和 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把方程整理成標準式</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        <span class="rule-math">\((x-h)^{2}+(y-k)^{2}=r^{2}\ \Longleftrightarrow\ x^{2}+y^{2}+Dx+Ey+F=0\)</span>
+        <span class="rule-why">先用 $x^{2}$、$y^{2}$ 的係數（此處為 $2$）除盡，再配方，才可以讀出圓心與半徑。</span>
+      </div>
+      整條方程除以 $2$：
+\[ x^{2}+y^{2}-2x+4y-2.5=0. \]
+對 $x$、$y$ 分別配方：
+\[ (x-1)^{2}-1+(y+2)^{2}-4-2.5=0, \]
+\[ (x-1)^{2}+(y+2)^{2}=7.5. \]
+所以圓心 $G(1,\ -2)$，<br>半徑 $r=\sqrt{7.5}\approx 2.74$。<br>
+因 $r\neq 5$，句子 I 錯誤。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用「與圓心的距離」判斷中點位置</div>
+      <div class="rule">
+        <span class="rule-name">點與圓的位置關係</span>
+        <span class="rule-math">\(d(GM)>r\ \Longrightarrow\ M\ \text{outside}\ C\)</span>
+        <span class="rule-why">比較該點到圓心的距離與半徑，比半徑長就在圓外。</span>
+      </div>
+      $PQ$ 的中點：
+\[ M=\left(\frac{-1+4}{2},\ \frac{2+0}{2}\right)=(1.5,\ 1). \]
+到圓心的距離：
+\[ GM=\sqrt{(1.5-1)^{2}+(1+2)^{2}}=\sqrt{0.25+9}=\sqrt{9.25}\approx 3.04. \]
+因為 $3.04>2.74$，$M$ 在圓 $C$ 之外，<br>句子 II 正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用餘弦定理判斷 $\angle PGQ$</div>
+      <div class="rule">
+        <span class="rule-name">餘弦定理（判斷銳角）</span>
+        <span class="rule-math">\(\cos\angle PGQ=\dfrac{GP^{2}+GQ^{2}-PQ^{2}}{2\cdot GP\cdot GQ}\)</span>
+        <span class="rule-why">三角形三邊都可算，用餘弦定理求出角的餘弦值；餘弦為正即代表該角是銳角。</span>
+      </div>
+      \[ GP^{2}=(-1-1)^{2}+(2+2)^{2}=4+16=20, \]
+\[ GQ^{2}=(4-1)^{2}+(0+2)^{2}=9+4=13, \]
+\[ PQ^{2}=(4+1)^{2}+(0-2)^{2}=25+4=29. \]
+\[ \cos\angle PGQ=\frac{20+13-29}{2\sqrt{20}\sqrt{13}}=\frac{4}{2(4.472)(3.606)}\approx\frac{4}{32.25}\approx 0.124>0. \]
+餘弦為正，故 $\angle PGQ$ 是銳角，<br>句子 III 正確。<br>
+結論：只有 II 和 III 正確，對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（只有 II 和 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 的方程為 $x^{2}+y^{2}-2x+6y+6=0$。點 $P$ 與 $Q$ 的坐標分別為 $(0,\ 0)$ 及 $(2,\ 0)$。下列何者正確？<br>
+I. $C$ 的半徑為 $2$。<br>
+II. $PQ$ 的中點在 $C$ 之外。<br>
+III. 若 $G$ 為 $C$ 的圓心，則 $\angle PGQ$ 為鈍角。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 和 II</li><li><span class="ol">D</span>只有 II 和 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 配方：$(x-1)^{2}+(y+3)^{2}=4$，圓心 $G(1,\ -3)$、半徑 $r=2$，故 I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $PQ$ 中點 $M(1,\ 0)$，$GM=3>2$，故 $M$ 在圓外，<br>II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $GP^{2}=1+9=10$、$GQ^{2}=1+9=10$、$PQ^{2}=4$，$\cos\angle PGQ=\dfrac{10+10-4}{2(10)}=0.8>0$，故為銳角，III 錯誤；<br>答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（只有 I 和 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q24.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q26.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

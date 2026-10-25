@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第9題 · 餘式定理</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第9題</span>
+    <h1>餘式定理</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=x^{13}-2x+k$，其中 $k$ 為常數。<br>
+若 $f(x)$ 可被 $x+1$ 整除，求 $f(x)$ 除以 $x-1$ 的餘數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$-1$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$-2$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用因式定理求 $k$</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        <span class="rule-math">\((x-a)\ \text{is a factor of}\ f(x)\ \Leftrightarrow\ f(a)=0\)</span>
+        <span class="rule-why">$x+1$ 是 $f(x)$ 的因式，即 $x-(-1)$ 是因式，所以 $f(-1)=0$。</span>
+      </div>
+      把 $x=-1$ 代入：
+\[ f(-1)=(-1)^{13}-2(-1)+k=0. \]
+$13$ 是奇數，所以 $(-1)^{13}=-1$：
+\[ -1+2+k=0\ \Longrightarrow\ k=-1. \]
+注意 $(-1)^{13}$ 不是 $1$，<br>這是最常見的符號錯誤。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用餘式定理把「餘數」變成一個函數值</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        <span class="rule-math">\(f(x)\div(x-a)\ \Rightarrow\ \text{remainder}=f(a)\)</span>
+        <span class="rule-why">除以 $x-1$ 的餘數就是 $f(1)$，不必真正做長除法。</span>
+      </div>
+      除以 $x-1$ 時取 $a=1$，故餘數為 $f(1)$。<br>
+現在 $f(x)=x^{13}-2x-1$，只需計算一個數值。<br>
+長除法要做 $13$ 次，餘式定理一次就夠。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $x=1$ 完成計算</div>
+      <div class="rule">
+        <span class="rule-name">代入求值</span>
+        <span class="rule-math">\(f(1)=1^{13}-2(1)-1\)</span>
+        <span class="rule-why">$1$ 的任何次方都是 $1$，代入後只剩加減。</span>
+      </div>
+      \[ f(1)=(1)^{13}-2(1)-1=1-2-1=-2. \]
+所以餘數是 $-2$。<br>
+驗算：$f(-1)=-1+2-1=0$，確實可被 $x+1$ 整除，$k=-1$ 無誤。<br>答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$-2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=x^{7}-3x+k$，其中 $k$ 為常數。<br>
+若 $f(x)$ 可被 $x-1$ 整除，求 $f(x)$ 除以 $x+1$ 的餘數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$-2$</li><li><span class="ol">D</span>$0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 因式定理：$f(1)=1-3+k=0$，故 $k=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 餘式定理：除以 $x+1$ 的餘數是 $f(-1)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $f(-1)=(-1)^{7}-3(-1)+2=-1+3+2=4$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第1題 · 指數定律</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第1題</span>
+    <h1>指數定律</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\left(27\cdot 9^{\,n+1}\right)^{3}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3^{\,6n+12}$</li><li><span class="ol">B</span>$3^{\,6n+15}$</li><li><span class="ol">C</span>$3^{\,9n+12}$</li><li><span class="ol">D</span>$3^{\,9n+18}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把 27 與 9 化成 3 的冪</div>
+      <div class="rule">
+        <span class="rule-name">換底：冪的表示</span>
+        <span class="rule-math">\(27=3^{3},\qquad 9=3^{2}\)</span>
+        <span class="rule-why">題中同時出現 27、9、3 三種底，先把它們統一成最小的底 3，之後才可以合併指數。</span>
+      </div>
+      指數運算有一個前提：底相同，指數才可以相加或相乘；<br>底不同就要先換底。
+\[ 27=3^{3},\qquad 9=3^{2}. \]
+所以括號內的 $27\cdot 9^{\,n+1}$ 可以全部寫成 $3$ 的冪。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $9^{\,n+1}$ 化成 $3$ 的冪</div>
+      <div class="rule">
+        <span class="rule-name">冪的乘方</span>
+        <span class="rule-math">\((a^{m})^{n}=a^{mn}\)</span>
+        <span class="rule-why">$(3^{2})^{n+1}$ 是「冪再取冪」，外層指數要乘進內層指數。</span>
+      </div>
+      把 $9=3^{2}$ 代入，再用冪的乘方：
+\[ 9^{\,n+1}=\left(3^{2}\right)^{n+1}=3^{\,2(n+1)}=3^{\,2n+2}. \]
+於是 \[ 27\cdot 9^{\,n+1}=3^{3}\cdot 3^{\,2n+2}. \]
+括號內現在只剩一個底 $3$，<br>可以合併了。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同底相乘指數相加，再整體取三方</div>
+      <div class="rule">
+        <span class="rule-name">同底冪相乘</span>
+        <span class="rule-math">\(a^{m}\times a^{n}=a^{m+n}\)</span>
+        <span class="rule-why">$3^{3}$ 與 $3^{\,2n+2}$ 同底，相乘時指數直接相加。</span>
+      </div>
+      \[ 3^{3}\cdot 3^{\,2n+2}=3^{\,3+(2n+2)}=3^{\,2n+5}. \]
+再對整個括號取三方，指數相乘：
+\[ \left(3^{\,2n+5}\right)^{3}=3^{\,3(2n+5)}=3^{\,6n+15}. \]
+對照選項，<br>答案為 <b>B</b>。<br>選項 A 的 $3^{\,6n+12}$ 就是把 $3+2n+2$ 算成 $2n+4$ 的結果。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$3^{\,6n+15}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\left(9\cdot 27^{\,n+1}\right)^{2}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3^{\,6n+10}$</li><li><span class="ol">B</span>$3^{\,6n+12}$</li><li><span class="ol">C</span>$3^{\,3n+5}$</li><li><span class="ol">D</span>$3^{\,6n+3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 統一底：$9=3^{2}$，$27=3^{3}$，故 $27^{\,n+1}=3^{\,3n+3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同底相乘：$9\cdot 27^{\,n+1}=3^{2}\cdot 3^{\,3n+3}=3^{\,3n+5}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 整體平方：$\left(3^{\,3n+5}\right)^{2}=3^{\,6n+10}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$3^{\,6n+10}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

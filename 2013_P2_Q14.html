@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第14題 · 直線方程與圖像</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第14題</span>
+    <h1>直線方程與圖像</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為直線 $x+ay+b=0$ 的圖像。下列何者正確？<br>
+I. $a<0$<br>
+II. $b<0$<br>
+III. $a<b$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q14.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把方程改寫成斜率截距式</div>
+      <div class="rule">
+        <span class="rule-name">斜率截距式</span>
+        <span class="rule-math">\(y=mx+c\)</span>
+        <span class="rule-why">要由圖像讀出資料，先要把方程寫成 $y=mx+c$ 的形式。</span>
+      </div>
+      \[ x+ay+b=0\ \Longrightarrow\ ay=-x-b, \]
+因為是直線，$a\neq0$，兩邊除以 $a$：
+\[ y=-\frac{1}{a}x-\frac{b}{a}. \]
+所以斜率 $m=-\dfrac{1}{a}$，$y$ 截距 $=-\dfrac{b}{a}$。<br>
+另外令 $y=0$ 得 $x$ 截距 $x=-b$，這三個量和 $a$、$b$ 的符號一一對應。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由斜率和 $x$ 截距的符號定出 $a$、$b$</div>
+      <div class="rule">
+        <span class="rule-name">商的符號</span>
+        <span class="rule-math">\(\dfrac{p}{q}>0\ \Rightarrow\ p,q\ \text{have the same sign}\)</span>
+        <span class="rule-why">斜率為正、$x$ 截距為正，各給出一條關於符號的資訊。</span>
+      </div>
+      圖中直線由左下升向右上，斜率為正：
+\[ -\frac{1}{a}>0\ \Longrightarrow\ \frac{1}{a}<0\ \Longrightarrow\ a<0. \]
+故 I 正確。<br>
+直線與 $x$ 軸交於 $O$ 的右方，故 $x$ 截距為正：
+\[ -b>0\ \Longrightarrow\ b<0. \]
+故 II 正確。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $y$ 截距的位置比較 $a$ 與 $b$</div>
+      <div class="rule">
+        <span class="rule-name">乘負數反轉不等號</span>
+        <span class="rule-math">\(k<0,\ u<v\ \Rightarrow\ ku>kv\)</span>
+        <span class="rule-why">圖中 $y$ 截距在水平線 $y=-1$ 之上，這條資訊要用不等式表示再乘 $a$。</span>
+      </div>
+      $y$ 截距 $-\dfrac{b}{a}$ 在 $y=-1$ 之上（而且仍在 $O$ 之下）：
+\[ -\frac{b}{a}>-1. \]
+因為 $a<0$，<br>兩邊同乘 $a$ 時不等號要反轉：
+\[ -b<-a\ \Longrightarrow\ a<b. \]
+故 III 正確。<br>三項全部成立，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中所示為直線 $x+ay+b=0$ 的圖像，其斜率為負，且 $x$ 截距為負。<br>
+下列何者正確？<br>
+I. $a>0$<br>
+II. $b>0$<br>
+III. $a>b$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 改寫：$y=-\dfrac{1}{a}x-\dfrac{b}{a}$，斜率 $-\dfrac{1}{a}$，$x$ 截距 $-b$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜率為負：$-\dfrac{1}{a}<0\Rightarrow a>0$；$x$ 截距為負：$-b<0\Rightarrow b>0$，故 I、II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> III 需要 $y$ 截距的資料才可判斷，題目沒有給，<br>故只知 I 及 II 成立，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q13.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q15.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

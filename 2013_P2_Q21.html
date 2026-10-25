@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第21題 · 正多邊形性質</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第21題</span>
+    <h1>正多邊形性質</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若正 $n$ 邊形的一個內角是一個外角的 $4$ 倍，則下列何者正確？<br>
+I. $n$ 的值為 $10$。<br>
+II. 該多邊形的對角線數目為 $10$。<br>
+III. 該多邊形的旋轉對稱重數為 $10$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 和 III</li><li><span class="ol">D</span>只有 II 和 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">內角與外角的關係</div>
+      <div class="rule">
+        <span class="rule-name">同頂點的內角與外角互補</span>
+        <span class="rule-math">\(\text{int}+\text{ext}=180^{\circ},\qquad \text{int}=4\,\text{ext}\)</span>
+        <span class="rule-why">把邊延長，內角與外角在同一條直線上，兩者相加必為 $180^{\circ}$。</span>
+      </div>
+      在正多邊形的每個頂點，內角與外角合成一條直線：
+\[ \text{int}+\text{ext}=180^{\circ}. \]
+題設內角是外角的 $4$ 倍，<br>代入：
+\[ 4\,\text{ext}+\text{ext}=5\,\text{ext}=180^{\circ}\ \Longrightarrow\ \text{ext}=36^{\circ},\quad \text{int}=144^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">外角和定出 $n$，再檢查 I 與 II</div>
+      <div class="rule">
+        <span class="rule-name">多邊形外角和</span>
+        <span class="rule-math">\(n\times\text{ext}=360^{\circ}\)</span>
+        <span class="rule-why">任何凸多邊形的外角和都是 $360^{\circ}$，而正多邊形每個外角相等，所以可以直接除。</span>
+      </div>
+      \[ n=\frac{360^{\circ}}{36^{\circ}}=10, \]
+所以 I 正確：這是一個正十邊形。<br>
+對角線數目公式：
+\[ \frac{n(n-3)}{2}=\frac{10\times 7}{2}=35\neq 10, \]
+所以 II 錯誤。<br>順帶一想：每個頂點可連出 $n-3=7$ 條對角線，$10$ 個頂點共 $70$ 個端點，<br>每條被數兩次，得 $35$ 條。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">旋轉對稱重數就是 $n$</div>
+      <div class="rule">
+        <span class="rule-name">正多邊形的旋轉對稱</span>
+        <span class="rule-math">\(\text{order of rotational symmetry}=n\)</span>
+        <span class="rule-why">每轉 $\dfrac{360^{\circ}}{n}$ 就與自己重合一次，轉滿一圈共重合 $n$ 次（包括轉 $0^{\circ}$）。</span>
+      </div>
+      正十邊形繞中心每轉 $36^{\circ}$ 就與自己重合，轉一圈共重合 $10$ 次：
+\[ \frac{360^{\circ}}{36^{\circ}}=10. \]
+所以 III 正確。<br>
+結論：只有 I 和 III 正確，對照選項，答案為 <b>C</b>。<br>
+小心把「對角線數目」（$35$）與「旋轉對稱重數」（$10$）混為一談，<br>這正是本題的陷阱。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 I 和 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若正 $n$ 邊形的一個內角是一個外角的 $3$ 倍，則下列何者正確？<br>
+I. $n$ 的值為 $8$。<br>
+II. 該多邊形的對角線數目為 $20$。<br>
+III. 該多邊形的旋轉對稱重數為 $8$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 I 和 II</li><li><span class="ol">C</span>只有 II 和 III</li><li><span class="ol">D</span>I、II 和 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 內角 $=3\times$ 外角，且內角 $+$ 外角 $=180^{\circ}$，<br>故 $4\,\text{ext}=180^{\circ}$，外角 $=45^{\circ}$、內角 $=135^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $n=\dfrac{360^{\circ}}{45^{\circ}}=8$，I 正確；<br>對角線數 $=\dfrac{8\times 5}{2}=20$，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 旋轉對稱重數 $=n=8$，III 正確；<br>故 I、II、III 全部正確，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 和 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q20.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q22.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

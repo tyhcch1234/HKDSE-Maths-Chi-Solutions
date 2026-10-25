@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第2題 · 主項變換</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第2題</span>
+    <h1>主項變換</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\dfrac{y-1}{c}=\dfrac{y+1}{d}$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{c-d}{c+d}$</li><li><span class="ol">B</span>$\dfrac{d-c}{c+d}$</li><li><span class="ol">C</span>$\dfrac{c+d}{c-d}$</li><li><span class="ol">D</span>$\dfrac{c+d}{d-c}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">交叉相乘，一次清掉兩個分母</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        <span class="rule-math">\(\dfrac{a}{b}=\dfrac{c}{d}\ \Rightarrow\ ad=bc\)</span>
+        <span class="rule-why">兩邊同乘 $cd$，可以把 $c$、$d$ 兩個分母一次消去。</span>
+      </div>
+      \[ \frac{y-1}{c}=\frac{y+1}{d} \]
+交叉相乘（左分子乘右分母、右分子乘左分母）：
+\[ d(y-1)=c(y+1). \]
+分子是兩項的和或差，<br>所以相乘後一定要保留括號，否則下一步展開就會漏項。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開括號，把含 $y$ 的項搬到同一邊</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        <span class="rule-math">\(a(b+c)=ab+ac\)</span>
+        <span class="rule-why">$d(y-1)$ 與 $c(y+1)$ 都要先展開，才可以逐項搬移。</span>
+      </div>
+      \[ dy-d=cy+c. \]
+把 $cy$ 搬到左邊、$-d$ 搬到右邊（移項要變號）：
+\[ dy-cy=c+d. \]
+$y$ 現在只出現在左邊的兩項，<br>常數全部集中在右邊。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">提出 $y$，再兩邊相除</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        <span class="rule-math">\(AB+AC=A(B+C)\)</span>
+        <span class="rule-why">$dy-cy$ 兩項都含因子 $y$，提出後 $y$ 就以單一個體出現。</span>
+      </div>
+      \[ y(d-c)=c+d. \]
+兩邊同除以 $d-c$（$d\neq c$）：
+\[ y=\frac{c+d}{d-c}. \]
+分母是 $d-c$，<br>不是 $c-d$：提出時 $dy-cy=y(d-c)$，兩項的次序不可倒轉。<br>
+對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$y=\dfrac{c+d}{d-c}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{x+3}{a}=\dfrac{x-2}{b}$，則 $x=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{2a+3b}{a-b}$</li><li><span class="ol">B</span>$\dfrac{2a+3b}{b-a}$</li><li><span class="ol">C</span>$\dfrac{3b-2a}{a-b}$</li><li><span class="ol">D</span>$\dfrac{2a-3b}{a-b}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交叉相乘：$b(x+3)=a(x-2)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開並集中：$bx+3b=ax-2a$，即 $bx-ax=-2a-3b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出 $x$：$x(b-a)=-(2a+3b)$，故 $x=\dfrac{2a+3b}{a-b}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$x=\dfrac{2a+3b}{a-b}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q1.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q3.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

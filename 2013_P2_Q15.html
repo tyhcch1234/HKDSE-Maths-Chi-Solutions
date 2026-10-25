@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第15題 · 反射對稱</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第15題</span>
+    <h1>反射對稱</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，正八邊形被分成八個全等的等腰三角形，其中四個塗上陰影。<br>
+該圖形（八邊形連同陰影）的反射對稱軸數目是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$8$</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q15.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數八邊形本身的對稱軸</div>
+      <div class="rule">
+        <span class="rule-name">正多邊形的對稱軸</span>
+        <span class="rule-math">\(\text{a regular }n\text{-gon has }n\text{ axes of symmetry}\)</span>
+        <span class="rule-why">正八邊形有 $8$ 條對稱軸，可分兩類，各 $4$ 條。</span>
+      </div>
+      把圓心 $O$ 與八個頂點相連，八個等腰三角形的頂角為
+\[ \frac{360^{\circ}}{8}=45^{\circ}. \]
+正八邊形共有 $8$ 條對稱軸：$4$ 條穿過相對頂點（即沿半徑），$4$ 條穿過相對邊的中點。<br>
+不過題目問的是「連同陰影」的圖形，陰影可能令部分對稱軸失效，要逐類檢查。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">穿過對邊中點的 $4$ 條軸：陰影保留</div>
+      <div class="rule">
+        <span class="rule-name">反射保持陰影</span>
+        <span class="rule-math">\(\text{reflection is a symmetry}\ \Leftrightarrow\ \text{shaded}\mapsto\text{shaded}\)</span>
+        <span class="rule-why">對稱軸必須把陰影部分映到陰影部分，否則就不是整個圖形的對稱。</span>
+      </div>
+      圖中陰影三角形位於上、右、下、左四個位置，其餘四個（斜向）留白。<br>
+以鉛垂軸為例：上、下的陰影三角形各自對應到自己；<br>右邊的陰影三角形映到左邊的陰影三角形。<br>
+四條穿過相對邊中點的軸都同樣把「上 $\leftrightarrow$ 右 $\leftrightarrow$ 下 $\leftrightarrow$ 左」的陰影互換，<br>
+陰影映陰影、留白映留白，所以這 $4$ 條軸全部成立。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">穿過相對頂點的 $4$ 條軸：陰影被映到留白</div>
+      <div class="rule">
+        <span class="rule-name">對稱軸的分類</span>
+        <span class="rule-math">\(\dfrac{n}{2}+\dfrac{n}{2}=n\)</span>
+        <span class="rule-why">另一類 $4$ 條軸沿半徑方向，會把一個陰影三角形送到相鄰的留白三角形。</span>
+      </div>
+      穿過相對頂點的軸沿著半徑，正好落在兩個相鄰三角形的分界上。<br>
+反射後，上方的陰影三角形會被送到斜向的留白三角形，陰影與留白互換，<br>
+所以這 $4$ 條軸都不成立。<br>
+合計只有 $4$ 條軸成立，答案為 <b>B</b>。<br>選項 D 的 $8$ 是只看八邊形輪廓、忽略陰影的答案。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$4$ 條）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，正六邊形被分成六個全等的等腰三角形，其中三個（相間）塗上陰影。<br>
+該圖形（六邊形連同陰影）的反射對稱軸數目是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 正六邊形本身有 $6$ 條對稱軸：$3$ 條穿過相對頂點、$3$ 條穿過相對邊的中點。</div>
+          <div class="p-step"><b>第 2 步.</b> 穿過對邊中點的 $3$ 條軸把相間的陰影三角形互相對應，<br>陰影映陰影，全部成立。</div>
+          <div class="p-step"><b>第 3 步.</b> 穿過相對頂點的 $3$ 條軸把陰影映到留白，全部失效，<br>故只有 $3$ 條，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$3$ 條）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q16.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

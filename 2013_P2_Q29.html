@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第29題 · 盒鬚圖與分佈</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第29題</span>
+    <h1>盒鬚圖與分佈</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的幹葉圖顯示一些工人的時薪（以元為單位）的分佈。<br>
+莖（十位）｜葉（個位）<br>
+$4$｜$0\ 2\ 2\ 2\ 4\ 4\ 4\ 7$<br>
+$5$｜$0\ 0\ 1\ 2\ 2\ 6\ 8\ 9$<br>
+$6$｜$3\ 5\ 5\ 7$<br>
+$7$｜$0$<br>
+$8$｜$2\ 6$<br>
+$9$｜$5$<br>
+下列哪一個盒鬚圖可能代表他們的時薪分佈？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>左鬚短、箱體寬而靠左、右鬚短</li><li><span class="ol">B</span>左鬚長、箱體居中、右鬚短</li><li><span class="ol">C</span>左右兩鬚長度相若、箱體居中、中位數在箱中央</li><li><span class="ol">D</span>左鬚短、箱體窄且靠左、右鬚長</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q29.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由幹葉圖讀出全部數據</div>
+      <div class="rule">
+        <span class="rule-name">幹葉圖的讀法</span>
+        <span class="rule-math">\(\text{value}=\text{stem}\times 10+\text{leaf}\)</span>
+        <span class="rule-why">莖是十位、葉是個位，每一片葉就是一個數據，讀出的個數就是工人數。</span>
+      </div>
+      逐行讀出（每片葉一個數據）：
+\[ 40,\ 42,\ 42,\ 42,\ 44,\ 44,\ 44,\ 47, \]
+\[ 50,\ 50,\ 51,\ 52,\ 52,\ 56,\ 58,\ 59, \]
+\[ 63,\ 65,\ 65,\ 67,\quad 70,\quad 82,\ 86,\quad 95. \]
+葉數 $8+8+4+1+2+1=24$，<br>即共有 $24$ 個數據。<br>
+最小值 $40$、最大值 $95$，全距 $55$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求中位數與四分位數</div>
+      <div class="rule">
+        <span class="rule-name">中位數與四分位數（項數為偶數）</span>
+        <span class="rule-math">\(\text{median}=\frac{x_{(12)}+x_{(13)}}{2}\)</span>
+        <span class="rule-why">$24$ 個數據，中位數取第 $12$ 與第 $13$ 個的平均；下半與上半各 $12$ 個，再各自取中位數得 $Q_1$、$Q_3$。</span>
+      </div>
+      第 $12$ 及第 $13$ 個數據都是 $52$，故
+\[ \text{median}=\frac{52+52}{2}=52. \]
+下半 $12$ 個（$40$ 至 $52$）的中位數：
+\[ Q_1=\frac{44+44}{2}=44. \]
+上半 $12$ 個（$52$ 至 $95$）的中位數：
+\[ Q_3=\frac{65+65}{2}=65. \]
+所以五數摘要為 $40,\ 44,\ 52,\ 65,\ 95$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較各段長度，判斷偏態</div>
+      <div class="rule">
+        <span class="rule-name">盒鬚圖各部分的意義</span>
+        <span class="rule-math">\(\text{left whisker}=Q_1-\min,\quad \text{box}=Q_3-Q_1,\quad \text{right whisker}=\max-Q_3\)</span>
+        <span class="rule-why">把五數摘要畫成盒鬚圖，三段長度就決定圖形是否偏斜。</span>
+      </div>
+      三段長度：<br>
+左鬚 $=44-40=4$；<br>
+箱體 $=65-44=21$；<br>
+右鬚 $=95-65=30$。<br>
+右鬚（$30$）明顯比左鬚（$4$）長得多，箱體偏在左邊，數據向右偏斜。<br>
+只有選項 D（左鬚短、箱體窄且靠左、右鬚長）符合，答案為 <b>D</b>。<br>
+選項 A 的箱體太寬而右鬚太短，等於說數據集中在右邊，與實際相反。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（左鬚短、箱體窄且靠左、右鬚長）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據共 $12$ 個，由小至大排列為 $2,\ 20,\ 21,\ 22,\ 23,\ 24,\ 25,\ 26,\ 27,\ 28,\ 29,\ 30$。下列哪一個盒鬚圖可能代表這組數據的分佈？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>左鬚長、箱體靠右、右鬚短</li><li><span class="ol">B</span>左鬚短、箱體靠左、右鬚長</li><li><span class="ol">C</span>左右兩鬚長度相若、箱體居中</li><li><span class="ol">D</span>只有一條很長的右鬚、箱體極窄</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 最小值 $2$、最大值 $30$；<br>中位數 $=\dfrac{24+25}{2}=24.5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $Q_1=\dfrac{21+22}{2}=21.5$，$Q_3=\dfrac{28+29}{2}=28.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 左鬚 $=21.5-2=19.5$、箱體 $=7$、右鬚 $=30-28.5=1.5$，左鬚遠長於右鬚，<br>故選「左鬚長、箱體靠右、右鬚短」，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（左鬚長、箱體靠右、右鬚短）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q28.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q30.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

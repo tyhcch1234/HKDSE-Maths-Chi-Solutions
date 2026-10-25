@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第20題 · 方位角</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第20題</span>
+    <h1>方位角</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$P$ 相對於 $O$ 的方位為 $S86^{\circ}E$，$Q$ 相對於 $O$ 的方位為 $N32^{\circ}E$。若 $P$ 與 $Q$ 與 $O$ 的距離相等，則 $P$ 相對於 $Q$ 的方位為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$N24^{\circ}W$</li><li><span class="ol">B</span>$N27^{\circ}W$</li><li><span class="ol">C</span>$S24^{\circ}E$</li><li><span class="ol">D</span>$S27^{\circ}E$</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q20.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把兩個方位化成同一把尺（由正北順時針量）</div>
+      <div class="rule">
+        <span class="rule-name">三位方位角</span>
+        <span class="rule-math">\(S\,\theta\,E\ \Longleftrightarrow\ 180^{\circ}-\theta\)</span>
+        <span class="rule-why">題目用 $N/S+$ 角 $+E/W$ 的寫法，化成由正北順時針量的三位方位角才可以直接相減。</span>
+      </div>
+      $Q$ 的方位 $N32^{\circ}E$ 表示由正北向東轉 $32^{\circ}$，<br>三位方位角為 $032^{\circ}$。<br>
+$P$ 的方位 $S86^{\circ}E$ 表示由正南向東轉 $86^{\circ}$，三位方位角為
+\[ 180^{\circ}-86^{\circ}=094^{\circ}. \]
+同一個圓心 $O$ 的兩個方位相減，<br>就是 $\angle POQ$：
+\[ \angle POQ=94^{\circ}-32^{\circ}=62^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">等腰三角形 $OPQ$ 的底角</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        <span class="rule-math">\(OP=OQ\ \Longrightarrow\ \angle OQP=\angle OPQ=\dfrac{180^{\circ}-\angle POQ}{2}\)</span>
+        <span class="rule-why">$P$、$Q$ 與 $O$ 等距，$\triangle OPQ$ 是等腰三角形，頂角求出後底角可由內角和得到。</span>
+      </div>
+      已知 $OP=OQ$，所以 $\triangle OPQ$ 以 $O$ 為頂點、$PQ$ 為底：
+\[ \angle OQP=\angle OPQ=\frac{180^{\circ}-62^{\circ}}{2}=59^{\circ}. \]
+這個 $59^{\circ}$ 是 $QO$ 與 $QP$ 的夾角，<br>下一步要把它換成「相對於正南」的角。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $Q$ 點用內錯角定出方位</div>
+      <div class="rule">
+        <span class="rule-name">平行線內錯角</span>
+        <span class="rule-math">\(QH\parallel ON\ \Longrightarrow\ \angle HQO=\angle NOQ=32^{\circ}\)</span>
+        <span class="rule-why">在 $Q$ 畫一條向正南的線 $QH$，它與 $O$ 點的南北線平行，於是可以把 $O$ 點的角度搬到 $Q$ 點。</span>
+      </div>
+      在 $Q$ 畫 $QH$ 向正南，$QH$ 與 $O$ 的南北線平行，<br>故（內錯角）
+\[ \angle HQO=32^{\circ}. \]
+$QP$ 與正南線 $QH$ 的夾角：
+\[ \angle HQP=\angle OQP-\angle HQO=59^{\circ}-32^{\circ}=27^{\circ}. \]
+由圖所見 $P$ 在 $Q$ 的東邊，<br>所以 $P$ 在 $Q$ 的南 $27^{\circ}$ 偏東：
+\[ S27^{\circ}E. \]
+對照選項，<br>答案為 <b>D</b>。<br>選項 B 的 $N27^{\circ}W$ 是把方向左右顛倒的典型錯誤。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$S27^{\circ}E$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $P$ 與 $Q$ 為兩點，$OP=OQ$。$Q$ 相對於 $O$ 的方位為 $N40^{\circ}E$，$P$ 相對於 $O$ 的方位為 $S70^{\circ}E$。求 $P$ 相對於 $Q$ 的方位。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$N15^{\circ}E$</li><li><span class="ol">B</span>$S15^{\circ}E$</li><li><span class="ol">C</span>$S25^{\circ}E$</li><li><span class="ol">D</span>$N25^{\circ}E$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 三位方位角：$Q$ 為 $040^{\circ}$，$P$ 為 $180^{\circ}-70^{\circ}=110^{\circ}$，<br>故 $\angle POQ=110^{\circ}-40^{\circ}=70^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $OP=OQ$ 使 $\angle OQP=\angle OPQ=\dfrac{180^{\circ}-70^{\circ}}{2}=55^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在 $Q$ 畫正南線 $QH$，$\angle HQO=40^{\circ}$，故 $\angle HQP=55^{\circ}-40^{\circ}=15^{\circ}$；$P$ 在東側，<br>方位為 $S15^{\circ}E$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$S15^{\circ}E$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q19.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q21.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

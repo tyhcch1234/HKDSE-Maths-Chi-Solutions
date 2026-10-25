@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第7題 · 二次函數圖像</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第7題</span>
+    <h1>二次函數圖像</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為 $y=-2x^{2}+ax+b$ 的圖像，其中 $a$、$b$ 為常數。該圖像的對稱軸方程為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=3$</li><li><span class="ol">B</span>$x=5$</li><li><span class="ol">C</span>$y=8$</li><li><span class="ol">D</span>$x=2$</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q7.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由 $y$ 截距讀出常數項 $b$</div>
+      <div class="rule">
+        <span class="rule-name">二次函數的 $y$ 截距</span>
+        <span class="rule-math">\(y=Ax^{2}+Bx+C\ \Rightarrow\ y\text{-intercept}=C\)</span>
+        <span class="rule-why">令 $x=0$ 得 $y=b$，所以圖像與 $y$ 軸的交點就是 $b$。</span>
+      </div>
+      圖像與 $y$ 軸相交於 $y=-10$。<br>
+把 $x=0$ 代入 $y=-2x^{2}+ax+b$：
+\[ y=b, \]
+所以 $b=-10$。<br>常數項就是 $y$ 截距，這一步不需要任何計算。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $x$ 截距求 $a$</div>
+      <div class="rule">
+        <span class="rule-name">圖像上的點滿足方程</span>
+        <span class="rule-math">\((x_{0},y_{0})\ \text{on curve}\ \Rightarrow\ y_{0}=-2x_{0}^{2}+ax_{0}+b\)</span>
+        <span class="rule-why">圖像通過 $(1,0)$，代入 $x=1$、$y=0$ 就得到一條只含 $a$ 的方程。</span>
+      </div>
+      把 $(1,0)$ 代入：
+\[ 0=-2(1)^{2}+a(1)-10, \]
+\[ 0=-2+a-10, \]
+\[ a=12. \]
+檢查：$y=-2x^{2}+12x-10$，$x=1$ 時 $y=-2+12-10=0$，<br>與圖中截距吻合。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入對稱軸公式</div>
+      <div class="rule">
+        <span class="rule-name">二次函數的對稱軸</span>
+        <span class="rule-math">\(x=-\dfrac{B}{2A}\)</span>
+        <span class="rule-why">對稱軸是一條穿過頂點的鉛垂線，只取決於 $x^{2}$ 與 $x$ 的係數。</span>
+      </div>
+      這裡 $A=-2$、$B=a=12$，故
+\[ x=-\frac{12}{2(-2)}=\frac{-12}{-4}=3. \]
+所以對稱軸是鉛垂線 $x=3$。<br>
+選項 C 的 $y=8$ 是頂點的 $y$ 坐標（把 $x=3$ 代入得 $y=-18+36-10=8$），<br>不是對稱軸方程。<br>答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$x=3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中所示為 $y=3x^{2}+px+q$ 的圖像，它與 $y$ 軸相交於 $y=8$，並通過點 $(2,0)$。該圖像的對稱軸方程為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x=\dfrac{5}{3}$</li><li><span class="ol">B</span>$x=\dfrac{10}{3}$</li><li><span class="ol">C</span>$x=-\dfrac{5}{3}$</li><li><span class="ol">D</span>$x=\dfrac{3}{5}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $y$ 截距是常數項，故 $q=8$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $(2,0)$：$0=12+2p+8$，得 $2p=-20$，即 $p=-10$。</div>
+          <div class="p-step"><b>第 3 步.</b> 對稱軸 $x=-\dfrac{p}{2(3)}=\dfrac{10}{6}=\dfrac{5}{3}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$x=\dfrac{5}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

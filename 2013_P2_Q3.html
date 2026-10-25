@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第3題 · 分組分解</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第3題</span>
+    <h1>分組分解</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $h\ell-k\ell+hm-km-hn+kn=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(h+k)(\ell-m+n)$</li><li><span class="ol">B</span>$(h+k)(\ell+m-n)$</li><li><span class="ol">C</span>$(h-k)(\ell-m+n)$</li><li><span class="ol">D</span>$(h-k)(\ell+m-n)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩兩分組，令每組含有相同的字母</div>
+      <div class="rule">
+        <span class="rule-name">分組分解</span>
+        <span class="rule-math">\(ax+ay+bx+by=a(x+y)+b(x+y)=(a+b)(x+y)\)</span>
+        <span class="rule-why">六項要兩兩配對，每組都同時含 $h$ 與 $k$，才會出現共同的括號。</span>
+      </div>
+      \[ h\ell-k\ell+hm-km-hn+kn \]
+按 $\ell$、$m$、$n$ 三組字母配對：
+\[ =(h\ell-k\ell)+(hm-km)-(hn-kn). \]
+最後一組要小心：原式是 $-hn+kn$，<br>把負號提出來才寫成 $-(hn-kn)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">每組各自提出公因式</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        <span class="rule-math">\(AB+AC=A(B+C)\)</span>
+        <span class="rule-why">每組第一個字母是 $h$、第二個是 $k$，所以三組的公因式都是 $h-k$。</span>
+      </div>
+      \[ h\ell-k\ell=(h-k)\ell, \]
+\[ hm-km=(h-k)m, \]
+\[ hn-kn=(h-k)n. \]
+整個式子變成
+\[ (h-k)\ell+(h-k)m-(h-k)n. \]
+三項都掛著同一塊 $h-k$，<br>這正是可以繼續抽出來的信號。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">提出共同的括號 $h-k$</div>
+      <div class="rule">
+        <span class="rule-name">分配律（反向使用）</span>
+        <span class="rule-math">\(A(B+C-D)=AB+AC-AD\)</span>
+        <span class="rule-why">把 $h-k$ 整塊抽出來，剩下的部分依序是 $\ell$、$m$、$-n$。</span>
+      </div>
+      \[ (h-k)\ell+(h-k)m-(h-k)n=(h-k)(\ell+m-n). \]
+驗算：$(h-k)(\ell+m-n)=h\ell+hm-hn-k\ell-km+kn$，與原式六項完全吻合。<br>
+對照選項，答案為 <b>D</b>。<br>選項 C 的 $(\ell-m+n)$ 就是把中間那一項的符號弄錯了。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$(h-k)(\ell+m-n)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $xy-2y+3x-6-xz+2z$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(x-2)(y+3-z)$</li><li><span class="ol">B</span>$(x+2)(y-3-z)$</li><li><span class="ol">C</span>$(x-2)(y-3+z)$</li><li><span class="ol">D</span>$(x+2)(y+3+z)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分組：$(xy-2y)+(3x-6)-(xz-2z)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 每組提出公因式：$y(x-2)+3(x-2)-z(x-2)$，留意 $-xz+2z=-(x-2)z$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出共同括號 $(x-2)$：$(x-2)(y+3-z)$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$(x-2)(y+3-z)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q2.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q4.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

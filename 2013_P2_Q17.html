@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第17題 · 圓錐與半球表面積</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第17題</span>
+    <h1>圓錐與半球表面積</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，立體由一個直立圓錐與一個半球組成，兩者共用同一底面。已知圓錐的底半徑及高分別為 $3\text{ cm}$ 及 $4\text{ cm}$，求該立體的總表面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$30\pi\text{ cm}^2$</li><li><span class="ol">B</span>$33\pi\text{ cm}^2$</li><li><span class="ol">C</span>$48\pi\text{ cm}^2$</li><li><span class="ol">D</span>$51\pi\text{ cm}^2$</li></ol>
+    <figure class="fig"><img src="figures/2013_P2_Q17.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數清楚外露的是哪幾片曲面</div>
+      <div class="rule">
+        <span class="rule-name">複合立體的表面</span>
+        <span class="rule-math">\(S_{\text{total}}=\sum S_{\text{exposed}}\)</span>
+        <span class="rule-why">黏合面藏在立體內部，不算表面積，所以只需把外露的曲面相加。</span>
+      </div>
+      圓錐與半球共用同一個圓形底面，這個圓盤黏在立體內部，不是表面。<br>
+外露的只有兩片曲面：<br>
+圓錐的曲面（側面）＋ 半球的曲面。<br>
+所以總表面積 $=$ 圓錐曲面面積 $+$ 半球曲面面積，不需要加底圓面積。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用畢氏定理求圓錐的斜高</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(l^{2}=r^{2}+h^{2}\)</span>
+        <span class="rule-why">斜高 $l$、底半徑 $r$ 與高 $h$ 組成一個直角三角形，圓錐曲面面積要用斜高而非高。</span>
+      </div>
+      圓錐的軸垂直於底面，所以半徑 $3$、高 $4$、斜高 $l$ 成直角三角形：
+\[ l=\sqrt{3^{2}+4^{2}}=\sqrt{9+16}=5\text{ cm}. \]
+這是一個 $3$-$4$-$5$ 直角三角形，<br>斜高為整數，正好方便之後計算。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩片曲面相加</div>
+      <div class="rule">
+        <span class="rule-name">圓錐與半球的曲面面積</span>
+        <span class="rule-math">\(S_{\text{cone}}=\pi r l,\qquad S_{\text{hemi}}=2\pi r^{2}\)</span>
+        <span class="rule-why">圓錐曲面是 $\pi r l$；半球曲面是整個球面 $4\pi r^{2}$ 的一半，即 $2\pi r^{2}$。</span>
+      </div>
+      圓錐曲面：
+\[ S_{\text{cone}}=\pi(3)(5)=15\pi\text{ cm}^2. \]
+半球曲面：
+\[ S_{\text{hemi}}=2\pi(3)^{2}=18\pi\text{ cm}^2. \]
+相加：
+\[ S_{\text{total}}=15\pi+18\pi=33\pi\text{ cm}^2. \]
+對照選項，<br>答案為 <b>B</b>。<br>選項 C 的 $48\pi$ 是把整個球面（$4\pi r^{2}=36\pi$）再加底圓 $12\pi$ 之類的錯誤組合；<br>選項 A 的 $30\pi$ 則是漏算了半球的一部分。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$33\pi\text{ cm}^2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個立體由直立圓錐與半球組成，兩者共用同一底面。已知圓錐的底半徑為 $6\text{ cm}$、高為 $8\text{ cm}$，求該立體的總表面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$96\pi\text{ cm}^2$</li><li><span class="ol">B</span>$108\pi\text{ cm}^2$</li><li><span class="ol">C</span>$132\pi\text{ cm}^2$</li><li><span class="ol">D</span>$156\pi\text{ cm}^2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜高 $l=\sqrt{6^{2}+8^{2}}=10\text{ cm}$（$6$-$8$-$10$ 直角三角形）。</div>
+          <div class="p-step"><b>第 2 步.</b> 圓錐曲面 $=\pi(6)(10)=60\pi$；<br>半球曲面 $=2\pi(6)^{2}=72\pi$。</div>
+          <div class="p-step"><b>第 3 步.</b> 總表面積 $=60\pi+72\pi=132\pi\text{ cm}^2$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$132\pi\text{ cm}^2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

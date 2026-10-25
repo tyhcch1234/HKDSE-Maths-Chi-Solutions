@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第24題 · 軌跡</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第24題</span>
+    <h1>軌跡</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$ 與 $B$ 的坐標分別為 $(2,\ 5)$ 及 $(4,\ -1)$。設 $P$ 為直角坐標平面上一動點，使 $AP=BP$。求 $P$ 的軌跡方程。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x-3y+3=0$</li><li><span class="ol">B</span>$x-3y-7=0$</li><li><span class="ol">C</span>$x-3y+13=0$</li><li><span class="ol">D</span>$3x+y-11=0$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出軌跡是 $AB$ 的垂直平分線</div>
+      <div class="rule">
+        <span class="rule-name">垂直平分線的性質</span>
+        <span class="rule-math">\(AP=BP\ \Longleftrightarrow\ P\in\text{perp. bisector of }AB\)</span>
+        <span class="rule-why">到線段兩端等距的點，全體正好就是該線段的垂直平分線，所以軌跡是一條直線。</span>
+      </div>
+      $AP=BP$ 的意思是 $P$ 到 $A$、$B$ 兩點等距，<br>因此 $P$ 一定落在 $AB$ 的垂直平分線上。<br>
+這條線由兩個條件決定：<br>
+經過 $AB$ 的中點 $M$；<br>
+與 $AB$ 垂直。<br>
+下一步分別求 $M$ 的坐標與斜率。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求中點與垂直斜率</div>
+      <div class="rule">
+        <span class="rule-name">中點公式與垂線斜率</span>
+        <span class="rule-math">\(M=\left(\frac{x_1+x_2}{2},\ \frac{y_1+y_2}{2}\right),\qquad m_{\perp}=-\frac{1}{m}\)</span>
+        <span class="rule-why">中點公式給出直線上的一點，斜率條件給出方向；兩者合起來就是一條直線。</span>
+      </div>
+      中點：
+\[ M=\left(\frac{2+4}{2},\ \frac{5+(-1)}{2}\right)=(3,\ 2). \]
+$AB$ 的斜率：
+\[ m_{AB}=\frac{-1-5}{4-2}=\frac{-6}{2}=-3. \]
+垂直平分線的斜率是它的負倒數：
+\[ m_{\perp}=-\frac{1}{-3}=\frac{1}{3}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用點斜式寫出方程並整理</div>
+      <div class="rule">
+        <span class="rule-name">點斜式</span>
+        <span class="rule-math">\(y-y_1=m(x-x_1)\)</span>
+        <span class="rule-why">已知直線上一點 $M(3,2)$ 與斜率 $\dfrac{1}{3}$，點斜式可直接寫出方程。</span>
+      </div>
+      代入 $M(3,\ 2)$、$m=\dfrac{1}{3}$：
+\[ y-2=\frac{1}{3}(x-3). \]
+兩邊乘 $3$：
+\[ 3y-6=x-3\ \Longrightarrow\ x-3y+3=0. \]
+對照選項，<br>答案為 <b>A</b>。<br>
+檢查：$M(3,2)$ 代入得 $3-6+3=0$，確實在這條線上；<br>選項 B、C 雖然斜率相同（$x-3y$ 的係數一樣），但截距不同，都通過不了中點。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$x-3y+3=0$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $A$ 與 $B$ 的坐標分別為 $(1,\ 3)$ 及 $(5,\ -1)$。設 $P$ 為直角坐標平面上一動點，使 $AP=BP$。求 $P$ 的軌跡方程。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x-y-2=0$</li><li><span class="ol">B</span>$x-y+2=0$</li><li><span class="ol">C</span>$x+y-4=0$</li><li><span class="ol">D</span>$x+y+4=0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 軌跡是 $AB$ 的垂直平分線；<br>中點 $M=\left(\dfrac{1+5}{2},\ \dfrac{3+(-1)}{2}\right)=(3,\ 1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $m_{AB}=\dfrac{-1-3}{5-1}=-1$，故垂直平分線斜率 $m_{\perp}=1$。</div>
+          <div class="p-step"><b>第 3 步.</b> 點斜式：$y-1=1(x-3)$，即 $x-y-2=0$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$x-y-2=0$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q23.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q25.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

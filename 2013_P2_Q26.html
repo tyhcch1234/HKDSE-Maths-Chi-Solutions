@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第26題 · 概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第26題</span>
+    <h1>概率</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      從分別編上 $1$、$2$、$3$、$4$、$5$、$6$ 及 $7$ 號的七張卡中，同時隨機抽出兩個數。求所抽出的兩數之積為奇數的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{2}{7}$</li><li><span class="ol">B</span>$\dfrac{4}{7}$</li><li><span class="ol">C</span>$\dfrac{12}{49}$</li><li><span class="ol">D</span>$\dfrac{16}{49}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「積為奇數」翻譯成抽卡條件</div>
+      <div class="rule">
+        <span class="rule-name">奇偶相乘的規律</span>
+        <span class="rule-math">\(\text{product odd}\ \Longleftrightarrow\ \text{both odd}\)</span>
+        <span class="rule-why">只要有一個因數是偶數，乘積就是偶數；所以積為奇數必須兩張卡都是奇數。</span>
+      </div>
+      七張卡中，奇數卡是 $1,\ 3,\ 5,\ 7$，共 $4$ 張；<br>偶數卡是 $2,\ 4,\ 6$，共 $3$ 張。<br>
+兩數之積為奇數，必須兩個數都是奇數（偶數乘任何整數都是偶數）。<br>
+所以問題變成：從 $4$ 張奇數卡中抽出 $2$ 張的概率。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同時抽出：用組合數數樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合數</span>
+        <span class="rule-math">\(C^{n}_{r}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">「同時抽出」代表不計先後次序，所以用組合而不是排列。</span>
+      </div>
+      從 $7$ 張抽 $2$ 張，不計次序：
+\[ C^{7}_{2}=\frac{7\times 6}{2}=21. \]
+有利結果：從 $4$ 張奇數卡抽 $2$ 張：
+\[ C^{4}_{2}=\frac{4\times 3}{2}=6. \]
+（即 $\{1,3\},\{1,5\},\{1,7\},\{3,5\},\{3,7\},\{5,7\}$ 六組。<br>）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率並化簡</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        <span class="rule-math">\(P=\dfrac{\text{favourable}}{\text{total}}=\dfrac{C^{4}_{2}}{C^{7}_{2}}\)</span>
+        <span class="rule-why">每個組合出現的機會相同，所以概率就是有利組合數除以總組合數。</span>
+      </div>
+      \[ P=\frac{6}{21}=\frac{2}{7}. \]
+對照選項，答案為 <b>A</b>。<br>
+選項 D 的 $\dfrac{16}{49}$ 是「有放回地抽兩次」的答案（$\dfrac{4}{7}\times\dfrac{4}{7}$），但題目是同時抽出，<br>不能重複抽同一張卡；<br>選項 B 的 $\dfrac{4}{7}$ 則只是抽到一張奇數卡的概率。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{2}{7}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 從分別編上 $1$、$2$、$3$、$4$、$5$ 及 $6$ 號的六張卡中，同時隨機抽出兩個數。求所抽出的兩數之積為奇數的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{5}$</li><li><span class="ol">B</span>$\dfrac{2}{5}$</li><li><span class="ol">C</span>$\dfrac{3}{10}$</li><li><span class="ol">D</span>$\dfrac{1}{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 奇數卡為 $1,\ 3,\ 5$ 共 $3$ 張；<br>積為奇數要求兩張都是奇數。</div>
+          <div class="p-step"><b>第 2 步.</b> 總組合 $C^{6}_{2}=15$，有利組合 $C^{3}_{2}=3$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{3}{15}=\dfrac{1}{5}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{5}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q25.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q27.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
