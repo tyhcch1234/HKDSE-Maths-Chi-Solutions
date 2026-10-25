@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第10題 · 距離－時間圖</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第10題</span>
+    <h1>距離－時間圖</h1>
+    <p class="sub">(a) 2 分 (b) 2 分 (c) 2 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      城鎮 $X$ 與城鎮 $Y$ 相距 $80$ km。圖 2 顯示某天早上 7:30 至 9:30 期間，汽車 $A$ 與汽車 $B$ 在同一條直路上往返城鎮 $X$ 與城鎮 $Y$ 的圖像。汽車 $A$ 在該段期間以勻速行駛。汽車 $B$ 在早上 8:15 停下。<br>
+(a) 求汽車 $A$ 在早上 8:15 時與城鎮 $X$ 的距離。<br>
+(b) 在早上 7:30 之後，汽車 $A$ 與汽車 $B$ 第一次相遇是在甚麼時間？<br>
+(c) 汽車 $B$ 的司機聲稱，在早上 8:15 至 9:30 期間汽車 $B$ 的平均速度高於汽車 $A$ 的平均速度。你是否同意？試解釋。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q10.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 勻速行駛，用正比求距離</div>
+      <div class="rule">
+        <span class="rule-name">勻速時距離與時間成正比</span>
+        <span class="rule-math">\(\text{distance}\propto t\quad\Longrightarrow\quad\dfrac{d_{1}}{d_{2}}=\dfrac{t_{1}}{t_{2}}\)</span>
+        <span class="rule-why">汽車 $A$ 在整段期間勻速行駛，它與 $X$ 的距離與所經時間成正比。</span>
+      </div>
+      汽車 $A$ 由 7:30 至 9:30 共 $120$ 分鐘走了 $80$ km。<br>
+8:15 時已過了 $45$ 分鐘：
+\[ \text{distance}=\frac{45}{120}\times80=30\ \text{km}. \]
+故汽車 $A$ 在早上 8:15 距城鎮 $X$ 為 $30$ km。<br>
+（等價於速率 $\dfrac{80}{120}=\dfrac{2}{3}$ km/min，再乘 $45$ 分鐘。<br>）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 相遇時兩車距 $X$ 的距離相同</div>
+      <div class="rule">
+        <span class="rule-name">相遇條件</span>
+        <span class="rule-math">\(d_{A}(t)=d_{B}(t)\)</span>
+        <span class="rule-why">兩車在同一條直路上，相遇即它們與城鎮 $X$ 的距離相等。</span>
+      </div>
+      由圖 2，汽車 $B$ 在 8:15 到達 $44$ km 後，<br>圖像變為水平，即停在該處。<br>
+在 7:30 至 8:15 之間兩車都在行走，但 $B$ 的速率 $\dfrac{44}{45}\approx0.98$ km/min 大於 $A$ 的 $\dfrac{2}{3}\approx0.67$ km/min，<br>故 $B$ 一直在前，兩車在這段時間不會相遇。<br>
+所以第一次相遇在 $B$ 停下之後，即 $A$ 追到 $44$ km 之時：
+\[ t=\frac{44}{2/3}=66\ \text{min}. \]
+$66$ 分鐘後為 8:36，<br>故兩車第一次相遇在早上 8:36。<br>
+（圖 2 中兩條線的交點，正好落在 $B$ 的水平段上，與此結果一致。<br>）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c) 比較同一時段的平均速度</div>
+      <div class="rule">
+        <span class="rule-name">平均速度</span>
+        <span class="rule-math">\(\text{average speed}=\dfrac{\text{distance travelled}}{\text{time taken}}\)</span>
+        <span class="rule-why">8:15 至 9:30 兩車所用時間相同，比較這段時間內行走的距離即可。</span>
+      </div>
+      該時段長 $75$ 分鐘，兩車所用時間相同。<br>
+汽車 $A$：8:15 在 $30$ km，9:30 在 $80$ km，<br>共走
+\[ 80-30=50\ \text{km}. \]
+汽車 $B$：8:15 在 $44$ km，9:30 在 $80$ km，<br>共走
+\[ 80-44=36\ \text{km}. \]
+時間相同而汽車 $A$ 走得更遠（$50$ km 對 $36$ km），<br>故汽車 $A$ 的平均速度較高。<br>
+因此不同意該司機的聲稱。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $30$ km (b) 早上 8:36 (c) 不同意：8:15 至 9:30 期間汽車 $A$ 走 $50$ km，汽車 $B$ 只走 $36$ km，汽車 $A$ 的平均速度較高</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 城鎮 $X$ 與城鎮 $Y$ 相距 $96$ km。汽車 $A$ 在 8:00 至 9:20 期間以勻速由 $X$ 駛往 $Y$。汽車 $B$ 在 8:00 離開 $X$，8:30 時已走了 $36$ km，之後停在該處至 8:50，然後繼續駛往 $Y$，並於 9:20 到達。<br>
+(a) 求汽車 $A$ 在 8:30 時與城鎮 $X$ 的距離。<br>
+(b) 求汽車 $B$ 在 8:50 之後的速率。<br>
+(c) 有人聲稱在整段期間汽車 $A$ 的平均速度高於汽車 $B$ 的平均速度。你是否同意？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) 汽車 $A$ 的速率 $=\dfrac{96}{80}=1.2$ km/min，<br>8:30 時已過 $30$ 分鐘，故距離 $=1.2\times30=36$ km。</div>
+          <div class="p-step"><b>第 2 步.</b> (b) 8:50 時汽車 $B$ 已走 $36$ km，<br>餘下 $96-36=60$ km 須在 $30$ 分鐘內完成，故速率 $=\dfrac{60}{30}=2$ km/min。</div>
+          <div class="p-step"><b>第 3 步.</b> (c) 兩車同樣用 $80$ 分鐘走完 $96$ km，<br>平均速度同為 $\dfrac{96}{80}=1.2$ km/min，故不同意該聲稱。</div>
+          <div class="p-ans">答案：<br>(a) $36$ km (b) $2$ km/min (c) 不同意：兩車的平均速度相同，均為 $1.2$ km/min</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q9.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

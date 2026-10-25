@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第8題 · 坐標變換與垂直</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第8題</span>
+    <h1>坐標變換與垂直</h1>
+    <p class="sub">(a) 2 分 (b) 3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $P$ 與點 $Q$ 的坐標分別為 $(-3,\ 5)$ 與 $(2,\ -7)$。$P$ 繞原點 $O$ 按逆時針方向旋轉 $270^{\circ}$ 至 $P'$。$Q$ 向左平移 $21$ 個單位至 $Q'$。<br>
+(a) 寫出 $P'$ 與 $Q'$ 的坐標。<br>
+(b) 證明 $PQ$ 垂直於 $P'Q'$。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 繞原點旋轉 $270^{\circ}$ 求 $P'$</div>
+      <div class="rule">
+        <span class="rule-name">繞原點旋轉 $270^{\circ}$</span>
+        <span class="rule-math">\(R_{270^{\circ}}:(x,\ y)\mapsto(y,\ -x)\)</span>
+        <span class="rule-why">逆時針旋轉 $270^{\circ}$ 與順時針旋轉 $90^{\circ}$ 結果相同，坐標變換為 $x$、$y$ 互換後第二個坐標取負。</span>
+      </div>
+      把 $P(-3,\ 5)$ 代入 $(x,\ y)\mapsto(y,\ -x)$：
+\[ P'=(5,\ -(-3))=(5,\ 3). \]
+即新橫坐標是舊縱坐標 $5$，<br>新縱坐標是舊橫坐標的相反數 $3$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 向左平移求 $Q'$</div>
+      <div class="rule">
+        <span class="rule-name">平移</span>
+        <span class="rule-math">\((x,\ y)\mapsto(x+a,\ y+b)\)</span>
+        <span class="rule-why">向左平移 $21$ 個單位只改變橫坐標，取 $a=-21$、$b=0$。</span>
+      </div>
+      \[ Q'=(2-21,\ -7)=(-19,\ -7). \]
+平移不改變縱坐標，故 $y$ 仍是 $-7$；<br>只有橫坐標由 $2$ 減至 $-19$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求兩線斜率，檢查乘積</div>
+      <div class="rule">
+        <span class="rule-name">垂直的條件</span>
+        <span class="rule-math">\(m_{1}m_{2}=-1\)</span>
+        <span class="rule-why">兩條非鉛垂線的斜率乘積等於 $-1$ 時，兩線互相垂直。</span>
+      </div>
+      \[ m_{PQ}=\frac{5-(-7)}{-3-2}=\frac{12}{-5}=-\frac{12}{5}. \]
+\[ m_{P'Q'}=\frac{3-(-7)}{5-(-19)}=\frac{10}{24}=\frac{5}{12}. \]
+\[ m_{PQ}\times m_{P'Q'}=-\frac{12}{5}\times\frac{5}{12}=-1. \]
+兩線斜率都存在且乘積為 $-1$，<br>故 $PQ\perp P'Q'$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $P'(5,\ 3)$、$Q'(-19,\ -7)$ (b) $m_{PQ}=-\dfrac{12}{5}$、$m_{P'Q'}=\dfrac{5}{12}$，兩者之積為 $-1$，故 $PQ\perp P'Q'$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $P$ 與點 $Q$ 的坐標分別為 $(-1,\ 0)$ 與 $(0,\ -4)$。$P$ 繞原點 $O$ 按逆時針方向旋轉 $270^{\circ}$ 至 $P'$，$Q$ 向左平移 $20$ 個單位至 $Q'$。<br>
+(a) 求 $P'$ 與 $Q'$ 的坐標。<br>
+(b) 證明 $PQ\perp P'Q'$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 旋轉：$(x,\ y)\mapsto(y,\ -x)$，故 $P'=(0,\ -(-1))=(0,\ 1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 平移：$Q'=(0-20,\ -4)=(-20,\ -4)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m_{PQ}=\dfrac{-4-0}{0-(-1)}=-4$，$m_{P'Q'}=\dfrac{1-(-4)}{0-(-20)}=\dfrac{5}{20}=\dfrac{1}{4}$，乘積 $(-4)\times\dfrac{1}{4}=-1$，故 $PQ\perp P'Q'$。</div>
+          <div class="p-ans">答案：<br>(a) $P'(0,\ 1)$、$Q'(-20,\ -4)$ (b) 兩斜率之積為 $-1$，故 $PQ\perp P'Q'$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

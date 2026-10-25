@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第5題 · 公式主項變換</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第5題</span>
+    <h1>公式主項變換</h1>
+    <p class="sub">(a) 2 分 (b) 2 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮公式
+\[ 2(3m+n)=m+7. \]
+(a) 令 $n$ 成為上述公式的主項。<br>
+(b) 若 $m$ 的值增加 $2$，寫出 $n$ 的值的改變。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先展開括號</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        <span class="rule-math">\(a(b+c)=ab+ac\)</span>
+        <span class="rule-why">$n$ 被困在括號內，先把括號展開，才能把含 $n$ 的項分離出來。</span>
+      </div>
+      把括號外的 $2$ 乘入括號每一項：
+\[ 2(3m+n)=6m+2n. \]
+故原公式化為
+\[ 6m+2n=m+7. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 移項後除以 $n$ 的係數</div>
+      <div class="rule">
+        <span class="rule-name">一元一次方程的移項法則</span>
+        <span class="rule-math">\(ax+b=c\ \Longrightarrow\ x=\dfrac{c-b}{a}\quad(a\neq 0)\)</span>
+        <span class="rule-why">把 $6m$ 移去右邊後，兩邊同除以 $n$ 的係數 $2$，$n$ 便成為主項。</span>
+      </div>
+      兩邊同減 $6m$：
+\[ 2n=m+7-6m=7-5m. \]
+兩邊同除以 $2$：
+\[ n=\frac{7-5m}{2}. \]
+$6m$ 與 $m$ 是同類項，<br>合併後得 $-5m$，不要寫成 $7-m$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 以 $m+2$ 取代 $m$，求改變量</div>
+      <div class="rule">
+        <span class="rule-name">改變量</span>
+        <span class="rule-math">\(\text{change}=n_{\text{new}}-n_{\text{old}}\)</span>
+        <span class="rule-why">比較新舊兩個 $n$ 值，所有含 $m$ 的項會相消，只剩一個常數。</span>
+      </div>
+      以 $m+2$ 取代 $m$（記得加括號）：
+\[ n_{\text{new}}=\frac{7-5(m+2)}{2}=\frac{7-5m-10}{2}=\frac{-5m-3}{2}. \]
+\[ n_{\text{new}}-n_{\text{old}}=\frac{-5m-3-(7-5m)}{2}=\frac{-10}{2}=-5. \]
+故 $n$ 的值減少 $5$（改變量為 $-5$），<br>且與 $m$ 原來的取值無關。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $n=\dfrac{7-5m}{2}$ (b) $n$ 的值減少 $5$（改變量為 $-5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮公式
+\[ 2(5m+n)=3m+8. \]
+(a) 令 $n$ 成為公式的主項。<br>
+(b) 若 $m$ 的值增加 $4$，寫出 $n$ 的值的改變。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開括號：$10m+2n=3m+8$。</div>
+          <div class="p-step"><b>第 2 步.</b> 移項：$2n=8-7m$，兩邊除以 $2$ 得 $n=\dfrac{8-7m}{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 以 $m+4$ 取代 $m$：$n_{\text{new}}=\dfrac{8-7(m+4)}{2}=\dfrac{-7m-20}{2}$，改變量 $=\dfrac{-7m-20-(8-7m)}{2}=\dfrac{-28}{2}=-14$。</div>
+          <div class="p-ans">答案：<br>(a) $n=\dfrac{8-7m}{2}$ (b) $n$ 的值減少 $14$（改變量為 $-14$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q4.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q6.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

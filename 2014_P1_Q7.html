@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第7題 · 餘式與因式定理</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第7題</span>
+    <h1>餘式與因式定理</h1>
+    <p class="sub">(a) 2 分 (b) 3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=4x^{3}-5x^{2}-18x+c$，其中 $c$ 為常數。當 $f(x)$ 除以 $x-2$ 時，餘數為 $-33$。<br>
+(a) $x+1$ 是否 $f(x)$ 的因式？試解釋。<br>
+(b) 有人聲稱方程 $f(x)=0$ 的所有根都是有理數。你是否同意？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用餘式定理求 $c$</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        <span class="rule-math">\(f(x)=(x-a)Q(x)+f(a)\)</span>
+        <span class="rule-why">除以 $x-2$ 的餘數就是 $f(2)$，而題目給出這個餘數為 $-33$。</span>
+      </div>
+      \[ f(2)=4(2)^{3}-5(2)^{2}-18(2)+c=32-20-36+c=-24+c. \]
+由 $f(2)=-33$：
+\[ -24+c=-33\quad\Longrightarrow\quad c=-9. \]
+故 $f(x)=4x^{3}-5x^{2}-18x-9$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用因式定理測試 $x+1$</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        <span class="rule-math">\((x-a)\ \text{is a factor of}\ f(x)\;\Longleftrightarrow\;f(a)=0\)</span>
+        <span class="rule-why">因為 $x+1=x-(-1)$，所以只需檢查 $f(-1)$ 是否等於 $0$。</span>
+      </div>
+      取 $a=-1$：
+\[ f(-1)=4(-1)^{3}-5(-1)^{2}-18(-1)-9=-4-5+18-9=0. \]
+餘數為 $0$，由因式定理，$x+1$ 是 $f(x)$ 的因式。<br>
+（$-5(-1)^{2}=-5$，負號只在 $(-1)^{3}$ 那項出現，計算時要小心。<br>）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 完全分解，檢查所有根</div>
+      <div class="rule">
+        <span class="rule-name">零乘積性質</span>
+        <span class="rule-math">\(AB=0\ \Longrightarrow\ A=0\ \text{or}\ B=0\)</span>
+        <span class="rule-why">把 $f(x)$ 寫成一次因式的乘積後，每個因式等於 $0$ 就給出一個根。</span>
+      </div>
+      由 (a) 知 $x+1$ 是因式，長除或對比係數得
+\[ f(x)=(x+1)(4x^{2}-9x-9). \]
+再把二次式分解：$4x^{2}-9x-9=(x-3)(4x+3)$，<br>故
+\[ f(x)=(x+1)(x-3)(4x+3). \]
+由零乘積性質，$f(x)=0$ 的根為
+\[ x=-1,\qquad x=3,\qquad x=-\frac{3}{4}. \]
+三個根都是整數或分數，<br>即全部都是有理數，故同意該聲稱。<br>
+（驗算：$f(3)=108-45-54-9=0$，$f\left(-\tfrac{3}{4}\right)=-\tfrac{27}{16}-\tfrac{45}{16}+\tfrac{27}{2}-9=-\tfrac{72}{16}+\tfrac{72}{16}=0$。<br>）
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 是：由餘式定理得 $c=-9$，且 $f(-1)=0$，故 $x+1$ 是 $f(x)$ 的因式 (b) 同意：$f(x)=(x+1)(x-3)(4x+3)$，三根為 $-1$、$3$、$-\dfrac{3}{4}$，全部都是有理數</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=2x^{3}-3x^{2}-8x+c$，其中 $c$ 為常數。當 $f(x)$ 除以 $x-2$ 時，餘數為 $-15$。<br>
+(a) 求 $c$。<br>
+(b) $x+1$ 是否 $f(x)$ 的因式？試解釋。<br>
+(c) 解方程 $f(x)=0$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 餘式定理：$f(2)=16-12-16+c=-12+c=-15$，故 $c=-3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 因式定理：$f(-1)=-2-3+8-3=0$，故 $x+1$ 是 $f(x)$ 的因式。</div>
+          <div class="p-step"><b>第 3 步.</b> 分解：$f(x)=(x+1)(2x^{2}-5x-3)=(x+1)(x-3)(2x+1)$，故 $x=-1$、$x=3$、$x=-\dfrac{1}{2}$。</div>
+          <div class="p-ans">答案：<br>(a) $c=-3$ (b) 是，因為 $f(-1)=0$ (c) $x=-1$、$x=3$、$x=-\dfrac{1}{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

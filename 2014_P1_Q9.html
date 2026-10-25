@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第9題 · 相似三角形</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷一 · 第9題</span>
+    <h1>相似三角形</h1>
+    <p class="sub">(a) 2 分 (b) 3 分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 1 中，$D$ 是位於 $AC$ 上的一點，使得 $\angle BAC=\angle CBD$。<br>
+(a) 證明 $\triangle ABC\sim\triangle BDC$。<br>
+(b) 假設 $AC=25$ cm、$BC=20$ cm 及 $BD=12$ cm。$\triangle BCD$ 是否一個直角三角形？試解釋。
+    </div>
+    <figure class="fig"><img src="figures/2014_P1_Q9.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 找出兩對相等的角，用 AAA</div>
+      <div class="rule">
+        <span class="rule-name">AAA 相似判定</span>
+        <span class="rule-math">\(\angle A=\angle A',\ \angle B=\angle B'\ \Longrightarrow\ \triangle ABC\sim\triangle A'B'C'\)</span>
+        <span class="rule-why">兩對對應角相等已足以判定兩個三角形相似，第三對角必然也相等。</span>
+      </div>
+      在 $\triangle ABC$ 與 $\triangle BDC$ 中：<br>
+（已知）
+\[ \angle BAC=\angle CBD, \]
+（公共角）
+\[ \angle ACB=\angle BCD. \]
+兩對對應角相等，故第三對角亦相等，<br>兩三角形等角。<br>
+由 AAA，
+\[ \triangle ABC\sim\triangle BDC. \]
+對應次序是 $A\leftrightarrow B$、$B\leftrightarrow D$、$C\leftrightarrow C$，<br>寫相似時不可顛倒。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 用對應邊成比例求 $CD$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的對應邊成比例</span>
+        <span class="rule-math">\(\dfrac{AB}{A'B'}=\dfrac{BC}{B'C'}=\dfrac{CA}{C'A'}\)</span>
+        <span class="rule-why">由 $A\leftrightarrow B$、$B\leftrightarrow D$、$C\leftrightarrow C$ 可知 $BC$ 對應 $DC$、$AC$ 對應 $BC$。</span>
+      </div>
+      按對應次序：$\triangle ABC$ 的 $BC$ 對應 $\triangle BDC$ 的 $DC$，<br>而 $AC$ 對應 $BC$，故
+\[ \frac{CD}{BC}=\frac{BC}{AC}. \]
+代入 $BC=20$、$AC=25$：
+\[ \frac{CD}{20}=\frac{20}{25}\quad\Longrightarrow\quad CD=\frac{20\times20}{25}=16\ \text{cm}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用畢氏定理的逆定理判斷</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        <span class="rule-math">\(a^{2}+b^{2}=c^{2}\ \Longrightarrow\ \text{the angle opposite }c\text{ is }90^{\circ}\)</span>
+        <span class="rule-why">若較短兩邊的平方和等於最長邊的平方，則最長邊所對的角是直角。</span>
+      </div>
+      在 $\triangle BCD$ 中，$BD=12$、$CD=16$、$BC=20$，最長邊是 $BC$：
+\[ BD^{2}+CD^{2}=12^{2}+16^{2}=144+256=400, \]
+\[ BC^{2}=20^{2}=400. \]
+因 $BD^{2}+CD^{2}=BC^{2}$，<br>由畢氏定理的逆定理，$BC$ 所對的角為直角，即 $\angle BDC=90^{\circ}$。<br>
+故 $\triangle BCD$ 是一個直角三角形。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\angle BAC=\angle CBD$（已知）且 $\angle ACB=\angle BCD$（公共角），由 AAA 得 $\triangle ABC\sim\triangle BDC$ (b) 是：由相似得 $CD=16$ cm，而 $12^{2}+16^{2}=20^{2}=BC^{2}$，故 $\angle BDC=90^{\circ}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $D$ 是位於 $AC$ 上的一點，使得 $\angle BAC=\angle CBD$。已知 $\triangle ABC\sim\triangle BDC$，且 $AC=20$ cm、$BC=16$ cm、$AB=12$ cm。<br>
+(a) 求 $CD$ 的長度。<br>
+(b) $\triangle BCD$ 是否一個直角三角形？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由相似，$\dfrac{CD}{BC}=\dfrac{BC}{AC}$，故 $CD=\dfrac{16\times16}{20}=12.8\ \text{cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由相似，$\dfrac{AB}{BD}=\dfrac{AC}{BC}=\dfrac{20}{16}=1.25$，故 $BD=\dfrac{12}{1.25}=9.6\ \text{cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $9.6^{2}+12.8^{2}=92.16+163.84=256=16^{2}=BC^{2}$，故 $\angle BDC=90^{\circ}$，$\triangle BCD$ 是直角三角形。</div>
+          <div class="p-ans">答案：<br>(a) $CD=12.8$ cm (b) 是：$9.6^{2}+12.8^{2}=16^{2}$，故 $\angle BDC=90^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P1_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P1_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
