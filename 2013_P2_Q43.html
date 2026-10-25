@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第43題 · 三角形的外心</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第43題</span>
+    <h1>三角形的外心</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $O$ 為原點。若點 $A$ 與 $B$ 的坐標分別為 $(0,12)$ 及 $(30,12)$，則 $\triangle OAB$ 的外心的 $y$ 坐標為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$6$</li><li><span class="ol">B</span>$8$</li><li><span class="ol">C</span>$12$</li><li><span class="ol">D</span>$15$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由坐標認出這是一個直角三角形</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形的外心</span>
+        <span class="rule-math">\(\text{circumcentre}=\text{mid-point of the hypotenuse}\)</span>
+        <span class="rule-why">直角三角形的斜邊是外接圓的直徑，圓心就是斜邊中點。</span>
+      </div>
+      三點為
+\[ O=(0,0),\qquad A=(0,12),\qquad B=(30,12). \]
+$O$ 與 $A$ 的 $x$ 坐標都是 $0$，<br>所以 $OA$ 在 $y$ 軸上，垂直於水平線 $AB$。<br>
+因此 $\angle OAB=90^\circ$，斜邊是 $OB$。<br>
+外心不必解聯立方程，直接用「斜邊中點」的性質即可。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用中點公式求斜邊 $OB$ 的中點</div>
+      <div class="rule">
+        <span class="rule-name">中點公式</span>
+        <span class="rule-math">\(M=\left(\dfrac{x_{1}+x_{2}}{2},\ \dfrac{y_{1}+y_{2}}{2}\right)\)</span>
+        <span class="rule-why">外心是斜邊中點，代入 $O$ 與 $B$ 的坐標即可。</span>
+      </div>
+      斜邊 $OB$ 的端點是 $O(0,0)$ 與 $B(30,12)$，中點為
+\[ M=\left(\frac{0+30}{2},\ \frac{0+12}{2}\right)=(15,\ 6). \]
+所以外心是 $C(15,6)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">讀出所求的 $y$ 坐標並核對半徑</div>
+      <div class="rule">
+        <span class="rule-name">外心到三頂點等距</span>
+        <span class="rule-math">\(CO=CA=CB=R\)</span>
+        <span class="rule-why">外心是外接圓圓心，用它到三點的距離相等來檢驗中點是否正確。</span>
+      </div>
+      外心的 $y$ 坐標是 $6$。<br>
+核對：$CO=\sqrt{15^{2}+6^{2}}=\sqrt{225+36}=\sqrt{261}$；<br>
+$CA=\sqrt{15^{2}+(6-12)^{2}}=\sqrt{225+36}=\sqrt{261}$；<br>
+$CB=\sqrt{(15-30)^{2}+(6-12)^{2}}=\sqrt{225+36}=\sqrt{261}$。<br>
+三者相等，確認 $C(15,6)$ 確為外心。<br>
+對照選項，答案為 <b>A</b>。<br>
+選項 C 的 $12$ 正是 $A$、$B$ 兩點的 $y$ 坐標，<br>那是把邊上的點誤當成外心。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$6$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $O$ 為原點。若點 $A$ 與 $B$ 的坐標分別為 $(0,16)$ 及 $(12,16)$，則 $\triangle OAB$ 的外心的 $y$ 坐標為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$6$</li><li><span class="ol">B</span>$8$</li><li><span class="ol">C</span>$10$</li><li><span class="ol">D</span>$16$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $OA$ 在 $y$ 軸上，$AB$ 水平，故 $\angle OAB=90^\circ$，<br>斜邊為 $OB$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜邊中點 $=\left(\dfrac{0+12}{2},\ \dfrac{0+16}{2}\right)=(6,8)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 外心的 $y$ 坐標為 $8$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$8$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q42.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q44.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

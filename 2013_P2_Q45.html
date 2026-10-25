@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第45題 · 變異數的線性變換</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第45題</span>
+    <h1>變異數的線性變換</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若五個數 $x_1$、$x_2$、$x_3$、$x_4$ 及 $x_5$ 的變異數為 $13$，則五個數
+\[ 3x_1+4,\quad 3x_2+4,\quad 3x_3+4,\quad 3x_4+4\quad\text{and}\quad 3x_5+4 \]
+的變異數為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$39$</li><li><span class="ol">B</span>$43$</li><li><span class="ol">C</span>$117$</li><li><span class="ol">D</span>$121$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">平移不改變分散程度</div>
+      <div class="rule">
+        <span class="rule-name">加常數後的變異數</span>
+        <span class="rule-math">\(\mathrm{Var}(X+b)=\mathrm{Var}(X)\)</span>
+        <span class="rule-why">每個數都加同一個 $4$，整體只是平移，離散程度完全不變。</span>
+      </div>
+      把 $x_i$ 換成 $x_i+4$，平均值也跟著加 $4$，<br>每個數與平均值的差距 $x_i-\bar{x}$ 保持不變：
+\[ (x_i+4)-(\bar{x}+4)=x_i-\bar{x}. \]
+所以變異數不變。<br>
+換句話說，題目裡的「$+4$」對答案毫無影響，可以先忽略。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">乘常數使變異數乘上平方</div>
+      <div class="rule">
+        <span class="rule-name">乘常數後的變異數</span>
+        <span class="rule-math">\(\mathrm{Var}(aX)=a^{2}\,\mathrm{Var}(X)\)</span>
+        <span class="rule-why">每個差距都放大 $a$ 倍，而變異數用的是差距的平方，所以要乘 $a^2$。</span>
+      </div>
+      把每個數乘以 $3$，相應的差距也乘以 $3$：
+\[ 3x_i-3\bar{x}=3(x_i-\bar{x}). \]
+平方後每個平方差放大 $9$ 倍，<br>平均之後變異數亦放大 $9$ 倍。<br>
+所以乘 $3$ 的效果是乘 $3^2=9$，不是乘 $3$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併兩步得出答案</div>
+      <div class="rule">
+        <span class="rule-name">線性變換的變異數</span>
+        <span class="rule-math">\(\mathrm{Var}(aX+b)=a^{2}\,\mathrm{Var}(X)\)</span>
+        <span class="rule-why">把「先乘 $a$ 再加 $b$」兩步合成一條公式，$a=3$、$b=4$ 直接代入。</span>
+      </div>
+      對 $3x_i+4$ 而言，$a=3$、$b=4$，故
+\[ \mathrm{Var}(3X+4)=3^{2}\times13=9\times13=117. \]
+對照選項，<br>答案為 <b>C</b>。<br>
+選項 A 的 $39=3\times13$ 是以為變異數與乘數成正比；<br>選項 D 的 $121=(3+8)^2$ 之類的湊算、選項 B 的 $43=3\times13+4$ 則是把 $+4$ 直接加到變異數上，<br>都是常見錯誤。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$117$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若四個數 $x_1$、$x_2$、$x_3$、$x_4$ 的變異數為 $5$，則 $2x_1-3$、$2x_2-3$、$2x_3-3$、$2x_4-3$ 的變異數為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$7$</li><li><span class="ol">B</span>$10$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$25$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 減 $3$ 只是平移，不改變變異數。</div>
+          <div class="p-step"><b>第 2 步.</b> 乘 $2$ 使變異數乘 $2^2=4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\mathrm{Var}(2X-3)=4\times5=20$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q44.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

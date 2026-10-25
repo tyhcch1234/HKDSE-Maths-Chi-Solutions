@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第44題 · 排列與乘法原理</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第44題</span>
+    <h1>排列與乘法原理</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若一個八位電話號碼的首三位數字由 $5,6,9$ 的一個排列組成，而末五位數字由 $2,3,4,7,8$ 的一個排列組成，則可組成多少個不同的八位電話號碼？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$15$</li><li><span class="ol">B</span>$126$</li><li><span class="ol">C</span>$720$</li><li><span class="ol">D</span>$40\,320$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把號碼分成兩個獨立的組合</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">\(N=m\times n\)</span>
+        <span class="rule-why">首三位與末五位用完全不同的數字，兩部分的選擇互不影響，總數就是相乘。</span>
+      </div>
+      首三位只取自 $\{5,6,9\}$，末五位只取自 $\{2,3,4,7,8\}$，兩組數字沒有重疊。<br>
+因此可以先數首三位有多少種排法，再數末五位有多少種排法，最後相乘。<br>
+號碼的每一位都固定屬於某一組，不會出現「同一個數字被兩邊同時使用」的情況。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數首三位數字的排列數</div>
+      <div class="rule">
+        <span class="rule-name">全排列</span>
+        <span class="rule-math">\({}^{n}P_{n}=n!\)</span>
+        <span class="rule-why">三個數字各用一次而次序重要，正是 $3$ 個相異物的全排列。</span>
+      </div>
+      首三位要放入 $5$、$6$、$9$ 三個相異數字，<br>次序不同就是不同的號碼：
+\[ 3!=3\times2\times1=6. \]
+例如 $569\ldots$ 與 $659\ldots$ 是兩個不同的電話號碼。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">數末五位的排列數並相乘</div>
+      <div class="rule">
+        <span class="rule-name">階乘</span>
+        <span class="rule-math">\(n!=n(n-1)\cdots\times1\)</span>
+        <span class="rule-why">五位數字全用一次，排列數就是 $5!$。</span>
+      </div>
+      末五位要放入 $2,3,4,7,8$ 五個相異數字：
+\[ 5!=5\times4\times3\times2\times1=120. \]
+由乘法原理，<br>號碼總數為
+\[ 6\times120=720. \]
+對照選項，答案為 <b>C</b>。<br>
+選項 A 的 $15$ 是把 $3!$ 與 $5!$ 誤當成 $3\times5$；<br>選項 B 的 $126$ 是組合數 $\binom{9}{4}$ 之類的混淆；<br>選項 D 的 $40\,320$ 是 $8!$，把八個位當成可以任意互換。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$720$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若一個七位編號的首兩位由 $1,4$ 的一個排列組成，而末五位由 $2,3,5,6,7$ 的一個排列組成，則可組成多少個不同的七位編號？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$120$</li><li><span class="ol">B</span>$240$</li><li><span class="ol">C</span>$5040$</li><li><span class="ol">D</span>$14$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 首兩位用 $1,4$，排列數 $2!=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 末五位用 $2,3,5,6,7$，排列數 $5!=120$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩部分獨立，總數 $2\times120=240$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$240$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q43.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q45.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

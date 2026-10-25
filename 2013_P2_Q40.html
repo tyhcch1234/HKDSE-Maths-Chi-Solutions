@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第40題 · 正四面體的體積</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第40題</span>
+    <h1>正四面體的體積</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若一個正四面體的高為 $2\text{ cm}$，則該四面體的體積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2\text{ cm}^3$</li><li><span class="ol">B</span>$\sqrt{3}\text{ cm}^3$</li><li><span class="ol">C</span>$\sqrt{6}\text{ cm}^3$</li><li><span class="ol">D</span>$3\sqrt{3}\text{ cm}^3$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設棱長，寫出正四面體的高</div>
+      <div class="rule">
+        <span class="rule-name">正四面體的高</span>
+        <span class="rule-math">\(h=\dfrac{\sqrt{6}}{3}\,\ell\)</span>
+        <span class="rule-why">高與棱長成正比，知道高就可以反過來求棱長。</span>
+      </div>
+      設正四面體每一條棱長為 $\ell\text{ cm}$。<br>
+設 $A$ 為頂點、$BCD$ 為底面，$H$ 為 $A$ 到底面的垂足。<br>
+因四面體是正四面體，$H$ 就是正三角形 $BCD$ 的中心，而
+\[ BH=\frac{2}{3}\times\frac{\sqrt{3}}{2}\ell=\frac{\sqrt{3}}{3}\ell. \]
+在直角三角形 $ABH$ 中用畢氏定理：
+\[ h^{2}=\ell^{2}-\frac{\ell^{2}}{3}=\frac{2}{3}\ell^{2}\quad\Longrightarrow\quad h=\frac{\sqrt{6}}{3}\ell. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由高 $2\text{ cm}$ 反求棱長</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(a^{2}+b^{2}=c^{2}\)</span>
+        <span class="rule-why">$\triangle ABH$ 是直角三角形，用勾股關係把棱長、底面外接半徑與高連起來。</span>
+      </div>
+      把 $h=2$ 代入：
+\[ 2=\frac{\sqrt{6}}{3}\ell\quad\Longrightarrow\quad \ell=\frac{6}{\sqrt{6}}=\sqrt{6}. \]
+核對：$\ell^2=6$，而 $h^2=\dfrac{2}{3}(6)=4$，<br>故 $h=2$，與題設相符。<br>
+棱長是 $\sqrt{6}\text{ cm}$，不是整數，所以選項中的整數值多半是陷阱。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入正四面體體積公式</div>
+      <div class="rule">
+        <span class="rule-name">正四面體體積</span>
+        <span class="rule-math">\(V=\dfrac{\sqrt{2}}{12}\,\ell^{3}\)</span>
+        <span class="rule-why">棱長已知，直接代入公式即可，不必再分底面積與高兩步。</span>
+      </div>
+      代入 $\ell=\sqrt{6}$：
+\[ \ell^{3}=(\sqrt{6})^{3}=6\sqrt{6}, \]
+\[ V=\frac{\sqrt{2}}{12}\times6\sqrt{6}=\frac{6\sqrt{12}}{12}=\frac{6\times2\sqrt{3}}{12}=\sqrt{3}. \]
+所以體積為 $\sqrt{3}\text{ cm}^3$，<br>答案為 <b>B</b>。<br>
+也可用 $V=\dfrac{1}{3}\times$ 底面積 $\times$ 高核對：底面積 $=\dfrac{\sqrt{3}}{4}(6)=\dfrac{3\sqrt{3}}{2}$，而 $\dfrac{1}{3}\times\dfrac{3\sqrt{3}}{2}\times2=\sqrt{3}$，<br>一致。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\sqrt{3}\text{ cm}^3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若一個正四面體的高為 $2\sqrt{6}\text{ cm}$，則該四面體的體積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$18\sqrt{2}\text{ cm}^3$</li><li><span class="ol">B</span>$24\sqrt{3}\text{ cm}^3$</li><li><span class="ol">C</span>$36\sqrt{2}\text{ cm}^3$</li><li><span class="ol">D</span>$54\text{ cm}^3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $h=\dfrac{\sqrt{6}}{3}\ell$ 得 $2\sqrt{6}=\dfrac{\sqrt{6}}{3}\ell$，故 $\ell=6$。</div>
+          <div class="p-step"><b>第 2 步.</b> 棱長 $6$，$\ell^3=216$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V=\dfrac{\sqrt{2}}{12}\times216=18\sqrt{2}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$18\sqrt{2}\text{ cm}^3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q39.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q41.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

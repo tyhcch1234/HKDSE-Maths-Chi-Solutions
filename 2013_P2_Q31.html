@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第31題 · 多項式最小公倍式</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第31題</span>
+    <h1>多項式最小公倍式</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $a^2+4a+4$、$a^2-4$ 與 $a^3+8$ 的最小公倍式為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$a+2$</li><li><span class="ol">B</span>$(a-2)(a+2)^2(a^2-2a+4)$</li><li><span class="ol">C</span>$(a-2)(a+2)^2(a^2+2a+4)$</li><li><span class="ol">D</span>$(a-2)(a+2)^4(a^2-2a+4)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把前兩個多項式因式分解</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">\(a^{2}-b^{2}=(a+b)(a-b)\)</span>
+        <span class="rule-why">$a^2-4$ 是兩個平方相減，只有平方差公式才拆得開。</span>
+      </div>
+      求最小公倍式之前，三式都必須先化成不能再分解的因式。<br>
+第一個是完全平方：
+\[ a^2+4a+4=(a+2)^2. \]
+第二個是平方差，取 $a=a$、$b=2$：
+\[ a^2-4=a^2-2^2=(a-2)(a+2). \]
+留意 $(a+2)$ 在兩式都出現，<br>但次數一個是 $2$、一個是 $1$，這個差別正是本題的關鍵。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用立方和拆開 $a^3+8$</div>
+      <div class="rule">
+        <span class="rule-name">立方和</span>
+        <span class="rule-math">\(a^{3}+b^{3}=(a+b)(a^{2}-ab+b^{2})\)</span>
+        <span class="rule-why">$a^3+8=a^3+2^3$ 沒有 $a-2$ 這個因式，要用立方和才拆得開。</span>
+      </div>
+      取 $a=a$、$b=2$：
+\[ a^3+8=a^3+2^3=(a+2)(a^2-2a+4). \]
+二次因式 $a^2-2a+4$ 的判別式：
+\[ (-2)^2-4(1)(4)=-12<0, \]
+所以在實數範圍內不可再分解。<br>
+至此三式的因式分解為 $(a+2)^2$、$(a-2)(a+2)$、$(a+2)(a^2-2a+4)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">每個因式取最高次冪再相乘</div>
+      <div class="rule">
+        <span class="rule-name">最小公倍式</span>
+        <span class="rule-math">\(\text{L.C.M.}=f_{1}^{\,m_{1}}f_{2}^{\,m_{2}}\cdots f_{k}^{\,m_{k}}\)</span>
+        <span class="rule-why">同一個因式在不同式子出現不同次數時，公倍式取其中最高的次數。</span>
+      </div>
+      逐個因式看它在三式中出現的最高次數：<br>
+$(a-2)$ 只在第二式出現一次，取 $1$ 次；<br>
+$(a+2)$ 在第一式出現兩次、第二與第三式各一次，取 $2$ 次；<br>
+$(a^2-2a+4)$ 只在第三式出現一次，取 $1$ 次。<br>
+相乘得
+\[ \text{L.C.M.}=(a-2)(a+2)^2(a^2-2a+4). \]
+對照選項，答案為 <b>B</b>。<br>
+選項 D 把 $(a+2)$ 取到 $4$ 次，那是把兩式的次數相加，<br>不是取最大；<br>選項 C 的 $a^2+2a+4$ 是 $a^3-8$ 的因式，不屬於 $a^3+8$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$(a-2)(a+2)^2(a^2-2a+4)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $b^2-9$、$b^2+6b+9$ 與 $b^3-27$ 的最小公倍式。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(b-3)(b+3)^2(b^2+3b+9)$</li><li><span class="ol">B</span>$(b-3)^2(b+3)(b^2+3b+9)$</li><li><span class="ol">C</span>$(b-3)(b+3)^2(b^2-3b+9)$</li><li><span class="ol">D</span>$(b+3)^2(b^2+3b+9)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 平方差與完全平方：$b^2-9=(b-3)(b+3)$，$b^2+6b+9=(b+3)^2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 立方差：$b^3-27=b^3-3^3=(b-3)(b^2+3b+9)$，其中 $b^2+3b+9$ 的判別式 $9-36<0$，<br>不可再分解。</div>
+          <div class="p-step"><b>第 3 步.</b> 三個因式 $(b-3)$、$(b+3)$、$(b^2+3b+9)$ 的最高次數分別為 $1$、$2$、$1$，<br>故最小公倍式為 $(b-3)(b+3)^2(b^2+3b+9)$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$(b-3)(b+3)^2(b^2+3b+9)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q30.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q32.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

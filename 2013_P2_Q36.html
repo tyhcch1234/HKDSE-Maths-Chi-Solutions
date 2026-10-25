@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第36題 · 複數的冪</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第36題</span>
+    <h1>複數的冪</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $i+2i^{2}+3i^{3}+4i^{4}$ 的實部是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$-6$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">記住 $i$ 的冪以 4 為周期</div>
+      <div class="rule">
+        <span class="rule-name">$i$ 的冪的循環</span>
+        <span class="rule-math">\(i^{4k}=1,\quad i^{4k+1}=i,\quad i^{4k+2}=-1,\quad i^{4k+3}=-i\)</span>
+        <span class="rule-why">$i^1$ 到 $i^4$ 只有四個值，之後每四次重複一次，所以任何次冪都能立刻化到這四個值之一。</span>
+      </div>
+      由 $i^{2}=-1$ 可得
+\[ i^{1}=i,\qquad i^{2}=-1,\qquad i^{3}=-i,\qquad i^{4}=1. \]
+四次之後又回到 $i$，<br>所以只需看指數除以 $4$ 的餘數。<br>
+本題四個指數剛好是 $1$ 至 $4$，直接查表即可，不必再往下推。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項化簡，只留下實數部分</div>
+      <div class="rule">
+        <span class="rule-name">虛數單位的定義</span>
+        <span class="rule-math">\(i^{2}=-1\)</span>
+        <span class="rule-why">所有化簡都由此出發：$i^2$ 換成 $-1$，$i^3$ 換成 $-i$。</span>
+      </div>
+      把每一項的 $i$ 的冪換成數值，係數保持不動：
+\[ i=i,\qquad 2i^{2}=2(-1)=-2, \]
+\[ 3i^{3}=3(-i)=-3i,\qquad 4i^{4}=4(1)=4. \]
+留意 $i$ 與 $i^3$ 兩項仍是虛數，<br>不會影響實部；<br>只有 $i^2$ 與 $i^4$ 兩項會給出實數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">實部與虛部分開相加</div>
+      <div class="rule">
+        <span class="rule-name">複數加法</span>
+        <span class="rule-math">\((a+bi)+(c+di)=(a+c)+(b+d)i\)</span>
+        <span class="rule-why">複數相加時實部與實部合併、虛部與虛部合併，兩者互不干擾。</span>
+      </div>
+      把四項相加，實數項與虛數項各自歸類：
+\[ i+2i^{2}+3i^{3}+4i^{4}=i-2-3i+4 \]
+\[ =\underbrace{(-2)+4}_{\text{real}}+\underbrace{(1-3)\,i}_{\text{imaginary}}=2-2i. \]
+所以實部是 $2$，<br>答案為 <b>A</b>。<br>
+選項 B 的 $-2$ 只是 $2i^{2}$ 那一項的值；<br>選項 C 的 $6$ 是把係數 $2$ 與 $4$ 相加時把 $i^2=-1$ 的負號丟掉了。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $2i+3i^{2}+4i^{3}+5i^{4}+6i^{5}$ 的虛部是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 用周期化簡：$i^5=i$，故各項依次為 $2i$、$-3$、$-4i$、$5$、$6i$。</div>
+          <div class="p-step"><b>第 2 步.</b> 實數項為 $-3+5=2$，虛數項為 $(2-4+6)i=4i$。</div>
+          <div class="p-step"><b>第 3 步.</b> 虛部為 $4$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q35.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q37.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

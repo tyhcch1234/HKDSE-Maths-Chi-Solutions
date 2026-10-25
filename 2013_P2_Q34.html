@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第34題 · 對數方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第34題</span>
+    <h1>對數方程</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $x-\log y=x^{2}-\log y^{2}-10=2$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$100$</li><li><span class="ol">B</span>$2$ 或 $-4$</li><li><span class="ol">C</span>$\dfrac{1}{100}$ 或 $10000$</li><li><span class="ol">D</span>$\dfrac{1}{10000}$ 或 $100$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把連等式拆成兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">連等式</span>
+        <span class="rule-math">\(A=B=C\iff A=B\ \text{and}\ B=C\)</span>
+        <span class="rule-why">$A=B=C$ 寫法只是省略，其實代表兩條獨立的方程。</span>
+      </div>
+      連等式 $x-\log y=x^{2}-\log y^{2}-10=2$ 要拆成兩條：
+\[ \begin{cases} x-\log y=2 & \cdots(1)\\[2pt] x^{2}-\log y^{2}-10=2 & \cdots(2)\end{cases} \]
+第 $(2)$ 式右邊的 $-10$ 可以移項，下一步連同 $\log y^{2}$ 一起處理。<br>
+未知數有 $x$ 與 $y$ 兩個，但有兩條方程，所以有機會定出唯一解。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用冪律化簡，只留下 $\log y$</div>
+      <div class="rule">
+        <span class="rule-name">對數冪律</span>
+        <span class="rule-math">\(\log y^{k}=k\log y\)</span>
+        <span class="rule-why">把 $\log y^{2}$ 寫成 $2\log y$，方程便只剩 $\log y$ 一個未知量。</span>
+      </div>
+      由 $(1)$ 得
+\[ x=2+\log y. \quad\cdots(3) \]
+在 $(2)$ 中用冪律 $\log y^{2}=2\log y$，<br>並把 $10$ 移到右邊：
+\[ x^{2}-2\log y-12=0. \]
+現在方程裡只有 $x$ 與 $\log y$，<br>把 $(3)$ 代入便可消去 $x$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入得二次方程，解出 $y$</div>
+      <div class="rule">
+        <span class="rule-name">零積性質</span>
+        <span class="rule-math">\(uv=0\iff u=0\ \text{or}\ v=0\)</span>
+        <span class="rule-why">把方程因式分解後，兩個因式各自為零就得到兩個解。</span>
+      </div>
+      令 $u=\log y$，代入 $(3)$：
+\[ (2+u)^{2}-2u-12=0 \]
+\[ 4+4u+u^{2}-2u-12=0 \]
+\[ u^{2}+2u-8=0 \]
+因式分解：
+\[ (u+4)(u-2)=0\quad\Longrightarrow\quad u=-4\ \text{or}\ u=2. \]
+還原 $u=\log y$（常用對數，<br>底為 $10$）：
+\[ \log y=-4\Rightarrow y=10^{-4}=\frac{1}{10000},\qquad \log y=2\Rightarrow y=10^{2}=100. \]
+對照選項，答案為 <b>D</b>。<br>
+選項 B 的 $2$ 與 $-4$ 正是 $u$ 的兩個值，題目要的是 $y$，<br>所以必須再取 $10$ 的冪。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{1}{10000}$ 或 $100$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $x-\log y=x^{2}-\log y^{2}-3=3$，則 $y=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{10}$ 或 $\dfrac{1}{1000}$</li><li><span class="ol">B</span>$10$ 或 $1000$</li><li><span class="ol">C</span>$\dfrac{1}{10}$ 或 $1000$</li><li><span class="ol">D</span>$10$ 或 $\dfrac{1}{1000}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 拆成兩式：$x-\log y=3$ 即 $x=3+\log y$；<br>另一式整理為 $x^{2}-2\log y-6=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 令 $u=\log y$ 代入：$(3+u)^{2}-2u-6=0$，化簡得 $u^{2}+4u+3=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 因式分解 $(u+1)(u+3)=0$，得 $u=-1$ 或 $-3$，故 $y=\dfrac{1}{10}$ 或 $\dfrac{1}{1000}$，<br>答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{10}$ 或 $\dfrac{1}{1000}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q33.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q35.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

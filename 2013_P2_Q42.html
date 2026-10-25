@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第42題 · 圓與直線的位置關係</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第42題</span>
+    <h1>圓與直線的位置關係</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      求 $k$ 的取值範圍，使圓
+\[ x^{2}+y^{2}+2x-2y-7=0 \]
+與直線
+\[ 3x-4y+k=0 \]
+相交。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-8&lt; k&lt; 22$</li><li><span class="ol">B</span>$-8\le k\le 22$</li><li><span class="ol">C</span>$k&lt; -8$ 或 $k> 22$</li><li><span class="ol">D</span>$k&lt; -22$ 或 $k> 8$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用配方法求圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">\(x^{2}+y^{2}+Dx+Ey+F=0\iff\left(x+\dfrac{D}{2}\right)^{2}+\left(y+\dfrac{E}{2}\right)^{2}=\dfrac{D^{2}+E^{2}}{4}-F\)</span>
+        <span class="rule-why">圓方程化為標準式後，圓心與半徑可以直接讀出。</span>
+      </div>
+      對 $x^{2}+2x$ 與 $y^{2}-2y$ 分別配方：
+\[ (x+1)^{2}-1+(y-1)^{2}-1-7=0 \]
+\[ (x+1)^{2}+(y-1)^{2}=9. \]
+所以圓心為 $P(-1,1)$，<br>半徑
+\[ r=\sqrt{9}=3. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求圓心到直線的距離</div>
+      <div class="rule">
+        <span class="rule-name">點到直線的距離</span>
+        <span class="rule-math">\(d=\dfrac{|Ax_{0}+By_{0}+C|}{\sqrt{A^{2}+B^{2}}}\)</span>
+        <span class="rule-why">圓與直線相交與否，只看圓心到直線的距離，所以要先算出 $d$。</span>
+      </div>
+      對直線 $3x-4y+k=0$，$A=3$、$B=-4$、$C=k$，代入 $P(-1,1)$：
+\[ d=\frac{|3(-1)-4(1)+k|}{\sqrt{3^{2}+(-4)^{2}}}=\frac{|k-7|}{5}. \]
+分母 $\sqrt{9+16}=5$ 正是這條直線的「法向長度」，<br>它固定不變；<br>只有分子隨 $k$ 改變。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用相交條件解出 $k$ 的範圍</div>
+      <div class="rule">
+        <span class="rule-name">圓與直線相交的條件</span>
+        <span class="rule-math">\(d\le r\)</span>
+        <span class="rule-why">圓心到直線的距離不超過半徑時，直線才與圓有交點。</span>
+      </div>
+      相交要求 $d\le r=3$：
+\[ \frac{|k-7|}{5}\le 3\quad\Longrightarrow\quad |k-7|\le 15. \]
+即
+\[ -15\le k-7\le 15\quad\Longrightarrow\quad -8\le k\le 22. \]
+對照選項，<br>答案為 <b>B</b>。<br>
+邊界值要保留：當 $k=-8$ 或 $k=22$ 時 $d=3$，直線與圓相切，<br>只有一個交點，仍算「相交」，所以是 $\le$ 而不是 $&lt;$。<br>
+選項 A 把切點情況排除；<br>選項 D 則是把 $|k-7|\le15$ 誤解成 $k$ 與 $-15$、$15$ 比較。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$-8\le k\le 22$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $k$ 的取值範圍，使圓 $x^{2}+y^{2}-4x+2y-4=0$ 與直線 $4x-3y+k=0$ 相交。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-26\le k\le 4$</li><li><span class="ol">B</span>$-4\le k\le 26$</li><li><span class="ol">C</span>$k\le -26$ 或 $k\ge 4$</li><li><span class="ol">D</span>$-26&lt; k&lt; 4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 配方得 $(x-2)^{2}+(y+1)^{2}=9$，圓心 $(2,-1)$，半徑 $3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 點到直線距離：$d=\dfrac{|4(2)-3(-1)+k|}{5}=\dfrac{|k+11|}{5}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 由 $d\le 3$ 得 $|k+11|\le 15$，即 $-26\le k\le 4$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$-26\le k\le 4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q41.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q43.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

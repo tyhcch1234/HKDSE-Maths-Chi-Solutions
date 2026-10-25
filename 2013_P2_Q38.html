@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第38題 · 等差數列</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第38題</span>
+    <h1>等差數列</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某數列的第 $n$ 項為 $2n-19$。下列何者正確？<br>
+I. $25$ 是該數列的一項。<br>
+II. 該數列有 $10$ 個負項。<br>
+III. 該數列首 $n$ 項之和為 $n^{2}-18n$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出這是等差數列，取出首項與公差</div>
+      <div class="rule">
+        <span class="rule-name">等差數列的通項</span>
+        <span class="rule-math">\(T(n)=a+(n-1)d\)</span>
+        <span class="rule-why">$T(n)=2n-19$ 的形式與通項一致，可即時讀出 $a=-17$、$d=2$，三個敘述都靠這兩個數。</span>
+      </div>
+      首項：
+\[ T(1)=2-19=-17. \]
+相鄰兩項之差：
+\[ T(n+1)-T(n)=\bigl(2(n+1)-19\bigr)-(2n-19)=2. \]
+差為常數 $2$，<br>所以這是等差數列，$a=-17$、$d=2$。<br>
+數列為 $-17,\,-15,\,-13,\,\ldots$，每項遞增 $2$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用解方程與解不等式檢驗 I、II</div>
+      <div class="rule">
+        <span class="rule-name">一次方程與一次不等式</span>
+        <span class="rule-math">\(pn+q=0\iff n=-\dfrac{q}{p};\qquad pn+q<0\iff n<-\dfrac{q}{p}\ (p>0)\)</span>
+        <span class="rule-why">「某數是否為一項」是解方程，「有多少個負項」是解不等式，兩者都只需一次運算。</span>
+      </div>
+      檢驗 I：令 $T(n)=25$，
+\[ 2n-19=25\Rightarrow 2n=44\Rightarrow n=22. \]
+$22$ 是正整數，<br>所以 $25$ 是第 $22$ 項，敘述 I 正確。<br>
+檢驗 II：令 $T(n)<0$，
+\[ 2n-19<0\Rightarrow n<9.5. \]
+$n$ 只可取正整數，故 $n=1,2,\ldots,9$，<br>共 <b>$9$</b> 個負項。<br>
+敘述 II 說 $10$ 個，是把 $n=10$ 也算進去；<br>但 $T(10)=1>0$，不是負項，所以 II 錯誤。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用等差數列求和公式檢驗 III</div>
+      <div class="rule">
+        <span class="rule-name">等差數列首 $n$ 項和</span>
+        <span class="rule-math">\(S(n)=\dfrac{n}{2}\bigl[2a+(n-1)d\bigr]\)</span>
+        <span class="rule-why">已知 $a$ 與 $d$，代入求和公式即可核對 $n^2-18n$。</span>
+      </div>
+      代入 $a=-17$、$d=2$：
+\[ S(n)=\frac{n}{2}\bigl[2(-17)+(n-1)(2)\bigr]=\frac{n}{2}\bigl[-34+2n-2\bigr] \]
+\[ =\frac{n}{2}(2n-36)=n(n-18)=n^{2}-18n. \]
+與 III 所述一致，<br>敘述 III 正確。<br>
+只有 I 與 III 正確，答案為 <b>C</b>。<br>
+順帶核對：$S(1)=-17=T(1)$，起始值也吻合。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某數列的第 $n$ 項為 $2n-15$。下列何者正確？<br>
+I. $25$ 是該數列的一項。<br>
+II. 該數列有 $7$ 個負項。<br>
+III. 該數列首 $n$ 項之和為 $n^{2}-15n$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 I 及 II</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 這是等差數列：$T(1)=-13$，公差 $d=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> I：$2n-15=25\Rightarrow n=20$，是正整數，正確。<br>II：$2n-15<0\Rightarrow n<7.5$，即 $n=1,\ldots,7$ 共 $7$ 個負項，正確。</div>
+          <div class="p-step"><b>第 3 步.</b> III：$S(n)=\dfrac{n}{2}[2(-13)+(n-1)2]=n(n-14)=n^{2}-14n\neq n^{2}-15n$，錯誤。<br>故只有 I 及 II 正確，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q37.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q39.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

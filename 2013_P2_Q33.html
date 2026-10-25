@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第33題 · 十六進位位值</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第33題</span>
+    <h1>十六進位位值</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列何者等於 $A00000E00011_{16}$？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$10\times16^{11}+14\times16^{5}+17$</li><li><span class="ol">B</span>$11\times16^{11}+15\times16^{5}+17$</li><li><span class="ol">C</span>$10\times16^{12}+14\times16^{6}+272$</li><li><span class="ol">D</span>$11\times16^{12}+15\times16^{6}+272$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先認出十六進位的字母數值</div>
+      <div class="rule">
+        <span class="rule-name">十六進位數字</span>
+        <span class="rule-math">\(\text{A}=10,\ \text{B}=11,\ \ldots,\ \text{F}=15\)</span>
+        <span class="rule-why">多位數中每一個字母都只佔一個位，要先換成數值才能計位值。</span>
+      </div>
+      十六進位用 $0$ 至 $9$ 加上 $A$ 至 $F$ 共十六個符號，$A$ 代表 $10$，<br>之後每加一就加 $1$，故 $E$ 代表 $14$。<br>
+所以 $A00000E00011_{16}$ 中的 $A$ 是 $10$、$E$ 是 $14$，<br>其餘都是普通的 $0$ 與 $1$。<br>
+整個數共有 $12$ 個位，這一點在下一步定位值時很重要。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由右邊起數出每個位的位值</div>
+      <div class="rule">
+        <span class="rule-name">位值展開</span>
+        <span class="rule-math">\(d_{n}\ldots d_{1}d_{0}{}_{b}=d_{n}b^{n}+\cdots+d_{1}b+d_{0}\)</span>
+        <span class="rule-why">最右一位是 $b^0$，每向左移一位，指數加 $1$。</span>
+      </div>
+      由右至左編號，最右的 $1$ 在 $16^0$ 位，它左邊的 $1$ 在 $16^1$ 位。<br>
+由 $16^1$ 位再向左數四位，才到 $E$，所以 $E$ 在 $16^5$ 位。<br>
+$A$ 在整個數的最左端；<br>共 $12$ 位，最左一位的指數是 $12-1=11$，故 $A$ 在 $16^{11}$ 位。<br>
+換句話說，$E$ 相隔五位，這正是選項 C、D 把指數寫成 $12$ 與 $6$ 的陷阱所在。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫成展開式並合併低次項</div>
+      <div class="rule">
+        <span class="rule-name">十六進位的冪值</span>
+        <span class="rule-math">\(16^{0}=1,\quad 16^{1}=16,\quad 16^{5}=1048576\)</span>
+        <span class="rule-why">低次項 $1\times16+1\times1$ 可以合併成一個常數，令答案更簡潔。</span>
+      </div>
+      把每個非零數字乘上它的位值：
+\[ A00000E00011_{16}=10\times16^{11}+14\times16^{5}+1\times16+1\times1. \]
+最後兩項合併：
+\[ 1\times16+1=17, \]
+所以
+\[ A00000E00011_{16}=10\times16^{11}+14\times16^{5}+17. \]
+對照選項，<br>答案為 <b>A</b>。<br>
+選項 B 把 $A$、$E$ 的數值加 $1$（當成 $11$ 與 $15$），<br>選項 C、D 則把位值整體向右移了一位。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$10\times16^{11}+14\times16^{5}+17$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列何者等於 $B00000D00031_{16}$？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$11\times16^{11}+13\times16^{5}+49$</li><li><span class="ol">B</span>$11\times16^{11}+14\times16^{5}+49$</li><li><span class="ol">C</span>$12\times16^{11}+13\times16^{5}+31$</li><li><span class="ol">D</span>$11\times16^{12}+13\times16^{6}+49$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 十六進位中 $B=11$、$D=13$，整個數共 $12$ 位。</div>
+          <div class="p-step"><b>第 2 步.</b> 由右起：$1$ 在 $16^0$ 位、$3$ 在 $16^1$ 位、$D$ 在 $16^5$ 位、$B$ 在 $16^{11}$ 位。</div>
+          <div class="p-step"><b>第 3 步.</b> 展開為 $11\times16^{11}+13\times16^{5}+3\times16+1$，而 $3\times16+1=49$，故答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$11\times16^{11}+13\times16^{5}+49$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q32.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q34.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

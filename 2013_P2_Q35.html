@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第35題 · 二次方程根與係數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第35題</span>
+    <h1>二次方程根與係數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\alpha\neq\beta$ 且 $\begin{cases}3\alpha=\alpha^{2}-5\\[2pt] 3\beta=\beta^{2}-5\end{cases}$，則 $\alpha\beta=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$-3$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$-5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出 $\alpha$、$\beta$ 是同一條方程的兩個根</div>
+      <div class="rule">
+        <span class="rule-name">二次方程標準式</span>
+        <span class="rule-math">\(ax^{2}+bx+c=0\qquad(a\neq0)\)</span>
+        <span class="rule-why">把條件整理成標準式，才能直接讀出 $a$、$b$、$c$。</span>
+      </div>
+      兩條條件的形式完全相同，只是把 $x$ 換成 $\alpha$ 或 $\beta$。<br>
+把 $3x=x^{2}-5$ 移項成標準式：
+\[ x^{2}-3x-5=0. \]
+於是 $\alpha$ 與 $\beta$ 都滿足這條方程。<br>
+題目又說明 $\alpha\neq\beta$，所以它們是這條二次方程的<b>兩個相異根</b>，而不是同一個根算了兩次。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">讀出係數，檢查兩根之和</div>
+      <div class="rule">
+        <span class="rule-name">兩根之和</span>
+        <span class="rule-math">\(\alpha+\beta=-\dfrac{b}{a}\)</span>
+        <span class="rule-why">係數 $a$、$b$ 可以直接由標準式讀出，不必解方程。</span>
+      </div>
+      比較 $x^{2}-3x-5=0$ 與 $ax^{2}+bx+c=0$：
+\[ a=1,\qquad b=-3,\qquad c=-5. \]
+所以
+\[ \alpha+\beta=-\frac{-3}{1}=3. \]
+和為正數、積（下一步可見）為負數，<br>代表兩根一正一負，這與「相異實根」相符。<br>
+判別式 $(-3)^2-4(1)(-5)=29>0$ 亦保證兩根確實是相異實數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取兩根之積得出答案</div>
+      <div class="rule">
+        <span class="rule-name">兩根之積</span>
+        <span class="rule-math">\(\alpha\beta=\dfrac{c}{a}\)</span>
+        <span class="rule-why">題目只問乘積，用這條關係一步即可，無須求根。</span>
+      </div>
+      直接代入：
+\[ \alpha\beta=\frac{-5}{1}=-5. \]
+對照選項，答案為 <b>D</b>。<br>
+選項 C 的 $5$ 是漏了負號；<br>選項 A、B 的 $\pm3$ 則是把兩根之和 $3$ 誤當成乘積。<br>
+若真的解方程，兩根是 $\dfrac{3\pm\sqrt{29}}{2}$，一正一負，相乘同樣得 $-5$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$-5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\alpha\neq\beta$ 且 $4\alpha=\alpha^{2}-2$、$4\beta=\beta^{2}-2$，則 $\alpha\beta=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$-4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩條條件合起來即 $x^{2}-4x-2=0$，而 $\alpha\neq\beta$，故它們是這條方程的兩個相異根。</div>
+          <div class="p-step"><b>第 2 步.</b> 讀出 $a=1$、$b=-4$、$c=-2$，兩根之和為 $4$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩根之積 $=\dfrac{c}{a}=-2$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$-2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q34.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q36.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

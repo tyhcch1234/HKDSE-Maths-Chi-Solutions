@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2013 卷一 第37題 · 線性規劃</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2013 · 卷二 · 第37題</span>
+    <h1>線性規劃</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮下列不等式組：
+\[ x\ge 2,\qquad y\ge 0,\qquad 4x-y\le 20,\qquad x+4y\le 22. \]
+設 $D$ 為上述不等式組的解所代表的區域。若 $(x,y)$ 為 $D$ 內的一點，則 $3y-4x+15$ 的最大值為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$17$</li><li><span class="ol">C</span>$22$</li><li><span class="ol">D</span>$30$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出四條邊界線與區域 $D$ 的形狀</div>
+      <div class="rule">
+        <span class="rule-name">半平面與邊界線</span>
+        <span class="rule-math">\(Ax+By\le C\ \text{is bounded by}\ Ax+By=C\)</span>
+        <span class="rule-why">每條不等式對應一條直線，區域 $D$ 就是四條直線圍出的多邊形。</span>
+      </div>
+      四條不等式各有對應的邊界線：<br>
+$x=2$ 是豎線，$y=0$ 是橫軸，<br>
+$4x-y=20$ 與 $x+4y=22$ 是兩條斜線。<br>
+$D$ 是四條線圍出的有界多邊形：左邊以 $x=2$ 為界，下邊以 $y=0$ 為界，<br>右上方由兩條斜線切出。<br>
+線性函數在有界多邊形上的最大值必在某個頂點出現，所以下一步只需找出四個頂點。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩兩解聯立，求出四個頂點</div>
+      <div class="rule">
+        <span class="rule-name">代入法解聯立方程</span>
+        <span class="rule-math">\(y=mx+k\ \Longrightarrow\ dx+e(mx+k)=f\)</span>
+        <span class="rule-why">兩條斜線相交處要先由一條線表示 $y$，再代入另一條，才能解出交點。</span>
+      </div>
+      $x=2$ 與 $y=0$ 相交：
+\[ (x,y)=(2,0). \]
+$y=0$ 與 $4x-y=20$ 相交，<br>得 $4x=20$，即 $x=5$：
+\[ (x,y)=(5,0). \]
+由 $4x-y=20$ 得 $y=4x-20$，<br>代入 $x+4y=22$：
+\[ x+4(4x-20)=22\Rightarrow 17x=102\Rightarrow x=6,\ y=4. \]
+所以第三個頂點是 $(6,4)$。<br>
+$x=2$ 與 $x+4y=22$ 相交，得 $2+4y=22$，即 $y=5$：
+\[ (x,y)=(2,5). \]
+四個頂點為 $(2,0)$、$(5,0)$、$(6,4)$、$(2,5)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐個頂點代入目標函數取最大</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃的頂點定理</span>
+        <span class="rule-math">\(Z=ax+by+c\ \text{takes its extreme values at vertices}\)</span>
+        <span class="rule-why">目標函數是線性的，在可行域上的最大值與最小值一定出現在頂點。</span>
+      </div>
+      設 $Z=3y-4x+15$，逐個頂點代入：<br>
+$(2,0)$：$Z=0-8+15=7$；<br>
+$(5,0)$：$Z=0-20+15=-5$；<br>
+$(6,4)$：$Z=12-24+15=3$；<br>
+$(2,5)$：$Z=15-8+15=22$。<br>
+四者之中最大的是 $22$，在頂點 $(2,5)$ 取得，答案為 <b>C</b>。<br>
+選項 A 的 $3$ 是 $(6,4)$ 的值；<br>選項 B 的 $17$ 是漏加常數 $15$ 之前的 $-5$ 與 $22$ 混算的結果，<br>都只是其中一個頂點的值。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$22$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮不等式組 $x\ge 2$、$y\ge 0$、$x+y\le 9$、$2x+y\le 14$，設 $D$ 為其解所代表的區域。若 $(x,y)$ 在 $D$ 內，則 $2x+3y-5$ 的最大值為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$9$</li><li><span class="ol">B</span>$17$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$22$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 邊界線為 $x=2$、$y=0$、$x+y=9$、$2x+y=14$；$x=2$ 與 $y=0$、$2x+y=14$ 與 $y=0$、$x+y=9$ 與 $2x+y=14$、$x=2$ 與 $x+y=9$ 分別交出頂點 $(2,0)$、$(7,0)$、$(5,4)$、$(2,7)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $Z=2x+3y-5$：$(2,0)$ 得 $-1$；$(7,0)$ 得 $9$；$(5,4)$ 得 $17$；$(2,7)$ 得 $20$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大值為 $20$，在 $(2,7)$ 取得，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2013_P2_Q36.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2013_P2_Q38.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
