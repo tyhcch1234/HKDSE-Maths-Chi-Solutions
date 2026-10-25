@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第29題 · 圓形圖與百分數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第29題</span>
+    <h1>圓形圖與百分數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下圖顯示約翰某星期的支出。他在該星期花費 ＄240 於衣服。求他在該星期用於交通的支出。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>＄40</li><li><span class="ol">B</span>＄60</li><li><span class="ol">C</span>＄90</li><li><span class="ol">D</span>＄135</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q29.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圓形圖求交通的圓心角</div>
+      <div class="rule">
+        <span class="rule-name">同頂點的角</span>
+        <span class="rule-math">\(\theta_{1}+\theta_{2}+\theta_{3}+\theta_{4}=360^{\circ}\)</span>
+        <span class="rule-why">四個扇形剛好填滿整個圓，用 $360^{\circ}$ 減去其餘三個已知的圓心角即可。</span>
+      </div>
+      圖中衣服佔 $160^{\circ}$、膳食佔 $90^{\circ}$、其他佔 $50^{\circ}$，<br>而整個圓是 $360^{\circ}$：
+\[ \theta_{\text{transport}}=360^{\circ}-160^{\circ}-90^{\circ}-50^{\circ}=60^{\circ}. \]
+膳食的 $90^{\circ}$ 有直角符號提示，<br>很容易漏掉，別把它當成 $100^{\circ}$ 之類的數值。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">支出與圓心角成正比</div>
+      <div class="rule">
+        <span class="rule-name">扇形角與數量成正比</span>
+        <span class="rule-math">\(\dfrac{\text{amount}_{1}}{\text{amount}_{2}}=\dfrac{\theta_{1}}{\theta_{2}}\)</span>
+        <span class="rule-why">圓形圖中每 $1^{\circ}$ 代表的支出相同，所以支出之比等於圓心角之比。</span>
+      </div>
+      交通與衣服的圓心角之比：
+\[ 60^{\circ}:160^{\circ}=3:8. \]
+所以交通支出是衣服支出的 $\dfrac{3}{8}$：
+\[ \frac{\text{transport}}{240}=\frac{60^{\circ}}{160^{\circ}}=\frac{3}{8}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">算出交通支出</div>
+      <div class="rule">
+        <span class="rule-name">按比例求值</span>
+        <span class="rule-math">\(\text{transport}=240\times\dfrac{3}{8}=90\)</span>
+        <span class="rule-why">已知衣服支出為 ＄240，乘以角度的比即得交通支出。</span>
+      </div>
+      \[ 240\times\frac{3}{8}=90. \]
+即交通支出是 ＄90。<br>
+驗算：每 $1^{\circ}$ 值 $240\div160=1.5$ 元，$60^{\circ}$ 值 $90$ 元，<br>與上式一致。<br>
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（＄90）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某家庭的每週支出以圓形圖表示：食物佔 $150^{\circ}$、租金佔 $100^{\circ}$、交通佔 $60^{\circ}$，其餘為其他支出。若租金支出是 ＄500，則其他支出是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>＄150</li><li><span class="ol">B</span>＄250</li><li><span class="ol">C</span>＄300</li><li><span class="ol">D</span>＄400</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 其他支出的圓心角 $=360^{\circ}-150^{\circ}-100^{\circ}-60^{\circ}=50^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 支出與圓心角成正比：$\dfrac{\text{others}}{500}=\dfrac{50^{\circ}}{100^{\circ}}=\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 其他支出 $=500\times\dfrac{1}{2}=250$，即 ＄250，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（＄250）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q28.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q30.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

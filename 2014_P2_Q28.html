@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第28題 · 平均數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第28題</span>
+    <h1>平均數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $25$ 位教師與 $140$ 位學生的平均身高是 $150\text{ cm}$。若學生的平均身高是 $145\text{ cm}$，則教師的平均身高是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$151\text{ cm}$</li><li><span class="ol">B</span>$155\text{ cm}$</li><li><span class="ol">C</span>$176\text{ cm}$</li><li><span class="ol">D</span>$178\text{ cm}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分清兩組與合併後的人數</div>
+      <div class="rule">
+        <span class="rule-name">平均數的定義</span>
+        <span class="rule-math">\(\bar{x}=\dfrac{\sum x}{n}\ \Longleftrightarrow\ \sum x=n\bar{x}\)</span>
+        <span class="rule-why">把平均數換成「總和」，才能把兩組的身高加起來。</span>
+      </div>
+      教師 $25$ 位，平均身高設為 $x$；<br>學生 $140$ 位，平均 $145\text{ cm}$。<br>
+合併後人數為
+\[ 25+140=165, \]
+而全體總身高是 $165\times150\text{ cm}$。<br>
+平均數不能直接相加，要先把每組化成總和。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用總和不變列方程</div>
+      <div class="rule">
+        <span class="rule-name">合併平均數（加權平均）</span>
+        <span class="rule-math">\(n_{1}\bar{x}_{1}+n_{2}\bar{x}_{2}=(n_{1}+n_{2})\bar{x}\)</span>
+        <span class="rule-why">兩組的總和相加等於合併後的總和，這是本題唯一的方程。</span>
+      </div>
+      教師總身高 $+$ 學生總身高 $=$ 全體總身高：
+\[ 25x+140\times145=150\times165. \]
+先算兩個乘積：
+\[ 140\times145=20300,\qquad 165\times150=24750. \]
+於是
+\[ 25x+20300=24750. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出教師的平均身高並檢查</div>
+      <div class="rule">
+        <span class="rule-name">一元一次方程</span>
+        <span class="rule-math">\(25x=24750-20300=4450\)</span>
+        <span class="rule-why">移項後除以 $25$，即得教師的平均身高。</span>
+      </div>
+      \[ 25x=24750-20300=4450, \]
+\[ x=\frac{4450}{25}=178. \]
+檢查：合併平均 $150$ 應在 $145$ 與 $178$ 之間；<br>學生人數遠多於教師，所以 $150$ 較貼近 $145$，合理。<br>
+對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$178\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $30$ 位教師與 $170$ 位學生的平均身高是 $148\text{ cm}$。若學生的平均身高是 $145\text{ cm}$，則教師的平均身高是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$160\text{ cm}$</li><li><span class="ol">B</span>$165\text{ cm}$</li><li><span class="ol">C</span>$170\text{ cm}$</li><li><span class="ol">D</span>$180\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 合併人數 $=30+170=200$，全體總身高 $=200\times148=29600\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 學生總身高 $=170\times145=24650\text{ cm}$，故教師總身高 $=29600-24650=4950\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 教師平均 $=\dfrac{4950}{30}=165\text{ cm}$；<br>檢查 $148$ 在 $145$ 與 $165$ 之間，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$165\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q27.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q29.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

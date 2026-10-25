@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第30題 · 莖葉圖與分佈域</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第30題</span>
+    <h1>莖葉圖與分佈域</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的莖葉圖顯示一輛巴士上乘客的年齡分布。<br>
+莖（十位）｜葉（個位）<br>
+1 ｜ $h$　4　6<br>
+2 ｜ 3　3　3　4　6　7　7<br>
+3 ｜ 1　2　2　2　6　8<br>
+4 ｜ 0　$k$<br>
+若上述分布的分佈域至少為 $33$，下列何者必定正確？<br>
+I. $0\le h\le 3$<br>
+II. $3\le k\le 9$<br>
+III. $3\le k-h\le 5$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出最大值與最小值</div>
+      <div class="rule">
+        <span class="rule-name">莖葉圖的記法</span>
+        <span class="rule-math">\(\text{value}=10\times\text{stem}+\text{leaf}\)</span>
+        <span class="rule-why">莖 $1$ 配葉 $h$ 代表年齡 $10+h$，莖 $4$ 配葉 $k$ 代表 $40+k$，兩者就是最小與最大值。</span>
+      </div>
+      $h$、$k$ 都是一位數字，故 $0\le h\le 9$、$0\le k\le 9$。<br>
+最小值是 $10+h$（莖 $1$ 一行中的首位），最大值是 $40+k$（莖 $4$ 一行）。<br>
+分佈域為
+\[ (40+k)-(10+h)=30+k-h. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「至少 33」化成不等式</div>
+      <div class="rule">
+        <span class="rule-name">分佈域的定義</span>
+        <span class="rule-math">\(\text{range}=\text{largest}-\text{smallest}\)</span>
+        <span class="rule-why">分佈域就是最大值減最小值，代入 $30+k-h$ 後解不等式，得到唯一的限制條件。</span>
+      </div>
+      分佈域至少為 $33$：
+\[ 30+k-h\ge 33, \]
+\[ k-h\ge 3, \]
+即
+\[ k\ge h+3. \]
+配合 $k\le 9$，<br>得 $k\ge h+3$ 且 $k\le 9$，這就是檢驗 I、II、III 的唯一依據。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐項檢驗 I、II、III</div>
+      <div class="rule">
+        <span class="rule-name">舉反例否定「必定正確」</span>
+        <span class="rule-math">\(k\ge h+3,\quad 0\le h\le 9,\quad 0\le k\le 9\)</span>
+        <span class="rule-why">要推翻「必定正確」，只需找到一個符合條件的反例；要肯定它，則要由不等式推出。</span>
+      </div>
+      II：由 $k\ge h+3$ 及 $h\ge 0$ 得 $k\ge 3$，又 $k$ 是數字故 $k\le 9$，<br>所以 II 必定正確。<br>
+I：取 $h=4$，則 $k\ge 7$，取 $k=7$ 亦不超過 $9$，<br>分佈域 $=30+7-4=33$ 符合要求，故 $h$ 可以大於 $3$，I 不正確。<br>
+III：取 $h=0$、$k=9$，分佈域 $=30+9=39\ge 33$，但 $k-h=9$ 已超過 $5$，<br>故 III 不正確。<br>
+只有 II 必定正確，對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下面的莖葉圖顯示某巴士上乘客的年齡分布，其中 $h$ 是莖 $1$ 一行中最小的葉。<br>
+莖（十位）｜葉（個位）<br>
+1 ｜ $h$　5　8<br>
+2 ｜ 2　2　4　7<br>
+3 ｜ 1　3　6　9<br>
+4 ｜ 0　$k$<br>
+若上述分布的分佈域至少為 $31$，下列何者必定正確？<br>
+I. $0\le h\le 5$<br>
+II. $1\le k\le 9$<br>
+III. $1\le k-h\le 3$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 II</li><li><span class="ol">B</span>只有 I</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $h$、$k$ 為數字，最小值 $10+h$、最大值 $40+k$，<br>分佈域 $=30+k-h\ge 31$，即 $k\ge h+1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $k\ge h+1$ 及 $h\ge 0$ 得 $k\ge 1$，又 $k\le 9$，<br>故 II 必定正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $h=6$、$k=7$ 時分佈域 $=31$ 符合條件，I 不正確；$h=0$、$k=9$ 時 $k-h=9$，<br>III 不正確；<br>故答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q29.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
