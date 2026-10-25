@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第33題 · 對數比較大小</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第33題</span>
+    <h1>對數比較大小</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列何者最大？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$124^{241}$</li><li><span class="ol">B</span>$241^{214}$</li><li><span class="ol">C</span>$412^{142}$</li><li><span class="ol">D</span>$421^{124}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">取對數，把巨大次方變成可比較的數</div>
+      <div class="rule">
+        <span class="rule-name">對數的冪定律</span>
+        <span class="rule-math">\(\log a^{b}=b\log a\)</span>
+        <span class="rule-why">把 $124^{241}$ 這類天文數字化成 $241\log124$，四個數就能直接用計算機比較。</span>
+      </div>
+      $a^{b}$ 太大，不能直接按計算機，但 $y=\log x$ 是遞增函數，<br>比較 $a^{b}$ 與比較 $\log\left(a^{b}\right)$ 等價。<br>
+由冪定律，每個數的對數就是「指數 $\times$ 底數的對數」，例如
+\[ \log 124^{241}=241\log124. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項計算四個對數值</div>
+      <div class="rule">
+        <span class="rule-name">對數的遞增性</span>
+        <span class="rule-math">\(P&gt;Q\iff\log P&gt;\log Q\)</span>
+        <span class="rule-why">對數保持大小次序，所以只要比四個對數值的大小，不必把原數還原。</span>
+      </div>
+      用計算機的常用對數（底 $10$，四項都用同一底即可）：
+\[ \log124^{241}=241\log124\approx504.51, \]
+\[ \log241^{214}=214\log241\approx509.75, \]
+\[ \log412^{142}=142\log412\approx371.32, \]
+\[ \log421^{124}=124\log421\approx325.41. \]
+四個數相差很遠，<br>不怕四捨五入影響判斷。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">找出最大的一項</div>
+      <div class="rule">
+        <span class="rule-name">大小關係的傳遞性</span>
+        <span class="rule-math">\(x&gt;y\ \text{and}\ y&gt;z\ \Rightarrow\ x&gt;z\)</span>
+        <span class="rule-why">把四個對數由小到大排好，最大的一個就對應最大的原數。</span>
+      </div>
+      由小到大排列：
+\[ 325.41\ (D)&lt;371.32\ (C)&lt;504.51\ (A)&lt;509.75\ (B). \]
+注意 A 與 B 只差約 $5.2$，<br>一定要真的按計算機，不能憑「底大一定大」猜。<br>
+因為 $\log x$ 遞增，對數最大者原數最大，故 $241^{214}$ 最大。<br>
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$241^{214}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列何者最大？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2^{300}$</li><li><span class="ol">B</span>$3^{180}$</li><li><span class="ol">C</span>$7^{100}$</li><li><span class="ol">D</span>$6^{110}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 取對數：比較 $300\log2$、$180\log3$、$100\log7$、$110\log6$。</div>
+          <div class="p-step"><b>第 2 步.</b> 計算得 $300\log2\approx90.31$、$180\log3\approx85.88$、$100\log7\approx84.51$、$110\log6\approx85.60$。</div>
+          <div class="p-step"><b>第 3 步.</b> 對數最大者為 $2^{300}$，故答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$2^{300}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q32.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q34.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

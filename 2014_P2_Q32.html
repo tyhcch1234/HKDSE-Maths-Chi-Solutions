@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第32題 · 指數函數圖像與對數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第32題</span>
+    <h1>指數函數圖像與對數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示 $y=b^{x}$ 與 $y=c^{x}$ 的圖像，畫在同一個直角坐標系上，其中 $b$、$c$ 為正常數。若一條水平線 $L$ 分別與 $y$ 軸、$y=b^{x}$ 的圖像及 $y=c^{x}$ 的圖像交於 $A$、$B$ 及 $C$，下列何者正確？<br>
+I. $b&lt;c$<br>
+II. $bc&gt;1$<br>
+III. $\dfrac{AB}{AC}=\log_{b}c$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q32.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圖像的高低判斷底數</div>
+      <div class="rule">
+        <span class="rule-name">指數函數的單調性</span>
+        <span class="rule-math">\(k>1\ \Rightarrow\ y=k^{x}\ \text{is increasing with }x\)</span>
+        <span class="rule-why">兩條曲線都向右上升，代表 $b&gt;1$、$c&gt;1$；再比較同一 $x$ 時哪條線較高，就知哪個底數較大。</span>
+      </div>
+      圖中兩條曲線都隨 $x$ 增大而上升，所以 $b&gt;1$、$c&gt;1$。<br>
+當 $x&gt;0$ 時，$y=b^{x}$ 的圖像在 $y=c^{x}$ 的圖像之上，即 $b^{x}&gt;c^{x}$，<br>故
+\[ b&gt;c. \]
+所以 I（$b&lt;c$）不成立。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 II：兩個大於 1 的數相乘</div>
+      <div class="rule">
+        <span class="rule-name">不等式相乘</span>
+        <span class="rule-math">\(p&gt;1,\ q&gt;1\ \Rightarrow\ pq&gt;1\)</span>
+        <span class="rule-why">只要分別證出 $b&gt;1$ 與 $c&gt;1$，兩式相乘就立即得出 II。</span>
+      </div>
+      由第 1 步，$b&gt;1$ 且 $c&gt;1$，兩數皆為正，故
+\[ bc&gt;1. \]
+II 成立。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $AB$ 與 $AC$ 化成對數</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        <span class="rule-math">\(\log_{b}K=\dfrac{\log_{c}K}{\log_{c}b}\)</span>
+        <span class="rule-why">$AB$ 與 $AC$ 分別是 $\log_{b}K$ 與 $\log_{c}K$，用換底公式把兩者化成同一底的對數之比，就能約簡。</span>
+      </div>
+      設水平線 $L$ 為 $y=K$（其中 $K&gt;1$）。$A$ 在 $y$ 軸上，<br>故 $A=(0,K)$。<br>
+$B$ 在 $y=b^{x}$ 上：$K=b^{x_{B}}$，故 $x_{B}=\log_{b}K$，即 $AB=\log_{b}K$。<br>
+$C$ 在 $y=c^{x}$ 上：$K=c^{x_{C}}$，故 $x_{C}=\log_{c}K$，即 $AC=\log_{c}K$。<br>
+因此
+\[ \frac{AB}{AC}=\frac{\log_{b}K}{\log_{c}K}=\frac{\log_{c}K/\log_{c}b}{\log_{c}K}=\frac{1}{\log_{c}b}=\log_{b}c. \]
+III 成立。<br>只有 II 及 III 正確，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $b&gt;c&gt;1$。水平線 $L:y=K$（其中 $K&gt;1$）分別與 $y$ 軸、$y=b^{x}$ 的圖像及 $y=c^{x}$ 的圖像交於 $A$、$B$ 及 $C$。下列何者正確？<br>
+I. $bc&gt;1$<br>
+II. $b&lt;c$<br>
+III. $\dfrac{AB}{AC}=\log_{c}b$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $b&gt;c&gt;1$ 得 $bc&gt;1$，故 I 成立；<br>同時 $b&lt;c$ 不成立，故 II 錯誤。</div>
+          <div class="p-step"><b>第 2 步.</b> $AB=\log_{b}K$、$AC=\log_{c}K$，故 $\dfrac{AB}{AC}=\dfrac{\log_{b}K}{\log_{c}K}=\log_{b}c$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\log_{b}c\ne\log_{c}b$（除非 $b=c$），故 III 錯誤；<br>只有 I 正確，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q31.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q33.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

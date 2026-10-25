@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第34題 · 指數律與二進制</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第34題</span>
+    <h1>指數律與二進制</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把下列各數以二進制表示：
+\[ 7\times 2^{10}+2^{8}+5\times 2^{3}-2^{3}=? \]
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$111010100000_{2}$</li><li><span class="ol">B</span>$111100010000_{2}$</li><li><span class="ol">C</span>$111010010000_{2}$</li><li><span class="ol">D</span>$111100001000_{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先合併同類的 $2^{3}$ 項</div>
+      <div class="rule">
+        <span class="rule-name">提取公因數</span>
+        <span class="rule-math">\(px-qx=(p-q)x\)</span>
+        <span class="rule-why">把 $2^{3}$ 看成 $x$，$5\times2^{3}-2^{3}$ 就化成 $(5-1)\times2^{3}$，少了一項要處理。</span>
+      </div>
+      \[ 5\times2^{3}-2^{3}=(5-1)\times2^{3}=4\times2^{3}. \]
+原式變成
+\[ 7\times2^{10}+2^{8}+4\times2^{3}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把係數拆成 2 的冪</div>
+      <div class="rule">
+        <span class="rule-name">係數的二進制展開</span>
+        <span class="rule-math">\(7=2^{2}+2^{1}+2^{0},\qquad 4=2^{2}\)</span>
+        <span class="rule-why">二進制每個位只能放 $0$ 或 $1$，所以要把係數 $7$、$4$ 拆成不重複的 $2$ 的冪。</span>
+      </div>
+      $7=111_{2}$，$4=100_{2}$，故
+\[ 7\times2^{10}+2^{8}+4\times2^{3}=(2^{2}+2^{1}+2^{0})\times2^{10}+2^{8}+2^{2}\times2^{3}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用指數律把每個位放好</div>
+      <div class="rule">
+        <span class="rule-name">指數相乘定律</span>
+        <span class="rule-math">\(a^{m}\times a^{n}=a^{m+n}\)</span>
+        <span class="rule-why">把括號展開後，每一項都變成單一個 $2$ 的冪，正好對應二進制的某一個位。</span>
+      </div>
+      \[ (2^{2}+2^{1}+2^{0})\times2^{10}=2^{12}+2^{11}+2^{10},\qquad 2^{2}\times2^{3}=2^{5}. \]
+所以原式
+\[ =2^{12}+2^{11}+2^{10}+2^{8}+2^{5}. \]
+由位 $12$ 讀到位 $0$，<br>出現的位寫 $1$、其餘寫 $0$：
+\[ 1\,1\,1\,0\,1\,0\,0\,1\,0\,0\,0\,0\,0=111010010000_{2}. \]
+驗算：$4096+2048+1024+256+32=7456$，<br>而 $7\times1024+256+40-8=7456$，一致。<br>
+答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$111010010000_{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把下列各數以二進制表示：
+\[ 5\times 2^{9}+2^{6}+6\times 2^{2}-2^{2} \]</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$101001010100_{2}$</li><li><span class="ol">B</span>$101001001100_{2}$</li><li><span class="ol">C</span>$101000101100_{2}$</li><li><span class="ol">D</span>$101010010100_{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 合併同類項：$6\times2^{2}-2^{2}=5\times2^{2}$，原式為 $5\times2^{9}+2^{6}+5\times2^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 拆係數：$5=2^{2}+2^{0}$，故 $5\times2^{9}=2^{11}+2^{9}$，$5\times2^{2}=2^{4}+2^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 得 $2^{11}+2^{9}+2^{6}+2^{4}+2^{2}=2644=101001010100_{2}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$101001010100_{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q33.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q35.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第36題 · 複數的共軛</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第36題</span>
+    <h1>複數的共軛</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\beta$ 為實數，則 $\beta-2i$ 的共軛複數是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\beta+2i$</li><li><span class="ol">B</span>$-\beta+2i$</li><li><span class="ol">C</span>$-\beta-2i$</li><li><span class="ol">D</span>$2-\beta i$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先分出實部與虛部</div>
+      <div class="rule">
+        <span class="rule-name">複數的實部與虛部</span>
+        <span class="rule-math">\(z=a+bi\ \Rightarrow\ \operatorname{Re}(z)=a,\ \operatorname{Im}(z)=b\)</span>
+        <span class="rule-why">共軛只改動虛部的符號，所以先要認清哪一部分是實部、哪一部分是虛部。</span>
+      </div>
+      把 $\beta-2i$ 寫成 $a+bi$ 的形式：
+\[ z=\beta+(-2)i, \]
+所以 $a=\beta$、$b=-2$，<br>其中 $\beta$ 為實數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出共軛的定義</div>
+      <div class="rule">
+        <span class="rule-name">共軛複數</span>
+        <span class="rule-math">\(\overline{a+bi}=a-bi\)</span>
+        <span class="rule-why">共軛複數保留實部，只把虛部變號，這是最直接的一步。</span>
+      </div>
+      對任何實數 $a$、$b$，
+\[ \overline{a+bi}=a-bi. \]
+實部 $a$ 不變，<br>虛部由 $b$ 變成 $-b$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入並檢查選項</div>
+      <div class="rule">
+        <span class="rule-name">虛部變號</span>
+        <span class="rule-math">\(\overline{a-bi}=a+bi\)</span>
+        <span class="rule-why">本題虛部本身已是負數，變號後成為正數，用這條公式可避免正負號出錯。</span>
+      </div>
+      取 $a=\beta$、虛部為 $-2$：
+\[ \overline{\beta-2i}=\beta-(-2)i=\beta+2i. \]
+選項 B、C 把實部 $\beta$ 改成 $-\beta$，<br>錯在實部不應改變；<br>選項 D 把實部與虛部對調，更加不是共軛。<br>
+答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\beta+2i$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\gamma$ 為實數，則 $-3+\gamma i$ 的共軛複數是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-3+\gamma i$</li><li><span class="ol">B</span>$-3-\gamma i$</li><li><span class="ol">C</span>$3-\gamma i$</li><li><span class="ol">D</span>$3+\gamma i$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 寫成 $a+bi$：$a=-3$、$b=\gamma$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $\overline{a+bi}=a-bi$，得 $\overline{-3+\gamma i}=-3-\gamma i$。</div>
+          <div class="p-step"><b>第 3 步.</b> 只有 $i$ 前面的符號改變；<br>選項 C、D 錯改實部，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$-3-\gamma i$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q35.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q37.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

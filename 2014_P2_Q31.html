@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第31題 · 代數式的最大公因數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第31題</span>
+    <h1>代數式的最大公因數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $3x^{4}y^{2}z$、$4xy^{5}z$ 與 $6x^{2}y^{3}$ 的最大公因數（H.C.F.）是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$xy^{2}$</li><li><span class="ol">B</span>$xy^{2}z$</li><li><span class="ol">C</span>$12x^{4}y^{5}z$</li><li><span class="ol">D</span>$12x^{7}y^{9}z^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先補上「看不見」的 $z$</div>
+      <div class="rule">
+        <span class="rule-name">零指數定律</span>
+        <span class="rule-math">\(a^{0}=1\quad(a\neq0)\)</span>
+        <span class="rule-why">第三個式 $6x^{2}y^{3}$ 沒有 $z$，要寫成 $z^{0}$ 才能與另外兩個式逐個字母比較。</span>
+      </div>
+      求最大公因數時，缺漏的字母其實是 $0$ 次方：
+\[ 3x^{4}y^{2}z=3^{1}x^{4}y^{2}z^{1},\qquad 4xy^{5}z=4^{1}x^{1}y^{5}z^{1},\qquad 6x^{2}y^{3}=6^{1}x^{2}y^{3}z^{0}. \]
+把三式的指數都寫齊，<br>才不會誤以為 $xz$ 或 $x^{2}z$ 是三式的公因數。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐個字母取最小指數</div>
+      <div class="rule">
+        <span class="rule-name">代數式最大公因數的法則</span>
+        <span class="rule-math">\(\text{H.C.F.}\left(x^{a}y^{b},\ x^{c}y^{d}\right)=x^{\min(a,c)}y^{\min(b,d)}\)</span>
+        <span class="rule-why">最大公因數要「每個字母都取最小的指數」，這樣才能整除三式中的每一式。</span>
+      </div>
+      比較三式中同一個字母的指數：
+\[ x:\ 4,\ 1,\ 2\ \Rightarrow\ 1;\qquad y:\ 2,\ 5,\ 3\ \Rightarrow\ 2;\qquad z:\ 1,\ 1,\ 0\ \Rightarrow\ 0. \]
+所以字母部分是 $x^{1}y^{2}z^{0}=xy^{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">再取係數的最大公因數並合成</div>
+      <div class="rule">
+        <span class="rule-name">係數與字母分開處理</span>
+        <span class="rule-math">\(\text{H.C.F.}=k\,x^{\min}y^{\min},\qquad k=\text{H.C.F.}(3,4,6)=1\)</span>
+        <span class="rule-why">係數的最大公因數若為 $1$，答案就只剩字母部分；這樣可排除含 $12$ 的選項。</span>
+      </div>
+      三個係數 $3$、$4$、$6$ 兩兩互質，最大公因數是 $1$：
+\[ \text{H.C.F.}(3,4,6)=1. \]
+合起來
+\[ \text{H.C.F.}=1\cdot xy^{2}=xy^{2}. \]
+驗算：$3x^{4}y^{2}z\div xy^{2}=3x^{3}z$、$4xy^{5}z\div xy^{2}=4y^{3}z$、$6x^{2}y^{3}\div xy^{2}=6x$，<br>三式都能整除。<br>
+選項 C、D 其實是最小公倍數的方向（取最大指數、係數取 $12$），<br>不是最大公因數。<br>
+答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$xy^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $8a^{3}b^{2}c$、$12a^{2}b^{4}$ 與 $20a^{5}bc^{2}$ 的最大公因數（H.C.F.）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4a^{2}b$</li><li><span class="ol">B</span>$4a^{2}b^{2}c$</li><li><span class="ol">C</span>$2a^{2}b$</li><li><span class="ol">D</span>$24a^{5}b^{4}c^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 補上缺漏的指數：$8a^{3}b^{2}c^{1}$、$12a^{2}b^{4}c^{0}$、$20a^{5}b^{1}c^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 逐個字母取最小指數：$a^{2}$、$b^{1}$、$c^{0}$，字母部分為 $a^{2}b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 係數 $\text{H.C.F.}(8,12,20)=4$，故最大公因數為 $4a^{2}b$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$4a^{2}b$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q30.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q32.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

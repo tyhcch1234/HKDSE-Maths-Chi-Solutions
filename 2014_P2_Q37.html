@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第37題 · 等比數列的判別</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第37題</span>
+    <h1>等比數列的判別</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $m&gt;1$，下列何者為等比數列？<br>
+I. $2^{m},\ 2^{2m},\ 2^{3m},\ 2^{4m}$<br>
+II. $m,\ 2m^{2},\ 3m^{4},\ 4m^{8}$<br>
+III. $\log m,\ \log m^{2},\ \log m^{4},\ \log m^{8}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>I 及 II</li><li><span class="ol">B</span>I 及 III</li><li><span class="ol">C</span>II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用「相鄰項之比是否固定」作判別</div>
+      <div class="rule">
+        <span class="rule-name">等比數列的公比</span>
+        <span class="rule-math">\(r=\dfrac{t_{n+1}}{t_{n}}\ \text{is constant}\)</span>
+        <span class="rule-why">判別等比數列只看相鄰兩項的比是否為同一個常數，不必理會首項。</span>
+      </div>
+      數列 $t_{1},t_{2},t_{3},t_{4}$ 為等比數列，若且唯若
+\[ \frac{t_{2}}{t_{1}}=\frac{t_{3}}{t_{2}}=\frac{t_{4}}{t_{3}}=\text{constant}. \]
+以下逐個選項計算這三個比。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I：商的定律</div>
+      <div class="rule">
+        <span class="rule-name">指數的商定律</span>
+        <span class="rule-math">\(\dfrac{a^{p}}{a^{q}}=a^{p-q}\)</span>
+        <span class="rule-why">把 $2^{2m}\div2^{m}$ 化成單一個冪，就能看出三個比是否相同。</span>
+      </div>
+      \[ \frac{2^{2m}}{2^{m}}=2^{m},\qquad \frac{2^{3m}}{2^{2m}}=2^{m},\qquad \frac{2^{4m}}{2^{3m}}=2^{m}. \]
+三個比都是 $2^{m}$，故 I 是等比數列（公比 $2^{m}$）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 III：對數的冪定律，並排除 II</div>
+      <div class="rule">
+        <span class="rule-name">對數的冪定律</span>
+        <span class="rule-math">\(\log m^{k}=k\log m\)</span>
+        <span class="rule-why">把 $\log m^{2}$、$\log m^{4}$、$\log m^{8}$ 寫成 $2\log m$、$4\log m$、$8\log m$，比就一目了然。</span>
+      </div>
+      因為 $m&gt;1$，所以 $\log m\neq0$，可以約去：
+\[ \frac{\log m^{2}}{\log m}=2,\qquad \frac{\log m^{4}}{\log m^{2}}=\frac{4\log m}{2\log m}=2,\qquad \frac{\log m^{8}}{\log m^{4}}=\frac{8\log m}{4\log m}=2. \]
+三個比都是 $2$，<br>故 III 是等比數列。<br>
+至於 II：
+\[ \frac{2m^{2}}{m}=2m,\qquad \frac{3m^{4}}{2m^{2}}=\frac{3}{2}m^{2},\qquad \frac{4m^{8}}{3m^{4}}=\frac{4}{3}m^{4}, \]
+三個比不相等（係數與 $m$ 的次方都不同），<br>故 II 不是等比數列。<br>
+只有 I 及 III，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $n&gt;1$，下列何者為等比數列？<br>
+I. $5^{n},\ 5^{n+1},\ 5^{n+2},\ 5^{n+3}$<br>
+II. $2,\ 4n,\ 8n^{2},\ 16n^{3}$<br>
+III. $\log n,\ \log n^{2},\ \log n^{3},\ \log n^{4}$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>I 及 II</li><li><span class="ol">B</span>I 及 III</li><li><span class="ol">C</span>II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> I：$\dfrac{5^{n+1}}{5^{n}}=5$，其餘相鄰比也是 $5$，公比固定，是等比數列。</div>
+          <div class="p-step"><b>第 2 步.</b> II：$\dfrac{4n}{2}=\dfrac{8n^{2}}{4n}=\dfrac{16n^{3}}{8n^{2}}=2n$，公比固定，是等比數列。</div>
+          <div class="p-step"><b>第 3 步.</b> III：$\dfrac{\log n^{2}}{\log n}=2$ 但 $\dfrac{\log n^{3}}{\log n^{2}}=\dfrac{3}{2}$，比不固定，不是等比數列；<br>答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q36.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q38.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

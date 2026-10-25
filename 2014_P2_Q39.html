@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第39題 · 三角方程的根的數目</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第39題</span>
+    <h1>三角方程的根的數目</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在 $0^{\circ}\le x\le 360^{\circ}$ 的範圍內，方程 $7\sin^{2}x=\sin x$ 有多少個根？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">移項後提公因式，切勿兩邊除以 $\sin x$</div>
+      <div class="rule">
+        <span class="rule-name">零積性質</span>
+        <span class="rule-math">\(AB=0\iff A=0\ \text{or}\ B=0\)</span>
+        <span class="rule-why">把方程化成兩個因式相乘等於零，就能分成兩種情況分別求解，不會漏根。</span>
+      </div>
+      \[ 7\sin^{2}x-\sin x=0, \]
+\[ \sin x\,(7\sin x-1)=0. \]
+所以
+\[ \sin x=0\quad\text{or}\quad \sin x=\frac{1}{7}. \]
+若一開始就兩邊除以 $\sin x$，<br>便會丟失 $\sin x=0$ 的那一批根。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解 $\sin x=0$</div>
+      <div class="rule">
+        <span class="rule-name">正弦為零的角</span>
+        <span class="rule-math">\(\sin x=0\iff x=0^{\circ},\ 180^{\circ},\ 360^{\circ}\ (\text{within one turn})\)</span>
+        <span class="rule-why">正弦值為零的角正好落在 $x$ 軸上，在指定範圍內只有三個。</span>
+      </div>
+      在 $0^{\circ}\le x\le 360^{\circ}$ 內，
+\[ x=0^{\circ},\ 180^{\circ},\ 360^{\circ}, \]
+共 $3$ 個根。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解 $\sin x=\dfrac{1}{7}$</div>
+      <div class="rule">
+        <span class="rule-name">第二象限的對應角</span>
+        <span class="rule-math">\(\sin\left(180^{\circ}-\theta\right)=\sin\theta\)</span>
+        <span class="rule-why">正弦在第二象限同為正，所以除了銳角解之外還有一個鈍角解。</span>
+      </div>
+      由計算機，$\sin^{-1}\dfrac{1}{7}\approx8.21^{\circ}$，這是第一象限的解。<br>
+由 $\sin\left(180^{\circ}-\theta\right)=\sin\theta$，另一個解為
+\[ 180^{\circ}-8.21^{\circ}\approx171.79^{\circ}, \]
+仍在指定範圍內，共 $2$ 個根。<br>
+兩批根互不重複（$\sin x=\dfrac{1}{7}\ne0$），合共 $3+2=5$ 個根。<br>
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$5$ 個根）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $0^{\circ}\le x\le 360^{\circ}$ 的範圍內，方程 $5\sin^{2}x=\sin x$ 有多少個根？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 移項並提公因式：$\sin x\,(5\sin x-1)=0$，故 $\sin x=0$ 或 $\sin x=\dfrac{1}{5}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\sin x=0$ 給出 $x=0^{\circ},\ 180^{\circ},\ 360^{\circ}$，共 $3$ 個根。</div>
+          <div class="p-step"><b>第 3 步.</b> $\sin x=\dfrac{1}{5}$ 給出 $11.5^{\circ}$ 及 $168.5^{\circ}$，共 $2$ 個根；<br>合共 $5$ 個，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（$5$ 個根）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q38.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q40.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

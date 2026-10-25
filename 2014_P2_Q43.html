@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第43題 · 組合與乘法原理</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第43題</span>
+    <h1>組合與乘法原理</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某班有 13 名男生和 17 名女生。若從班中選出 2 名男生及 3 名女生組成一支義工隊，共有多少種不同的隊伍？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$38\,896$</li><li><span class="ol">B</span>$53\,040$</li><li><span class="ol">C</span>$142\,506$</li><li><span class="ol">D</span>$636\,480$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先選男生</div>
+      <div class="rule">
+        <span class="rule-name">組合公式</span>
+        <span class="rule-math">\(C_{r}^{n}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">隊伍內不計次序，所以從 13 人中選 2 人要用組合而非排列。</span>
+      </div>
+      隊伍內不分先後，$13$ 名男生中任取 $2$ 名即可。
+\[ C_{2}^{13}=\frac{13\times12}{2\times1}=78. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">再選女生</div>
+      <div class="rule">
+        <span class="rule-name">無次序、不放回選取</span>
+        <span class="rule-math">\(C_{r}^{n}=\dfrac{n(n-1)\cdots(n-r+1)}{r!}\)</span>
+        <span class="rule-why">17 人中選 3 人，用連乘再除以 $3!$ 可避免 factorial 太大，計算更快。</span>
+      </div>
+      $17$ 名女生中任取 $3$ 名，同樣不計次序。
+\[ C_{3}^{17}=\frac{17\times16\times15}{3\times2\times1}=680. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩步結果相乘</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">\(m\times n\)</span>
+        <span class="rule-why">每一種男生組合都可以配任何一種女生組合，兩個選擇獨立，所以相乘。</span>
+      </div>
+      \[ C_{2}^{13}\times C_{3}^{17}=78\times680=53\,040. \]
+選項 A 只選了 2 男 3 女其中一部分（把女生誤算），<br>選項 D 則是「先排列後組合」多乘了階乘。<br>
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$53\,040$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班有 15 名男生和 12 名女生。若從班中選出 3 名男生及 2 名女生組成一個委員會，共有多少種不同的委員會？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30\,030$</li><li><span class="ol">B</span>$27\,720$</li><li><span class="ol">C</span>$360\,360$</li><li><span class="ol">D</span>$1\,501\,500$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 選男生：$C_{3}^{15}=\dfrac{15\times14\times13}{3\times2\times1}=455$。</div>
+          <div class="p-step"><b>第 2 步.</b> 選女生：$C_{2}^{12}=\dfrac{12\times11}{2}=66$。</div>
+          <div class="p-step"><b>第 3 步.</b> 由乘法原理，總數 $=455\times66=30\,030$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$30\,030$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q42.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q44.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

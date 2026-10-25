@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第41題 · 圓的切線與內心</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第41題</span>
+    <h1>圓的切線與內心</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$PQS$ 是一個圓。$PQ$ 延長至 $R$，使 $RS$ 為圓於 $S$ 的切線。$I$ 為 $\triangle QRS$ 的內心。若 $\angle IRQ=12^{\circ}$ 及 $\angle PSQ=70^{\circ}$，則 $\angle QPS=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$24^{\circ}$</li><li><span class="ol">B</span>$37^{\circ}$</li><li><span class="ol">C</span>$43^{\circ}$</li><li><span class="ol">D</span>$62^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2014_P2_Q41.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用切線與弦的夾角把未知角搬到 $S$</div>
+      <div class="rule">
+        <span class="rule-name">切線弦角定理（內錯弓形角）</span>
+        <span class="rule-math">\(\angle QSR=\angle QPS\)</span>
+        <span class="rule-why">$RS$ 是切線、$QS$ 是弦，兩者夾角等於另一弓形內的圓周角 $\angle QPS$，於是 $\angle QSR$ 也可用 $x$ 表示。</span>
+      </div>
+      設 $\angle QPS=x$。<br>由切線弦角定理，
+\[ \angle QSR=\angle QPS=x. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用內心的性質求 $ngle QRS$</div>
+      <div class="rule">
+        <span class="rule-name">內心的性質</span>
+        <span class="rule-math">\(\angle QRS=2\angle IRQ\)</span>
+        <span class="rule-why">內心是三條角平分線的交點，所以 $IR$ 平分 $\angle QRS$，把已知的 $12^{\circ}$ 加倍即可。</span>
+      </div>
+      因 $I$ 為 $\triangle QRS$ 的內心，$IR$ 平分 $\angle QRS$：
+\[ \angle QRS=2\times12^{\circ}=24^{\circ}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $	riangle PRS$ 用內角和</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        <span class="rule-math">\(\angle RPS+\angle PSR+\angle PRS=180^{\circ}\)</span>
+        <span class="rule-why">$R$ 在 $PQ$ 的延長線上，$\triangle PRS$ 的三個角都能用 $x$ 及已知角表示，一條方程即可解 $x$。</span>
+      </div>
+      因 $P$、$Q$、$R$ 共線，$\angle RPS=\angle QPS=x$，而
+\[ \angle PSR=\angle PSQ+\angle QSR=70^{\circ}+x,\qquad \angle PRS=24^{\circ}. \]
+代入內角和：
+\[ x+\left(70^{\circ}+x\right)+24^{\circ}=180^{\circ}, \]
+\[ 2x=86^{\circ},\qquad x=43^{\circ}. \]
+答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$43^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $P$、$Q$、$R$ 共線，且 $Q$ 在 $P$ 與 $R$ 之間；$P$、$Q$、$S$ 三點在圓上，$RS$ 為圓於 $S$ 的切線。$I$ 為 $\triangle QRS$ 的內心。若 $\angle IRQ=15^{\circ}$ 及 $\angle PSQ=50^{\circ}$，則 $\angle QPS=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$40^{\circ}$</li><li><span class="ol">B</span>$45^{\circ}$</li><li><span class="ol">C</span>$50^{\circ}$</li><li><span class="ol">D</span>$55^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $\angle QPS=x$。<br>由切線弦角定理，$\angle QSR=x$。</div>
+          <div class="p-step"><b>第 2 步.</b> $IR$ 平分 $\angle QRS$，故 $\angle QRS=2\times15^{\circ}=30^{\circ}$；<br>又 $\angle PSR=\angle PSQ+\angle QSR=50^{\circ}+x$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在 $\triangle PRS$ 中：$x+(50^{\circ}+x)+30^{\circ}=180^{\circ}$，得 $2x=100^{\circ}$，$x=50^{\circ}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$50^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q40.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2014_P2_Q42.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

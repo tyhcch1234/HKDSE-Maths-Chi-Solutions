@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2014 卷一 第45題 · 方差的性質</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2014 · 卷二 · 第45題</span>
+    <h1>方差的性質</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若四個數 $a$、$b$、$c$、$d$ 的方差為 $9$，則四個數 $14-a$、$14-b$、$14-c$、$14-d$ 的方差為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5$</li><li><span class="ol">B</span>$9$</li><li><span class="ol">C</span>$23$</li><li><span class="ol">D</span>$121$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出方差的定義</div>
+      <div class="rule">
+        <span class="rule-name">方差的定義</span>
+        <span class="rule-math">\(\sigma^{2}=\dfrac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}\)</span>
+        <span class="rule-why">方差是「各數與平均數之差的平方的平均值」，所以要看新數據的偏差有沒有改變。</span>
+      </div>
+      對 $x_{1},x_{2},\dots,x_{n}$，平均數為 $\bar{x}$ 時
+\[ \sigma^{2}=\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}. \]
+已知 $a,b,c,d$ 的方差為 $9$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">先看乘以 $-1$ 的影響</div>
+      <div class="rule">
+        <span class="rule-name">乘以常數後的方差</span>
+        <span class="rule-math">\(\mathrm{Var}(kx)=k^{2}\,\mathrm{Var}(x)\)</span>
+        <span class="rule-why">每個數乘以 $-1$，偏差也乘以 $-1$，平方後符號消失，方差因此不變。</span>
+      </div>
+      新數是 $14-a=(-1)a+14$，可看成「先乘 $-1$、再加 $14$」。<br>
+乘 $-1$ 時，平均數與每個偏差都變號：
+\[ \left(kx_{i}-k\bar{x}\right)^{2}=k^{2}\left(x_{i}-\bar{x}\right)^{2}, \]
+取 $k=-1$，<br>得 $k^{2}=1$，方差乘以 $1$，即不變。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">再看加上常數的影響</div>
+      <div class="rule">
+        <span class="rule-name">加上常數後的方差</span>
+        <span class="rule-math">\(\mathrm{Var}(x+c)=\mathrm{Var}(x)\)</span>
+        <span class="rule-why">所有數據與平均數同時增加同一個常數，偏差完全不變，所以方差也不變。</span>
+      </div>
+      加 $14$ 時，每個數與平均數同步上移：
+\[ \left(x_{i}+c\right)-\left(\bar{x}+c\right)=x_{i}-\bar{x}, \]
+偏差不變，<br>故方差仍為 $9$。<br>
+合起來，新方差 $=9\times(-1)^{2}=9$。<br>
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據的方差為 $25$。若把每個數據乘以 $-3$ 後再加 $7$，則新數據的方差是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$25$</li><li><span class="ol">B</span>$75$</li><li><span class="ol">C</span>$225$</li><li><span class="ol">D</span>$682$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 把變換寫成 $x\mapsto-3x+7$，即先乘 $-3$、再加 $7$。</div>
+          <div class="p-step"><b>第 2 步.</b> 乘常數 $k$ 時方差乘 $k^{2}$：$k=-3$，故方差乘以 $(-3)^{2}=9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 加 $7$ 不改變方差，故新方差 $=9\times25=225$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$225$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2014_P2_Q44.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
