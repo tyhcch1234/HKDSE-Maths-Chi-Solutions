@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第20題 · 圓形性質</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第20題</span>
+    <h1>圓形性質</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$AD$ 是圓 $ABCDE$ 的一條直徑。若 $\angle BAD=58^{\circ}$ 及 $BC=CD$，則 $\angle AEC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$32^{\circ}$</li><li><span class="ol">B</span>$58^{\circ}$</li><li><span class="ol">C</span>$61^{\circ}$</li><li><span class="ol">D</span>$64^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q20.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">等弦對等角，把 $\angle BAD$ 平分</div>
+      <div class="rule">
+        <span class="rule-name">等弦對等角</span>
+        <span class="rule-math">\(BC=CD\ \Longrightarrow\ \angle BAC=\angle CAD\)</span>
+        <span class="rule-why">弦 $BC$ 與弦 $CD$ 等長，它們在圓周上所對的角相等。</span>
+      </div>
+      因為 $BC=CD$，兩弦在圓周 $A$ 處所對的角相等：
+\[\angle BAC=\angle CAD.\]
+而
+\[\angle BAC+\angle CAD=\angle BAD=58^{\circ},\]
+所以
+\[\angle CAD=58^{\circ}\div2=29^{\circ}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">半圓上的圓周角是直角</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的圓周角</span>
+        <span class="rule-math">\(AD\ \text{is a diameter}\ \Longrightarrow\ \angle ACD=90^{\circ}\)</span>
+        <span class="rule-why">$AD$ 是直徑，在圓周 $C$ 處所張的角必為直角。</span>
+      </div>
+      在 $\triangle ACD$ 中：
+\[\angle ACD=90^{\circ}\quad(\angle\text{ in semi-circle}),\]
+\[\angle ADC=180^{\circ}-90^{\circ}-29^{\circ}=61^{\circ}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同弓形內的圓周角相等</div>
+      <div class="rule">
+        <span class="rule-name">同弓形內的圓周角</span>
+        <span class="rule-math">\(\angle AEC=\angle ADC\)</span>
+        <span class="rule-why">$E$ 與 $D$ 都在同一弓形內，兩角同以弦 $AC$ 為底。</span>
+      </div>
+      $\angle AEC$ 與 $\angle ADC$ 都立於弦 $AC$ 上，且 $E$、$D$ 在 $AC$ 的同一側，<br>所以
+\[\angle AEC=\angle ADC=61^{\circ}.\]
+驗算：$\angle ABC$ 與 $\angle ADC$ 互補（圓內接四邊形），<br>得 $\angle ABC=119^{\circ}$，與圖中 $B$ 處的鈍角相符。<br>
+對照選項，答案為 <b>C</b>。<br>選項 A 的 $32^{\circ}$ 是 $90^{\circ}-58^{\circ}$ 的錯誤做法。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$61^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$AD$ 是圓 $ABCDE$ 的一條直徑。若 $\angle BAD=70^{\circ}$ 及 $BC=CD$，則 $\angle AEC=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$20^{\circ}$</li><li><span class="ol">B</span>$55^{\circ}$</li><li><span class="ol">C</span>$70^{\circ}$</li><li><span class="ol">D</span>$110^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BC=CD$ 使 $\angle BAC=\angle CAD$，故 $\angle CAD=70^{\circ}\div2=35^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AD$ 為直徑，$\angle ACD=90^{\circ}$，故 $\angle ADC=180^{\circ}-90^{\circ}-35^{\circ}=55^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $E$、$D$ 同以弦 $AC$ 立角，故 $\angle AEC=\angle ADC=55^{\circ}$，<br>答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$55^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q19.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q21.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

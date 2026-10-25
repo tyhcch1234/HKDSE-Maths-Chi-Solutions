@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第16題 · 錐體體積</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第16題</span>
+    <h1>錐體體積</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個直立圓錐的底半徑為 9 cm，高為 12 cm。圖中顯示把該圓錐的上部切去後所得的平截頭體，其高為 8 cm。求該平截頭體的體積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$210\pi\ \text{cm}^{3}$</li><li><span class="ol">B</span>$312\pi\ \text{cm}^{3}$</li><li><span class="ol">C</span>$324\pi\ \text{cm}^{3}$</li><li><span class="ol">D</span>$936\pi\ \text{cm}^{3}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q16.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先求被切去的小圓錐的高</div>
+      <div class="rule">
+        <span class="rule-name">圓錐的相似性質</span>
+        <span class="rule-math">\(\dfrac{r_{\text{top}}}{r}=\dfrac{h_{\text{top}}}{h}\)</span>
+        <span class="rule-why">被切去的小圓錐與原圓錐同頂點，屬相似立體，對應長度成同一比例。</span>
+      </div>
+      原圓錐高 $12$ cm，平截頭體高 $8$ cm，<br>所以上方被切去的小圓錐高：
+\[h_{\text{top}}=12-8=4\ \text{cm}.\]
+小圓錐與原圓錐相似，對應長度之比相等：
+\[\frac{r_{\text{top}}}{9}=\frac{4}{12}=\frac{1}{3}.\]
+所以
+\[r_{\text{top}}=9\times\frac{1}{3}=3\ \text{cm}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分別算原圓錐與小圓錐的體積</div>
+      <div class="rule">
+        <span class="rule-name">圓錐體積</span>
+        <span class="rule-math">\(V=\tfrac{1}{3}\pi r^{2}h\)</span>
+        <span class="rule-why">平截頭體不是標準立體，要用「大圓錐減小圓錐」來求。</span>
+      </div>
+      原圓錐（$r=9$，$h=12$）：
+\[V_{\text{whole}}=\tfrac{1}{3}\pi(9)^{2}(12)=\tfrac{1}{3}\pi(81)(12)=324\pi.\]
+小圓錐（$r=3$，$h=4$）：
+\[V_{\text{top}}=\tfrac{1}{3}\pi(3)^{2}(4)=\tfrac{1}{3}\pi(9)(4)=12\pi.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相減得平截頭體體積</div>
+      <div class="rule">
+        <span class="rule-name">體積相加減</span>
+        <span class="rule-math">\(V_{\text{frustum}}=V_{\text{whole}}-V_{\text{top}}\)</span>
+        <span class="rule-why">平截頭體正好是原圓錐減去上方小圓錐後餘下的部分。</span>
+      </div>
+      \[V_{\text{frustum}}=324\pi-12\pi=312\pi\ \text{cm}^{3}.\]
+另一條捷徑：相似立體的體積比為長度比的立方，<br>小圓錐佔原圓錐的 $\left(\dfrac{1}{3}\right)^{3}=\dfrac{1}{27}$，故平截頭體佔 $\dfrac{26}{27}$：
+\[324\pi\times\frac{26}{27}=312\pi,\]
+與上面結果一致。<br>
+對照選項，答案為 <b>B</b>。<br>選項 C 的 $324\pi$ 是忘記減去小圓錐。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$312\pi\ \text{cm}^{3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個直立圓錐的底半徑為 6 cm，高為 9 cm。把該圓錐的上部切去後得平截頭體，其高為 6 cm。求該平截頭體的體積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$96\pi\ \text{cm}^{3}$</li><li><span class="ol">B</span>$100\pi\ \text{cm}^{3}$</li><li><span class="ol">C</span>$104\pi\ \text{cm}^{3}$</li><li><span class="ol">D</span>$108\pi\ \text{cm}^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 切去的小圓錐高 $=9-6=3$ cm，與原圓錐的高之比為 $\dfrac{3}{9}=\dfrac{1}{3}$，<br>故其半徑為 $6\times\dfrac{1}{3}=2$ cm。</div>
+          <div class="p-step"><b>第 2 步.</b> 原圓錐體積 $=\tfrac{1}{3}\pi(6)^{2}(9)=108\pi$；<br>小圓錐體積 $=\tfrac{1}{3}\pi(2)^{2}(3)=4\pi$。</div>
+          <div class="p-step"><b>第 3 步.</b> 平截頭體體積 $=108\pi-4\pi=104\pi$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$104\pi\ \text{cm}^{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q15.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q17.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

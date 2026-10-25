@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第27題 · 期望值</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第27題</span>
+    <h1>期望值</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在一個遊戲中擲兩顆均勻骰子。若擲得的兩數之和為 7，可得 ＄36；否則可得 ＄6。求該遊戲的期望所得。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>＄11</li><li><span class="ol">B</span>＄12</li><li><span class="ol">C</span>＄30</li><li><span class="ol">D</span>＄31</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清所有可能的結果</div>
+      <div class="rule">
+        <span class="rule-name">樣本空間的數目</span>
+        <span class="rule-math">\(n(S)=6\times6=36\)</span>
+        <span class="rule-why">兩顆骰子各自有 6 個等可能結果，故共有 36 個有序對。</span>
+      </div>
+      設 $A$ 為「兩數之和為 7」的事件。
+\[n(S)=6\times6=36.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求兩個情況的概率</div>
+      <div class="rule">
+        <span class="rule-name">事件的概率與補集</span>
+        <span class="rule-math">\(P(A)=\dfrac{n(A)}{n(S)},\qquad P(A')=1-P(A)\)</span>
+        <span class="rule-why">和為 7 的情況可逐一列出，其餘情況用補集法則最快。</span>
+      </div>
+      和為 7 的有序對：
+\[(1,6),(2,5),(3,4),(4,3),(5,2),(6,1),\]
+共 6 個，故
+\[P(A)=\frac{6}{36}=\frac{1}{6}.\]
+其餘情況的概率：
+\[P(A')=1-\frac{1}{6}=\frac{5}{6}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">按定義算期望所得</div>
+      <div class="rule">
+        <span class="rule-name">期望值</span>
+        <span class="rule-math">\(E(X)=\sum x_{i}\,P(X=x_{i})\)</span>
+        <span class="rule-why">把每個可能的所得乘以它的概率，再全部相加。</span>
+      </div>
+      \[E=36\times\frac{1}{6}+6\times\frac{5}{6}=6+5=11.\]
+所以期望所得為 ＄11。<br>
+驗算：平均每 6 局有 1 局得 ＄36、5 局得 ＄6，總共 $36+30=66$，<br>平均每局 $66\div6=11$。<br>
+對照選項，答案為 <b>A</b>。<br>選項 C、D 誤把 ＄30 當成期望值，那只是 5 局 ＄6 的總和。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（＄11）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在一個遊戲中擲兩顆均勻骰子。若擲得的兩數之和為 7，可得 ＄48；否則可得 ＄6。求該遊戲的期望所得。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>＄13</li><li><span class="ol">B</span>＄18</li><li><span class="ol">C</span>＄27</li><li><span class="ol">D</span>＄54</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共有 $36$ 個等可能結果，和為 7 的有 6 個，<br>故 $P(\text{sum}=7)=\dfrac{1}{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 其餘情況的概率為 $\dfrac{5}{6}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 期望所得 $=48\times\dfrac{1}{6}+6\times\dfrac{5}{6}=8+5=13$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（＄13）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q26.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q28.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

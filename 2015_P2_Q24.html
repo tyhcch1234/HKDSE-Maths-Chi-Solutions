@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第24題 · 軌跡</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第24題</span>
+    <h1>軌跡</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$ 與 $B$ 的坐標分別為 $(2,\,0)$ 與 $(1,\,5)$。若 $P$ 是直角坐標平面上的一個動點，使 $P$ 與 $A$、$B$ 等距，則 $P$ 的軌跡是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$AB$ 的垂直平分線</li><li><span class="ol">B</span>以 $AB$ 為直徑的圓</li><li><span class="ol">C</span>穿過 $A$ 與 $B$ 的直線</li><li><span class="ol">D</span>$\angle AOB$ 的角平分線，其中 $O$ 為原點</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「與兩點等距」寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">兩點間距離公式</span>
+        <span class="rule-math">\(PA=\sqrt{(x-x_{A})^{2}+(y-y_{A})^{2}}\)</span>
+        <span class="rule-why">「$P$ 與 $A$、$B$ 等距」就是 $PA=PB$，用距離公式可寫成坐標方程。</span>
+      </div>
+      設 $P=(x,\,y)$，條件為
+\[PA=PB.\]
+以 $A(2,0)$、$B(1,5)$ 代入：
+\[\sqrt{(x-2)^{2}+y^{2}}=\sqrt{(x-1)^{2}+(y-5)^{2}}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">平方後化簡</div>
+      <div class="rule">
+        <span class="rule-name">平方消去根號</span>
+        <span class="rule-math">\((x-2)^{2}+y^{2}=(x-1)^{2}+(y-5)^{2}\)</span>
+        <span class="rule-why">兩邊都是非負數，平方不會產生額外解，可直接去掉根號。</span>
+      </div>
+      展開：
+\[x^{2}-4x+4+y^{2}=x^{2}-2x+1+y^{2}-10y+25.\]
+兩邊消去 $x^{2}$ 與 $y^{2}$：
+\[-4x+4=-2x-10y+26,\]
+\[2x-10y+22=0,\qquad x-5y+11=0.\]
+這是一條直線的方程，<br>所以軌跡是一條直線。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">確認它是 $AB$ 的垂直平分線</div>
+      <div class="rule">
+        <span class="rule-name">垂直的斜率條件</span>
+        <span class="rule-math">\(m_{1}m_{2}=-1\ \Longleftrightarrow\ \text{the lines are perpendicular}\)</span>
+        <span class="rule-why">把軌跡的斜率與 $AB$ 的斜率相乘，若為 $-1$ 即互相垂直。</span>
+      </div>
+      $AB$ 的斜率：
+\[m_{AB}=\frac{5-0}{1-2}=-5.\]
+軌跡 $x-5y+11=0$ 即 $y=\dfrac{1}{5}x+\dfrac{11}{5}$，<br>斜率為 $\dfrac{1}{5}$。
+\[m_{AB}\times m=-5\times\frac{1}{5}=-1,\]
+故軌跡垂直 $AB$。<br>
+$AB$ 的中點 $M=\left(\dfrac{3}{2},\dfrac{5}{2}\right)$ 代入 $x-5y+11$：
+\[\frac{3}{2}-\frac{25}{2}+11=0,\]
+即軌跡過中點。<br>垂直且過中點，正是 $AB$ 的垂直平分線。<br>
+對照選項，答案為 <b>A</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$AB$ 的垂直平分線）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $A$ 與 $B$ 的坐標分別為 $(4,\,1)$ 與 $(0,\,3)$。若 $P$ 是直角坐標平面上的一個動點，使 $P$ 與 $A$、$B$ 等距，則 $P$ 的軌跡是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$AB$ 的垂直平分線</li><li><span class="ol">B</span>以 $AB$ 為直徑的圓</li><li><span class="ol">C</span>穿過 $A$ 與 $B$ 的直線</li><li><span class="ol">D</span>$\angle AOB$ 的角平分線，其中 $O$ 為原點</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $PA=PB$：$(x-4)^{2}+(y-1)^{2}=(x-0)^{2}+(y-3)^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開化簡：$x^{2}-8x+16+y^{2}-2y+1=x^{2}+y^{2}-6y+9$，得 $8x-4y-8=0$，即 $2x-y-2=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AB$ 的斜率為 $\dfrac{3-1}{0-4}=-\dfrac{1}{2}$，軌跡斜率為 $2$，乘積為 $-1$，<br>且過中點 $(2,2)$，故為 $AB$ 的垂直平分線，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$AB$ 的垂直平分線）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q23.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q25.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

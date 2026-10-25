@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第17題 · 相似三角形面積比</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第17題</span>
+    <h1>相似三角形面積比</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 是一個平行四邊形。$E$ 是 $CD$ 上的一點，使 $DE:EC=2:3$。$AD$ 延長與 $BE$ 延長相交於 $F$，而 $AE$ 延長與 $BC$ 延長相交於 $G$。若 $\triangle DEF$ 的面積為 $8\ \text{cm}^{2}$，則 $\triangle CEG$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$12\ \text{cm}^{2}$</li><li><span class="ol">B</span>$18\ \text{cm}^{2}$</li><li><span class="ol">C</span>$20\ \text{cm}^{2}$</li><li><span class="ol">D</span>$27\ \text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q17.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出一對相似三角形</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（A.A.A.）</span>
+        <span class="rule-math">\(\angle A=\angle A',\ \angle B=\angle B'\ \Longrightarrow\ \triangle ABC\sim\triangle A'B'C'\)</span>
+        <span class="rule-why">$BE$ 與 $DF$ 相交成對頂角，加上平行線的內錯角，三個角對應相等。</span>
+      </div>
+      因為 $ABCD$ 是平行四邊形，$BC\parallel AD$，即 $BC\parallel DF$。<br>
+考慮 $\triangle CEB$ 與 $\triangle DEF$：
+\[\angle CEB=\angle DEF\quad(\text{vert. opp. }\angle\text{s}),\]
+\[\angle CBE=\angle DFE\quad(\text{alt. }\angle\text{s},\ BC\parallel DF),\]
+\[\angle BCE=\angle FDE\quad(\text{alt. }\angle\text{s},\ BC\parallel DF).\]
+所以 $\triangle CEB\sim\triangle DEF$（A.A.A.）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由面積比求 $\triangle CEB$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{\text{area}_{1}}{\text{area}_{2}}=\left(\dfrac{l_{1}}{l_{2}}\right)^{2}\)</span>
+        <span class="rule-why">相似三角形的面積比等於對應邊比的平方，這裡對應邊是 $CE$ 與 $DE$。</span>
+      </div>
+      由相似，對應邊 $CE$ 對 $DE$，而 $CE:DE=3:2$：
+\[\frac{\text{area of }\triangle CEB}{\text{area of }\triangle DEF}=\left(\frac{3}{2}\right)^{2}=\frac{9}{4}.\]
+已知 $\triangle DEF$ 的面積為 $8\ \text{cm}^{2}$：
+\[\text{area of }\triangle CEB=8\times\frac{9}{4}=18\ \text{cm}^{2}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用同高三角形求 $\triangle DEA$，再放大得答案</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形的面積比</span>
+        <span class="rule-math">\(\dfrac{\text{area}_{1}}{\text{area}_{2}}=\dfrac{b_{1}}{b_{2}}\)</span>
+        <span class="rule-why">$A$ 與 $B$ 到直線 $DC$ 的距離相同（平行四邊形對邊平行），故面積比等於底邊比。</span>
+      </div>
+      $\triangle DEA$ 與 $\triangle CEB$ 同以 $DC$ 所在直線為底所在線，<br>高相同（$AB\parallel DC$），所以
+\[\frac{\text{area of }\triangle DEA}{\text{area of }\triangle CEB}=\frac{DE}{CE}=\frac{2}{3},\]
+\[\text{area of }\triangle DEA=18\times\frac{2}{3}=12\ \text{cm}^{2}.\]
+又 $\triangle DEA\sim\triangle CEG$（對頂角加上 $AD\parallel CG$ 的內錯角），<br>對應邊比為 $\dfrac{DE}{CE}=\dfrac{2}{3}$，故
+\[\text{area of }\triangle CEG=12\times\left(\frac{3}{2}\right)^{2}=12\times\frac{9}{4}=27\ \text{cm}^{2}.\]
+對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$27\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$ABCD$ 是一個平行四邊形。$E$ 是 $CD$ 上的一點，使 $DE:EC=1:2$。$AD$ 延長與 $BE$ 延長相交於 $F$，而 $AE$ 延長與 $BC$ 延長相交於 $G$。若 $\triangle DEF$ 的面積為 $5\ \text{cm}^{2}$，則 $\triangle CEG$ 的面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$20\ \text{cm}^{2}$</li><li><span class="ol">B</span>$40\ \text{cm}^{2}$</li><li><span class="ol">C</span>$45\ \text{cm}^{2}$</li><li><span class="ol">D</span>$80\ \text{cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BC\parallel DF$ 且 $AD\parallel CG$，故 $\triangle CEB\sim\triangle DEF$，邊比 $CE:DE=2:1$，<br>面積比 $4:1$，得 $\triangle CEB=5\times4=20\ \text{cm}^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle DEA$ 與 $\triangle CEB$ 同高，面積比 $DE:CE=1:2$，得 $\triangle DEA=20\times\dfrac{1}{2}=10\ \text{cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle DEA\sim\triangle CEG$ 且邊比 $1:2$，故 $\triangle CEG=10\times4=40\ \text{cm}^{2}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$40\ \text{cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

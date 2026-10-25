@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第28題 · 棒形圖與概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第28題</span>
+    <h1>棒形圖與概率</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下圖顯示某班學生擁有鎖匙數目的分布。求隨機選出一名學生，他擁有 3 條鎖匙的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{5}$</li><li><span class="ol">B</span>$\dfrac{2}{11}$</li><li><span class="ol">C</span>$\dfrac{4}{11}$</li><li><span class="ol">D</span>$\dfrac{9}{11}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q28.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從棒形圖讀出各組頻數</div>
+      <div class="rule">
+        <span class="rule-name">由棒形圖讀頻數</span>
+        <span class="rule-math">\(\text{frequency}=\text{height of the bar}\times\text{scale of the axis}\)</span>
+        <span class="rule-why">縱軸每一格代表固定人數，把棒高乘以格值就是該組人數。</span>
+      </div>
+      縱軸每格代表 4 名學生，圖中五支棒的高度分別為 12、16、8、4、4：
+\[1\ \text{key}:12,\quad 2\ \text{keys}:16,\quad 3\ \text{keys}:8,\quad 4\ \text{keys}:4,\quad 5\ \text{keys}:4.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求全班人數</div>
+      <div class="rule">
+        <span class="rule-name">總頻數</span>
+        <span class="rule-math">\(N=\sum f_{i}\)</span>
+        <span class="rule-why">所有組別的頻數相加，就是概率公式中的分母。</span>
+      </div>
+      \[N=12+16+8+4+4=44.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用概率公式化簡</div>
+      <div class="rule">
+        <span class="rule-name">概率的定義</span>
+        <span class="rule-math">\(P(E)=\dfrac{\text{number of favourable outcomes}}{\text{total number of outcomes}}\)</span>
+        <span class="rule-why">分子是擁有 3 條鎖匙的人數，分母是全班人數。</span>
+      </div>
+      擁有 3 條鎖匙的有 8 人，故
+\[P(3\ \text{keys})=\frac{8}{44}=\frac{2}{11}.\]
+分子分母同除以 4 化簡，<br>答案要寫成最簡分數才對得上選項。<br>
+對照選項，答案為 <b>B</b>。<br>選項 C 的 $\dfrac{4}{11}$ 是忘記除以 4 的 $\dfrac{16}{44}$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\dfrac{2}{11}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某棒形圖顯示某班學生擁有鎖匙數目的分布：0 條有 6 人、1 條有 10 人、2 條有 14 人、3 條有 6 人、4 條有 4 人。求隨機選出一名學生，他擁有 2 條鎖匙的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{4}$</li><li><span class="ol">B</span>$\dfrac{7}{20}$</li><li><span class="ol">C</span>$\dfrac{3}{10}$</li><li><span class="ol">D</span>$\dfrac{7}{10}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 各組頻數為 $6,\ 10,\ 14,\ 6,\ 4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 全班人數 $=6+10+14+6+4=40$。</div>
+          <div class="p-step"><b>第 3 步.</b> 擁有 2 條鎖匙的有 14 人，故 $P=\dfrac{14}{40}=\dfrac{7}{20}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{7}{20}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q27.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q29.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

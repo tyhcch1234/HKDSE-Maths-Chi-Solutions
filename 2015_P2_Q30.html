@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第30題 · 平均數中位數眾數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第30題</span>
+    <h1>平均數中位數眾數</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下整數：
+\[2,\ 2,\ 3,\ 3,\ 3,\ 3,\ 3,\ 5,\ 5,\ 6,\ 8,\ 8,\ 9,\ 10,\ m\]
+設 $p$、$q$、$r$ 分別為上述整數的平均數、中位數及眾數。若 $3\le m\le5$，則下列何者必然正確？<br>
+I. $p>q$<br>
+II. $p>r$<br>
+III. $q>r$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">眾數一定不變</div>
+      <div class="rule">
+        <span class="rule-name">眾數的定義</span>
+        <span class="rule-math">\(\text{mode}=\text{value with the highest frequency}\)</span>
+        <span class="rule-why">原本的 14 個數中 3 已出現 5 次，加一個 $m$ 也不可能被超越。</span>
+      </div>
+      原有數字中，$3$ 出現 5 次，其次 $2$ 與 $5$ 各出現 2 次。<br>
+$m\in\{3,4,5\}$ 只會令某個數多出現一次，$3$ 仍是最頻繁的：
+\[r=3.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">平均數要用總和除以 15</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">\(\bar{x}=\dfrac{\sum x}{n}\)</span>
+        <span class="rule-why">共有 15 個數，先算原有 14 個數的總和，再加 $m$。</span>
+      </div>
+      原有 14 個數的總和：
+\[2+2+3\times5+5+5+6+8+8+9+10=70.\]
+所以
+\[p=\frac{70+m}{15}.\]
+代入 $m=3,4,5$ 分別得 $p\approx4.87,\ 4.93,\ 5$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">中位數是第 8 個數，再逐項檢驗</div>
+      <div class="rule">
+        <span class="rule-name">中位數的位置</span>
+        <span class="rule-math">\(n=15\ \text{odd}:\ \text{median}=\text{the }8\text{th value}\)</span>
+        <span class="rule-why">15 個數排序後，中位數就是正中間的第 8 個，而 $m$ 的位置會影響它。</span>
+      </div>
+      排序後第 8 個數：<br>
+$m=3$ 時 $q=3$；$m=4$ 時 $q=4$；$m=5$ 時 $q=5$。<br>
+逐一檢驗：<br>
+$m=3$：$p\approx4.87>3=q$ ✓，$p>3=r$ ✓，但 $q=r$，III 錯。<br>
+$m=4$：$p\approx4.93>4=q$ ✓，$p>3=r$ ✓，$q=4>3=r$ ✓。<br>
+$m=5$：$p=5=q$，故 I 錯；$p=5>3=r$ ✓；$q=5>3=r$ ✓。<br>
+只有 II 對所有情況都成立，對照選項，答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮以下整數：
+\[1,\ 1,\ 2,\ 2,\ 2,\ 2,\ 2,\ 4,\ 4,\ 5,\ 7,\ 7,\ 8,\ 9,\ m\]
+設 $p$、$q$、$r$ 分別為上述整數的平均數、中位數及眾數。若 $2\le m\le4$，則下列何者必然正確？<br>
+I. $p>q$<br>
+II. $p>r$<br>
+III. $q>r$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 原有數字中 $2$ 出現 5 次，$m\in\{2,3,4\}$ 不會改變眾數，<br>故 $r=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 原有 14 個數總和為 $56$，故 $p=\dfrac{56+m}{15}\approx3.87,\ 3.93,\ 4$。</div>
+          <div class="p-step"><b>第 3 步.</b> 排序後第 8 個數：$m=2$ 時 $q=2$、$m=3$ 時 $q=3$、$m=4$ 時 $q=4$；$m=4$ 時 $p=q$ 令 I 失敗，$m=2$ 時 $q=r$ 令 III 失敗，<br>而 $p>2$ 恒成立，故只有 II 正確，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q29.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第21題 · 圓與三角形面積</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第21題</span>
+    <h1>圓與三角形面積</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $ABCD$ 的直徑 $AC$ 與 $BD$ 相交於點 $E$。若 $\angle AEB=90^{\circ}$ 及 $AC=24\ \text{cm}$，則 $\triangle AEB$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$41\ \text{cm}^{2}$</li><li><span class="ol">B</span>$72\ \text{cm}^{2}$</li><li><span class="ol">C</span>$144\ \text{cm}^{2}$</li><li><span class="ol">D</span>$288\ \text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q21.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩條直徑的交點就是圓心</div>
+      <div class="rule">
+        <span class="rule-name">直徑必過圓心</span>
+        <span class="rule-math">\(AC,\ BD\ \text{are diameters}\ \Longrightarrow\ AC\cap BD=O\)</span>
+        <span class="rule-why">圓的每條直徑都穿過圓心，所以兩條直徑的交點 $E$ 就是圓心。</span>
+      </div>
+      $AC$ 與 $BD$ 都是直徑，而每條直徑都通過圓心，<br>因此它們的交點
+\[E\ \text{is the centre of the circle}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由直徑求半徑，得 $AE$、$EB$</div>
+      <div class="rule">
+        <span class="rule-name">半徑與直徑</span>
+        <span class="rule-math">\(r=\dfrac{d}{2}\)</span>
+        <span class="rule-why">$AC=24$ cm 是直徑，半徑就是 $12$ cm，而 $A$、$B$ 在圓上、$E$ 是圓心。</span>
+      </div>
+      \[r=\frac{AC}{2}=\frac{24}{2}=12\ \text{cm}.\]
+因為 $A$、$B$ 都在圓周上而 $E$ 是圓心，<br>所以
+\[AE=EB=12\ \text{cm}.\]
+注意 $BD$ 的長度也是 $24$ cm，同樣得 $BE=12$ cm。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用兩條半徑作底和高算面積</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">\(\text{Area}=\tfrac{1}{2}ab\sin C\)</span>
+        <span class="rule-why">$AE$ 與 $EB$ 夾角為 $90^{\circ}$，$\sin90^{\circ}=1$，故直接乘再取半。</span>
+      </div>
+      \[\text{Area of }\triangle AEB=\frac{1}{2}\cdot AE\cdot EB\cdot\sin90^{\circ}=\frac{1}{2}(12)(12)=72\ \text{cm}^{2}.\]
+驗算：這是腰長 $12$ 的等腰直角三角形，<br>斜邊 $AB=12\sqrt2$，用 $\dfrac{1}{2}\times12\times12$ 亦得 $72$。<br>
+對照選項，答案為 <b>B</b>。<br>選項 C 的 $144$ 是漏掉 $\dfrac{1}{2}$；<br>選項 D 誤把 $AE$ 當成 $24$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$72\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $ABCD$ 的直徑 $AC$ 與 $BD$ 相交於點 $E$。若 $\angle AEB=90^{\circ}$ 及 $AC=20\ \text{cm}$，則 $\triangle AEB$ 的面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$25\ \text{cm}^{2}$</li><li><span class="ol">B</span>$50\ \text{cm}^{2}$</li><li><span class="ol">C</span>$100\ \text{cm}^{2}$</li><li><span class="ol">D</span>$200\ \text{cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC$ 與 $BD$ 為直徑，交點 $E$ 為圓心，<br>半徑 $=20\div2=10$ cm。</div>
+          <div class="p-step"><b>第 2 步.</b> 故 $AE=EB=10$ cm。</div>
+          <div class="p-step"><b>第 3 步.</b> 面積 $=\tfrac{1}{2}(10)(10)\sin90^{\circ}=50\ \text{cm}^{2}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$50\ \text{cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q20.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q22.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

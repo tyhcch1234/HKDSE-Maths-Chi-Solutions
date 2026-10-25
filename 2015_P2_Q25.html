@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第25題 · 直線方程的截距</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第25題</span>
+    <h1>直線方程的截距</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，直線 $L_1$ 與 $L_2$ 的方程分別為
+\[ax=1\quad\text{and}\quad bx+cy=1\]
+下列何者正確？<br>
+I. $a&lt;0$<br>
+II. $a&lt;b$<br>
+III. $c>0$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q25.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把方程看成截距式</div>
+      <div class="rule">
+        <span class="rule-name">直線的截距</span>
+        <span class="rule-math">\(Ax+By=C:\quad x\text{-intercept}=\dfrac{C}{A},\quad y\text{-intercept}=\dfrac{C}{B}\)</span>
+        <span class="rule-why">圖中只標出直線與兩軸的交點，所以要把方程改寫成截距的語言。</span>
+      </div>
+      $L_1:\ ax=1$ 是鉛直線，$x$ 截距為
+\[x=\frac{1}{a}.\]
+$L_2:\ bx+cy=1$ 的 $x$ 截距（令 $y=0$）與 $y$ 截距（令 $x=0$）分別為
+\[x=\frac{1}{b},\qquad y=\frac{1}{c}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由圖判斷 $a$ 與 $b$ 的符號及大小</div>
+      <div class="rule">
+        <span class="rule-name">倒數的符號</span>
+        <span class="rule-math">\(\dfrac{1}{a}&lt;0\ \Longleftrightarrow\ a&lt;0,\qquad \dfrac{1}{a}&lt;\dfrac{1}{b}\ \text{with}\ a&lt;0&lt;b\ \Longrightarrow\ a&lt;b\)</span>
+        <span class="rule-why">$L_1$ 交於負 $x$ 軸、$L_2$ 交於正 $x$ 軸，一負一正，即可定出 $a$、$b$ 的符號與大小。</span>
+      </div>
+      $L_1$ 與 $x$ 軸交於原點左方，所以
+\[\frac{1}{a}&lt;0\ \Longrightarrow\ a&lt;0.\]
+命題 I 正確。<br>
+$L_2$ 的 $x$ 截距在原點右方，即
+\[\frac{1}{b}>0\ \Longrightarrow\ b>0.\]
+既然 $a$ 是負數而 $b$ 是正數，<br>必有 $a&lt;0&lt;b$，即 $a&lt;b$，命題 II 正確。<br>
+切勿單憑圖上「$L_1$ 在 $L_2$ 的 $x$ 截距之左」就寫 $\dfrac{1}{a}&lt;\dfrac{1}{b}$ 並直接倒數，<br>因為一負一正時倒數會反轉不等號方向。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $y$ 截距判斷 $c$</div>
+      <div class="rule">
+        <span class="rule-name">正截距的條件</span>
+        <span class="rule-math">\(\dfrac{1}{c}>0\ \Longleftrightarrow\ c>0\)</span>
+        <span class="rule-why">$L_2$ 與正 $y$ 軸相交，$y$ 截距為正，故 $c$ 為正數。</span>
+      </div>
+      $L_2$ 與 $y$ 軸交於原點上方：
+\[\frac{1}{c}>0\ \Longrightarrow\ c>0.\]
+命題 III 正確。<br>
+三個命題全部成立，對照選項，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，直線 $L_1$ 與 $L_2$ 的方程分別為
+\[ax=1\quad\text{and}\quad bx+cy=1\]
+$L_1$ 交於正 $x$ 軸，$L_2$ 的 $x$ 截距及 $y$ 截距均為負。下列何者正確？<br>
+I. $a>0$<br>
+II. $b&lt;0$<br>
+III. $c&lt;0$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $L_1$ 的 $x$ 截距為 $\dfrac{1}{a}>0$，故 $a>0$，<br>I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $L_2$ 的 $x$ 截距 $\dfrac{1}{b}&lt;0$，故 $b&lt;0$，<br>II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $L_2$ 的 $y$ 截距 $\dfrac{1}{c}&lt;0$，故 $c&lt;0$，<br>III 正確，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q24.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q26.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

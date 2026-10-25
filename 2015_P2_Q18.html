@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第18題 · 三角比</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第18題</span>
+    <h1>三角比</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$\angle ABC=\beta$、$\angle CAD=\alpha$，且 $\angle BAC=90^{\circ}$、$\angle ADC=90^{\circ}$。則 $\dfrac{AD}{AB}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\cos\alpha\tan\beta$</li><li><span class="ol">B</span>$\sin\alpha\tan\beta$</li><li><span class="ol">C</span>$\dfrac{\cos\alpha}{\tan\beta}$</li><li><span class="ol">D</span>$\dfrac{\sin\alpha}{\tan\beta}$</li></ol>
+    <figure class="fig"><img src="figures/2015_P2_Q18.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle ACD$ 中寫出 $AD$ 與 $AC$ 的關係</div>
+      <div class="rule">
+        <span class="rule-name">餘弦比</span>
+        <span class="rule-math">\(\cos\theta=\dfrac{\text{adjacent}}{\text{hypotenuse}}\)</span>
+        <span class="rule-why">$\triangle ACD$ 在 $D$ 處成直角，以 $\alpha$ 為準，$AD$ 是鄰邊、$AC$ 是斜邊。</span>
+      </div>
+      圖中 $\angle ADC=90^{\circ}$，所以 $\triangle ACD$ 是直角三角形，斜邊為 $AC$。<br>
+在 $A$ 處的角為 $\alpha$，其鄰邊是 $AD$：
+\[\cos\alpha=\frac{AD}{AC}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ABC$ 中寫出 $AC$ 與 $AB$ 的關係</div>
+      <div class="rule">
+        <span class="rule-name">正切比</span>
+        <span class="rule-math">\(\tan\theta=\dfrac{\text{opposite}}{\text{adjacent}}\)</span>
+        <span class="rule-why">$\triangle ABC$ 在 $A$ 處成直角，以 $\beta$ 為準，$AC$ 是對邊、$AB$ 是鄰邊。</span>
+      </div>
+      圖中 $\angle BAC=90^{\circ}$，所以 $\triangle ABC$ 是直角三角形，斜邊為 $BC$。<br>
+在 $B$ 處的角為 $\beta$，其對邊是 $AC$、鄰邊是 $AB$：
+\[\tan\beta=\frac{AC}{AB}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩式相乘，$AC$ 剛好約去</div>
+      <div class="rule">
+        <span class="rule-name">分式相乘</span>
+        <span class="rule-math">\(\dfrac{AD}{AC}\cdot\dfrac{AC}{AB}=\dfrac{AD}{AB}\)</span>
+        <span class="rule-why">把兩條關係相乘，中間的 $AC$ 作為橋樑被消去，只剩要求的比。</span>
+      </div>
+      \[\frac{AD}{AB}=\frac{AD}{AC}\cdot\frac{AC}{AB}=\cos\alpha\cdot\tan\beta.\]
+驗算：取 $\alpha=60^{\circ}$、$\beta=45^{\circ}$。<br>設 $AC=2$，則 $AD=2\cos60^{\circ}=1$、$AB=\dfrac{2}{\tan45^{\circ}}=2$，故 $\dfrac{AD}{AB}=0.5$；<br>而 $\cos60^{\circ}\tan45^{\circ}=0.5\times1=0.5$，相符。<br>
+對照選項，答案為 <b>A</b>。<br>英文站原本的解法把 $\angle BAC$ 誤認成直角位置而自我矛盾，已按圖中直角標記重寫。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\cos\alpha\tan\beta$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$\angle ABC=\beta$、$\angle CAD=\alpha$，且 $\angle BAC=90^{\circ}$、$\angle ADC=90^{\circ}$。則 $\dfrac{CD}{BC}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\sin\alpha\sin\beta$</li><li><span class="ol">B</span>$\cos\alpha\cos\beta$</li><li><span class="ol">C</span>$\sin\alpha\cos\beta$</li><li><span class="ol">D</span>$\cos\alpha\sin\beta$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 在直角 $\triangle ACD$ 中，$\sin\alpha=\dfrac{CD}{AC}$，故 $CD=AC\sin\alpha$。</div>
+          <div class="p-step"><b>第 2 步.</b> 在直角 $\triangle ABC$ 中，$\sin\beta=\dfrac{AC}{BC}$，故 $BC=\dfrac{AC}{\sin\beta}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{CD}{BC}=AC\sin\alpha\cdot\dfrac{\sin\beta}{AC}=\sin\alpha\sin\beta$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\sin\alpha\sin\beta$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q17.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q19.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

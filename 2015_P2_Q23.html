@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第23題 · 極坐標與反射</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷二 · 第23題</span>
+    <h1>極坐標與反射</h1>
+    <p class="sub"></p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$ 的直角坐標為 $(\sqrt{3},\,-1)$。若把 $A$ 沿 $y$ 軸反射，則其影像的極坐標為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(1,\,210^{\circ})$</li><li><span class="ol">B</span>$(1,\,240^{\circ})$</li><li><span class="ol">C</span>$(2,\,210^{\circ})$</li><li><span class="ol">D</span>$(2,\,240^{\circ})$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先做關於 $y$ 軸的反射</div>
+      <div class="rule">
+        <span class="rule-name">關於 $y$ 軸的反射</span>
+        <span class="rule-math">\((x,\ y)\longmapsto(-x,\ y)\)</span>
+        <span class="rule-why">沿 $y$ 軸反射只改變橫坐標的符號，縱坐標不變。</span>
+      </div>
+      \[A(\sqrt{3},\,-1)\ \longmapsto\ A'(-\sqrt{3},\,-1).\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求極半徑 $r$</div>
+      <div class="rule">
+        <span class="rule-name">極坐標的 $r$</span>
+        <span class="rule-math">\(r=\sqrt{x^{2}+y^{2}}\)</span>
+        <span class="rule-why">極半徑是點到極點的距離，反射不會改變它。</span>
+      </div>
+      \[r=\sqrt{(-\sqrt{3})^{2}+(-1)^{2}}=\sqrt{3+1}=\sqrt{4}=2.\]
+所以 $A$ 與 $A'$ 的極半徑都是 $2$，<br>選項 A、B 的 $r=1$ 可以即時排除。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由象限決定極角</div>
+      <div class="rule">
+        <span class="rule-name">極角與參考角</span>
+        <span class="rule-math">\(\tan\theta=\dfrac{y}{x},\qquad \theta=180^{\circ}+\alpha\ (\text{3rd quadrant})\)</span>
+        <span class="rule-why">$A'$ 的兩個坐標都是負數，位於第三象限，故極角為 $180^{\circ}$ 加參考角。</span>
+      </div>
+      參考角 $\alpha$ 滿足 $\tan\alpha=\dfrac{1}{\sqrt{3}}$，故 $\alpha=30^{\circ}$。<br>
+$A'$ 在第三象限：
+\[\theta=180^{\circ}+30^{\circ}=210^{\circ}.\]
+所以影像的極坐標為 $(2,\,210^{\circ})$。<br>
+驗算：$A$ 本身是 $(2,\,330^{\circ})$；<br>關於 $y$ 軸反射把極角變成 $180^{\circ}-330^{\circ}=-150^{\circ}$，與 $210^{\circ}$ 同終邊。<br>
+對照選項，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$(2,\,210^{\circ})$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $A$ 的直角坐標為 $(1,\,\sqrt{3})$。若把 $A$ 沿 $y$ 軸反射，則其影像的極坐標為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(2,\,120^{\circ})$</li><li><span class="ol">B</span>$(2,\,60^{\circ})$</li><li><span class="ol">C</span>$(1,\,120^{\circ})$</li><li><span class="ol">D</span>$(1,\,60^{\circ})$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 沿 $y$ 軸反射：$A(1,\sqrt{3})\mapsto A'(-1,\sqrt{3})$。</div>
+          <div class="p-step"><b>第 2 步.</b> $r=\sqrt{1+3}=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $A'$ 在第二象限，參考角 $\tan\alpha=\sqrt{3}$ 得 $\alpha=60^{\circ}$，<br>故 $\theta=180^{\circ}-60^{\circ}=120^{\circ}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$(2,\,120^{\circ})$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q22.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q24.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
