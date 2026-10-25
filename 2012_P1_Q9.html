@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第9題 · 求積法</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第9題</span>
+    <h1>求積法</h1>
+    <p class="sub">5分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 2 中，實心直角柱體 $ABCDEFGH$ 的體積為 $1020\text{ cm}^{3}$。該角柱體的底 $ABCD$ 為一梯形，其中 $AD$ 平行於 $BC$。已知 $\angle BAD=90^{\circ}$、$AB=12\text{ cm}$、$BC=6\text{ cm}$ 及 $DE=10\text{ cm}$。
+      <p>求</p>
+      <p>(a) $AD$ 的長度，</p>
+      <p>(b) 角柱體 $ABCDEFGH$ 的總表面面積。 <span class="marks">(5 分)</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2012_P1_Q9.png" alt="題目附圖"><figcaption>圖 2（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認清角柱的底與高</div>
+      角柱的高就是側棱的長度，即 $DE=10\text{ cm}$。
+底 $ABCD$ 是一個梯形，$AD$ // $BC$，而 $\angle BAD=90^{\circ}$，所以 $AB$ 正好是兩平行邊之間的高。
+<div class="hint">立體圖中，$AD$ 與 $BC$ 是底的平行邊；$AB$ 垂直於 $AD$，所以 $AB$ 就是梯形的高。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 由體積求 $AD$</div>
+      <div class="rule">
+        <span class="rule-name">角柱的體積</span>
+        <span class="rule-math">\(V=\text{底面積}\times\text{高}\)</span>
+        <span class="rule-why">角柱的體積等於底面積乘以高（側棱長度）。</span>
+      </div>
+      <div class="rule">
+        <span class="rule-name">梯形面積</span>
+        <span class="rule-math">\(\text{面積}=\dfrac{(a+b)h}{2}\)</span>
+        <span class="rule-why">\(a\)、\(b\) 為兩平行邊，\(h\) 為它們之間的垂直距離。</span>
+      </div>
+      底面積
+\[ =\frac{(AD+BC)\times AB}{2}=\frac{(AD+6)\times12}{2}=6(AD+6) \]
+由體積：
+\[ 6(AD+6)\times10=1020 \]
+\[ 60(AD+6)=1020 \]
+\[ AD+6=17 \]
+\[ AD=11\text{ cm} \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 先求斜邊 $CD$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(c^{2}=a^{2}+b^{2}\)</span>
+        <span class="rule-why">由 $C$ 向 $AD$ 作垂線，可得直角三角形，兩股為 $AB$ 與 $AD-BC$。</span>
+      </div>
+      $\angle BAD=90^{\circ}$ 且 $AD$ // $BC$，故由 $C$ 向 $AD$ 作垂線後：
+\[ CD^{2}=AB^{2}+(AD-BC)^{2}=12^{2}+(11-6)^{2} \]
+\[ CD^{2}=144+25=169 \]
+\[ CD=13\text{ cm} \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 計算各面面積</div>
+      兩個梯形底：
+\[ 2\times102=204\text{ cm}^{2} \]
+四個側面（每個都是矩形，闊為棱長、高為 $10\text{ cm}$）：
+\[ AB:\;12\times10=120,\quad BC:\;6\times10=60 \]
+\[ CD:\;13\times10=130,\quad DA:\;11\times10=110 \]
+側面總和 $=120+60+130+110=420\text{ cm}^{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 求總表面面積</div>
+      <div class="rule">
+        <span class="rule-name">角柱的總表面面積</span>
+        <span class="rule-math">\(\text{總表面面積}=2\times\text{底面積}+\text{底周界}\times\text{高}\)</span>
+        <span class="rule-why">上下兩個底，加上四個側面。</span>
+      </div>
+      \[ \text{總表面面積}=204+420=624\text{ cm}^{2} \]
+<div class="hint">驗算：底周界 $=12+6+13+11=42$，乘以高 $10$ 得 $420$，再加兩個底 $204$，結果相同。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $AD=11\text{ cm}$<br>
+      (b) 總表面面積 $=624\text{ cm}^{2}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某直角柱體的底為梯形 $ABCD$，$AD$ // $BC$、$\angle BAD=90^{\circ}$，$AB=8\text{ cm}$、$BC=5\text{ cm}$。柱體體積為 $520\text{ cm}^{3}$，側棱長 $10\text{ cm}$。求 (a) $AD$；(b) 總表面面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 底面積 $=\dfrac{(AD+5)\times8}{2}=4(AD+5)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由體積：$4(AD+5)\times10=520$，得 $AD+5=13$，故 $AD=8\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $CD^{2}=8^{2}+(8-5)^{2}=64+9=73$，故 $CD=\sqrt{73}\approx8.54\text{ cm}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 側面總和 $=(8+5+8.54+8)\times10=295.4\text{ cm}^{2}$。</div>
+          <div class="p-step"><b>第 5 步.</b> 兩個底 $=2\times52=104\text{ cm}^{2}$，故總表面面積 $\approx399\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：(a) $AD=8\text{ cm}$　(b) 總表面面積 $\approx399\text{ cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
