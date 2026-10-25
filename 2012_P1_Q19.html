@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第19題 · 數列與指數</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第19題</span>
+    <h1>數列與指數</h1>
+    <p class="sub">13分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在某城市，一機場的空運貨站 $X$ 自它開始運作起計的第 $n$ 年所處理的貨物的重量為 $A(n)$ 公噸，其中 $n$ 為一正整數。已知 $A(n)=ab^{2n}$，其中 $a$ 及 $b$ 均為正常數。現知 $X$ 自它開始運作起計的第 $1$ 年及第 $2$ 年所處理的貨物的重量分別為 $254\,100$ 公噸及 $307\,461$ 公噸。
+      <p>(a) (i) 求 $a$ 及 $b$。由此求 $X$ 自它開始運作起計的第 $4$ 年所處理的貨物的重量。</p>
+      <p>(ii) 以 $n$ 表 $X$ 自它開始運作起計的首 $n$ 年所處理的貨物的總重量。 <span class="marks">(6 分)</span></p>
+      <p>(b) 自 $X$ 運作了 $4$ 年，空運貨站 $Y$ 開始運作。設 $B(m)$ 公噸為 $Y$ 自它開始運作起計的第 $m$ 年所處理的貨物的重量，其中 $m$ 為一正整數。已知 $B(m)=2ab^{m}$。</p>
+      <p>(i) 該機場的經理宣稱於 $Y$ 運作後，每一年 $Y$ 所處理的貨物的重量均較 $X$ 所處理的少。你是否同意？試解釋你的答案。</p>
+      <p>(ii) 該機場的監督認為當 $X$ 和 $Y$ 所處理的貨物自 $X$ 開始運作起計的總重量超出 $20\,000\,000$ 公噸時，應安裝新設施以維持空運貨站的工作效能。根據該監督的想法，自 $X$ 開始運作起計的哪一年應安裝新設施？ <span class="marks">(7 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 代入第 1 年及第 2 年的數據</div>
+      把 $n=1$ 及 $n=2$ 代入 $A(n)=ab^{2n}$：
+\[ ab^{2}=254\,100, \qquad ab^{4}=307\,461. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(i) 兩式相除，求 $b$</div>
+      <div class="rule">
+        <span class="rule-name">指數定律</span>
+        <span class="rule-math">\(\dfrac{ab^{4}}{ab^{2}}=b^{4-2}=b^{2}\)</span>
+        <span class="rule-why">兩式相除可消去未知的 $a$，只剩下一個關於 $b$ 的方程；同底數相除，指數相減。</span>
+      </div>
+      把兩式相除：
+\[ b^{2}=\frac{307\,461}{254\,100}=1.21. \]
+因 $b$ 為正常數，故
+\[ b=1.1 \]
+（$-1.1$ 不合，因為 $b>0$）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a)(i) 求 $a$ 及第 4 年的重量</div>
+      由 $ab^{2}=254\,100$ 得
+\[ a=\frac{254\,100}{1.21}=210\,000. \]
+第 4 年即 $n=4$，指數為 $2n=8$：
+\[ A(4)=ab^{8}=210\,000(1.1)^{8}\approx450\,153.6501. \]
+即第 4 年約處理 $450\,154$ 公噸貨物。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a)(ii) 求首 $n$ 年的總重量</div>
+      <div class="rule">
+        <span class="rule-name">等比數列求和</span>
+        <span class="rule-math">\(S_{n}=\dfrac{a\,(r^{n}-1)}{r-1}\quad(r\neq1)\)</span>
+        <span class="rule-why">首項為 $a$、公比為 $r$ 的等比數列，其首 $n$ 項之和可用此公式直接求出。</span>
+      </div>
+      首 $n$ 年的重量為
+\[ ab^{2}+ab^{4}+\cdots+ab^{2n}, \]
+這是等比數列：首項 $ab^{2}=254\,100$，公比 $b^{2}=1.21$，共 $n$ 項，故
+\[ S_{n}=\frac{254\,100\,(1.21^{n}-1)}{1.21-1}=1\,210\,000\,(1.21^{n}-1). \]
+即首 $n$ 年的總重量為 $1\,210\,000\left((1.1)^{2n}-1\right)$ 公噸。
+<div class="hint">$1.21-1=0.21$，而 $254\,100\div0.21=1\,210\,000$。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(i) 寫出兩個貨站同一年的處理量</div>
+      $Y$ 的第 $m$ 年，就是 $X$ 的第 $m+4$ 年（$Y$ 在 $X$ 運作 $4$ 年後才開始）。
+\[ B(m)=2ab^{m}=2(210\,000)(1.1)^{m}=420\,000(1.1)^{m}, \]
+\[ A(m+4)=ab^{2m+8}=(1.1)^{2m}\cdot ab^{8}=(1.21)^{m}\times450\,153.65. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(i) 比較並作結論</div>
+      因為 $450\,153.65>420\,000$，而對每個正整數 $m$ 都有 $1.21^{m}>1.1^{m}$，所以
+\[ A(m+4)=(1.21)^{m}\times450\,153.65>(1.1)^{m}\times420\,000=B(m). \]
+即每一年 $X$ 所處理的貨物都比 $Y$ 多，故<b>同意</b>經理的宣稱。
+<div class="hint">關鍵是「$Y$ 的第 $m$ 年」對應「$X$ 的第 $m+4$ 年」，切勿把兩者當成同一年。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b)(ii) 列出總重量的不等式</div>
+      設 $X$ 運作至第 $n$ 年。$Y$ 只在 $X$ 的第 $5$ 年至第 $n$ 年運作，即 $m=1,2,\ldots,n-4$，其總重量為首項 $2ab=462\,000$、公比 $1.1$ 的等比數列之和：
+\[ \frac{462\,000\left((1.1)^{n-4}-1\right)}{1.1-1}=4\,620\,000\left((1.1)^{n-4}-1\right). \]
+總重量超出 $20\,000\,000$ 公噸，即
+\[ 1\,210\,000(1.21^{n}-1)+4\,620\,000\left((1.1)^{n-4}-1\right)>20\,000\,000. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 8 步</span>
+      <div class="step-title">(b)(ii) 化為關於 $(1.1)^{n}$ 的二次不等式</div>
+      <div class="rule">
+        <span class="rule-name">換元法</span>
+        <span class="rule-math">\(x=(1.1)^{n}\;\Longrightarrow\;(1.1)^{2n}=x^{2}\)</span>
+        <span class="rule-why">把指數式換成 $x$，可化為二次不等式，先用二次公式求出 $x$ 的範圍，再取對數求 $n$。</span>
+      </div>
+      兩邊除以 $10\,000$：
+\[ 121(1.21^{n}-1)+462\left((1.1)^{n-4}-1\right)>2000, \]
+\[ 121(1.21^{n})+462(1.1)^{n-4}>2000+121+462=2583. \]
+令 $x=(1.1)^{n}>0$，則 $1.21^{n}=x^{2}$、$(1.1)^{n-4}=\dfrac{x}{1.1^{4}}$：
+\[ 121x^{2}+\frac{462}{1.4641}x>2583, \]
+\[ 121x^{2}+315.55x-2583>0, \]
+\[ x^{2}+2.6079x-21.3471>0. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 9 步</span>
+      <div class="step-title">(b)(ii) 解不等式求 $n$</div>
+      <div class="rule">
+        <span class="rule-name">取對數</span>
+        <span class="rule-math">\(b^{n}>K\;\Longrightarrow\;n>\dfrac{\log K}{\log b}\quad(b>1)\)</span>
+        <span class="rule-why">兩邊取對數可把指數 $n$ 變成乘數；因 $n$ 必須是整數，求出的 $n$ 要向上取整。</span>
+      </div>
+      二次方程 $x^{2}+2.6079x-21.3471=0$ 的正根為 $x\approx3.4968$，故
+\[ x>3.4968, \qquad (1.1)^{n}>3.4968. \]
+兩邊取對數（以 $10$ 為底）：
+\[ n\log1.1>\log3.4968, \]
+\[ n>\frac{\log3.4968}{\log1.1}\approx13.13. \]
+因 $n$ 為正整數，故 $n\ge14$。
+<div class="hint">驗算：第 $13$ 年的總重量約 $19\,484\,712$ 公噸，第 $14$ 年約 $23\,602\,492$ 公噸，確實由第 $14$ 年起才超越 $20\,000\,000$ 公噸。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 10 步</span>
+      <div class="step-title">(b)(ii) 作結論</div>
+      最小符合條件的整數為 $n=14$，所以自 $X$ 開始運作起計的<b>第 14 年</b>應安裝新設施。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a)(i) $a=210\,000$、$b=1.1$；第 4 年約 $450\,154$ 公噸（$450\,153.6501$ 公噸）<br>
+      (a)(ii) $1\,210\,000\,(1.21^{n}-1)$ 公噸，即 $1\,210\,000\left((1.1)^{2n}-1\right)$ 公噸<br>
+      (b)(i) 同意。對每個正整數 $m$，$A(m+4)=(1.21)^{m}\times450\,153.65>420\,000(1.1)^{m}=B(m)$<br>
+      (b)(ii) 第 14 年</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在某城市，一貨櫃碼頭 $X$ 自開始運作起計的第 $n$ 年所處理的貨物重量為 $A(n)$ 公噸，其中 $n$ 為一正整數，且 $A(n)=ab^{2n}$，$a$、$b$ 均為正常數。已知第 $1$ 年及第 $2$ 年所處理的貨物重量分別為 $508\,200$ 公噸及 $614\,922$ 公噸。(a)(i) 求 $a$ 及 $b$，由此求第 $4$ 年所處理的貨物重量。(ii) 以 $n$ 表首 $n$ 年所處理的貨物的總重量。(b) 自 $X$ 運作了 $4$ 年，貨櫃碼頭 $Y$ 開始運作，並設 $B(m)=2ab^{m}$ 公噸為 $Y$ 第 $m$ 年所處理的貨物重量。(i) 該碼頭的經理宣稱 $Y$ 運作後，每一年 $Y$ 所處理的貨物均較 $X$ 少。你是否同意？試解釋你的答案。(ii) 當 $X$ 和 $Y$ 自 $X$ 開始運作起計的總重量超出 $20\,000\,000$ 公噸時，應在哪一年安裝新設施？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $ab^{2}=508\,200$、$ab^{4}=614\,922$，相除得 $b^{2}=\dfrac{614\,922}{508\,200}=1.21$，故 $b=1.1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a=\dfrac{508\,200}{1.21}=420\,000$，故 $A(4)=420\,000(1.1)^{8}\approx900\,307.3002$ 公噸。</div>
+          <div class="p-step"><b>第 3 步.</b> 首 $n$ 年為等比數列（首項 $508\,200$、公比 $1.21$）：$S_{n}=\dfrac{508\,200(1.21^{n}-1)}{0.21}=2\,420\,000(1.21^{n}-1)$ 公噸。</div>
+          <div class="p-step"><b>第 4 步.</b> $B(m)=840\,000(1.1)^{m}$，而 $A(m+4)=(1.21)^{m}\times900\,307.30$；因 $900\,307.30>840\,000$ 且 $1.21^{m}>1.1^{m}$，故 $A(m+4)>B(m)$，同意經理的宣稱。</div>
+          <div class="p-step"><b>第 5 步.</b> $Y$ 的總重量為首項 $924\,000$、公比 $1.1$ 的等比數列之和：$9\,240\,000\left((1.1)^{n-4}-1\right)$。</div>
+          <div class="p-step"><b>第 6 步.</b> 總重量 $=2\,420\,000(1.21^{n}-1)+9\,240\,000\left((1.1)^{n-4}-1\right)>20\,000\,000$；以計算機試算：$n=9$ 時約 $16\,676\,112$ 公噸，$n=10$ 時約 $20\,989\,774$ 公噸。</div>
+          <div class="p-step"><b>第 7 步.</b> 故最小整數為 $n=10$，即第 $10$ 年應安裝新設施。</div>
+          <div class="p-ans">答案：(a)(i) $a=420\,000$、$b=1.1$，$A(4)\approx900\,307.30$ 公噸；(ii) $2\,420\,000(1.21^{n}-1)$ 公噸；(b)(i) 同意；(b)(ii) 第 10 年。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q18.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

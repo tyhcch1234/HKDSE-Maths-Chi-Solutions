@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第16題 · 概率</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第16題</span>
+    <h1>概率</h1>
+    <p class="sub">4分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某公司有 $8$ 個部門。每個部門各提名 $2$ 位代表以成立一個有 $16$ 位成員的工作小組。從該工作小組中隨機選出 $4$ 位成員。
+      <p>(a) 求所選出的 $4$ 位成員由 $4$ 個不同部門提名的概率。 <span class="marks">(2 分)</span></p>
+      <p>(b) 求所選出的 $4$ 位成員至多由 $3$ 個不同部門提名的概率。 <span class="marks">(2 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數出全部可能的選法</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">\({}^{n}C_{r}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">選出一個小組時不計先後次序，所以用組合而非排列。</span>
+      </div>
+      工作小組共有 $8\times2=16$ 位成員。從中隨機選出 $4$ 位，不計次序：
+\[ {}^{16}C_{4}=\frac{16\times15\times14\times13}{4\times3\times2\times1}=1820. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 數出由 4 個不同部門提名的選法</div>
+      <div class="rule">
+        <span class="rule-name">乘法法則</span>
+        <span class="rule-math">\(N=n_{1}\times n_{2}\times\cdots\times n_{k}\)</span>
+        <span class="rule-why">各步互相獨立時，把每一步的選擇數目相乘。</span>
+      </div>
+      先從 $8$ 個部門中選出 $4$ 個，再從每個被選中部門的 $2$ 位代表中選 $1$ 位：
+\[ {}^{8}C_{4}\times\left({}^{2}C_{1}\right)^{4}=70\times2^{4}=70\times16=1120. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 求概率</div>
+      所求概率為
+\[ P=\frac{1120}{1820}=\frac{8}{13}. \]
+<div class="hint">亦可用有序選法核對：$\dfrac{16}{16}\times\dfrac{14}{15}\times\dfrac{12}{14}\times\dfrac{10}{13}=\dfrac{8}{13}$。選出第一位後，其餘 $15$ 人中有 $2$ 人與他同部門，所以只有 $14$ 人「安全」，如此類推。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用餘集</div>
+      <div class="rule">
+        <span class="rule-name">餘集的概率</span>
+        <span class="rule-math">\(P(A')=1-P(A)\)</span>
+        <span class="rule-why">「至多由 3 個不同部門提名」與「由 4 個不同部門提名」互為餘集，把 1 減去 (a) 的答案便可。</span>
+      </div>
+      「至多由 $3$ 個不同部門提名」正是「由 $4$ 個不同部門提名」的餘集，故
+\[ P=1-\frac{8}{13}=\frac{5}{13}. \]
+<div class="hint">若逐個情況數（$3$ 個部門、$2$ 個部門、$1$ 個部門）會很繁複，用餘集最快。</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{8}{13}$<br>
+      (b) $\dfrac{5}{13}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某公司有 $5$ 個部門，每個部門各提名 $4$ 位代表以成立一個有 $20$ 位成員的委員會。從該委員會中隨機選出 $3$ 位成員。(a) 求所選出的 $3$ 位成員由 $3$ 個不同部門提名的概率。(b) 求所選出的 $3$ 位成員至多由 $2$ 個不同部門提名的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部選法：${}^{20}C_{3}=\dfrac{20\times19\times18}{3\times2\times1}=1140$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $3$ 個不同部門提名：${}^{5}C_{3}\times\left({}^{4}C_{1}\right)^{3}=10\times4^{3}=640$。</div>
+          <div class="p-step"><b>第 3 步.</b> (a) $P=\dfrac{640}{1140}=\dfrac{32}{57}$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) 「至多由 $2$ 個不同部門提名」是 (a) 的餘集：$P=1-\dfrac{32}{57}=\dfrac{25}{57}$。</div>
+          <div class="p-ans">答案：(a) $\dfrac{32}{57}$　(b) $\dfrac{25}{57}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q15.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q17.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

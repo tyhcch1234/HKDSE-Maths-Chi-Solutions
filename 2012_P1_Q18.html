@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第18題 · 立體圖形與度量</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第18題</span>
+    <h1>立體圖形與度量</h1>
+    <p class="sub">8分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 5(a) 顯示以正方形為底的直立角錐體 $VABCD$，其中 $\angle VAB=72^{\circ}$。該底的邊長為 $20\text{ cm}$。設 $P$ 及 $Q$ 分別為 $VA$ 及 $VD$ 上的點使得 $PQ$ 平行於 $BC$ 且 $\angle PBA=60^{\circ}$。從 $VABCD$ 切去角錐體 $VPBCQ$ 造成一幾何模型，如圖 5(b) 所示。
+      <p>(a) 求 $AP$ 的長度。 <span class="marks">(2 分)</span></p>
+      <p>(b) 設 $\alpha$ 為平面 $PBCQ$ 與底 $ABCD$ 間之夾角。</p>
+      <p>(i) 求 $\alpha$。</p>
+      <p>(ii) 設 $\beta$ 為 $PB$ 與底 $ABCD$ 間之夾角。$\alpha$ 與 $\beta$ 哪一個較大？試解釋你的答案。 <span class="marks">(6 分)</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2012_P1_Q18.png" alt="題目附圖"><figcaption>圖 5(a) 及圖 5(b)（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先在 $\triangle ABP$ 中找出三隻角</div>
+      因為 $P$ 在 $VA$ 上，所以 $\angle PAB=\angle VAB=72^{\circ}$；又已知 $\angle PBA=60^{\circ}$，故
+\[ \angle APB=180^{\circ}-72^{\circ}-60^{\circ}=48^{\circ}. \]
+底邊 $AB=20\text{ cm}$，這三隻角在下面每一步都用得着。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用正弦公式求 $AP$</div>
+      <div class="rule">
+        <span class="rule-name">正弦公式</span>
+        <span class="rule-math">\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}\)</span>
+        <span class="rule-why">在同一個三角形內，用兩隻已知角及一條已知邊，便可求出另一條邊。</span>
+      </div>
+      在 $\triangle ABP$ 中，$AP$ 對着 $\angle PBA=60^{\circ}$，$AB=20\text{ cm}$ 對着 $\angle APB=48^{\circ}$：
+\[ \frac{AP}{\sin60^{\circ}}=\frac{20}{\sin48^{\circ}} \]
+\[ AP=\frac{20\sin60^{\circ}}{\sin48^{\circ}}\approx23.3070\text{ cm}. \]
+即 $AP\approx23.3\text{ cm}$。
+<div class="hint">同一條公式也可順帶求出 $PB=\dfrac{20\sin72^{\circ}}{\sin48^{\circ}}\approx25.5955\text{ cm}$，第 (b)(ii) 部會用到。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $P$ 向底作垂線，求它離底面的高</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的對應邊</span>
+        <span class="rule-math">\(\dfrac{AP}{AV}=\dfrac{PX}{VO}=\dfrac{AX}{AO}\)</span>
+        <span class="rule-why">兩條同垂直於底面的直線互相平行，於是斜邊上的點把斜邊分割的比例，與高及水平距離的比例相同。</span>
+      </div>
+      設 $O$ 為正方形底的中心、$M$ 為 $AB$ 的中點，則 $VO$ 是角錐體的高，而 $AM=OM=10\text{ cm}$。
+在 $\triangle VAB$ 中 $VA=VB$，故 $VM\perp AB$，得
+\[ VA=\frac{AM}{\cos72^{\circ}}=\frac{10}{\cos72^{\circ}}\approx32.3607\text{ cm}, \]
+\[ VO^{2}=VA^{2}-AM^{2}-OM^{2}=32.3607^{2}-100-100, \qquad VO\approx29.1069\text{ cm}. \]
+設 $X$ 為由 $P$ 向底面所作垂線的垂足。因 $PX\parallel VO$，$\triangle APX\sim\triangle AVO$：
+\[ \frac{AP}{AV}=\frac{23.3070}{32.3607}\approx0.7202, \]
+\[ PX=0.7202\times VO\approx0.7202\times29.1069\approx20.9636\text{ cm}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $X$ 到 $BC$ 的距離</div>
+      $O$ 在對角線 $AC$ 上，故 $X$ 也在 $AC$ 上，且由相似三角形得
+\[ AX=0.7202\times AO=0.7202\times10\sqrt{2}\approx10.1856\text{ cm}, \]
+\[ XC=AC-AX=20\sqrt{2}-10.1856\approx18.0987\text{ cm}. \]
+設 $T$ 為由 $X$ 向 $BC$ 所作垂線的垂足。在 $\triangle XCB$ 中 $\angle XCB=45^{\circ}$，故
+\[ XT=XC\sin45^{\circ}\approx18.0987\times\frac{\sqrt{2}}{2}\approx12.7977\text{ cm}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(i) 求兩平面的夾角 $\alpha$</div>
+      <div class="rule">
+        <span class="rule-name">兩平面的夾角</span>
+        <span class="rule-math">\(\tan\alpha=\dfrac{PX}{XT}\)</span>
+        <span class="rule-why">兩平面的夾角，就是分別在兩個平面內、同時垂直於交線的兩條直線所成的角；此處 $XT\perp BC$、$PT\perp BC$，故 $\alpha=\angle PTX$。</span>
+      </div>
+      平面 $PBCQ$ 與底面相交於 $BC$。$XT\perp BC$，而 $PX\perp$ 底面，故 $PT\perp BC$，於是 $\alpha=\angle PTX$，而 $\triangle PXT$ 在 $X$ 成直角：
+\[ \tan\alpha=\frac{PX}{XT}\approx\frac{20.9636}{12.7977}\approx1.6381, \]
+\[ \alpha\approx58.6^{\circ}. \]
+<div class="hint">$PX$ 是「高」、$XT$ 是「水平距離」，所以用正切而不是正弦。</div>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 求 $\beta$，並與 $\alpha$ 比較</div>
+      <div class="rule">
+        <span class="rule-name">直線與平面的夾角</span>
+        <span class="rule-math">\(\sin\theta=\dfrac{\text{perpendicular height}}{\text{slant length}}\)</span>
+        <span class="rule-why">直線與平面的夾角，是該直線與它在平面上的投影所成的角；在直角三角形中，正弦等於垂直高除以斜長。</span>
+      </div>
+      $X$ 是 $P$ 在底面的垂足，故 $\beta=\angle PBX$。由正弦公式得 $PB\approx25.5955\text{ cm}$，所以
+\[ \sin\beta=\frac{PX}{PB}\approx\frac{20.9636}{25.5955}\approx0.8191, \qquad \beta\approx55.0^{\circ}. \]
+另一方面，在直角三角形 $PXT$ 中
+\[ PT=\sqrt{PX^{2}+XT^{2}}\approx24.5612\text{ cm}, \qquad \sin\alpha=\frac{PX}{PT}\approx\frac{20.9636}{24.5612}\approx0.8535. \]
+$PT$ 是 $P$ 到直線 $BC$ 的垂直距離，而 $B$ 在 $BC$ 上且 $T\ne B$，所以 $PT<PB$，於是
+\[ \sin\alpha=\frac{PX}{PT}>\frac{PX}{PB}=\sin\beta. \]
+$\alpha$ 與 $\beta$ 都是銳角，正弦值愈大，角愈大，故 $\alpha>\beta$（$58.6^{\circ}>55.0^{\circ}$）。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $AP\approx23.3\text{ cm}$（$23.3070\text{ cm}$）<br>
+      (b)(i) $\alpha\approx58.6^{\circ}$<br>
+      (b)(ii) $\alpha$ 較大。因 $PT<PB$，故 $\sin\alpha=\dfrac{PX}{PT}>\dfrac{PX}{PB}=\sin\beta$，而兩角均為銳角，所以 $\alpha>\beta$（$58.6^{\circ}>55.0^{\circ}$）。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 以正方形 $ABCD$ 為底、邊長 $16\text{ cm}$ 的直立角錐體 $VABCD$ 中，$\angle VAB=70^{\circ}$。$P$ 為 $VA$ 上一點，使得 $\angle PBA=62^{\circ}$，並過 $P$ 作平行於 $BC$ 的直線交 $VD$ 於 $Q$。(a) 求 $AP$ 的長度。(b) 設 $\alpha$ 為平面 $PBCQ$ 與底 $ABCD$ 間的夾角，$\beta$ 為 $PB$ 與底 $ABCD$ 間的夾角。求 $\alpha$，並判斷 $\alpha$ 與 $\beta$ 哪一個較大。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 在 $\triangle ABP$ 中：$\angle PAB=70^{\circ}$、$\angle PBA=62^{\circ}$，故 $\angle APB=48^{\circ}$；又 $AB=16\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 正弦公式：$AP=\dfrac{16\sin62^{\circ}}{\sin48^{\circ}}\approx19.0100\text{ cm}\approx19.0\text{ cm}$；同理 $PB=\dfrac{16\sin70^{\circ}}{\sin48^{\circ}}\approx20.2317\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 角錐體的高：$VA=\dfrac{8}{\cos70^{\circ}}\approx23.3904\text{ cm}$，$VO=\sqrt{23.3904^{2}-8^{2}-8^{2}}\approx20.4722\text{ cm}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $P$ 向底作垂線 $PX$：$\dfrac{AP}{AV}=\dfrac{19.0100}{23.3904}\approx0.8127$，故 $PX\approx0.8127\times20.4722\approx16.6383\text{ cm}$。</div>
+          <div class="p-step"><b>第 5 步.</b> $X$ 在 $AC$ 上：$AX\approx0.8127\times8\sqrt{2}\approx9.1949\text{ cm}$，$XC=16\sqrt{2}-9.1949\approx13.4325\text{ cm}$，故 $X$ 到 $BC$ 的距離 $XT=XC\sin45^{\circ}\approx9.4982\text{ cm}$。</div>
+          <div class="p-step"><b>第 6 步.</b> $\tan\alpha=\dfrac{16.6383}{9.4982}\approx1.7517$，得 $\alpha\approx60.3^{\circ}$。</div>
+          <div class="p-step"><b>第 7 步.</b> $\sin\beta=\dfrac{PX}{PB}\approx\dfrac{16.6383}{20.2317}\approx0.8224$，得 $\beta\approx55.3^{\circ}$。因 $PT<PB$，$\sin\alpha>\sin\beta$，故 $\alpha>\beta$。</div>
+          <div class="p-ans">答案：(a) $AP\approx19.0\text{ cm}$　(b) $\alpha\approx60.3^{\circ}$，且 $\alpha>\beta$（$\beta\approx55.3^{\circ}$）。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q17.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q19.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

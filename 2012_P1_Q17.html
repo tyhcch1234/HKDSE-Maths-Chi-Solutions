@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷一 第17題 · 圓的方程</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷一 · 第17題</span>
+    <h1>圓的方程</h1>
+    <p class="sub">7分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 的圓心的坐標為 $(6,10)$。已知 $x$ 軸為 $C$ 的切線。
+      <p>(a) 求 $C$ 的方程。 <span class="marks">(2 分)</span></p>
+      <p>(b) 直線 $L$ 的斜率及 $y$ 截距分別為 $-1$ 及 $k$。若 $L$ 與 $C$ 相交於 $A$ 及 $B$，以 $k$ 表 $AB$ 的中點的坐標。 <span class="marks">(5 分)</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由切線求半徑</div>
+      <div class="rule">
+        <span class="rule-name">圓的切線垂直於半徑</span>
+        <span class="rule-math">\(OT\perp L\)（$T$ 為切點）</span>
+        <span class="rule-why">圓心到切線的垂直距離就是半徑，所以只要量度圓心與切線的距離便可求出半徑。</span>
+      </div>
+      圓心 $C(6,10)$ 與 $x$ 軸（即直線 $y=0$）的垂直距離便是半徑：
+\[ r=10-0=10. \]
+切點在圓心正下方，坐標為 $(6,0)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 寫出圓的方程</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準方程</span>
+        <span class="rule-math">\((x-h)^{2}+(y-k)^{2}=r^{2}\)</span>
+        <span class="rule-why">圓心為 $(h,k)$、半徑為 $r$；展開後得 $x^{2}+y^{2}-2hx-2ky+h^{2}+k^{2}-r^{2}=0$，方便代入直線方程。</span>
+      </div>
+      以圓心 $(6,10)$、半徑 $10$ 代入標準式：
+\[ (x-6)^{2}+(y-10)^{2}=10^{2}, \]
+即
+\[ (x-6)^{2}+(y-10)^{2}=100. \]
+展開得 $x^{2}+y^{2}-12x-20y+36=0$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出直線 $L$ 的方程</div>
+      斜率為 $-1$、$y$ 截距為 $k$，故 $L$ 的方程為
+\[ y=-x+k. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把 $L$ 代入圓方程</div>
+      用圓的展開式 $x^{2}+y^{2}-12x-20y+36=0$，代入 $y=-x+k$：
+\[ x^{2}+(-x+k)^{2}-12x-20(-x+k)+36=0 \]
+\[ x^{2}+(x^{2}-2kx+k^{2})-12x+20x-20k+36=0 \]
+\[ 2x^{2}+(8-2k)x+(k^{2}-20k+36)=0. \]
+這個二次方程的兩個根，就是 $A$ 與 $B$ 的 $x$ 坐標。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 用根之和求中點的 $x$ 坐標</div>
+      <div class="rule">
+        <span class="rule-name">二次方程的根之和</span>
+        <span class="rule-math">\(x_{1}+x_{2}=-\dfrac{b}{a}\)</span>
+        <span class="rule-why">兩根正是 $A$、$B$ 的 $x$ 坐標，故不必解方程也可求出中點的 $x$ 坐標。</span>
+      </div>
+      設兩根為 $x_{1}$、$x_{2}$，此處 $a=2$、$b=8-2k$，故
+\[ x_{1}+x_{2}=-\frac{8-2k}{2}=k-4. \]
+所以 $AB$ 中點 $M$ 的 $x$ 坐標為
+\[ x_{M}=\frac{x_{1}+x_{2}}{2}=\frac{k-4}{2}. \]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 求中點的 $y$ 坐標</div>
+      <div class="rule">
+        <span class="rule-name">中點公式</span>
+        <span class="rule-math">\(M=\left(\dfrac{x_{1}+x_{2}}{2},\ \dfrac{y_{1}+y_{2}}{2}\right)\)</span>
+        <span class="rule-why">中點的兩個坐標分別是兩端點坐標的平均值；本題中點在 $L$ 上，故求出 $x_{M}$ 後可直接用 $L$ 的方程求 $y_{M}$。</span>
+      </div>
+      中點 $M$ 在直線 $L$ 上，故
+\[ y_{M}=-x_{M}+k=-\frac{k-4}{2}+k=\frac{-(k-4)+2k}{2}=\frac{k+4}{2}. \]
+<div class="hint">驗算：中點應位於過圓心且垂直於 $L$ 的直線上（該直線斜率為 $1$，方程 $y=x+4$）；代入得 $\dfrac{k+4}{2}=\dfrac{k-4}{2}+4$ ✓</div>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(x-6)^{2}+(y-10)^{2}=100$（即 $x^{2}+y^{2}-12x-20y+36=0$）<br>
+      (b) $\left(\dfrac{k-4}{2},\ \dfrac{k+4}{2}\right)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 的圓心的坐標為 $(4,7)$。已知 $x$ 軸為 $C$ 的切線。(a) 求 $C$ 的方程。(b) 直線 $L$ 的斜率及 $y$ 截距分別為 $-1$ 及 $k$。若 $L$ 與 $C$ 相交於 $A$ 及 $B$，以 $k$ 表 $AB$ 的中點的坐標。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓心 $(4,7)$ 與 $x$ 軸的距離為 $7$，故半徑 $r=7$，切點為 $(4,0)$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $C$ 的方程為 $(x-4)^{2}+(y-7)^{2}=49$，展開得 $x^{2}+y^{2}-8x-14y+16=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $L$ 的方程為 $y=-x+k$，代入圓方程得 $2x^{2}+(6-2k)x+(k^{2}-14k+16)=0$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由根之和：$x_{1}+x_{2}=k-3$，故 $x_{M}=\dfrac{k-3}{2}$。</div>
+          <div class="p-step"><b>第 5 步.</b> $M$ 在 $L$ 上：$y_{M}=-\dfrac{k-3}{2}+k=\dfrac{k+3}{2}$。</div>
+          <div class="p-ans">答案：(a) $(x-4)^{2}+(y-7)^{2}=49$　(b) $\left(\dfrac{k-3}{2},\ \dfrac{k+3}{2}\right)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2012_P1_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2012_P1_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
