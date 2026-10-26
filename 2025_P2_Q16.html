@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第16題 · 圓柱與球體</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第16題</span>
+    <h1>同一條半徑，兩個立體</h1>
+    <p class="sub">求積法 · 圓柱的總表面積與球體積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      <p>某實心圓柱的總表面積為 $492\pi\ \text{cm}^2$，高為 $35\ \text{cm}$。一個球體的半徑等於該圓柱的底半徑，求該球體的體積。</p>
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$144\pi\ \text{cm}^3$</li>
+      <li><span class="ol">B</span>$288\pi\ \text{cm}^3$</li>
+      <li><span class="ol">C</span>$576\pi\ \text{cm}^3$</li>
+      <li><span class="ol">D</span>$864\pi\ \text{cm}^3$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出圓柱總表面積的公式</div>
+      <div class="rule"><span class="rule-name">圓柱總表面積</span>$A=2\pi r^2+2\pi rh$：上下兩個底圓加側面展開的長方形。</div>
+      <p>設底半徑為 $r$、高 $h=35$，則 $A=2\pi r^2+2\pi r(35)=2\pi r^2+70\pi r$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入已知表面積，解出 $r$</div>
+      <div class="rule"><span class="rule-name">解二次方程</span>先約去 $\pi$，再移項；$r>0$ 故負根不合。</div>
+      <p>$$2\pi r^2+70\pi r=492\pi$$</p>
+      <p>兩邊除以 $2\pi$：$r^2+35r=246$，即 $r^2+35r-246=0$。</p>
+      <p>因式分解：$(r-6)(r+41)=0$，得 $r=6$ 或 $r=-41$（不合）。故底半徑為 $6\ \text{cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">球體半徑等於圓柱底半徑</div>
+      <div class="rule"><span class="rule-name">題意對應</span>「球體半徑等於圓柱底半徑」→ 球半徑 $R=r=6$。</div>
+      <p>球體半徑 $R=6\ \text{cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入球體體積公式</div>
+      <div class="rule"><span class="rule-name">球體體積</span>$V=\dfrac{4}{3}\pi R^3$。</div>
+      <p>$$V=\frac{4}{3}\pi(6)^3=\frac{4}{3}\pi(216)=288\pi\ \text{cm}^3$$</p>
+      <p>答案 <b>B</b>。留意選項 A 是 $\dfrac{4}{3}\pi(6)^2$（誤把立方當平方），C、D 則是把直徑 $12$ 當半徑的結果。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$288\pi\ \text{cm}^3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某實心圓柱的總表面積為 $252\pi\ \text{cm}^2$，高為 $16\ \text{cm}$。一個球體的半徑等於該圓柱的底半徑，求該球體的體積。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$72\pi\ \text{cm}^3$</li>
+        <li><span class="ol">B</span>$144\pi\ \text{cm}^3$</li>
+        <li><span class="ol">C</span>$288\pi\ \text{cm}^3$</li>
+        <li><span class="ol">D</span>$432\pi\ \text{cm}^3$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $2\pi r^2+32\pi r=252\pi$，除以 $2\pi$ 得 $r^2+16r-126=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> $(r-6)(r+21)=0$，故 $r=6$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V=\dfrac{4}{3}\pi(6)^3=288\pi$。</div>
+          <div class="p-ans">答案：<b>C</b>（$288\pi\ \text{cm}^3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
