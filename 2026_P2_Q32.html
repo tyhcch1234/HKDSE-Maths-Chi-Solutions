@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第32題 · 最大公因式與最小公倍式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第32題</span>
+    <h1>逐個字母看「最小」與「最大」指數</h1>
+    <p class="sub">多項式 · 最大公因式與最小公倍式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      三個式子的最大公因式（H.C.F.）及最小公倍式（L.C.M.）分別為 $xy^2z^3$ 及 $x^2y^4z^6$。若第一個及第二個式子分別為 $xy^2z^6$ 及 $xy^2z^4$，則第三個式子為
+      <ol class="opts">
+        <li><span class="ol">A</span>$xy^2z^3$</li>
+        <li><span class="ol">B</span>$xy^4z^4$</li>
+        <li><span class="ol">C</span>$x^2y^2z^4$</li>
+        <li><span class="ol">D</span>$x^2y^4z^3$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用指數的「最大最小」規則</div>
+      <div class="rule">
+        <span class="rule-name">H.C.F. 與 L.C.M. 的指數</span>
+        <span class="rule-math">H.C.F. 取最小指數；L.C.M. 取最大指數</span>
+        <span class="rule-why">三個式子的同一字母，最小指數要等於 H.C.F.、最大指數要等於 L.C.M.。</span>
+      </div>
+      <p>設第三個式子為 $x^{a}y^{b}z^{c}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐一字母比較</div>
+      <p><b>$x$：</b>三個指數為 $1,1,a$，最小為 $1$、最大為 $2$，故 $a=2$。</p>
+      <p><b>$y$：</b>三個指數為 $2,2,b$，最小為 $2$、最大為 $4$，故 $b=4$。</p>
+      <p><b>$z$：</b>三個指數為 $6,4,c$，最大須為 $6$（已符合），最小須為 $3$，故 $c=3$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出第三個式子</div>
+      <p>$$x^2y^4z^3$$</p>
+      <p>即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　$x^2y^4z^3$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 兩個式子的 H.C.F. 為 $2a^2b$、L.C.M. 為 $12a^3b^2c$。若其中一個式子為 $6a^3b$，求另一個式子。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩式的乘積 $=$ H.C.F. $\times$ L.C.M. $=24a^5b^3c$。</div>
+          <div class="p-step"><b>第 2 步.</b> 另一式 $=\dfrac{24a^5b^3c}{6a^3b}=4a^2b^2c$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算：H.C.F.$(6a^3b,\ 4a^2b^2c)=2a^2b$ ✓；L.C.M.$=12a^3b^2c$ ✓。</div>
+          <div class="p-ans">答案：$4a^2b^2c$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q31.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

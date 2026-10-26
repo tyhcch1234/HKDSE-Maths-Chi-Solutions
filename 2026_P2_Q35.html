@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第35題 · 對數圖像</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第35題</span>
+    <h1>前面加負號，單調性反轉</h1>
+    <p class="sub">對數函數 · 圖像性質</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下有關 $y=2-\log_3(x+4)$ 圖像的陳述，哪幾項正確？
+      <br>I. 當 $x$ 增加時，$y$ 增加。
+      <br>II. 圖像的 $x$ 截距為 $5$。
+      <br>III. 圖像的 $y$ 截距為 $2$。
+      <ol class="opts">
+        <li><span class="ol">A</span>只有 I</li>
+        <li><span class="ol">B</span>只有 II</li>
+        <li><span class="ol">C</span>只有 I 及 III</li>
+        <li><span class="ol">D</span>只有 II 及 III</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">判斷 I：單調性</div>
+      <div class="rule">
+        <span class="rule-name">對數函數的單調性</span>
+        <span class="rule-math">$a>1\ \Rightarrow\ y=\log_a x$ 在 $x>0$ 遞增</span>
+        <span class="rule-why">底 $3>1$，故 $\log_3(x+4)$ 隨 $x$ 增加，前面加負號後 $y$ 反而減少。</span>
+      </div>
+      <p>故 $y$ 隨 $x$ 增加而<b>減少</b>，I 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 II：$x$ 截距</div>
+      <p>令 $y=0$：</p>
+      <p>$$\log_3(x+4)=2\quad\Longrightarrow\quad x+4=3^{2}=9\quad\Longrightarrow\quad x=5$$</p>
+      <p>II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 III：$y$ 截距</div>
+      <p>令 $x=0$：</p>
+      <p>$$y=2-\log_3 4\approx2-1.26=0.74\neq2$$</p>
+      <p>III 錯誤。故只有 II，即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　只有 II</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 對 $y=3+\log_2(x-1)$，求 (a) $x$ 截距；(b) $y$ 隨 $x$ 增加時的增加或減少的趨勢。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 令 $y=0$：$\log_2(x-1)=-3$，故 $x-1=\dfrac{1}{8}$，$x=\dfrac{9}{8}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 底 $2>1$，$\log_2(x-1)$ 遞增，故 $y$ 隨 $x$ 增加而增加。</div>
+          <div class="p-ans">答案：(a) $x=\dfrac{9}{8}$　(b) 遞增</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q34.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

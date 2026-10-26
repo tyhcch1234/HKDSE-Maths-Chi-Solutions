@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第28題 · 概率（抽卡）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第28題</span>
+    <h1>兩張 2 要當作不同卡來數</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋中有五張分別寫上 $2,2,3,4,6$ 的卡。同時隨機抽出兩張，求所抽數字之和大於 $7$ 的概率。
+      <ol class="opts">
+        <li><span class="ol">A</span>$\dfrac{1}{2}$</li>
+        <li><span class="ol">B</span>$\dfrac{1}{5}$</li>
+        <li><span class="ol">C</span>$\dfrac{2}{5}$</li>
+        <li><span class="ol">D</span>$\dfrac{3}{10}$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">${}^{5}C_{2}=\dfrac{5\times4}{2}=10$</span>
+        <span class="rule-why">五張卡抽兩張，共有 $10$ 個等可能結果。</span>
+      </div>
+      <p>$${}^{5}C_{2}=10$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數有利結果</div>
+      <p>只有含 $6$ 的組合才可能超過 $7$：$(2,6)$、$(2,6)$（兩張不同的 2）、$(3,6)$、$(4,6)$，共 $4$ 組。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率</div>
+      <div class="rule">
+        <span class="rule-name">概率</span>
+        <span class="rule-math">$P=\dfrac{\text{有利結果}}{\text{總結果}}$</span>
+        <span class="rule-why">$\dfrac{4}{10}=\dfrac{2}{5}$。</span>
+      </div>
+      <p>$$P=\frac{4}{10}=\frac{2}{5}$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$\dfrac{2}{5}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋中有五張卡，分別寫上 $1,3,3,5,7$。同時抽出兩張，求數字之和大於 $8$ 的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總共 ${}^{5}C_{2}=10$ 個結果。</div>
+          <div class="p-step"><b>第 2 步.</b> 和大於 $8$：$(3,7)$ 兩組、$(5,7)$，共 $3$ 組。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{3}{10}$。</div>
+          <div class="p-ans">答案：$\dfrac{3}{10}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q27.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q29.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

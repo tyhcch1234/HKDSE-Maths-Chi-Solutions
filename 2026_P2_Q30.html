@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第30題 · 方差、中位數與眾數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第30題</span>
+    <h1>先用平均數與全距鎖定 $x,y$ 的三種組合</h1>
+    <p class="sub">統計學 · 方差、中位數、眾數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下整數：$4,\ 7,\ 7,\ 7,\ 8,\ 11,\ 11,\ 13,\ x,\ y$。設 $u$、$v$、$w$ 分別為上述整數的方差、中位數及眾數。若上述整數的平均數及全距均為 $9$，下列哪幾項必然正確？
+      <br>I. $u>7$
+      <br>II. $v>7$
+      <br>III. $w=7$
+      <ol class="opts">
+        <li><span class="ol">A</span>只有 I</li>
+        <li><span class="ol">B</span>只有 II</li>
+        <li><span class="ol">C</span>只有 I 及 III</li>
+        <li><span class="ol">D</span>只有 II 及 III</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由平均數求 $x+y$</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">$\bar{x}=\dfrac{\text{總和}}{\text{數據個數}}$</span>
+        <span class="rule-why">共 $10$ 個數據、平均數 $9$，總和為 $90$，已知部分和為 $68$。</span>
+      </div>
+      <p>$$4+7+7+7+8+11+11+13=68,\qquad x+y=90-68=22$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由全距收窄組合</div>
+      <p>全距為 $9$，而 $4$ 與 $13$ 已在數據中，故所有數據都在 $[4,13]$ 之內。配合 $x+y=22$：</p>
+      <p>$$\{x,y\}=\{9,13\},\ \{10,12\}\ \text{或}\ \{11,11\}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查中位數 $v$</div>
+      <p>三種情況的中位數分別為 $8.5$、$9$、$9.5$，全部大於 $7$。故 II 必然正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查眾數 $w$ 與方差 $u$</div>
+      <p>$7$ 出現三次，但當 $\{x,y\}=\{11,11\}$ 時，$11$ 出現四次，眾數變成 $11$，故 III 不一定正確。</p>
+      <div class="rule">
+        <span class="rule-name">方差</span>
+        <span class="rule-math">$u=\dfrac{1}{n}\sum (x_i-\bar{x})^{2}$</span>
+        <span class="rule-why">三種情況得 $u=7.8$、$7.2$、$7.0$，最小值剛好是 $7$，故 $u>7$ 不必然成立。</span>
+      </div>
+      <p>故 I 不一定正確，只有 II 必然正確，即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　只有 II</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 數據 $3,5,5,6,8,x$ 的平均數為 $6$，求 $x$、眾數及中位數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總和 $=6\times6=36$，故 $x=36-27=9$。</div>
+          <div class="p-step"><b>第 2 步.</b> 排序：$3,5,5,6,8,9$，眾數為 $5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 中位數 $=\dfrac{5+6}{2}=5.5$。</div>
+          <div class="p-ans">答案：$x=9$，眾數 $5$，中位數 $5.5$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q29.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q31.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
