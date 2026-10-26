@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第8題 · 因式定理與餘式定理：一個條件換一個關係</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第8題</span>
+    <h1>因式定理與餘式定理：一個條件換一個關係</h1>
+    <p class="sub">多項式 · 餘式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $g(x)=x^{8}+ax^{7}+b$，其中 $a$、$b$ 為常數。若 $g(x)$ 可被 $x-1$ 整除，求 $g(x)$ 除以 $x+1$ 的餘數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$2a$</li><li><span class="ol">C</span>$-2a$</li><li><span class="ol">D</span>$-2a+2$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「整除」翻譯成 $g(1)=0$</div>
+      <div class="rule"><span class="rule-name">因式定理</span>$g(x)$ 可被 $x-c$ 整除 $\Leftrightarrow$ $g(c)=0$。</div>
+<p>$$g(1)=1+a+b=0\;\Longrightarrow\;b=-a-1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $b$ 換走，只留 $a$</div>
+<p>關鍵是把 $b$ 消去，令最後答案只用 $a$ 表示。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">除以 $x+1$ 的餘數是 $g(-1)$</div>
+      <div class="rule"><span class="rule-name">餘式定理</span>除以 $x-c$ 的餘數是 $g(c)$；此處 $x+1=0$ 即 $x=-1$。</div>
+<p>$$g(-1)=(-1)^{8}+a(-1)^{7}+b=1-a+b$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入 $b=-a-1$</div>
+<p>$$g(-1)=1-a+(-a-1)=-2a$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$-2a$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p(x)=x^{5}+ax^{3}+b$。若 $p(x)$ 可被 $x-1$ 整除，則 $p(x)$ 除以 $x+1$ 的餘數是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-2a$</li><li><span class="ol">B</span>$-2a-2$</li><li><span class="ol">C</span>$2a$</li><li><span class="ol">D</span>$2a+2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $p(1)=1+a+b=0\Rightarrow b=-a-1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $p(-1)=-1-a+b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入：$-1-a-a-1=-2a-2$。</div>
+          <div class="p-ans">答案：<b>B</b>（$-2a-2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

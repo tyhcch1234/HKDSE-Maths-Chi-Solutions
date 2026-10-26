@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第17題 · 圓心到弦的垂線：先找半徑，再找圓心角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第17題</span>
+    <h1>圓心到弦的垂線：先找半徑，再找圓心角</h1>
+    <p class="sub">求積法 · 扇形面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $O$ 是扇形 $OABCD$ 的圓心。$AD$ 與 $OC$ 互相垂直，並相交於 $E$。$F$ 是 $AD$ 上的一點，使 $BF\perp AD$。若 $AF=9\text{ cm}$、$DF=39\text{ cm}$ 及 $OE=18\text{ cm}$，則扇形 $OBC$ 的面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$48\pi\text{ cm}^{2}$</li><li><span class="ol">B</span>$75\pi\text{ cm}^{2}$</li><li><span class="ol">C</span>$96\pi\text{ cm}^{2}$</li><li><span class="ol">D</span>$150\pi\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_17.png" alt="扇形 OABCD 與弦 AD" style="max-width:100%;height:auto;"><figcaption>圖：$OC\perp AD$ 於 $E$，$BF\perp AD$ 於 $F$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">圓心到弦的垂線平分弦</div>
+      <div class="rule"><span class="rule-name">垂徑定理</span>由圓心向弦作垂線，必平分該弦。</div>
+<p>$$AE=DE=\frac{AD}{2}=\frac{9+39}{2}=24\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $	riangle OAE$ 求半徑</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$OA^{2}=AE^{2}+OE^{2}$。</div>
+<p>$$OA=\sqrt{24^{2}+18^{2}}=\sqrt{576+324}=\sqrt{900}=30\text{ cm}$$</p>
+<p>故扇形半徑 $r=30\text{ cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $EF$，再搬到 $BG$</div>
+      <div class="rule"><span class="rule-name">矩形</span>過 $B$ 作 $BG\perp OC$，則 $BGEF$ 是矩形，$BG=EF$。</div>
+<p>$$EF=AE-AF=24-9=15\text{ cm}\;\Rightarrow\;BG=15\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle OBG$ 求圓心角</div>
+      <div class="rule"><span class="rule-name">正弦</span>在直角三角形中 $\sin\theta=\dfrac{\text{對邊}}{\text{斜邊}}$。</div>
+<p>$$\sin\angle BOG=\frac{BG}{OB}=\frac{15}{30}=\frac{1}{2}\;\Rightarrow\;\angle BOG=30^{\circ}$$</p>
+<p>即 $\angle BOC=30^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">代扇形面積公式</div>
+      <div class="rule"><span class="rule-name">扇形面積</span>$A=\dfrac{\theta}{360^{\circ}}\pi r^{2}$。</div>
+<p>$$A=\frac{30}{360}\pi(30)^{2}=\frac{1}{12}\times900\pi=75\pi\text{ cm}^{2}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$75\pi\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個扇形的半徑為 $15\text{ cm}$，圓心角為 $48^{\circ}$。求它的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24\pi\text{ cm}^{2}$</li><li><span class="ol">B</span>$30\pi\text{ cm}^{2}$</li><li><span class="ol">C</span>$36\pi\text{ cm}^{2}$</li><li><span class="ol">D</span>$45\pi\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 扇形面積 $=\dfrac{\theta}{360^{\circ}}\pi r^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{48}{360}=\dfrac{2}{15}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $A=\dfrac{2}{15}\pi(15)^{2}=30\pi\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$30\pi\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第11題 · 正變與反變：先寫方程，再平方找常數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第11題</span>
+    <h1>正變與反變：先寫方程，再平方找常數</h1>
+    <p class="sub">變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $w$ 隨 $u$ 的平方根正變，並隨 $v$ 的平方反變，則下列何者必定是常數？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$u^{4}vw^{2}$</li><li><span class="ol">B</span>$uv^{4}w^{2}$</li><li><span class="ol">C</span>$\dfrac{vw^{2}}{u^{4}}$</li><li><span class="ol">D</span>$\dfrac{v^{4}w^{2}}{u}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把文字譯成方程</div>
+      <div class="rule"><span class="rule-name">變分</span>正變放分子，反變放分母。</div>
+<p>$w$ 隨 $\sqrt{u}$ 正變、隨 $v^{2}$ 反變：</p>
+<p>$$w=k\,\frac{\sqrt{u}}{v^{2}}\qquad(k\neq0\ \text{為常數})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $k$ 單獨留在左邊</div>
+<p>兩邊乘 $\dfrac{v^{2}}{\sqrt{u}}$：</p>
+<p>$$k=\frac{wv^{2}}{\sqrt{u}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">平方，消去根號</div>
+<p>$$k^{2}=\frac{w^{2}v^{4}}{u}$$</p>
+<p>$k$ 是常數，$k^{2}$ 也是常數，故 $\dfrac{v^{4}w^{2}}{u}$ 必定是常數。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{v^{4}w^{2}}{u}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $y$ 隨 $x$ 的立方正變，並隨 $\sqrt{z}$ 反變，則下列何者必定是常數？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{x^{6}}{y^{2}z}$</li><li><span class="ol">B</span>$\dfrac{y^{2}z}{x^{6}}$</li><li><span class="ol">C</span>$\dfrac{yz^{2}}{x^{3}}$</li><li><span class="ol">D</span>$\dfrac{x^{3}z}{y^{2}}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $y=k\dfrac{x^{3}}{\sqrt{z}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $k=\dfrac{y\sqrt{z}}{x^{3}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 平方：$k^{2}=\dfrac{y^{2}z}{x^{6}}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{y^{2}z}{x^{6}}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

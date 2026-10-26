@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第9題 · 複利息：月利率與期數要配套</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第9題</span>
+    <h1>複利息：月利率與期數要配套</h1>
+    <p class="sub">百分數 · 複利息</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+把 $\$100\,000$ 存入銀行，年利率 $2\%$，為期 $3$ 年，每月複利計算。求利息（準確至最接近的元）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\$6\,000$</li><li><span class="ol">B</span>$\$6\,121$</li><li><span class="ol">C</span>$\$6\,176$</li><li><span class="ol">D</span>$\$6\,178$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">抄下三個數量</div>
+      <div class="rule"><span class="rule-name">複利息</span>$A=P\left(1+\dfrac{r}{n}\right)^{nt}$，其中 $r$ 是年利率、$n$ 是每年複利次數。</div>
+<p>本金 $P=100\,000$，年利率 $r=2\%=0.02$，$t=3$ 年，每月複利即 $n=12$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">每月利率＝年利率 ÷ 12</div>
+      <div class="rule"><span class="rule-name">易錯點</span>「每月複利」是每年計 12 次，不是每月 $2\%$。</div>
+<p>$$\text{每月利率}=\frac{0.02}{12}=\frac{1}{600}\approx0.1667\%$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">期數＝每年次數 × 年數</div>
+<p>$$nt=12\times3=36\ \text{期}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入求本利和，再減本金</div>
+<p>$$A=100\,000\left(1+\frac{0.02}{12}\right)^{36}\approx106\,178.35$$</p>
+<p>$$\text{利息}=A-P\approx106\,178.35-100\,000=6\,178.35$$</p>
+<p>準確至最接近的元為 $\$6\,178$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\$6\,178$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 $\$50\,000$ 存入銀行，年利率 $3\%$，為期 $2$ 年，每季複利計算。求利息（準確至最接近的元）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\$3\,000$</li><li><span class="ol">B</span>$\$3\,075$</li><li><span class="ol">C</span>$\$3\,080$</li><li><span class="ol">D</span>$\$3\,120$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每季利率 $=\dfrac{0.03}{4}=0.0075$，期數 $=4\times2=8$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A=50\,000(1.0075)^{8}\approx53\,079.94$。</div>
+          <div class="p-step"><b>第 3 步.</b> 利息 $\approx3\,079.94\approx\$3\,080$。</div>
+          <div class="p-ans">答案：<b>C</b>（$\$3\,080$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第26題 · 垂直線＋$y$ 軸交點：先定方程，再算三角形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第26題</span>
+    <h1>垂直線＋$y$ 軸交點：先定方程，再算三角形面積</h1>
+    <p class="sub">座標幾何 · 直線與面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $L_{1}$ 的方程為 $4x+3y-36=0$。直線 $L_{2}$ 垂直於 $L_{1}$，並與 $L_{1}$ 相交於 $y$ 軸上的一點。求由 $L_{1}$、$L_{2}$ 及 $x$ 軸圍成的區域面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$96$</li><li><span class="ol">B</span>$108$</li><li><span class="ol">C</span>$150$</li><li><span class="ol">D</span>$192$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找 $L_{1}$ 的兩個截距</div>
+      <div class="rule"><span class="rule-name">截距</span>令 $y=0$ 得 $x$ 截距；令 $x=0$ 得 $y$ 截距。</div>
+<p>$$y=0:\ 4x=36\Rightarrow x=9;\qquad x=0:\ 3y=36\Rightarrow y=12$$</p>
+<p>交 $x$ 軸於 $(9,0)$，交 $y$ 軸於 $(0,12)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $L_{2}$ 的斜率</div>
+      <div class="rule"><span class="rule-name">垂直條件</span>$m_{1}m_{2}=-1$。</div>
+<p>$L_{1}:y=-\dfrac{4}{3}x+12$，故 $m_{1}=-\dfrac{4}{3}$。</p>
+<p>$$m_{2}=\frac{-1}{-\frac{4}{3}}=\frac{3}{4}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">$L_{2}$ 經過 $(0,12)$</div>
+<p>$$L_{2}:\ y=\frac{3}{4}x+12$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $L_{2}$ 的 $x$ 截距</div>
+<p>$$0=\frac{3}{4}x+12\Rightarrow x=-16$$</p>
+<p>即 $L_{2}$ 交 $x$ 軸於 $(-16,0)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">算三角形面積</div>
+      <div class="rule"><span class="rule-name">三角形面積</span>$A=\dfrac{1}{2}\times$ 底 $\times$ 高。</div>
+<p>底在 $x$ 軸上，長 $=9-(-16)=25$；高 $=12$。</p>
+<p>$$A=\frac{1}{2}\times25\times12=150$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$150$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L_{1}$ 的方程為 $2x+y-8=0$。$L_{2}\perp L_{1}$ 且與 $L_{1}$ 相交於 $y$ 軸上。求由 $L_{1}$、$L_{2}$ 及 $x$ 軸圍成的區域面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$60$</li><li><span class="ol">B</span>$72$</li><li><span class="ol">C</span>$80$</li><li><span class="ol">D</span>$96$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $L_{1}$：$y=-2x+8$，截距 $(4,0)$、$(0,8)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $m_{2}=\dfrac{1}{2}$，$L_{2}:y=\dfrac{1}{2}x+8$，$x$ 截距 $=-16$。</div>
+          <div class="p-step"><b>第 3 步.</b> 底 $=4+16=20$，高 $=8$，面積 $=\dfrac{1}{2}\times20\times8=80$。</div>
+          <div class="p-ans">答案：<b>C</b>（$80$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q25.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q27.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

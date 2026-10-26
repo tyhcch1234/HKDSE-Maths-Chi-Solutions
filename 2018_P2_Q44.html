@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第44題 · 標準分：用一個人的 $z$ 找標準差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第44題</span>
+    <h1>標準分：用一個人的 $z$ 找標準差</h1>
+    <p class="sub">統計學 · 標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某測驗的平均分為 $68$ 分。彼得分得 $46$ 分，其標準分為 $-2.2$。若蘇珊得 $52$ 分，則她的標準分是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-2.5$</li><li><span class="ol">B</span>$-1.6$</li><li><span class="ol">C</span>$-0.6$</li><li><span class="ol">D</span>$1.6$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出標準分公式</div>
+      <div class="rule"><span class="rule-name">標準分</span>$z=\dfrac{x-\mu}{\sigma}$。</div>
+<p>其中 $\mu=68$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用彼得求 $\sigma$</div>
+<p>$$-2.2=\frac{46-68}{\sigma}=\frac{-22}{\sigma}\;\Rightarrow\;\sigma=10$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代蘇珊的分數</div>
+<p>$$z=\frac{52-68}{10}=\frac{-16}{10}=-1.6$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對</div>
+<p>$68-1.6\times10=52$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$-1.6$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某測驗平均分 $72$，標準差 $8$。小明得 $88$ 分，小強得 $60$ 分。求兩人的標準分之差。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3.5$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$2.5$</li><li><span class="ol">D</span>$2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 小明：$z=\dfrac{88-72}{8}=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 小強：$z=\dfrac{60-72}{8}=-1.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相差 $2-(-1.5)=3.5$。</div>
+          <div class="p-ans">答案：<b>A</b>（$3.5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q43.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

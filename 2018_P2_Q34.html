@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第34題 · 線性規劃：頂點法一定最快</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第34題</span>
+    <h1>線性規劃：頂點法一定最快</h1>
+    <p class="sub">不等式 · 線性規劃</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中陰影區域 $D$ 由下列不等式組所界定：
+<br>$x+5y\le91$、$x-y\le35$、$3x+2y\ge0$、$x\le21$。
+若 $(x,y)$ 為 $D$ 內的一點，則 $5x+6y+234$ 的最小值是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$45$</li><li><span class="ol">B</span>$150$</li><li><span class="ol">C</span>$178$</li><li><span class="ol">D</span>$423$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 380 330" width="380" height="330" role="img" aria-label="可行區域 D">
+  <g stroke="currentColor" stroke-width="1.2" fill="none">
+    <line x1="30" y1="150" x2="345" y2="150"/>
+    <line x1="150" y1="315" x2="150" y2="30"/>
+    <path d="M87,55.5 L244.5,87 L244.5,213 L213,244.5 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+    <line x1="60" y1="40" x2="280" y2="100" stroke-dasharray="4 3"/>
+    <line x1="200" y1="60" x2="290" y2="150" stroke-dasharray="4 3"/>
+    <line x1="60" y1="285" x2="250" y2="0" stroke-dasharray="4 3"/>
+    <line x1="244.5" y1="40" x2="244.5" y2="270" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+    <text x="350" y="154">x</text>
+    <text x="142" y="36">y</text>
+    <text x="82" y="50">(−14, 21)</text>
+    <text x="248" y="82">(21, 14)</text>
+    <text x="248" y="222">(21, −14)</text>
+    <text x="150" y="262">(14, −21)</text>
+    <text x="200" y="128" font-size="13">D</text>
+  </g>
+</svg><figcaption>圖：$D$ 的四個頂點由四條邊界線兩兩相交得出</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">四條邊界線兩兩相交，求頂點</div>
+      <div class="rule"><span class="rule-name">解聯立方程</span>兩個頂點就是兩條邊界線的交點。</div>
+<p>$x=21$ 與 $x+5y=91$：$(21,14)$</p>
+<p>$x+5y=91$ 與 $3x+2y=0$：$(-14,21)$</p>
+<p>$3x+2y=0$ 與 $x-y=35$：$(14,-21)$</p>
+<p>$x-y=35$ 與 $x=21$：$(21,-14)$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">線性函數的極值必在頂點</div>
+      <div class="rule"><span class="rule-name">頂點法</span>在凸多邊形上，$ax+by+c$ 的最大值與最小值必在頂點取得。</div>
+<p>所以只需把四個頂點代入 $5x+6y+234$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐個代入</div>
+<p>$(21,14)$：$105+84+234=423$</p>
+<p>$(-14,21)$：$-70+126+234=290$</p>
+<p>$(14,-21)$：$70-126+234=178$</p>
+<p>$(21,-14)$：$105-84+234=255$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取最小</div>
+<p>最小值為 $178$（在 $(14,-21)$ 取得）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$178$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 區域 $D$ 的頂點為 $(0,0)$、$(6,0)$、$(4,4)$、$(0,3)$。若 $(x,y)$ 在 $D$ 內，則 $P=2x+3y$ 的最大值是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12$</li><li><span class="ol">B</span>$18$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$24$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入 $(0,0)$：$0$；$(6,0)$：$12$。</div>
+          <div class="p-step"><b>第 2 步.</b> $(4,4)$：$8+12=20$；$(0,3)$：$9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大值 $20$，在 $(4,4)$ 取得。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

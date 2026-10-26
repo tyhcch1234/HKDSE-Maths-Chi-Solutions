@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第39題 · 切線與弦：先找交錯弓形角，再用圓內接四邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第39題</span>
+    <h1>切線與弦：先找交錯弓形角，再用圓內接四邊形</h1>
+    <p class="sub">平面幾何 · 圓的切線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $TA$ 是圓 $ABCD$ 於 $A$ 的切線。$CD$ 延長與 $TA$ 延長相交於 $E$。已知 $AB=CD$、$\angle BAT=24^{\circ}$ 及 $\angle AED=72^{\circ}$，求 $\angle ABC$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$60^{\circ}$</li><li><span class="ol">B</span>$66^{\circ}$</li><li><span class="ol">C</span>$72^{\circ}$</li><li><span class="ol">D</span>$78^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_39.png" alt="圓 ABCD、切線 TA 與延長線" style="max-width:100%;height:auto;"><figcaption>圖：$TA$ 為切線，$E$ 為 $CD$ 與 $TA$ 延長線的交點</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">切線與弦的夾角＝交錯弓形角</div>
+      <div class="rule"><span class="rule-name">交錯弓形</span>切線 $AE$ 與弦 $AB$ 的夾角等於弦 $AB$ 在另一弓形所對的圓周角。</div>
+<p>$$\angle ACB=\angle BAT=24^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">等弦對等角</div>
+      <div class="rule"><span class="rule-name">等弦</span>在同圓中，相等的弦在圓周上所對的角相等。</div>
+<p>$AB=CD$，故</p>
+<p>$$\angle CAD=\angle ACB=24^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">設 $x$，在 $	riangle ACE$ 用內角和</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>$\angle CAE=\angle CAD+\angle DAE$。</div>
+<p>設 $\angle DAE=x$。由切線與弦 $AD$ 的夾角：$\angle ACD=x$（交錯弓形角）。</p>
+<p>在 $\triangle ACE$：</p>
+<p>$$(24^{\circ}+x)+x+72^{\circ}=180^{\circ}\;\Rightarrow\;2x=84^{\circ}\;\Rightarrow\;x=42^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle ACD$ 求 $ngle ADC$</div>
+<p>$$\angle ADC=180^{\circ}-24^{\circ}-42^{\circ}=114^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">用圓內接四邊形對角互補</div>
+      <div class="rule"><span class="rule-name">圓內接四邊形</span>對角相加 $=180^{\circ}$。</div>
+<p>$$\angle ABC=180^{\circ}-114^{\circ}=66^{\circ}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$66^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $TA$ 是圓 $ABCD$ 於 $A$ 的切線，$CD$ 延長與 $TA$ 延長交於 $E$。已知 $AB=CD$、$\angle BAT=20^{\circ}$ 及 $\angle AED=80^{\circ}$，求 $\angle ABC$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$54^{\circ}$</li><li><span class="ol">B</span>$60^{\circ}$</li><li><span class="ol">C</span>$66^{\circ}$</li><li><span class="ol">D</span>$72^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交錯弓形：$\angle ACB=\angle BAT=20^{\circ}$；等弦 $AB=CD$ 給出 $\angle CAD=20^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $\angle DAE=x$，則 $\angle ACD=x$；在 $\triangle ACE$：$(20+x)+x+80=180\Rightarrow x=40$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ADC=180-20-40=120$，故 $\angle ABC=180-120=60^{\circ}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$60^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

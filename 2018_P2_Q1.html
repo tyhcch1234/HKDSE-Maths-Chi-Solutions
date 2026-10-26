@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第1題 · 先統底數，再逐層拆指數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第1題</span>
+    <h1>先統底數，再逐層拆指數</h1>
+    <p class="sub">指數與對數 · 指數律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{8^{\,2n+1}}{4^{\,3n+1}}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$2^{\,n}$</li><li><span class="ol">D</span>$2^{\,-n}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 8 與 4 都化成底數 2</div>
+      <div class="rule"><span class="rule-name">指數律</span>$8=2^{3}$，$4=2^{2}$。同底數才可以相除時合併指數。</div>
+<p>$$8=2^{3},\qquad 4=2^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入並用 $(a^{m})^{n}=a^{mn}$</div>
+      <div class="rule"><span class="rule-name">冪的冪</span>$(a^{m})^{n}=a^{mn}$，外層指數要乘入括號內每一項。</div>
+<p>$$\frac{8^{\,2n+1}}{4^{\,3n+1}}=\frac{(2^{3})^{\,2n+1}}{(2^{2})^{\,3n+1}}
+=\frac{2^{\,3(2n+1)}}{2^{\,2(3n+1)}}=\frac{2^{\,6n+3}}{2^{\,6n+2}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同底相除，指數相減</div>
+      <div class="rule"><span class="rule-name">除法律</span>$\dfrac{a^{m}}{a^{n}}=a^{\,m-n}$。</div>
+<p>$$\frac{2^{\,6n+3}}{2^{\,6n+2}}=2^{\,(6n+3)-(6n+2)}=2^{1}$$</p>
+<p>$n$ 在相減時全部消去，所以答案與 $n$ 無關。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出結果</div>
+<p>$$2^{1}=2$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{9^{\,n+1}}{3^{\,2n-1}}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$9$</li><li><span class="ol">C</span>$27$</li><li><span class="ol">D</span>$3^{\,2n}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9=3^{2}$，故 $\dfrac{9^{\,n+1}}{3^{\,2n-1}}=\dfrac{3^{\,2n+2}}{3^{\,2n-1}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 指數相減：$2n+2-(2n-1)=3$。</div>
+          <div class="p-step"><b>第 3 步.</b> $3^{3}=27$。</div>
+          <div class="p-ans">答案：<b>C</b>（$27$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2018_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第22題 · 圓內接四邊形＋等腰三角形：一直設 $x$ 就通</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第22題</span>
+    <h1>圓內接四邊形＋等腰三角形：一直設 $x$ 就通</h1>
+    <p class="sub">平面幾何 · 圓與等腰三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 是一個圓。$AD$ 延長與 $BC$ 延長相交於 $E$。已知 $BD=DE$、$\angle BAC=66^{\circ}$ 及 $\angle ABD=30^{\circ}$，求 $\angle CED$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$18^{\circ}$</li><li><span class="ol">B</span>$28^{\circ}$</li><li><span class="ol">C</span>$22^{\circ}$</li><li><span class="ol">D</span>$20^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_22.png" alt="圓 ABCD，AD 與 BC 延長交於 E" style="max-width:100%;height:auto;"><figcaption>圖：$BD=DE$，$\angle BAC=66^{\circ}$，$\angle ABD=30^{\circ}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設 $ngle CED=x$</div>
+<p>$E$ 在 $AD$ 及 $BC$ 的延長線上，故 $\angle CED$ 就是 $\triangle BDE$ 在 $E$ 的角。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">等腰三角形給出 $x$</div>
+      <div class="rule"><span class="rule-name">等腰三角形底角</span>$BD=DE\Rightarrow\angle EBD=\angle BED=x$。</div>
+<p>$$\angle EBD=\angle BED=x$$</p>
+<p>又 $E$、$C$、$B$ 共線，故 $\angle CBD=x$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同弓形內的圓周角</div>
+      <div class="rule"><span class="rule-name">同弓形</span>$\angle CAD$ 與 $\angle CBD$ 同時對着弦 $CD$。</div>
+<p>$$\angle CAD=\angle CBD=x$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle ABE$ 用內角和</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>三個角相加 $=180^{\circ}$。</div>
+<p>$$\angle ABE=\angle ABD+\angle DBE=30^{\circ}+x$$</p>
+<p>$$\angle BAE=\angle BAC+\angle CAE=66^{\circ}+x$$</p>
+<p>$$(30^{\circ}+x)+(66^{\circ}+x)+x=180^{\circ}$$</p>
+<p>$$3x=84^{\circ}\;\Rightarrow\;x=28^{\circ}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$28^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRS$ 是一個圓。$PQ$ 延長與 $SR$ 延長相交於 $T$。已知 $QR=RT$、$\angle PRS=58^{\circ}$ 及 $\angle QPR=26^{\circ}$，求 $\angle QTR$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$26^{\circ}$</li><li><span class="ol">B</span>$28^{\circ}$</li><li><span class="ol">C</span>$30^{\circ}$</li><li><span class="ol">D</span>$32^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $\angle QTR=y$；$QR=RT\Rightarrow\angle RQT=\angle QTR=y$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同弓形：$\angle QSR=\angle QPR=26^{\circ}$，故 $\angle PQS=\angle PRS=58^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在 $\triangle PQT$：$(58^{\circ}+y)+(26^{\circ}+y)+y=180^{\circ}\Rightarrow3y=96^{\circ}\Rightarrow y=32^{\circ}$。</div>
+          <div class="p-ans">答案：<b>D</b>（$32^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

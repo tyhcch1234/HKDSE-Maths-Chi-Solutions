@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第14題 · 量度誤差：面積取極端值才找到範圍</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第14題</span>
+    <h1>量度誤差：面積取極端值才找到範圍</h1>
+    <p class="sub">估算與誤差 · 面積的誤差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCDEFGH$ 是一個八邊形，所有量度均準確至最接近的 cm。設 $x\text{ cm}^{2}$ 為該八邊形的實際面積，求 $x$ 的範圍。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$13<x<23$</li><li><span class="ol">B</span>$13<x<27$</li><li><span class="ol">C</span>$17<x<23$</li><li><span class="ol">D</span>$17<x<27$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 420 262" width="420" height="262" role="img" aria-label="八邊形 ABCDEFGH">
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M60,50 L180,50 L180,90 L240,90 L240,50 L360,50 L360,210 L60,210 Z"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="15">
+    <text x="52" y="42" text-anchor="end">A</text>
+    <text x="180" y="42" text-anchor="middle">H</text>
+    <text x="240" y="42" text-anchor="middle">E</text>
+    <text x="368" y="42">D</text>
+    <text x="368" y="214">C</text>
+    <text x="52" y="214" text-anchor="end">B</text>
+    <text x="172" y="106" text-anchor="end">G</text>
+    <text x="248" y="106">F</text>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-size="13">
+    <text x="210" y="228" text-anchor="middle">6 cm</text>
+    <text x="210" y="84" text-anchor="middle">2 cm</text>
+    <text x="172" y="76" text-anchor="end">2 cm</text>
+    <text x="50" y="134" text-anchor="middle" transform="rotate(-90 50 134)">4 cm</text>
+  </g>
+</svg><figcaption>圖：外框 $6\text{ cm}\times4\text{ cm}$，上方挖去 $2\text{ cm}\times2\text{ cm}$ 的缺口</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把面積寫成「大長方形 − 缺口」</div>
+      <div class="rule"><span class="rule-name">分割法</span>互不重疊的部分可以直接加減。</div>
+<p>名義面積：</p>
+<p>$$6\times4-2\times2=24-4=20\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">每個量度都有一個範圍</div>
+      <div class="rule"><span class="rule-name">量度誤差</span>準確至最接近的 cm $\Rightarrow$ 實際長度 $L$ 滿足 $L-0.5<$ 實際 $<L+0.5$。</div>
+<p>例如 $6\text{ cm}$ 的實際值介乎 $5.5$ 與 $6.5$ 之間。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">面積最小：大長方形取最小、缺口取最大</div>
+<p>$$(6-0.5)(4-0.5)-(2+0.5)(2+0.5)=5.5\times3.5-2.5\times2.5$$</p>
+<p>$$=19.25-6.25=13$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">面積最大：大長方形取最大、缺口取最小</div>
+<p>$$(6+0.5)(4+0.5)-(2-0.5)(2-0.5)=6.5\times4.5-1.5\times1.5$$</p>
+<p>$$=29.25-2.25=27$$</p>
+<p>實際面積嚴格介乎兩者之間，故 $13<x<27$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$13<x<27$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個長方形長 $8\text{ cm}$、闊 $5\text{ cm}$，量度均準確至最接近的 cm。設 $A\text{ cm}^{2}$ 為實際面積，求 $A$ 的範圍。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$35<A<45$</li><li><span class="ol">B</span>$33.75<A<46.75$</li><li><span class="ol">C</span>$37.5<A<42.5$</li><li><span class="ol">D</span>$39<A<41$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 最小：$7.5\times4.5=33.75$。</div>
+          <div class="p-step"><b>第 2 步.</b> 最大：$8.5\times5.5=46.75$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $33.75<A<46.75$。</div>
+          <div class="p-ans">答案：<b>B</b>（$33.75<A<46.75$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

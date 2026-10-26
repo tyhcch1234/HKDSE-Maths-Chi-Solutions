@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第43題 · 輪流擲骰：無窮等比數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第43題</span>
+    <h1>輪流擲骰：無窮等比數列</h1>
+    <p class="sub">概率 · 等比數列求和</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+約翰與瑪麗輪流擲一枚勻稱骰子，直至其中一人擲得「1」或「6」為止。約翰先擲。求約翰擲得「6」的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{1}{6}$</li><li><span class="ol">C</span>$\dfrac{3}{10}$</li><li><span class="ol">D</span>$\dfrac{7}{10}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">每次擲骰的三種結果</div>
+      <div class="rule"><span class="rule-name">概率</span>「1」或「6」會結束遊戲，其餘四個號碼繼續。</div>
+<p>$$P(\text{結束})=\frac{2}{6}=\frac{1}{3},\qquad P(\text{繼續})=\frac{4}{6}=\frac{2}{3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">約翰在第 $k$ 輪擲得 6</div>
+<p>之前 $2(k-1)$ 次都要「繼續」，然後約翰擲出 6：</p>
+<p>$$\left(\frac{4}{6}\right)^{2(k-1)}\times\frac{1}{6}=\left(\frac{4}{9}\right)^{k-1}\frac{1}{6}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對所有 $k$ 求和</div>
+      <div class="rule"><span class="rule-name">無窮等比</span>$S=\dfrac{a}{1-r}$，$|r|<1$。</div>
+<p>$$P=\frac{1}{6}+\frac{1}{6}\cdot\frac{4}{9}+\frac{1}{6}\left(\frac{4}{9}\right)^{2}+\cdots=\frac{\frac{1}{6}}{1-\frac{4}{9}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">化簡</div>
+<p>$$=\frac{\frac{1}{6}}{\frac{5}{9}}=\frac{1}{6}\times\frac{9}{5}=\frac{3}{10}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{3}{10}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 甲、乙輪流擲一枚勻稱硬幣，先擲得「正面」者勝。甲先擲。求甲勝出的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{2}{3}$</li><li><span class="ol">C</span>$\dfrac{1}{3}$</li><li><span class="ol">D</span>$\dfrac{3}{4}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 甲第一擲即勝：$\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 之後每一輪勝出的概率乘以 $\left(\dfrac{1}{2}\right)^{2}=\dfrac{1}{4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{\frac{1}{2}}{1-\frac{1}{4}}=\dfrac{2}{3}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{2}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

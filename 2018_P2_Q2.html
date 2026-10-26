@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第2題 · 未知數在分母：交叉相乘再整理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第2題</span>
+    <h1>未知數在分母：交叉相乘再整理</h1>
+    <p class="sub">代數 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $\dfrac{\alpha}{1-x}=\dfrac{\beta}{x}$，則 $x=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{\alpha}{\alpha-\beta}$</li><li><span class="ol">B</span>$\dfrac{\alpha}{\alpha+\beta}$</li><li><span class="ol">C</span>$\dfrac{\beta}{\alpha-\beta}$</li><li><span class="ol">D</span>$\dfrac{\beta}{\alpha+\beta}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">交叉相乘，清走兩個分母</div>
+      <div class="rule"><span class="rule-name">交叉相乘</span>兩邊同乘 $x(1-x)$；$x\neq0$、$x\neq1$。</div>
+<p>$$\frac{\alpha}{1-x}=\frac{\beta}{x}\quad\Longrightarrow\quad \alpha x=\beta(1-x)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開右邊</div>
+<p>$$\alpha x=\beta-\beta x$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $x$ 項全部移去左邊</div>
+<p>兩邊加 $\beta x$：</p>
+<p>$$\alpha x+\beta x=\beta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">提出公因數 $x$</div>
+<p>$$(\alpha+\beta)x=\beta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">兩邊除以 $x$ 的係數</div>
+      <div class="rule"><span class="rule-name">注意</span>$x$ 的係數是整個括號 $\alpha+\beta$，不是 $\alpha$。</div>
+<p>$$x=\frac{\beta}{\alpha+\beta}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$x=\dfrac{\beta}{\alpha+\beta}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{a}{2-x}=\dfrac{b}{x}$，則 $x=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{2b}{a+b}$</li><li><span class="ol">B</span>$\dfrac{b}{a+2b}$</li><li><span class="ol">C</span>$\dfrac{2a}{a+b}$</li><li><span class="ol">D</span>$\dfrac{b}{2a+b}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交叉相乘：$ax=b(2-x)=2b-bx$。</div>
+          <div class="p-step"><b>第 2 步.</b> 移項：$ax+bx=2b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出 $x$：$(a+b)x=2b$，故 $x=\dfrac{2b}{a+b}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{2b}{a+b}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

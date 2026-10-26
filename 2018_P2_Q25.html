@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第25題 · 與兩平行線等距：軌跡就是中間那條線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第25題</span>
+    <h1>與兩平行線等距：軌跡就是中間那條線</h1>
+    <p class="sub">座標幾何 · 軌跡</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $L_{1}$ 與 $L_{2}$ 的方程分別為 $3x-y+7=0$ 及 $12x-4y-11=0$。設 $P$ 為直角坐標平面上的一動點，使 $P$ 至 $L_{1}$ 的垂直距離等於 $P$ 至 $L_{2}$ 的垂直距離。求 $P$ 的軌跡方程。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$8x-24y-17=0$</li><li><span class="ol">B</span>$8x-24y+17=0$</li><li><span class="ol">C</span>$24x-8y-17=0$</li><li><span class="ol">D</span>$24x-8y+17=0$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩條線其實平行</div>
+      <div class="rule"><span class="rule-name">斜率</span>把方程寫成 $y=mx+k$，比較 $m$。</div>
+<p>$$L_{1}:\ y=3x+7\quad(m_{1}=3)$$</p>
+<p>$$L_{2}:\ y=3x-\frac{11}{4}\quad(m_{2}=3)$$</p>
+<p>斜率相同，故 $L_{1}\parallel L_{2}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">等距的點在中間那條平行線上</div>
+      <div class="rule"><span class="rule-name">中線</span>與兩條平行線等距的軌跡，是一條平行線，其 $y$ 截距是兩者 $y$ 截距的平均。</div>
+<p>$$y\text{ 截距}=\frac{7+\left(-\dfrac{11}{4}\right)}{2}=\frac{\dfrac{17}{4}}{2}=\frac{17}{8}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出軌跡方程並整理</div>
+<p>$$y=3x+\frac{17}{8}$$</p>
+<p>兩邊乘 8：</p>
+<p>$$8y=24x+17\quad\Longrightarrow\quad24x-8y+17=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用距離公式核對</div>
+      <div class="rule"><span class="rule-name">點到直線距離</span>$d=\dfrac{|Ax_{0}+By_{0}+C|}{\sqrt{A^{2}+B^{2}}}$。</div>
+<p>$L_{1}$ 的法向量長 $\sqrt{3^{2}+1^{2}}=\sqrt{10}$；$L_{2}$ 的為 $\sqrt{12^{2}+4^{2}}=4\sqrt{10}$。</p>
+<p>$$4\,|3x-y+7|=|12x-4y-11|$$</p>
+<p>取異號情形：$12x-4y+28=-12x+4y+11$，即 $24x-8y+17=0$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$24x-8y+17=0$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L_{1}$、$L_{2}$ 的方程為 $2x-y+5=0$ 及 $6x-3y-4=0$。求與兩線等距的點的軌跡方程。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12x-6y+11=0$</li><li><span class="ol">B</span>$12x-6y-11=0$</li><li><span class="ol">C</span>$6x-12y+11=0$</li><li><span class="ol">D</span>$6x+12y-11=0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $L_{1}:y=2x+5$，$L_{2}:y=2x-\dfrac{4}{3}$，兩線平行。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距平均：$\dfrac{5-\dfrac{4}{3}}{2}=\dfrac{11}{6}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $y=2x+\dfrac{11}{6}\Rightarrow6y=12x+11\Rightarrow12x-6y+11=0$。</div>
+          <div class="p-ans">答案：<b>A</b>（$12x-6y+11=0$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

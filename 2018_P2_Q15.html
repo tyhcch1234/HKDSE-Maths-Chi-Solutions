@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第15題 · 柱體體積：先補回截面的第三條邊</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第15題</span>
+    <h1>柱體體積：先補回截面的第三條邊</h1>
+    <p class="sub">求積法 · 柱體體積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中直角三角柱的體積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$544\text{ cm}^{3}$</li><li><span class="ol">B</span>$600\text{ cm}^{3}$</li><li><span class="ol">C</span>$660\text{ cm}^{3}$</li><li><span class="ol">D</span>$720\text{ cm}^{3}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_15.png" alt="直角三角柱" style="max-width:100%;height:auto;"><figcaption>圖：橫截面為直角三角形，斜邊 $17\text{ cm}$、一條直角邊 $8\text{ cm}$，柱長 $12\text{ cm}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認清「橫截面 × 長度」</div>
+      <div class="rule"><span class="rule-name">柱體體積</span>$V=$ 橫截面面積 $\times$ 柱長。</div>
+<p>橫截面是直角三角形，柱長 $=12\text{ cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用畢氏定理求第三條邊</div>
+<p>$$\text{另一條直角邊}=\sqrt{17^{2}-8^{2}}=\sqrt{289-64}=15\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求橫截面面積</div>
+<p>$$A=\frac{1}{2}\times15\times8=60\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">乘柱長</div>
+<p>$$V=60\times12=720\text{ cm}^{3}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$720\text{ cm}^{3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個直角三角柱的橫截面是直角三角形，兩條直角邊分別為 $6\text{ cm}$ 及 $8\text{ cm}$，柱長 $10\text{ cm}$。求體積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$240\text{ cm}^{3}$</li><li><span class="ol">B</span>$480\text{ cm}^{3}$</li><li><span class="ol">C</span>$120\text{ cm}^{3}$</li><li><span class="ol">D</span>$300\text{ cm}^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 橫截面面積 $=\dfrac{1}{2}\times6\times8=24$。</div>
+          <div class="p-step"><b>第 2 步.</b> $V=24\times10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=240\text{ cm}^{3}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$240\text{ cm}^{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

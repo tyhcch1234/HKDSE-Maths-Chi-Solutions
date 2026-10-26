@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第40題 · 垂心：兩條高線相交就夠</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第40題</span>
+    <h1>垂心：兩條高線相交就夠</h1>
+    <p class="sub">座標幾何 · 三角形的垂心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $a$ 為正常數。直線 $2x+5y=a$ 分別與 $x$ 軸、$y$ 軸交於 $P$、$Q$。設 $R$ 為 $y$ 軸上的一點，使 $\triangle PQR$ 的垂心的 $x$ 坐標為 $10$。求 $R$ 的 $y$ 坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-25$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$25$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $P$、$Q$</div>
+      <div class="rule"><span class="rule-name">截距</span>令 $y=0$ 得 $P$；令 $x=0$ 得 $Q$。</div>
+<p>$$P\left(\frac{a}{2},0\right),\qquad Q\left(0,\frac{a}{5}\right)$$</p>
+<p>$PQ$ 的斜率 $=\dfrac{\frac{a}{5}-0}{0-\frac{a}{2}}=-\dfrac{2}{5}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">$QR$ 是鉛垂線，所以由 $P$ 的高線是水平線</div>
+      <div class="rule"><span class="rule-name">垂心</span>三條高線交於垂心。</div>
+<p>$Q$、$R$ 都在 $y$ 軸上，故 $QR$ 鉛垂，由 $P$ 作出的高線水平，即 $y=0$。</p>
+<p>故垂心 $H$ 的 $y$ 坐標為 $0$；已知其 $x$ 坐標為 $10$，即 $H=(10,0)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用 $RH\perp PQ$ 求 $R$</div>
+      <div class="rule"><span class="rule-name">垂直</span>兩條垂直線的斜率相乘 $=-1$。</div>
+<p>設 $R=(0,r)$，則 $RH$ 的斜率 $=\dfrac{r-0}{0-10}=-\dfrac{r}{10}$。</p>
+<p>$$\left(-\frac{r}{10}\right)\left(-\frac{2}{5}\right)=-1$$</p>
+<p>$$\frac{2r}{50}=-1\;\Rightarrow\;r=-25$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-25$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $3x+4y=24$ 與 $x$ 軸、$y$ 軸分別交於 $A$、$B$。$C$ 在 $y$ 軸上，使 $\triangle ABC$ 的垂心的 $x$ 坐標為 $6$。求 $C$ 的 $y$ 坐標。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-8$</li><li><span class="ol">B</span>$-6$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$8$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $A(8,0)$、$B(0,6)$，$AB$ 斜率 $=-\dfrac{3}{4}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $BC$ 鉛垂 $\Rightarrow$ 由 $A$ 的高線水平 $\Rightarrow H=(6,0)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m_{CH}=\dfrac{c-0}{0-6}=-\dfrac{c}{6}$，$\left(-\dfrac{c}{6}\right)\left(-\dfrac{3}{4}\right)=-1\Rightarrow\dfrac{3c}{24}=-1\Rightarrow c=-8$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-8$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第16題 · 平行四邊形內的面積：先找相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第16題</span>
+    <h1>平行四邊形內的面積：先找相似三角形</h1>
+    <p class="sub">求積法 · 三角形與四邊形的面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 是平行四邊形。$E$ 是 $BC$ 上的一點，使 $BE:EC=5:3$。$AE$ 與 $BD$ 相交於 $F$。若 $\triangle ABF$ 的面積為 $120\text{ cm}^{2}$，則四邊形 $CDFE$ 的面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$237\text{ cm}^{2}$</li><li><span class="ol">B</span>$307\text{ cm}^{2}$</li><li><span class="ol">C</span>$312\text{ cm}^{2}$</li><li><span class="ol">D</span>$429\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_16.png" alt="平行四邊形 ABCD 與點 E、F" style="max-width:100%;height:auto;"><figcaption>圖：$BE:EC=5:3$，$AE$ 與 $BD$ 交於 $F$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用相似三角形定出 $BF:FD$</div>
+      <div class="rule"><span class="rule-name">相似三角形</span>$AD\parallel BC\Rightarrow\angle EBF=\angle ADF$（內錯角）。</div>
+<p>$\triangle EBF\sim\triangle ADF$（AAA），且 $AD=BC$，故</p>
+<p>$$\frac{BF}{FD}=\frac{BE}{AD}=\frac{BE}{BC}=\frac{5}{5+3}=\frac{5}{8}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $	riangle ABF$ 反推整個平行四邊形面積</div>
+      <div class="rule"><span class="rule-name">同高三角形</span>底在同一條線 $BD$ 上時，面積比＝底邊比。</div>
+<p>$\triangle ABD$ 中，$F$ 在 $BD$ 上，故</p>
+<p>$$\frac{\triangle ABF}{\triangle ABD}=\frac{BF}{BD}=\frac{5}{13}$$</p>
+<p>而 $\triangle ABD=\dfrac{1}{2}\times$ 平行四邊形面積 $S$，所以</p>
+<p>$$120=\frac{5}{13}\times\frac{S}{2}\;\Rightarrow\;S=624$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">減去兩塊不需要的三角形</div>
+<p>$\triangle ABE$：底 $BE=\dfrac{5}{8}BC$，高與平行四邊形相同，故</p>
+<p>$$\triangle ABE=\frac{5}{8}\times\frac{S}{2}=195$$</p>
+<p>$\triangle ADF$ 與 $\triangle ABF$ 同高（底都在 $BD$ 上），故 $\triangle ADF=\dfrac{8}{5}\triangle ABF=\dfrac{8}{5}\times120=192$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求四邊形面積</div>
+<p>$$CDFE=S-\triangle ABE-\triangle ADF=624-195-192=237\text{ cm}^{2}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$237\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRS$ 是平行四邊形，$T$ 在 $QR$ 上使 $QT:TR=3:2$。$PT$ 與 $QS$ 交於 $U$。若 $\triangle PQU$ 的面積為 $60\text{ cm}^{2}$，求四邊形 $SRTU$ 的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$124\text{ cm}^{2}$</li><li><span class="ol">B</span>$160\text{ cm}^{2}$</li><li><span class="ol">C</span>$196\text{ cm}^{2}$</li><li><span class="ol">D</span>$240\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle QTU\sim\triangle PSU$，$QU:US=QT:PS=3:5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{\triangle PQU}{\triangle PQS}=\dfrac{3}{8}$，而 $\triangle PQS=\dfrac{S}{2}$，故 $60=\dfrac{3S}{16}$，$S=320$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle PQT=\dfrac{3}{5}\times160=96$；$\triangle PSU=\dfrac{5}{8}\times160=100$；四邊形 $=320-96-100=124$。</div>
+          <div class="p-ans">答案：<b>A</b>（$124\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

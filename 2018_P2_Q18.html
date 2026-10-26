@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第18題 · 菱形＋對稱軸：一對全等三角形就夠</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第18題</span>
+    <h1>菱形＋對稱軸：一對全等三角形就夠</h1>
+    <p class="sub">平面幾何 · 菱形與全等三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 是菱形。$E$、$F$ 分別在 $AB$、$AD$ 上，使 $AE=AF$ 及 $\angle ECF=42^{\circ}$。若 $\angle BAD=110^{\circ}$，則 $\angle BEC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$70^{\circ}$</li><li><span class="ol">B</span>$76^{\circ}$</li><li><span class="ol">C</span>$80^{\circ}$</li><li><span class="ol">D</span>$84^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_18.png" alt="菱形 ABCD，E 在 AB、F 在 AD" style="max-width:100%;height:auto;"><figcaption>圖：$AE=AF$，$\angle ECF=42^{\circ}$，$\angle BAD=110^{\circ}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">對角線 $AC$ 平分 $ngle BAD$</div>
+      <div class="rule"><span class="rule-name">菱形性質</span>菱形的對角線平分對角。</div>
+<p>$$\angle CAE=\angle CAF=\frac{110^{\circ}}{2}=55^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">證明 $	riangle ACE\cong	riangle ACF$</div>
+      <div class="rule"><span class="rule-name">S.A.S.</span>$AC$ 公共、$\angle CAE=\angle CAF$、$AE=AF$。</div>
+<p>$$\therefore\ \triangle ACE\cong\triangle ACF\quad(\text{S.A.S.})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對應角相等，平分 $ngle ECF$</div>
+<p>$$\angle ACE=\angle ACF=\frac{42^{\circ}}{2}=21^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle ACE$ 求 $ngle AEC$，再取補角</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>三角形三角之和 $=180^{\circ}$。</div>
+<p>$$\angle AEC=180^{\circ}-55^{\circ}-21^{\circ}=104^{\circ}$$</p>
+<p>$A$、$E$、$B$ 在同一直線上，故</p>
+<p>$$\angle BEC=180^{\circ}-104^{\circ}=76^{\circ}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$76^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRS$ 是菱形，$T$、$U$ 分別在 $PQ$、$PS$ 上，使 $PT=PU$ 及 $\angle TRU=50^{\circ}$。若 $\angle SPQ=80^{\circ}$，求 $\angle TUR$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$65^{\circ}$</li><li><span class="ol">B</span>$70^{\circ}$</li><li><span class="ol">C</span>$75^{\circ}$</li><li><span class="ol">D</span>$80^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $PR$ 平分 $\angle SPQ$，故 $\angle TPR=\angle UPR=40^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle PTR\cong\triangle PUR$（S.A.S.）$\Rightarrow\angle PRT=\angle PRU=25^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle PUT=180^{\circ}-40^{\circ}-25^{\circ}=115^{\circ}$，故 $\angle TUR=65^{\circ}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$65^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

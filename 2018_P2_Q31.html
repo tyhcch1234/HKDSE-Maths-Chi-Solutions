@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第31題 · 二次函數變換：先看零點，再看開口</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第31題</span>
+    <h1>二次函數變換：先看零點，再看開口</h1>
+    <p class="sub">函數與圖像 · 圖像變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $f(x)$ 為二次函數。下圖可能是 $y=f(x)$ 及下列哪一個函數的圖像？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$y=-3f(x)$</li><li><span class="ol">B</span>$y=f(-x+11)$</li><li><span class="ol">C</span>$y=-f(x+4)$</li><li><span class="ol">D</span>$y=f(x+4)$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_31.png" alt="兩條拋物線" style="max-width:100%;height:auto;"><figcaption>圖：$y=f(x)$ 為開口向上、與 $x$ 軸交於 $6$ 及 $9$ 的曲線；另一條開口向下，交於 $2$ 及 $5$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出 $f(x)$ 的因式形式</div>
+      <div class="rule"><span class="rule-name">零點</span>圖中 $f$ 與 $x$ 軸交於 $6$、$9$，故 $f(x)=k(x-6)(x-9)$。</div>
+<p>開口向上 $\Rightarrow k>0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">候選圖像的零點是 $2$ 及 $5$</div>
+<p>另一條曲線開口向下、零點在 $2$ 及 $5$，所以它的形式應為 $y=-m(x-2)(x-5)$，$m>0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">測試 $y=-f(x+4)$</div>
+      <div class="rule"><span class="rule-name">平移</span>$f(x+4)$ 是把 $y=f(x)$ 向左平移 4 單位。</div>
+<p>$$f(x+4)=k(x+4-6)(x+4-9)=k(x-2)(x-5)$$</p>
+<p>再加負號：</p>
+<p>$$-f(x+4)=-k(x-2)(x-5),\qquad k>0$$</p>
+<p>零點為 $2$、$5$，開口向下，與圖中曲線完全吻合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">排除其他選項</div>
+<p>A：$-3f(x)$ 零點仍是 $6$、$9$，不符。</p>
+<p>B：$f(-x+11)=k(5-x)(2-x)=k(x-2)(x-5)$，零點雖然相同，但 $k>0$ 令它<strong>開口向上</strong>，不符。</p>
+<p>D：$f(x+4)$ 零點 $2$、$5$，但開口向上，不符。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$y=-f(x+4)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=k(x-1)(x-4)$，$k>0$。下列哪一個函數的圖像開口向下且與 $x$ 軸交於 $x=-1$ 及 $x=2$？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$y=-f(x+2)$</li><li><span class="ol">B</span>$y=f(x+2)$</li><li><span class="ol">C</span>$y=-f(x-2)$</li><li><span class="ol">D</span>$y=-f(-x)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 要零點 $-1$、$2$，需把 $f$ 的左零點 $1$ 移到 $-1$，即 $f(x+2)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $f(x+2)=k(x-1+2)(x-4+2)=k(x+1)(x-2)$，零點 $-1$、$2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 加負號使開口向下：$y=-f(x+2)$。</div>
+          <div class="p-ans">答案：<b>A</b>（$y=-f(x+2)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

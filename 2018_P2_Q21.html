@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第21題 · 梯形三等分：把三條等式逐條驗證</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第21題</span>
+    <h1>梯形三等分：把三條等式逐條驗證</h1>
+    <p class="sub">三角學 · 直角三角形中的比</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 是梯形，$\angle ABC=\angle BAD=90^{\circ}$。$E$、$F$ 是 $AB$ 上的點，把 $AB$ 分成三等份。下列何者必定正確？
+<br>I. $AF\sin\alpha=BE\sin\beta$
+<br>II. $CE\cos\alpha=DF\cos\beta$
+<br>III. $AD\tan\alpha=BC\tan\beta$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_21.png" alt="梯形 ABCD，E、F 把 AB 三等分" style="max-width:100%;height:auto;"><figcaption>圖：$\angle ABC=\angle BAD=90^{\circ}$，$\alpha$ 在 $E$、$\beta$ 在 $F$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三等份寫成代數</div>
+      <div class="rule"><span class="rule-name">三等分</span>設 $AE=EF=FB=x$。</div>
+<p>$$AF=AE+EF=2x,\qquad BE=EF+FB=2x$$</p>
+<p>即 $AF=BE=2x$，這是三條式子的共同基礎。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出四個三角比</div>
+      <div class="rule"><span class="rule-name">直角三角形</span>$\sin=\dfrac{\text{對}}{{\text{斜}}}$、$\cos=\dfrac{\text{鄰}}{{\text{斜}}}$、$\tan=\dfrac{\text{對}}{\text{鄰}}$。</div>
+<p>在 $\triangle BCE$（直角在 $B$）：$\sin\alpha=\dfrac{BC}{CE}$、$\cos\alpha=\dfrac{BE}{CE}$、$\tan\alpha=\dfrac{BC}{BE}$。</p>
+<p>在 $\triangle ADF$（直角在 $A$）：$\sin\beta=\dfrac{AD}{DF}$、$\cos\beta=\dfrac{AF}{DF}$、$\tan\beta=\dfrac{AD}{AF}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II</div>
+<p>$$CE\cos\alpha=CE\cdot\frac{BE}{CE}=BE=2x$$</p>
+<p>$$DF\cos\beta=DF\cdot\frac{AF}{DF}=AF=2x$$</p>
+<p>兩者相等，II 必定正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III</div>
+<p>$$AD\tan\alpha=AD\cdot\frac{BC}{BE}=\frac{AD\cdot BC}{2x}$$</p>
+<p>$$BC\tan\beta=BC\cdot\frac{AD}{AF}=\frac{BC\cdot AD}{2x}$$</p>
+<p>兩者相等，III 必定正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢驗 I</div>
+<p>$$AF\sin\alpha=2x\cdot\frac{BC}{CE},\qquad BE\sin\beta=2x\cdot\frac{AD}{DF}$$</p>
+<p>一般情況下 $\dfrac{BC}{CE}\neq\dfrac{AD}{DF}$，故 I 不一定成立。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRS$ 是梯形，$\angle PQR=\angle QPS=90^{\circ}$。$T$、$U$ 把 $PQ$ 分成三等份（$PT=TU=UQ$）。若 $\angle QRT=\theta$、$\angle USP=\phi$，下列何者必定正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$PS\tan\theta=QR\tan\phi$</li><li><span class="ol">B</span>$PT\sin\theta=QU\sin\phi$</li><li><span class="ol">C</span>$RT\cos\theta=SU\cos\phi$</li><li><span class="ol">D</span>$PS\sin\phi=QR\sin\theta$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設每份為 $x$，則 $QU=x$、$PT=x$，而 $QT=2x$、$PU=2x$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\tan\theta=\dfrac{QR}{QT}=\dfrac{QR}{2x}$，$\tan\phi=\dfrac{PS}{PU}=\dfrac{PS}{2x}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $PS\tan\theta=\dfrac{PS\cdot QR}{2x}=QR\tan\phi$，選 A。</div>
+          <div class="p-ans">答案：<b>A</b>（$PS\tan\theta=QR\tan\phi$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

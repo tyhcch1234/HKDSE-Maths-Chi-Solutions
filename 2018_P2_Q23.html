@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第23題 · 旋轉對稱重數：數 360° 內重合幾次</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第23題</span>
+    <h1>旋轉對稱重數：數 360° 內重合幾次</h1>
+    <p class="sub">變換與對稱 · 旋轉對稱</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖由八個大小相同的正方形組成。該圖形的旋轉對稱重數是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$8$</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_23.png" alt="由八個正方形組成的圖形" style="max-width:320px;height:auto;"><figcaption>圖：八個全等正方形；$O$ 為中心</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先找旋轉中心</div>
+      <div class="rule"><span class="rule-name">旋轉對稱</span>圖形繞某一點旋轉 $\theta$ 後能與原圖完全重合，該點就是旋轉中心。</div>
+<p>唯一可能的中心是圖形中央的 $O$：繞 $O$ 轉動時，八個正方形才可能逐格對應回本身。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">測試 90°</div>
+<p>繞 $O$ 旋轉 $90^{\circ}$，四個方向的方塊互相對應，圖形與原圖完全重合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">測試更小的角（45°）</div>
+<p>旋轉 $45^{\circ}$ 後，方塊會落在原本沒有方塊的位置（例如對角空隙），不能重合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">重數＝360° ÷ 最小重合角</div>
+      <div class="rule"><span class="rule-name">重數</span>若最小重合角為 $\theta$，重數 $=\dfrac{360^{\circ}}{\theta}$。</div>
+<p>$$\frac{360^{\circ}}{90^{\circ}}=4$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個正方形被兩條對角線分成四個三角形，並把其中一組對頂三角形塗色。該塗色圖形的旋轉對稱重數是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$1$</li><li><span class="ol">D</span>$8$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 繞中心旋轉 180° 時，兩個塗色三角形互換位置，圖形重合。</div>
+          <div class="p-step"><b>第 2 步.</b> 旋轉 90° 時，塗色部分會轉到未塗色的位置，不重合。</div>
+          <div class="p-step"><b>第 3 步.</b> 重數 $=\dfrac{360^{\circ}}{180^{\circ}}=2$。</div>
+          <div class="p-ans">答案：<b>A</b>（$2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

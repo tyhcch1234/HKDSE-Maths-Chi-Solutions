@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第5題 · 頂點式一看就知：開口、頂點、截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第5題</span>
+    <h1>頂點式一看就知：開口、頂點、截距</h1>
+    <p class="sub">函數與圖像 · 二次函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下列哪一項關於 $y=16-(x-6)^{2}$ 的圖像的描述是正確的？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>圖像與 $x$ 軸相交</li><li><span class="ol">B</span>圖像開口向上</li><li><span class="ol">C</span>圖像的 $y$ 截距是 $16$</li><li><span class="ol">D</span>圖像穿過原點</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫成頂點式，讀出 $a$、$h$、$k$</div>
+      <div class="rule"><span class="rule-name">頂點式</span>$y=a(x-h)^{2}+k$，頂點 $(h,k)$，$a<0$ 開口向下。</div>
+<p>$$y=16-(x-6)^{2}=-1\cdot(x-6)^{2}+16$$</p>
+<p>故 $a=-1$、$h=6$、$k=16$，頂點為 $(6,16)$，開口向下。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 B：開口方向</div>
+<p>$(x-6)^{2}$ 的係數是 $-1<0$，圖像開口<strong>向下</strong>，B 錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 C、D：求 $y$ 截距</div>
+      <div class="rule"><span class="rule-name">截距</span>令 $x=0$ 求 $y$ 截距；令 $y=0$ 求 $x$ 截距。</div>
+<p>$$y=16-(0-6)^{2}=16-36=-20$$</p>
+<p>$y$ 截距是 $-20$，不是 $16$，C 錯；圖像經過 $(0,-20)$，不是原點，D 錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查 A：解 $y=0$</div>
+<p>$$16-(x-6)^{2}=0\;\Longrightarrow\;(x-6)^{2}=16\;\Longrightarrow\;x=2\ \text{或}\ 10$$</p>
+<p>有兩個實根，圖像與 $x$ 軸相交於 $(2,0)$ 及 $(10,0)$，A 正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（圖像與 $x$ 軸相交）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列哪一項關於 $y=9-(x+2)^{2}$ 的圖像的描述是正確的？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>圖像的頂點是 $(-2,9)$</li><li><span class="ol">B</span>圖像開口向上</li><li><span class="ol">C</span>圖像的 $y$ 截距是 $9$</li><li><span class="ol">D</span>圖像與 $x$ 軸沒有交點</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 頂點式：$a=-1$、$h=-2$、$k=9$，頂點 $(-2,9)$，開口向下。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距（$x=0$）：$9-4=5\neq9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解 $9-(x+2)^{2}=0$：$(x+2)^{2}=9$，$x=1$ 或 $-5$，與 $x$ 軸有兩個交點。</div>
+          <div class="p-ans">答案：<b>A</b>（頂點 $(-2,9)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

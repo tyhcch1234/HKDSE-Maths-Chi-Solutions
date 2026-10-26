@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第3題 · 四項式：分組後找共同括號</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第3題</span>
+    <h1>四項式：分組後找共同括號</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+因式分解 $h^{2}-6h-4k^{2}-12k$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(h-2k)(h-2k+6)$</li><li><span class="ol">B</span>$(h-2k)(h+2k+6)$</li><li><span class="ol">C</span>$(h+2k)(h-2k-6)$</li><li><span class="ol">D</span>$(h+2k)(h+2k-6)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">重新分組：一組平方差，一組提公因數</div>
+      <div class="rule"><span class="rule-name">分組分解</span>把 $h^{2}-4k^{2}$ 放一組，$-6h-12k$ 放另一組。</div>
+<p>$$h^{2}-6h-4k^{2}-12k=\underbrace{(h^{2}-4k^{2})}_{\text{平方差}}-\underbrace{(6h+12k)}_{\text{公因數 }6}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">各自分解</div>
+      <div class="rule"><span class="rule-name">平方差</span>$a^{2}-b^{2}=(a-b)(a+b)$。</div>
+<p>$$h^{2}-4k^{2}=(h-2k)(h+2k),\qquad 6h+12k=6(h+2k)$$</p>
+<p>所以</p>
+<p>$$h^{2}-6h-4k^{2}-12k=(h+2k)(h-2k)-6(h+2k)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">提出共同括號 $(h+2k)$</div>
+<p>$$(h+2k)\big[(h-2k)-6\big]$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">整理括號並驗算</div>
+<p>$$(h+2k)(h-2k-6)$$</p>
+<p>展開檢查：$h^{2}-2hk-6h+2hk-4k^{2}-12k=h^{2}-6h-4k^{2}-12k$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$(h+2k)(h-2k-6)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $p^{2}-2p-9q^{2}-6q$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(p+3q)(p-3q-2)$</li><li><span class="ol">B</span>$(p-3q)(p+3q-2)$</li><li><span class="ol">C</span>$(p+3q)(p+3q-2)$</li><li><span class="ol">D</span>$(p-3q)(p-3q+2)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分組：$(p^{2}-9q^{2})-(2p+6q)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $p^{2}-9q^{2}=(p-3q)(p+3q)$，而 $2p+6q=2(p+3q)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出 $(p+3q)$：$(p+3q)(p-3q-2)$。</div>
+          <div class="p-ans">答案：<b>A</b>（$(p+3q)(p-3q-2)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

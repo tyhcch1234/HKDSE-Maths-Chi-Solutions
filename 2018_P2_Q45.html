@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第45題 · 每項加同一常數：方差不會變</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第45題</span>
+    <h1>每項加同一常數：方差不會變</h1>
+    <p class="sub">統計學 · 方差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某等差數列共有 $49$ 項。若首 $7$ 項的方差為 $9$，則末 $7$ 項的方差是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$9$</li><li><span class="ol">B</span>$18$</li><li><span class="ol">C</span>$49$</li><li><span class="ol">D</span>$81$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出通項</div>
+      <div class="rule"><span class="rule-name">等差數列</span>$a_{n}=a_{1}+(n-1)d$。</div>
+<p>末 $7$ 項為 $a_{43},a_{44},\dots,a_{49}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把末 7 項與首 7 項配對</div>
+<p>$$a_{42+k}=a_{k}+42d\qquad(k=1,2,\dots,7)$$</p>
+<p>即末 7 項＝首 7 項每一項都加上同一個常數 $42d$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">平移不改離差</div>
+      <div class="rule"><span class="rule-name">方差性質</span>每一項加同一常數，平均值也加同一常數，離差 ($x-\bar{x}$) 不變。</div>
+<p>所以方差完全不變，仍為 $9$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某等差數列共有 $30$ 項，首 $5$ 項的方差為 $12$。若把每一項都加上 $7$，則新數列首 $5$ 項的方差是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12$</li><li><span class="ol">B</span>$19$</li><li><span class="ol">C</span>$49$</li><li><span class="ol">D</span>$61$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每項加同一常數，離差不變。</div>
+          <div class="p-step"><b>第 2 步.</b> 方差只取決於離差，故不變。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案為 $12$。</div>
+          <div class="p-ans">答案：<b>A</b>（$12$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

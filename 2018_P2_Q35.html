@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第35題 · $S_{n}$ 與通項：$a_{n}=S_{n}-S_{n-1}$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第35題</span>
+    <h1>$S_{n}$ 與通項：$a_{n}=S_{n}-S_{n-1}$</h1>
+    <p class="sub">數列 · 首 $n$ 項和</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若某數列首 $n$ 項之和為 $S_{n}=6n^{2}-n$，下列何者正確？
+<br>I. $22$ 是該數列的一項。
+<br>II. 該數列的第 1 項是 $5$。
+<br>III. 該數列是等比數列。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $a_{n}=S_{n}-S_{n-1}$ 求通項</div>
+      <div class="rule"><span class="rule-name">通項與部分和</span>$a_{n}=S_{n}-S_{n-1}$（$n\ge2$）。</div>
+<p>$$a_{n}=(6n^{2}-n)-\big[6(n-1)^{2}-(n-1)\big]$$</p>
+<p>$$=6n^{2}-n-\left(6n^{2}-12n+6-n+1\right)=12n-7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I：$22=12n-7$</div>
+<p>$$12n=29\;\Rightarrow\;n=\frac{29}{12}$$</p>
+<p>$n$ 不是正整數，故 $22$ 不是數列的項，I 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II：$a_{1}$</div>
+<p>$$a_{1}=S_{1}=6-1=5$$</p>
+<p>或代入通項：$12(1)-7=5$，II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III：是不是等比</div>
+      <div class="rule"><span class="rule-name">等差 vs 等比</span>通項是 $n$ 的一次式 $an+b$，代表等差數列。</div>
+<p>$$a_{n}=5+(n-1)\times12$$</p>
+<p>相鄰兩項的差固定為 $12$，是等差數列，不是等比數列，III 錯誤。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若某數列首 $n$ 項之和為 $S_{n}=n^{2}+3n$，下列何者正確？
+<br>I. 該數列是等差數列
+<br>II. 第 1 項是 $4$
+<br>III. $20$ 是該數列的一項</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $a_{n}=S_{n}-S_{n-1}=(n^{2}+3n)-[(n-1)^{2}+3(n-1)]=2n+2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a_{1}=4$；公差固定 2，是等差數列。</div>
+          <div class="p-step"><b>第 3 步.</b> $2n+2=20\Rightarrow n=9$，是正整數，故 20 是其中一項。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

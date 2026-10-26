@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第38題 · 三角方程化為二次方程：不要兩邊除 $\cos x$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第38題</span>
+    <h1>三角方程化為二次方程：不要兩邊除 $\cos x$</h1>
+    <p class="sub">三角學 · 三角方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+就 $0^{\circ}\le x<360^{\circ}$，方程 $6\cos^{2}x=\cos x+5$ 有多少個根？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">移項成二次方程</div>
+      <div class="rule"><span class="rule-name">二次方程</span>把 $\cos x$ 看成一個未知數 $c$。</div>
+<p>$$6\cos^{2}x-\cos x-5=0$$</p>
+<p>設 $c=\cos x$：$6c^{2}-c-5=0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">因式分解</div>
+<p>$$(c-1)(6c+5)=0$$</p>
+<p>故 $\cos x=1$ 或 $\cos x=-\dfrac{5}{6}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解 $\cos x=1$</div>
+<p>在 $0^{\circ}\le x<360^{\circ}$ 內只有 $x=0^{\circ}$（$360^{\circ}$ 不在範圍內）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解 $\cos x=-\dfrac{5}{6}$</div>
+      <div class="rule"><span class="rule-name">參考角</span>$\cos\theta=\dfrac{5}{6}\Rightarrow\theta\approx33.6^{\circ}$；餘弦為負在第二、三象限。</div>
+<p>$$x=180^{\circ}-33.6^{\circ}=146.4^{\circ}\quad\text{或}\quad x=180^{\circ}+33.6^{\circ}=213.6^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">數根</div>
+<p>共 $1+2=3$ 個根。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$3$ 個根）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 就 $0^{\circ}\le x<360^{\circ}$，方程 $2\sin^{2}x=\sin x+1$ 有多少個根？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$1$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $2s^{2}-s-1=0\Rightarrow(2s+1)(s-1)=0$，$s=1$ 或 $-\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\sin x=1\Rightarrow x=90^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\sin x=-\dfrac{1}{2}\Rightarrow x=210^{\circ},330^{\circ}$，共 3 個根。</div>
+          <div class="p-ans">答案：<b>B</b>（$3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第19題 · 正五邊形的對稱軸：三句一次過判斷</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第19題</span>
+    <h1>正五邊形的對稱軸：三句一次過判斷</h1>
+    <p class="sub">平面幾何 · 正多邊形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCDE$ 是正五邊形，$AD$ 與 $CE$ 相交於 $F$。下列何者正確？
+<br>I. $\triangle ABF\cong\triangle CBF$
+<br>II. $\angle AFB+\angle EAF=90^{\circ}$
+<br>III. $AC\perp BF$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2018_P2_19.png" alt="正五邊形 ABCDE，對角線 AD 與 CE 交於 F" style="max-width:100%;height:auto;"><figcaption>圖：$F$ 為 $AD$ 與 $CE$ 的交點</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算正五邊形的內角</div>
+      <div class="rule"><span class="rule-name">正多邊形</span>每個內角 $=\dfrac{(n-2)\times180^{\circ}}{n}$。</div>
+<p>$$\text{內角}=\frac{3\times180^{\circ}}{5}=108^{\circ}$$</p>
+<p>在等腰 $\triangle ADE$ 中（$AE=ED$）：</p>
+<p>$$\angle EAD=\angle ADE=\frac{180^{\circ}-108^{\circ}}{2}=36^{\circ}$$</p>
+<p>故 $\angle BAD=108^{\circ}-36^{\circ}=72^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">找出 $BF$ 是對稱軸</div>
+      <div class="rule"><span class="rule-name">對稱</span>正五邊形有一條對稱軸經過 $B$，並把 $A\leftrightarrow C$、$D\leftrightarrow E$ 對調。</div>
+<p>$AD$ 與 $CE$ 在這對稱下互相對調，所以交點 $F$ 被固定在對稱軸上，即 $BF$ 就是這條對稱軸。</p>
+<p>因此 $\angle ABF=\dfrac{108^{\circ}}{2}=54^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I：用 S.S.S.</div>
+<p>$AB=CB$（正五邊形邊長）、$AF=CF$（對稱）、$BF$ 公共，故</p>
+<p>$$\triangle ABF\cong\triangle CBF\quad(\text{S.S.S.})$$</p>
+<p>I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 II：在 $	riangle ABF$ 求 $ngle AFB$</div>
+<p>$$\angle AFB=180^{\circ}-72^{\circ}-54^{\circ}=54^{\circ}$$</p>
+<p>而 $\angle EAF=\angle EAD=36^{\circ}$，故</p>
+<p>$$54^{\circ}+36^{\circ}=90^{\circ}$$</p>
+<p>II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢驗 III：對稱軸垂直連線</div>
+<p>$A$ 與 $C$ 關於 $BF$ 對稱，所以 $AC\perp BF$，III 正確。</p>
+<p>三句都正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRST$ 是正五邊形，$PR$ 與 $QS$ 相交於 $X$。下列何者正確？
+<br>I. $PQ=QR$
+<br>II. $\angle PXQ=72^{\circ}$
+<br>III. $PX=QX$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 正五邊形邊長相等，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle PQS=\angle QPR=36^{\circ}$，故 $\triangle PQX$ 中 $\angle PXQ=180^{\circ}-72^{\circ}=108^{\circ}$，II 錯誤。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle QPR=\angle PQS=36^{\circ}$，故 $PX=QX$，III 正確。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 I 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

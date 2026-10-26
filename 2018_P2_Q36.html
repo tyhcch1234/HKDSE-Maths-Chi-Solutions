@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第36題 · 同一個二次方程的兩根：和與積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第36題</span>
+    <h1>同一個二次方程的兩根：和與積</h1>
+    <p class="sub">方程 · 根與係數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $m\ne n$ 且 $2m^{2}+5m=2n^{2}+5n=14$，則 $(m+2)(n+2)=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-8$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$16$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">看成同一個二次方程的兩根</div>
+      <div class="rule"><span class="rule-name">根的概念</span>把 $m$、$n$ 都代入同一個方程。</div>
+<p>由 $2x^{2}+5x=14$ 得</p>
+<p>$$2x^{2}+5x-14=0$$</p>
+<p>$m$ 與 $n$ 都滿足它，且 $m\neq n$，故它們是這個方程的兩個根。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出根的和與積</div>
+      <div class="rule"><span class="rule-name">根與係數</span>$m+n=-\dfrac{b}{a}$、$mn=\dfrac{c}{a}$。</div>
+<p>$$m+n=-\frac{5}{2},\qquad mn=\frac{-14}{2}=-7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">展開目標式</div>
+<p>$$(m+2)(n+2)=mn+2m+2n+4=mn+2(m+n)+4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入</div>
+<p>$$(-7)+2\left(-\frac{5}{2}\right)+4=-7-5+4=-8$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-8$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $p\ne q$ 且 $3p^{2}-4p=3q^{2}-4q=6$，則 $(p-1)(q-1)=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-\dfrac{7}{3}$</li><li><span class="ol">B</span>$-\dfrac{1}{3}$</li><li><span class="ol">C</span>$\dfrac{1}{3}$</li><li><span class="ol">D</span>$\dfrac{7}{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $p$、$q$ 是 $3x^{2}-4x-6=0$ 的兩根。</div>
+          <div class="p-step"><b>第 2 步.</b> $p+q=\dfrac{4}{3}$，$pq=-2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $(p-1)(q-1)=pq-(p+q)+1=-2-\dfrac{4}{3}+1=-\dfrac{7}{3}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-\dfrac{7}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q37.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

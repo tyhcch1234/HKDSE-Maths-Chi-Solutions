@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第32題 · 對數圖像：底數越大，上升越慢</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第32題</span>
+    <h1>對數圖像：底數越大，上升越慢</h1>
+    <p class="sub">指數與對數 · 對數函數圖像</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖顯示 $y=\log_{a}x$ 與 $y=\log_{b}x$ 的圖像，其中 $a$、$b$ 為正的常數。若一條垂直線分別與 $y=\log_{a}x$、$y=\log_{b}x$ 及 $x$ 軸交於 $A$、$B$、$C$，下列何者正確？
+<br>I. $a>1$
+<br>II. $a>b$
+<br>III. $\dfrac{AB}{BC}=\log_{a}\dfrac{b}{a}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+    <figure class="fig"><svg viewBox="0 0 380 270" width="380" height="270" role="img" aria-label="兩條對數曲線">
+  <g stroke="currentColor" stroke-width="1.4" fill="none">
+    <line x1="50" y1="220" x2="350" y2="220"/>
+    <line x1="50" y1="220" x2="50" y2="30"/>
+    <path d="M70,214 Q190,150 330,60"/>
+    <path d="M70,214 Q180,180 330,120"/>
+    <line x1="270" y1="220" x2="270" y2="95" stroke-dasharray="4 3" stroke-width="1"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+    <text x="356" y="224">x</text>
+    <text x="42" y="34">y</text>
+    <text x="274" y="92">A</text>
+    <text x="274" y="140">B</text>
+    <text x="270" y="236" text-anchor="middle">C</text>
+    <text x="330" y="52" font-size="13">y = log_a x</text>
+    <text x="330" y="112" font-size="13">y = log_b x</text>
+    <text x="44" y="236">O</text>
+  </g>
+</svg><figcaption>圖：$A$ 在 $\log_{a}x$ 上、$B$ 在 $\log_{b}x$ 上，$C$ 在 $x$ 軸上</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圖判斷 I</div>
+      <div class="rule"><span class="rule-name">遞增</span>$y=\log_{k}x$ 在 $k>1$ 時遞增。</div>
+<p>兩條曲線都隨 $x$ 增加而上升，故 $a>1$、$b>1$，I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">比較 $a$、$b$</div>
+      <div class="rule"><span class="rule-name">底數與陡度</span>$x>1$ 時，底數越大，$\log$ 曲線上升越慢（圖像越貼近 $x$ 軸）。</div>
+<p>同一 $x$ 下，$A$ 在 $B$ 之上，即</p>
+<p>$$\log_{a}x>\log_{b}x\;\Longrightarrow\;\frac{\ln x}{\ln a}>\frac{\ln x}{\ln b}\;\Longrightarrow\;\ln a<\ln b\;\Longrightarrow\;a<b$$</p>
+<p>故 II（$a>b$）錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算 III 的比</div>
+<p>設 $C$ 的坐標為 $x_{0}$，則 $AC=\log_{a}x_{0}$、$BC=\log_{b}x_{0}$。</p>
+<p>$$\frac{AB}{BC}=\frac{AC-BC}{BC}=\frac{\log_{a}x_{0}}{\log_{b}x_{0}}-1$$</p>
+<p>$$=\frac{\ln b}{\ln a}-1=\frac{\ln b-\ln a}{\ln a}=\frac{\ln\frac{b}{a}}{\ln a}=\log_{a}\frac{b}{a}$$</p>
+<p>III 正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $y=\log_{p}x$ 的圖像在 $x>1$ 時位於 $y=\log_{q}x$ 的下方，且兩者均遞增。下列何者正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$p>q>1$</li><li><span class="ol">B</span>$q>p>1$</li><li><span class="ol">C</span>$0<p<q<1$</li><li><span class="ol">D</span>$p<1<q$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩者遞增 $\Rightarrow p>1$、$q>1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同一 $x$ 下 $\log_{p}x<\log_{q}x\Rightarrow\ln p>\ln q\Rightarrow p>q$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $p>q>1$。</div>
+          <div class="p-ans">答案：<b>A</b>（$p>q>1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

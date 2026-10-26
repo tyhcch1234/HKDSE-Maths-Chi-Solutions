@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷二 第4題 · 異分母分式相減：先通分，再小心負號</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷二 · 第4題</span>
+    <h1>異分母分式相減：先通分，再小心負號</h1>
+    <p class="sub">多項式 · 分式運算</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{1}{3x+7}-\dfrac{1}{3x-7}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{14}{49-9x^{2}}$</li><li><span class="ol">B</span>$\dfrac{14}{9x^{2}-49}$</li><li><span class="ol">C</span>$\dfrac{6x}{49-9x^{2}}$</li><li><span class="ol">D</span>$\dfrac{6x}{9x^{2}-49}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找共同分母</div>
+      <div class="rule"><span class="rule-name">平方差</span>$(3x+7)(3x-7)=(3x)^{2}-7^{2}=9x^{2}-49$。</div>
+<p>兩個分母互不整除，共同分母就是它們的乘積：</p>
+<p>$$(3x+7)(3x-7)=9x^{2}-49$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">各自擴分</div>
+<p>$$\frac{1}{3x+7}=\frac{3x-7}{9x^{2}-49},\qquad
+\frac{1}{3x-7}=\frac{3x+7}{9x^{2}-49}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分子相減，整條分子要加括號</div>
+      <div class="rule"><span class="rule-name">易錯點</span>減號後面是整條 $3x+7$，不是只有 $3x$。</div>
+<p>$$\frac{(3x-7)-(3x+7)}{9x^{2}-49}=\frac{3x-7-3x-7}{9x^{2}-49}=\frac{-14}{9x^{2}-49}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把負號搬到分母</div>
+<p>$$\frac{-14}{9x^{2}-49}=\frac{14}{49-9x^{2}}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{14}{49-9x^{2}}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{1}{2x+5}-\dfrac{1}{2x-5}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{10}{25-4x^{2}}$</li><li><span class="ol">B</span>$\dfrac{10}{4x^{2}-25}$</li><li><span class="ol">C</span>$\dfrac{4x}{25-4x^{2}}$</li><li><span class="ol">D</span>$\dfrac{4x}{4x^{2}-25}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共同分母：$(2x+5)(2x-5)=4x^{2}-25$。</div>
+          <div class="p-step"><b>第 2 步.</b> 分子：$(2x-5)-(2x+5)=-10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{-10}{4x^{2}-25}=\dfrac{10}{25-4x^{2}}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{10}{25-4x^{2}}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
