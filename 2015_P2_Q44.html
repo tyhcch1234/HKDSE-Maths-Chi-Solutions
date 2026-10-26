@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第44題 · 先選袋後抽球</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷二 · 第44題</span>
+  <h1>兩袋兩步：全概率</h1>
+  <p class="sub">概率 · 樹形圖</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋 $P$ 有 $2$ 個紅球及 $4$ 個綠球，袋 $Q$ 有 $1$ 個紅球及 $3$ 個綠球。若隨機選一個袋，再從該袋隨機抽出一個球，求抽出綠球的概率。
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$\dfrac{5}{12}$</li>
+      <li><span class="ol">B</span>$\dfrac{1}{2}$</li>
+      <li><span class="ol">C</span>$\dfrac{2}{3}$</li>
+      <li><span class="ol">D</span>$\dfrac{17}{24}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">第一層：選袋</div>
+      <div class="rule">
+        <span class="rule-name">等可能</span>
+        <span class="rule-math">\(P(P)=P(Q)=\dfrac{1}{2}\)</span>
+        <span class="rule-why">兩個袋「隨機」選，機會相同。若袋的數目不同，這一步就要按數目分配。</span>
+      </div>
+      兩個袋被選中的機會各為 $\dfrac{1}{2}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">第二層：各袋抽到綠球的條件概率</div>
+      <div class="rule">
+        <span class="rule-name">條件概率</span>
+        <span class="rule-math">\(P(\text{綠}\mid P)=\dfrac{4}{6},\qquad P(\text{綠}\mid Q)=\dfrac{3}{4}\)</span>
+        <span class="rule-why">分母是該袋球的總數，分子是綠球數。</span>
+      </div>
+      袋 $P$：$6$ 個球中有 $4$ 個綠球，概率 $\dfrac{4}{6}=\dfrac{2}{3}$。<br>
+      袋 $Q$：$4$ 個球中有 $3$ 個綠球，概率 $\dfrac{3}{4}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">沿兩條路徑分別相乘，再相加</div>
+      <div class="rule">
+        <span class="rule-name">全概率公式</span>
+        <span class="rule-math">\(P(\text{綠})=\sum P(\text{袋})\times P(\text{綠}\mid\text{袋})\)</span>
+        <span class="rule-why">抽到綠球有兩條互斥路徑：經 $P$ 或經 $Q$\)，故把兩條路徑的概率相加。</span>
+      </div>
+      \[P(\text{綠})=\frac{1}{2}\times\frac{2}{3}+\frac{1}{2}\times\frac{3}{4}
+      =\frac{1}{3}+\frac{3}{8}
+      =\frac{8}{24}+\frac{9}{24}
+      =\frac{17}{24}.\]
+      對照選項，答案為 <b>D</b>。<br>
+      注意：$\dfrac{2+4+1+3}{2}$ 之類把兩袋混在一起算的做法是錯的，因為兩袋被選中的機會要先加權。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{17}{24}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋 $A$ 有 $3$ 個紅球及 $1$ 個綠球，袋 $B$ 有 $2$ 個紅球及 $2$ 個綠球。隨機選一袋，再從該袋隨機抽一個球，求抽出綠球的概率。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$\dfrac{3}{8}$</li>
+        <li><span class="ol">B</span>$\dfrac{1}{2}$</li>
+        <li><span class="ol">C</span>$\dfrac{5}{8}$</li>
+        <li><span class="ol">D</span>$\dfrac{1}{4}$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 選袋概率各為 $\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $P(\text{綠}\mid A)=\dfrac{1}{4}$，$P(\text{綠}\mid B)=\dfrac{2}{4}=\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P(\text{綠})=\dfrac{1}{2}\times\dfrac{1}{4}+\dfrac{1}{2}\times\dfrac{1}{2}=\dfrac{1}{8}+\dfrac{1}{4}=\dfrac{3}{8}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{3}{8}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q43.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

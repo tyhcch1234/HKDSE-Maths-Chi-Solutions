@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第41題 · 圓與直線相切</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷二 · 第41題</span>
+  <h1>圓與直線相切求 $k$</h1>
+  <p class="sub">圓的方程 · 點到直線距離</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      求常數 $k$，使圓 $x^{2}+y^{2}+2x-6y+k=0$ 與直線 $x+y+4=0$ 只交於一點。
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$-16$</li>
+      <li><span class="ol">B</span>$-8$</li>
+      <li><span class="ol">C</span>$8$</li>
+      <li><span class="ol">D</span>$16$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">\(x^{2}+y^{2}+Dx+Ey+F=0\Rightarrow\) 圓心 \(\left(-\frac{D}{2},-\frac{E}{2}\right),\ r^{2}=\frac{D^{2}+E^{2}}{4}-F\)</span>
+        <span class="rule-why">$D=2,\ E=-6,\ F=k$，直接代入。</span>
+      </div>
+      圓心 $\left(-1,\,3\right)$，
+      \[r^{2}=\frac{4+36}{4}-k=10-k.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">「只交於一點」即相切：圓心到直線距離 $=r$</div>
+      <div class="rule">
+        <span class="rule-name">點到直線距離</span>
+        <span class="rule-math">\(d=\dfrac{|Ax_0+By_0+C|}{\sqrt{A^{2}+B^{2}}}\)</span>
+        <span class="rule-why">相切時切點只有一個，故 $d=r$；相交兩點則 $d<r$，不相交則 $d>r$。</span>
+      </div>
+      直線 $x+y+4=0$，圓心 $(-1,3)$：
+      \[d=\frac{|-1+3+4|}{\sqrt{1^{2}+1^{2}}}=\frac{6}{\sqrt{2}}=3\sqrt{2}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">平方後解 $k$</div>
+      <div class="rule">
+        <span class="rule-name">相切條件</span>
+        <span class="rule-math">\(d^{2}=r^{2}\)</span>
+        <span class="rule-why">距離與半徑都是正數，平方後可避免根號運算。</span>
+      </div>
+      \[(3\sqrt{2})^{2}=10-k\;\Longrightarrow\;18=10-k\;\Longrightarrow\;k=-8.\]
+      對照選項，答案為 <b>B</b>。<br>
+      快速檢查：$k=-8$ 時 $r^{2}=18$、$r=3\sqrt{2}=d$，確實相切。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$k=-8$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求常數 $k$，使圓 $x^{2}+y^{2}+2x-4y+k=0$ 與直線 $x-y+5=0$ 相切。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$3$</li>
+        <li><span class="ol">B</span>$-3$</li>
+        <li><span class="ol">C</span>$1$</li>
+        <li><span class="ol">D</span>$-1$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓心 $(-1,2)$，$r^{2}=\dfrac{4+16}{4}-k=5-k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $d=\dfrac{|-1-2+5|}{\sqrt{2}}=\dfrac{2}{\sqrt{2}}=\sqrt{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $d^{2}=2=5-k$，得 $k=3$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$k=3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
