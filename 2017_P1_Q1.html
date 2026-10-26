@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第1題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第1題</span>
+    <h1>兩邊乘分母，再抽 $y$</h1>
+    <p class="sub">代數 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把公式 $k=\dfrac{3x-y}{y}$ 的主項變換為 $y$。<span class="marks">[3 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">兩邊乘以 $y$</div><div class="rule"><span class="rule-name">去分母</span><span class="rule-math">$ky=3x-y$</span><span class="rule-why">分母 $y\neq0$，兩邊同乘 $y$ 不影響等式。</span></div>
+\[k\cdot y=\frac{3x-y}{y}\cdot y\ \Longrightarrow\ ky=3x-y.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">把含 $y$ 的項移到同一邊</div><div class="rule"><span class="rule-name">移項</span><span class="rule-math">$ky+y=3x$</span><span class="rule-why">右邊的 $-y$ 移到左邊變 $+y$。</span></div>
+\[ky+y=3x.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">抽出 $y$ 再除</div><div class="rule"><span class="rule-name">提取公因式</span><span class="rule-math">$y(k+1)=3x$</span><span class="rule-why">左邊兩項都有 $y$，抽出後剩下 $k+1$。</span></div>
+\[y(k+1)=3x\ \Longrightarrow\ y=\frac{3x}{k+1}.\]
+（$k\neq-1$）
+</div>
+    <div class="ans"><span class="lbl">答案</span>$y=\dfrac{3x}{k+1}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 把公式 $k=\dfrac{4x-y}{y}$ 的主項變換為 $x$。</div>
+    <ol class="opts"><li><span class="ol">A</span>$x=\dfrac{y(k+1)}{4}$</li><li><span class="ol">B</span>$x=\dfrac{y(k-1)}{4}$</li><li><span class="ol">C</span>$x=\dfrac{4y}{k+1}$</li><li><span class="ol">D</span>$x=\dfrac{y}{4(k+1)}$</li></ol>
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $ky=4x-y$。</div><div class="p-step"><b>第 2 步.</b> $4x=y(k+1)$。</div><div class="p-step"><b>第 3 步.</b> $x=\dfrac{y(k+1)}{4}$，答案 <b>A</b>。</div>
+        <div class="p-ans">答案：<b>A</b></div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

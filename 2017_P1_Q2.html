@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第2題 · 指數定律</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第2題</span>
+    <h1>先各自化簡分子與分母</h1>
+    <p class="sub">指數 · 化簡</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{\left(m^{4}n^{-1}\right)^{3}}{\left(m^{-2}\right)^{5}}$，並以正指數表示答案。<span class="marks">[3 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">展開分子</div><div class="rule"><span class="rule-name">冪的冪</span><span class="rule-math">$\left(m^{4}n^{-1}\right)^{3}=m^{12}n^{-3}$</span><span class="rule-why">$\left(a^{p}\right)^{q}=a^{pq}$，指數相乘。</span></div>
+\[\left(m^{4}n^{-1}\right)^{3}=m^{4\times3}n^{-1\times3}=m^{12}n^{-3}.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">化簡分母</div><div class="rule"><span class="rule-name">冪的冪</span><span class="rule-math">$\left(m^{-2}\right)^{5}=m^{-10}$</span><span class="rule-why">同樣是指數相乘。</span></div>
+\[\left(m^{-2}\right)^{5}=m^{-10}.\]
+所以原式 $=\dfrac{m^{12}n^{-3}}{m^{-10}}=m^{12-(-10)}n^{-3}=m^{22}n^{-3}$。
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">改寫成正指數</div><div class="rule"><span class="rule-name">負指數</span><span class="rule-math">$n^{-3}=\dfrac{1}{n^{3}}$</span><span class="rule-why">題目要求「正指數」，所以 $n^{-3}$ 要搬去分母。</span></div>
+\[m^{22}n^{-3}=\frac{m^{22}}{n^{3}}.\]
+指數相減的法則：$\dfrac{a^{p}}{a^{q}}=a^{p-q}$，這裡 $12-(-10)=22$。
+</div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{m^{22}}{n^{3}}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 化簡 $\dfrac{\left(a^{3}b^{-2}\right)^{4}}{\left(a^{-1}\right)^{3}}$，並以正指數表示答案。</div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{a^{15}}{b^{8}}$</li><li><span class="ol">B</span>$\dfrac{a^{9}}{b^{8}}$</li><li><span class="ol">C</span>$a^{15}b^{8}$</li><li><span class="ol">D</span>$\dfrac{a^{11}}{b^{8}}$</li></ol>
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 分子 $=a^{12}b^{-8}$，分母 $=a^{-3}$。</div><div class="p-step"><b>第 2 步.</b> $a^{12-(-3)}b^{-8}=a^{15}b^{-8}$。</div><div class="p-step"><b>第 3 步.</b> $=\dfrac{a^{15}}{b^{8}}$，答案 <b>A</b>。</div>
+        <div class="p-ans">答案：<b>A</b></div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q1.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q3.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

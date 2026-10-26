@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第4題 · 應用題（方程）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第4題</span>
+    <h1>設一個未知數，用「銀碼」立方程</h1>
+    <p class="sub">方程 · 應用題</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某劇院只有兩種入場券：普通票與優惠票。普通票與優惠票的票價分別為 ＄126 及 ＄78。某日售出的普通票數目是優惠票數目的 5 倍，而售出入場券的總金額為 ＄50 976。求該日售出的入場券總數。<span class="marks">[4 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">設未知數</div><div class="rule"><span class="rule-name">設定</span><span class="rule-math">設售出優惠票 $x$ 張，則普通票 $5x$ 張</span><span class="rule-why">以「倍數」那一項作 $x$ 最方便，另一項直接用 $5x$ 表示。</span></div>
+設售出優惠票 $x$ 張，則普通票為 $5x$ 張。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">按總金額立方程</div><div class="rule"><span class="rule-name">總金額</span><span class="rule-math">$126(5x)+78x=50976$</span><span class="rule-why">（每張票價）×（張數）再加起來，就是總收入。</span></div>
+\[126\times5x+78x=50976\ \Longrightarrow\ 630x+78x=50976.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">解出 $x$ 並回答總數</div><div class="rule"><span class="rule-name">解方程</span><span class="rule-math">$708x=50976$，$x=72$</span><span class="rule-why">題目問「總數」，所以最後要乘 $6$（$x+5x$）。</span></div>
+\[708x=50976\ \Longrightarrow\ x=72.\]
+優惠票 72 張，普通票 $5\times72=360$ 張，
+\[\text{總數}=72+360=432\ \text{張}.\]
+驗算：$360\times126+72\times78=45360+5616=50976$ ✓
+</div>
+    <div class="ans"><span class="lbl">答案</span>$432$ 張</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 某店只有兩種貨品，甲、乙的售價分別為 ＄150 及 ＄90。某日售出甲的數目是乙的 3 倍，總銷售額為 ＄21 600。求該日售出的貨品總數。</div>
+    <ol class="opts"><li><span class="ol">A</span>$120$</li><li><span class="ol">B</span>$140$</li><li><span class="ol">C</span>$160$</li><li><span class="ol">D</span>$180$</li></ol>
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 設乙售出 $x$ 件，甲則 $3x$ 件。</div><div class="p-step"><b>第 2 步.</b> $150(3x)+90x=21600\ \Rightarrow\ 540x=21600$，$x=40$。</div><div class="p-step"><b>第 3 步.</b> 總數 $=4x=160$，答案 <b>C</b>。</div>
+        <div class="p-ans">答案：<b>C</b>（$160$）</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q3.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q5.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
