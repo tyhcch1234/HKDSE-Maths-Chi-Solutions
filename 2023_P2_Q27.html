@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第27題 · 兩圓的圓心與相交</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第27題</span>
+  <h1>兩圓的圓心與相交</h1>
+  <p class="sub">圓形幾何 · 圓的方程 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圓 $C_1$ 與 $C_2$ 的方程分別為\[ x^2+y^2+7x-4y+15=0 \]及\[ 2x^2+2y^2-2x-16y-17=0 \]設 $G_1$、$G_2$ 分別為 $C_1$、$C_2$ 的圓心，$O$ 為原點。下列哪項正確？
+I. $\Delta OG_1G_2$ 為等邊三角形
+II. 線段 $OG_1$ 在 $C_2$ 之內
+III. $C_1$ 與 $C_2$ 相交於兩個相異點
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 只有 I 及 II</li>
+      <li><span class="ol">B.</span> 只有 I 及 III</li>
+      <li><span class="ol">C.</span> 只有 II 及 III</li>
+      <li><span class="ol">D.</span> I、II 及 III</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">$C_1$ 的圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">\(x^2+y^2+Dx+Ey+F=0\Rightarrow G\left(-\tfrac D2,-\tfrac E2\right)\)</span>
+        <span class="rule-why">圓心為 $\left(-\frac D2,-\frac E2\right)$，半徑 $r=\sqrt{\frac{D^2+E^2}{4}-F}$。</span>
+      </div>
+\[ \left(x+\tfrac72\right)^2+(y-2)^2=\left(\tfrac72\right)^2+4-15=\tfrac54 \]故 $G_1\left(-\tfrac72,2\right)$，$r_1=\dfrac{\sqrt5}{2}$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">$C_2$ 的圓心與半徑</div>
+先整式除以 $2$：$x^2+y^2-x-8y-\dfrac{17}{2}=0$，配方得\[ \left(x-\tfrac12\right)^2+(y-4)^2=\tfrac14+16+\tfrac{17}{2}=\tfrac{99}{4} \]故 $G_2\left(\tfrac12,4\right)$，$r_2=\dfrac{3\sqrt{11}}{2}$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I</div>
+\[ OG_1=OG_2=\sqrt{\tfrac{65}{4}}=\frac{\sqrt{65}}{2}\approx4.03,\qquad G_1G_2=\sqrt{4^2+2^2}=\sqrt{20}\approx4.47 \]三邊不全等，$\Delta OG_1G_2$ 只是等腰，I 錯誤。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 II</div>
+$OG_2=\dfrac{\sqrt{65}}{2}\approx4.03<r_2\approx4.98$，$G_1G_2=\sqrt{20}\approx4.47<r_2$，故 $O$ 與 $G_1$ 都在圓 $C_2$ 之內。圓盤是凸集，整條線段 $OG_1$ 也在 $C_2$ 之內，II 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢驗 III</div>
+      <div class="rule">
+        <span class="rule-name">兩圓相交</span>
+        <span class="rule-math">\(|r_2-r_1|<G_1G_2<r_1+r_2\)</span>
+        <span class="rule-why">圓心距介於半徑差與半徑和之間時，兩圓相交於兩點。</span>
+      </div>
+\[ r_2-r_1\approx3.86,\qquad r_1+r_2\approx6.09 \]而 $G_1G_2\approx4.47$ 落在兩者之間，故兩圓相交於兩個相異點，III 正確。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C　只有 II 及 III</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $x^2+y^2-4x+6y-12=0$ 的圓心及半徑為何？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $G=\left(-\frac{-4}{2},-\frac{6}{2}\right)=(2,-3)$</div>
+          <div class="p-step"><b>第 2 步.</b> $r=\sqrt{2^2+(-3)^2+12}=\sqrt{25}$</div>
+          <div class="p-ans">答案：圓心 $(2,-3)$，半徑 $5$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q26.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q28.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

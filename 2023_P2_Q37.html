@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第37題 · 線性規劃的最大值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第37題</span>
+  <h1>線性規劃的最大值</h1>
+  <p class="sub">不等式 · 線性規劃 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $D$ 為以下不等式組所代表的區域：\[ x+3\ge0,\qquad 2x+3y-12\le0,\qquad 5x-3y+12\le0 \]求 $\beta$ 的取值範圍，使 $\beta x+6y$ 的最大值為 $24$，其中 $(x,y)$ 為 $D$ 內的點。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\beta\le-10$</li>
+      <li><span class="ol">B.</span> $\beta\ge-10$</li>
+      <li><span class="ol">C.</span> $\beta\le4$</li>
+      <li><span class="ol">D.</span> $\beta\ge4$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_Q37.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求區域 $D$ 的頂點</div>
+三條邊界：$x=-3$、$2x+3y=12$、$5x-3y=-12$。\[ x=-3\ \text{與}\ 2x+3y=12:\ P(-3,6) \]\[ 2x+3y=12\ \text{與}\ 5x-3y=-12:\ Q(0,4) \]\[ x=-3\ \text{與}\ 5x-3y=-12:\ R(-3,-1) \]$D$ 為三角形 $PQR$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在頂點計算目標函數</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃</span>
+        <span class="rule-math">\(\max(\beta x+6y)\ \text{必在頂點取得}\)</span>
+        <span class="rule-why">目標函數是線性的，最大值出現在可行區域的頂點。</span>
+      </div>
+\[ Z(P)=-3\beta+36,\qquad Z(Q)=24,\qquad Z(R)=-3\beta-6 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">要求最大值等於 $24$</div>
+$Q$ 的值恆為 $24$，故只需其餘兩個頂點的值不超過 $24$：\[ -3\beta+36\le24\Rightarrow\beta\ge4 \]\[ -3\beta-6\le24\Rightarrow\beta\ge-10 \]兩者取較強條件，得 $\beta\ge4$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗證邊界情況</div>
+$\beta=4$ 時 $Z(P)=Z(Q)=24$，整條邊 $PQ$ 都是最大值所在；$\beta>4$ 時 $Z(P)<24$，最大值仍為 $24$。故 $\beta\ge4$，答案 D。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D　$\beta\ge4$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $x\ge0$、$y\ge0$、$x+y\le4$ 下，求 $2x+3y$ 的最大值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 頂點 $(0,0)$、$(4,0)$、$(0,4)$</div>
+          <div class="p-step"><b>第 2 步.</b> $2(4)+0=8$；$0+3(4)=12$</div>
+          <div class="p-ans">答案：最大值 $12$（在 $(0,4)$ 取得）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q36.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q38.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

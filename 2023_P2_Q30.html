@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第30題 · 兩組員工的平均薪金</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第30題</span>
+  <h1>兩組員工的平均薪金</h1>
+  <p class="sub">統計 · 加權平均數 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某公司有 $14$ 名全職員工及 $56$ 名兼職員工。全職員工的平均薪金為 31 530，兼職員工的平均薪金為 21 525。求該公司所有員工的平均薪金。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 23 526 元</li>
+      <li><span class="ol">B.</span> 25\,527 元</li>
+      <li><span class="ol">C.</span> 27\,528 元</li>
+      <li><span class="ol">D.</span> 29\,529 元</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">全職員工的薪金總額</div>
+\[ 31 530\times14=441\,420 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兼職員工的薪金總額</div>
+\[ 21 525\times56=1\,205\,400 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併求平均</div>
+      <div class="rule">
+        <span class="rule-name">加權平均數</span>
+        <span class="rule-math">\(\bar x=\frac{n_1\bar x_1+n_2\bar x_2}{n_1+n_2}\)</span>
+        <span class="rule-why">兩組合併後的平均數，要按人數加權。</span>
+      </div>
+\[ \bar x=\frac{441\,420+1\,205\,400}{14+56}=\frac{1\,646\,820}{70}=23 526 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合理性檢查</div>
+兼職人數是全職的四倍，平均數應較接近 21 525；$23 526$ 符合這個趨勢。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　23 526 元</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班有 $20$ 名男生，平均身高 $170$ cm；$30$ 名女生，平均身高 $158$ cm。求全班平均身高。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總高度 $=20\times170+30\times158$</div>
+          <div class="p-step"><b>第 2 步.</b> 除以 $50$</div>
+          <div class="p-ans">答案：$\dfrac{3400+4740}{50}=162.8$ cm</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q29.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q31.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

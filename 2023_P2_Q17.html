@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第17題 · 平行四邊形內的面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第17題</span>
+  <h1>平行四邊形內的面積比</h1>
+  <p class="sub">求積法 · 相似三角形 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $PQRS$ 為平行四邊形，$X$ 為 $PQ$ 上的一點。設 $Y$ 為 $PR$ 與 $SX$ 的交點。若 $\Delta PXY$ 與四邊形 $QRYX$ 的面積分別為 $32\text{ cm}^2$ 與 $58\text{ cm}^2$，求 $\Delta RSY$ 的面積。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $40\text{ cm}^2$</li>
+      <li><span class="ol">B.</span> $50\text{ cm}^2$</li>
+      <li><span class="ol">C.</span> $58\text{ cm}^2$</li>
+      <li><span class="ol">D.</span> $72\text{ cm}^2$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_17.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先求 $\Delta PQR$ 的面積</div>
+$\Delta PQR$ 由 $\Delta PXY$ 與四邊形 $QRYX$ 合成：\[ [\Delta PQR]=32+58=90\text{ cm}^2 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">對角線把平行四邊形平分</div>
+      <div class="rule">
+        <span class="rule-name">平行四邊形對角線</span>
+        <span class="rule-math">\([\Delta PQR]=[\Delta RSP]\)</span>
+        <span class="rule-why">對角線 $PR$ 把平行四邊形分成兩個全等三角形。</span>
+      </div>
+\[ [\Delta RSP]=[\Delta PQR]=90\text{ cm}^2 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">設 $x$ 為所求面積</div>
+設 $[\Delta RSY]=x$，則 $[\Delta PSY]=90-x$。\[ \frac{XY}{SY}=\frac{[\Delta PXY]}{[\Delta PSY]}=\frac{32}{90-x},\qquad \frac{PY}{RY}=\frac{[\Delta PSY]}{[\Delta RSY]}=\frac{90-x}{x} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用相似三角形建立方程</div>
+$\angle PYX=\angle RYS$（對頂角），$\angle PXY=\angle RSY$（內錯角，$PQ\parallel SR$），故 $\Delta PXY\sim\Delta RSY$。\[ \frac{XY}{SY}=\frac{PY}{RY}\ \Rightarrow\ \frac{32}{90-x}=\frac{90-x}{x} \]\[ 32x=(90-x)^2\ \Rightarrow\ x^2-212x+8100=0 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">解方程並捨去不合理解</div>
+\[ (x-50)(x-162)=0\ \Rightarrow\ x=50\ \text{或}\ 162 \]若 $x=162>90$，則 $[\Delta PSY]=90-x<0$，不可能，故 $x=50$。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$50\text{ cm}^2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 平行四邊形 $PQRS$ 中，$X$ 在 $PQ$ 上，$Y=PR\cap SX$。若 $[\Delta PXY]=18\text{ cm}^2$，$[\Delta RSY]=50\text{ cm}^2$，求四邊形 $QRYX$ 的面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $[\Delta PQR]=[\Delta RSP]=[\Delta PSY]+[\Delta RSY]$</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $\Delta PXY\sim\Delta RSY$：$\dfrac{XY}{SY}=\sqrt{\dfrac{18}{50}}=\dfrac35$</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{[\Delta PXY]}{[\Delta PSY]}=\dfrac{XY}{SY}=\dfrac35\Rightarrow[\Delta PSY]=30$</div>
+          <div class="p-ans">答案：$[\Delta RSP]=30+50=80$，故 $[\Delta PQR]=80$，四邊形 $QRYX=80-18=62\text{ cm}^2$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

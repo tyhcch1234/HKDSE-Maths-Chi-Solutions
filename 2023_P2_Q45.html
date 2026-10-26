@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第45題 · 整體平移後的統計量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第45題</span>
+  <h1>整體平移後的統計量</h1>
+  <p class="sub">統計 · 標準差、中位數、全距 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $n$ 為整數。設 $u$、$v$、$w$ 分別為\[ \{1-9n,\ 3-9n,\ 4-9n,\ 5-9n,\ 7-9n\} \]的標準差、中位數及全距。下列哪項必定正確？
+I. $u=2$
+II. $v<4$
+III. $w>6$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 只有 I</li>
+      <li><span class="ol">B.</span> 只有 II</li>
+      <li><span class="ol">C.</span> 只有 I 及 III</li>
+      <li><span class="ol">D.</span> 只有 II 及 III</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">整體平移不改變離散程度</div>
+      <div class="rule">
+        <span class="rule-name">平移不變性</span>
+        <span class="rule-math">\(\text{每項}+c\Rightarrow \text{標準差不變},\ \text{全距不變}\)</span>
+        <span class="rule-why">各項同時加減同一常數，數據只是沿數線平移。</span>
+      </div>
+這組數就是 $\{1,3,4,5,7\}$ 每項減 $9n$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I</div>
+$\{1,3,4,5,7\}$ 的平均數 $=\dfrac{20}{5}=4$，方差\[ \frac{(-3)^2+(-1)^2+0^2+1^2+3^2}{5}=\frac{20}{5}=4 \]故標準差 $u=\sqrt4=2$，I 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II</div>
+排序後第三個數為中位數，$v=4-9n$。$v<4$ 即 $n>0$，但 $n$ 可以是 $0$ 或負數（如 $n=0$ 時 $v=4$），故 II 不一定正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III</div>
+全距 $w=(7-9n)-(1-9n)=6$，不等於大於 $6$，故 III 錯誤。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　只有 I</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 數據 $\{2,5,5,6,12\}$ 每項加 $3$ 後，求新的平均數、標準差及全距。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 原平均數 $=\dfrac{30}{5}=6$，每項加 $3$ 後平均數 $=9$</div>
+          <div class="p-step"><b>第 2 步.</b> 標準差及全距不變：$\sigma=\sqrt{10.8}\approx3.29$，全距 $=12-2=10$</div>
+          <div class="p-ans">答案：平均數 $9$、標準差約 $3.29$、全距 $10$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

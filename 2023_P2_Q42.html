@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第42題 · 選出主席與委員</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第42題</span>
+  <h1>選出主席與委員</h1>
+  <p class="sub">排列與組合 · 組合數 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某校有 $15$ 位教師。現要成立一個委員會，包括 $1$ 位主席及 $4$ 位委員。共有多少種不同的組合？
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $3\,003$</li>
+      <li><span class="ol">B.</span> $15\,015$</li>
+      <li><span class="ol">C.</span> $20\,475$</li>
+      <li><span class="ol">D.</span> $360\,360$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先選主席</div>
+主席有 $15$ 個選擇；餘下 $14$ 人中選 $4$ 位委員：\[ 15\times C_4^{14}=15\times1001=15\,015 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">另一種算法驗證</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">\(C_r^n=\frac{n!}{r!(n-r)!}\)</span>
+        <span class="rule-why">只計選法、不計次序。</span>
+      </div>
+先選出 $5$ 人，再從中選 $1$ 位主席：\[ C_5^{15}\times C_1^5=3003\times5=15\,015 \]兩法結果相同 ✓。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$15\,015$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 從 $8$ 人中選出 $3$ 人組成小組，共有多少種選法？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $C_3^8=\dfrac{8\times7\times6}{3\times2\times1}$</div>
+          <div class="p-ans">答案：$56$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

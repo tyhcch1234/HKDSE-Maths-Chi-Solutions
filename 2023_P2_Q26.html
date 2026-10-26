@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第26題 · 兩平行線的等距軌跡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第26題</span>
+  <h1>兩平行線的等距軌跡</h1>
+  <p class="sub">坐標幾何 · 軌跡 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $\ell$ 與 $L$ 的方程分別為 $9x+12y-37=0$ 與 $12x+16y+85=0$。$\ell$ 與 $x$ 軸交於 $A$，$L$ 與 $y$ 軸交於 $B$。設 $P$ 為平面上動點，使 $P$ 到 $\ell$ 的垂直距離等於 $P$ 到 $L$ 的垂直距離，記 $P$ 的軌跡為 $\Gamma$。
+I. $\Gamma$ 與 $L$ 平行
+II. $\Gamma$ 與 $AB$ 垂直
+III. $\Gamma$ 經過 $AB$ 的中點
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 只有 I 及 II</li>
+      <li><span class="ol">B.</span> 只有 I 及 III</li>
+      <li><span class="ol">C.</span> 只有 II 及 III</li>
+      <li><span class="ol">D.</span> I、II 及 III</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩線平行</div>
+$\ell$：$y=-\dfrac34x+\dfrac{37}{12}$；$L$：$y=-\dfrac34x-\dfrac{85}{16}$。兩者斜率同為 $-\dfrac34$，故 $\ell\parallel L$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求軌跡 $\Gamma$</div>
+      <div class="rule">
+        <span class="rule-name">等距軌跡</span>
+        <span class="rule-math">\(\Gamma:\ 9x+12y+\dfrac{107}{8}=0\)</span>
+        <span class="rule-why">與兩平行線等距的點形成一條平行線，位置由距離相等決定。</span>
+      </div>
+設 $u=9x+12y$，則 $12x+16y=\dfrac{4u}{3}$。由距離相等（除以 $\sqrt{9^2+12^2}=15$ 與 $\sqrt{12^2+16^2}=20$）：\[ \frac{|u-37|}{15}=\frac{\left|\frac{4u}{3}+85\right|}{20} \]化簡得 $4|u-37|=|4u+255|$，解得 $u=-\dfrac{107}{8}$，故 $\Gamma:\ 9x+12y+\dfrac{107}{8}=0$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I</div>
+$\Gamma$ 的斜率為 $-\dfrac{9}{12}=-\dfrac34$，與 $L$ 相同，I 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 II</div>
+$A\left(\dfrac{37}{9},0\right)$，$B\left(0,-\dfrac{85}{16}\right)$。\[ m_{AB}=\frac{-\frac{85}{16}-0}{0-\frac{37}{9}}=\frac{765}{592} \]$m_\Gamma\cdot m_{AB}=-\dfrac34\times\dfrac{765}{592}\neq-1$，故 II 錯誤。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢驗 III</div>
+$AB$ 中點 $M\left(\dfrac{37}{18},-\dfrac{85}{32}\right)$ 代入 $\Gamma$：\[ 9\cdot\frac{37}{18}+12\left(-\frac{85}{32}\right)+\frac{107}{8}=\frac{37}{2}-\frac{255}{8}+\frac{107}{8}=0 \]故 $M$ 在 $\Gamma$ 上，III 正確。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　只有 I 及 III</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求與直線 $y=2x+1$ 及 $y=2x-5$ 等距的直線方程。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩線平行，等距線亦平行，設 $y=2x+c$</div>
+          <div class="p-step"><b>第 2 步.</b> $c=\dfrac{1+(-5)}{2}$</div>
+          <div class="p-ans">答案：$y=2x-2$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q25.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q27.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

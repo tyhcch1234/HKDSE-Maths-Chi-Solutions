@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第33題 · 對數圖像的直線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第33題</span>
+  <h1>對數圖像的直線</h1>
+  <p class="sub">對數 · 直線方程 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $\log_8 y$ 是 $\log_4 x$ 的線性函數。該線性函數的圖像在縱軸及橫軸上的截距分別為 $5$ 及 $3$。下列何者正確？
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $x^5y^2=8^{10}$</li>
+      <li><span class="ol">B.</span> $x^6y^5=8^{20}$</li>
+      <li><span class="ol">C.</span> $x^{10}y^3=8^{20}$</li>
+      <li><span class="ol">D.</span> $x^9y^{10}=8^{30}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出兩截距</div>
+      <div class="rule">
+        <span class="rule-name">截距式</span>
+        <span class="rule-math">\(\frac{X}{3}+\frac{Y}{5}=1\)</span>
+        <span class="rule-why">橫軸截距 $3$、縱軸截距 $5$，可直接寫出直線方程。</span>
+      </div>
+設 $X=\log_4 x$、$Y=\log_8 y$，圖像通過 $(3,0)$ 與 $(0,5)$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求直線方程</div>
+\[ \text{斜率}=\frac{0-5}{3-0}=-\frac53 \]\[ \log_8 y=-\frac53\log_4 x+5 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">統一底數</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        <span class="rule-math">\(\log_4 x=\frac{\log_8 x}{\log_8 4}=\frac32\log_8 x\)</span>
+        <span class="rule-why">$4=8^{2/3}$，故 $\log_8 4=\dfrac23$。</span>
+      </div>
+\[ \log_8 y=-\frac53\cdot\frac32\log_8 x+5=-\frac52\log_8 x+5 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">去對數</div>
+兩邊乘 $2$：\[ 5\log_8 x+2\log_8 y=10 \]以 $8$ 為底取指數：\[ x^5y^2=8^{10} \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　$x^5y^2=8^{10}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\log_2 y$ 對 $\log_2 x$ 的圖像是一條斜率 $3$、縱軸截距 $-1$ 的直線，求 $x$ 與 $y$ 的關係。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\log_2 y=3\log_2 x-1$</div>
+          <div class="p-step"><b>第 2 步.</b> $\log_2 y=\log_2 x^3-\log_2 2$</div>
+          <div class="p-ans">答案：$y=\dfrac{x^3}{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q34.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

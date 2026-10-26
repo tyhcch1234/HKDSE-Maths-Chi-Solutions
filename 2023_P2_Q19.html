@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第19題 · 菱形的對角線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第19題</span>
+  <h1>菱形的對角線</h1>
+  <p class="sub">幾何 · 菱形性質 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $ABCD$ 為菱形，設 $E$ 為 $AC$ 與 $BD$ 的交點。下列哪項必定正確？
+I. $AE=BE$
+II. $\dfrac{AE}{AC}=\dfrac{BE}{BD}$
+III. $AE^2+BE^2=CD^2$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 只有 I 及 II</li>
+      <li><span class="ol">B.</span> 只有 I 及 III</li>
+      <li><span class="ol">C.</span> 只有 II 及 III</li>
+      <li><span class="ol">D.</span> I、II 及 III</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_Q19.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">菱形的對角線性質</div>
+      <div class="rule">
+        <span class="rule-name">菱形</span>
+        <span class="rule-math">\(AC\perp BD,\quad AE=EC,\quad BE=ED\)</span>
+        <span class="rule-why">菱形的對角線互相垂直平分。</span>
+      </div>
+故 $AE=\tfrac12 AC$，$BE=\tfrac12 BD$，且 $\angle AEB=90^\circ$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I</div>
+若 $AE=BE$，則 $\Delta ABE$ 為等腰直角三角形，$\angle ABE=45^\circ$；對角線 $BD$ 平分 $\angle ABC$，得 $\angle ABC=90^\circ$，菱形被迫成為正方形。菱形不一定是正方形，故 I 不一定成立。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II</div>
+\[ \frac{AE}{AC}=\frac12,\qquad \frac{BE}{BD}=\frac12 \]兩者相等，II 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III</div>
+在直角三角形 $ABE$ 中，\[ AE^2+BE^2=AB^2 \]而菱形四邊相等，$AB=CD$，故 $AE^2+BE^2=CD^2$，III 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">結論</div>
+只有 II 及 III 正確，答案 C。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C　只有 II 及 III</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 菱形 $ABCD$ 的對角線 $AC=16$、$BD=12$，求其周界。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AE=8$，$BE=6$，$\angle AEB=90^\circ$</div>
+          <div class="p-step"><b>第 2 步.</b> $AB=\sqrt{8^2+6^2}=10$</div>
+          <div class="p-ans">答案：周界 $=4\times10=40$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

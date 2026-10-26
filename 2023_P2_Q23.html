@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第23題 · 梯形中的三角比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第23題</span>
+  <h1>梯形中的三角比</h1>
+  <p class="sub">三角學 · 直角三角形 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為梯形，$AD\parallel BC$。$E$ 為 $AD$ 的中點，且 $\angle ABE=\angle BCE=90^\circ$。求 $\dfrac{CE}{DE}$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\dfrac12$</li>
+      <li><span class="ol">B.</span> $1$</li>
+      <li><span class="ol">C.</span> $\tan\alpha$</li>
+      <li><span class="ol">D.</span> $\sin\alpha\cos\alpha$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_23.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $\angle AEC$</div>
+      <div class="rule">
+        <span class="rule-name">同旁內角</span>
+        <span class="rule-math">\(AD\parallel BC\Rightarrow \angle AEC+\angle BCE=180^\circ\)</span>
+        <span class="rule-why">兩平行線被截線 $EC$ 所截，同旁內角互補。</span>
+      </div>
+$\angle BCE=90^\circ$，故 $\angle AEC=90^\circ$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle BEC$</div>
+在 $\Delta ABE$ 中，$\angle ABE=90^\circ$、$\angle BAE=\alpha$，故 $\angle AEB=90^\circ-\alpha$。因 $A$、$E$、$D$ 共線，\[ \angle BEC=90^\circ-\angle AEB=\alpha \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\Delta ABE$ 中用正弦</div>
+$\angle ABE=90^\circ$，$BE$ 是 $\angle BAE$ 的對邊：\[ \sin\alpha=\frac{BE}{AE} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $\Delta BCE$ 中用餘弦</div>
+$\angle BCE=90^\circ$，$BE$ 是斜邊、$CE$ 是 $\angle BEC$ 的鄰邊：\[ \cos\alpha=\frac{CE}{BE} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">合併兩式</div>
+$E$ 為 $AD$ 中點，$DE=AE$：\[ \frac{CE}{DE}=\frac{CE}{AE}=\frac{BE}{AE}\cdot\frac{CE}{BE}=\sin\alpha\cos\alpha \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D　$\sin\alpha\cos\alpha$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直角三角形 $ABC$ 中 $\angle C=90^\circ$，$\angle A=35^\circ$、$AB=10$。求 $BC$ 及 $AC$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BC=AB\sin35^\circ$</div>
+          <div class="p-step"><b>第 2 步.</b> $AC=AB\cos35^\circ$</div>
+          <div class="p-ans">答案：$BC\approx5.74$，$AC\approx8.19$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第18題 · 平行線之間的角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第18題</span>
+  <h1>平行線之間的角</h1>
+  <p class="sub">幾何 · 平行線與截線 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+根據圖中所示，下列哪項必定正確？
+I. $a+b=90^\circ$
+II. $c+d=180^\circ$
+III. $a+b+c=d$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 只有 I 及 II</li>
+      <li><span class="ol">B.</span> 只有 I 及 III</li>
+      <li><span class="ol">C.</span> 只有 II 及 III</li>
+      <li><span class="ol">D.</span> I、II 及 III</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_18.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">看清圖中的平行線</div>
+$AD\parallel GH\parallel BC$；$EG$ 與 $CD$ 是截線。$a=\angle GAD$，$b=\angle FBG$，$c=\angle ECB$，$d=\angle ADC$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I</div>
+      <div class="rule">
+        <span class="rule-name">同位角</span>
+        <span class="rule-math">\(GH\parallel AD\Rightarrow \angle AGH=a\)</span>
+        <span class="rule-why">兩平行線被截線所截，同位角相等。</span>
+      </div>
+$\angle AGH=a$（同位角，$GH\parallel AD$），$\angle BGH=b$（同位角，$GH\parallel BC$）。而 $AG\perp BG$（正方形的直角），即 $\angle AGB=90^\circ$，所以\[ a+b=90^\circ \]I 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II</div>
+      <div class="rule">
+        <span class="rule-name">同旁內角</span>
+        <span class="rule-math">\(AD\parallel BC\Rightarrow \angle BCD+\angle ADC=180^\circ\)</span>
+        <span class="rule-why">兩平行線被截線 $CD$ 所截，同旁內角互補。</span>
+      </div>
+$\angle BCD=c$，$\angle ADC=d$，故\[ c+d=180^\circ \]II 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III：舉反例</div>
+取 $a=50^\circ$、$b=40^\circ$、$c=100^\circ$、$d=80^\circ$（滿足 I、II），則\[ a+b+c=190^\circ\neq 80^\circ=d \]III 不一定成立。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">結論</div>
+只有 I 及 II 必定正確，答案 A。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　只有 I 及 II</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $L_1\parallel L_2$，一條截線與 $L_1$ 成 $65^\circ$ 角，求同旁內角中較大的一個。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同位角也是 $65^\circ$</div>
+          <div class="p-step"><b>第 2 步.</b> 同旁內角互補：$180^\circ-65^\circ$</div>
+          <div class="p-ans">答案：$115^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

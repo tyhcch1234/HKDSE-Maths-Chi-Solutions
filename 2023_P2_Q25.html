@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第25題 · 兩直線互相垂直</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第25題</span>
+  <h1>兩直線互相垂直</h1>
+  <p class="sub">坐標幾何 · 直線方程 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+求常數 $a$，使直線 $2x+(a+3)y-5=0$ 與 $ax-4y+1=0$ 互相垂直。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $-6$</li>
+      <li><span class="ol">B.</span> $-5$</li>
+      <li><span class="ol">C.</span> $-2$</li>
+      <li><span class="ol">D.</span> $4$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求兩直線的斜率</div>
+$L_1$：$(a+3)y=-2x+5$，故 $m_1=-\dfrac{2}{a+3}$（$a\neq-3$）。\[ L_2:\ 4y=ax+1\Rightarrow m_2=\frac{a}{4} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">垂直條件</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直</span>
+        <span class="rule-math">\(m_1m_2=-1\)</span>
+        <span class="rule-why">兩條非鉛垂、非水平直線垂直時，斜率之積為 $-1$。</span>
+      </div>
+\[ \left(-\frac{2}{a+3}\right)\left(\frac{a}{4}\right)=-1 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程</div>
+\[ \frac{2a}{4(a+3)}=1\Rightarrow 2a=4a+12\Rightarrow a=-6 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算</div>
+$a=-6$ 時 $m_1=\dfrac{-2}{-3}=\dfrac23$、$m_2=\dfrac{-6}{4}=-\dfrac32$，乘積 $-1$ ✓。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　$a=-6$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若直線 $3x+ky-1=0$ 與 $2x-4y+7=0$ 互相垂直，求 $k$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $m_1=-\dfrac{3}{k}$，$m_2=\dfrac12$</div>
+          <div class="p-step"><b>第 2 步.</b> $\left(-\dfrac3k\right)\left(\dfrac12\right)=-1$</div>
+          <div class="p-ans">答案：$k=\dfrac32$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

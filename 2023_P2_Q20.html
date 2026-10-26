@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第20題 · 正方形、五邊形與六邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第20題</span>
+  <h1>正方形、五邊形與六邊形</h1>
+  <p class="sub">幾何 · 正多邊形內角 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中所示為正方形 $ABCD$、正五邊形 $ADEFG$ 及正六邊形 $AGHIJK$。求 $\angle ABK$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $69^\circ$</li>
+      <li><span class="ol">B.</span> $72^\circ$</li>
+      <li><span class="ol">C.</span> $74^\circ$</li>
+      <li><span class="ol">D.</span> $75^\circ$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_20.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">三個圖形在 $A$ 的內角</div>
+      <div class="rule">
+        <span class="rule-name">正 $n$ 邊形內角</span>
+        <span class="rule-math">\(\frac{(n-2)\times180^\circ}{n}\)</span>
+        <span class="rule-why">正多邊形每個內角相等，總和為 $(n-2)\times180^\circ$。</span>
+      </div>
+正方形 $90^\circ$，正五邊形 $\dfrac{3\times180^\circ}{5}=108^\circ$，正六邊形 $\dfrac{4\times180^\circ}{6}=120^\circ$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle BAK$</div>
+三個角環繞 $A$ 點：\[ \angle BAK=360^\circ-(90^\circ+108^\circ+120^\circ)=42^\circ \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明 $AB=AK$</div>
+正方形 $AB=AD$，正五邊形 $AD=AG$，正六邊形 $AG=AK$，故 $AB=AK$，$\Delta ABK$ 為等腰三角形。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">等腰三角形底角</div>
+\[ \angle ABK=\frac{180^\circ-42^\circ}{2}=69^\circ \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　$69^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正方形 $ABCD$ 與正五邊形 $ADEFG$ 共用邊 $AD$ 且不重疊。求 $\angle BAG$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 正方形在 $A$ 的內角 $90^\circ$，正五邊形 $108^\circ$</div>
+          <div class="p-step"><b>第 2 步.</b> 兩圖形不重疊，$\angle BAG=360^\circ-90^\circ-108^\circ$</div>
+          <div class="p-ans">答案：$162^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

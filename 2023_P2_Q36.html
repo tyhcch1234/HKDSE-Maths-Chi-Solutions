@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第36題 · 等差數列的部分和</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第36題</span>
+  <h1>等差數列的部分和</h1>
+  <p class="sub">數列 · 等差數列 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $T(n)$ 為某等差數列的第 $n$ 項。若 $T(11)=83$ 且 $T(25)+T(30)=463$，求最小的 $k$，使\[ T(1)+T(2)+\cdots+T(k)>4\times10^5 \]
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $299$</li>
+      <li><span class="ol">B.</span> $300$</li>
+      <li><span class="ol">C.</span> $944$</li>
+      <li><span class="ol">D.</span> $945$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">建立方程</div>
+      <div class="rule">
+        <span class="rule-name">等差數列</span>
+        <span class="rule-math">\(T(n)=a+(n-1)d\)</span>
+        <span class="rule-why">首項 $a$、公差 $d$。</span>
+      </div>
+\[ a+10d=83\quad\cdots(1) \]\[ (a+24d)+(a+29d)=463\Rightarrow 2a+53d=463\quad\cdots(2) \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解出 $a$、$d$</div>
+由 (1) $a=83-10d$，代入 (2)：\[ 166-20d+53d=463\Rightarrow 33d=297\Rightarrow d=9 \]\[ a=83-90=-7 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出部分和</div>
+      <div class="rule">
+        <span class="rule-name">等差數列和</span>
+        <span class="rule-math">\(S(k)=\frac k2\left[2a+(k-1)d\right]\)</span>
+        <span class="rule-why">首尾相加，共 $k$ 項。</span>
+      </div>
+\[ S(k)=\frac k2\left[-14+9(k-1)\right]=\frac{9k^2-23k}{2} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解不等式</div>
+\[ \frac{9k^2-23k}{2}>400\,000\Rightarrow 9k^2-23k-800\,000>0 \]\[ k>\frac{23+\sqrt{28\,800\,529}}{18}\approx299.42 \]故最小的正整數 $k=300$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗算</div>
+\[ S(299)\approx399\,173<400\,000,\qquad S(300)=400\,050>400\,000 \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$k=300$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 等差數列首項 $5$、公差 $4$，求首 $20$ 項之和。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $S_n=\dfrac n2[2a+(n-1)d]$</div>
+          <div class="p-step"><b>第 2 步.</b> $S_{20}=10[10+19\times4]$</div>
+          <div class="p-ans">答案：$S_{20}=10\times86=860$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q37.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

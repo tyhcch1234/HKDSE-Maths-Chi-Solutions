@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第24題 · 極坐標與旋轉</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第24題</span>
+  <h1>極坐標與旋轉</h1>
+  <p class="sub">坐標幾何 · 極坐標 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+點 $P$ 的直角坐標為 $(\sqrt2,\,-\sqrt2)$。若 $P$ 繞原點逆時針旋轉 $90^\circ$，求其影像的極坐標。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $(\sqrt2,45^\circ)$</li>
+      <li><span class="ol">B.</span> $(\sqrt2,225^\circ)$</li>
+      <li><span class="ol">C.</span> $(2,45^\circ)$</li>
+      <li><span class="ol">D.</span> $(2,225^\circ)$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $P$ 的極坐標</div>
+      <div class="rule">
+        <span class="rule-name">極坐標</span>
+        <span class="rule-math">\(r=\sqrt{x^2+y^2},\quad \tan\theta=\frac{y}{x}\)</span>
+        <span class="rule-why">$r$ 為與原點的距離，$\theta$ 為與正 $x$ 軸的夾角。</span>
+      </div>
+\[ r=\sqrt{(\sqrt2)^2+(-\sqrt2)^2}=\sqrt{4}=2 \]$P$ 在第四象限，參考角 $45^\circ$，故 $\theta=360^\circ-45^\circ=315^\circ$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逆時針旋轉 $90^\circ$</div>
+\[ \theta'=315^\circ+90^\circ=405^\circ\equiv 45^\circ \]旋轉不改變與原點的距離，$r$ 仍為 $2$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出答案</div>
+影像的極坐標為 $(2,\,45^\circ)$，即答案 C。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C　$(2,\,45^\circ)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $Q$ 的極坐標為 $(4,120^\circ)$，求其直角坐標。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x=r\cos\theta=4\cos120^\circ$</div>
+          <div class="p-step"><b>第 2 步.</b> $y=r\sin\theta=4\sin120^\circ$</div>
+          <div class="p-ans">答案：$(-2,\,2\sqrt3)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

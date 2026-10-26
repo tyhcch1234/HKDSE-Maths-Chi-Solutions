@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第22題 · 圓內接四邊形與外點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第22題</span>
+  <h1>圓內接四邊形與外點</h1>
+  <p class="sub">圓形幾何 · 圓內接四邊形 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $RSTU$ 為圓內接四邊形，其中 $ST=TU$。$RS$ 延長與 $UT$ 延長交於 $V$，而 $RU$ 延長與 $ST$ 延長交於 $W$。若 $\angle RWS=32^\circ$、$\angle RVU=48^\circ$，求 $\angle RSU$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $65^\circ$</li>
+      <li><span class="ol">B.</span> $73^\circ$</li>
+      <li><span class="ol">C.</span> $80^\circ$</li>
+      <li><span class="ol">D.</span> $82^\circ$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_22.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">等弦對等弧</div>
+      <div class="rule">
+        <span class="rule-name">等弦等弧</span>
+        <span class="rule-math">\(ST=TU\ \Rightarrow\ \text{弧 }ST=\text{弧 }TU\)</span>
+        <span class="rule-why">同圓中相等的弦截取相等的弧。</span>
+      </div>
+設弧 $ST=$ 弧 $TU=2a$，弧 $RU=2b$，弧 $RS=2c$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">外點 $W$：兩條割線</div>
+      <div class="rule">
+        <span class="rule-name">外點割線角</span>
+        <span class="rule-math">\(\angle W=\tfrac12(\text{遠弧}-\text{近弧})\)</span>
+        <span class="rule-why">圓外一點引兩條割線，夾角等於所截兩弧之差的一半。</span>
+      </div>
+$W$ 的割線為 $W\!-\!T\!-\!S$ 與 $W\!-\!U\!-\!R$（近點 $T$、$U$，遠點 $S$、$R$）：\[ 32^\circ=\frac12(2c-2a)=c-a\quad\cdots(1) \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">外點 $V$：兩條割線</div>
+$V$ 的割線為 $V\!-\!S\!-\!R$ 與 $V\!-\!T\!-\!U$（近點 $S$、$T$，遠點 $R$、$U$）：\[ 48^\circ=\frac12(2b-2a)=b-a\quad\cdots(2) \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用四段弧之和</div>
+四段弧合成整個圓：\[ 2a+2a+2b+2c=360^\circ\ \Rightarrow\ 2a+b+c=180^\circ \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">解出 $a$、$b$</div>
+由 (1)(2)：$b=a+48$、$c=a+32$，代入上式：\[ 2a+(a+48)+(a+32)=180^\circ\Rightarrow 4a=100^\circ\Rightarrow a=25^\circ \]故 $b=73^\circ$、$c=57^\circ$（驗算：$50+50+146+114=360$ ✓）。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">求 $\angle RSU$</div>
+$\angle RSU$ 是圓周角，對弧 $RU=2b$：\[ \angle RSU=\frac{2b}{2}=b=73^\circ \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$73^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓內接四邊形 $ABCD$ 中，$AB$ 延長與 $DC$ 延長交於 $P$。若弧 $AD=100^\circ$、弧 $BC=40^\circ$，求 $\angle APD$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $P$ 為外點，割線 $P\!-\!B\!-\!A$ 與 $P\!-\!C\!-\!D$</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle APD=\dfrac12(\text{弧 }AD-\text{弧 }BC)$</div>
+          <div class="p-ans">答案：$\dfrac12(100^\circ-40^\circ)=30^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

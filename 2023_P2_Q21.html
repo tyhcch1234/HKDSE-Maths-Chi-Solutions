@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第21題 · 矩形中的相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第21題</span>
+  <h1>矩形中的相似三角形</h1>
+  <p class="sub">幾何 · 相似與全等 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $PQRS$ 為矩形。$T$ 為 $QR$ 上的一點，使 $\angle PTS=90^\circ$。$PQ$ 延長與 $ST$ 延長交於 $U$。$PT$ 延長至 $V$，使 $RT=RV$。下列哪項必定正確？
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $RV$ 與 $ST$ 平行</li>
+      <li><span class="ol">B.</span> $\angle PTQ=\angle RTS$</li>
+      <li><span class="ol">C.</span> $\Delta PST\sim\Delta UTQ$</li>
+      <li><span class="ol">D.</span> $\Delta PQT\cong\Delta TRS$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_21.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">矩形的直角與平行關係</div>
+      <div class="rule">
+        <span class="rule-name">矩形</span>
+        <span class="rule-math">\(PS\parallel QR,\quad \angle PQR=\angle QRS=90^\circ\)</span>
+        <span class="rule-why">矩形對邊平行，四個角都是直角。</span>
+      </div>
+$T$ 在直線 $QR$ 上，$\angle PTQ+90^\circ+\angle STR=180^\circ$，故\[ \angle PTQ+\angle STR=90^\circ \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 A</div>
+若 $RV\parallel ST$，則同旁內角 $\angle STV+\angle RVT=180^\circ$。但 $\angle STV=90^\circ$（對頂角），會迫使 $\angle RVT=90^\circ$，與 $RT=RV$ 的等腰三角形矛盾，故 A 錯。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 B</div>
+若 $\angle PTQ=\angle RTS=x$，由 $x+x=90^\circ$ 得 $x=45^\circ$，則 $QT=PQ$ 且 $RT=RS=PQ$，即 $QR=2PQ$。這只在特殊矩形成立，故 B 不一定正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 C</div>
+      <div class="rule">
+        <span class="rule-name">AAA 相似</span>
+        <span class="rule-math">\(\angle PST=\angle UTQ,\ \angle PTS=\angle UQT\)</span>
+        <span class="rule-why">三個角分別相等，兩三角形相似。</span>
+      </div>
+$PS\parallel QR$ 且 $TQ$ 在 $QR$ 上，故 $\angle PST=\angle UTQ$（同位角）；又 $\angle PTS=90^\circ=\angle UQT$。所以\[ \Delta PST\sim\Delta UTQ\ (AAA) \]C 正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢驗 D</div>
+若 $\Delta PQT\cong\Delta TRS$，則 $PQ=TR$ 且 $QT=RS=PQ$，同樣迫使 $QR=2PQ$，故 D 不一定成立。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C　$\Delta PST\sim\Delta UTQ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 矩形 $PQRS$ 中 $PQ=5$、$QR=10$，$T$ 在 $QR$ 上且 $\angle PTS=90^\circ$。求 $QT$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle PTQ+\angle STR=90^\circ$，且 $\angle PTQ+\angle QPT=90^\circ$，故 $\angle QPT=\angle STR$</div>
+          <div class="p-step"><b>第 2 步.</b> $\Delta PQT\sim\Delta TSR$：$\dfrac{QT}{SR}=\dfrac{PQ}{TR}$，設 $QT=t$，$TR=10-t$</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{t}{5}=\dfrac{5}{10-t}\Rightarrow t(10-t)=25$</div>
+          <div class="p-ans">答案：$t^2-10t+25=0\Rightarrow t=5$，即 $QT=5$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第34題 · 複數的實部</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第34題</span>
+  <h1>複數的實部</h1>
+  <p class="sub">複數 · 實部與虛部 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $k$ 為實數，則 $\dfrac{i}{k-i}+\dfrac{2}{k+i}$ 的實部為
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\dfrac{k+2}{k^2-1}$</li>
+      <li><span class="ol">B.</span> $\dfrac{2k-1}{k^2+1}$</li>
+      <li><span class="ol">C.</span> $\dfrac{k-2}{k^2+1}$</li>
+      <li><span class="ol">D.</span> $\dfrac{k+2}{k^2+1}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分母有理化</div>
+      <div class="rule">
+        <span class="rule-name">共軛複數</span>
+        <span class="rule-math">\((k-i)(k+i)=k^2+1\)</span>
+        <span class="rule-why">$(a-b)(a+b)=a^2-b^2$，且 $i^2=-1$。</span>
+      </div>
+\[ \frac{i}{k-i}=\frac{i(k+i)}{k^2+1},\qquad \frac{2}{k+i}=\frac{2(k-i)}{k^2+1} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">合併分子</div>
+\[ \frac{i(k+i)+2(k-i)}{k^2+1} \]其中\[ i(k+i)=ki-1,\qquad 2(k-i)=2k-2i \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分出實部</div>
+分子 $=(2k-1)+(k-2)i$，故\[ \frac{(2k-1)+(k-2)i}{k^2+1}=\underbrace{\frac{2k-1}{k^2+1}}_{\text{實部}}+\frac{k-2}{k^2+1}i \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對選項</div>
+實部為 $\dfrac{2k-1}{k^2+1}$，即選項 B。（$k=0$ 時原式 $=\dfrac{i}{-i}+\dfrac{2}{i}=-1-2i$，實部 $-1$，與 $\dfrac{-1}{1}=-1$ 相符。）
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$\dfrac{2k-1}{k^2+1}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $\dfrac{1}{2+i}$ 的實部與虛部。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分子分母同乘 $2-i$</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{2-i}{4+1}$</div>
+          <div class="p-ans">答案：實部 $\dfrac25$，虛部 $-\dfrac15$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

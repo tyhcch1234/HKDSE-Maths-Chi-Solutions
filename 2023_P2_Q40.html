@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第40題 · 正四角錐的兩面角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第40題</span>
+  <h1>正四角錐的兩面角</h1>
+  <p class="sub">三角學 · 立體圖形 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+正四角錐 $VABCD$ 的底為正方形 $ABCD$。設 $\theta$ 為 $\triangle ABV$ 與 $\triangle BCV$ 之間的夾角。若 $AB:AV=5:4$，求 $\cos\theta$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $-\dfrac{25}{39}$</li>
+      <li><span class="ol">B.</span> $-\dfrac{17}{33}$</li>
+      <li><span class="ol">C.</span> $-\dfrac{9}{16}$</li>
+      <li><span class="ol">D.</span> $0$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_Q40.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按比例設定邊長</div>
+設 $AB=5k$、$AV=4k$。底面正方形 $AC=5\sqrt2\,k$，$AO=\dfrac{5\sqrt2}{2}k$。正四角錐的高 $VO\perp$ 底面：\[ VO=\sqrt{16k^2-\tfrac{50}{4}k^2}=\frac{\sqrt{14}}{2}k \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\tan\angle ABV$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形</span>
+        <span class="rule-math">\(VA=VB=4k,\ AB=5k\)</span>
+        <span class="rule-why">正四角錐的側稜等長，$\triangle ABV$ 為等腰三角形。</span>
+      </div>
+\[ \cos\angle ABV=\frac{BM}{BV}=\frac{\frac12(5k)}{4k}=\frac58,\qquad \tan\angle ABV=\frac{\sqrt{8^2-5^2}}{5}=\frac{\sqrt{39}}{5} \]由對稱，$\tan\angle CBV=\dfrac{\sqrt{39}}{5}$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">作兩個面的垂線</div>
+設 $E$ 為 $A$ 到 $BV$ 的垂足。因 $\triangle ABV$ 與 $\triangle BCV$ 都以 $BV$ 為公共邊，兩面角就是 $\angle AEC$，故 $\cos\theta=\cos\angle AEC$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用餘弦定理連結</div>
+      <div class="rule">
+        <span class="rule-name">餘弦定理</span>
+        <span class="rule-math">\(AC^2=AE^2+CE^2-2\,AE\cdot CE\cos\angle AEC\)</span>
+        <span class="rule-why">在 $\triangle ACE$ 中，$AC$ 是兩垂線端點的距離。</span>
+      </div>
+配合 $AB^2=AE^2+BE^2$、$BC^2=CE^2+BE^2$ 及 $AC^2=AB^2+BC^2$，相加消去平方項：\[ -2BE^2=2\,AE\cdot CE\cos\angle AEC \]\[ \cos\theta=-\frac{BE^2}{AE\cdot CE}=-\frac{1}{\tan\angle ABV\cdot\tan\angle CBV} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">代入數值</div>
+\[ \cos\theta=-\left(\frac{\sqrt{39}}{5}\cdot\frac{\sqrt{39}}{5}\right)^{-1}=-\frac{25}{39} \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　$-\dfrac{25}{39}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正方體 $ABCDEFGH$ 中，求面 $ABCD$ 與面 $ABFE$ 的夾角。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩面沿 $AB$ 相交</div>
+          <div class="p-step"><b>第 2 步.</b> $BC\perp AB$、$BF\perp AB$，故夾角為 $\angle CBF$</div>
+          <div class="p-ans">答案：$90^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q41.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第39題 · 圓的弦的中點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第39題</span>
+  <h1>圓的弦的中點</h1>
+  <p class="sub">圓形幾何 · 圓與直線 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $hx+ky=6$ 與圓 $x^2+y^2-8x-4y-18=0$ 相交於 $M$、$N$ 兩點，其中 $h$、$k$ 為常數。若 $MN$ 的中點坐標為 $(1,0)$，求 $k$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $4$</li>
+      <li><span class="ol">B.</span> $6$</li>
+      <li><span class="ol">C.</span> $9$</li>
+      <li><span class="ol">D.</span> $12$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_Q39.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">中點在直線上</div>
+中點 $(1,0)$ 在弦 $MN$ 上，故代入 $hx+ky=6$：\[ h(1)+k(0)=6\Rightarrow h=6 \]直線為 $6x+ky=6$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入圓方程</div>
+由 $6x+ky=6$ 得 $x=1-\dfrac{ky}{6}$，代入圓方程並乘 $36$：\[ (6-ky)^2+36y^2-48(6-ky)-144y-648=0 \]整理得\[ (k^2+36)y^2+36(k-4)y-900=0 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用兩根的和小於中點</div>
+      <div class="rule">
+        <span class="rule-name">韋達定理</span>
+        <span class="rule-math">\(y_1+y_2=-\frac{b}{a}\)</span>
+        <span class="rule-why">二次方程的兩根之和等於 $-\dfrac{b}{a}$。</span>
+      </div>
+設 $M$、$N$ 的 $y$ 坐標為 $m$、$n$，則\[ m+n=-\frac{36(k-4)}{k^2+36} \]中點的 $y$ 坐標為 $\dfrac{m+n}{2}=0$，故 $m+n=0$：\[ -36(k-4)=0\Rightarrow k=4 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算</div>
+$k=4$ 時方程為 $52y^2-900=0$，兩根互為相反數，中點 $y=0$；再由直線得 $x=1$，與題設吻合。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A　$k=4$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $x^2+y^2=25$ 被直線 $y=x+c$ 所截的弦的中點在 $y$ 軸上，求 $c$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 中點在 $y$ 軸 ⇒ 兩交點 $x$ 坐標之和為 $0$</div>
+          <div class="p-step"><b>第 2 步.</b> 代入得 $2x^2+2cx+c^2-25=0$，$x_1+x_2=-c$</div>
+          <div class="p-ans">答案：$c=0$，即直線 $y=x$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

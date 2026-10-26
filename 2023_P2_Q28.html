@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第28題 · 兩盒卡片的乘積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第28題</span>
+  <h1>兩盒卡片的乘積</h1>
+  <p class="sub">概率 · 古典概率 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個盒內有五張分別寫上 $1,2,3,4,5$ 的卡片，另一個盒內有四張分別寫上 $6,7,8,9$ 的卡片。若從每個盒中各隨機抽出一張，求兩數之積可被 $4$ 整除的概率。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\dfrac15$</li>
+      <li><span class="ol">B.</span> $\dfrac{3}{10}$</li>
+      <li><span class="ol">C.</span> $\dfrac{7}{20}$</li>
+      <li><span class="ol">D.</span> $\dfrac{9}{20}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">樣本空間</div>
+兩盒獨立抽取，共有\[ 5\times4=20 \]個等可能的結果。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">可被 $4$ 整除的條件</div>
+      <div class="rule">
+        <span class="rule-name">因數 $2$ 的次數</span>
+        <span class="rule-math">\(4\mid ab\ \Leftrightarrow\ v_2(a)+v_2(b)\ge2\)</span>
+        <span class="rule-why">$4=2^2$，乘積中要有至少兩個因數 $2$。</span>
+      </div>
+第一盒：$4=2^2$ 提供兩個 $2$，$2=2^1$ 提供一個；其餘為奇數。第二盒：$8=2^3$ 提供三個，$6=2^1$ 提供一個；$7,9$ 為奇數。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐個第一盒的數點算</div>
+$1$：只需 $8$ → $1$ 個；$2$：$6,8$ → $2$ 個；$3$：只需 $8$ → $1$ 個；$4$：$6,7,8,9$ 全部 → $4$ 個；$5$：只需 $8$ → $1$ 個。合共\[ 1+2+1+4+1=9 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求概率</div>
+\[ P=\frac{9}{20} \]驗算：全部 $20$ 個結果中，只有 $9$ 個乘積可被 $4$ 整除。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D　$\dfrac{9}{20}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 從 $1,2,3,4,5$ 與 $2,3,4$ 各抽一數，求兩數之積為偶數的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部 $5\times3=15$ 個結果</div>
+          <div class="p-step"><b>第 2 步.</b> 積為奇數：第一盒抽 $1,3,5$、第二盒抽 $3$，共 $3$ 個</div>
+          <div class="p-ans">答案：$1-\dfrac{3}{15}=\dfrac45$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q27.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q29.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

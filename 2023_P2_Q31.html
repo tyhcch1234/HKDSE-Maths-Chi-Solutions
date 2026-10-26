@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第31題 · 二進位數的值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第31題</span>
+  <h1>二進位數的值</h1>
+  <p class="sub">指數 · 進位制 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下列何者等於 $1011001011001011_2$？
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $11\times2^{11}+11\times2^{5}+11$</li>
+      <li><span class="ol">B.</span> $11\times2^{12}+11\times2^{6}+11$</li>
+      <li><span class="ol">C.</span> $11\times2^{13}+11\times2^{7}+11$</li>
+      <li><span class="ol">D.</span> $11\times2^{14}+11\times2^{8}+11$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按位值展開</div>
+      <div class="rule">
+        <span class="rule-name">二進位</span>
+        <span class="rule-math">\(\overline{b_{n}\cdots b_0}_2=\sum b_i2^{i}\)</span>
+        <span class="rule-why">由右至左，第 $i$ 位的位值是 $2^i$。</span>
+      </div>
+共 $16$ 位，最高位指數為 $15$。保留 $1$ 的位置：\[ =2^{15}+2^{13}+2^{12}+2^{9}+2^{7}+2^{6}+2^{3}+2^{1}+2^{0} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分成三段相同的位模式</div>
+$2^3+2^1+2^0=8+2+1=11$，而三段的起點相差 $6$ 位：\[ =11\times2^{12}+11\times2^{6}+11\times2^{0} \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">驗算</div>
+\[ 11\times4096=45\,056,\quad 11\times64=704,\quad 11\times1=11 \]總和 $=45\,771$，與直接展開的結果一致。
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B　$11\times2^{12}+11\times2^{6}+11$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 $110110_2$ 寫成十進位數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $=2^5+2^4+2^2+2^1$</div>
+          <div class="p-step"><b>第 2 步.</b> $=32+16+4+2$</div>
+          <div class="p-ans">答案：$54$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第32題 · 三項式的 L.C.M.</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第32題</span>
+  <h1>三項式的 L.C.M.</h1>
+  <p class="sub">多項式 · 最小公倍數 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$a^4b^2c$、$a^3b^4c$ 與 $a^2b^5c^2$ 的 L.C.M. 為
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $a^2b^2c$</li>
+      <li><span class="ol">B.</span> $a^2b^2c^2$</li>
+      <li><span class="ol">C.</span> $a^4b^5c$</li>
+      <li><span class="ol">D.</span> $a^4b^5c^2$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把每項寫成指數形式</div>
+\[ a^4b^2c^1,\qquad a^3b^4c^1,\qquad a^2b^5c^2 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">每個字母取最大指數</div>
+      <div class="rule">
+        <span class="rule-name">單項式的 L.C.M.</span>
+        <span class="rule-math">\(\text{L.C.M.}=\prod x^{\max(\text{指數})}\)</span>
+        <span class="rule-why">L.C.M. 要被每一項整除，所以每個質因式的指數取最大。</span>
+      </div>
+\[ a:\max(4,3,2)=4,\quad b:\max(2,4,5)=5,\quad c:\max(1,1,2)=2 \]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出答案</div>
+\[ \text{L.C.M.}=a^4b^5c^2 \]
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D　$a^4b^5c^2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $12x^3y^2$ 與 $18x^2y^4$ 的 L.C.M.。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $12=2^2\times3$，$18=2\times3^2$</div>
+          <div class="p-step"><b>第 2 步.</b> 數字部分取 $2^2\times3^2=36$；字母取 $x^3y^4$</div>
+          <div class="p-ans">答案：$36x^3y^4$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
