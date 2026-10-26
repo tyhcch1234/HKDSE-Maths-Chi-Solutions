@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第17題 · 平行四邊形紙卡：先解三角形，再算二面角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第17題</span>
+    <h1>平行四邊形紙卡：先解三角形，再算二面角</h1>
+    <p class="sub">三角學 · 正弦、餘弦公式與二面角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<br>(a) 圖 3(a) 中，$ABCD$ 是一張平行四邊形紙卡。已知 $AB=60\text{ cm}$、$\angle ABD=20^{\circ}$ 及 $\angle BAD=120^{\circ}$。求 $AD$ 的長度。
+<br>(b) 把圖 3(a) 的紙卡沿 $BD$ 摺起，使 $A$ 與 $C$ 的距離為 $40\text{ cm}$（見圖 3(b)）。
+<br>　(i) 求 $\angle ABC$。
+<br>　(ii) 求平面 $ABD$ 與平面 $BCD$ 之間的夾角。<span class="marks">[9 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先求 $ngle ADB$</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>三角之和 $=180^{\circ}$。</div>
+<p>$$\angle ADB=180^{\circ}-120^{\circ}-20^{\circ}=40^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用正弦公式</div>
+      <div class="rule"><span class="rule-name">正弦公式</span>$\dfrac{AD}{\sin\angle ABD}=\dfrac{AB}{\sin\angle ADB}$。</div>
+<p>$$\frac{AD}{\sin20^{\circ}}=\frac{60}{\sin40^{\circ}}$$</p>
+<p>$$AD=\frac{60\sin20^{\circ}}{\sin40^{\circ}}\approx31.925\text{ cm}\approx31.9\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 認清 $BC=AD$</div>
+      <div class="rule"><span class="rule-name">平行四邊形</span>對邊相等：$BC=AD$、$CD=AB$。</div>
+<p>摺起後 $B$、$C$、$D$ 不動，$BC=AD\approx31.925\text{ cm}$，而 $AC=40\text{ cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 在 $	riangle ABC$ 用餘弦公式</div>
+      <div class="rule"><span class="rule-name">餘弦公式</span>$\cos B=\dfrac{a^{2}+c^{2}-b^{2}}{2ac}$。</div>
+<p>$$\cos\angle ABC=\frac{60^{2}+31.925^{2}-40^{2}}{2(60)(31.925)}\approx0.7881$$</p>
+<p>$$\angle ABC\approx38.0^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 作兩條垂直於 $BD$ 的線段</div>
+      <div class="rule"><span class="rule-name">二面角</span>兩平面沿交線 $BD$ 的夾角，由兩個平面上垂直於 $BD$ 的線段所成。</div>
+<p>設 $P$、$Q$ 分別是 $A$、$C$ 到 $BD$ 的垂足：</p>
+<p>$$AP=60\sin20^{\circ}\approx20.52,\qquad CQ=31.925\sin40^{\circ}\approx20.52$$</p>
+<p>$$BP=60\cos20^{\circ}\approx56.38,\qquad BQ=31.925\cos40^{\circ}\approx24.46$$</p>
+<p>$$PQ=BP-BQ\approx31.92$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 用 $AC$ 反求夾角</div>
+      <div class="rule"><span class="rule-name">分解</span>$AP$、$PQ$、$QC$ 兩兩方向互相垂直（$PQ$ 沿 $BD$）。</div>
+<p>設兩平面夾角為 $\phi$，則 $AP$ 與 $CQ$ 的夾角為 $180^{\circ}-\phi$：</p>
+<p>$$AC^{2}=AP^{2}+PQ^{2}+CQ^{2}-2(AP)(CQ)\cos\phi$$</p>
+<p>$$1600\approx421.1+1019.4+421.1-842.2\cos\phi$$</p>
+<p>$$\cos\phi\approx\frac{1861.6-1600}{842.2}\approx0.3107$$</p>
+<p>$$\phi\approx71.9^{\circ}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $31.9\text{ cm}$　(b)(i) $38.0^{\circ}$　(ii) $71.9^{\circ}$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中 $AB=7\text{ cm}$、$BC=8\text{ cm}$、$AC=13\text{ cm}$。求 $\angle ABC$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$100^{\circ}$</li><li><span class="ol">B</span>$110^{\circ}$</li><li><span class="ol">C</span>$120^{\circ}$</li><li><span class="ol">D</span>$130^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\cos B=\dfrac{7^{2}+8^{2}-13^{2}}{2(7)(8)}=\dfrac{49+64-169}{112}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=\dfrac{-56}{112}=-0.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABC=120^{\circ}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$120^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

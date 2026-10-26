@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第8題 · 二次函數的對稱性</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第8題</span>
+    <h1>找到對稱軸，答案就自己出現</h1>
+    <p class="sub">函數及其圖像 · 二次函數的對稱軸</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=x^{2}-x+1$。若 $k$ 為常數，下列哪一項<b>必定</b>正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$f(k)=f(-k)$</li><li><span class="ol">B</span>$f(k)=f(1-k)$</li><li><span class="ol">C</span>$f(k+1)=f(k)+f(1)$</li><li><span class="ol">D</span>$f(k-1)=f(k)-f(1)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">配方，找出對稱軸</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        $x^{2}+bx=\left(x+\dfrac{b}{2}\right)^{2}-\dfrac{b^{2}}{4}$。
+      </div>
+      <p>$$f(x)=x^{2}-x+1=\left(x-\frac{1}{2}\right)^{2}+\frac{3}{4}$$</p>
+      <p>所以圖像的對稱軸是 $x=\dfrac{1}{2}$，頂點為 $\left(\dfrac{1}{2},\dfrac{3}{4}\right)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">對稱軸的意義：$f(a)=f(1-a)$</div>
+      <div class="rule">
+        <span class="rule-name">拋物線的對稱性</span>
+        與對稱軸距離相等的兩點，函數值相同；$a$ 與 $1-a$ 到 $x=\dfrac{1}{2}$ 的距離都是 $\left|a-\dfrac{1}{2}\right|$。
+      </div>
+      <p>取 $a=k$，便有 $f(k)=f(1-k)$，這正是選項 B。</p>
+      <p>代數驗證：</p>
+      <p>$$f(1-k)=(1-k)^{2}-(1-k)+1=1-2k+k^{2}-1+k+1=k^{2}-k+1=f(k)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用反例排除其餘選項</div>
+      <div class="rule">
+        <span class="rule-name">反例法</span>
+        要證明「必定正確」，必須對所有 $k$ 成立；舉出一個反例即可否定。
+      </div>
+      <p>選項 A：$f(-k)=k^{2}+k+1\neq k^{2}-k+1$（除 $k=0$ 外），不成立。</p>
+      <p>選項 C：取 $k=1$，$f(2)=3$，而 $f(1)+f(1)=1+1=2$，不成立。</p>
+      <p>選項 D：取 $k=2$，$f(1)=1$，而 $f(2)-f(1)=3-1=2$，不成立。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">結論</div>
+      <div class="rule">
+        <span class="rule-name">單一正確選項</span>
+        MC 題只需確定一個必定成立的選項。
+      </div>
+      <p>只有 B 對所有 $k$ 都成立，答案為 <b>B</b>。</p>
+      <p>易錯：看到 $f(k)=f(-k)$ 就以為「對稱」一定是左右對稱；這條拋物線的對稱軸不是 $y$ 軸，而是 $x=\dfrac{1}{2}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$f(k)=f(1-k)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=x^{2}-3x+2$。若 $k$ 為常數，下列哪一項<b>必定</b>正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$f(k)=f(-k)$</li><li><span class="ol">B</span>$f(k)=f(3-k)$</li><li><span class="ol">C</span>$f(k+1)=f(k)+f(1)$</li><li><span class="ol">D</span>$f(k-1)=f(k)-f(1)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 配方：$f(x)=\left(x-\dfrac{3}{2}\right)^{2}-\dfrac{1}{4}$，對稱軸 $x=\dfrac{3}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 故 $f(a)=f(3-a)$，取 $a=k$ 得 $f(k)=f(3-k)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 其餘選項取 $k=2$ 均可舉出反例。</div>
+          <div class="p-ans">答案：<b>B</b>（$f(k)=f(3-k)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

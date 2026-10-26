@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第24題 · 直線方程與圖像</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第24題</span>
+    <h1>由截距讀出 $m$、$n$ 的正負與大小</h1>
+    <p class="sub">解析幾何 · 直線方程 $mx+ny=3$ 的截距與斜率</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為直線 $mx+ny=3$ 的圖像。下列哪些正確？
+      <br>I. $m<0$
+      <br>II. $n>3$
+      <br>III. $m+n=0$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 340 250" width="340" height="250" role="img" aria-label="直線 mx+ny=3，x 截距為負，y 截距介乎 0 與 1" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <line x1="30" y1="200" x2="310" y2="200"/>
+          <line x1="150" y1="20" x2="150" y2="235"/>
+          <line x1="95" y1="200" x2="250" y2="150" stroke-width="1.9"/>
+          <line x1="110" y1="200" x2="190" y2="120" stroke-dasharray="5 4" stroke-width="1"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12" font-style="italic">
+          <text x="300" y="216">x</text>
+          <text x="156" y="24">y</text>
+          <text x="86" y="216">x₀</text>
+          <text x="156" y="180">y₀</text>
+          <text x="204" y="140">mx+ny=3</text>
+          <text x="172" y="112" font-size="10.5">斜率 1</text>
+        </g>
+        <g fill="currentColor">
+          <circle cx="95" cy="200" r="2.5"/><circle cx="150" cy="180" r="2.5"/>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$x$ 截距為負數，$y$ 截距為 $0$ 與 $1$ 之間的小正數）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出兩個截距</div>
+      <div class="rule">
+        <span class="rule-name">截距式</span>
+        令 $y=0$ 得 $x$ 截距 $\dfrac{3}{m}$；令 $x=0$ 得 $y$ 截距 $\dfrac{3}{n}$。
+      </div>
+      <p>$$x\text{ 截距}=\frac{3}{m},\qquad y\text{ 截距}=\frac{3}{n},\qquad \text{斜率}=-\frac{m}{n}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I：$x$ 截距是負數</div>
+      <div class="rule">
+        <span class="rule-name">正負判斷</span>
+        $\dfrac{3}{m}<0$ 且分子 $3>0$，故分母 $m<0$。
+      </div>
+      <p>I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：$y$ 截距在 $0$ 與 $1$ 之間</div>
+      <div class="rule">
+        <span class="rule-name">不等式</span>
+        $0<\dfrac{3}{n}<1$，且 $n>0$（截距為正），故 $3<n$。
+      </div>
+      <p>$$0<\frac{3}{n}<1\quad\Longrightarrow\quad \frac{3}{n}<1\quad\Longrightarrow\quad n>3$$</p>
+      <p>II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：$m+n=0$ 不可能成立</div>
+      <div class="rule">
+        <span class="rule-name">由圖讀出範圍</span>
+        $x$ 截距在 $-1$ 之左（即小於 $-1$），$y$ 截距在 $0$ 與 $1$ 之間。
+      </div>
+      <p>由 $x$ 截距 $\dfrac{3}{m}<-1$，且 $m<0$：兩邊乘 $m$ 要變號，得 $3>-m$，即 $m>-3$。</p>
+      <p>若 III 成立（$m+n=0$），則 $m=-n$；但 $n>3$，所以 $m<-3$，與 $m>-3$ 矛盾。</p>
+      <p>所以 III 錯誤，答案為 <b>A</b>（只有 I 及 II）。</p>
+      <p>易錯：把 $y$ 截距誤看成大於 $1$（圖中的刻度 $1$ 在交點<b>之上</b>），就會推翻 II；或忘記「兩邊乘負數要變號」，把 $m>-3$ 寫成 $m<-3$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $px+qy=5$ 的 $x$ 截距為負數、$y$ 截距為大於 $1$ 的正數。下列哪些正確？
+      <br>I. $p<0$
+      <br>II. $0<q<5$
+      <br>III. 該直線的斜率為正數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x$ 截距 $=\dfrac{5}{p}<0$，得 $p<0$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距 $=\dfrac{5}{q}>1$ 且 $q>0$，得 $0<q<5$，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 斜率 $=-\dfrac{p}{q}>0$（$p<0$、$q>0$），III 亦正確。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第31題 · 用對數比較大小</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第31題</span>
+    <h1>取對數，把指數拉下來</h1>
+    <p class="sub">指數定律、指數函數與對數函數 · 對數比較大小</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列哪一個數最小？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(-345)^{768}$</li><li><span class="ol">B</span>$453^{-786}$</li><li><span class="ol">C</span>$\left(\dfrac{1}{435}\right)^{867}$</li><li><span class="ol">D</span>$\left(\dfrac{2}{543}\right)^{876}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先用正負排除一個</div>
+      <div class="rule">
+        <span class="rule-name">負數的偶數次方</span>
+        $(-a)^{2k}=a^{2k}>0$。
+      </div>
+      <p>$(-345)^{768}$ 的指數是偶數，故為正數，即 $345^{768}>0$。其餘三個都是「小於 1 的正數的正次方」，必定小於 $1$，所以 A 一定不是最小。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">對三個正數取對數</div>
+      <div class="rule">
+        <span class="rule-name">對數律</span>
+        $\log a^{n}=n\log a$。$y=\log x$ 是遞增函數，故比較 $\log$ 值即比較原數。
+      </div>
+      <p>$$\log B=-786\log 453\approx -786(2.6561)\approx -2087.7$$</p>
+      <p>$$\log C=867\log\frac{1}{435}=-867\log 435\approx -867(2.6385)\approx -2287.6$$</p>
+      <p>$$\log D=876\log\frac{2}{543}=876(\log 2-\log 543)\approx 876(0.3010-2.7348)\approx -2132.0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較對數值</div>
+      <div class="rule">
+        <span class="rule-name">單調性</span>
+        $\log$ 值越小，原數越小。
+      </div>
+      <p>三個對數值：$-2087.7$（B）、$-2287.6$（C）、$-2132.0$（D）。最小是 $-2287.6$，即 C 最小。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">不用計算機的快速判斷</div>
+      <div class="rule">
+        <span class="rule-name">量級估計</span>
+        把底數取約略的整數對數，只需比較「指數 × 底數對數」。
+      </div>
+      <p>B：$786\times 2.66\approx 2090$；C：$867\times 2.64\approx 2290$；D：$876\times 2.43\approx 2130$（因為 $\dfrac{2}{543}\approx\dfrac{1}{271.5}$，$\log\approx 2.43$）。</p>
+      <p>C 的負值最大（最負），所以 C 最小，答案為 <b>C</b>。</p>
+      <p>易錯：以為指數越大一定越小；三個數的底數不同，必須同時考慮「底數的對數」與「指數」。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\left(\dfrac{1}{435}\right)^{867}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列哪一個數最大？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(-12)^{40}$</li><li><span class="ol">B</span>$15^{-20}$</li><li><span class="ol">C</span>$\left(\dfrac{1}{9}\right)^{30}$</li><li><span class="ol">D</span>$\left(\dfrac{3}{7}\right)^{25}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> A 為正數 $12^{40}$，其餘三個都小於 $1$，故 A 最大。</div>
+          <div class="p-step"><b>第 2 步.</b> 驗算：$\log A=40\log 12\approx 43.2>0$；$\log B\approx-23.5$、$\log C\approx-28.6$、$\log D\approx-9.2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大為 A。</div>
+          <div class="p-ans">答案：<b>A</b>（$(-12)^{40}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

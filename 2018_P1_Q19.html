@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第19題 · 圓與切線：先寫距離條件，再判三角形形狀</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第19題</span>
+    <h1>圓與切線：先寫距離條件，再判三角形形狀</h1>
+    <p class="sub">座標幾何 · 圓的切線與內心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圓 $C$ 的圓心坐標為 $(8,2)$，半徑記為 $r$。設 $L$ 為直線 $kx-5y-21=0$，其中 $k$ 為常數。已知 $L$ 是 $C$ 的切線。
+<br>(a) 以 $r$ 表示 $C$ 的方程，並以 $k$ 表示 $r^{2}$。
+<br>(b) $L$ 經過點 $D(18,39)$。
+<br>　(i) 求 $r$。
+<br>　(ii) 已知 $L$ 與 $y$ 軸交於 $E$。設 $F$ 為一點，使 $C$ 是 $\triangle DEF$ 的內切圓。$\triangle DEF$ 是否鈍角三角形？試解釋。<span class="marks">[12 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出圓方程</div>
+      <div class="rule"><span class="rule-name">圓的標準式</span>$(x-h)^{2}+(y-k)^{2}=r^{2}$。</div>
+<p>$$C:\ (x-8)^{2}+(y-2)^{2}=r^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 切線條件：圓心到 $L$ 的距離等於 $r$</div>
+      <div class="rule"><span class="rule-name">點到直線距離</span>$d=\dfrac{|Ax_{0}+By_{0}+C|}{\sqrt{A^{2}+B^{2}}}$。</div>
+<p>$$\frac{|8k-10-21|}{\sqrt{k^{2}+25}}=r$$</p>
+<p>$$r^{2}=\frac{(8k-31)^{2}}{k^{2}+25}=\frac{64k^{2}-496k+961}{k^{2}+25}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 用 $D$ 在 $L$ 上求 $k$</div>
+<p>$$18k-5(39)-21=0\;\Longrightarrow\;18k=216\;\Longrightarrow\;k=12$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 求 $r$</div>
+<p>$$r^{2}=\frac{(96-31)^{2}}{144+25}=\frac{4225}{169}=25\;\Longrightarrow\;r=5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 求切點與兩個切線長</div>
+      <div class="rule"><span class="rule-name">切線長</span>由同一點引出的兩條切線等長。</div>
+<p>$L:12x-5y-21=0$，切點 $T$ 是 $G(8,2)$ 到 $L$ 的垂足：$T\left(\dfrac{96}{13},\dfrac{171}{13}\right)$。</p>
+<p>$$DT=\sqrt{(18-\tfrac{96}{13})^{2}+(39-\tfrac{171}{13})^{2}}\approx27.94$$</p>
+<p>$$E=\left(0,-\frac{21}{5}\right),\qquad ET\approx18.87$$</p>
+<p>$$\angle FDE=2\tan^{-1}\frac{5}{27.94}\approx20.3^{\circ},\qquad \angle DEF=2\tan^{-1}\frac{5}{18.87}\approx29.7^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 判斷最大角</div>
+<p>$$\angle DFE\approx180^{\circ}-20.3^{\circ}-29.7^{\circ}=130^{\circ}>90^{\circ}$$</p>
+<p>故 $\triangle DEF$ 是鈍角三角形，答案為<strong>是</strong>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $r^{2}=\dfrac{(8k-31)^{2}}{k^{2}+25}$　(b)(i) $5$　(ii) 是鈍角三角形（$\angle DFE\approx130^{\circ}$）</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 的圓心為 $(2,3)$、半徑 $5$。直線 $L:3x+4y+c=0$ 是 $C$ 的切線，求 $c$ 的兩個可能值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$7$ 或 $-43$</li><li><span class="ol">B</span>$-7$ 或 $43$</li><li><span class="ol">C</span>$25$ 或 $-25$</li><li><span class="ol">D</span>$5$ 或 $-5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓心到 $L$ 的距離 $=\dfrac{|6+12+c|}{5}=5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $|18+c|=25$。</div>
+          <div class="p-step"><b>第 3 步.</b> $c=7$ 或 $c=-43$。</div>
+          <div class="p-ans">答案：<b>A</b>（$7$ 或 $-43$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

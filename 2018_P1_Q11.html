@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第11題 · 眾數、中位數、平均數：逐個條件迫出 $k$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第11題</span>
+    <h1>眾數、中位數、平均數：逐個條件迫出 $k$</h1>
+    <p class="sub">統計學 · 集中趨勢</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下表顯示一些家庭子女數目的分佈：
+<table class="dtable">
+<tr><th>子女數目</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><th>家庭數目</th><td>$k$</td><td>2</td><td>9</td><td>6</td><td>7</td></tr>
+</table>
+已知 $k$ 為正整數。
+<br>(a) 若該分佈的眾數是 2，寫出 (i) $k$ 的最小可能值；(ii) $k$ 的最大可能值。
+<br>(b) 若該分佈的中位數是 2，寫出 (i) $k$ 的最小可能值；(ii) $k$ 的最大可能值。
+<br>(c) 若該分佈的平均數是 2，求 $k$。<span class="marks">[6 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算總家庭數</div>
+<p>$$k+2+9+6+7=k+24$$</p>
+<p>因為 $k$ 是正整數，$k\ge1$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 眾數是 2：9 要最大</div>
+      <div class="rule"><span class="rule-name">眾數</span>出現次數最多的數值。</div>
+<p>「2」的次數是 9；其他最多是 7。要 2 成為眾數，只須 $k\le9$（$k=9$ 時 0 與 2 同時是眾數）。</p>
+<p>故 (i) 最小 $k=1$；(ii) 最大 $k=9$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 中位數是 2：中間位置要落在「2」那一段</div>
+      <div class="rule"><span class="rule-name">中位數</span>把數據由小至大排列，取中間的一個（或兩個的平均）。</div>
+<p>累積家庭數：$k$、$k+2$、$k+11$、$k+17$、$k+24$。</p>
+<p>$k+24$ 是奇數時，中位數是第 $\dfrac{k+25}{2}$ 個。要在「2」的範圍內：</p>
+<p>$$k+2<\frac{k+25}{2}\le k+11\;\Longrightarrow\;k<21\ \text{且}\ k\ge3$$</p>
+<p>$k$ 為偶數時，中位數是第 $\dfrac{k+24}{2}$ 與 $\dfrac{k+26}{2}$ 個的平均，兩個都要是 2，得 $k\ge4$ 且 $k<20$。</p>
+<p>故 (i) 最小 $k=3$（$k=3$ 時第 14 個是 2）；(ii) 最大 $k=19$（$k=20$ 時中位數會變成 $1.5$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 平均數是 2</div>
+      <div class="rule"><span class="rule-name">平均數</span>$\bar{x}=\dfrac{\sum fx}{\sum f}$。</div>
+<p>$$\frac{0(k)+1(2)+2(9)+3(6)+4(7)}{k+24}=2$$</p>
+<p>$$\frac{66}{k+24}=2\;\Longrightarrow\;k+24=33\;\Longrightarrow\;k=9$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $1$ 及 $9$　(b) $3$ 及 $19$　(c) $9$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下表顯示某班學生兄弟姐妹數目的分佈：
+<table class="dtable">
+<tr><th>數目</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+<tr><th>人數</th><td>4</td><td>$m$</td><td>8</td><td>3</td></tr>
+</table>
+若平均數是 $1.5$，求 $m$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總和 $=0(4)+1(m)+2(8)+3(3)=m+25$。</div>
+          <div class="p-step"><b>第 2 步.</b> 總人數 $=m+15$，$\dfrac{m+25}{m+15}=1.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m+25=1.5m+22.5\Rightarrow0.5m=2.5\Rightarrow m=5$。</div>
+          <div class="p-ans">答案：<b>C</b>（$5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

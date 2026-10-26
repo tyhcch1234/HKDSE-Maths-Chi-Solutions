@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第4題 · 由概率反求未知數量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第4題</span>
+    <h1>由概率反求未知數量</h1>
+    <p class="sub">概率 · 理論概率</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個盒內有 $n$ 個白球、$5$ 個黑球及 $8$ 個紅球。若從盒中隨機抽出一個球，抽到紅球的概率是 $\dfrac{2}{5}$，求 $n$ 的值。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出球的總數</div>
+<p>$$\text{總數}=n+5+8=n+13$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出理論概率</div>
+      <div class="rule"><span class="rule-name">理論概率</span>$P=\dfrac{\text{有利結果數目}}{\text{所有可能結果數目}}$。</div>
+<p>$$P(\text{紅})=\frac{8}{n+13}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">列方程並解</div>
+<p>$$\frac{8}{n+13}=\frac{2}{5}$$</p>
+<p>交叉相乘：$40=2n+26$</p>
+<p>$$2n=14\;\Rightarrow\;n=7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算</div>
+<p>總數 $=7+5+8=20$，$P(\text{紅})=\dfrac{8}{20}=\dfrac{2}{5}$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$n=7$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個袋內有 $m$ 個黃球、$6$ 個藍球及 $10$ 個綠球。隨機抽出一個球，抽到藍球的概率是 $\dfrac{1}{4}$，求 $m$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$8$</li><li><span class="ol">B</span>$10$</li><li><span class="ol">C</span>$12$</li><li><span class="ol">D</span>$14$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 $=m+16$，$P(\text{藍})=\dfrac{6}{m+16}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{6}{m+16}=\dfrac{1}{4}\Rightarrow m+16=24$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m=8$。</div>
+          <div class="p-ans">答案：<b>A</b>（$8$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

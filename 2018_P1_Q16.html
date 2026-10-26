@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第16題 · 等比數列：先求公比，再解指數不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第16題</span>
+    <h1>等比數列：先求公比，再解指數不等式</h1>
+    <p class="sub">數列 · 等比數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某等比數列的第 3 項及第 4 項分別為 $720$ 及 $864$。
+<br>(a) 求該數列的第 1 項。
+<br>(b) 求最大的 $n$，使第 $(n+1)$ 項與第 $(2n+1)$ 項之和小於 $5\times10^{14}$。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出通項並相除</div>
+      <div class="rule"><span class="rule-name">等比數列</span>$T_{k}=ar^{k-1}$。</div>
+<p>$$T_{3}=ar^{2}=720,\qquad T_{4}=ar^{3}=864$$</p>
+<p>相除：</p>
+<p>$$r=\frac{864}{720}=1.2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代回求 $a$</div>
+<p>$$a(1.2)^{2}=720\;\Longrightarrow\;a=\frac{720}{1.44}=500$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 列出兩項再寫不等式</div>
+<p>$$T_{n+1}=500(1.2)^{n},\qquad T_{2n+1}=500(1.2)^{2n}$$</p>
+<p>$$500(1.2)^{n}+500(1.2)^{2n}<5\times10^{14}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 設 $x=(1.2)^{n}$，化為二次不等式</div>
+      <div class="rule"><span class="rule-name">換元</span>$x>0$，可兩邊除以 $500$。</div>
+<p>$$x^{2}+x<10^{12}$$</p>
+<p>解 $x^{2}+x-10^{12}=0$，取正根：</p>
+<p>$$x<\frac{-1+\sqrt{4\times10^{12}+1}}{2}\approx999\,999.5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 取對數求最大整數 $n$</div>
+      <div class="rule"><span class="rule-name">對數</span>$(1.2)^{n}<10^{6}$ 時取 $\log$。</div>
+<p>$$n\log 1.2<\log 999\,999.5\approx6$$</p>
+<p>$$n<\frac{6}{0.07918}\approx75.8$$</p>
+<p>故最大的整數 $n=75$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $500$　(b) $75$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某等比數列的第 2 項及第 3 項分別為 $18$ 及 $54$。求最大的 $n$，使第 $n$ 項小於 $10^{9}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$18$</li><li><span class="ol">B</span>$19$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$21$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $r=\dfrac{54}{18}=3$，$a=\dfrac{18}{3}=6$。</div>
+          <div class="p-step"><b>第 2 步.</b> $6\cdot3^{n-1}<10^{9}\Rightarrow3^{n-1}<1.667\times10^{8}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $(n-1)\log3<8.2218\Rightarrow n-1<17.24\Rightarrow n\le18$。</div>
+          <div class="p-ans">答案：<b>A</b>（$18$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第44題 · 分數調整與標準分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第44題</span>
+    <h1>齊齊乘 1.5 再加 8，標準分不變</h1>
+    <p class="sub">統計學 · 中位數與標準分的線性變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在某測驗中，全班學生成績的中位數為 $30$ 分。由於全部學生都不合格，所有學生的分數都先增加 $50\%$，再加 $8$ 分。設調整後全班成績的中位數為 $x$ 分。調整前某學生的標準分為 $-2$，設調整後該學生的標準分為 $z$。求 $x$ 及 $z$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=45$，$z=-2$</li><li><span class="ol">B</span>$x=45$，$z=-1$</li><li><span class="ol">C</span>$x=53$，$z=-2$</li><li><span class="ol">D</span>$x=53$，$z=-1$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出調整的公式</div>
+      <div class="rule">
+        <span class="rule-name">線性變換</span>
+        每個分數 $s$ 變成 $1.5s+8$（增加 $50\%$ 即乘 $1.5$）。
+      </div>
+      <p>新分數 $=1.5\times(\text{原分數})+8$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求新中位數 $x$</div>
+      <div class="rule">
+        <span class="rule-name">中位數的變換</span>
+        對每個數據作相同的線性變換，中位數也作同樣變換。
+      </div>
+      <p>$$x=1.5\times 30+8=45+8=53$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">看標準分的定義</div>
+      <div class="rule">
+        <span class="rule-name">標準分</span>
+        $z=\dfrac{s-\mu}{\sigma}$。
+      </div>
+      <p>調整後：新平均 $=1.5\mu+8$，新標準差 $=1.5\sigma$（加常數不改變標準差，乘 $1.5$ 則標準差也乘 $1.5$）。</p>
+      <p>$$z'=\frac{(1.5s+8)-(1.5\mu+8)}{1.5\sigma}=\frac{1.5(s-\mu)}{1.5\sigma}=\frac{s-\mu}{\sigma}=z$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">得出答案</div>
+      <div class="rule">
+        <span class="rule-name">不變量</span>
+        把每個數據乘同一個正數再加常數，標準分不變。
+      </div>
+      <p>所以 $z=-2$，即 $x=53$、$z=-2$，答案為 <b>C</b>。</p>
+      <p>易錯：以為「加分後人人都進步，標準分會上升」，把 $z$ 改成 $-1$；其實整班同步平移及放大，相對位置沒有改變。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$x=53$，$z=-2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某測驗的成績中位數為 $40$ 分。所有分數先增加 $25\%$，再加 $6$ 分。調整後中位數為 $x$ 分；某學生調整前的標準分為 $-1.5$，調整後為 $z$。求 $x$ 及 $z$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x=46$，$z=-1.5$</li><li><span class="ol">B</span>$x=56$，$z=-1.5$</li><li><span class="ol">C</span>$x=56$，$z=-1$</li><li><span class="ol">D</span>$x=50$，$z=-1$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 新分數 $=1.25s+6$。</div>
+          <div class="p-step"><b>第 2 步.</b> $x=1.25\times 40+6=50+6=56$。</div>
+          <div class="p-step"><b>第 3 步.</b> 線性變換（乘正數加常數）不改變標準分，故 $z=-1.5$。</div>
+          <div class="p-ans">答案：<b>B</b>（$x=56$，$z=-1.5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q43.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

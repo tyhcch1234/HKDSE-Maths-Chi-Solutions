@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第35題 · 複數的冪與實部虛部</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第35題</span>
+    <h1>$i$ 的次方，四個一循環</h1>
+    <p class="sub">方程 · 複數的運算與實部、虛部</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $k$ 為實數，且
+      $$z=4+5i^{10}-ki^{15}+6i^{21}+2ki^{28}$$
+      若 $z$ 的實部與虛部相等，求 $z$ 的實部。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$7$</li><li><span class="ol">B</span>$13$</li><li><span class="ol">C</span>$17$</li><li><span class="ol">D</span>$25$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">背出 $i$ 的循環</div>
+      <div class="rule">
+        <span class="rule-name">$i$ 的冪</span>
+        $i^{1}=i$、$i^{2}=-1$、$i^{3}=-i$、$i^{4}=1$，每 4 次循環。
+      </div>
+      <p>把指數除以 4 取餘數：</p>
+      <p>$$i^{10}=i^{2}=-1,\quad i^{15}=i^{3}=-i,\quad i^{21}=i^{1}=i,\quad i^{28}=i^{0}=1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入並整理成 $a+bi$</div>
+      <div class="rule">
+        <span class="rule-name">複數的標準式</span>
+        把實數項與含 $i$ 的項分別合併。
+      </div>
+      <p>$$z=4+5(-1)-k(-i)+6(i)+2k(1)$$</p>
+      <p>$$z=(4-5+2k)+(k+6)i=(2k-1)+(k+6)i$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">實部 = 虛部，解出 $k$</div>
+      <div class="rule">
+        <span class="rule-name">實部與虛部</span>
+        若 $a+bi$ 的實部等於虛部，則 $a=b$。
+      </div>
+      <p>$$2k-1=k+6\quad\Longrightarrow\quad k=7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代回求實部</div>
+      <div class="rule">
+        <span class="rule-name">代入</span>
+        實部 $=2k-1$。
+      </div>
+      <p>$$2(7)-1=13$$</p>
+      <p>驗算虛部：$k+6=13$，與實部相等 ✓</p>
+      <p>答案為 <b>B</b>。</p>
+      <p>易錯：把 $i^{10}$ 算成 $i^{2}=1$ 的正數（漏了負號），或把 $-ki^{15}=-k(-i)$ 的雙重負號處理錯，令 $k$ 的係數變成 $-k$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$13$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $k$ 為實數，且 $z=2+3i^{10}+ki^{15}+5i^{22}-2ki^{28}$。若 $z$ 的實部與虛部相等，求 $z$ 的實部。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $i^{10}=-1$、$i^{15}=-i$、$i^{22}=-1$、$i^{28}=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $z=2-3-ki-5-2k=-6-3ki$。</div>
+          <div class="p-step"><b>第 3 步.</b> 實部 $=$ 虛部：$-6=-3k$，得 $k=2$；實部為 $-6$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-6$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第10題 · 二次函數圖像與係數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第10題</span>
+    <h1>$hk<0$ 代表一正一負</h1>
+    <p class="sub">函數及其圖像 · 二次函數圖像的開口、截距</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $h$、$k$ 為實數且 $hk<0$。下列關於 $y=(h-x)(k-x)$ 的圖像的敘述，哪些正確？
+      <br>I. 圖像開口向上。
+      <br>II. 圖像有兩個 $x$ 截距。
+      <br>III. 圖像的 $y$ 截距為正數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開成標準式</div>
+      <div class="rule">
+        <span class="rule-name">二次函數標準式</span>
+        $y=ax^{2}+bx+c$，其中 $a$ 決定開口方向，$c$ 是 $y$ 截距。
+      </div>
+      <p>$$y=(h-x)(k-x)=hk-hx-kx+x^{2}=x^{2}-(h+k)x+hk$$</p>
+      <p>所以 $a=1$、$b=-(h+k)$、$c=hk$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I：開口方向</div>
+      <div class="rule">
+        <span class="rule-name">開口方向</span>
+        $a>0$ 開口向上；$a<0$ 開口向下。
+      </div>
+      <p>$a=1>0$，圖像開口向上，敘述 I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：$x$ 截距的數目</div>
+      <div class="rule">
+        <span class="rule-name">$x$ 截距</span>
+        令 $y=0$，解 $(h-x)(k-x)=0$，得 $x=h$ 或 $x=k$。
+      </div>
+      <p>由於 $hk<0$，$h$ 與 $k$ 一正一負，必定 $h\neq k$，所以有兩個相異的 $x$ 截距，敘述 II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：$y$ 截距的正負</div>
+      <div class="rule">
+        <span class="rule-name">$y$ 截距</span>
+        令 $x=0$，得 $y=hk$。
+      </div>
+      <p>已知 $hk<0$，所以 $y$ 截距是<b>負數</b>，敘述 III 錯誤。</p>
+      <p>只有 I 及 II 正確，答案為 <b>A</b>。</p>
+      <p>易錯：把「$hk<0$」誤讀成「$h$、$k$ 都是負數」；其實是一正一負，正因如此才保證兩個截距相異。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $h$、$k$ 為實數且 $hk<0$。下列關於 $y=(h+x)(k+x)$ 的圖像的敘述，哪些正確？
+      <br>I. 圖像開口向上。
+      <br>II. 圖像有兩個 $x$ 截距。
+      <br>III. 圖像的 $y$ 截距為負數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$y=x^{2}+(h+k)x+hk$，$a=1>0$，開口向上（I 正確）。</div>
+          <div class="p-step"><b>第 2 步.</b> 令 $y=0$ 得 $x=-h$ 或 $x=-k$；因 $hk<0$ 故 $h\neq k$，有兩個 $x$ 截距（II 正確）。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=0$ 時 $y=hk<0$，$y$ 截距為負（III 正確）。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第3題 · 上捨、下捨、四捨五入：三種取捨要分清</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第3題</span>
+    <h1>上捨、下捨、四捨五入：三種取捨要分清</h1>
+    <p class="sub">估算與誤差 · 數值的取捨</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+就 $265.473$：
+<br>(a) 向上捨入至最接近的整數；
+<br>(b) 向下捨入至 1 位小數；
+<br>(c) 四捨五入至 2 位有效數字。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">看清每個數字的位置</div>
+<p>$$265.473=2\underbrace{6}_{2\text{ 位有效數字}}.473$$</p>
+<p>整數部分是 $265$，小數部分是 $0.473$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 上捨入：有小数就進位</div>
+      <div class="rule"><span class="rule-name">上捨入</span>不論小數部分多大，一律向上進至下一個整數。</div>
+<p>$$265.473\;\longrightarrow\;266$$</p>
+<p>即使是 $265.001$，上捨入也是 $266$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 下捨入：直接切斷</div>
+      <div class="rule"><span class="rule-name">下捨入</span>保留指定位數，後面的數字全部刪去，不看大小。</div>
+<p>保留 1 位小數（十分位是 $4$），後面的 $73$ 直接刪去：</p>
+<p>$$265.4\underline{73}\;\longrightarrow\;265.4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 四捨五入至 2 位有效數字</div>
+      <div class="rule"><span class="rule-name">有效數字</span>由第一個非零數字開始數。</div>
+<p>首兩位有效數字是 $2$、$6$，下一位是 $5$，故進位：$26\to27$。</p>
+<p>位值要保持，所以個位補 $0$：</p>
+<p>$$265.473\;\longrightarrow\;270$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $266$　(b) $265.4$　(c) $270$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 就 $38.762$，求 (a) 上捨入至最接近的整數；(b) 下捨入至 1 位小數；(c) 四捨五入至 3 位有效數字。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>(a) $39$　(b) $38.7$　(c) $38.8$</li><li><span class="ol">B</span>(a) $38$　(b) $38.7$　(c) $38.8$</li><li><span class="ol">C</span>(a) $39$　(b) $38.8$　(c) $38.7$</li><li><span class="ol">D</span>(a) $39$　(b) $38.7$　(c) $38.7$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) 有小數即進位：$39$。</div>
+          <div class="p-step"><b>第 2 步.</b> (b) 切斷至十分位：$38.7$。</div>
+          <div class="p-step"><b>第 3 步.</b> (c) 三位有效數字 $3,8,7$，下一位 $6\ge5$ 進位：$38.8$。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

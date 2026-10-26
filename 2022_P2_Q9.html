@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第9題 · 餘式定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第9題</span>
+    <h1>整除即餘式為零</h1>
+    <p class="sub">多項式 · 餘式定理與因式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $g(x)=x^{2}+ax+b$，其中 $a$、$b$ 為常數。若 $g(x)$ 可被 $x+2a$ 整除，求 $g(x)$ 除以 $x-2a$ 的餘數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-2a^{2}$</li><li><span class="ol">B</span>$0$</li><li><span class="ol">C</span>$2a^{2}$</li><li><span class="ol">D</span>$4a^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用因式定理寫出條件</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        $g(x)$ 可被 $x-c$ 整除 $\iff g(c)=0$。這裡 $x+2a=x-(-2a)$，所以要代 $x=-2a$。
+      </div>
+      <p>$$g(-2a)=0$$</p>
+      <p>$$(-2a)^{2}+a(-2a)+b=4a^{2}-2a^{2}+b=2a^{2}+b=0$$</p>
+      <p>$$\therefore\ b=-2a^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用餘式定理求新的餘數</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        $g(x)$ 除以 $x-c$ 的餘數是 $g(c)$。
+      </div>
+      <p>除以 $x-2a$，餘數為 $g(2a)$：</p>
+      <p>$$g(2a)=(2a)^{2}+a(2a)+b=4a^{2}+2a^{2}+b=6a^{2}+b$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $b=-2a^{2}$</div>
+      <div class="rule">
+        <span class="rule-name">代入消元</span>
+        把第一步求得的 $b$ 代入，$a$ 會保留在答案中。
+      </div>
+      <p>$$g(2a)=6a^{2}-2a^{2}=4a^{2}$$</p>
+      <p>答案為 <b>D</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取 $a=1$ 驗算</div>
+      <div class="rule">
+        <span class="rule-name">特殊值驗算</span>
+        答案含參數時，代一個簡單數值可快速核對。
+      </div>
+      <p>取 $a=1$，則 $b=-2$，$g(x)=x^{2}+x-2=(x+2)(x-1)$，確實可被 $x+2$ 整除。除以 $x-2$ 的餘數為 $g(2)=4+2-2=4$，與 $4a^{2}=4$ 相符。</p>
+      <p>易錯：把 $x+2a$ 的根誤當成 $x=2a$，一開始就會計出 $b=-6a^{2}$，最後餘數變成 $0$ 而選 B。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$4a^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $g(x)=x^{2}+px+q$，其中 $p$、$q$ 為常數。若 $g(x)$ 可被 $x+3p$ 整除，求 $g(x)$ 除以 $x-3p$ 的餘數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-6p^{2}$</li><li><span class="ol">B</span>$0$</li><li><span class="ol">C</span>$6p^{2}$</li><li><span class="ol">D</span>$12p^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(-3p)=9p^{2}-3p^{2}+q=0$，故 $q=-6p^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 餘數 $=g(3p)=9p^{2}+3p^{2}+q=12p^{2}-6p^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=6p^{2}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$6p^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

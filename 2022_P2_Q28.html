@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第28題 · 可被整除的概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第28題</span>
+    <h1>十個數，逐個試最快</h1>
+    <p class="sub">概率 · 古典概率與整除</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $5\blacklozenge2$ 是一個三位數，其中 $\blacklozenge$ 為 $0$ 至 $9$（包括首末）的整數。求該三位數可被 $7$ 整除的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{5}$</li><li><span class="ol">B</span>$\dfrac{1}{7}$</li><li><span class="ol">C</span>$\dfrac{1}{9}$</li><li><span class="ol">D</span>$\dfrac{1}{10}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清所有可能結果</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        $P=\dfrac{\text{有利結果數目}}{\text{可能結果總數}}$。
+      </div>
+      <p>$\blacklozenge$ 可取 $0,1,\ldots,9$ 共 $10$ 個值，對應 $502,512,522,\ldots,592$ 十個三位數。</p>
+      <p>分母 $=10$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐個檢查能否被 $7$ 整除</div>
+      <div class="rule">
+        <span class="rule-name">整除</span>
+        可直接做除法，或把數寫成 $502+10x$ 再用同餘判斷。
+      </div>
+      <p>$502=7\times 71+5$，$10\equiv 3\pmod 7$，故</p>
+      <p>$$502+10x\equiv 5+3x\pmod 7$$</p>
+      <p>要 $5+3x\equiv 0\pmod 7$，即 $3x\equiv 2\pmod 7$，兩邊乘 $5$（$3\times 5=15\equiv 1$）得 $x\equiv 10\equiv 3\pmod 7$。</p>
+      <p>在 $0$ 至 $9$ 之中，只有 $x=3$ 符合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">核對：$532=7\times 76$</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        找到的數要代回原式確認。
+      </div>
+      <p>$$532\div 7=76$$</p>
+      <p>其餘九個數（$502,512,522,542,\ldots$）除以 $7$ 都有餘數，例如 $502=7\times 71+5$、$512=7\times 73+1$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">計概率</div>
+      <div class="rule">
+        <span class="rule-name">概率</span>
+        有利結果 $1$ 個，總數 $10$ 個。
+      </div>
+      <p>$$P=\frac{1}{10}$$</p>
+      <p>答案為 <b>D</b>。</p>
+      <p>易錯：以為「每 7 個數就有一個」而選 $\dfrac{1}{7}$；這十個數並不是連續整數（每次跳 10），不能直接用 $7$ 的密度估算。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{1}{10}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $4\blacklozenge6$ 是一個三位數，其中 $\blacklozenge$ 為 $0$ 至 $9$ 的整數。求該三位數可被 $7$ 整除的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{10}$</li><li><span class="ol">B</span>$\dfrac{1}{5}$</li><li><span class="ol">C</span>$\dfrac{7}{10}$</li><li><span class="ol">D</span>$\dfrac{2}{5}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $406=7\times 58$，故 $406+10x\equiv 3x\pmod 7$。</div>
+          <div class="p-step"><b>第 2 步.</b> $3x\equiv 0\pmod 7$ 得 $x\equiv 0\pmod 7$，即 $x=0$ 或 $7$（$406$、$476$）。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩個有利結果，共十個可能，$P=\dfrac{2}{10}=\dfrac{1}{5}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{1}{5}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q27.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q29.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

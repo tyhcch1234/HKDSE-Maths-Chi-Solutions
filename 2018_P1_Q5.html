@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第5題 · 四項式因式分解：分組後再拆平方差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第5題</span>
+    <h1>四項式因式分解：分組後再拆平方差</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+因式分解
+<br>(a) $9r^{3}-18r^{2}s$；
+<br>(b) $9r^{3}-18r^{2}s-rs^{2}+2s^{3}$。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 提出最大公因數</div>
+      <div class="rule"><span class="rule-name">公因數</span>係數取最大公因數，字母取最低次方。</div>
+<p>$$9r^{3}-18r^{2}s=9r^{2}(r-2s)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 把四項分成兩組</div>
+<p>$$9r^{3}-18r^{2}s-rs^{2}+2s^{3}=\underbrace{(9r^{3}-18r^{2}s)}_{\text{用 (a) 的結果}}-\underbrace{(rs^{2}-2s^{3})}_{\text{提 }s^{2}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩組各自分解</div>
+<p>$$=9r^{2}(r-2s)-s^{2}(r-2s)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">提出共同括號，再拆平方差</div>
+      <div class="rule"><span class="rule-name">平方差</span>$9r^{2}-s^{2}=(3r)^{2}-s^{2}=(3r+s)(3r-s)$。</div>
+<p>$$=(r-2s)(9r^{2}-s^{2})=(r-2s)(3r+s)(3r-s)$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $9r^{2}(r-2s)$　(b) $(r-2s)(3r+s)(3r-s)$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 (a) $4p^{3}+12p^{2}q$；(b) $4p^{3}+12p^{2}q-pq^{2}-3q^{3}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>(a) $4p^{2}(p+3q)$　(b) $(p+3q)(2p+q)(2p-q)$</li><li><span class="ol">B</span>(a) $4p^{2}(p+3q)$　(b) $(p-3q)(2p+q)(2p-q)$</li><li><span class="ol">C</span>(a) $2p^{2}(2p+6q)$　(b) $(p+3q)(2p+q)(2p-q)$</li><li><span class="ol">D</span>(a) $4p^{2}(p+3q)$　(b) $(p+3q)(4p^{2}+q^{2})$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $4p^{3}+12p^{2}q=4p^{2}(p+3q)$。</div>
+          <div class="p-step"><b>第 2 步.</b> (b) $=4p^{2}(p+3q)-q^{2}(p+3q)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=(p+3q)(4p^{2}-q^{2})=(p+3q)(2p+q)(2p-q)$。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

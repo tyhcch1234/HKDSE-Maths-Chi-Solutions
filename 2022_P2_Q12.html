@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第12題 · 連比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第12題</span>
+    <h1>引入「一份」$k$，比就變成數</h1>
+    <p class="sub">率、比及變分 · 連比與代入消元</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $x$、$y$、$z$ 為非零數。若 $x:y=8:5$ 且 $2x=4z-3y$，則 $y:z=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$16:17$</li><li><span class="ol">B</span>$17:16$</li><li><span class="ol">C</span>$20:31$</li><li><span class="ol">D</span>$31:20$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把比寫成「$8k:5k$」</div>
+      <div class="rule">
+        <span class="rule-name">比的表示</span>
+        $x:y=8:5$ 即 $x=8k$、$y=5k$（$k\neq 0$），這樣才能代入方程。
+      </div>
+      <p>設 $x=8k$、$y=5k$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入 $2x=4z-3y$</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        把 $x$、$y$ 都用 $k$ 表示，方程只剩 $z$ 與 $k$。
+      </div>
+      <p>$$2(8k)=4z-3(5k)$$</p>
+      <p>$$16k=4z-15k$$</p>
+      <p>$$4z=16k+15k=31k$$</p>
+      <p>$$\therefore\ z=\frac{31k}{4}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $y:z$，把 $k$ 消去</div>
+      <div class="rule">
+        <span class="rule-name">比的化簡</span>
+        同一個 $k$ 可以約掉；分數比要同乘分母化為整數比。
+      </div>
+      <p>$$y:z=5k:\frac{31k}{4}=5:\frac{31}{4}$$</p>
+      <p>兩邊同乘 $4$：</p>
+      <p>$$y:z=20:31$$</p>
+      <p>答案為 <b>C</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代數字驗算</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        隨意取一個 $k$，計出三個數再核對條件。
+      </div>
+      <p>取 $k=4$：$x=32$、$y=20$、$z=31$。檢查 $2x=64$，而 $4z-3y=124-60=64$，相符；$y:z=20:31$。</p>
+      <p>易錯：把 $y:z$ 寫成 $5k:\dfrac{31k}{4}$ 後直接寫成 $5:31$，忘記先化去分母，就會變成選項 D 的倒數關係。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$20:31$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $x$、$y$、$z$ 為非零數。若 $x:y=3:4$ 且 $3x=5z-2y$，則 $y:z=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$17:20$</li><li><span class="ol">B</span>$20:17$</li><li><span class="ol">C</span>$15:17$</li><li><span class="ol">D</span>$17:15$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $x=3k$、$y=4k$，代入得 $9k=5z-8k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $5z=17k$，即 $z=\dfrac{17k}{5}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $y:z=4k:\dfrac{17k}{5}=20:17$。</div>
+          <div class="p-ans">答案：<b>B</b>（$20:17$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

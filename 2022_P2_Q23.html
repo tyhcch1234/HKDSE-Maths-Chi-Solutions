@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第23題 · 菱形與三角比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第23題</span>
+    <h1>對角線把菱形切成四個直角三角形</h1>
+    <p class="sub">幾何 · 菱形的對角線與三角比</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $PQRS$ 為菱形，其對角線 $PR$ 與 $QS$ 相交於 $T$。若 $\angle QRT=\theta$，則 $\dfrac{PQ}{ST}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\sin\theta$</li><li><span class="ol">B</span>$\cos\theta$</li><li><span class="ol">C</span>$\dfrac{1}{\sin\theta}$</li><li><span class="ol">D</span>$\dfrac{1}{\cos\theta}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 320 230" width="320" height="230" role="img" aria-label="菱形 PQRS，對角線交於 T，角 QRT 為 θ" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M160 30 L265 115 L160 200 L55 115 Z"/>
+          <line x1="160" y1="30" x2="160" y2="200" stroke-dasharray="4 3"/>
+          <line x1="55" y1="115" x2="265" y2="115" stroke-dasharray="4 3"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1" fill="none">
+          <path d="M160 115 L160 103 L172 103"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="160" cy="30" r="2.8"/><circle cx="265" cy="115" r="2.8"/>
+          <circle cx="160" cy="200" r="2.8"/><circle cx="55" cy="115" r="2.8"/><circle cx="160" cy="115" r="2.8"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="156" y="22" text-anchor="middle">P</text>
+          <text x="272" y="112">Q</text>
+          <text x="156" y="218" text-anchor="middle">R</text>
+          <text x="42" y="112" text-anchor="end">S</text>
+          <text x="166" y="132">T</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11.5">
+          <text x="205" y="142">θ</text>
+        </g>
+        <g fill="none" stroke="currentColor" stroke-width="1"><path d="M195 133 A16 16 0 0 1 208 127"/></g>
+      </svg>
+      <figcaption>示意圖，非按比例（菱形四邊相等，對角線互相垂直平分）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出菱形的兩大理性質</div>
+      <div class="rule">
+        <span class="rule-name">菱形的性質</span>
+        四邊相等；對角線互相垂直平分。
+      </div>
+      <p>$$PQ=QR=RS=SP,\qquad PR\perp QS,\qquad QT=TS,\quad PT=TR$$</p>
+      <p>所以 $\triangle QRT$ 在 $T$ 為直角。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle QRT$ 寫出 $\sin\theta$</div>
+      <div class="rule">
+        <span class="rule-name">正弦</span>
+        $\sin\theta=\dfrac{\text{對邊}}{\text{斜邊}}$。$\angle QRT$ 的對邊是 $QT$，斜邊是 $QR$。
+      </div>
+      <p>$$\sin\theta=\frac{QT}{QR}\quad\Longrightarrow\quad QT=QR\sin\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $QR$、$QT$ 換成題目要的 $PQ$、$ST$</div>
+      <div class="rule">
+        <span class="rule-name">等量代換</span>
+        $QR=PQ$（四邊相等）且 $QT=ST$（對角線互相平分）。
+      </div>
+      <p>$$\frac{PQ}{ST}=\frac{QR}{QT}=\frac{QR}{QR\sin\theta}=\frac{1}{\sin\theta}$$</p>
+      <p>答案為 <b>C</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用特殊角核對</div>
+      <div class="rule">
+        <span class="rule-name">特殊角</span>
+        取 $\theta=30^{\circ}$，則 $\dfrac{1}{\sin 30^{\circ}}=2$。
+      </div>
+      <p>若 $\theta=30^{\circ}$，$QT:QR=1:2$，即 $QR=2QT$，故 $\dfrac{PQ}{ST}=\dfrac{QR}{QT}=2$，與 $\dfrac{1}{\sin 30^{\circ}}$ 相符。</p>
+      <p>易錯：把 $\theta$ 的對邊誤認成 $RT$；$\angle QRT$ 的頂點在 $R$，對邊是 $QT$，不是 $RT$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{1}{\sin\theta}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $PQRS$ 為菱形，對角線 $PR$、$QS$ 交於 $T$。若 $\angle QRT=\theta$，則 $\dfrac{QT}{PQ}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\sin\theta$</li><li><span class="ol">B</span>$\cos\theta$</li><li><span class="ol">C</span>$\tan\theta$</li><li><span class="ol">D</span>$\dfrac{1}{\sin\theta}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle QRT$ 在 $T$ 為直角，$\sin\theta=\dfrac{QT}{QR}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 菱形四邊相等，$QR=PQ$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $\dfrac{QT}{PQ}=\dfrac{QT}{QR}=\sin\theta$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\sin\theta$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

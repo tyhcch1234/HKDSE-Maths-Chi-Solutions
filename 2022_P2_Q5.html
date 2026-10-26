@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第5題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第5題</span>
+    <h1>先通分，再取倒數</h1>
+    <p class="sub">方程 · 主項變換（分式方程）</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\dfrac{2}{u}+\dfrac{3}{v}=4$，則 $u=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{2v}{4v-3}$</li><li><span class="ol">B</span>$\dfrac{2v}{3-4v}$</li><li><span class="ol">C</span>$\dfrac{3v}{4v-2}$</li><li><span class="ol">D</span>$\dfrac{3v}{2-4v}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把含 $u$ 的項單獨留在左方</div>
+      <div class="rule">
+        <span class="rule-name">主項變換</span>
+        目標是把 $u$ 孤立，其他項逐步移到另一邊。
+      </div>
+      <p>$$\frac{2}{u}=4-\frac{3}{v}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">右方通分，合成一個分數</div>
+      <div class="rule">
+        <span class="rule-name">通分</span>
+        $4-\dfrac{3}{v}=\dfrac{4v}{v}-\dfrac{3}{v}=\dfrac{4v-3}{v}$。
+      </div>
+      <p>$$\frac{2}{u}=\frac{4v-3}{v}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩邊取倒數，解出 $u$</div>
+      <div class="rule">
+        <span class="rule-name">取倒數</span>
+        若 $\dfrac{a}{b}=\dfrac{c}{d}$（各數不為零），則 $\dfrac{b}{a}=\dfrac{d}{c}$。
+      </div>
+      <p>$$\frac{u}{2}=\frac{v}{4v-3}$$</p>
+      <p>$$u=\frac{2v}{4v-3}$$</p>
+      <p>答案為 <b>A</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入數字驗算</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        隨意取一個不令分母為零的 $v$，計出 $u$ 再代回原式。
+      </div>
+      <p>取 $v=1$：$u=\dfrac{2}{4-3}=2$。代回：$\dfrac{2}{2}+\dfrac{3}{1}=1+3=4$，相符。</p>
+      <p>易錯：通分後忘記把 $4$ 寫成 $\dfrac{4v}{v}$，直接寫成 $\dfrac{4-3}{v}=\dfrac{1}{v}$，就會得出 $u=2v$ 這種不存在的選項。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{2v}{4v-3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{3}{a}+\dfrac{2}{b}=5$，則 $a=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{3b}{5b-2}$</li><li><span class="ol">B</span>$\dfrac{3b}{2-5b}$</li><li><span class="ol">C</span>$\dfrac{2b}{5b-3}$</li><li><span class="ol">D</span>$\dfrac{2b}{3-5b}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\dfrac{3}{a}=5-\dfrac{2}{b}=\dfrac{5b-2}{b}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 取倒數：$\dfrac{a}{3}=\dfrac{b}{5b-2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $a=\dfrac{3b}{5b-2}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{3b}{5b-2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

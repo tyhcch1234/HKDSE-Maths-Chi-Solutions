@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第17題 · 三角形面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第17題</span>
+    <h1>兩邊各按比例分，面積也按比例分</h1>
+    <p class="sub">幾何 · 三角形面積公式與比率</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$M$、$N$ 分別為 $PQ$、$QR$ 上的點，使 $PM:MQ=5:6$ 及 $QN:NR=3:4$。若四邊形 $MNRP$ 的面積為 $59\text{ cm}^{2}$，求 $\triangle MNQ$ 的面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$17\text{ cm}^{2}$</li><li><span class="ol">B</span>$18\text{ cm}^{2}$</li><li><span class="ol">C</span>$19\text{ cm}^{2}$</li><li><span class="ol">D</span>$20\text{ cm}^{2}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 320 230" width="320" height="230" role="img" aria-label="三角形 PQR，M 在 PQ，N 在 QR" style="max-width:100%;height:auto;">
+        <path d="M40 200 L280 200 L210 45 Z" fill="currentColor" fill-opacity="0.06" stroke="none"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M40 200 L280 200 L210 45 Z"/>
+          <line x1="40" y1="200" x2="205.5" y2="128.2"/>
+          <line x1="280" y1="200" x2="195.7" y2="86.4"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="40" cy="200" r="2.8"/><circle cx="280" cy="200" r="2.8"/><circle cx="210" cy="45" r="2.8"/>
+          <circle cx="149.1" cy="169.1" r="2.8"/><circle cx="243.9" cy="151.2" r="2.8"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="26" y="216">P</text>
+          <text x="286" y="216">Q</text>
+          <text x="204" y="35">R</text>
+          <text x="140" y="188">M</text>
+          <text x="250" y="166">N</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11" font-style="normal">
+          <text x="88" y="176" >5</text>
+          <text x="182" y="180">6</text>
+          <text x="266" y="126">3</text>
+          <text x="252" y="70">4</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$M$ 在 $PQ$ 上、$N$ 在 $QR$ 上）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把比化成「份數」</div>
+      <div class="rule">
+        <span class="rule-name">比例的表示</span>
+        把 $PM:MQ=5:6$ 寫成 $PM=5h$、$MQ=6h$，則 $PQ=11h$。
+      </div>
+      <p>$PM=5h$、$MQ=6h$、$QN=3k$、$NR=4k$，故 $PQ=11h$、$QR=7k$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用「兩邊夾角」寫出兩個三角形面積</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積公式</span>
+        $S=\dfrac{1}{2}ab\sin C$，其中 $a$、$b$ 是夾著角 $C$ 的兩邊。
+      </div>
+      <p>設 $\angle PQR=\theta$，則</p>
+      <p>$$S_{\triangle PRQ}=\frac{1}{2}(11h)(7k)\sin\theta=\frac{77}{2}hk\sin\theta$$</p>
+      <p>$$S_{\triangle MNQ}=\frac{1}{2}(6h)(3k)\sin\theta=9hk\sin\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">四邊形＝大三角形 − 小三角形</div>
+      <div class="rule">
+        <span class="rule-name">面積分割</span>
+        四邊形 $MNRP$ 就是 $\triangle PRQ$ 減去 $\triangle MNQ$。
+      </div>
+      <p>$$S_{MNRP}=\frac{77}{2}hk\sin\theta-9hk\sin\theta=\frac{59}{2}hk\sin\theta$$</p>
+      <p>已知 $S_{MNRP}=59$：</p>
+      <p>$$\frac{59}{2}hk\sin\theta=59\quad\Longrightarrow\quad hk\sin\theta=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代回求 $\triangle MNQ$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">代入</span>
+        求得 $hk\sin\theta$ 後，直接代入小三角形的表達式。
+      </div>
+      <p>$$S_{\triangle MNQ}=9hk\sin\theta=9\times 2=18\text{ cm}^{2}$$</p>
+      <p>答案為 <b>B</b>。</p>
+      <p>易錯：把 $PM:MQ=5:6$ 當成 $MQ:PQ=5:11$；$MQ$ 佔 $PQ$ 的 $\dfrac{6}{11}$，不是 $\dfrac{5}{11}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$18\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$M$、$N$ 分別為 $PQ$、$QR$ 上的點，使 $PM:MQ=3:4$ 及 $QN:NR=2:5$。若四邊形 $MNRP$ 的面積為 $41\text{ cm}^{2}$，求 $\triangle MNQ$ 的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$6\text{ cm}^{2}$</li><li><span class="ol">B</span>$8\text{ cm}^{2}$</li><li><span class="ol">C</span>$10\text{ cm}^{2}$</li><li><span class="ol">D</span>$12\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $PQ=7h$、$QR=7k$，故 $S_{\triangle PRQ}=\dfrac{49}{2}hk\sin\theta$。</div>
+          <div class="p-step"><b>第 2 步.</b> $S_{\triangle MNQ}=\dfrac{1}{2}(4h)(2k)\sin\theta=4hk\sin\theta$。</div>
+          <div class="p-step"><b>第 3 步.</b> 面積差 $=\dfrac{41}{2}hk\sin\theta=41$，得 $hk\sin\theta=2$。</div>
+          <div class="p-step"><b>第 4 步.</b> $S_{\triangle MNQ}=4\times 2=8\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$8\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

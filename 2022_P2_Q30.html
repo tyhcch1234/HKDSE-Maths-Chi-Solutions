@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第30題 · 平均數與中位數的限制</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第30題</span>
+    <h1>先收窄 $x$ 的可能值，再逐個檢驗</h1>
+    <p class="sub">統計學 · 平均數、中位數、眾數、分佈域與方差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下正整數：
+      $$2,\ 5,\ 6,\ 6,\ x,\ x,\ x,\ y$$
+      若上述正整數的平均數與中位數均為 $6$，下列哪些必定正確？
+      <br>I. 上述正整數的眾數為 $6$。
+      <br>II. 上述正整數的最小可能分佈域為 $6$。
+      <br>III. 上述正整數的最大可能方差為 $6$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平均數建立關係</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        平均 $=\dfrac{\text{總和}}{8}=6$，故總和為 $48$。
+      </div>
+      <p>$$2+5+6+6+3x+y=48\quad\Longrightarrow\quad y=29-3x$$</p>
+      <p>因 $y>0$，$29-3x>0$，得 $x\le 9$（$x$ 為正整數）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用中位數收窄 $x$ 的範圍</div>
+      <div class="rule">
+        <span class="rule-name">中位數</span>
+        8 個數據的中位數是第 4、5 個的平均。
+      </div>
+      <p>若 $x\le 5$，則 $y=29-3x\ge 14$，排序後第 4、5 個都是 $x$ 或 $5$ 級別的數，中位數不可能等於 $6$。</p>
+      <p>故 $6\le x\le 9$。逐一列出：</p>
+      <p>$$x=6:y=11;\quad x=7:y=8;\quad x=8:y=5;\quad x=9:y=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">篩走中位數不是 $6$ 的情況</div>
+      <div class="rule">
+        <span class="rule-name">中位數檢驗</span>
+        排序後看第 4、5 個數的平均是否為 $6$。
+      </div>
+      <p>$x=6,y=11$：$2,5,6,6,6,6,6,11$，中位數 $=6$ ✓</p>
+      <p>$x=7,y=8$：$2,5,6,6,7,7,7,8$，中位數 $=6.5$ ✗</p>
+      <p>$x=8,y=5$：$2,5,5,6,6,8,8,8$，中位數 $=6$ ✓</p>
+      <p>$x=9,y=2$：$2,2,5,6,6,9,9,9$，中位數 $=6$ ✓</p>
+      <p>所以只餘三個可能情況。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">逐項判斷</div>
+      <div class="rule">
+        <span class="rule-name">眾數、分佈域、方差</span>
+        眾數是出現次數最多的值；分佈域 $=$ 最大 $-$ 最小；方差 $=\dfrac{\sum(x-\mu)^{2}}{N}$。
+      </div>
+      <p>I：$x=8$ 時眾數為 $8$（出現 3 次），$x=9$ 時眾數為 $9$，所以眾數不一定是 $6$，I 錯誤。</p>
+      <p>II：三個情況的分佈域分別為 $11-2=9$、$8-2=6$、$9-2=7$，最小是 $6$，II 正確。</p>
+      <p>III：方差分別為 $5.25$、$3.75$、$7.5$，最大是 $7.5$ 而不是 $6$，III 錯誤。</p>
+      <p>答案為 <b>B</b>（只有 II）。</p>
+      <p>易錯：只檢查 II 便作答，沒有真正計算方差；III 的 $7.5$ 與 $6$ 很接近，必須實算。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把一組數據的每個值乘以 $-2$ 後再加 $5$。若原數據的平均數為 $\mu$、標準差為 $\sigma$、四分位數間距為 $I$，下列哪些必定正確？
+      <br>I. 新平均數為 $-2\mu+5$
+      <br>II. 新標準差為 $2\sigma$
+      <br>III. 新的四分位數間距為 $2I$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 線性變換 $ax+b$：平均變為 $a\mu+b$，故新平均 $=-2\mu+5$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 標準差只受 $|a|$ 影響，新標準差 $=|-2|\sigma=2\sigma$，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 四分位數間距同樣乘 $|a|$，新 IQR $=2I$，III 正確。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q29.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q31.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

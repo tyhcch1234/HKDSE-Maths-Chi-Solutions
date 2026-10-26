@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第33題 · 對數方程組</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第33題</span>
+    <h1>把 $\log_4 y$ 當成一個未知數</h1>
+    <p class="sub">指數定律、指數函數與對數函數 · 對數方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\log_4 y=2x-1$ 且 $\left(\log_4 y\right)^{2}=20x-31$，則 $\log_2 y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$ 或 $2$</li><li><span class="ol">B</span>$2$ 或 $4$</li><li><span class="ol">C</span>$3$ 或 $7$</li><li><span class="ol">D</span>$6$ 或 $14$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">代入消去 $\log_4 y$</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        第二條方程同時含 $\log_4 y$ 與 $x$，把第一條代入即可。
+      </div>
+      <p>$$(2x-1)^{2}=20x-31$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開並解二次方程</div>
+      <div class="rule">
+        <span class="rule-name">二次方程</span>
+        展開後移項，因式分解或公式法求解。
+      </div>
+      <p>$$4x^{2}-4x+1=20x-31$$</p>
+      <p>$$4x^{2}-24x+32=0\quad\Longrightarrow\quad x^{2}-6x+8=0$$</p>
+      <p>$$(x-2)(x-4)=0\quad\Longrightarrow\quad x=2\ \text{或}\ x=4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求對應的 $\log_4 y$</div>
+      <div class="rule">
+        <span class="rule-name">代回</span>
+        $\log_4 y=2x-1$。
+      </div>
+      <p>$x=2$：$\log_4 y=3$，即 $y=4^{3}=64$。</p>
+      <p>$x=4$：$\log_4 y=7$，即 $y=4^{7}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把底數由 4 轉為 2</div>
+      <div class="rule">
+        <span class="rule-name">換底</span>
+        $\log_2 y=\dfrac{\log_4 y}{\log_4 2}=2\log_4 y$（因為 $\log_4 2=\dfrac{1}{2}$）。
+      </div>
+      <p>$$\log_2 y=2\times 3=6\quad\text{或}\quad 2\times 7=14$$</p>
+      <p>答案為 <b>D</b>（$6$ 或 $14$）。</p>
+      <p>易錯：求出 $x=2,4$ 就以為完成，直接答「$2$ 或 $4$」（選項 B）；題目問的是 $\log_2 y$，還要換底及乘 $2$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$6$ 或 $14$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\log_3 y=2x-1$ 且 $\left(\log_3 y\right)^{2}=8x-7$，則 $\log_3 y=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$ 或 $2$</li><li><span class="ol">B</span>$1$ 或 $3$</li><li><span class="ol">C</span>$2$ 或 $3$</li><li><span class="ol">D</span>$3$ 或 $5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入：$(2x-1)^{2}=8x-7$，展開得 $4x^{2}-12x+8=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡 $x^{2}-3x+2=0$，得 $x=1$ 或 $x=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\log_3 y=2x-1$，故為 $1$ 或 $3$。</div>
+          <div class="p-ans">答案：<b>B</b>（$1$ 或 $3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q34.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

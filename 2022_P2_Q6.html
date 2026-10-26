@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第6題 · 下捨入與有效數字</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第6題</span>
+    <h1>「捨去」不等於「四捨五入」</h1>
+    <p class="sub">估算、近似與誤差 · 下捨入與有效數字</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $x$ 為實數。若把 $x$ 下捨入（rounded down）至 3 位有效數字，結果為 $345$，求 $x$ 的取值範圍。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$344<x\le 345$</li><li><span class="ol">B</span>$345\le x<346$</li><li><span class="ol">C</span>$345<x\le 345.5$</li><li><span class="ol">D</span>$344.5\le x<345.5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">弄清「下捨入」的意思</div>
+      <div class="rule">
+        <span class="rule-name">下捨入</span>
+        截去第 3 位有效數字之後的所有數字，<b>不會</b>因第 4 位數字而進位。
+      </div>
+      <p>要把 $x$ 下捨入成 $345$，$x$ 的前三位有效數字必須是 $3$、$4$、$5$，即 $x$ 介乎 $345$ 與 $346$ 之間。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">決定下界：可不可以等於 $345$？</div>
+      <div class="rule">
+        <span class="rule-name">端點檢查</span>
+        把端點值直接代入規則，看結果是否仍然正確。
+      </div>
+      <p>$x=345$ 本身下捨入至 3 位有效數字，仍然是 $345$（後面全是 0），所以下界<b>包括</b> $345$。</p>
+      <p>$$x\ge 345$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">決定上界：可不可以等於 $346$？</div>
+      <div class="rule">
+        <span class="rule-name">上界</span>
+        一旦到達 $346$，前三位有效數字已變成 $3$、$4$、$6$，不符合要求。
+      </div>
+      <p>所以 $x$ 必須<b>小於</b> $346$，但可以任意接近 $346$（例如 $345.999$）。</p>
+      <p>$$345\le x<346$$</p>
+      <p>答案為 <b>B</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較「下捨入」與「四捨五入」</div>
+      <div class="rule">
+        <span class="rule-name">兩者分別</span>
+        四捨五入要考慮下一位數字；下捨入只看要保留的部分。
+      </div>
+      <p>若是四捨五入至 3 位有效數字得 $345$，範圍會是 $344.5\le x<345.5$（選項 D）。題目寫明「下捨入」，所以 D 不正確。</p>
+      <p>易錯：一見到「3 位有效數字」就直覺用 $\pm 0.5$ 的區間，忽略「down」這個字。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$345\le x<346$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若把 $y$ 下捨入至 4 位有效數字，結果為 $3.142$，求 $y$ 的取值範圍。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3.1415\le y<3.1425$</li><li><span class="ol">B</span>$3.142\le y<3.143$</li><li><span class="ol">C</span>$3.142<y\le 3.143$</li><li><span class="ol">D</span>$3.1415<y\le 3.1425$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 下捨入至 4 位有效數字得 $3.142$，前三／四位有效數字須為 $3,1,4,2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 下界包括 $3.142$；上界為 $3.143$（不包括）。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $3.142\le y<3.143$。</div>
+          <div class="p-ans">答案：<b>B</b>（$3.142\le y<3.143$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

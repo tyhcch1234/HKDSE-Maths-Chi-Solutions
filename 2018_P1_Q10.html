@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第10題 · 箱形圖讀數＋合併後範圍的判斷</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第10題</span>
+    <h1>箱形圖讀數＋合併後範圍的判斷</h1>
+    <p class="sub">統計學 · 箱形圖與範圍</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+以下的箱形圖顯示某公司 $X$ 組職員年齡的分佈。已知該分佈的範圍及四分位數間距分別為 $43$ 及 $21$。圖中下四分位數為 $27$、中位數為 $38$、上四分位數為 $a$、下極值為 $19$、上極值為 $b$（單位：歲）。
+<br>(a) 求 $a$ 及 $b$。
+<br>(b) 公司 $Y$ 組有 5 名職員，其中 3 人的年齡為 $38$。已知 $Y$ 組年齡的範圍為 $20$。現把 $X$ 組與 $Y$ 組合併成一部門。經理聲稱：該部門年齡的範圍必定與 $X$ 組的年齡範圍相同。你是否同意？試解釋。<span class="marks">[5 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 380 130" width="380" height="130" role="img" aria-label="箱形圖">
+  <g stroke="currentColor" stroke-width="1.4" fill="none">
+    <line x1="40" y1="90" x2="350" y2="90"/>
+    <line x1="70" y1="55" x2="70" y2="70"/>
+    <line x1="70" y1="70" x2="120" y2="70"/>
+    <rect x="120" y="50" width="130" height="40"/>
+    <line x1="185" y1="50" x2="185" y2="90"/>
+    <line x1="250" y1="70" x2="300" y2="70"/>
+    <line x1="300" y1="55" x2="300" y2="70"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+    <text x="66" y="106" text-anchor="middle">19</text>
+    <text x="120" y="106" text-anchor="middle">27</text>
+    <text x="185" y="106" text-anchor="middle">38</text>
+    <text x="250" y="106" text-anchor="middle">a</text>
+    <text x="300" y="106" text-anchor="middle">b</text>
+    <text x="330" y="106">年齡</text>
+  </g>
+</svg><figcaption>圖：$X$ 組年齡的箱形圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用四分位數間距求 $a$</div>
+      <div class="rule"><span class="rule-name">四分位數間距</span>$\text{IQR}=Q_{3}-Q_{1}$。</div>
+<p>$$a-27=21\;\Rightarrow\;a=48$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用範圍求 $b$</div>
+      <div class="rule"><span class="rule-name">範圍</span>範圍 $=$ 最大值 $-$ 最小值。</div>
+<p>$$b-19=43\;\Rightarrow\;b=62$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) $Y$ 組年齡的極端值</div>
+<p>$Y$ 組有三人同為 $38$ 歲，範圍為 $20$。若 $38$ 是最大值，則最小值可低至 $38-20=18$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合併後範圍最大可以是 $44$</div>
+<p>合併後最小值可為 $\min(19,18)=18$，最大值為 $\max(62,38)=62$，故範圍最大可達</p>
+<p>$$62-18=44\neq43$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">結論</div>
+<p>既然可出現 $44$，經理的說法不成立，故<strong>不同意</strong>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $a=48$，$b=62$　(b) 不同意（合併後範圍可為 $62-18=44$）</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據的箱形圖顯示：最小值 $12$、下四分位數 $18$、中位數 $25$、上四分位數 $32$、最大值 $45$。求該分佈的四分位數間距及範圍。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>IQR $=14$，範圍 $=33$</li><li><span class="ol">B</span>IQR $=14$，範圍 $=27$</li><li><span class="ol">C</span>IQR $=21$，範圍 $=33$</li><li><span class="ol">D</span>IQR $=7$，範圍 $=20$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> IQR $=Q_{3}-Q_{1}=32-18=14$。</div>
+          <div class="p-step"><b>第 2 步.</b> 範圍 $=45-12=33$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 IQR $=14$、範圍 $=33$。</div>
+          <div class="p-ans">答案：<b>A</b>（IQR $=14$，範圍 $=33$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

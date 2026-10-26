@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第13題 · 變分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第13題</span>
+    <h1>先把文字變成方程式</h1>
+    <p class="sub">率、比及變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $u$ 隨 $\sqrt{v}$ 正變，並隨 $w$ 反變，則下列哪些正確？
+      <br>I. $u^{2}$ 隨 $v$ 正變，並隨 $w^{2}$ 反變。
+      <br>II. $v$ 隨 $w$ 正變，並隨 $\sqrt{u}$ 反變。
+      <br>III. $w$ 隨 $\sqrt{v}$ 正變，並隨 $u$ 反變。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「正變、反變」寫成一條方程</div>
+      <div class="rule">
+        <span class="rule-name">變分表示法</span>
+        $u$ 隨 $x$ 正變寫成 $u=kx$；隨 $w$ 反變寫成 $u=\dfrac{k}{w}$。
+      </div>
+      <p>$$u=\frac{k\sqrt{v}}{w}\qquad(k\neq 0\ \text{為常數})$$</p>
+      <p>之後所有判斷都只是把這條方程變形。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">驗 I：兩邊平方</div>
+      <div class="rule">
+        <span class="rule-name">平方</span>
+        兩邊平方，常數 $k^{2}$ 仍是常數，不影響正變／反變的判斷。
+      </div>
+      <p>$$u^{2}=\frac{k^{2}v}{w^{2}}$$</p>
+      <p>即 $u^{2}\propto\dfrac{v}{w^{2}}$：隨 $v$ 正變、隨 $w^{2}$ 反變，I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">驗 II：把 $v$ 變成主項</div>
+      <div class="rule">
+        <span class="rule-name">主項變換</span>
+        把方程改寫成 $v=\ldots$，才可直接讀出 $v$ 與其他量的關係。
+      </div>
+      <p>$$uw=k\sqrt{v}\quad\Longrightarrow\quad v=\frac{u^{2}w^{2}}{k^{2}}$$</p>
+      <p>即 $v\propto u^{2}w^{2}$，與「隨 $w$ 正變、隨 $\sqrt{u}$ 反變」不符，II 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗 III：把 $w$ 變成主項</div>
+      <div class="rule">
+        <span class="rule-name">主項變換</span>
+        $w=\dfrac{k\sqrt{v}}{u}$ 表示 $w$ 隨 $\sqrt{v}$ 正變、隨 $u$ 反變。
+      </div>
+      <p>$$w=\frac{k\sqrt{v}}{u}$$</p>
+      <p>III 正確。所以只有 I 及 III 正確，答案為 <b>B</b>。</p>
+      <p>易錯：把 $u^{2}=\dfrac{k^{2}v}{w^{2}}$ 讀成「$u^{2}$ 隨 $w$ 反變」；分母是 $w^{2}$，才是隨 $w^{2}$ 反變。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $u$ 隨 $v^{2}$ 正變，並隨 $\sqrt{w}$ 反變，則下列哪些正確？
+      <br>I. $u^{2}$ 隨 $v^{4}$ 正變，並隨 $w$ 反變。
+      <br>II. $w$ 隨 $v^{4}$ 正變，並隨 $u^{2}$ 反變。
+      <br>III. $v$ 隨 $u$ 正變，並隨 $w$ 反變。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $u=\dfrac{kv^{2}}{\sqrt{w}}$，平方得 $u^{2}=\dfrac{k^{2}v^{4}}{w}$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $u^{2}w=k^{2}v^{4}$ 得 $w=\dfrac{k^{2}v^{4}}{u^{2}}$，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $v^{2}=\dfrac{u\sqrt{w}}{k}$，$v$ 並非隨 $u$ 正變、隨 $w$ 反變，III 錯誤。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第9題 · 行程問題：時間單位要統一</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第9題</span>
+    <h1>行程問題：時間單位要統一</h1>
+    <p class="sub">方程 · 速度、時間與距離</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某汽車由城市 $P$ 以平均速度 $72\text{ km/h}$ 駛往城市 $Q$，再以平均速度 $90\text{ km/h}$ 由 $Q$ 駛往城市 $R$。已知全程 $210\text{ km}$，共用了 $161$ 分鐘。求由 $P$ 往 $Q$ 所需的時間。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數</div>
+<p>設由 $P$ 往 $Q$ 需 $x$ 分鐘，則由 $Q$ 往 $R$ 需 $(161-x)$ 分鐘。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把分鐘化為小時</div>
+      <div class="rule"><span class="rule-name">單位</span>速度以 km/h 為單位，時間要用小時。</div>
+<p>$$\frac{x}{60}\ \text{h}\quad\text{及}\quad\frac{161-x}{60}\ \text{h}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">距離＝速度 × 時間</div>
+      <div class="rule"><span class="rule-name">行程公式</span>$d=vt$。</div>
+<p>$$72\left(\frac{x}{60}\right)+90\left(\frac{161-x}{60}\right)=210$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解方程</div>
+<p>全式乘 $60$：</p>
+<p>$$72x+90(161-x)=12600$$</p>
+<p>$$72x+14490-90x=12600$$</p>
+<p>$$-18x=-1890\;\Rightarrow\;x=105$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗算</div>
+<p>$72\times\dfrac{105}{60}=126$ km，$90\times\dfrac{56}{60}=84$ km，合共 $210$ km ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$105$ 分鐘（即 1 小時 45 分）</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某人先以 $60\text{ km/h}$ 行駛 $t$ 分鐘，再以 $80\text{ km/h}$ 行駛 $45$ 分鐘，全程 $95\text{ km}$。求 $t$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$35$</li><li><span class="ol">B</span>$40$</li><li><span class="ol">C</span>$45$</li><li><span class="ol">D</span>$50$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $60\cdot\dfrac{t}{60}+80\cdot\dfrac{45}{60}=95$。</div>
+          <div class="p-step"><b>第 2 步.</b> $t+60=95$。</div>
+          <div class="p-step"><b>第 3 步.</b> $t=35$。</div>
+          <div class="p-ans">答案：<b>A</b>（$35$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

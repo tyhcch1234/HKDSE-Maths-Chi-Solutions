@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第18題 · 相似直角三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第18題</span>
+    <h1>一條直線，兩個相似三角形</h1>
+    <p class="sub">幾何 · 相似三角形與畢氏定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，長方形 $ABCD$ 的周界為 $170\text{ cm}$。已知 $EBF$ 是一條直線，且 $\angle AEB=\angle BFC=90^{\circ}$。若 $AE=24\text{ cm}$、$BC=34\text{ cm}$，求 $EF$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$45\text{ cm}$</li><li><span class="ol">B</span>$51\text{ cm}$</li><li><span class="ol">C</span>$61\text{ cm}$</li><li><span class="ol">D</span>$75\text{ cm}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 360 240" width="360" height="240" role="img" aria-label="長方形 ABCD，直線 E-B-F 穿過 B，E、F 處為直角" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="70" y="60" width="180" height="120"/>
+          <line x1="160" y1="22" x2="320" y2="176"/>
+          <line x1="70" y1="60" x2="160" y2="22"/>
+          <line x1="250" y1="180" x2="320" y2="176"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1.1" fill="none">
+          <path d="M154 32 L163 41 L154 50"/>
+          <path d="M300 174 L306 165 L315 174"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="60" y="56" text-anchor="end">A</text>
+          <text x="256" y="56" text-anchor="start">B</text>
+          <text x="256" y="194" text-anchor="start">C</text>
+          <text x="60" y="194" text-anchor="end">D</text>
+          <text x="150" y="16" text-anchor="end">F</text>
+          <text x="330" y="186" text-anchor="start">E</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11" font-style="normal">
+          <text x="106" y="52">24</text>
+          <text x="266" y="126">34</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$E$、$B$、$F$ 共線，$\angle AEB=\angle BFC=90^{\circ}$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用周界求 $AB$</div>
+      <div class="rule">
+        <span class="rule-name">長方形性質</span>
+        對邊相等：$AB=CD$、$AD=BC=34$；周界 $=2(AB+BC)$。
+      </div>
+      <p>$$2(AB+34)=170\quad\Longrightarrow\quad AB+34=85\quad\Longrightarrow\quad AB=51\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ABE$ 用畢氏定理求 $BE$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        $\angle AEB=90^{\circ}$，所以 $AB$ 是斜邊：$AB^{2}=AE^{2}+BE^{2}$。
+      </div>
+      <p>$$BE=\sqrt{51^{2}-24^{2}}=\sqrt{2601-576}=\sqrt{2025}=45\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明 $\triangle ABE\sim\triangle BCF$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（AA）</span>
+        兩個角分別相等，第三個角自動相等。
+      </div>
+      <p>設 $\angle ABE=x$。由於 $EBF$ 是直線，$\angle CBF=180^{\circ}-90^{\circ}-x=90^{\circ}-x$。</p>
+      <p>在 $\triangle BCF$ 中，$\angle BCF=180^{\circ}-90^{\circ}-(90^{\circ}-x)=x=\angle ABE$。</p>
+      <p>加上 $\angle AEB=\angle BFC=90^{\circ}$，故 $\triangle ABE\sim\triangle BCF$（AA）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用對應邊求 $BF$，再相加</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形對應邊</span>
+        $\dfrac{BF}{AE}=\dfrac{BC}{AB}$（$BF$ 與 $AE$ 都是「對著直角」的邊）。
+      </div>
+      <p>$$\frac{BF}{24}=\frac{34}{51}\quad\Longrightarrow\quad BF=24\times\frac{2}{3}=16\text{ cm}$$</p>
+      <p>$$EF=EB+BF=45+16=61\text{ cm}$$</p>
+      <p>答案為 <b>C</b>。</p>
+      <p>易錯：把 $BF$ 與 $BE$ 的對應關係弄錯，或忘記 $EF=EB+BF$（$B$ 在 $E$、$F$ 之間）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$61\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 長方形 $ABCD$ 的周界為 $210\text{ cm}$，$BC=45\text{ cm}$。$EBF$ 是一條直線，$\angle AEB=\angle BFC=90^{\circ}$，且 $AE=36\text{ cm}$。求 $EF$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$60\text{ cm}$</li><li><span class="ol">B</span>$72\text{ cm}$</li><li><span class="ol">C</span>$75\text{ cm}$</li><li><span class="ol">D</span>$84\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $2(AB+45)=210$，得 $AB=60$。</div>
+          <div class="p-step"><b>第 2 步.</b> $BE=\sqrt{60^{2}-36^{2}}=48$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle ABE\sim\triangle BCF$，$\dfrac{BF}{36}=\dfrac{45}{60}$，得 $BF=27$。</div>
+          <div class="p-step"><b>第 4 步.</b> $EF=48+27=75\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$75\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

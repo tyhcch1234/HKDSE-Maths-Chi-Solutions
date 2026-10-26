@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第36題 · 線性規劃</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第36題</span>
+    <h1>最小值一定出現在頂點</h1>
+    <p class="sub">不等式與線性規劃 · 可行域與目標函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下不等式組：
+      $$\begin{cases}2x+y\ge 8\\ 2x+3y\ge 16\\ 4x+3y\le 22\end{cases}$$
+      設 $R$ 為上述不等式組的解所代表的區域。若 $(x,y)$ 為 $R$ 內的一點，求 $7x+6y$ 的最小值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$32$</li><li><span class="ol">B</span>$38$</li><li><span class="ol">C</span>$41$</li><li><span class="ol">D</span>$43$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 330 240" width="330" height="240" role="img" aria-label="三條邊界線圍成的可行域 R" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <line x1="40" y1="200" x2="300" y2="200"/>
+          <line x1="50" y1="20" x2="50" y2="220"/>
+        </g>
+        <path d="M130 90 L170 110 L90 30 Z" fill="currentColor" fill-opacity="0.12" stroke="none"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="30" y1="120" x2="250" y2="200"/>
+          <line x1="30" y1="220" x2="250" y2="45"/>
+          <line x1="30" y1="60" x2="270" y2="200"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="130" cy="90" r="3"/><circle cx="170" cy="110" r="3"/><circle cx="90" cy="30" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11" font-style="italic">
+          <text x="118" y="82">A</text>
+          <text x="176" y="106">B</text>
+          <text x="84" y="22">C</text>
+          <text x="150" y="80" font-size="10">R</text>
+          <text x="255" y="52" font-size="10">2x+3y=16</text>
+          <text x="250" y="150" font-size="10">2x+y=8</text>
+          <text x="258" y="188" font-size="10">4x+3y=22</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$R$ 為三條邊界線圍成的三角形區域）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先看清區域的邊界</div>
+      <div class="rule">
+        <span class="rule-name">可行域</span>
+        $x,y\ge 0$ 時，兩條「$\ge$」把區域推向上方，一條「$\le$」封住右上，形成三角形。
+      </div>
+      <p>三條邊界線兩兩相交，得出三個頂點。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解方程組求頂點</div>
+      <div class="rule">
+        <span class="rule-name">聯立方程</span>
+        每兩條邊界線解一次，取符合第三條不等式的交點。
+      </div>
+      <p>$2x+y=8$ 與 $2x+3y=16$：相減得 $2y=8$，$y=4$，$x=2$ → $A(2,4)$</p>
+      <p>$2x+3y=16$ 與 $4x+3y=22$：相減得 $2x=6$，$x=3$，$y=\dfrac{10}{3}$ → $B\left(3,\dfrac{10}{3}\right)$</p>
+      <p>$2x+y=8$ 與 $4x+3y=22$：由第一式 $y=8-2x$ 代入，$4x+24-6x=22$，得 $x=1$、$y=6$ → $C(1,6)$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把三個頂點代入目標函數</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃基本定理</span>
+        線性目標函數在可行域（多邊形）上的最大值與最小值，必在頂點取得。
+      </div>
+      <p>$$A(2,4):\ 7(2)+6(4)=14+24=38$$</p>
+      <p>$$B\left(3,\tfrac{10}{3}\right):\ 7(3)+6\left(\tfrac{10}{3}\right)=21+20=41$$</p>
+      <p>$$C(1,6):\ 7(1)+6(6)=7+36=43$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取最小</div>
+      <div class="rule">
+        <span class="rule-name">比較</span>
+        $38<41<43$，最小值為 $38$。
+      </div>
+      <p>答案為 <b>B</b>（$38$）。</p>
+      <p>易錯：只試 $A$、$C$ 兩個「看起來像角」的點，漏掉 $B$；或把目標函數的係數代入錯行，例如把 $7x+6y$ 算成 $6x+7y$（在 $A$ 點得 $40$，沒有這個選項）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$38$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮不等式組 $2x+y\ge 8$、$2x+3y\ge 16$、$4x+3y\le 22$。若 $(x,y)$ 在可行域內，求 $5x+4y$ 的最小值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$26$</li><li><span class="ol">B</span>$28$</li><li><span class="ol">C</span>$29$</li><li><span class="ol">D</span>$32$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 頂點同為 $A(2,4)$、$B\left(3,\dfrac{10}{3}\right)$、$C(1,6)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A$：$10+16=26$；$B$：$15+\dfrac{40}{3}\approx 28.3$；$C$：$5+24=29$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最小值 $26$，在 $A$ 取得。</div>
+          <div class="p-ans">答案：<b>A</b>（$26$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q37.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

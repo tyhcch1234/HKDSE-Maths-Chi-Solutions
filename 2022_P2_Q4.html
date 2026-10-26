@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第4題 · 用因式分解解二次方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第4題</span>
+    <h1>千萬不要兩邊一齊除 $(x-4c)$</h1>
+    <p class="sub">方程 · 因式分解法解二次方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $c$ 為常數。解方程
+      $$(x-c)(x-4c)=(3c-x)(x-4c)$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=2c$</li><li><span class="ol">B</span>$x=3c$</li><li><span class="ol">C</span>$x=c$ 或 $x=3c$</li><li><span class="ol">D</span>$x=2c$ 或 $x=4c$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">全部移到同一邊，不要相除</div>
+      <div class="rule">
+        <span class="rule-name">零積性質</span>
+        $AB=0$ 才可寫成 $A=0$ 或 $B=0$；兩邊同除一個可能為零的因式會漏解。
+      </div>
+      <p>$$(x-c)(x-4c)-(3c-x)(x-4c)=0$$</p>
+      <p>兩項都含有公因式 $(x-4c)$，可以提出來。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">提出公因式 $(x-4c)$</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        $AB-AC=A(B-C)$。
+      </div>
+      <p>$$(x-4c)\big[(x-c)-(3c-x)\big]=0$$</p>
+      <p>化簡中括號：</p>
+      <p>$$(x-c)-(3c-x)=x-c-3c+x=2x-4c$$</p>
+      <p>$$(x-4c)(2x-4c)=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分別令每個因式等於零</div>
+      <div class="rule">
+        <span class="rule-name">零積性質</span>
+        若 $AB=0$，則 $A=0$ 或 $B=0$。
+      </div>
+      <p>$$x-4c=0 \quad\text{或}\quad 2x-4c=0$$</p>
+      <p>$$x=4c \quad\text{或}\quad x=2c$$</p>
+      <p>答案為 <b>D</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入驗算</div>
+      <div class="rule">
+        <span class="rule-name">根的驗算</span>
+        把解代回原方程，左右兩方應相等。
+      </div>
+      <p>取 $c=1$、$x=2$：左方 $=(2-1)(2-4)=-2$，右方 $=(3-2)(2-4)=-2$，相符。取 $x=4$：兩方都是 $0$，亦相符。</p>
+      <p>易錯：一開始兩邊同除 $(x-4c)$，得 $x-c=3c-x$，即 $x=2c$，就會漏掉 $x=4c$ 而選 A。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$x=2c$ 或 $x=4c$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $d$ 為常數。解方程 $(x-2d)(x-5d)=(4d-x)(x-5d)$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x=3d$</li><li><span class="ol">B</span>$x=5d$</li><li><span class="ol">C</span>$x=2d$ 或 $x=5d$</li><li><span class="ol">D</span>$x=3d$ 或 $x=5d$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 移項並提出 $(x-5d)$：$(x-5d)\big[(x-2d)-(4d-x)\big]=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 中括號化簡為 $2x-6d$，即 $(x-5d)(2x-6d)=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=5d$ 或 $x=3d$。</div>
+          <div class="p-ans">答案：<b>D</b>（$x=3d$ 或 $x=5d$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

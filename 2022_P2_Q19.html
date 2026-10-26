@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第19題 · 全等三角形與角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第19題</span>
+    <h1>$AD=CE$ 要翻譯成 $BE=CD$</h1>
+    <p class="sub">幾何 · 全等三角形（SAS）與等邊三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABC$ 是等邊三角形。$D$、$E$ 分別為 $AC$、$BC$ 上的點，使 $AD=CE$。若 $\angle CBD=38^{\circ}$，求 $\angle AEB$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$73^{\circ}$</li><li><span class="ol">B</span>$75^{\circ}$</li><li><span class="ol">C</span>$78^{\circ}$</li><li><span class="ol">D</span>$82^{\circ}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 320 250" width="320" height="250" role="img" aria-label="等邊三角形 ABC，D 在 AC，E 在 BC，連 BD 與 AE" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M160 35 L45 230 L275 230 Z"/>
+          <line x1="160" y1="35" x2="205.8" y2="141.4" stroke-dasharray="0"/>
+          <line x1="45" y1="230" x2="212.1" y2="153.6"/>
+          <line x1="205.8" y1="141.4" x2="275" y2="230"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="160" cy="35" r="2.6"/><circle cx="45" cy="230" r="2.6"/><circle cx="275" cy="230" r="2.6"/>
+          <circle cx="205.8" cy="141.4" r="2.6"/><circle cx="212.1" cy="153.6" r="2.6"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="160" y="24" text-anchor="middle">A</text>
+          <text x="30" y="244">B</text>
+          <text x="282" y="244">C</text>
+          <text x="214" y="132">D</text>
+          <text x="222" y="162">E</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11" font-style="normal">
+          <text x="92" y="228">38°</text>
+        </g>
+        <g fill="none" stroke="currentColor" stroke-width="1"><path d="M62 230 A20 20 0 0 0 70 214"/></g>
+      </svg>
+      <figcaption>示意圖，非按比例（$ABC$ 為等邊三角形，$AD=CE$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出等邊三角形的基本資料</div>
+      <div class="rule">
+        <span class="rule-name">等邊三角形</span>
+        三邊相等，三個內角都是 $60^{\circ}$。
+      </div>
+      <p>$$AB=BC=CA,\qquad \angle ABC=\angle BCA=\angle CAB=60^{\circ}$$</p>
+      <p>因 $E$ 在 $BC$ 上，$\angle ABE=\angle ABC=60^{\circ}$；同理 $\angle BCD=60^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $AD=CE$ 改寫成 $BE=CD$</div>
+      <div class="rule">
+        <span class="rule-name">線段相減</span>
+        同一條邊上，$BE=BC-CE$；配合 $BC=AC$、$CE=AD$ 即可轉換。
+      </div>
+      <p>$$BE=BC-CE=AC-AD=CD$$</p>
+      <p>這一步是整題的關鍵：把「$AD=CE$」變成「$BE=CD$」。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明 $\triangle ABE\cong\triangle BCD$</div>
+      <div class="rule">
+        <span class="rule-name">全等（SAS）</span>
+        兩邊及其夾角相等，兩個三角形全等。
+      </div>
+      <p>在 $\triangle ABE$ 與 $\triangle BCD$ 中：</p>
+      <p>$AB=BC$（等邊三角形）；$BE=CD$（上一步）；$\angle ABE=\angle BCD=60^{\circ}$。</p>
+      <p>$$\therefore\ \triangle ABE\cong\triangle BCD\quad(\text{SAS})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用對應角求 $\angle AEB$</div>
+      <div class="rule">
+        <span class="rule-name">全等三角形的對應角</span>
+        全等三角形中，對應邊所對的角相等。
+      </div>
+      <p>由全等得 $\angle BAE=\angle CBD=38^{\circ}$（$BE$ 與 $CD$ 是對應邊，它們所對的角分別是 $\angle BAE$ 與 $\angle CBD$）。</p>
+      <p>在 $\triangle ABE$ 中：</p>
+      <p>$$\angle AEB=180^{\circ}-60^{\circ}-38^{\circ}=82^{\circ}$$</p>
+      <p>答案為 <b>D</b>。</p>
+      <p>易錯：把 $\angle AEB$ 當成 $\angle ABE$ 的補角，或忘記 $\angle ABE=60^{\circ}$ 而只用 $38^{\circ}$ 計算。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$82^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABC$ 是等邊三角形，$D$、$E$ 分別為 $AC$、$BC$ 上的點，使 $AD=CE$。若 $\angle CBD=25^{\circ}$，求 $\angle AEB$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$85^{\circ}$</li><li><span class="ol">B</span>$90^{\circ}$</li><li><span class="ol">C</span>$95^{\circ}$</li><li><span class="ol">D</span>$100^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $AD=CE$ 得 $BE=CD$，且 $\angle ABE=\angle BCD=60^{\circ}$、$AB=BC$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle ABE\cong\triangle BCD$（SAS），故 $\angle BAE=\angle CBD=25^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle AEB=180^{\circ}-60^{\circ}-25^{\circ}=95^{\circ}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$95^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

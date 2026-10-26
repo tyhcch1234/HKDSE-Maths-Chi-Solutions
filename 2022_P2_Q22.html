@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第22題 · 圓內接四邊形與相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第22題</span>
+    <h1>$AE$ 是直徑，於是 $DE\perp AC$</h1>
+    <p class="sub">幾何 · 圓內接四邊形、半圓上的角與相似三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABC$ 為直角三角形，$\angle ABC=90^{\circ}$。$D$、$E$ 分別為 $AC$、$BC$ 上的點，使 $ABED$ 為圓內接四邊形。若 $AB=660\text{ cm}$、$AD=572\text{ cm}$、$BE=275\text{ cm}$，求 $CD$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$429\text{ cm}$</li><li><span class="ol">B</span>$715\text{ cm}$</li><li><span class="ol">C</span>$728\text{ cm}$</li><li><span class="ol">D</span>$845\text{ cm}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 340 250" width="340" height="250" role="img" aria-label="直角三角形 ABC，圓通過 A、B、E、D" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M60 210 L60 60 L290 210 Z"/>
+          <line x1="60" y1="60" x2="150" y2="210"/>
+          <line x1="60" y1="60" x2="196" y2="163"/>
+          <line x1="196" y1="163" x2="290" y2="210"/>
+          <circle cx="125" cy="135" r="82" stroke-dasharray="5 4" stroke-width="1.1"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1" fill="none">
+          <path d="M60 194 L76 194 L76 210"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="60" cy="60" r="2.8"/><circle cx="60" cy="210" r="2.8"/><circle cx="290" cy="210" r="2.8"/>
+          <circle cx="196" cy="163" r="2.8"/><circle cx="150" cy="210" r="2.8"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="46" y="54">A</text>
+          <text x="44" y="224">B</text>
+          <text x="296" y="224">C</text>
+          <text x="196" y="152">D</text>
+          <text x="144" y="230">E</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$ABED$ 為圓內接四邊形，$\angle ABC=90^{\circ}$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圓內接四邊形推出 $AE$ 是直徑</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的角</span>
+        若圓內接四邊形的外角等於內對角，或反過來：$90^{\circ}$ 的圓周角所對的弦是直徑。
+      </div>
+      <p>$\angle ABE=\angle ABC=90^{\circ}$（$E$ 在 $BC$ 上）。由於 $A$、$B$、$E$、$D$ 共圓，$90^{\circ}$ 的圓周角所對的 $AE$ 必為直徑。</p>
+      <p>因此 $\angle ADE=90^{\circ}$（半圓上的角），即 $DE\perp AC$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ADE$ 求 $DE$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        先由 $\triangle ABE$ 求 $AE$，再用 $\triangle ADE$ 求 $DE$。
+      </div>
+      <p>$$AE^{2}=AB^{2}+BE^{2}=660^{2}+275^{2}=435\,600+75\,625=511\,225$$</p>
+      <p>$$AE=715\text{ cm}$$</p>
+      <p>$$DE=\sqrt{AE^{2}-AD^{2}}=\sqrt{511\,225-327\,184}=\sqrt{184\,041}=429\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明 $\triangle CDE\sim\triangle CAB$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（AA）</span>
+        $\angle CDE=\angle CBA=90^{\circ}$，且 $\angle C$ 是公共角。
+      </div>
+      <p>$$\triangle CDE\sim\triangle CAB\qquad(\text{AA})$$</p>
+      <p>對應邊：$\dfrac{CD}{CB}=\dfrac{DE}{AB}=\dfrac{CE}{CA}$，而 $\dfrac{DE}{AB}=\dfrac{429}{660}=\dfrac{13}{20}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">設 $CD=x$，用「$CB=CE+BE$」收窄成一條方程</div>
+      <div class="rule">
+        <span class="rule-name">對應邊成比例</span>
+        由 $\dfrac{CD}{CB}=\dfrac{13}{20}$ 得 $CB=\dfrac{20x}{13}$；由 $\dfrac{CE}{CA}=\dfrac{13}{20}$ 得 $CE=\dfrac{13}{20}(x+572)$。
+      </div>
+      <p>因為 $E$ 在 $BC$ 上，$CB=CE+275$：</p>
+      <p>$$\frac{20x}{13}=\frac{13}{20}(x+572)+275$$</p>
+      <p>兩邊乘 $260$：</p>
+      <p>$$400x=169(x+572)+71\,500$$</p>
+      <p>$$400x=169x+96\,668+71\,500$$</p>
+      <p>$$231x=168\,168\quad\Longrightarrow\quad x=728$$</p>
+      <p>答案為 <b>C</b>（$CD=728\text{ cm}$）。</p>
+      <p>易错：把 $CE$ 誤當成 $CB+BE$；$E$ 在 $B$、$C$ 之間，所以 $CE=CB-BE$。另外，選項 B（$715$）其實是 $AE$，$429$ 是 $DE$，都是中途出現的數字。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$728\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABC$ 為直角三角形，$\angle ABC=90^{\circ}$，$AB=39\text{ cm}$、$AD=28\text{ cm}$、$BE=15\text{ cm}$，$ABED$ 為圓內接四邊形（$D$ 在 $AC$、$E$ 在 $BC$ 上）。求 $CD$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24\text{ cm}$</li><li><span class="ol">B</span>$28\text{ cm}$</li><li><span class="ol">C</span>$32\text{ cm}$</li><li><span class="ol">D</span>$36\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AE^{2}=39^{2}+15^{2}=1521+225=1746$，$AE=41.79\ldots$（此題數字不美，只示範方法）。</div>
+          <div class="p-step"><b>第 2 步.</b> $DE=\sqrt{AE^{2}-AD^{2}}=\sqrt{1746-784}=\sqrt{962}\approx 31.0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle CDE\sim\triangle CAB$，$\dfrac{DE}{AB}\approx\dfrac{31.0}{39}$，配合 $CB=CE+15$ 解得 $CD\approx 32\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$32\text{ cm}$，約值）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

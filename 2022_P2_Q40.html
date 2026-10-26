@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第40題 · 正方體中兩平面的夾角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第40題</span>
+    <h1>一條公共邊，兩條垂線，就是平面角</h1>
+    <p class="sub">幾何 · 立體圖形中兩平面的夾角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCDEFGH$ 為一正方體。設 $\alpha$ 為 $\triangle AFG$ 與 $\triangle AFH$ 之間的夾角，$\beta$ 為 $\triangle AFH$ 與 $\triangle FGH$ 之間的夾角。下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\alpha<60^{\circ}<\beta$</li><li><span class="ol">B</span>$\alpha<\beta<60^{\circ}$</li><li><span class="ol">C</span>$60^{\circ}<\alpha<\beta$</li><li><span class="ol">D</span>$60^{\circ}<\beta<\alpha$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 270" width="300" height="270" role="img" aria-label="正方體，F 在後下方，A 在其正上方" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M120 60 L250 60 L250 190 L120 190 Z"/>
+          <path d="M120 60 L60 110 L60 240 L120 190"/>
+          <line x1="250" y1="60" x2="190" y2="110"/>
+          <line x1="190" y1="110" x2="60" y2="110" stroke-dasharray="0"/>
+          <line x1="190" y1="110" x2="190" y2="240"/>
+          <line x1="60" y1="240" x2="190" y2="240"/>
+          <line x1="190" y1="240" x2="250" y2="190"/>
+          <line x1="190" y1="240" x2="190" y2="110" stroke-dasharray="4 3"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="120" cy="60" r="3"/><circle cx="120" cy="190" r="3"/>
+          <circle cx="190" cy="110" r="3"/><circle cx="190" cy="240" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12" font-style="italic">
+          <text x="112" y="52" text-anchor="end">A</text>
+          <text x="112" y="204" text-anchor="end">D</text>
+          <text x="196" y="104">F</text>
+          <text x="196" y="254">G</text>
+          <text x="252" y="54">B</text>
+          <text x="252" y="200">C</text>
+          <text x="50" y="254" text-anchor="end">H</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$AF$ 垂直於底面 $EFGH$，$F$、$G$、$H$ 為底面頂點）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先找兩個平面的公共邊</div>
+      <div class="rule">
+        <span class="rule-name">兩平面的夾角</span>
+        在公共邊上取一點，分別在兩個平面內作垂直於公共邊的直線，兩線的夾角就是平面角。
+      </div>
+      <p>$\triangle AFG$ 與 $\triangle AFH$ 的公共邊是 $AF$。</p>
+      <p>在平面 $AFG$ 內，$FG\perp AF$（因為 $AF$ 垂直於底面，而 $FG$ 在底面內）；同理在平面 $AFH$ 內，$FH\perp AF$。</p>
+      <p>所以 $\alpha=\angle GFH$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\alpha$</div>
+      <div class="rule">
+        <span class="rule-name">正方形的對角線</span>
+        底面 $EFGH$ 是正方形，$FH$ 是它的一條對角線，與邊 $FG$ 成 $45^{\circ}$。
+      </div>
+      <p>$$\alpha=\angle GFH=45^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $\beta$：$AF$ 垂直於整個底面</div>
+      <div class="rule">
+        <span class="rule-name">直線垂直於平面</span>
+        若一條直線垂直於平面內兩條相交直線，則它垂直於該平面內所有直線。
+      </div>
+      <p>由圖可見 $AF$ 是正方體的一條豎向棱，垂直於底面 $EFGH$；而 $FH$ 在底面內，所以 $AF\perp FH$。</p>
+      <p>$\triangle AFH$ 與 $\triangle FGH$ 的公共邊是 $FH$。在平面 $AFH$ 內垂直於 $FH$ 的線可取 $AF$；在底面內垂直於 $FH$ 的線與 $AF$ 的夾角，就是兩平面的夾角。</p>
+      <p>既然 $AF$ 垂直於整個底面，它與底面內任何直線都成 $90^{\circ}$，故</p>
+      <p>$$\beta=90^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較</div>
+      <div class="rule">
+        <span class="rule-name">排序</span>
+        $\alpha=45^{\circ}$、$\beta=90^{\circ}$。
+      </div>
+      <p>$$45^{\circ}<60^{\circ}<90^{\circ}\quad\Longrightarrow\quad \alpha<60^{\circ}<\beta$$</p>
+      <p>答案為 <b>A</b>。</p>
+      <p>易錯：把 $\alpha$ 當成 $60^{\circ}$（等邊三角形的角），或把 $\beta$ 誤算成平面 $AFH$ 與平面 $AFG$ 的另一個角。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\alpha<60^{\circ}<\beta$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在正方體 $ABCDEFGH$ 中，$AF$ 垂直於底面 $EFGH$，$FG$ 為底面的一條邊。求平面 $AFG$ 與底面 $EFGH$ 的夾角。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30^{\circ}$</li><li><span class="ol">B</span>$45^{\circ}$</li><li><span class="ol">C</span>$60^{\circ}$</li><li><span class="ol">D</span>$90^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩平面的公共邊是 $FG$；在平面 $AFG$ 內 $AF\perp FG$，在底面內 $FG\perp$ 另一條邊。</div>
+          <div class="p-step"><b>第 2 步.</b> 底面內 $FE\perp FG$；平面 $AFG$ 內 $FA\perp FG$，所以平面角是 $\angle AFE$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AF=FE$（正方體的棱）且 $\angle AFE=90^{\circ}$，故 $\angle AFE=45^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 夾角 $=45^{\circ}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$45^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

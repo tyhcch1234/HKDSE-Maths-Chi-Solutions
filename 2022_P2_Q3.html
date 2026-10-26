@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第3題 · 恆等式比較係數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第3題</span>
+    <h1>左右各自展開，再比較係數</h1>
+    <p class="sub">多項式 · 恆等式與比較係數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $m$、$n$ 為常數，且
+      $$(x+3)^{2}+mx\equiv(x-n)(x+1)+2n$$
+      求 $m$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-14$</li><li><span class="ol">B</span>$-8$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$9$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開左方，合併同類項</div>
+      <div class="rule">
+        <span class="rule-name">完全平方</span>
+        $(a+b)^{2}=a^{2}+2ab+b^{2}$。
+      </div>
+      <p>$$(x+3)^{2}+mx=x^{2}+6x+9+mx=x^{2}+(m+6)x+9$$</p>
+      <p>所以左方的 $x$ 係數是 $m+6$，常數項是 $9$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開右方，合併同類項</div>
+      <div class="rule">
+        <span class="rule-name">多項式乘法</span>
+        逐項相乘後合併同類項：$(x-n)(x+1)=x^{2}+x-nx-n$。
+      </div>
+      <p>$$(x-n)(x+1)+2n=x^{2}+(1-n)x-n+2n=x^{2}+(1-n)x+n$$</p>
+      <p>所以右方的 $x$ 係數是 $1-n$，常數項是 $n$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較常數項，先求 $n$</div>
+      <div class="rule">
+        <span class="rule-name">比較係數</span>
+        恆等式兩邊同次項的係數必須相等。
+      </div>
+      <p>比較常數項：$9=n$。</p>
+      <p>比較 $x$ 的係數：</p>
+      <p>$$m+6=1-n=1-9=-8$$</p>
+      <p>$$\therefore\ m=-8-6=-14$$</p>
+      <p>答案為 <b>A</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代一個 $x$ 值快速核對</div>
+      <div class="rule">
+        <span class="rule-name">恆等式代值</span>
+        恆等式對任何 $x$ 都成立，代 $x=0$ 最能直接讀出常數項。
+      </div>
+      <p>取 $x=0$：左方 $=9$；右方 $=(-n)(1)+2n=n$，故 $n=9$，與上面一致。</p>
+      <p>易錯：把 $(x-n)(x+1)$ 的常數項寫成 $-n$ 就收手，忘記後面還有 $+2n$，會得出 $n=-9$、$m=4$（選項 C）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-14$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $k$、$p$ 為常數，且 $(x+4)^{2}+kx\equiv(x-p)(x+1)+p$。求 $k$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-23$</li><li><span class="ol">B</span>$-15$</li><li><span class="ol">C</span>$7$</li><li><span class="ol">D</span>$23$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 左方 $=x^{2}+(8+k)x+16$。</div>
+          <div class="p-step"><b>第 2 步.</b> 右方 $=x^{2}+(1-p)x+p$，比較常數項得 $p=16$。</div>
+          <div class="p-step"><b>第 3 步.</b> 比較 $x$ 係數：$8+k=1-16=-15$，故 $k=-23$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-23$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

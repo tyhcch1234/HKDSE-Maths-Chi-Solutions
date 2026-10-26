@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第25題 · 極坐標與旋轉</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第25題</span>
+    <h1>順時針轉，角度要減</h1>
+    <p class="sub">解析幾何 · 極坐標與旋轉變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $Q$ 的直角坐標為 $\left(4\sqrt{3},\,-4\right)$。若把 $Q$ 繞原點順時針旋轉 $90^{\circ}$，求其影像的極坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\left(8,\,60^{\circ}\right)$</li><li><span class="ol">B</span>$\left(8,\,120^{\circ}\right)$</li><li><span class="ol">C</span>$\left(8,\,210^{\circ}\right)$</li><li><span class="ol">D</span>$\left(8,\,240^{\circ}\right)$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 260" width="300" height="260" role="img" aria-label="極坐標：Q 在第四象限，順時針轉 90 度後在第三象限" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.1">
+          <line x1="30" y1="130" x2="280" y2="130"/>
+          <line x1="155" y1="20" x2="155" y2="240"/>
+          <line x1="155" y1="130" x2="235" y2="180" stroke-width="1.8"/>
+          <line x1="155" y1="130" x2="100" y2="210" stroke-width="1.8"/>
+          <path d="M195 130 A40 40 0 0 1 175 168" stroke-dasharray="4 3"/>
+          <path d="M240 130 A85 85 0 0 0 200 215" stroke-dasharray="4 3"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="235" cy="180" r="3"/><circle cx="100" cy="210" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="240" y="196">Q(4√3,−4)</text>
+          <text x="52" y="226">Q′</text>
+          <text x="196" y="152" font-size="11">−30°</text>
+          <text x="216" y="206" font-size="11">−120°</text>
+          <text x="272" y="124">x</text>
+          <text x="162" y="30">y</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（順時針旋轉 $90^{\circ}$ 即極角減 $90^{\circ}$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先求極徑 $r$</div>
+      <div class="rule">
+        <span class="rule-name">極徑</span>
+        $r=\sqrt{x^{2}+y^{2}}$。
+      </div>
+      <p>$$r=\sqrt{(4\sqrt{3})^{2}+(-4)^{2}}=\sqrt{48+16}=\sqrt{64}=8$$</p>
+      <p>旋轉不會改變與原點的距離，所以影像的極徑仍是 $8$，四個選項都符合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求原本的極角</div>
+      <div class="rule">
+        <span class="rule-name">極角</span>
+        $\tan\theta=\dfrac{y}{x}$，並按象限決定 $\theta$。
+      </div>
+      <p>$Q$ 在第四象限，$\tan\theta=\dfrac{-4}{4\sqrt{3}}=-\dfrac{1}{\sqrt{3}}$，故 $\theta=330^{\circ}$（或寫成 $-30^{\circ}$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">順時針 $90^{\circ}$：極角減 $90^{\circ}$</div>
+      <div class="rule">
+        <span class="rule-name">旋轉</span>
+        逆時針加、順時針減。
+      </div>
+      <p>$$330^{\circ}-90^{\circ}=240^{\circ}$$</p>
+      <p>（用 $-30^{\circ}$ 計：$-30^{\circ}-90^{\circ}=-120^{\circ}$，加 $360^{\circ}$ 得 $240^{\circ}$，結果相同。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出極坐標並核對象限</div>
+      <div class="rule">
+        <span class="rule-name">極坐標</span>
+        寫成 $(r,\theta)$，一般取 $0^{\circ}\le\theta<360^{\circ}$。
+      </div>
+      <p>$$\text{影像}=\left(8,\,240^{\circ}\right)$$</p>
+      <p>$240^{\circ}$ 在第三象限：$\cos 240^{\circ}=-\dfrac{1}{2}$、$\sin 240^{\circ}=-\dfrac{\sqrt{3}}{2}$，坐標為 $(-4,\,-4\sqrt{3})$。原本 $(4\sqrt{3},-4)$ 順時針轉 $90^{\circ}$ 由 $(x,y)\to(y,-x)$，即 $(-4,-4\sqrt{3})$，相符。</p>
+      <p>答案為 <b>D</b>。</p>
+      <p>易錯：把「順時針」當成加 $90^{\circ}$，會得 $60^{\circ}$（選項 A）；或忘記把負角加 $360^{\circ}$ 修正。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\left(8,\,240^{\circ}\right)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $Q$ 的直角坐標為 $\left(3\sqrt{3},\,3\right)$。若把 $Q$ 繞原點逆時針旋轉 $90^{\circ}$，求其影像的極坐標。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\left(6,\,120^{\circ}\right)$</li><li><span class="ol">B</span>$\left(6,\,150^{\circ}\right)$</li><li><span class="ol">C</span>$\left(6,\,210^{\circ}\right)$</li><li><span class="ol">D</span>$\left(6,\,330^{\circ}\right)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $r=\sqrt{27+9}=6$；$Q$ 在第一象限，$\tan\theta=\dfrac{3}{3\sqrt{3}}=\dfrac{1}{\sqrt{3}}$，得 $\theta=30^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 逆時針加 $90^{\circ}$：$30^{\circ}+90^{\circ}=120^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 影像為 $\left(6,\,120^{\circ}\right)$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\left(6,\,120^{\circ}\right)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

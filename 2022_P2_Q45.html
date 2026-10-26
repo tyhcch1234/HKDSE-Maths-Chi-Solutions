@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第45題 · 標準差與四分位數間距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第45題</span>
+    <h1>把 $d$ 抽走，只比較「偏離」</h1>
+    <p class="sub">統計學 · 標準差與四分位數間距的不變性</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $d$ 為實數。$S_1$ 為一組數 $\{d-6,\ d-2,\ d-1,\ d+3,\ d+5,\ d+7\}$，$S_2$ 為另一組數 $\{d-7,\ d-5,\ d-3,\ d+1,\ d+2,\ d+6\}$。下列哪些正確？
+      <br>I. $S_1$ 與 $S_2$ 的平均數相等。
+      <br>II. $S_1$ 與 $S_2$ 的標準差相等。
+      <br>III. $S_1$ 與 $S_2$ 的四分位數間距相等。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先驗 I：平均數</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        把每個數減去 $d$，平均數也減 $d$，比較就容易。
+      </div>
+      <p>$S_1$ 減 $d$ 後為 $-6,-2,-1,3,5,7$，和 $=6$，平均 $=1$，故 $S_1$ 的平均數為 $d+1$。</p>
+      <p>$S_2$ 減 $d$ 後為 $-7,-5,-3,1,2,6$，和 $=-6$，平均 $=-1$，故 $S_2$ 的平均數為 $d-1$。</p>
+      <p>$d+1\neq d-1$，所以 I 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">驗 II：標準差</div>
+      <div class="rule">
+        <span class="rule-name">標準差</span>
+        $\sigma=\sqrt{\dfrac{\sum(x-\mu)^{2}}{N}}$；加常數不改變標準差。
+      </div>
+      <p>$S_1$ 對平均 $d+1$ 的偏差：$-7,-3,-2,2,4,6$，平方和 $=49+9+4+4+16+36=118$。</p>
+      <p>$S_2$ 對平均 $d-1$ 的偏差：$-6,-4,-2,2,3,7$，平方和 $=36+16+4+4+9+49=118$。</p>
+      <p>平方和相同、$N=6$ 相同，故標準差相等，II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">驗 III：四分位數間距</div>
+      <div class="rule">
+        <span class="rule-name">四分位數間距</span>
+        $IQR=Q_3-Q_1$；把數據整體平移，$IQR$ 不變。
+      </div>
+      <p>$S_1$ 已排序：$d-6,d-2,d-1,d+3,d+5,d+7$。$Q_1$ 取第 2 個 $=d-2$，$Q_3$ 取第 5 個 $=d+5$，故 $IQR=7$。</p>
+      <p>$S_2$ 已排序：$d-7,d-5,d-3,d+1,d+2,d+6$。$Q_1=d-5$，$Q_3=d+2$，故 $IQR=7$。</p>
+      <p>兩者相等，III 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">結論</div>
+      <div class="rule">
+        <span class="rule-name">單選</span>
+        只有 II 及 III 正確。
+      </div>
+      <p>答案為 <b>D</b>。</p>
+      <p>易錯：以為兩組數字「看起來對稱」就平均數相同；$S_1$ 整體偏右、$S_2$ 整體偏左，平均數相差 $2$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（只有 II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把一組數據的每個值都加上常數 $c$（$c\neq 0$）。下列哪些保持不變？
+      <br>I. 平均數
+      <br>II. 標準差
+      <br>III. 四分位數間距</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 平均數變為原來的平均加 $c$，I 不保持不變。</div>
+          <div class="p-step"><b>第 2 步.</b> 每個偏差 $(x+c)-(\mu+c)=x-\mu$ 不變，標準差不變，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 所有四分位數都加 $c$，相減後 $c$ 消去，$IQR$ 不變，III 正確。</div>
+          <div class="p-ans">答案：<b>C</b>（只有 II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

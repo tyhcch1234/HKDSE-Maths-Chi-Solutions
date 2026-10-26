@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第2題 · 負指數：先拆括號，再逐個底數相減</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第2題</span>
+    <h1>負指數：先拆括號，再逐個底數相減</h1>
+    <p class="sub">指數與對數 · 指數律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{xy^{7}}{\left(x^{-2}y^{3}\right)^{4}}$，並以正指數表示答案。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先處理分母的括號</div>
+      <div class="rule"><span class="rule-name">冪的冪</span>$(a^{m})^{n}=a^{mn}$，每個因數都要乘。</div>
+<p>$$\left(x^{-2}y^{3}\right)^{4}=x^{-8}y^{12}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同底相除，指數相減</div>
+      <div class="rule"><span class="rule-name">除法律</span>$\dfrac{a^{m}}{a^{n}}=a^{m-n}$。</div>
+<p>$$\frac{xy^{7}}{x^{-8}y^{12}}=x^{1-(-8)}y^{7-12}=x^{9}y^{-5}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把負指數搬去分母</div>
+      <div class="rule"><span class="rule-name">負指數</span>$a^{-n}=\dfrac{1}{a^{n}}$。</div>
+<p>$$x^{9}y^{-5}=\frac{x^{9}}{y^{5}}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$\dfrac{x^{9}}{y^{5}}$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{a^{5}b^{2}}{\left(a^{3}b^{-1}\right)^{2}}$，並以正指數表示答案。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{b^{4}}{a}$</li><li><span class="ol">B</span>$\dfrac{a^{4}}{b}$</li><li><span class="ol">C</span>$a^{4}b^{4}$</li><li><span class="ol">D</span>$\dfrac{1}{a^{4}b^{4}}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分母：$(a^{3}b^{-1})^{2}=a^{6}b^{-2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相除：$a^{5-6}b^{2+2}=a^{-1}b^{4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=\dfrac{b^{4}}{a}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{b^{4}}{a}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

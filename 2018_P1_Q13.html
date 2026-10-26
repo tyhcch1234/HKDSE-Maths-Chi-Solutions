@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第13題 · 梯形中的相似三角形：一直用「餘角」找相等角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第13題</span>
+    <h1>梯形中的相似三角形：一直用「餘角」找相等角</h1>
+    <p class="sub">平面幾何 · 相似三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 2 中 $ABCD$ 是梯形，$AB\parallel DC$ 且 $\angle ABC=90^{\circ}$。$E$ 是 $BC$ 上的一點，使 $\angle AED=90^{\circ}$。
+<br>(a) 證明 $\triangle ABE\sim\triangle ECD$。
+<br>(b) 已知 $AB=15\text{ cm}$、$AE=25\text{ cm}$ 及 $CE=36\text{ cm}$。
+<br>　(i) 求 $CD$ 的長度。
+<br>　(ii) 求 $\triangle ADE$ 的面積。
+<br>　(iii) 是否存在 $AD$ 上的一點 $F$，使 $E$ 與 $F$ 的距離小於 $23\text{ cm}$？試解釋。<span class="marks">[8 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 400 260" width="400" height="260" role="img" aria-label="梯形 ABCD 與點 E">
+ <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+  <polygon points="60,60 220,60 220,210 340,210"/>
+  <line x1="60" y1="60" x2="220" y2="150"/>
+  <line x1="220" y1="150" x2="340" y2="210"/>
+  <line x1="220" y1="150" x2="220" y2="210" stroke-dasharray="4 3" stroke-width="1.1"/>
+ </g>
+ <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="15">
+  <text x="50" y="54">A</text>
+  <text x="226" y="54">B</text>
+  <text x="222" y="228">C</text>
+  <text x="348" y="228">D</text>
+  <text x="228" y="146">E</text>
+ </g>
+</svg><figcaption>圖：$AB\parallel DC$，$\angle ABC=90^{\circ}$，$E$ 在 $BC$ 上且 $\angle AED=90^{\circ}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先證 $ngle ABE=ngle ECD=90^{\circ}$</div>
+      <div class="rule"><span class="rule-name">平行線同旁內角</span>$AB\parallel DC\Rightarrow\angle ABC+\angle BCD=180^{\circ}$。</div>
+<p>$\angle ABC=90^{\circ}$，故 $\angle BCD=90^{\circ}$，即 $\angle ECD=90^{\circ}=\angle ABE$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用餘角證另一對角相等</div>
+      <div class="rule"><span class="rule-name">餘角</span>$B$、$E$、$C$ 共線，$\angle AEB+\angle AED+\angle CED=180^{\circ}$。</div>
+<p>$$\angle AEB+\angle CED=90^{\circ}$$</p>
+<p>在 $\triangle ABE$：$\angle BAE=90^{\circ}-\angle AEB=\angle CED$。</p>
+<p>故 $\triangle ABE\sim\triangle ECD$（AAA）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 先求 $BE$</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$\triangle ABE$ 在 $B$ 成直角。</div>
+<p>$$BE=\sqrt{25^{2}-15^{2}}=\sqrt{625-225}=20\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 用相似比求 $CD$</div>
+      <div class="rule"><span class="rule-name">對應邊</span>$A\leftrightarrow E$、$B\leftrightarrow C$、$E\leftrightarrow D$。</div>
+<p>$$\frac{CD}{BE}=\frac{CE}{AB}\;\Longrightarrow\;\frac{CD}{20}=\frac{36}{15}$$</p>
+<p>$$CD=48\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 用兩條直角邊求面積</div>
+      <div class="rule"><span class="rule-name">直角三角形面積</span>$\angle AED=90^{\circ}$，故 $AE$、$ED$ 是兩條直角邊。</div>
+<p>$$\frac{AE}{ED}=\frac{AB}{EC}=\frac{15}{36}=\frac{5}{12}\;\Longrightarrow\;ED=\frac{12}{5}\times25=60\text{ cm}$$</p>
+<p>$$\text{面積}=\frac{1}{2}(25)(60)=750\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(iii) 最短距離是由 $E$ 到 $AD$ 的垂距</div>
+      <div class="rule"><span class="rule-name">垂距</span>點到直線的最短距離就是垂直距離。</div>
+<p>$$AD=\sqrt{BC^{2}+(CD-AB)^{2}}=\sqrt{56^{2}+33^{2}}=65\text{ cm}$$</p>
+<p>設垂距為 $h$：</p>
+<p>$$h=\frac{2\times750}{65}=\frac{300}{13}\approx23.08\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b)(iii) 結論</div>
+<p>因為最短距離 $23.08>23$，所以不存在這樣的點 $F$。答案：<strong>不存在</strong>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) 見題解　(b)(i) $48\text{ cm}$　(ii) $750\text{ cm}^{2}$　(iii) 不存在</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 梯形 $PQRS$ 中 $PQ\parallel SR$、$\angle PQR=90^{\circ}$，$T$ 在 $QR$ 上使 $\angle PTS=90^{\circ}$。若 $PQ=12\text{ cm}$、$PT=15\text{ cm}$、$TS=20\text{ cm}$，求 $SR$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12\text{ cm}$</li><li><span class="ol">B</span>$15\text{ cm}$</li><li><span class="ol">C</span>$18\text{ cm}$</li><li><span class="ol">D</span>$20\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $QT=\sqrt{15^{2}-12^{2}}=9$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle PQT\sim\triangle TSR$（$P\leftrightarrow T$、$Q\leftrightarrow S$、$T\leftrightarrow R$）。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{SR}{QT}=\dfrac{TS}{PQ}=\dfrac{20}{12}$，故 $SR=9\times\dfrac{5}{3}=15\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$15\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

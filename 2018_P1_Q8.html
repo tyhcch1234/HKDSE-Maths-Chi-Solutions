@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第8題 · 圓中平行弦：內錯角、同弓形、三角形內角和</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第8題</span>
+    <h1>圓中平行弦：內錯角、同弓形、三角形內角和</h1>
+    <p class="sub">平面幾何 · 圓與平行線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 1 中 $ABCDE$ 是一個圓。已知 $AB\parallel ED$，$AD$ 與 $BE$ 相交於 $F$。以 $\theta$ 表示 $x$ 及 $y$。<span class="marks">[5 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="圓 ABCDE，AB 平行 ED">
+ <g fill="none" stroke="currentColor" stroke-width="1.5">
+  <circle cx="150" cy="130" r="92"/>
+  <line x1="70" y1="85" x2="230" y2="85"/>
+  <line x1="70" y1="175" x2="230" y2="175"/>
+  <line x1="70" y1="85" x2="230" y2="175"/>
+  <line x1="230" y1="85" x2="70" y2="175"/>
+ </g>
+ <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+  <text x="60" y="79">A</text>
+  <text x="238" y="79">B</text>
+  <text x="250" y="134">C</text>
+  <text x="238" y="192">D</text>
+  <text x="60" y="192">E</text>
+  <text x="156" y="126">F</text>
+  <text x="86" y="104">x</text>
+  <text x="160" y="146">y</text>
+  <text x="232" y="152">θ</text>
+ </g>
+</svg><figcaption>圖：$AB\parallel ED$，$AD$ 與 $BE$ 交於 $F$；$x$ 在 $A$、$y$ 在 $F$、$\theta$ 在 $C$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平行線的同旁內角</div>
+      <div class="rule"><span class="rule-name">同旁內角</span>$AB\parallel ED$，截線 $AD$ 所成的同旁內角互補。</div>
+<p>$$x+\theta=180^{\circ}\;\Longrightarrow\;x=180^{\circ}-\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">內錯角給出 $ngle ADE$</div>
+      <div class="rule"><span class="rule-name">內錯角</span>$AB\parallel ED$，截線 $AD$。</div>
+<p>$$\angle ADE=\angle DAB=x=180^{\circ}-\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同弓形內的圓周角</div>
+      <div class="rule"><span class="rule-name">同弓形</span>弦 $BD$ 所對的圓周角相等。</div>
+<p>$$\angle BED=\angle BAD=x=180^{\circ}-\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle FED$ 用內角和</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>三角之和 $=180^{\circ}$。</div>
+<p>$$y=180^{\circ}-(180^{\circ}-\theta)-(180^{\circ}-\theta)=2\theta-180^{\circ}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$x=180^{\circ}-\theta$，$y=2\theta-180^{\circ}$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $PQRS$ 是一個圓，$PQ\parallel SR$，$PR$ 與 $QS$ 交於 $T$。若 $\angle PSR=105^{\circ}$，求 $\angle PTQ$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30^{\circ}$</li><li><span class="ol">B</span>$45^{\circ}$</li><li><span class="ol">C</span>$60^{\circ}$</li><li><span class="ol">D</span>$75^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同旁內角：$\angle PQS+105^{\circ}=180^{\circ}$，故 $\angle PQS=75^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同弓形：$\angle QPR=\angle QSR=75^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle PQT$ 中 $\angle PTQ=180^{\circ}-75^{\circ}-75^{\circ}=30^{\circ}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$30^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

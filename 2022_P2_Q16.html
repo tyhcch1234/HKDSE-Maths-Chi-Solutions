@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第16題 · 弓形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第16題</span>
+    <h1>先算小弓形，再用整圓減去</h1>
+    <p class="sub">求積法 · 扇形與弓形面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個圓的直徑為 $10\text{ cm}$。一條長 $8\text{ cm}$ 的弦把圓分成大弓形與小弓形。求大弓形的面積，準確至最接近的 $\text{cm}^{2}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$11\text{ cm}^{2}$</li><li><span class="ol">B</span>$23\text{ cm}^{2}$</li><li><span class="ol">C</span>$55\text{ cm}^{2}$</li><li><span class="ol">D</span>$67\text{ cm}^{2}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 230" width="300" height="230" role="img" aria-label="圓半徑5，弦AB長8，OM垂直AB" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="150" cy="120" r="100"/>
+          <line x1="70" y1="60" x2="230" y2="60"/>
+          <line x1="150" y1="120" x2="150" y2="60" stroke-dasharray="4 3"/>
+          <line x1="150" y1="120" x2="70" y2="60"/>
+          <line x1="150" y1="120" x2="230" y2="60"/>
+        </g>
+        <path d="M70 60 A100 100 0 0 0 230 60 Z" fill="currentColor" fill-opacity="0.07" stroke="none"/>
+        <g stroke="currentColor" stroke-width="1.1" fill="none">
+          <path d="M150 72 L138 72 L138 60"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="146" y="136" text-anchor="end">O</text>
+          <text x="64" y="54" text-anchor="end">A</text>
+          <text x="236" y="54" text-anchor="start">B</text>
+          <text x="152" y="74">M</text>
+          <text x="100" y="96">5</text>
+          <text x="112" y="46">4</text>
+          <text x="158" y="96">3</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="150" y="222" text-anchor="middle">陰影＝大弓形</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$OA=OB=5$、$AB=8$、$OM\perp AB$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由直徑求半徑，再看垂足</div>
+      <div class="rule">
+        <span class="rule-name">垂徑定理</span>
+        圓心到弦的垂線平分該弦：$AM=MB$。
+      </div>
+      <p>半徑 $r=\dfrac{10}{2}=5\text{ cm}$，$AM=\dfrac{8}{2}=4\text{ cm}$。</p>
+      <p>在直角三角形 $OMA$ 中：</p>
+      <p>$$OM=\sqrt{OA^{2}-AM^{2}}=\sqrt{5^{2}-4^{2}}=3\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求圓心角</div>
+      <div class="rule">
+        <span class="rule-name">餘弦</span>
+        $\cos\dfrac{\theta}{2}=\dfrac{OM}{OA}=\dfrac{3}{5}$。
+      </div>
+      <p>$$\frac{\theta}{2}=53.13^{\circ}\quad\Longrightarrow\quad\theta=106.26^{\circ}$$</p>
+      <p>即小弓形對應的圓心角約為 $106.26^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">小弓形 = 扇形 − 三角形</div>
+      <div class="rule">
+        <span class="rule-name">弓形面積</span>
+        弓形 $=$ 扇形 $-$ 三角形，即 $\dfrac{\theta}{360}\pi r^{2}-\dfrac{1}{2}r^{2}\sin\theta$。
+      </div>
+      <p>$$S_{\text{扇形}}=\frac{106.26}{360}\times\pi\times 5^{2}\approx 23.18\text{ cm}^{2}$$</p>
+      <p>$$S_{\triangle OAB}=\frac{1}{2}(5)(5)\sin 106.26^{\circ}\approx 12.00\text{ cm}^{2}$$</p>
+      <p>$$S_{\text{小弓形}}\approx 23.18-12.00=11.18\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">大弓形 = 整圓 − 小弓形</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        兩塊弓形合起來就是整個圓。
+      </div>
+      <p>$$S_{\text{大弓形}}=\pi(5)^{2}-11.18\approx 78.54-11.18=67.36\text{ cm}^{2}$$</p>
+      <p>準確至最接近的 $\text{cm}^{2}$，得 $67\text{ cm}^{2}$，答案為 <b>D</b>。</p>
+      <p>易錯：把扇形面積 $23.18$ 直接當成弓形（漏減三角形），或忘記減去小弓形而只交整圓面積 $78.5$（沒有這個選項，但會誤選 C 的 $55$，那是扇形加三角形的另一塊）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$67\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個圓的半徑為 $13\text{ cm}$。一條長 $24\text{ cm}$ 的弦把圓分成大弓形與小弓形。求大弓形的面積，準確至最接近的 $\text{cm}^{2}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$139\text{ cm}^{2}$</li><li><span class="ol">B</span>$392\text{ cm}^{2}$</li><li><span class="ol">C</span>$410\text{ cm}^{2}$</li><li><span class="ol">D</span>$531\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 半弦 $=12$，圓心到弦的距離 $=\sqrt{13^{2}-12^{2}}=5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\cos\dfrac{\theta}{2}=\dfrac{5}{13}$，得 $\theta\approx 134.76^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 小弓形 $=\dfrac{134.76}{360}\pi(169)-\dfrac{1}{2}(169)\sin 134.76^{\circ}\approx 198.8-60.0=138.8$。</div>
+          <div class="p-step"><b>第 4 步.</b> 大弓形 $=\pi(169)-138.8\approx 392\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$392\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

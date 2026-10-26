@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第34題 · 十六進制與 4 的冪</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第34題</span>
+    <h1>$16=4^{2}$，所以每個位值都是 4 的偶次冪</h1>
+    <p class="sub">指數定律、指數函數與對數函數 · 十六進制與進位制</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\texttt{12B00CD000000E}_{16}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$299\times 4^{22}+205\times 4^{14}+14$</li><li><span class="ol">B</span>$300\times 4^{22}+222\times 4^{14}+15$</li><li><span class="ol">C</span>$299\times 4^{24}+205\times 4^{16}+14$</li><li><span class="ol">D</span>$300\times 4^{24}+222\times 4^{16}+15$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按位值展開</div>
+      <div class="rule">
+        <span class="rule-name">進位制展開</span>
+        $\overline{d_{13}d_{12}\cdots d_{0}}_{16}=\sum d_{k}16^{k}$；A–F 分別代表 $10$–$15$。
+      </div>
+      <p>字串共 14 位，非零的位：</p>
+      <p>$$1\times 16^{13}+2\times 16^{12}+11\times 16^{11}+12\times 16^{8}+13\times 16^{7}+14$$</p>
+      <p>（$\texttt{B}=11$、$\texttt{C}=12$、$\texttt{D}=13$、$\texttt{E}=14$）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把前三位合成一項</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        $16^{13}$、$16^{12}$、$16^{11}$ 都含 $16^{11}$。
+      </div>
+      <p>$$1\times 16^{13}+2\times 16^{12}+11\times 16^{11}=16^{11}(256+32+11)=299\times 16^{11}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $16^{k}$ 換成 $4^{2k}$</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        $16^{k}=\left(4^{2}\right)^{k}=4^{2k}$。
+      </div>
+      <p>$$299\times 16^{11}=299\times 4^{22}$$</p>
+      <p>中間兩位：$12\times 16^{8}+13\times 16^{7}=16^{7}(192+13)=205\times 16^{7}=205\times 4^{14}$</p>
+      <p>最後一位：$14\times 16^{0}=14$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合併並核對</div>
+      <div class="rule">
+        <span class="rule-name">核對位數</span>
+        指數越大，數值越大；可用位數粗略檢查選項是否合理。
+      </div>
+      <p>$$=299\times 4^{22}+205\times 4^{14}+14$$</p>
+      <p>答案為 <b>A</b>。</p>
+      <p>易錯：把 14 位數字誤當成最高次為 $16^{14}$，令所有指數多 2（變成 C）；其實最左位是 $16^{13}$（位值由 $0$ 起計）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$299\times 4^{22}+205\times 4^{14}+14$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $\texttt{2B00D000}_{16}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$43\times 4^{12}+13\times 4^{6}$</li><li><span class="ol">B</span>$44\times 4^{12}+14\times 4^{6}$</li><li><span class="ol">C</span>$43\times 4^{14}+13\times 4^{8}$</li><li><span class="ol">D</span>$44\times 4^{14}+14\times 4^{8}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 八位數字，最高位為 $16^{7}$：值 $=2\times16^{7}+11\times16^{6}+13\times16^{3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 前兩項 $=16^{6}(32+11)=43\times16^{6}=43\times4^{12}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $13\times16^{3}=13\times4^{6}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$43\times 4^{12}+13\times 4^{6}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

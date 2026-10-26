@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第20題 · 平行四邊形的內角與外角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第20題</span>
+    <h1>內角、外角，先分清楚</h1>
+    <p class="sub">幾何 · 平行線性質與多邊形內外角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為平行四邊形，$AB\parallel DC$、$AD\parallel BC$。$a$、$b$ 分別為頂點 $A$、$B$ 的內角，$c$、$d$ 分別為頂點 $C$、$D$ 的外角。下列哪些必定正確？
+      <br>I. $a+b=180^{\circ}$
+      <br>II. $b+c=360^{\circ}$
+      <br>III. $c+d=540^{\circ}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 360 220" width="360" height="220" role="img" aria-label="平行四邊形 ABCD，A、B 內角 a、b，C、D 外角 c、d" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M85 45 L235 45 L285 175 L135 175 Z"/>
+          <line x1="235" y1="45" x2="315" y2="45" stroke-dasharray="4 3" stroke-width="1.1"/>
+          <line x1="285" y1="175" x2="330" y2="175" stroke-dasharray="4 3" stroke-width="1.1"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="72" y="39" text-anchor="end">A</text>
+          <text x="242" y="39">B</text>
+          <text x="292" y="192">C</text>
+          <text x="122" y="192" text-anchor="end">D</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12" font-style="normal">
+          <text x="104" y="66">a</text>
+          <text x="214" y="66">b</text>
+          <text x="296" y="160">c</text>
+          <text x="140" y="160">d</text>
+        </g>
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M85 45 A22 22 0 0 1 104 63"/>
+          <path d="M235 45 A22 22 0 0 0 216 63"/>
+          <path d="M285 175 A22 22 0 0 0 287 155"/>
+          <path d="M135 175 A22 22 0 0 1 133 155"/>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$a$、$b$ 為內角，$c$、$d$ 為外角）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把外角換成內角</div>
+      <div class="rule">
+        <span class="rule-name">同一直線上的角</span>
+        內角 $+$ 相鄰外角 $=360^{\circ}$（繞點一周）。
+      </div>
+      <p>$C$ 的內角 $=360^{\circ}-c$；$D$ 的內角 $=360^{\circ}-d$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用平行線的同旁內角</div>
+      <div class="rule">
+        <span class="rule-name">同旁內角</span>
+        $AD\parallel BC$，所以 $A$、$B$ 的內角互補：$a+b=180^{\circ}$。
+      </div>
+      <p>I 正確。</p>
+      <p>同樣，$AB\parallel DC$ 給出 $B$ 的內角 $+$ $C$ 的內角 $=180^{\circ}$：</p>
+      <p>$$b+(360^{\circ}-c)=180^{\circ}\quad\Longrightarrow\quad b-c=-180^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：$b+c=360^{\circ}$ 並非必然</div>
+      <div class="rule">
+        <span class="rule-name">聯立檢驗</span>
+        把 $b+c=360^{\circ}$ 與 $b-c=-180^{\circ}$ 一併解，看是否有解以外的可能。
+      </div>
+      <p>若同時成立，解得 $b=90^{\circ}$、$c=270^{\circ}$。但 $b$ 是任意平行四邊形的內角，不一定等於 $90^{\circ}$（只有長方形才成立）。</p>
+      <p>所以 II 並非必定正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：$c+d=540^{\circ}$</div>
+      <div class="rule">
+        <span class="rule-name">相鄰內角互補</span>
+        平行四邊形中，$C$ 與 $D$ 的內角相加為 $180^{\circ}$。
+      </div>
+      <p>$$(360^{\circ}-c)+(360^{\circ}-d)=180^{\circ}$$</p>
+      <p>$$720^{\circ}-(c+d)=180^{\circ}\quad\Longrightarrow\quad c+d=540^{\circ}$$</p>
+      <p>III 正確。所以只有 I 及 III 正確，答案為 <b>B</b>。</p>
+      <p>易錯：把 $c$、$d$ 當成內角使用，或以為「外角」一定是鈍角；本題的外角是繞點一周減去內角，可以大於 $180^{\circ}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 為平行四邊形，$a$、$b$ 為 $A$、$B$ 的內角，$c$、$d$ 為 $C$、$D$ 的外角（與內角合成 $360^{\circ}$）。下列哪些必定正確？
+      <br>I. $a=d$
+      <br>II. $a+b=180^{\circ}$
+      <br>III. $c+d=540^{\circ}$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同旁內角：$a+b=180^{\circ}$，II 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $C$、$D$ 內角和為 $180^{\circ}$，即 $(360^{\circ}-c)+(360^{\circ}-d)=180^{\circ}$，得 $c+d=540^{\circ}$，III 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $a$ 與 $d$ 沒有必然相等關係（$a$ 是 $A$ 的內角，$d$ 是 $D$ 的外角），I 錯誤。</div>
+          <div class="p-ans">答案：<b>C</b>（只有 II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

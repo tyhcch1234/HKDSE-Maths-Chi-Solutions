@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2018 卷一 第15題 · 排列：先處理有條件的兩個位置</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2018 · 卷一 · 第15題</span>
+    <h1>排列：先處理有條件的兩個位置</h1>
+    <p class="sub">排列與組合 · 排列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個八位電話號碼由 $2,3,4,5,6,7,8,9$ 這八個數字排列而成。
+<br>(a) 可組成多少個不同的八位電話號碼？
+<br>(b) 若首個數字與最後一個數字都是奇數，可組成多少個不同的八位電話號碼？<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 八個數字全用，求排列數</div>
+      <div class="rule"><span class="rule-name">排列</span>$n$ 個不同物件排成 $n$ 個位置，共 $n!$ 種。</div>
+<p>$$8!=40\,320$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 先數奇數字的數目</div>
+<p>奇數有 $3,5,7,9$，共 $4$ 個。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 安排首尾兩個位置</div>
+      <div class="rule"><span class="rule-name">有序選取</span>$P_{2}^{4}=4\times3=12$。</div>
+<p>$$P_{2}^{4}=12$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 其餘六個位置任意排</div>
+<p>$$6!=720$$</p>
+<p>相乘：$12\times720=8\,640$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>(a) $40\,320$　(b) $8\,640$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 用 $1,2,3,4,5,6$ 六個數字排成六位數（每個數字用一次）。若首尾兩位都是偶數，可組成多少個不同的六位數？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$144$</li><li><span class="ol">B</span>$120$</li><li><span class="ol">C</span>$96$</li><li><span class="ol">D</span>$72$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 偶數有 $2,4,6$ 共 3 個，首尾有序選取：$P_{2}^{3}=6$。</div>
+          <div class="p-step"><b>第 2 步.</b> 中間四位排列：$4!=24$。</div>
+          <div class="p-step"><b>第 3 步.</b> $6\times24=144$。</div>
+          <div class="p-ans">答案：<b>A</b>（$144$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2018_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2018_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

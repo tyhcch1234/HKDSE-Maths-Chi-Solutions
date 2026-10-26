@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第11題 · 按月複利</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第11題</span>
+    <h1>年利率要除以 12，年數要乘 12</h1>
+    <p class="sub">百分數 · 複利（按月計算）</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把 $\$88\,000$ 存入銀行，年利率 $6\%$，為期 $4$ 年，按月複利計算。求所得的利息，準確至最接近的元。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\$21\,120$</li><li><span class="ol">B</span>$\$23\,098$</li><li><span class="ol">C</span>$\$23\,803$</li><li><span class="ol">D</span>$\$23\,825$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出本金、利率、期數</div>
+      <div class="rule">
+        <span class="rule-name">複利公式</span>
+        $A=P\left(1+\dfrac{r}{n}\right)^{nt}$，其中 $n$ 為每年計算利息的次數。
+      </div>
+      <p>本金 $P=88\,000$，年利率 $r=6\%$，年數 $t=4$，按月複利即 $n=12$。</p>
+      <p>所以每期利率 $=\dfrac{6\%}{12}=0.5\%=0.005$，總期數 $=12\times 4=48$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求本利和</div>
+      <div class="rule">
+        <span class="rule-name">代入公式</span>
+        $A=88\,000(1+0.005)^{48}$。
+      </div>
+      <p>$$A=88\,000\times 1.005^{48}\approx 111\,803.05$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">利息 = 本利和 − 本金</div>
+      <div class="rule">
+        <span class="rule-name">利息</span>
+        題目問的是「利息」，不是本利和。
+      </div>
+      <p>$$\text{利息}=111\,803.05-88\,000=23\,803.05\approx \$23\,803$$</p>
+      <p>答案為 <b>C</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">為甚麼不是單利？</div>
+      <div class="rule">
+        <span class="rule-name">單利與複利</span>
+        單利：$I=Prt$；複利：每期都把利息滾入本金。
+      </div>
+      <p>單利會是 $88\,000\times 6\%\times 4=\$21\,120$，正是選項 A。題目寫明「按月複利」，所以利息一定高於單利。</p>
+      <p>易錯：把 $6\%$ 直接當作每期利率，或用 $48$ 個月卻只乘 $4$ 期，都會得出不合理的巨大或偏小的數。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\$23\,803$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 $\$50\,000$ 存入銀行，年利率 $4\%$，為期 $3$ 年，按季複利計算。求所得的利息，準確至最接近的元。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\$6\,000$</li><li><span class="ol">B</span>$\$6\,341$</li><li><span class="ol">C</span>$\$6\,825$</li><li><span class="ol">D</span>$\$6\,900$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每期利率 $=\dfrac{4\%}{4}=1\%$，總期數 $=4\times 3=12$。</div>
+          <div class="p-step"><b>第 2 步.</b> 本利和 $=50\,000(1.01)^{12}\approx 56\,341.25$。</div>
+          <div class="p-step"><b>第 3 步.</b> 利息 $\approx 56\,341-50\,000=\$6\,341$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\$6\,341$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

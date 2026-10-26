@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第32題 · 對數直線圖</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第32題</span>
+    <h1>直線的截距與斜率，就是 $\log m$ 與 $\log n$</h1>
+    <p class="sub">指數定律、指數函數與對數函數 · 對數圖像與指數關係</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $\log_a y$ 是 $x$ 的線性函數，其中 $0<a<1$。該線性函數的圖像在縱軸及橫軸上的截距分別為 $6$ 及 $3$。若 $y=mn^{x}$，下列哪些正確？
+      <br>I. $m<1$
+      <br>II. $n<1$
+      <br>III. $mn^{3}=1$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 320 240" width="320" height="240" role="img" aria-label="log_a y 對 x 的直線，縱截距 6，橫截距 3" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <line x1="40" y1="190" x2="290" y2="190"/>
+          <line x1="60" y1="20" x2="60" y2="215"/>
+          <line x1="60" y1="45" x2="235" y2="190" stroke-width="1.9"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="60" cy="45" r="2.8"/><circle cx="235" cy="190" r="2.8"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="282" y="206">x</text>
+          <text x="66" y="32">log_a y</text>
+          <text x="40" y="42">6</text>
+          <text x="232" y="210">3</text>
+          <text x="140" y="100" font-size="11">斜率 = −2</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（縱截距 $6$、橫截距 $3$，故斜率為 $-2$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $y=mn^{x}$ 取對數</div>
+      <div class="rule">
+        <span class="rule-name">對數律</span>
+        $\log_a(mn^{x})=\log_a m+x\log_a n$。
+      </div>
+      <p>$$\log_a y=\log_a m+x\log_a n$$</p>
+      <p>所以這是一條直線：縱截距 $=\log_a m$，斜率 $=\log_a n$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由截距讀出 $m$ 與 $n$</div>
+      <div class="rule">
+        <span class="rule-name">截距</span>
+        縱截距為 $6$，故 $\log_a m=6$；直線過 $(0,6)$、$(3,0)$，斜率 $=\dfrac{0-6}{3-0}=-2$。
+      </div>
+      <p>$$\log_a m=6\Rightarrow m=a^{6},\qquad \log_a n=-2\Rightarrow n=a^{-2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用 $0<a<1$ 判斷大小</div>
+      <div class="rule">
+        <span class="rule-name">底數小於 1</span>
+        $0<a<1$ 時，$a^{k}<1$（$k>0$），$a^{-k}>1$。
+      </div>
+      <p>$m=a^{6}<1$，I 正確。</p>
+      <p>$n=a^{-2}>1$，故 II（$n<1$）錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗 III</div>
+      <div class="rule">
+        <span class="rule-name">指數律</span>
+        $a^{6}\left(a^{-2}\right)^{3}=a^{6}\cdot a^{-6}=1$。
+      </div>
+      <p>$$mn^{3}=a^{6}\left(a^{-2}\right)^{3}=a^{6-6}=1$$</p>
+      <p>III 正確，所以答案為 <b>C</b>（只有 I 及 III）。</p>
+      <p>易錯：把斜率 $-2$ 讀成 $n=-2$；正確是 $\log_a n=-2$，即 $n=a^{-2}$。另外，$0<a<1$ 時 $a^{-2}$ 反而大於 $1$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $\log_a y$ 是 $x$ 的線性函數，其中 $0<a<1$，圖像的縱截距及橫截距分別為 $4$ 及 $2$。若 $y=mn^{x}$，下列哪些正確？
+      <br>I. $m<1$
+      <br>II. $n<1$
+      <br>III. $mn^{2}=1$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜率 $=\dfrac{0-4}{2-0}=-2$，故 $\log_a m=4$、$\log_a n=-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $m=a^{4}<1$（I 正確）；$n=a^{-2}>1$（II 錯誤）。</div>
+          <div class="p-step"><b>第 3 步.</b> $mn^{2}=a^{4}\cdot a^{-4}=1$（III 正確）。</div>
+          <div class="p-ans">答案：<b>C</b>（只有 I 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

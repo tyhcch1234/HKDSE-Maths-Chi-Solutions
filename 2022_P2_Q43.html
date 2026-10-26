@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第43題 · 有放回抽球與無限等比級數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第43題</span>
+    <h1>「重新開始」就是一條方程</h1>
+    <p class="sub">概率 · 有放回抽樣與無限等比級數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個箱內有 $2$ 個白球、$2$ 個黃球及 $3$ 個紅球。男生與女生輪流從箱中隨機抽出一個球（有放回），直到其中一人抽到白球或黃球為止。男生先抽。求女生抽到白球的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{3}{10}$</li><li><span class="ol">B</span>$\dfrac{3}{20}$</li><li><span class="ol">C</span>$\dfrac{7}{20}$</li><li><span class="ol">D</span>$\dfrac{17}{20}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出每次抽球的概率</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        有放回，所以每次抽球的概率都一樣。
+      </div>
+      <p>總球數 $=2+2+3=7$。</p>
+      <p>$$P(\text{紅})=\frac{3}{7},\qquad P(\text{白})=\frac{2}{7},\qquad P(\text{黃})=\frac{2}{7}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">女生在第一輪抽到白球</div>
+      <div class="rule">
+        <span class="rule-name">獨立事件</span>
+        男生先抽，要「遊戲未結束」他才可以抽紅球：概率 $\dfrac{3}{7}$；之後女生抽白球：$\dfrac{2}{7}$。
+      </div>
+      <p>$$P_1=\frac{3}{7}\times\frac{2}{7}=\frac{6}{49}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">「重新開始」的自我相似結構</div>
+      <div class="rule">
+        <span class="rule-name">全概率／遞推</span>
+        若兩人第一輪都抽到紅球，遊戲等於從頭開始，之後女生抽到白球的概率仍是 $P$。
+      </div>
+      <p>兩人先後都抽紅球的概率 $=\dfrac{3}{7}\times\dfrac{3}{7}=\dfrac{9}{49}$。</p>
+      <p>$$P=\frac{6}{49}+\frac{9}{49}P$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解方程</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        $\left(1-\dfrac{9}{49}\right)P=\dfrac{6}{49}$。
+      </div>
+      <p>$$\frac{40}{49}P=\frac{6}{49}\quad\Longrightarrow\quad P=\frac{6}{40}=\frac{3}{20}$$</p>
+      <p>答案為 <b>B</b>。</p>
+      <p>易錯：只計第一輪（得 $\dfrac{6}{49}$）就作答；或誤以為女生抽白球的概率與男生相同而直接答 $\dfrac{2}{7}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\dfrac{3}{20}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個箱內有 $1$ 個白球、$3$ 個黃球及 $3$ 個紅球。男生與女生輪流抽球（有放回），直到其中一人抽到白球或黃球為止，男生先抽。求女生抽到白球的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{3}{49}$</li><li><span class="ol">B</span>$\dfrac{3}{40}$</li><li><span class="ol">C</span>$\dfrac{1}{7}$</li><li><span class="ol">D</span>$\dfrac{3}{20}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $P(\text{紅})=\dfrac{3}{7}$、$P(\text{白})=\dfrac{1}{7}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第一輪女生抽白：$\dfrac{3}{7}\times\dfrac{1}{7}=\dfrac{3}{49}$；重新開始：$\dfrac{9}{49}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{3}{49}+\dfrac{9}{49}P\Rightarrow \dfrac{40}{49}P=\dfrac{3}{49}\Rightarrow P=\dfrac{3}{40}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{3}{40}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

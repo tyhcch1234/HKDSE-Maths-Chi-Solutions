@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第21題 · 圓心角與等腰三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第21題</span>
+    <h1>半徑就是等腰三角形的等邊</h1>
+    <p class="sub">幾何 · 圓心角、圓周角與等腰三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$O$ 為圓 $ABC$ 的圓心。若 $\angle ABO=36^{\circ}$、$\angle BOC=164^{\circ}$，求 $\angle ACO$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$41^{\circ}$</li><li><span class="ol">B</span>$46^{\circ}$</li><li><span class="ol">C</span>$52^{\circ}$</li><li><span class="ol">D</span>$64^{\circ}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 250" width="300" height="250" role="img" aria-label="圓心 O，圓上 A、B、C 三點" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="150" cy="125" r="100"/>
+          <line x1="150" y1="125" x2="60" y2="90"/>
+          <line x1="150" y1="125" x2="85" y2="200"/>
+          <line x1="150" y1="125" x2="238" y2="180"/>
+          <line x1="60" y1="90" x2="85" y2="200"/>
+          <line x1="85" y1="200" x2="238" y2="180"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="150" cy="125" r="2.8"/>
+          <circle cx="60" cy="90" r="3"/><circle cx="85" cy="200" r="3"/><circle cx="238" cy="180" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="156" y="121">O</text>
+          <text x="46" y="84">A</text>
+          <text x="72" y="218">B</text>
+          <text x="244" y="196">C</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="10.5" font-style="normal">
+          <text x="130" y="112">36°</text>
+          <text x="176" y="152">164°</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$OA=OB=OC$ 為半徑）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用半徑相等的等腰三角形</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        $OA=OB$，所以 $\angle OAB=\angle OBA=36^{\circ}$。
+      </div>
+      <p>在 $\triangle ABO$ 中：</p>
+      <p>$$\angle AOB=180^{\circ}-36^{\circ}-36^{\circ}=108^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用繞點一周求 $\angle AOC$</div>
+      <div class="rule">
+        <span class="rule-name">繞點一周</span>
+        圓心周圍的三個角 $\angle AOB$、$\angle BOC$、$\angle AOC$ 合共 $360^{\circ}$。
+      </div>
+      <p>$$\angle AOC=360^{\circ}-108^{\circ}-164^{\circ}=88^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">再用一次等腰三角形</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        $OA=OC$，所以 $\angle OAC=\angle OCA=\dfrac{180^{\circ}-88^{\circ}}{2}$。
+      </div>
+      <p>$$\angle ACO=\frac{92^{\circ}}{2}=46^{\circ}$$</p>
+      <p>答案為 <b>B</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查數字是否合理</div>
+      <div class="rule">
+        <span class="rule-name">核對</span>
+        三個圓心角相加應為 $360^{\circ}$，三角形內角和應為 $180^{\circ}$。
+      </div>
+      <p>$108^{\circ}+164^{\circ}+88^{\circ}=360^{\circ}$ ✓；$\triangle ACO$ 的角為 $46^{\circ}$、$46^{\circ}$、$88^{\circ}$，和為 $180^{\circ}$ ✓。</p>
+      <p>易錯：把 $\angle BOC=164^{\circ}$ 當成 $\angle BAC$（圓周角是圓心角的一半，即 $82^{\circ}$），混淆了兩者的角色。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$46^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $O$ 為圓 $ABC$ 的圓心。若 $\angle ABO=28^{\circ}$、$\angle BOC=150^{\circ}$，求 $\angle ACO$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$34^{\circ}$</li><li><span class="ol">B</span>$38^{\circ}$</li><li><span class="ol">C</span>$42^{\circ}$</li><li><span class="ol">D</span>$48^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle ABO$ 中 $OA=OB$，$\angle AOB=180^{\circ}-2(28^{\circ})=124^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle AOC=360^{\circ}-124^{\circ}-150^{\circ}=86^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ACO=\dfrac{180^{\circ}-86^{\circ}}{2}=47^{\circ}$。</div>
+          <div class="p-ans">答案：<b>D</b>（$47^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

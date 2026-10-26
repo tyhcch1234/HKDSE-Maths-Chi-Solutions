@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第27題 · 圓的方程與點的位置</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第27題</span>
+    <h1>三點定一圓，先求圓心與半徑</h1>
+    <p class="sub">解析幾何 · 圓的方程與圓內圓外的判斷</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $P$、$Q$ 的坐標分別為 $(10,-24)$、$(17,-7)$。設 $C$ 為通過原點、$P$ 及 $Q$ 的圓。下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$PQ$ 是 $C$ 的一條直徑。</li><li><span class="ol">B</span>$C$ 的面積為 $196\pi$。</li><li><span class="ol">C</span>點 $(16,-9)$ 在 $C$ 之內。</li><li><span class="ol">D</span>$C$ 的圓心在直線 $5x+12y=0$ 上。</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設圓方程，代入原點</div>
+      <div class="rule">
+        <span class="rule-name">圓方程的一般式</span>
+        $x^{2}+y^{2}+Dx+Ey+F=0$。
+      </div>
+      <p>通過原點 $(0,0)$，代入得 $F=0$。所以方程為</p>
+      <p>$$x^{2}+y^{2}+Dx+Ey=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入 $P$、$Q$ 求 $D$、$E$</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        每個點給出一條關於 $D$、$E$ 的方程。
+      </div>
+      <p>代入 $P(10,-24)$：$100+576+10D-24E=0$，即</p>
+      <p>$$5D-12E=-338\qquad\cdots(1)$$</p>
+      <p>代入 $Q(17,-7)$：$289+49+17D-7E=0$，即</p>
+      <p>$$17D-7E=-338\qquad\cdots(2)$$</p>
+      <p>$(2)-(1)$：$12D+5E=0$，得 $E=-\dfrac{12}{5}D$。代回 $(1)$：</p>
+      <p>$$5D+\frac{144}{5}D=-338\quad\Longrightarrow\quad 25D+144D=-1690\quad\Longrightarrow\quad D=-10$$</p>
+      <p>故 $E=24$，圓方程為 $x^{2}+y^{2}-10x+24y=0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">讀出圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">圓心與半徑</span>
+        圓心 $\left(-\dfrac{D}{2},-\dfrac{E}{2}\right)$，半徑 $\sqrt{\left(\dfrac{D}{2}\right)^{2}+\left(\dfrac{E}{2}\right)^{2}-F}$。
+      </div>
+      <p>圓心 $=(5,-12)$，半徑 $=\sqrt{25+144}=13$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">逐項檢驗</div>
+      <div class="rule">
+        <span class="rule-name">點與圓的關係</span>
+        比較該點與圓心的距離 $d$ 和半徑 $r$：$d<r$ 在圓內，$d=r$ 在圓上，$d>r$ 在圓外。
+      </div>
+      <p>A：$PQ$ 的中點 $=(13.5,-15.5)$，不等於圓心 $(5,-12)$，故 $PQ$ 不是直徑。</p>
+      <p>B：面積 $=\pi(13)^{2}=169\pi\neq 196\pi$。</p>
+      <p>C：$(16,-9)$ 與圓心的距離 $=\sqrt{(16-5)^{2}+(-9+12)^{2}}=\sqrt{121+9}=\sqrt{130}\approx 11.4<13$，所以在圓內，正確。</p>
+      <p>D：$5(5)+12(-12)=25-144=-119\neq 0$，圓心不在該直線上。</p>
+      <p>答案為 <b>C</b>。</p>
+      <p>易錯：把半徑寫成 $\sqrt{D^{2}+E^{2}}$ 而忘記除以 $2$；本題 $D=-10$、$E=24$，若直接開方會得 $26$，面積與距離判斷都會錯。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（點 $(16,-9)$ 在圓內）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 通過原點、$(6,0)$ 及 $(0,8)$。下列哪項正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>圓心為 $(3,4)$</li><li><span class="ol">B</span>半徑為 $10$</li><li><span class="ol">C</span>點 $(6,8)$ 在圓上</li><li><span class="ol">D</span>圓心在直線 $y=x$ 上</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 因 $\angle O$ 所對的弦是 $(6,0)$ 與 $(0,8)$ 的連線，且 $O$、兩點構成直角三角形，圓心為斜邊中點 $(3,4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 半徑 $=\sqrt{3^{2}+4^{2}}=5$，故 B 錯。</div>
+          <div class="p-step"><b>第 3 步.</b> $(6,8)$ 與圓心 $(3,4)$ 的距離為 $\sqrt{9+16}=5$，剛好等於半徑，所以在圓上而非圓外，C 錯；圓心 $(3,4)$ 不在 $y=x$ 上，D 亦錯。</div>
+          <div class="p-ans">答案：<b>A</b>（圓心 $(3,4)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q26.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q28.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

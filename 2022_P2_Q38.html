@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第38題 · 切線與交錯弓形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第38題</span>
+    <h1>切線與弦的夾角，等於另一邊的圓周角</h1>
+    <p class="sub">幾何 · 切線與弦、交錯弓形及同弓形圓周角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 為一圓。$PA$ 與 $QB$ 分別為圓於 $A$、$B$ 的切線。若 $\angle ADC=79^{\circ}$、$\angle CBQ=39^{\circ}$、$\angle DAP=42^{\circ}$，求 $\angle BCD$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$76^{\circ}$</li><li><span class="ol">B</span>$79^{\circ}$</li><li><span class="ol">C</span>$81^{\circ}$</li><li><span class="ol">D</span>$82^{\circ}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 340 260" width="340" height="260" role="img" aria-label="圓 ABCD，A、B 處有切線 PA、QB" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="170" cy="130" r="85"/>
+          <polygon points="170,45 255,130 170,215 85,130"/>
+          <line x1="120" y1="35" x2="220" y2="35"/>
+          <line x1="290" y1="185" x2="300" y2="185"/>
+          <line x1="170" y1="45" x2="150" y2="15"/>
+          <line x1="255" y1="130" x2="320" y2="180"/>
+          <line x1="85" y1="130" x2="170" y2="215"/>
+          <line x1="255" y1="130" x2="170" y2="215"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="170" cy="45" r="3"/><circle cx="255" cy="130" r="3"/>
+          <circle cx="170" cy="215" r="3"/><circle cx="85" cy="130" r="3"/>
+          <circle cx="150" cy="15" r="2.6"/><circle cx="320" cy="180" r="2.6"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12" font-style="italic">
+          <text x="170" y="34" text-anchor="middle">A</text>
+          <text x="264" y="126">B</text>
+          <text x="170" y="234" text-anchor="middle">C</text>
+          <text x="72" y="126" text-anchor="end">D</text>
+          <text x="140" y="12">P</text>
+          <text x="326" y="192">Q</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="10.5">
+          <text x="120" y="150">79°</text>
+          <text x="272" y="158">39°</text>
+          <text x="140" y="40">42°</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（$PA$、$QB$ 為切線，$A$、$B$ 為切點）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $B$ 用切線與弦</div>
+      <div class="rule">
+        <span class="rule-name">切線與弦的夾角</span>
+        切線與弦的夾角，等於該弦在另一弓形所對的圓周角（交錯弓形）。
+      </div>
+      <p>弦 $BC$ 與切線 $QB$ 的夾角是 $\angle CBQ=39^{\circ}$，故</p>
+      <p>$$\angle BDC=\angle CBQ=39^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle ADB$</div>
+      <div class="rule">
+        <span class="rule-name">角的相加</span>
+        $\angle ADC=\angle ADB+\angle BDC$。
+      </div>
+      <p>$$\angle ADB=79^{\circ}-39^{\circ}=40^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $A$ 用切線與弦，並用同弓形圓周角</div>
+      <div class="rule">
+        <span class="rule-name">同弓形內的圓周角</span>
+        同一弦在同弓形上所對的圓周角相等。
+      </div>
+      <p>弦 $AD$ 與切線 $PA$ 的夾角 $\angle DAP=42^{\circ}$，故 $\angle ACD=42^{\circ}$。</p>
+      <p>另一方面，$AB$ 在同一弓形：$\angle ACB=\angle ADB=40^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">相加得 $\angle BCD$</div>
+      <div class="rule">
+        <span class="rule-name">角的相加</span>
+        $\angle BCD=\angle BCA+\angle ACD$。
+      </div>
+      <p>$$\angle BCD=40^{\circ}+42^{\circ}=82^{\circ}$$</p>
+      <p>答案為 <b>D</b>。</p>
+      <p>易錯：把 $\angle CBQ$ 直接當成 $\angle BCD$ 的一部分（兩者沒有直接關係）；或把 $\angle DAP$ 與 $\angle DAC$ 混淆，後者不是切線角。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$82^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 為一圓，$PA$、$QB$ 分別為圓於 $A$、$B$ 的切線。若 $\angle ADC=85^{\circ}$、$\angle CBQ=35^{\circ}$、$\angle DAP=40^{\circ}$，求 $\angle BCD$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$85^{\circ}$</li><li><span class="ol">B</span>$90^{\circ}$</li><li><span class="ol">C</span>$95^{\circ}$</li><li><span class="ol">D</span>$100^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BDC=\angle CBQ=35^{\circ}$，故 $\angle ADB=85^{\circ}-35^{\circ}=50^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle ACB=\angle ADB=50^{\circ}$；$\angle ACD=\angle DAP=40^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle BCD=50^{\circ}+40^{\circ}=90^{\circ}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$90^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

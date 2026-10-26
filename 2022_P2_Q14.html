@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第14題 · 數列的遞推關係</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第14題</span>
+    <h1>每次加幾多，逐項寫出來</h1>
+    <p class="sub">公式與數列 · 遞推數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在圖中，第 1 個圖案由 $8$ 粒點組成。對任何正整數 $n$，第 $(n+1)$ 個圖案是由第 $n$ 個圖案加上 $(2n+6)$ 粒點而成。求第 7 個圖案的點數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$52$</li><li><span class="ol">B</span>$68$</li><li><span class="ol">C</span>$86$</li><li><span class="ol">D</span>$106$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 380 150" width="380" height="150" role="img" aria-label="第1個圖案 8 點，第2個圖案 16 點" style="max-width:100%;height:auto;">
+        <g fill="currentColor">
+          <circle cx="40" cy="55" r="4"/><circle cx="62" cy="55" r="4"/><circle cx="84" cy="55" r="4"/><circle cx="106" cy="55" r="4"/>
+          <circle cx="40" cy="77" r="4"/><circle cx="62" cy="77" r="4"/><circle cx="84" cy="77" r="4"/><circle cx="106" cy="77" r="4"/>
+          <circle cx="215" cy="45" r="4"/><circle cx="237" cy="45" r="4"/><circle cx="259" cy="45" r="4"/><circle cx="281" cy="45" r="4"/>
+          <circle cx="215" cy="67" r="4"/><circle cx="237" cy="67" r="4"/><circle cx="259" cy="67" r="4"/><circle cx="281" cy="67" r="4"/>
+          <g fill="#c0392b">
+            <circle cx="215" cy="89" r="4"/><circle cx="237" cy="89" r="4"/><circle cx="259" cy="89" r="4"/><circle cx="281" cy="89" r="4"/>
+            <circle cx="215" cy="111" r="4"/><circle cx="237" cy="111" r="4"/><circle cx="259" cy="111" r="4"/><circle cx="281" cy="111" r="4"/>
+          </g>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="73" y="132" text-anchor="middle">第 1 個：8 點</text>
+          <text x="248" y="132" text-anchor="middle">第 2 個：8+8=16 點</text>
+          <text x="248" y="30" text-anchor="middle" font-size="11">紅色為新加的 8 點</text>
+        </g>
+      </svg>
+      <figcaption>示意圖，非按比例（只畫出首兩個圖案以說明遞推關係）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出已知條件</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係</span>
+        設 $T(n)$ 為第 $n$ 個圖案的點數，則 $T(n+1)=T(n)+(2n+6)$。
+      </div>
+      <p>$$T(1)=8,\qquad T(n+1)=T(n)+(2n+6)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項加上「每次新增的點數」</div>
+      <div class="rule">
+        <span class="rule-name">逐項計算</span>
+        由 $n=1$ 起，新增量依次為 $8,\,10,\,12,\,14,\,16,\,18$（每次多 2）。
+      </div>
+      <p>$$T(2)=8+8=16$$</p>
+      <p>$$T(3)=16+10=26$$</p>
+      <p>$$T(4)=26+12=38$$</p>
+      <p>$$T(5)=38+14=52$$</p>
+      <p>$$T(6)=52+16=68$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">加到第 7 個圖案</div>
+      <div class="rule">
+        <span class="rule-name">小心項數</span>
+        由第 6 個到第 7 個，用的是 $n=6$ 的新增量 $2(6)+6=18$。
+      </div>
+      <p>$$T(7)=68+18=86$$</p>
+      <p>答案為 <b>C</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用求和公式核對</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        $8+10+\cdots+18$ 共 6 項，和 $=\dfrac{6(8+18)}{2}=78$。
+      </div>
+      <p>$$T(7)=8+78=86$$</p>
+      <p>與逐項相加的結果一致。</p>
+      <p>易錯：把 $2n+6$ 的 $n$ 當成「目標項數」而直接代 $n=7$，會多加一項；由第 1 個到第 7 個只加了 6 次。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$86$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某數列首項為 $5$。對任何正整數 $n$，第 $(n+1)$ 項比第 $n$ 項多 $(3n+2)$。求第 6 項。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$43$</li><li><span class="ol">B</span>$56$</li><li><span class="ol">C</span>$60$</li><li><span class="ol">D</span>$74$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 新增量依次為 $5,\,8,\,11,\,14,\,17$（$n=1$ 至 $5$）。</div>
+          <div class="p-step"><b>第 2 步.</b> $5\to10\to18\to29\to43\to60$。</div>
+          <div class="p-step"><b>第 3 步.</b> 第 6 項為 $60$。</div>
+          <div class="p-ans">答案：<b>C</b>（$60$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

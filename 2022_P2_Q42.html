@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷二 第42題 · 排列與乘法原理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2022 · 卷二 · 第42題</span>
+    <h1>分成兩段，各自排列再相乘</h1>
+    <p class="sub">概率 · 排列與乘法原理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某七位數密碼的前五位由 $1,3,5,7,9$ 排列而成，後兩位由 $2,8$ 排列而成。求可組成的不同七位數密碼的數目。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$10$</li><li><span class="ol">B</span>$240$</li><li><span class="ol">C</span>$480$</li><li><span class="ol">D</span>$5\,040$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把密碼分成兩段</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        若第一步有 $m$ 種做法、第二步有 $n$ 種，兩步合共有 $m\times n$ 種。
+      </div>
+      <p>前五位只用 $1,3,5,7,9$；後兩位只用 $2,8$。兩段互不影響，可以分開計再相乘。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">前五位的排列數</div>
+      <div class="rule">
+        <span class="rule-name">排列</span>
+        5 個不同數字全取排列，數目為 $5!$。
+      </div>
+      <p>$$5!=5\times 4\times 3\times 2\times 1=120$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">後兩位的排列數</div>
+      <div class="rule">
+        <span class="rule-name">排列</span>
+        2 個不同數字全取排列，數目為 $2!$。
+      </div>
+      <p>$$2!=2\quad(28\ \text{或}\ 82)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">相乘</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        兩段的選擇數目相乘。
+      </div>
+      <p>$$5!\times 2!=120\times 2=240$$</p>
+      <p>答案為 <b>B</b>。</p>
+      <p>易錯：把兩段合起來當成 7 個數字全排列（$7!=5040$，選項 D），但兩組數字不能混用；或把「排列」當成「組合」而只算 $1\times 1=1$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$240$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某七位數密碼的前四位由 $1,4,6,8$ 排列而成，後三位由 $2,5,9$ 排列而成。求可組成的不同密碼數目。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24$</li><li><span class="ol">B</span>$144$</li><li><span class="ol">C</span>$288$</li><li><span class="ol">D</span>$720$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 前四位：$4!=24$。</div>
+          <div class="p-step"><b>第 2 步.</b> 後三位：$3!=6$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相乘：$24\times 6=144$。</div>
+          <div class="p-ans">答案：<b>B</b>（$144$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
