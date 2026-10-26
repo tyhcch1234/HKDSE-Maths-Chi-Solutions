@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第12題 · 變分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第12題</span>
+    <h1>正變乘上因子，反變除以因子</h1>
+    <p class="sub">率、比及變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $z$ 隨 $\sqrt{x}$ 正變且隨 $y$ 反變。若 $x$ 減少 $36\%$ 而 $y$ 增加 $60\%$，則 $z$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>增加 $24\%$</li><li><span class="ol">B</span>增加 $28\%$</li><li><span class="ol">C</span>減少 $40\%$</li><li><span class="ol">D</span>減少 $50\%$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出變分方程</div>
+      <div class="rule">
+        <span class="rule-name">聯變</span>
+        隨 $\sqrt{x}$ 正變 $\Rightarrow \sqrt{x}$ 在分子；隨 $y$ 反變 $\Rightarrow y$ 在分母。
+      </div>
+      <p>$$z=k\,\frac{\sqrt{x}}{y}\quad(k\neq0)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「增減百分率」化成乘數</div>
+      <div class="rule">
+        <span class="rule-name">乘數法</span>
+        $x$ 減少 $36\%$ $\Rightarrow$ 新值 $=0.64x$；$y$ 增加 $60\%$ $\Rightarrow$ 新值 $=1.6y$。
+      </div>
+      <p>$$x'=0.64x,\qquad y'=1.6y$$</p>
+      <p>關鍵是 $\sqrt{x'}=\sqrt{0.64x}=0.8\sqrt{x}$（因 $0.8^{2}=0.64$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算 $z$ 的新舊比</div>
+      <div class="rule">
+        <span class="rule-name">比值法</span>
+        把新值代入，與原式相除，$k$ 與 $\sqrt{x}$、$y$ 都會約去。
+      </div>
+      <p>$$z'=k\,\frac{0.8\sqrt{x}}{1.6y}=0.5\,k\,\frac{\sqrt{x}}{y}=0.5z$$</p>
+      <p>即 $z$ 變為原來的 $50\%$，也就是<b>減少 $50\%$</b>。</p>
+      <p>驗算：取 $k=1$、$x=100$、$y=2$，原 $z=\dfrac{10}{2}=5$；新 $x=64$、$y=3.2$，$z'=\dfrac{8}{3.2}=2.5=0.5z$ ✓</p>
+      <p>答案為 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（減少 $50\%$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $\sqrt{x}$ 正變且隨 $y$ 反變。若 $x$ 增加 $44\%$ 而 $y$ 增加 $20\%$，則 $z$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>不變</li><li><span class="ol">B</span>增加 $20\%$</li><li><span class="ol">C</span>減少 $20\%$</li><li><span class="ol">D</span>增加 $24\%$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x'=1.44x$，故 $\sqrt{x'}=\sqrt{1.44}\,\sqrt{x}=1.2\sqrt{x}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y'=1.2y$。</div>
+          <div class="p-step"><b>第 3 步.</b> $z'=k\dfrac{1.2\sqrt{x}}{1.2y}=k\dfrac{\sqrt{x}}{y}=z$，即不變。</div>
+          <div class="p-ans">答案：<b>A</b>（不變）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

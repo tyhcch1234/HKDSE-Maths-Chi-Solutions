@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第9題 · 二次函數圖像</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第9題</span>
+    <h1>看 $x^{2}$ 的係數定開口，看常數項定截距</h1>
+    <p class="sub">函數及其圖像 · 二次函數的圖像</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $a>0$。若 $y=(ax+1)^{2}+a$，下列何者可能是 $y$ 對 $x$ 的圖像？
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-around;margin-top:10px;">
+      <figure style="margin:0;">
+        <svg viewBox="0 0 120 120" width="140" height="140" role="img" aria-label="選項 A：開口向下、$y$ 截距為負">
+          <line x1="10" y1="70" x2="112" y2="70" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="8" x2="60" y2="104" stroke="currentColor" stroke-width="1"/>
+          <path d="M18.0,104.0 L21.5,99.8 L25.0,96.1 L28.5,92.6 L32.0,89.6 L35.5,86.8 L39.0,84.5 L42.5,82.5 L46.0,80.9 L49.5,79.6 L53.0,78.7 L56.5,78.2 L60.0,78.0 L63.5,78.2 L67.0,78.7 L70.5,79.6 L74.0,80.9 L77.5,82.5 L81.0,84.5 L84.5,86.8 L88.0,89.6 L91.5,92.6 L95.0,96.1 L98.5,99.8 L102.0,104.0" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+        </svg>
+        <figcaption style="text-align:center;font-size:.9rem;"><b>A</b>　開口向下、$y$ 截距為負</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <svg viewBox="0 0 120 120" width="140" height="140" role="img" aria-label="選項 B：開口向下、$y$ 截距為正">
+          <line x1="10" y1="70" x2="112" y2="70" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="8" x2="60" y2="104" stroke="currentColor" stroke-width="1"/>
+          <path d="M18.0,96.0 L21.5,87.1 L25.0,78.9 L28.5,71.5 L32.0,64.9 L35.5,59.1 L39.0,54.0 L42.5,49.7 L46.0,46.2 L49.5,43.5 L53.0,41.6 L56.5,40.4 L60.0,40.0 L63.5,40.4 L67.0,41.6 L70.5,43.5 L74.0,46.2 L77.5,49.7 L81.0,54.0 L84.5,59.1 L88.0,64.9 L91.5,71.5 L95.0,78.9 L98.5,87.1 L102.0,96.0" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+        </svg>
+        <figcaption style="text-align:center;font-size:.9rem;"><b>B</b>　開口向下、$y$ 截距為正</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <svg viewBox="0 0 120 120" width="140" height="140" role="img" aria-label="選項 C：開口向上、$y$ 截距為負">
+          <line x1="10" y1="70" x2="112" y2="70" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="8" x2="60" y2="104" stroke="currentColor" stroke-width="1"/>
+          <path d="M18.0,36.0 L21.5,44.3 L25.0,51.9 L28.5,58.8 L32.0,64.9 L35.5,70.3 L39.0,75.0 L42.5,79.0 L46.0,82.2 L49.5,84.8 L53.0,86.6 L56.5,87.6 L60.0,88.0 L63.5,87.6 L67.0,86.6 L70.5,84.8 L74.0,82.2 L77.5,79.0 L81.0,75.0 L84.5,70.3 L88.0,64.9 L91.5,58.8 L95.0,51.9 L98.5,44.3 L102.0,36.0" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+        </svg>
+        <figcaption style="text-align:center;font-size:.9rem;"><b>C</b>　開口向上、$y$ 截距為負</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <svg viewBox="0 0 120 120" width="140" height="140" role="img" aria-label="選項 D：開口向上、$y$ 截距為正">
+          <line x1="10" y1="70" x2="112" y2="70" stroke="currentColor" stroke-width="1"/>
+          <line x1="60" y1="8" x2="60" y2="104" stroke="currentColor" stroke-width="1"/>
+          <path d="M18.0,14.0 L21.5,20.1 L25.0,25.6 L28.5,30.6 L32.0,35.1 L35.5,39.1 L39.0,42.5 L42.5,45.4 L46.0,47.8 L49.5,49.6 L53.0,50.9 L56.5,51.7 L60.0,52.0 L63.5,51.7 L67.0,50.9 L70.5,49.6 L74.0,47.8 L77.5,45.4 L81.0,42.5 L84.5,39.1 L88.0,35.1 L91.5,30.6 L95.0,25.6 L98.5,20.1 L102.0,14.0" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+        </svg>
+        <figcaption style="text-align:center;font-size:.9rem;"><b>D</b>　開口向上、$y$ 截距為正</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先展開，讀出兩個關鍵數字</div>
+      <div class="rule">
+        <span class="rule-name">展開</span>
+        $(ax+1)^{2}=a^{2}x^{2}+2ax+1$，故 $y=a^{2}x^{2}+2ax+(1+a)$。
+      </div>
+      <p>$$y=a^{2}x^{2}+2ax+1+a$$</p>
+      <p>二次項係數是 $a^{2}$，常數項（即 $y$ 截距）是 $1+a$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $a^{2}>0$ 判斷開口方向</div>
+      <div class="rule">
+        <span class="rule-name">開口方向</span>
+        $x^{2}$ 的係數 $>0$ 開口向上；$<0$ 開口向下。因 $a>0$，$a^{2}>0$，故<b>開口向上</b>。
+      </div>
+      <p>這一步已排除 A、B（兩者開口向下）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">令 $x=0$ 求 $y$ 截距</div>
+      <div class="rule">
+        <span class="rule-name">$y$ 截距</span>
+        在 $y=ax^{2}+bx+c$ 中，令 $x=0$ 得 $y=c$，所以常數項就是 $y$ 截距。
+      </div>
+      <p>$$y(0)=(0+1)^{2}+a=1+a$$</p>
+      <p>因 $a>0$，$1+a>1>0$，即 $y$ 截距為<b>正</b>。這一步排除 C。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對頂點，確認形狀合理</div>
+      <div class="rule">
+        <span class="rule-name">頂點式</span>
+        $y=a^{2}\left(x+\dfrac{1}{a}\right)^{2}+a$，頂點為 $\left(-\dfrac{1}{a},\ a\right)$，因 $a>0$ 故在第二象限。
+      </div>
+      <p>圖像開口向上、頂點在 $y$ 軸左側且高於 $x$ 軸、$y$ 截距為正，與選項 <b>D</b> 相符。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（開口向上、$y$ 截距為正）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $b<-1$。若 $y=(bx-1)^{2}+b$，則其圖像</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>開口向上，$y$ 截距為正</li>
+        <li><span class="ol">B</span>開口向上，$y$ 截距為負</li>
+        <li><span class="ol">C</span>開口向下，$y$ 截距為正</li>
+        <li><span class="ol">D</span>開口向下，$y$ 截距為負</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$y=b^{2}x^{2}-2bx+1+b$。二次項係數 $b^{2}>0$，故開口向上（排除 C、D）。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距 $=y(0)=(-1)^{2}+b=1+b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 因 $b<-1$，故 $1+b<0$，即 $y$ 截距為負。</div>
+          <div class="p-ans">答案：<b>B</b>（開口向上、$y$ 截距為負）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

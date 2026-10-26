@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第14題 · 等差數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第14題</span>
+    <h1>每次加 $5$：由第 $1$ 個數到第 $7$ 個要加 $6$ 次</h1>
+    <p class="sub">公式與數列 · 等差數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中第 $1$ 個圖案由 $9$ 個點組成。對任意正整數 $n$，第 $(n+1)$ 個圖案是把 $5$ 個點加到第 $n$ 個圖案而成。求第 $7$ 個圖案的點數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$29$</li><li><span class="ol">B</span>$34$</li><li><span class="ol">C</span>$39$</li><li><span class="ol">D</span>$44$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出是等差數列</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係</span>
+        $T(n+1)=T(n)+5$，首項 $T(1)=9$、公差 $d=5$。
+      </div>
+      <p>$$T(1)=9,\quad T(n+1)=T(n)+5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出通項</div>
+      <div class="rule">
+        <span class="rule-name">等差數列通項</span>
+        $T(n)=a+(n-1)d$。此處 $a=9$、$d=5$。
+      </div>
+      <p>$$T(n)=9+5(n-1)=5n+4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $n=7$</div>
+      <div class="rule">
+        <span class="rule-name">小心項數</span>
+        由第 $1$ 個到第 $7$ 個，只加了 $7-1=6$ 次，不是 $7$ 次。
+      </div>
+      <p>$$T(7)=5(7)+4=39$$</p>
+      <p>逐項核對：$9,\,14,\,19,\,24,\,29,\,34,\,39$，第七個正是 $39$ ✓</p>
+      <p>答案為 <b>C</b>；選項 D（$44$）是誤把 $T(8)$ 當成 $T(7)$，選項 B（$34$）是誤算成加了 $5$ 次。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$39$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某圖案序列中，第 $1$ 個圖案有 $7$ 個點，之後每個圖案比前一個多 $4$ 個點。求第 $10$ 個圖案的點數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$39$</li><li><span class="ol">B</span>$43$</li><li><span class="ol">C</span>$47$</li><li><span class="ol">D</span>$51$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 等差數列：$a=7$、$d=4$，故 $T(n)=7+4(n-1)=4n+3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $T(10)=4(10)+3=43$。</div>
+          <div class="p-step"><b>第 3 步.</b> 核對：第 $10$ 個圖案是由第 $1$ 個加 $9$ 次，$7+9(4)=43$ ✓</div>
+          <div class="p-ans">答案：<b>B</b>（$43$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

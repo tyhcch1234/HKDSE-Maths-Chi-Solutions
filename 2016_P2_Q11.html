@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第11題 · 比的運算</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第11題</span>
+    <h1>把比寫成分數，再交叉相乘</h1>
+    <p class="sub">率、比及變分 · 比的運算</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $x$、$y$ 為非零數，且 $(3y-4x):(2x+y)=5:6$，則 $x:y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$7:8$</li><li><span class="ol">B</span>$8:29$</li><li><span class="ol">C</span>$9:32$</li><li><span class="ol">D</span>$13:34$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把比寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">比即分數</span>
+        $a:b=c:d \iff \dfrac{a}{b}=\dfrac{c}{d}$。
+      </div>
+      <p>$$\frac{3y-4x}{2x+y}=\frac{5}{6}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">交叉相乘（保留括號）</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        $\dfrac{a}{b}=\dfrac{c}{d}\Rightarrow ad=bc$。
+      </div>
+      <p>$$6(3y-4x)=5(2x+y)$$</p>
+      <p>$$18y-24x=10x+5y$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">整理成 $x$ 與 $y$ 的倍數關係</div>
+      <div class="rule">
+        <span class="rule-name">同類項合併</span>
+        把 $x$ 全部移到一邊、$y$ 移到另一邊。
+      </div>
+      <p>$$18y-5y=10x+24x$$</p>
+      <p>$$13y=34x$$</p>
+      <p>$$\frac{x}{y}=\frac{13}{34}\quad\Longrightarrow\quad x:y=13:34$$</p>
+      <p>驗算：取 $x=13$、$y=34$，則 $3y-4x=102-52=50$、$2x+y=26+34=60$，$50:60=5:6$ ✓</p>
+      <p>答案為 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$13:34$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $x$、$y$ 為非零數，且 $(2y+x):(x+y)=5:3$，則 $x:y=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1:2$</li><li><span class="ol">B</span>$2:1$</li><li><span class="ol">C</span>$3:5$</li><li><span class="ol">D</span>$5:3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交叉相乘：$3(2y+x)=5(x+y)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開：$6y+3x=5x+5y$。</div>
+          <div class="p-step"><b>第 3 步.</b> 整理：$y=2x$，即 $x:y=1:2$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：$x=1$、$y=2$ 時 $2y+x=5$、$x+y=3$，$5:3$ ✓</div>
+          <div class="p-ans">答案：<b>A</b>（$1:2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

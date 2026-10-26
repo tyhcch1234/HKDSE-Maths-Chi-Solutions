@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第7題 · 聯立不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第7題</span>
+    <h1>除以負數要變號，取交集要取嚴格</h1>
+    <p class="sub">不等式與線性規劃 · 聯立不等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $-5x>21-2x$ 及 $6x-18<0$ 的解為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x<-7$</li><li><span class="ol">B</span>$x<3$</li><li><span class="ol">C</span>$-7<x<3$</li><li><span class="ol">D</span>$x>-7$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">解第一式：把 $x$ 集中，再除負數</div>
+      <div class="rule">
+        <span class="rule-name">乘除負數要變號</span>
+        兩邊除以負數時，$>$ 要變成 $<$。
+      </div>
+      <p>$$-5x>21-2x$$</p>
+      <p>兩邊加 $2x$：</p>
+      <p>$$-3x>21$$</p>
+      <p>兩邊除以 $-3$（變號）：</p>
+      <p>$$x<-7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第二式</div>
+      <div class="rule">
+        <span class="rule-name">除以正數不變號</span>
+        $6$ 是正數，符號保持不變。
+      </div>
+      <p>$$6x-18<0\quad\Longrightarrow\quad 6x<18\quad\Longrightarrow\quad x<3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取交集（兩個條件同時成立）</div>
+      <div class="rule">
+        <span class="rule-name">交集</span>
+        $x<-7$ 且 $x<3$ $\iff$ $x<\min(-7,3)=-7$。要同時滿足，取「較窄」的那一段。
+      </div>
+      <p>$$x<-7\ \text{且}\ x<3\quad\Longrightarrow\quad x<-7$$</p>
+      <p>驗證：取 $x=-8$，$-5(-8)=40>21-2(-8)=37$ ✓，且 $6(-8)-18=-66<0$ ✓；</p>
+      <p>取 $x=0$（滿足 $x<3$ 但不滿足 $x<-7$）：$-5(0)=0>21$ ✗，故不能取 $x=0$。</p>
+      <p>所以答案為 <b>A</b>；C 是兩段之間的區間（那是「或」的結果，不是交集）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$x<-7$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $4-3x>19$ 及 $5x+2<17$ 的解為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x<-5$</li><li><span class="ol">B</span>$x<3$</li><li><span class="ol">C</span>$-5<x<3$</li><li><span class="ol">D</span>$x>-5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $4-3x>19 \Rightarrow -3x>15 \Rightarrow x<-5$（除 $-3$，變號）。</div>
+          <div class="p-step"><b>第 2 步.</b> $5x+2<17 \Rightarrow 5x<15 \Rightarrow x<3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取交集：$x<-5$ 且 $x<3$，較嚴格的是 $x<-5$。</div>
+          <div class="p-ans">答案：<b>A</b>（$x<-5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

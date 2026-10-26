@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第10題 · 百分數增減</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第10題</span>
+    <h1>「高 $25\%$」與「低 $25\%$」不可互相抵銷</h1>
+    <p class="sub">百分數 · 百分數增減</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      Donald 的月薪比 Peter 高 $25\%$，而 Peter 的月薪比 Teresa 低 $25\%$。已知 Donald 的月薪為 $\$33\,360$，則 Teresa 的月薪是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\$31\,275$</li><li><span class="ol">B</span>$\$33\,360$</li><li><span class="ol">C</span>$\$35\,584$</li><li><span class="ol">D</span>$\$52\,125$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把兩句比較寫成乘數</div>
+      <div class="rule">
+        <span class="rule-name">百分數增減</span>
+        「$A$ 比 $B$ 高 $r\%$」$\Rightarrow A=(1+r\%)B$；「$A$ 比 $B$ 低 $r\%$」$\Rightarrow A=(1-r\%)B$。
+      </div>
+      <p>設 Peter 的月薪為 $P$、Teresa 的為 $T$。</p>
+      <p>Donald 比 Peter 高 $25\%$：$\;D=1.25P$</p>
+      <p>Peter 比 Teresa 低 $25\%$：$\;P=0.75T$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 Donald 反求 Peter</div>
+      <div class="rule">
+        <span class="rule-name">反求原值要除</span>
+        $33\,360$ 是「加了 $25\%$」之後的數，所以除以 $1.25$。
+      </div>
+      <p>$$P=\frac{33\,360}{1.25}=26\,688$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 Peter 反求 Teresa</div>
+      <div class="rule">
+        <span class="rule-name">再除一次</span>
+        $P$ 是 Teresa 的 $75\%$，故 $T=\dfrac{P}{0.75}$。
+      </div>
+      <p>$$T=\frac{26\,688}{0.75}=35\,584$$</p>
+      <p>整體檢查：$D=1.25\times0.75\,T=0.9375T$，故 $T=\dfrac{33\,360}{0.9375}=35\,584$ ✓</p>
+      <p>要注意 $1.25\times0.75=0.9375\ne1$，所以「先加 $25\%$ 再減 $25\%$」並不會回到原值。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\$35\,584$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> A 的月薪比 B 高 $20\%$，而 B 的月薪比 C 低 $20\%$。已知 A 的月薪為 $\$48\,000$，求 C 的月薪。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\$48\,000$</li><li><span class="ol">B</span>$\$50\,000$</li><li><span class="ol">C</span>$\$52\,000$</li><li><span class="ol">D</span>$\$57\,600$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $A=1.2B$，故 $B=\dfrac{48\,000}{1.2}=40\,000$。</div>
+          <div class="p-step"><b>第 2 步.</b> $B=0.8C$，故 $C=\dfrac{40\,000}{0.8}=50\,000$。</div>
+          <div class="p-step"><b>第 3 步.</b> 檢查：$1.2\times0.8=0.96$，$48\,000\div0.96=50\,000$ ✓</div>
+          <div class="p-ans">答案：<b>B</b>（$\$50\,000$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
