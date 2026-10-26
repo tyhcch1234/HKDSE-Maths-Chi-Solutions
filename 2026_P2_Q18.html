@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第18題 · 梯形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第18題</span>
+    <h1>先定出 $EF$ 與梯形的高之比</h1>
+    <p class="sub">幾何 · 梯形與相似圖形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為梯形，$AB\parallel DC$，且 $AB:CD=3:5$。設 $E$ 為 $BD$ 上的一點，使 $BE:ED=2:3$。已知 $AB\parallel EF$ 及 $AD\parallel BF$。若 $\triangle ABD$ 的面積為 $225\text{ cm}^2$，則梯形 $CDEF$ 的面積為
+      <ol class="opts">
+        <li><span class="ol">A</span>$222\text{ cm}^2$</li>
+        <li><span class="ol">B</span>$260\text{ cm}^2$</li>
+        <li><span class="ol">C</span>$279\text{ cm}^2$</li>
+        <li><span class="ol">D</span>$285\text{ cm}^2$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 360 210" width="330" role="img" aria-label="梯形 ABCD 與點 E、F">
+        <polygon points="40,160 140,160 250,60 90,60" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.6"/>
+        <g stroke="currentColor" stroke-width="1.3" fill="none">
+          <line x1="140" y1="160" x2="90" y2="60" stroke-dasharray="5 4"/>
+          <line x1="90" y1="60" x2="192" y2="100" stroke-dasharray="5 4"/>
+          <line x1="192" y1="100" x2="252" y2="100" stroke="currentColor"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="40" cy="160" r="3"/><circle cx="140" cy="160" r="3"/>
+          <circle cx="250" cy="60" r="3"/><circle cx="90" cy="60" r="3"/>
+          <circle cx="120" cy="100" r="3"/><circle cx="192" cy="100" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="30" y="176">A</text><text x="142" y="176">B</text>
+          <text x="256" y="56">C</text><text x="76" y="56">D</text>
+          <text x="112" y="116">E</text><text x="196" y="114">F</text>
+        </g>
+      </svg>
+      <figcaption>圖：$AB\parallel DC$、$AB\parallel EF$、$AD\parallel BF$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設邊長與高</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">$\tfrac12(3k)(h)=225$</span>
+        <span class="rule-why">以 $AB=3k$ 為底、高為 $h$，得 $kh=150$。</span>
+      </div>
+      <p>設 $AB=3k$、$CD=5k$，梯形的高為 $h$。以 $AB$ 為 $\triangle ABD$ 的底：</p>
+      <p>$$\tfrac12(3k)(h)=225\quad\Longrightarrow\quad kh=150$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $EF$ 的長度</div>
+      <div class="rule">
+        <span class="rule-name">向量分解</span>
+        <span class="rule-math">$E=B+\tfrac25(D-B)$，$F=B+\tfrac25 D$（取 $A$ 為原點）</span>
+        <span class="rule-why">由 $BF\parallel AD$ 及 $EF\parallel AB$ 定出 $F$，得 $EF=\tfrac25 AB=1.2k$。</span>
+      </div>
+      <p>取 $A$ 為原點，$\vec{AB}=b$、$\vec{AD}=d$。因 $BE:ED=2:3$：</p>
+      <p>$$E=\frac35 b+\frac25 d$$</p>
+      <p>$EF\parallel AB$ 且 $BF\parallel AD$，設 $F=E+\lambda b=b+\mu d$，比較係數得 $\lambda=\dfrac25$、$\mu=\dfrac25$，故</p>
+      <p>$$EF=\frac25\,AB=\frac25(3k)=1.2k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求梯形 $CDEF$ 的高</div>
+      <p>$E$ 在 $BD$ 上且 $BE:ED=2:3$，故 $E$ 離 $AB$ 的距離為 $\dfrac25h$，而 $EF\parallel AB$，所以 $EF$ 與 $CD$ 的距離為</p>
+      <p>$$h-\frac25h=\frac35h=0.6h$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">計算面積</div>
+      <div class="rule">
+        <span class="rule-name">梯形面積</span>
+        <span class="rule-math">$A=\tfrac12(\text{上底}+\text{下底})\times\text{高}$</span>
+        <span class="rule-why">$\tfrac12(5k+1.2k)(0.6h)=1.86kh=279$。</span>
+      </div>
+      <p>$$\text{面積}=\tfrac12(5k+1.2k)(0.6h)=3.1k\times0.6h=1.86kh$$</p>
+      <p>$$=1.86\times150=279\text{ cm}^2$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$279\text{ cm}^2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 梯形 $ABCD$ 中 $AB\parallel DC$、$AB:CD=2:5$，$E$ 在 $BD$ 上使 $BE:ED=1:1$。$EF\parallel AB$。若梯形高為 $8$ cm、$AB=6$ cm，求 $EF$ 及梯形 $CDEF$ 的高。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $E$ 為 $BD$ 中點，故 $E$ 離 $AB$ 的距離為 $4$ cm。</div>
+          <div class="p-step"><b>第 2 步.</b> $EF=\dfrac12 AB=3$ cm。</div>
+          <div class="p-step"><b>第 3 步.</b> $EF$ 與 $CD$ 的距離 $=8-4=4$ cm。</div>
+          <div class="p-ans">答案：$EF=3$ cm，高 $=4$ cm</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q17.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

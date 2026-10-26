@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第14題 · 直線方程與截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第14題</span>
+    <h1>同一 $x$ 截距，截距越大斜率越陡</h1>
+    <p class="sub">解析幾何 · 直線方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中直線 $L_1$、$L_2$ 的方程分別為 $ax+y=b$ 及 $cx+y=d$。已知 $L_1$ 與 $L_2$ 相交於正 $x$ 軸上的一點。以下哪幾項正確？
+      <br>I. $a<c$
+      <br>II. $b>d$
+      <br>III. $ad=bc$
+      <ol class="opts">
+        <li><span class="ol">A</span>只有 I 及 II</li>
+        <li><span class="ol">B</span>只有 I 及 III</li>
+        <li><span class="ol">C</span>只有 II 及 III</li>
+        <li><span class="ol">D</span>I、II 及 III</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <img src="figures/2026_P2_14.png" alt="兩直線 L1 與 L2 相交於正 x 軸">
+      <figcaption>圖：原試卷附圖</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">改寫成斜截式</div>
+      <div class="rule">
+        <span class="rule-name">斜截式</span>
+        <span class="rule-math">$ax+y=b\ \Rightarrow\ y=-ax+b$</span>
+        <span class="rule-why">$L_1$ 的斜率 $-a$、$y$ 截距 $b$；$L_2$ 的斜率 $-c$、$y$ 截距 $d$。</span>
+      </div>
+      <p>$$L_1:\ y=-ax+b,\qquad L_2:\ y=-cx+d$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">交點在正 $x$ 軸上</div>
+      <p>令 $y=0$：$ax=b$ 得 $x=\dfrac{b}{a}$；$cx=d$ 得 $x=\dfrac{d}{c}$。兩者相等，故</p>
+      <p>$$\frac{b}{a}=\frac{d}{c}\quad\Longrightarrow\quad bc=ad$$</p>
+      <p>III 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較 $y$ 截距與斜率</div>
+      <p>由圖可見 $L_1$ 的 $y$ 截距較高，即 $b>d>0$。由 $bc=ad$ 得 $\dfrac{a}{c}=\dfrac{b}{d}>1$，故 $a>c$。</p>
+      <p>所以 I（$a<c$）錯誤，II（$b>d$）正確。</p>
+      <p>正確的是 II 及 III，即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　只有 II 及 III</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L_1: y=2x+b$ 與 $L_2: y=cx+d$ 相交於正 $x$ 軸上同一點，且 $L_1$ 的 $y$ 截距比 $L_2$ 大。比較 $c$ 與 $2$ 的大小。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交點在 $x$ 軸：$x=-\dfrac{b}{2}=-\dfrac{d}{c}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $L_1$ 截距較大即 $b>d$，故 $\left|-\dfrac{b}{2}\right|>\left|-\dfrac{d}{c}\right|$，得 $c>2$。</div>
+          <div class="p-ans">答案：$c>2$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q13.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

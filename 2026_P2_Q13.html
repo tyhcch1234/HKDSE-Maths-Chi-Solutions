@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第13題 · 遞推數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第13題</span>
+    <h1>先倒推 $a_1$，再逐項推前</h1>
+    <p class="sub">數列 · 遞推關係</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a_n$ 為某數列的第 $n$ 項。若 $a_2=7$、$a_5=35$，且對任何正整數 $n$ 有 $a_{n+2}=3a_{n+1}-2a_n$，則 $a_8=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$67$</li>
+        <li><span class="ol">B</span>$131$</li>
+        <li><span class="ol">C</span>$259$</li>
+        <li><span class="ol">D</span>$515$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $a_2$、$a_3$ 的關係倒推 $a_1$</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係</span>
+        <span class="rule-math">$a_{n+2}=3a_{n+1}-2a_n$</span>
+        <span class="rule-why">取 $n=1$：$a_5$ 之前的各項都要連續推算，先由 $a_3,a_4$ 的式子配合 $a_5$ 解出。</span>
+      </div>
+      <p>設 $a_1=u$，則</p>
+      <p>$$a_3=3(7)-2u=21-2u$$</p>
+      <p>$$a_4=3a_3-2(7)=3(21-2u)-14=49-6u$$</p>
+      <p>$$a_5=3a_4-2a_3=3(49-6u)-2(21-2u)=147-18u-42+4u=105-14u$$</p>
+      <p>由 $a_5=35$：$105-14u=35$，得 $u=5$，即 $a_1=5$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項推算</div>
+      <p>$$a_3=3(7)-2(5)=11$$</p>
+      <p>$$a_4=3(11)-2(7)=19$$</p>
+      <p>$$a_5=3(19)-2(11)=35\quad\checkmark$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">推到 $a_8$</div>
+      <p>$$a_6=3(35)-2(19)=67$$</p>
+      <p>$$a_7=3(67)-2(35)=131$$</p>
+      <p>$$a_8=3(131)-2(67)=393-134=259$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$259$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a_{n+2}=2a_{n+1}+a_n$，且 $a_1=1$、$a_2=3$，求 $a_6$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $a_3=2(3)+1=7$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a_4=2(7)+3=17$。</div>
+          <div class="p-step"><b>第 3 步.</b> $a_5=2(17)+7=41$。</div>
+          <div class="p-step"><b>第 4 步.</b> $a_6=2(41)+17=99$。</div>
+          <div class="p-ans">答案：$99$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q12.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

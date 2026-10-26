@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第12題 · 變分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第12題</span>
+    <h1>平方根只放大 1.2 倍，分母卻縮小</h1>
+    <p class="sub">率、比及變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $w$ 隨 $u$ 的平方根正變，並隨 $v$ 反變。若 $u$ 增加 $44\%$、$v$ 減少 $20\%$，則 $w$ 增加
+      <ol class="opts">
+        <li><span class="ol">A</span>$40\%$</li>
+        <li><span class="ol">B</span>$50\%$</li>
+        <li><span class="ol">C</span>$64\%$</li>
+        <li><span class="ol">D</span>$80\%$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出變分關係</div>
+      <div class="rule">
+        <span class="rule-name">聯變</span>
+        <span class="rule-math">$w=\dfrac{k\sqrt{u}}{v}$</span>
+        <span class="rule-why">正變於 $\sqrt{u}$、反變於 $v$，$k$ 為變分常數。</span>
+      </div>
+      <p>$$w=\frac{k\sqrt{u}}{v}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入新的 $u$、$v$</div>
+      <p>$u$ 增 $44\%$ 即變為 $1.44u$，故 $\sqrt{1.44u}=1.2\sqrt{u}$；$v$ 減 $20\%$ 即變為 $0.8v$。</p>
+      <p>$$w'=\frac{k(1.2\sqrt{u})}{0.8v}=\frac{1.2}{0.8}\cdot\frac{k\sqrt{u}}{v}=1.5w$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求增加的百分率</div>
+      <p>$$\frac{w'-w}{w}=\frac{1.5w-w}{w}=0.5=50\%$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　增加 $50\%$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $x$ 正變並隨 $\sqrt{y}$ 反變。若 $x$ 增加 $20\%$、$y$ 增加 $44\%$，求 $z$ 的百分變化。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $z=\dfrac{kx}{\sqrt{y}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $z'=\dfrac{k(1.2x)}{\sqrt{1.44y}}=\dfrac{1.2}{1.2}\cdot\dfrac{kx}{\sqrt{y}}=z$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $z$ 沒有改變（$0\%$）。</div>
+          <div class="p-ans">答案：不變</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q11.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

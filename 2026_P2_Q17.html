@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第17題 · 平截頭體體積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第17題</span>
+    <h1>整體減去小金字塔</h1>
+    <p class="sub">求積法 · 相似立體與平截頭體</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      正角錐體的底為長方形，長與闊分別為 $18$ cm 及 $16$ cm，高為 $12$ cm。以平行於底的平面把角錐體分成角錐體 $X$ 及平截頭體 $Y$。若 $X$ 的底闊為 $12$ cm，則 $Y$ 的體積為
+      <ol class="opts">
+        <li><span class="ol">A</span>$486\text{ cm}^3$</li>
+        <li><span class="ol">B</span>$666\text{ cm}^3$</li>
+        <li><span class="ol">C</span>$688\text{ cm}^3$</li>
+        <li><span class="ol">D</span>$944\text{ cm}^3$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 340 250" width="320" role="img" aria-label="角錐體被平行於底的平面切開">
+        <polygon points="170,20 40,150 300,150" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.5"/>
+        <polygon points="170,20 95,120 245,120" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="95" y1="120" x2="245" y2="120" stroke="currentColor" stroke-width="2"/>
+        <g fill="currentColor" font-size="12" font-family="Georgia,serif">
+          <text x="176" y="16">V</text>
+          <text x="24" y="160">A</text><text x="304" y="160">B</text>
+          <text x="86" y="114" text-anchor="end">E</text><text x="250" y="114">F</text>
+          <text x="176" y="150" font-size="11" text-anchor="middle">18 cm</text>
+          <text x="250" y="140" font-size="11">12 cm</text>
+        </g>
+        <g stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.7">
+          <line x1="170" y1="20" x2="170" y2="150"/>
+        </g>
+      </svg>
+      <figcaption>圖：以平行於底的平面切出角錐體 $X$（上）與平截頭體 $Y$（下）（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">整個角錐體的體積</div>
+      <div class="rule">
+        <span class="rule-name">角錐體體積</span>
+        <span class="rule-math">$V=\dfrac{1}{3}\times\text{底面積}\times\text{高}$</span>
+        <span class="rule-why">$18\times16$ 的底、高 $12$，得 $1152\text{ cm}^3$。</span>
+      </div>
+      <p>$$V=\frac{1}{3}(18)(16)(12)=1152\text{ cm}^3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">相似比</div>
+      <p>切面平行於底，故 $X$ 與整個角錐體相似。以闊比較：</p>
+      <p>$$\frac{12}{16}=\frac{3}{4}$$</p>
+      <p>即線性比例 $k=\dfrac34$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $X$ 與 $Y$ 的體積</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的體積比</span>
+        <span class="rule-math">$\dfrac{V_X}{V}=\left(\dfrac34\right)^{3}=\dfrac{27}{64}$</span>
+        <span class="rule-why">$V_X=1152\times\dfrac{27}{64}=486$。</span>
+      </div>
+      <p>$$V_X=1152\times\frac{27}{64}=486\text{ cm}^3$$</p>
+      <p>$$V_Y=1152-486=666\text{ cm}^3$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$666\text{ cm}^3$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 角錐體底為 $12\text{ cm}\times9\text{ cm}$、高 $10\text{ cm}$，以平行於底的平面切出高 $5\text{ cm}$ 的小角錐體。求餘下平截頭體的體積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 整體 $=\dfrac13(12)(9)(10)=360$。</div>
+          <div class="p-step"><b>第 2 步.</b> 線性比 $\dfrac{5}{10}=\dfrac12$，體積比 $\dfrac18$。</div>
+          <div class="p-step"><b>第 3 步.</b> 小角錐體 $=\dfrac{360}{8}=45$，故平截頭體 $=315\text{ cm}^3$。</div>
+          <div class="p-ans">答案：$315\text{ cm}^3$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q16.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

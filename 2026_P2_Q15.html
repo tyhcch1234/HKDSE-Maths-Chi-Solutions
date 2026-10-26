@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第15題 · 二次函數圖像</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第15題</span>
+    <h1>$pq<0$ 決定開口方向與根的數目</h1>
+    <p class="sub">函數圖像 · 二次函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $p$、$q$ 為實常數，且 $pq<0$。以下有關 $y=(px+1)(qx+2)$ 圖像的陳述，哪幾項正確？
+      <br>I. 圖像開口向下。
+      <br>II. 圖像有兩個 $x$ 截距。
+      <br>III. 圖像通過原點。
+      <ol class="opts">
+        <li><span class="ol">A</span>只有 I 及 II</li>
+        <li><span class="ol">B</span>只有 I 及 III</li>
+        <li><span class="ol">C</span>只有 II 及 III</li>
+        <li><span class="ol">D</span>I、II 及 III</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開找出 $x^2$ 係數與常數項</div>
+      <div class="rule">
+        <span class="rule-name">二次函數的形狀</span>
+        <span class="rule-math">$y=pqx^2+(2p+q)x+2$</span>
+        <span class="rule-why">$x^2$ 係數為 $pq$、常數項為 $2$。</span>
+      </div>
+      <p>$$y=pqx^2+(2p+q)x+2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I：開口方向</div>
+      <p>因 $pq<0$，$x^2$ 係數為負，圖像開口向下。I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：$x$ 截距數目</div>
+      <p>令 $y=0$：$(px+1)(qx+2)=0$，得 $x=-\dfrac{1}{p}$ 或 $x=-\dfrac{2}{q}$。</p>
+      <p>若兩根相等則 $-\dfrac{1}{p}=-\dfrac{2}{q}$，即 $q=2p$，此時 $pq=2p^2>0$，與 $pq<0$ 矛盾。故兩根相異，有兩個 $x$ 截距。II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：是否通過原點</div>
+      <p>常數項為 $2\neq0$，$y$ 截距為 $2$，不通過原點。III 錯誤。</p>
+      <p>故只有 I 及 II，即選項 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>　只有 I 及 II</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p$、$q$ 為實常數且 $pq>0$。對 $y=(px+3)(qx-1)$ 的圖像，判斷：(I) 開口向上；(II) 有兩個 $x$ 截距；(III) $y$ 截距為 $-3$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$y=pqx^2+(3q-p)x-3$，$x^2$ 係數 $pq>0$，故開口向上，(I) 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 根為 $-\dfrac{3}{p}$ 及 $\dfrac{1}{q}$，若相等則 $q=-\dfrac{p}{3}$，則 $pq=-\dfrac{p^2}{3}<0$，矛盾，故兩根相異，(II) 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 常數項 $-3$，$y$ 截距為 $-3$，(III) 正確。</div>
+          <div class="p-ans">答案：三項皆正確</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q14.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第16題 · 扇形的周界與面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第16題</span>
+    <h1>周界包含兩條半徑，不只是弧長</h1>
+    <p class="sub">求積法 · 扇形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某扇形的周界及面積分別為 $k$ cm 及 $3k\text{ cm}^2$。若該扇形的半徑為 $14$ cm，則其弧長為
+      <ol class="opts">
+        <li><span class="ol">A</span>$19$ cm</li>
+        <li><span class="ol">B</span>$21$ cm</li>
+        <li><span class="ol">C</span>$28$ cm</li>
+        <li><span class="ol">D</span>$49$ cm</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 320 220" width="300" role="img" aria-label="半徑 14 cm 的扇形">
+        <path d="M 60 180 A 150 150 0 0 1 250 120 L 60 180 Z" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="60" cy="180" r="3"/>
+        <text x="46" y="196" font-size="12" fill="currentColor">O</text>
+        <text x="92" y="164" font-size="11" fill="currentColor">14 cm</text>
+        <text x="186" y="112" font-size="11" fill="currentColor">弧長 s</text>
+        <text x="96" y="196" font-size="11" fill="currentColor">14 cm</text>
+      </svg>
+      <figcaption>圖：扇形由兩條半徑與一段弧組成（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用弧長表示周界</div>
+      <div class="rule">
+        <span class="rule-name">扇形的周界</span>
+        <span class="rule-math">$P=2r+\text{弧長}$</span>
+        <span class="rule-why">兩條半徑各 $14$ cm，加上弧長，故 $k=28+s$（設弧長為 $s$）。</span>
+      </div>
+      <p>$$k=2(14)+s=28+s$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用弧長表示面積</div>
+      <div class="rule">
+        <span class="rule-name">扇形的面積</span>
+        <span class="rule-math">$A=\tfrac12\times\text{弧長}\times r$</span>
+        <span class="rule-why">$r=14$ 時面積為 $7s$，而題設面積為 $3k$。</span>
+      </div>
+      <p>$$3k=\frac{1}{2}\times s\times 14=7s$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入解 $s$</div>
+      <p>$$7s=3k=3(28+s)\quad\Longrightarrow\quad 7s=84+3s\quad\Longrightarrow\quad 4s=84\quad\Longrightarrow\quad s=21$$</p>
+      <p>弧長為 $21$ cm，即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$21$ cm</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 半徑 $10$ cm 的扇形，其周界與面積的數值相等（以 cm、cm² 計），求弧長。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 周界 $=20+s$；面積 $=\tfrac12(10)s=5s$。</div>
+          <div class="p-step"><b>第 2 步.</b> $5s=20+s\Rightarrow 4s=20\Rightarrow s=5$。</div>
+          <div class="p-ans">答案：$5$ cm</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q15.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
