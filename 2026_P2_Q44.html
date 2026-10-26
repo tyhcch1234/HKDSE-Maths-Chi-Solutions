@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第44題 · 標準分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第44題</span>
+    <h1>一個標準分 0 就告訴你平均數</h1>
+    <p class="sub">統計學 · 標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示四名學生在某測驗中的分數及對應的標準分。
+      <table style="border-collapse:collapse;margin:12px auto;text-align:center;font-size:.95rem;">
+        <tr><th style="border:1px solid #cbd5e1;padding:5px 14px;">分數</th><td style="border:1px solid #cbd5e1;padding:5px 14px;">$\alpha$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$40$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$58$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$\beta$</td></tr>
+        <tr><th style="border:1px solid #cbd5e1;padding:5px 14px;">標準分</th><td style="border:1px solid #cbd5e1;padding:5px 14px;">$-1$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$0$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$2$</td><td style="border:1px solid #cbd5e1;padding:5px 14px;">$3$</td></tr>
+      </table>
+      求 $\beta-\alpha$。
+      <ol class="opts">
+        <li><span class="ol">A</span>$31$</li>
+        <li><span class="ol">B</span>$36$</li>
+        <li><span class="ol">C</span>$54$</li>
+        <li><span class="ol">D</span>$98$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由標準分 $0$ 求平均數</div>
+      <div class="rule">
+        <span class="rule-name">標準分</span>
+        <span class="rule-math">$z=\dfrac{x-\bar{x}}{s}$</span>
+        <span class="rule-why">$z=0$ 對應 $x=40$，故平均數為 $40$。</span>
+      </div>
+      <p>$$\bar{x}=40$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $z=2$ 求標準差</div>
+      <p>$$2=\frac{58-40}{s}\quad\Longrightarrow\quad s=9$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">反求 $\alpha$、$\beta$</div>
+      <div class="rule">
+        <span class="rule-name">由標準分反求分數</span>
+        <span class="rule-math">$x=\bar{x}+zs$</span>
+        <span class="rule-why">$\alpha=40-9=31$、$\beta=40+27=67$。</span>
+      </div>
+      <p>$$\alpha=40+(-1)(9)=31,\qquad \beta=40+3(9)=67$$</p>
+      <p>$$\beta-\alpha=67-31=36$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$36$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某測驗平均數 $60$、標準差 $8$。求 (a) 分數 $76$ 的標準分；(b) 標準分 $-1.5$ 對應的分數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $z=\dfrac{76-60}{8}=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $x=60+(-1.5)(8)=48$。</div>
+          <div class="p-ans">答案：(a) $2$　(b) $48$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q43.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

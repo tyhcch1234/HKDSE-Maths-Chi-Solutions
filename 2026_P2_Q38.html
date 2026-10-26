@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第38題 · 圓形定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第38題</span>
+    <h1>切線與弦、平行線交替角輪流用</h1>
+    <p class="sub">幾何 · 圓形定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $A$、$B$、$C$、$D$ 為圓上的點，$AC$ 與 $BD$ 交於 $E$。$BD$ 延長至 $T$，使 $TC$ 為圓的切線。已知 $AB\parallel TC$、$\angle AED=85^\circ$、$\angle CTE=23^\circ$，則 $\angle ADE=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$39^\circ$</li>
+        <li><span class="ol">B</span>$56^\circ$</li>
+        <li><span class="ol">C</span>$62^\circ$</li>
+        <li><span class="ol">D</span>$72^\circ$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 320 260" width="300" role="img" aria-label="圓上四點 A、B、C、D，切線 TC 與平行線 AB">
+        <circle cx="160" cy="130" r="100" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <g stroke="currentColor" stroke-width="1.3" fill="none">
+          <line x1="95" y1="55" x2="240" y2="95"/>
+          <line x1="70" y1="150" x2="215" y2="205"/>
+          <line x1="95" y1="55" x2="215" y2="205"/>
+          <line x1="70" y1="150" x2="240" y2="95"/>
+          <line x1="240" y1="95" x2="290" y2="60"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="95" cy="55" r="3.2"/><circle cx="70" cy="150" r="3.2"/>
+          <circle cx="215" cy="205" r="3.2"/><circle cx="240" cy="95" r="3.2"/>
+          <circle cx="120" cy="96" r="3"/><circle cx="290" cy="60" r="3.2"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="86" y="48">A</text><text x="58" y="166">B</text>
+          <text x="220" y="220">C</text><text x="246" y="90">D</text>
+          <text x="126" y="92" font-size="11">E</text><text x="294" y="56">T</text>
+        </g>
+      </svg>
+      <figcaption>圖：$TC$ 為切線，$AB\parallel TC$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">平行線給出 $\angle ABD$</div>
+      <div class="rule">
+        <span class="rule-name">平行線的交替角</span>
+        <span class="rule-math">$AB\parallel TC\ \Rightarrow\ \angle ABD=\angle CTE$</span>
+        <span class="rule-why">截線 $BDT$ 與兩平行線相交，交替角相等，故 $\angle ABD=23^\circ$。</span>
+      </div>
+      <p>$$\angle ABD=23^\circ\quad\Longrightarrow\quad\text{弧 }AD=46^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用兩弦交角求弧 $BC$</div>
+      <div class="rule">
+        <span class="rule-name">兩弦相交的角</span>
+        <span class="rule-math">$\angle AED=\tfrac12(\text{弧 }AD+\text{弧 }BC)$</span>
+        <span class="rule-why">$85^\circ=\tfrac12(46^\circ+\text{弧 }BC)$，故弧 $BC=124^\circ$。</span>
+      </div>
+      <p>$$85^\circ=\frac{46^\circ+\text{弧 }BC}{2}\quad\Longrightarrow\quad\text{弧 }BC=124^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">切線與弦定理</div>
+      <div class="rule">
+        <span class="rule-name">切線與弦（內錯弓形角）</span>
+        <span class="rule-math">$\angle TCB=\angle CAB=\tfrac12\text{弧 }BC$</span>
+        <span class="rule-why">故 $\angle TCB=62^\circ$；又 $AB\parallel TC$ 給 $\angle CBA=62^\circ$。</span>
+      </div>
+      <p>$$\angle TCB=\frac{124^\circ}{2}=62^\circ$$</p>
+      <p>由 $AB\parallel TC$（截線 $BC$）得 $\angle CBA=\angle TCB=62^\circ$。</p>
+      <p>於是 $\angle DBC=62^\circ-23^\circ=39^\circ$，即弧 $DC=78^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求弧 $AB$，再取一半</div>
+      <p>$$\text{弧 }AB=360^\circ-(46^\circ+124^\circ+78^\circ)=112^\circ$$</p>
+      <p>$\angle ADE=\angle ADB$ 對弧 $AB$，故</p>
+      <p>$$\angle ADE=\frac{112^\circ}{2}=56^\circ$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$56^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓上 $A$、$B$、$C$ 三點，$TC$ 為切線。若 $\angle TCB=58^\circ$，求弧 $BC$ 及 $\angle BAC$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 切線與弦定理：$\angle TCB=\angle BAC$，故 $\angle BAC=58^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> 圓周角為同弧圓心角的一半，故弧 $BC=2\times58^\circ=116^\circ$。</div>
+          <div class="p-ans">答案：弧 $BC=116^\circ$，$\angle BAC=58^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q37.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

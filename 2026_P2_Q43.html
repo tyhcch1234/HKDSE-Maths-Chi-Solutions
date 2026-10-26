@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第43題 · 排列與組合</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第43題</span>
+    <h1>先排全職，再把兼職插空隙</h1>
+    <p class="sub">組合 · 排列與不相鄰</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某公司有 $5$ 名全職及 $3$ 名兼職員工。現從公司選出 $7$ 人排成一列，若沒有兼職員工相鄰，共可排出多少個不同的排列？
+      <ol class="opts">
+        <li><span class="ol">A</span>$5040$</li>
+        <li><span class="ol">B</span>$14400$</li>
+        <li><span class="ol">C</span>$18000$</li>
+        <li><span class="ol">D</span>$32400$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分兩種情況選人</div>
+      <p>從 $8$ 人中選 $7$ 人：<b>少一名全職</b>（4 全 3 兼）或<b>少一名兼職</b>（5 全 2 兼）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">情況一：4 全 3 兼</div>
+      <div class="rule">
+        <span class="rule-name">插入法</span>
+        <span class="rule-math">$n$ 個物件排好後有 $n+1$ 個空隙</span>
+        <span class="rule-why">4 名全職有 $5$ 個空隙，選 $3$ 個放兼職，再加兼職自身的排列。</span>
+      </div>
+      <p>選人：$5$ 種（少哪一名全職）。排列：</p>
+      <p>$$4!\times{}^{5}C_{3}\times3!=24\times10\times6=1440$$</p>
+      <p>共 $5\times1440=7200$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">情況二：5 全 2 兼</div>
+      <p>選人：$3$ 種（少哪一名兼職）。排列：</p>
+      <p>$$5!\times{}^{6}C_{2}\times2!=120\times15\times2=3600$$</p>
+      <p>共 $3\times3600=10800$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">相加</div>
+      <p>$$7200+10800=18000$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$18000$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 有 $4$ 名男生及 $3$ 名女生排成一列，若女生不可相鄰，共有多少個排列？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 先排 $4$ 名男生：$4!=24$。</div>
+          <div class="p-step"><b>第 2 步.</b> 產生 $5$ 個空隙，選 $3$ 個放女生：${}^{5}C_{3}=10$。</div>
+          <div class="p-step"><b>第 3 步.</b> 女生排列 $3!=6$，故共 $24\times10\times6=1440$。</div>
+          <div class="p-ans">答案：$1440$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q42.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

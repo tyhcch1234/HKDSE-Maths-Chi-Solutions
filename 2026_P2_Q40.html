@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第40題 · 兩平面夾角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第40題</span>
+    <h1>用平面的法向量求夾角</h1>
+    <p class="sub">立體幾何 · 兩平面夾角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCDEF$ 為直角柱，其中 $AB:AC:AE=1:1:2$。設 $\theta$ 為平面 $ABC$ 與平面 $BCE$ 的夾角。若 $\angle BAC=90^\circ$，求 $\sin\theta$。
+      <ol class="opts">
+        <li><span class="ol">A</span>$\dfrac{1}{3}$</li>
+        <li><span class="ol">B</span>$\dfrac{2}{3}$</li>
+        <li><span class="ol">C</span>$\dfrac{\sqrt2}{4}$</li>
+        <li><span class="ol">D</span>$\dfrac{2\sqrt2}{3}$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設長度</div>
+      <p>取 $AB=1$、$AC=1$、$AE=2$。以 $A$ 為原點，$AB$、$AC$、$AE$ 沿三軸：</p>
+      <p>$$A=(0,0,0),\quad B=(1,0,0),\quad C=(0,1,0),\quad E=(0,0,2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩個平面的法向量</div>
+      <div class="rule">
+        <span class="rule-name">法向量</span>
+        <span class="rule-math">平面 $ABC$：$z=0$，法向量 $(0,0,1)$</span>
+        <span class="rule-why">平面 $BCE$ 由 $B$、$C$、$E$ 三點決定。</span>
+      </div>
+      <p>$\vec{CB}=(1,-1,0)$、$\vec{CE}=(0,-1,2)$，故</p>
+      <p>$$\vec{n}=(1,-1,0)\times(0,-1,2)=(-2,\ -2,\ -1)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $\cos\theta$ 與 $\sin\theta$</div>
+      <div class="rule">
+        <span class="rule-name">兩平面的夾角</span>
+        <span class="rule-math">$\cos\theta=\dfrac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$</span>
+        <span class="rule-why">$|\vec{n}|=3$，故 $\cos\theta=\dfrac{1}{3}$。</span>
+      </div>
+      <p>$$\cos\theta=\frac{|(-2)(0)+(-2)(0)+(-1)(1)|}{3\times1}=\frac{1}{3}$$</p>
+      <p>$$\sin\theta=\sqrt{1-\frac{1}{9}}=\frac{2\sqrt2}{3}$$</p>
+      <p>即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　$\dfrac{2\sqrt2}{3}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $A=(0,0,0)$、$B=(2,0,0)$、$C=(0,2,0)$、$E=(0,0,2)$。求平面 $ABC$ 與平面 $BCE$ 的夾角 $\theta$ 的餘弦值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 平面 $ABC$ 的法向量為 $(0,0,1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\vec{CB}=(2,-2,0)$、$\vec{CE}=(0,-2,2)$，叉積得 $(-4,-4,-4)$，即方向 $(-1,-1,-1)$，長度 $\sqrt3$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\cos\theta=\dfrac{1}{\sqrt3}$。</div>
+          <div class="p-ans">答案：$\cos\theta=\dfrac{1}{\sqrt3}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q39.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q41.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

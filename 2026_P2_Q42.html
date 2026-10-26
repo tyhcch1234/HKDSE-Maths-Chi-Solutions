@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第42題 · 概率（委員會）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第42題</span>
+    <h1>「最多 2 個男生」用補集最快</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      班中有 $3$ 名男生及 $7$ 名女生。若隨機選出 $5$ 名學生組成委員會，求選出最多 $2$ 名男生的概率。
+      <ol class="opts">
+        <li><span class="ol">A</span>$\dfrac{5}{6}$</li>
+        <li><span class="ol">B</span>$\dfrac{11}{12}$</li>
+        <li><span class="ol">C</span>$\dfrac{119}{120}$</li>
+        <li><span class="ol">D</span>$\dfrac{251}{252}$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">總方法數</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">${}^{10}C_{5}=252$</span>
+        <span class="rule-why">$10$ 人中選 $5$ 人。</span>
+      </div>
+      <p>$${}^{10}C_{5}=252$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用補集：只有「3 個男生」不合</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        <span class="rule-math">$P(A)=1-P(A')$</span>
+        <span class="rule-why">最多 $2$ 個男生的補集是「剛好 $3$ 個男生」。</span>
+      </div>
+      <p>只有 $3$ 名男生，選 $5$ 人而要 $3$ 男，即其餘 $2$ 人為女生：</p>
+      <p>$${}^{3}C_{3}\times{}^{7}C_{2}=1\times21=21$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算概率</div>
+      <p>$$P=1-\frac{21}{252}=1-\frac{1}{12}=\frac{11}{12}$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$\dfrac{11}{12}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 有 $4$ 名男生及 $6$ 名女生，選出 $4$ 人，求最多 $1$ 名男生的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 ${}^{10}C_{4}=210$。</div>
+          <div class="p-step"><b>第 2 步.</b> $0$ 男：${}^{6}C_{4}=15$；$1$ 男：${}^{4}C_{1}{}^{6}C_{3}=4\times20=80$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{95}{210}=\dfrac{19}{42}$。</div>
+          <div class="p-ans">答案：$\dfrac{19}{42}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q41.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第41題 · 三角方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第41題</span>
+    <h1>四次方程化成 $\sin^2\theta$ 的二次方程</h1>
+    <p class="sub">三角學 · 三角方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      對於 $90^\circ\le\theta\le360^\circ$，方程 $6\sin^4\theta-5\sin^2\theta+1=0$ 有多少個根？
+      <ol class="opts">
+        <li><span class="ol">A</span>$2$</li>
+        <li><span class="ol">B</span>$4$</li>
+        <li><span class="ol">C</span>$6$</li>
+        <li><span class="ol">D</span>$8$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">令 $u=\sin^2\theta$</div>
+      <div class="rule">
+        <span class="rule-name">換元法</span>
+        <span class="rule-math">$6u^{2}-5u+1=0$</span>
+        <span class="rule-why">分解得 $(2u-1)(3u-1)=0$，即 $u=\tfrac12$ 或 $\tfrac13$。</span>
+      </div>
+      <p>$$6u^2-5u+1=0\quad\Longrightarrow\quad (2u-1)(3u-1)=0\quad\Longrightarrow\quad u=\tfrac12\ \text{或}\ \tfrac13$$</p>
+      <p>兩個值都是正數，故都可接受（$\sin^2\theta\ge0$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">$u=\dfrac12$ 的根</div>
+      <div class="rule">
+        <span class="rule-name">$\sin\theta=\pm\dfrac{1}{\sqrt2}$</span>
+        <span class="rule-math">$\theta=135^\circ,\ 225^\circ,\ 315^\circ$</span>
+        <span class="rule-why">在 $90^\circ\le\theta\le360^\circ$ 內，$45^\circ$ 不在範圍。</span>
+      </div>
+      <p>共 $3$ 個根。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">$u=\dfrac13$ 的根</div>
+      <p>$\sin\theta=\pm\dfrac{1}{\sqrt3}$，在 $90^\circ\le\theta\le360^\circ$ 內：</p>
+      <p>$$\sin\theta=\frac{1}{\sqrt3}:\ \theta\approx145^\circ\ (\text{一個根})$$</p>
+      <p>$$\sin\theta=-\frac{1}{\sqrt3}:\ \theta\approx215^\circ,\ 325^\circ\ (\text{兩個根})$$</p>
+      <p>共 $3$ 個根。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合計</div>
+      <p>$$3+3=6\ \text{個根}$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$6$ 個根</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 對於 $0^\circ\le\theta\le360^\circ$，求 $2\sin^2\theta-3\sin\theta+1=0$ 的根的數目。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 令 $s=\sin\theta$：$2s^2-3s+1=0$，得 $s=\dfrac12$ 或 $s=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\sin\theta=\dfrac12$：$\theta=30^\circ,\ 150^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\sin\theta=1$：$\theta=90^\circ$。</div>
+          <div class="p-ans">答案：$3$ 個根</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q40.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q42.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
