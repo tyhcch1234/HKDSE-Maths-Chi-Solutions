@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第17題 · 數列與對數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第17題</span>
+    <h1>等差數列求和，再解對數不等式</h1>
+    <p class="sub">公式與數列 · 等差數列、對數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      對任意正整數 $n$，設 $A(n)=4n-5$ 及 $B(n)=10^{\,4n-5}$。
+      <br>(a) 以 $n$ 表示 $A(1)+A(2)+A(3)+\cdots+A(n)$。<span class="marks">[2 分]</span>
+      <br>(b) 求最大的 $n$，使得 $\log\big(B(1)B(2)B(3)\cdots B(n)\big)\le 8000$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 認出這是等差數列</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        $A(1)=-1$，公差 $=4$，共 $n$ 項。$S(n)=\dfrac{n}{2}\big[2a+(n-1)d\big]$。
+      </div>
+      <p>$$S(n)=\frac{n}{2}\big[2(-1)+(n-1)(4)\big]=\frac{n}{2}(4n-6)=2n^{2}-3n$$</p>
+      <p>（或用 $\sum$：$4\displaystyle\sum_{k=1}^{n}k-5n=4\cdot\frac{n(n+1)}{2}-5n=2n^{2}-3n$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 把乘積化為指數相加</div>
+      <div class="rule">
+        <span class="rule-name">同底數相乘</span>
+        $10^{a}\cdot10^{b}=10^{a+b}$，故乘積的指數就是各項之和。
+      </div>
+      <p>$$B(1)B(2)\cdots B(n)=10^{A(1)}\cdot10^{A(2)}\cdots10^{A(n)}=10^{\,A(1)+A(2)+\cdots+A(n)}$$</p>
+      <p>$$=10^{\,2n^{2}-3n}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取對數，把條件變成二次不等式</div>
+      <div class="rule">
+        <span class="rule-name">$\log 10^{M}=M$</span>
+        常用對數以 $10$ 為底，故 $\log\big(B(1)\cdots B(n)\big)=2n^{2}-3n$。
+      </div>
+      <p>$$2n^{2}-3n\le 8000$$</p>
+      <p>$$2n^{2}-3n-8000\le 0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">因式分解求臨界值</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘</span>
+        $2n^{2}-3n-8000=(n-64)(2n+125)$，故臨界值為 $n=64$ 及 $n=-62.5$。
+      </div>
+      <p>驗算：$(n-64)(2n+125)=2n^{2}+125n-128n-8000=2n^{2}-3n-8000$ ✓</p>
+      <p>因 $n$ 為正整數，解為 $0<n\le 64$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">核對邊界</div>
+      <div class="rule">
+        <span class="rule-name">檢查相鄰整數</span>
+        $n=64$ 時 $2(64)^{2}-3(64)=8192-192=8000$，剛好等於 $8000$；$n=65$ 時為 $8255>8000$。
+      </div>
+      <p>所以最大的 $n$ 為 $64$。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $2n^{2}-3n$　(b) $n=64$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">對任意正整數 $k$，設 $A(k)=3k-2$ 及 $B(k)=10^{\,3k-2}$。(a) 以 $n$ 表示 $A(1)+A(2)+\cdots+A(n)$。(b) 求最大的 $n$，使得 $B(1)B(2)\cdots B(n)\le 10^{5000}$。</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> (a) 等差數列：首項 $1$、公差 $3$，$S(n)=\dfrac{n}{2}\big[2+(n-1)3\big]=\dfrac{3n^{2}-n}{2}$。</div>
+      <div class="p-step"><b>第 2 步.</b> (b) $B(1)\cdots B(n)=10^{\,S(n)}$，故條件為 $\dfrac{3n^{2}-n}{2}\le 5000$，即 $3n^{2}-n-10000\le 0$。</div>
+      <div class="p-step"><b>第 3 步.</b> $n=\dfrac{1\pm\sqrt{1+120000}}{6}$，正根約為 $57.90$，故 $n\le 57$。</div>
+      <div class="p-step"><b>第 4 步.</b> 核對：$n=57$ 時 $\dfrac{3(3249)-57}{2}=4845\le5000$ ✓；$n=58$ 時 $\dfrac{3(3364)-58}{2}=5017>5000$ ✗。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $\dfrac{3n^{2}-n}{2}$　(b) $n=57$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

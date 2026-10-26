@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第11題 · 餘式定理與因式定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第11題</span>
+    <h1>先定 $k$，再定 $h$，最後驗根</h1>
+    <p class="sub">多項式 · 餘式定理、因式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=(x-2)^{2}(x+h)+k$，其中 $h$ 和 $k$ 為常數。當 $f(x)$ 除以 $x-2$ 時，餘數為 $-5$。已知 $f(x)$ 可被 $x-3$ 整除。
+      <br>(a) 求 $h$ 和 $k$。<span class="marks">[3 分]</span>
+      <br>(b) 有人聲稱方程 $f(x)=0$ 的所有根都是整數。你是否同意？試解釋你的答案。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用餘式定理求 $k$</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        $f(x)$ 除以 $(x-a)$ 的餘數是 $f(a)$。此處除以 $x-2$，故 $f(2)=-5$。
+      </div>
+      <p>$$f(2)=(2-2)^{2}(2+h)+k=0+k=k$$</p>
+      <p>$$\therefore k=-5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用因式定理求 $h$</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        $(x-a)$ 是 $f(x)$ 的因式 $\iff f(a)=0$。可被 $x-3$ 整除 $\Rightarrow f(3)=0$。
+      </div>
+      <p>$$(3-2)^{2}(3+h)-5=0$$</p>
+      <p>$$(3+h)-5=0\quad\Longrightarrow\quad h=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出並展開 $f(x)$</div>
+      <div class="rule">
+        <span class="rule-name">展開</span>
+        $f(x)=(x-2)^{2}(x+2)-5=(x^{2}-4x+4)(x+2)-5$。
+      </div>
+      <p>$$f(x)=(x^{2}-4x+4)(x+2)-5$$</p>
+      <p>$$=x^{3}+2x^{2}-4x^{2}-8x+4x+8-5$$</p>
+      <p>$$=x^{3}-2x^{2}-4x+3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用已知根 $x=3$ 分解三次式</div>
+      <div class="rule">
+        <span class="rule-name">長除法／對比係數</span>
+        因 $f(3)=0$，$(x-3)$ 是因式，可寫成 $(x-3)(x^{2}+px+q)$，比較係數得 $p=1$、$q=-1$。
+      </div>
+      <p>$$x^{3}-2x^{2}-4x+3=(x-3)(x^{2}+x-1)$$</p>
+      <p>驗算：$(x-3)(x^{2}+x-1)=x^{3}+x^{2}-x-3x^{2}-3x+3=x^{3}-2x^{2}-4x+3$ ✓</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">求其餘兩個根</div>
+      <div class="rule">
+        <span class="rule-name">二次公式</span>
+        $x=\dfrac{-b\pm\sqrt{b^{2}-4ac}}{2a}$。$x^{2}+x-1$ 不能在整數範圍內分解，故用公式。
+      </div>
+      <p>$$x^{2}+x-1=0\quad\Longrightarrow\quad x=\frac{-1\pm\sqrt{1+4}}{2}=\frac{-1\pm\sqrt{5}}{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 判斷聲稱是否成立</div>
+      <div class="rule">
+        <span class="rule-name">$\sqrt{5}$ 是無理數</span>
+        所以 $\dfrac{-1\pm\sqrt{5}}{2}$ 不是整數；只有 $x=3$ 是整數根。
+      </div>
+      <p>因此方程 $f(x)=0$ 的三個根為 $3$、$\dfrac{-1+\sqrt{5}}{2}$、$\dfrac{-1-\sqrt{5}}{2}$，並非全部是整數，故<b>不同意</b>該聲稱。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $h=2$、$k=-5$　(b) 不同意；$f(x)=(x-3)(x^{2}+x-1)$，另兩根為 $\dfrac{-1\pm\sqrt{5}}{2}$，不是整數
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">設 $f(x)=(x-2)^{2}(x+h)+k$，其中 $h$、$k$ 為常數。當 $f(x)$ 除以 $x-2$ 時餘數為 $-6$，且 $f(x)$ 可被 $x-1$ 整除。(a) 求 $h$ 和 $k$。(b) 有人聲稱 $f(x)=0$ 的所有根都是整數，你是否同意？</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 餘式定理：$f(2)=-6$，而 $f(2)=0+k$，故 $k=-6$。</div>
+      <div class="p-step"><b>第 2 步.</b> 因式定理：$f(1)=0$，即 $(1-2)^{2}(1+h)-6=0$，得 $1+h=6$，$h=5$。</div>
+      <div class="p-step"><b>第 3 步.</b> $f(x)=(x-2)^{2}(x+5)-6=x^{3}+x^{2}-16x+14$。</div>
+      <div class="p-step"><b>第 4 步.</b> 因 $f(1)=0$，分解得 $f(x)=(x-1)(x^{2}+2x-14)$。</div>
+      <div class="p-step"><b>第 5 步.</b> 解 $x^{2}+2x-14=0$：$x=\dfrac{-2\pm\sqrt{4+56}}{2}=-1\pm\sqrt{15}$，是無理數。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $h=5$、$k=-6$　(b) 不同意，根為 $1$ 及 $-1\pm\sqrt{15}$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

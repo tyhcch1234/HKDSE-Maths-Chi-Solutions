@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第5題 · 聯立不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第5題</span>
+    <h1>兩個一元一次不等式的交集</h1>
+    <p class="sub">不等式 · 求最小整數解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      (a) 求同時滿足以下兩個不等式的 $x$ 的取值範圍：
+      $$\frac{7-3x}{5}\le 2(x+2)\qquad\text{及}\qquad 4x-13>0$$
+      <span class="marks">[4 分]</span>
+      <br>(b) 寫出同時滿足 (a) 中兩個不等式的最小整數。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">解第一個不等式：先去分母</div>
+      <div class="rule">
+        <span class="rule-name">乘正數不變號</span>
+        兩邊同乘 $5$（正數），不等號方向不變。
+      </div>
+      <p>$$\frac{7-3x}{5}\le 2(x+2)$$</p>
+      <p>$$7-3x\le 10(x+2)$$</p>
+      <p>$$7-3x\le 10x+20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">移項並除以正數</div>
+      <div class="rule">
+        <span class="rule-name">同類項移項</span>
+        $7-20\le 10x+3x$，即 $-13\le 13x$；兩邊除 $13$（正數），不等號不變，得 $x\ge -1$。
+      </div>
+      <p>$$-13\le 13x$$</p>
+      <p>$$x\ge -1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解第二個不等式</div>
+      <div class="rule">
+        <span class="rule-name">除以正數</span>
+        $4x>13$ 兩邊除 $4$（正數），嚴格不等號 $>$ 保留：$x>\dfrac{13}{4}=3.25$。
+      </div>
+      <p>$$4x-13>0$$</p>
+      <p>$$4x>13$$</p>
+      <p>$$x>\frac{13}{4}\ (=3.25)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取交集，再讀出最小整數</div>
+      <div class="rule">
+        <span class="rule-name">交集法則</span>
+        $x\ge a$ 且 $x>b$ $\iff$ $x>\max(a,b)$。兩個條件取較嚴格的一個。
+      </div>
+      <p>$$x\ge -1\quad\text{且}\quad x>\frac{13}{4}\quad\Longrightarrow\quad x>\frac{13}{4}$$</p>
+      <p>因 $\dfrac{13}{4}=3.25$，大於 $3.25$ 的最小整數是 $4$。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $x>\dfrac{13}{4}$　(b) 最小整數為 $4$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">解不等式 $\dfrac{7-2x}{4}\le 3(x+1)$ 及 $2x-9>0$，並由此求同時滿足兩個不等式的最小整數。<span class="marks">[4 分]</span></p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 第一式兩邊乘 $4$（正數，不變號）：$7-2x\le 12x+12$。</div>
+      <div class="p-step"><b>第 2 步.</b> 移項：$7-12\le 12x+2x$，即 $-5\le 14x$，故 $x\ge -\dfrac{5}{14}$。</div>
+      <div class="p-step"><b>第 3 步.</b> 第二式：$2x>9$，即 $x>4.5$。</div>
+      <div class="p-step"><b>第 4 步.</b> 取交集，$x>4.5$ 較嚴格，故 $x>4.5$；大於 $4.5$ 的最小整數是 $5$。</div>
+      <div class="p-ans"><b>練習答案</b>：$x>4.5$；最小整數為 $5$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

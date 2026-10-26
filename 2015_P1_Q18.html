@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第18題 · 二次函數與外心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第18題</span>
+    <h1>判定式、配方法與三角形的外心</h1>
+    <p class="sub">二次函數 · 判定式、配方法、垂直平分線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=2x^{2}-4kx+3k^{2}+5$，其中 $k$ 為實常數。
+      <br>(a) $y=f(x)$ 的圖像是否與 $x$ 軸相交？試解釋你的答案。<span class="marks">[2 分]</span>
+      <br>(b) 利用配方法，以 $k$ 表示 $y=f(x)$ 的圖像的頂點的坐標。<span class="marks">[3 分]</span>
+      <br>(c) 在同一坐標系中，設 $S$ 及 $T$ 分別為 $y=f(x)$ 的圖像及 $y=2-f(x)$ 的圖像上的動點，並以 $O$ 表示原點。有人聲稱當 $S$ 與 $T$ 最接近時，$\triangle OST$ 的外心位於 $x$ 軸上。該聲稱是否正確？試解釋你的答案。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 計算判定式</div>
+      <div class="rule">
+        <span class="rule-name">判定式</span>
+        $\Delta=b^{2}-4ac$。此處 $a=2$、$b=-4k$、$c=3k^{2}+5$。
+      </div>
+      <p>$$\Delta=(-4k)^{2}-4(2)(3k^{2}+5)=16k^{2}-24k^{2}-40=-8k^{2}-40$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 $\Delta$ 的正負</div>
+      <div class="rule">
+        <span class="rule-name">平方非負</span>
+        對所有實數 $k$，$k^{2}\ge 0$，故 $\Delta=-8k^{2}-40\le -40<0$。
+      </div>
+      <p>$\Delta<0$ 表示方程 $f(x)=0$ 沒有實根，所以 $y=f(x)$ 的圖像<b>不</b>與 $x$ 軸相交。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 配方法求頂點</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        $y=a(x-h)^{2}+v$ 的頂點為 $(h,v)$。先把 $x$ 的係數提出，再加減半個係數的平方。
+      </div>
+      <p>$$f(x)=2x^{2}-4kx+3k^{2}+5$$</p>
+      <p>$$=2\left(x^{2}-2kx\right)+3k^{2}+5$$</p>
+      <p>$$=2\left(x^{2}-2kx+k^{2}-k^{2}\right)+3k^{2}+5$$</p>
+      <p>$$=2(x-k)^{2}-2k^{2}+3k^{2}+5$$</p>
+      <p>$$=2(x-k)^{2}+k^{2}+5$$</p>
+      <p>故頂點為 $\left(k,\ k^{2}+5\right)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 寫出 $y=2-f(x)$ 的頂點</div>
+      <div class="rule">
+        <span class="rule-name">對稱軸相同</span>
+        $2-f(x)$ 與 $f(x)$ 有相同的對稱軸 $x=k$，但開口方向相反。
+      </div>
+      <p>$$y=2-f(x)=2-\left[2(x-k)^{2}+k^{2}+5\right]=-2(x-k)^{2}-k^{2}-3$$</p>
+      <p>其頂點為 $\left(k,\ -k^{2}-3\right)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">求 $S$、$T$ 最接近時的位置</div>
+      <div class="rule">
+        <span class="rule-name">同 $x$ 時距離最小</span>
+        對任意 $x$，兩圖像的鉛垂距離 $=f(x)-\big(2-f(x)\big)=2f(x)-2\ge 2\left(k^{2}+5\right)-2=2k^{2}+8$，等號成立於 $x=k$。
+      </div>
+      <p>所以最接近時 $S$ 與 $T$ 在同一鉛垂線上：</p>
+      <p>$$S\left(k,\ k^{2}+5\right),\qquad T\left(k,\ -k^{2}-3\right)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">用垂直平分線判斷外心的位置</div>
+      <div class="rule">
+        <span class="rule-name">外心在垂直平分線上</span>
+        $PA=PB\iff P$ 在 $AB$ 的垂直平分線上。外心到 $S$、$T$ 等距，故外心必在 $ST$ 的垂直平分線上。
+      </div>
+      <p>$ST$ 是鉛垂線，其垂直平分線是水平線，$y$ 坐標為 $ST$ 中點的 $y$ 坐標：</p>
+      <p>$$y=\frac{\left(k^{2}+5\right)+\left(-k^{2}-3\right)}{2}=\frac{2}{2}=1$$</p>
+      <p>即外心的 $y$ 坐標恒為 $1$，而 $x$ 軸的方程為 $y=0$，故外心<b>不在</b> $x$ 軸上，聲稱<b>不正確</b>。</p>
+      <p class="hint">補充：當 $k=0$ 時，$O$、$S$、$T$ 共線（同在 $y$ 軸上），此時根本不存在外心，聲稱更不成立。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) 不相交，因 $\Delta=-8k^{2}-40<0$　(b) 頂點 $\left(k,\ k^{2}+5\right)$　(c) 不正確；外心恒在 $y=1$ 上，不在 $x$ 軸
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">設 $f(x)=x^{2}-2kx+2k^{2}+3$，其中 $k$ 為實常數。(a) 證明 $y=f(x)$ 的圖像不與 $x$ 軸相交。(b) 以配方法求頂點坐標。(c) $S$、$T$ 分別在 $y=f(x)$ 及 $y=4-f(x)$ 上，當 $S$、$T$ 最接近時，$ST$ 的垂直平分線方程是甚麼？</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> (a) $\Delta=4k^{2}-4(2k^{2}+3)=-4k^{2}-12<0$，故無實根，圖像不與 $x$ 軸相交。</div>
+      <div class="p-step"><b>第 2 步.</b> (b) $f(x)=(x-k)^{2}+k^{2}+3$，頂點為 $\left(k,\ k^{2}+3\right)$。</div>
+      <div class="p-step"><b>第 3 步.</b> (c) $y=4-f(x)=-(x-k)^{2}-k^{2}+1$，頂點 $\left(k,\ -k^{2}+1\right)$。</div>
+      <div class="p-step"><b>第 4 步.</b> 最接近時 $S$、$T$ 同為 $x=k$，中點的 $y$ 坐標 $=\dfrac{\left(k^{2}+3\right)+\left(-k^{2}+1\right)}{2}=2$，故垂直平分線為 $y=2$。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $\Delta=-4k^{2}-12<0$　(b) $\left(k,\ k^{2}+3\right)$　(c) $y=2$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第14題 · 圓的方程與直徑</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第14題</span>
+    <h1>垂直平分線與圓的方程</h1>
+    <p class="sub">解析幾何 · 垂直平分線、圓的方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $P$ 及 $Q$ 的坐標分別為 $(4,-1)$ 及 $(-14,23)$。
+      <br>(a) 設 $L$ 為 $PQ$ 的垂直平分線。
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;(i) 求 $L$ 的方程。
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;(ii) 設 $G$ 為位於 $L$ 上的一點，記 $G$ 的 $x$ 坐標為 $h$。設 $C$ 為以 $G$ 為圓心且通過 $P$ 及 $Q$ 的圓。證明 $C$ 的方程為
+      $$2x^{2}+2y^{2}-4hx-(3h+59)y+13h-93=0$$
+      <span class="marks">[6 分]</span>
+      <br>(b) 點 $R$ 的坐標為 $(26,43)$。利用 (a)(ii) 或其他方法，求通過 $P$、$Q$ 及 $R$ 的圓的直徑。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $PQ$ 的中點及斜率</div>
+      <div class="rule">
+        <span class="rule-name">中點公式</span>
+        $M=\left(\dfrac{x_{1}+x_{2}}{2},\ \dfrac{y_{1}+y_{2}}{2}\right)$。
+      </div>
+      <p>$$M=\left(\frac{4+(-14)}{2},\ \frac{-1+23}{2}\right)=(-5,\,11)$$</p>
+      <p>$$PQ\text{ 的斜率}=\frac{23-(-1)}{-14-4}=\frac{24}{-18}=-\frac{4}{3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(i) 寫出 $L$ 的方程</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直</span>
+        $m_{1}m_{2}=-1$。$PQ$ 的斜率為 $-\dfrac{4}{3}$，故 $L$ 的斜率為 $\dfrac{3}{4}$，且 $L$ 通過 $M(-5,11)$。
+      </div>
+      <p>$$y-11=\frac{3}{4}\big(x-(-5)\big)$$</p>
+      <p>$$4y-44=3x+15$$</p>
+      <p>$$3x-4y+59=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a)(ii) 以 $h$ 表示 $G$ 的 $y$ 坐標</div>
+      <div class="rule">
+        <span class="rule-name">點在直線上</span>
+        $G(h,k)$ 在 $L$ 上，故 $3h-4k+59=0$，即 $k=\dfrac{3h+59}{4}$。
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出圓 $C$ 的方程並化簡</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        $(x-h)^{2}+(y-k)^{2}=r^{2}$。半徑 $r=GP$，因為 $C$ 通過 $P(4,-1)$。
+      </div>
+      <p>$$(x-h)^{2}+(y-k)^{2}=(4-h)^{2}+(-1-k)^{2}$$</p>
+      <p>$$x^{2}+y^{2}-2hx-2ky=17-8h+2k$$</p>
+      <p>代入 $4k=3h+59$：兩邊乘 $2$ 得</p>
+      <p>$$2x^{2}+2y^{2}-4hx-4ky-34+16h-4k=0$$</p>
+      <p>$$2x^{2}+2y^{2}-4hx-(3h+59)y+13h-93=0\quad\blacksquare$$</p>
+      <p class="hint">小提示：$-34+16h-(3h+59)=13h-93$，正好與題目一致。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 代入 $R$ 求 $h$</div>
+      <div class="rule">
+        <span class="rule-name">點在圓上</span>
+        $R(26,43)$ 在圓上，代入 $x=26$、$y=43$ 便得關於 $h$ 的一次方程。
+      </div>
+      <p>$$2(26)^{2}+2(43)^{2}-4h(26)-(3h+59)(43)+13h-93=0$$</p>
+      <p>$$1352+3698-104h-129h-2537+13h-93=0$$</p>
+      <p>$$2420-220h=0\quad\Longrightarrow\quad h=11$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">求圓心、半徑與直徑</div>
+      <div class="rule">
+        <span class="rule-name">由一般式讀出圓心</span>
+        $x^{2}+y^{2}+Dx+Ey+F=0$ 的圓心為 $\left(-\dfrac{D}{2},-\dfrac{E}{2}\right)$，半徑 $r=\sqrt{\left(\dfrac{D}{2}\right)^{2}+\left(\dfrac{E}{2}\right)^{2}-F}$。
+      </div>
+      <p>$h=11$ 時，$k=\dfrac{3(11)+59}{4}=23$，故圓心為 $(11,23)$。</p>
+      <p>方程兩邊除 $2$：$x^{2}+y^{2}-22x-46y+25=0$。</p>
+      <p>$$r=\sqrt{11^{2}+23^{2}-25}=\sqrt{121+529-25}=\sqrt{625}=25$$</p>
+      <p>直徑 $=2\times25=50$。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a)(i) $3x-4y+59=0$　(b) 直徑為 $50$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">點 $P$ 及 $Q$ 的坐標分別為 $(1,-2)$ 及 $(9,4)$。$L$ 為 $PQ$ 的垂直平分線，$G(h,k)$ 為 $L$ 上的一點，$C$ 為以 $G$ 為圓心且通過 $P$、$Q$ 的圓。(a) 求 $L$ 的方程。(b) 若 $R(-3,10)$ 亦在 $C$ 上，求 $C$ 的圓心及半徑。</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 中點 $M(5,1)$；$PQ$ 斜率 $=\dfrac{4-(-2)}{9-1}=\dfrac{3}{4}$，故 $L$ 的斜率為 $-\dfrac{4}{3}$。</div>
+      <div class="p-step"><b>第 2 步.</b> $y-1=-\dfrac{4}{3}(x-5)$，即 $4x+3y-23=0$。</div>
+      <div class="p-step"><b>第 3 步.</b> 設圓心 $G(h,k)$，$k=\dfrac{23-4h}{3}$。由 $GP=GR$：$(h-1)^{2}+(k+2)^{2}=(h+3)^{2}+(k-10)^{2}$，化簡得 $h-3k+13=0$。</div>
+      <div class="p-step"><b>第 4 步.</b> 解聯立：$k=5$、$h=2$。半徑 $=\sqrt{(2-1)^{2}+(5+2)^{2}}=\sqrt{50}=5\sqrt{2}$。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $4x+3y-23=0$　(b) 圓心 $(2,5)$，半徑 $5\sqrt{2}$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

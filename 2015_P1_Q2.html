@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第2題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第2題</span>
+    <h1>把 $b$ 變為主項</h1>
+    <p class="sub">公式與數列 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把公式
+      $$\frac{4a+5b-7}{b}=8$$
+      中的 $b$ 變為主項。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">去分母：兩邊乘 $b$</div>
+      <div class="rule">
+        <span class="rule-name">去分母</span>
+        $\dfrac{A}{B}=C \iff A=BC\quad(B\neq 0)$。兩邊同乘 $b$，分數便消失，得到 $4a+5b-7=8b$。
+      </div>
+      <p>$$\frac{4a+5b-7}{b}\times b=8\times b$$</p>
+      <p>$$4a+5b-7=8b$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把所有 $b$ 項移到同一邊</div>
+      <div class="rule">
+        <span class="rule-name">同類項合併</span>
+        $5b-8b=-3b$。移項時 $a$ 留在另一邊，$b$ 全部集中在右邊。
+      </div>
+      <p>$$4a-7=8b-5b$$</p>
+      <p>$$4a-7=3b$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">除以 $b$ 的係數</div>
+      <div class="rule">
+        <span class="rule-name">係數化為 1</span>
+        兩邊同除以 $3$，$b$ 的係數變成 $1$，即成為主項。
+      </div>
+      <p>$$b=\frac{4a-7}{3}$$</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：$b=\dfrac{4a-7}{3}$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">把公式 $\dfrac{3a+4b-5}{b}=6$ 中的 $b$ 變為主項。<span class="marks">[3 分]</span></p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 兩邊乘 $b$（$b\neq0$）：$3a+4b-5=6b$。</div>
+      <div class="p-step"><b>第 2 步.</b> 集中 $b$ 項：$3a-5=6b-4b$，即 $3a-5=2b$。</div>
+      <div class="p-step"><b>第 3 步.</b> 兩邊除 $2$：$b=\dfrac{3a-5}{2}$。</div>
+      <div class="p-ans"><b>練習答案</b>：$b=\dfrac{3a-5}{2}$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

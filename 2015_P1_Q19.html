@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第19題 · 五邊形紙卡與角錐</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第19題</span>
+    <h1>五邊形紙卡：面積變化與摺成角錐的體積</h1>
+    <p class="sub">三角學 · 餘弦公式、正弦公式、二面角與體積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 3(a) 中，$ABCDB'$ 是一張五邊形紙卡。已知 $AB=AB'=40\text{ cm}$、$BC=B'D=24\text{ cm}$ 及 $\angle ABC=\angle AB'D=80^{\circ}$。
+      <br>(a) 假設 $105^{\circ}\le\angle BCD\le 145^{\circ}$。<span class="marks">[7 分]</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;(i) 求 $A$ 與 $C$ 之間的距離。
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;(ii) 求 $\angle ACB$。
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;(iii) 描述當 $\angle BCD$ 由 $105^{\circ}$ 增加至 $145^{\circ}$ 時，紙卡的面積如何變化。試解釋你的答案。
+      <br>(b) 假設 $\angle BCD=132^{\circ}$。把圖 3(a) 的紙卡沿 $AC$ 及 $AD$ 摺起，使 $AB$ 與 $AB'$ 重合，形成圖 3(b) 的角錐 $ABCD$。求角錐 $ABCD$ 的體積。<span class="marks">[6 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 400 275" width="400" height="275" role="img" aria-label="五邊形紙卡 ABCDB'" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <polygon points="199.6,30 30,136 110.3,225.2 288.9,225.2 369.2,136"/>
+          <line x1="199.6" y1="30" x2="110.3" y2="225.2" stroke-dasharray="5 4" stroke-width="1.1"/>
+          <line x1="199.6" y1="30" x2="288.9" y2="225.2" stroke-dasharray="5 4" stroke-width="1.1"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="15">
+          <text x="199.6" y="21" text-anchor="middle">A</text>
+          <text x="22" y="141" text-anchor="middle">B</text>
+          <text x="110" y="247" text-anchor="middle">C</text>
+          <text x="289" y="247" text-anchor="middle">D</text>
+          <text x="381" y="141" text-anchor="middle">B′</text>
+        </g>
+      </svg>
+      <figcaption>圖 3(a)　五邊形紙卡 $ABCDB'$（虛線為對角線 $AC$、$AD$）</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="沿 AC 及 AD 摺成的角錐 ABCD" style="max-width:100%;height:auto;">
+        <g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <polygon points="150,58 58,242 242,242" fill="currentColor" fill-opacity="0.08" stroke="none"/>
+          <line x1="150" y1="58" x2="58" y2="242"/>
+          <line x1="150" y1="58" x2="242" y2="242"/>
+          <line x1="58" y1="242" x2="242" y2="242"/>
+          <g stroke-dasharray="5 4" stroke-width="1.2">
+            <line x1="150" y1="58" x2="150" y2="168"/>
+            <line x1="150" y1="168" x2="58" y2="242"/>
+            <line x1="150" y1="168" x2="242" y2="242"/>
+          </g>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="15">
+          <text x="150" y="48" text-anchor="middle">A</text>
+          <text x="150" y="188" text-anchor="middle">B</text>
+          <text x="44" y="260" text-anchor="middle">C</text>
+          <text x="256" y="260" text-anchor="middle">D</text>
+        </g>
+      </svg>
+      <figcaption>圖 3(b)　$AB$ 與 $AB'$ 重合後的角錐 $ABCD$（虛線為被面 $ACD$ 遮擋的稜）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 在 $\triangle ABC$ 用餘弦公式</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        $b^{2}=a^{2}+c^{2}-2ac\cos B$。已知的 $80^{\circ}$ 剛好夾在 $AB=40$ 與 $BC=24$ 之間。
+      </div>
+      <p>$$AC^{2}=40^{2}+24^{2}-2(40)(24)\cos 80^{\circ}$$</p>
+      <p>$$=1600+576-1920(0.173648\ldots)\approx 1842.6$$</p>
+      <p>$$AC\approx 42.925\text{ cm}\approx 42.9\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(ii) 用正弦公式求 $\angle ACB$</div>
+      <div class="rule">
+        <span class="rule-name">正弦公式</span>
+        $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}$，故 $\dfrac{\sin\angle ACB}{AB}=\dfrac{\sin\angle ABC}{AC}$。
+      </div>
+      <p>$$\frac{\sin\angle ACB}{40}=\frac{\sin 80^{\circ}}{42.925}$$</p>
+      <p>$$\sin\angle ACB=\frac{40\sin 80^{\circ}}{42.925}\approx 0.9177$$</p>
+      <p>故 $\angle ACB\approx 66.6^{\circ}$ 或 $180^{\circ}-66.6^{\circ}=113.4^{\circ}$。</p>
+      <p>但 $80^{\circ}+113.4^{\circ}=193.4^{\circ}>180^{\circ}$，三角形內角和不可能超過 $180^{\circ}$，故 $113.4^{\circ}$ 捨去。</p>
+      <p>$$\angle ACB\approx 66.6^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a)(iii) 把紙卡面積寫成 $\angle BCD$ 的函數</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        面積 $=\tfrac{1}{2}ab\sin C$。紙卡由兩個全等的 $\triangle ABC$、$\triangle AB'D$ 及中央的 $\triangle ACD$ 組成。
+      </div>
+      <p>$$2\times\frac{1}{2}(40)(24)\sin 80^{\circ}=960\sin 80^{\circ}\approx 945.4$$</p>
+      <p>又 $AC=AD$，故</p>
+      <p>$$\text{面積}=960\sin 80^{\circ}+\frac{1}{2}(42.925)^{2}\sin\angle CAD\approx 945.4+921.3\sin\angle CAD$$</p>
+      <p>面積中只有 $\sin\angle CAD$ 會隨 $\angle BCD$ 改變。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把 $\angle CAD$ 與 $\angle BCD$ 連起來</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形</span>
+        $AC=AD$，故 $\angle ACD=\angle ADC$，$\angle CAD=180^{\circ}-2\angle ACD$。
+      </div>
+      <p>在 $C$ 點：$\angle ACD=\angle BCD-\angle ACB=\angle BCD-66.59^{\circ}$</p>
+      <p>$$\angle CAD=180^{\circ}-2\left(\angle BCD-66.59^{\circ}\right)$$</p>
+      <p>當 $\angle BCD=105^{\circ}$：$\angle CAD=103.18^{\circ}$；當 $\angle BCD=145^{\circ}$：$\angle CAD=23.18^{\circ}$。</p>
+      <p>$\angle CAD$ 由 $103.18^{\circ}$ 下降至 $23.18^{\circ}$，途中會經過 $90^{\circ}$，此時 $\sin\angle CAD$ 最大（$=1$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(a)(iii) 結論：先增後減</div>
+      <div class="rule">
+        <span class="rule-name">臨界位置</span>
+        令 $\angle CAD=90^{\circ}$：$180^{\circ}-2(\angle BCD-66.59^{\circ})=90^{\circ}$，得 $\angle BCD\approx 111.6^{\circ}$。
+      </div>
+      <p>當 $\angle BCD$ 由 $105^{\circ}$ 增至約 $111.6^{\circ}$，$\sin\angle CAD$ 由 $0.9737$ 增至 $1$，面積<b>增加</b>；</p>
+      <p>當 $\angle BCD$ 由約 $111.6^{\circ}$ 增至 $145^{\circ}$，$\sin\angle CAD$ 由 $1$ 減至 $0.3936$，面積<b>減少</b>。</p>
+      <p>面積約為 $1842\text{ cm}^{2}$（$\angle BCD=105^{\circ}$）→ $1867\text{ cm}^{2}$（最大，$\angle BCD\approx111.6^{\circ}$）→ $1308\text{ cm}^{2}$（$\angle BCD=145^{\circ}$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 先求 $CD$ 及 $AM$、$BM$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形的中線</span>
+        設 $M$ 為 $CD$ 的中點，則 $AM\perp CD$、$BM\perp CD$，且 $CM=AC\cos\angle ACD$。
+      </div>
+      <p>$\angle BCD=132^{\circ}$ 時，$\angle ACD=132^{\circ}-66.59^{\circ}=65.41^{\circ}$。</p>
+      <p>$$CD=2(42.925)\cos 65.41^{\circ}\approx 35.73\text{ cm},\qquad CM\approx 17.86\text{ cm}$$</p>
+      <p>$$AM=\sqrt{42.925^{2}-17.86^{2}}\approx 39.03\text{ cm}$$</p>
+      <p>$$BM=\sqrt{24^{2}-17.86^{2}}\approx 16.03\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">求摺起後的二面角 $\angle AMB$</div>
+      <div class="rule">
+        <span class="rule-name">二面角</span>
+        $AM\perp CD$、$BM\perp CD$，故 $\angle AMB$ 就是平面 $ACD$ 與平面 $BCD$ 之間的二面角。
+      </div>
+      <p>在 $\triangle AMB$ 中（$AB=40$）：</p>
+      <p>$$\cos\angle AMB=\frac{AM^{2}+BM^{2}-AB^{2}}{2(AM)(BM)}=\frac{1523.2+256.9-1600}{2(39.03)(16.03)}\approx 0.1439$$</p>
+      <p>$$\angle AMB\approx 81.7^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 8 步</span>
+      <div class="step-title">求角錐的高</div>
+      <div class="rule">
+        <span class="rule-name">高的計算</span>
+        $CD\perp$ 平面 $AMB$，故平面 $ACD\perp$ 平面 $AMB$。由 $B$ 向 $AM$ 作垂線，其長度就是 $B$ 到平面 $ACD$ 的距離：$h=BM\sin\angle AMB$。
+      </div>
+      <p>$$h\approx 16.03\sin 81.7^{\circ}\approx 15.86\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 9 步</span>
+      <div class="step-title">計算體積</div>
+      <div class="rule">
+        <span class="rule-name">角錐體積</span>
+        $V=\dfrac{1}{3}\times(\text{底面積})\times\text{高}$。取 $\triangle ACD$ 為底。
+      </div>
+      <p>$$[\triangle ACD]=\frac{1}{2}(CD)(AM)=\frac{1}{2}(35.73)(39.03)\approx 697.2\text{ cm}^{2}$$</p>
+      <p>$$V=\frac{1}{3}(697.2)(15.86)\approx 3686\text{ cm}^{3}\approx 3690\text{ cm}^{3}\ (3\text{ 位有效數字})$$</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a)(i) $AC\approx 42.9\text{ cm}$　(ii) $\angle ACB\approx 66.6^{\circ}$　(iii) 面積先由約 $1842\text{ cm}^{2}$ 增至約 $1867\text{ cm}^{2}$（$\angle BCD\approx 111.6^{\circ}$），再減至約 $1308\text{ cm}^{2}$　(b) 體積 $\approx 3690\text{ cm}^{3}$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">五邊形紙卡 $ABCDB'$ 中，$AB=AB'=8\text{ cm}$、$BC=B'D=5\text{ cm}$、$\angle ABC=\angle AB'D=60^{\circ}$。(a) 求 $AC$。(b) 求 $\angle ACB$。(c) 當 $\angle BCD$ 變化時，紙卡面積在何時最大？此時 $\angle BCD$ 是多少？</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> (a) 餘弦公式：$AC^{2}=8^{2}+5^{2}-2(8)(5)\cos60^{\circ}=64+25-40=49$，故 $AC=7\text{ cm}$。</div>
+      <div class="p-step"><b>第 2 步.</b> (b) 正弦公式：$\dfrac{\sin\angle ACB}{8}=\dfrac{\sin60^{\circ}}{7}$，得 $\sin\angle ACB\approx0.9897$，即 $81.8^{\circ}$（$98.2^{\circ}$ 因 $60^{\circ}+98.2^{\circ}>180^{\circ}$ 而捨去）。</div>
+      <div class="p-step"><b>第 3 步.</b> (c) 面積 $=2\times\dfrac{1}{2}(8)(5)\sin60^{\circ}+\dfrac{1}{2}(7)^{2}\sin\angle CAD$，只有 $\sin\angle CAD$ 可變，最大值在 $\angle CAD=90^{\circ}$。</div>
+      <div class="p-step"><b>第 4 步.</b> $\angle CAD=180^{\circ}-2\angle ACD=90^{\circ}$ 得 $\angle ACD=45^{\circ}$，故 $\angle BCD=45^{\circ}+81.8^{\circ}\approx126.8^{\circ}$。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $7\text{ cm}$　(b) $\approx81.8^{\circ}$　(c) $\angle BCD\approx126.8^{\circ}$ 時面積最大</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

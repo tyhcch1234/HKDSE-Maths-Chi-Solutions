@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第13題 · 正方形中的全等三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第13題</span>
+    <h1>正方形內的全等三角形與畢氏定理</h1>
+    <p class="sub">幾何 · RHS 全等、直角三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 2 中，$ABCD$ 是一個正方形。$E$ 和 $F$ 分別為 $BC$ 和 $CD$ 上的點，使得 $AE=BF$。$AE$ 與 $BF$ 相交於 $G$。
+      <br>(a) 證明 $\triangle ABE\cong\triangle BCF$。<span class="marks">[2 分]</span>
+      <br>(b) $\triangle BGE$ 是否一個直角三角形？試解釋你的答案。<span class="marks">[3 分]</span>
+      <br>(c) 若 $CF=15\text{ cm}$ 及 $EG=9\text{ cm}$，求 $BG$。<span class="marks">[2 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="正方形 ABCD，E 在 BC 上，F 在 CD 上，AE 與 BF 交於 G" style="max-width:100%;height:auto;">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+          <rect x="30" y="30" width="240" height="240"/>
+          <line x1="30" y1="30" x2="180" y2="270"/>
+          <line x1="30" y1="270" x2="270" y2="180"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="16">
+          <text x="24" y="22" text-anchor="end">A</text>
+          <text x="24" y="290" text-anchor="end">B</text>
+          <text x="280" y="290">C</text>
+          <text x="280" y="22">D</text>
+          <text x="180" y="292" text-anchor="middle">E</text>
+          <text x="278" y="176">F</text>
+          <text x="151" y="211" text-anchor="middle">G</text>
+        </g>
+        <g fill="currentColor">
+          <circle cx="180" cy="270" r="2.8"/>
+          <circle cx="270" cy="180" r="2.8"/>
+          <circle cx="151" cy="224" r="2.8"/>
+        </g>
+      </svg>
+      <figcaption>圖 2（示意圖，非按比例）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 在兩個三角形中找出三項相等條件</div>
+      <div class="rule">
+        <span class="rule-name">正方形的性質</span>
+        正方形四邊相等、四個內角均為 $90^{\circ}$。故 $AB=BC$、$\angle ABC=\angle BCD=90^{\circ}$。
+      </div>
+      <p>在 $\triangle ABE$ 與 $\triangle BCF$ 中：</p>
+      <p>$AB=BC$（正方形的邊）</p>
+      <p>$AE=BF$（已知）</p>
+      <p>$\angle ABE=90^{\circ}=\angle BCF$（正方形的內角；$E\in BC$、$F\in CD$）</p>
+      <p>三個條件均齊備：兩個直角三角形有相等的斜邊及一條相等的直角邊。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用 RHS 判定全等</div>
+      <div class="rule">
+        <span class="rule-name">RHS 全等判定</span>
+        若兩個直角三角形的斜邊及一條直角邊分別相等，則兩三角形全等。
+      </div>
+      <p>$$\therefore\ \triangle ABE\cong\triangle BCF\quad(\text{RHS})$$</p>
+      <p>由全等可得對應角相等：$\angle BAE=\angle CBF$，$\angle AEB=\angle BFC$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 在 $\triangle BGE$ 中追角度</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        $\angle A+\angle B+\angle C=180^{\circ}$。在直角三角形 $ABE$ 中，兩個銳角互餘：$\angle BAE+\angle AEB=90^{\circ}$。
+      </div>
+      <p>在 $\triangle BGE$ 中，$G$ 在 $AE$ 上、$B$、$G$、$F$ 共線，故</p>
+      <p>$\angle GBE=\angle CBF=\angle BAE$（由第 2 步）</p>
+      <p>$\angle GEB=\angle AEB$</p>
+      <p>$$\angle BGE=180^{\circ}-\angle GBE-\angle GEB=180^{\circ}-\left(\angle BAE+\angle AEB\right)=180^{\circ}-90^{\circ}=90^{\circ}$$</p>
+      <p>所以 $BG\perp AE$，$\triangle BGE$ 是直角三角形（直角在 $G$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 由全等求 $BE$，再用畢氏定理</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        $c^{2}=a^{2}+b^{2}$。$\triangle BGE$ 中直角在 $G$，故斜邊為 $BE$。
+      </div>
+      <p>由 $\triangle ABE\cong\triangle BCF$，對應邊相等：$BE=CF=15\text{ cm}$。</p>
+      <p>$$BG^{2}+EG^{2}=BE^{2}$$</p>
+      <p>$$BG=\sqrt{15^{2}-9^{2}}=\sqrt{225-81}=\sqrt{144}=12$$</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $\triangle ABE\cong\triangle BCF$（RHS）　(b) 是，$\angle BGE=90^{\circ}$　(c) $BG=12\text{ cm}$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">$ABCD$ 是正方形，$E$ 在 $BC$ 上、$F$ 在 $CD$ 上，且 $AE=BF$，$AE$ 與 $BF$ 交於 $G$。已知 $CF=10\text{ cm}$、$EG=6\text{ cm}$。(a) 證明 $\triangle ABE\cong\triangle BCF$。(b) 求 $BG$。</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> (a) $AB=BC$（正方形邊）、$AE=BF$（已知）、$\angle ABE=\angle BCF=90^{\circ}$，由 RHS 得 $\triangle ABE\cong\triangle BCF$。</div>
+      <div class="p-step"><b>第 2 步.</b> 由全等 $BE=CF=10\text{ cm}$。</div>
+      <div class="p-step"><b>第 3 步.</b> 同上前題 (b) 的理由，$\angle BGE=90^{\circ}$，故 $BG^{2}+EG^{2}=BE^{2}$。</div>
+      <div class="p-step"><b>第 4 步.</b> $BG=\sqrt{10^{2}-6^{2}}=\sqrt{100-36}=8\text{ cm}$。</div>
+      <div class="p-ans"><b>練習答案</b>：(b) $BG=8\text{ cm}$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

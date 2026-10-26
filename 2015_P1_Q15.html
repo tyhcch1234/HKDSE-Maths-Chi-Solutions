@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第15題 · 標準分比較</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第15題</span>
+    <h1>標準分：哪一科表現較好？</h1>
+    <p class="sub">統計學 · 正態分佈與標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示一大群學生在數學科考試及科學科考試的分數的平均數與標準差：
+      <table class="stem" style="border-collapse:collapse;margin:10px 0;">
+        <tr><th style="border:1px solid #ccc;padding:6px 12px;">考試</th><th style="border:1px solid #ccc;padding:6px 12px;">平均數</th><th style="border:1px solid #ccc;padding:6px 12px;">標準差</th></tr>
+        <tr><td style="border:1px solid #ccc;padding:6px 12px;">數學</td><td style="border:1px solid #ccc;padding:6px 12px;">$66$ 分</td><td style="border:1px solid #ccc;padding:6px 12px;">$12$ 分</td></tr>
+        <tr><td style="border:1px solid #ccc;padding:6px 12px;">科學</td><td style="border:1px solid #ccc;padding:6px 12px;">$52$ 分</td><td style="border:1px solid #ccc;padding:6px 12px;">$10$ 分</td></tr>
+      </table>
+      大衛在數學科考試的標準分為 $-0.5$。
+      <br>(a) 求大衛在數學科考試的分數。<span class="marks">[2 分]</span>
+      <br>(b) 假設上述各科考試的分數均呈正態分佈。大衛在科學科考試取得 $49$ 分。他聲稱相對於其他學生，他在科學科的表現比數學科好。該聲稱是否正確？試解釋你的答案。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出標準分公式</div>
+      <div class="rule">
+        <span class="rule-name">標準分</span>
+        $z=\dfrac{x-\mu}{\sigma}$，其中 $\mu$ 為平均數、$\sigma$ 為標準差。標準分表示「距離平均數多少個標準差」。
+      </div>
+      <p>數學科：$\mu=66$、$\sigma=12$，大衛的標準分 $z=-0.5$（負值表示低於平均數）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 反求數學科分數</div>
+      <div class="rule">
+        <span class="rule-name">公式變換</span>
+        $z=\dfrac{x-\mu}{\sigma}\ \Longrightarrow\ x=\mu+z\sigma$。
+      </div>
+      <p>$$\frac{x-66}{12}=-0.5$$</p>
+      <p>$$x-66=(-0.5)(12)=-6$$</p>
+      <p>$$x=60$$</p>
+      <p>大衛在數學科得 $60$ 分（低於平均數 $66$ 分）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求科學科的標準分</div>
+      <div class="rule">
+        <span class="rule-name">代入科學科數據</span>
+        $\mu=52$、$\sigma=10$、$x=49$。
+      </div>
+      <p>$$z=\frac{49-52}{10}=\frac{-3}{10}=-0.3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較兩個標準分</div>
+      <div class="rule">
+        <span class="rule-name">標準分越大，相對表現越好</span>
+        $-0.3>-0.5$，即科學科距離平均數較近（落後較少）。
+      </div>
+      <p>數學科 $z=-0.5$，科學科 $z=-0.3$。因 $-0.3>-0.5$，大衛在科學科的相對表現較好，故該聲稱<b>正確</b>。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $60$ 分　(b) 正確；科學科標準分 $-0.3$ 大於數學科的 $-0.5$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">中文科測驗的平均數為 $72$、標準差為 $8$；英文科測驗的平均數為 $60$、標準差為 $14$。小明在英文科得 $53$ 分，而他在中文科的標準分為 $1.25$。(a) 求他在中文科的分數。(b) 求他在英文科的標準分。(c) 他在哪一科的相對表現較好？試解釋。</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> (a) $x=\mu+z\sigma=72+(1.25)(8)=82$ 分。</div>
+      <div class="p-step"><b>第 2 步.</b> (b) 英文科：$z=\dfrac{53-60}{14}=\dfrac{-7}{14}=-0.5$。</div>
+      <div class="p-step"><b>第 3 步.</b> (c) $1.25>-0.5$，中文科標準分較大。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $82$ 分　(b) $-0.5$　(c) 中文科較好，因標準分 $1.25$ 高於英文科的 $-0.5$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

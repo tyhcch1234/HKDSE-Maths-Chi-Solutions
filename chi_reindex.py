@@ -14,8 +14,10 @@ for paper, label in (('P1', '卷一'), ('P2', '卷二')):
                   for f in glob.glob('%s_%s_Q*.html' % (YEAR, paper)))
     chips = ''.join('<a class="chip" href="%s_%s_Q%d.html">第%d題</a>' % (YEAR, paper, n, n) for n in nums)
     hdr = '<h3 class="paper-label">%s <span class="cnt">%d 題</span></h3>' % (label, len(nums))
-    pat = r'<h3 class="paper-label">%s <span class="cnt">\d+ 題</span></h3>\s*<div class="chips">.*?</div>' % label
-    new = re.sub(pat, hdr + '<div class="chips">' + chips + '</div>', new, flags=re.S)
+    pat = r'<h3 class="paper-label">%s <span class="cnt">\d+ 題</span></h3>\s*<div class="(?:chips|group)">.*?</div>' % label
+    new, k = re.subn(pat, hdr + '<div class="group">' + chips + '</div>', new, flags=re.S)
+    if k == 0:
+        print('WARN: %s section pattern not found' % label)
 s = s.replace(sec, new)
 s = re.sub(r'共 \d+ 題', '共 %d 題' % total, s)
 open('index.html', 'w', encoding='utf8').write(s)
