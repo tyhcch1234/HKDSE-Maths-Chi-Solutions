@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第22題 · 圓內接四邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第22題</span>
+    <h1>等弦對等角：設 $x$ 解三角形</h1>
+    <p class="sub">平面幾何 · 圓</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCDE$ 為一圓。若 $AC=BD$、$\angle AED=96^{\circ}$ 及 $\angle BDC=14^{\circ}$，則 $\angle CAD=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$41^{\circ}$</li><li><span class="ol">B</span>$44^{\circ}$</li><li><span class="ol">C</span>$49^{\circ}$</li><li><span class="ol">D</span>$55^{\circ}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 320 300" width="300" height="282" role="img" aria-label="圓內接五邊形 ABCDE">
+        <circle cx="160" cy="150" r="115" fill="#dbeafe" fill-opacity="0.25" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#1d4ed8" stroke-width="1.5" fill="none">
+          <polygon points="274,150 218,68 150,35 46,150 205,248"/>
+          <line x1="274" y1="150" x2="150" y2="35"/>
+          <line x1="218" y1="68" x2="46" y2="150"/>
+          <line x1="46" y1="150" x2="218" y2="68"/>
+          <line x1="46" y1="150" x2="150" y2="35"/>
+        </g>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="282" y="154">A</text><text x="222" y="62">B</text><text x="146" y="26">C</text>
+          <text x="26" y="154">D</text><text x="210" y="262">E</text>
+        </g>
+      </svg><figcaption>$AC=BD$，且 $\angle AED=96^{\circ}$、$\angle BDC=14^{\circ}$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用圓內接四邊形求 $\angle ACD$</div>
+      <div class="rule"><span class="rule-name">對角互補</span>$ACDE$ 為圓內接四邊形。</div>
+      <p>$$\angle ACD=180^{\circ}-96^{\circ}=84^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用同弓形角</div>
+      <div class="rule"><span class="rule-name">同一條弦</span>$\angle BAC=\angle BDC=14^{\circ}$。</div>
+      <p>$$\angle BAC=14^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用等弦對等角</div>
+      <div class="rule"><span class="rule-name">$AC=BD$</span>$\angle BAD=\angle CDA$。</div>
+      <p>設 $\angle CAD=x$。</p>
+      <p>$$\angle BAD=14^{\circ}+x,\qquad \angle CDA=14^{\circ}+x$$</p>
+      <p>在 $\triangle ACD$ 中：</p>
+      <p>$$84^{\circ}+(14^{\circ}+x)+x=180^{\circ}$$</p>
+      <p>$$2x=82^{\circ}\quad\Longrightarrow\quad x=41^{\circ}$$</p>
+      <p>故選 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（$41^{\circ}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓內接四邊形 $ABCD$ 中，$\angle A=80^{\circ}$，求 $\angle C$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$80^{\circ}$</li><li><span class="ol">B</span>$90^{\circ}$</li><li><span class="ol">C</span>$100^{\circ}$</li><li><span class="ol">D</span>$110^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓內接四邊形對角互補。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle C=180^{\circ}-80^{\circ}=100^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 C。</div>
+          <div class="p-ans">答案：<b>C（$100^{\circ}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

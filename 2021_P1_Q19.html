@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第19題 · 二次函數與圓</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第19題</span>
+    <h1>頂點、內心、矩形：三個條件對得上嗎</h1>
+    <p class="sub">二次函數 · 圓 · 坐標幾何</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $f(x)=x^{2}-12kx-14x+36k^{2}+89k+53$，其中 $k$ 為正常數。在同一坐標系中，記 $y=f(x)$ 的圖像的頂點及 $y=f(14-x)$ 的圖像的頂點分別為 $Q$ 及 $R$。
+      <br>(a) 用配方法，以 $k$ 表示 $Q$ 的坐標。<span class="marks">（2 分）</span>
+      <br>(b) 以 $k$ 寫出 $R$ 的坐標。<span class="marks">（1 分）</span>
+      <br>(c) 點 $S$ 的坐標為 $(7,\,4-3k)$。記 $\triangle QRS$ 的內切圓為 $C$。<span class="marks">（9 分）</span>
+      <br>　(i) 以 $k$ 表示通過 $Q$ 及 $S$ 的直線方程。
+      <br>　(ii) 以 $k$ 表示 $C$ 的方程。
+      <br>　(iii) 設 $QS$ 為 $C$ 於點 $T$ 的切線，$U$ 為 $C$ 的圓心。已知點 $V$ 的坐標為 $(-29,-14)$。$STUV$ 是否可能為矩形？試解釋。
+    </div>
+    <figure class="fig"><svg viewBox="0 0 420 280" width="400" height="267" role="img" aria-label="三角形 QRS 與內切圓">
+        <polygon points="90,150 310,150 200,60" fill="#dbeafe" fill-opacity="0.45" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="200" cy="120" r="30" fill="#fef3c7" fill-opacity="0.75" stroke="#f59e0b" stroke-width="2"/>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="76" y="146">R</text><text x="316" y="146">Q</text><text x="196" y="50">S</text>
+          <text x="204" y="124">U</text>
+        </g>
+        <text x="264" y="96" font-size="12" fill="#475569">QS</text>
+      </svg><figcaption>$\triangle QRS$ 為等腰三角形，$QR$ 水平，$S$ 在對稱軸 $x=7$ 上。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方求 $Q$</div>
+      <div class="rule"><span class="rule-name">配方法</span>$x^{2}-(12k+14)x=(x-(6k+7))^{2}-(6k+7)^{2}$。</div>
+      <p>$$f(x)=\left[x-(6k+7)\right]^{2}-(6k+7)^{2}+36k^{2}+89k+53$$</p>
+      <p>$$=\left[x-(6k+7)\right]^{2}+5k+4$$</p>
+      <p>$$Q=(6k+7,\ 5k+4)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 由對稱求 $R$</div>
+      <div class="rule"><span class="rule-name">$f(14-x)$ 的圖像</span>把 $f(x)$ 的圖像沿 $x=7$ 反射。</div>
+      <p>$$f(14-x)=\left[(14-x)-(6k+7)\right]^{2}+5k+4=\left[x-(7-6k)\right]^{2}+5k+4$$</p>
+      <p>$$R=(7-6k,\ 5k+4)$$</p>
+      <p>$Q$、$R$ 的 $y$ 坐標相同，故 $QR$ 水平。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c)(i) 求 $QS$ 的方程</div>
+      <div class="rule"><span class="rule-name">兩點式斜率</span>$m=\dfrac{(4-3k)-(5k+4)}{7-(6k+7)}$。</div>
+      <p>$$m=\frac{-8k}{-6k}=\frac43$$</p>
+      <p>$$y-(4-3k)=\frac43(x-7)$$</p>
+      <p>$$4x-3y-9k-16=0$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c)(ii) 求三角形三邊</div>
+      <p>$$QR=(6k+7)-(7-6k)=12k$$</p>
+      <p>$$QS=RS=\sqrt{(6k)^{2}+(8k)^{2}}=10k$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c)(ii) 用面積求內切圓半徑</div>
+      <div class="rule"><span class="rule-name">$r=\dfrac{\text{面積}}{s}$</span>$s$ 為半周界。</div>
+      <p>$$\text{面積}=\frac12(12k)(8k)=48k^{2},\qquad s=\frac{12k+10k+10k}{2}=16k$$</p>
+      <p>$$r=\frac{48k^{2}}{16k}=3k$$</p>
+      <p>內心在對稱軸 $x=7$ 上，位於 $QR$ 下方 $3k$：$U=(7,\,2k+4)$。</p>
+      <p>$$C:\ (x-7)^{2}+(y-2k-4)^{2}=9k^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c)(iii) 矩形要求兩組對邊平行</div>
+      <div class="rule"><span class="rule-name">$ST$ 沿 $QS$，$TU\perp QS$</span>故 $UV\parallel ST$，$SV\parallel TU$。</div>
+      <p>$UV$ 的斜率：</p>
+      <p>$$\frac{-14-(2k+4)}{-29-7}=\frac{9+k}{18}=\frac43\quad\Longrightarrow\quad k=15$$</p>
+      <p>$SV$ 的斜率（應為 $-\frac34$）：</p>
+      <p>$$\frac{-14-(4-3k)}{-29-7}=\frac{6-k}{12}=-\frac34\quad\Longrightarrow\quad k=15$$</p>
+      <p>兩個條件同時給出 $k=15>0$。此時 $ST\parallel UV$、$TU\parallel SV$，且 $\angle STU=90^{\circ}$，故 $STUV$ 為矩形。</p>
+      <p>所以<b>可能</b>，當 $k=15$ 時成立。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $Q(6k+7,\,5k+4)$<br>(b) $R(7-6k,\,5k+4)$<br>(c)(i) $4x-3y-9k-16=0$<br>(c)(ii) $(x-7)^{2}+(y-2k-4)^{2}=9k^{2}$<br>(c)(iii) 可能，當 $k=15$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=x^{2}-4x+7$。求 $y=f(x)$ 的頂點，以及 $y=f(6-x)$ 的頂點。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(x)=(x-2)^{2}+3$，頂點 $(2,3)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $f(6-x)=(6-x-2)^{2}+3=(x-4)^{2}+3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 頂點 $(4,3)$。</div>
+          <div class="p-ans">答案：<b>$(2,3)$ 與 $(4,3)$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="#">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

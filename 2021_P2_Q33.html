@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第33題 · 對數圖像截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第33題</span>
+    <h1>$x$ 截距：令 $y=0$ 解出 $x$</h1>
+    <p class="sub">對數 · 圖像</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $a$、$b$、$c$ 為正常數。在同一坐標系中，$y=a+\log_b x$ 與 $y=\log_c x$ 的圖像分別與 $x$ 軸相交於 $S$ 及 $T$。以 $O$ 表示原點。求 $OT:OS$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1:b^{a}$</li><li><span class="ol">B</span>$1:c^{a}$</li><li><span class="ol">C</span>$b^{a}:1$</li><li><span class="ol">D</span>$c^{a}:1$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 360 240" width="340" height="227" role="img" aria-label="兩條對數曲線與 x 軸截距">
+        <g stroke="#cbd5e1" stroke-width="1">
+          <line x1="40" y1="170" x2="340" y2="170"/>
+          <line x1="180" y1="30" x2="180" y2="220"/>
+        </g>
+        <path d="M 60 40 C 100 80 140 140 300 168" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <path d="M 120 50 C 150 100 175 150 300 170" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="5 4"/>
+        <circle cx="140" cy="170" r="4" fill="#dc2626"/>
+        <circle cx="180" cy="170" r="4" fill="#dc2626"/>
+        <g font-size="12" fill="#0f172a" font-style="italic" font-family="Georgia,serif">
+          <text x="132" y="188">S</text><text x="184" y="188">T</text><text x="166" y="188">O</text>
+        </g>
+      </svg><figcaption>$S$ 在 $O$ 左邊、$T$ 在 $O$ 右邊，故 $OS$ 取正長度。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $S$ 的 $x$ 坐標</div>
+      <div class="rule"><span class="rule-name">令 $y=0$</span>$0=a+\log_b x$。</div>
+      <p>$$\log_b x=-a\quad\Longrightarrow\quad x=b^{-a}$$</p>
+      <p>故 $OS=b^{-a}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $T$ 的 $x$ 坐標</div>
+      <p>$$\log_c x=0\quad\Longrightarrow\quad x=1$$</p>
+      <p>故 $OT=1$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">化簡比值</div>
+      <div class="rule"><span class="rule-name">負指數</span>$b^{-a}=\dfrac{1}{b^{a}}$。</div>
+      <p>$$OT:OS=1:b^{-a}=b^{a}:1$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$b^{a}:1$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $y=2+\log_3 x$ 的 $x$ 軸截距為</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$9$</li><li><span class="ol">B</span>$\dfrac19$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$\dfrac13$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $0=2+\log_3 x$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\log_3 x=-2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=3^{-2}=\dfrac19$，答案 B。</div>
+          <div class="p-ans">答案：<b>B（$\dfrac19$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q34.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

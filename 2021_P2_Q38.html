@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第38題 · 矩形與三角測量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第38題</span>
+    <h1>兩次正弦定理，再一次餘弦定理</h1>
+    <p class="sub">三角學 · 正弦與餘弦定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為矩形，$AB=960\text{ cm}$、$BC=597\text{ cm}$。設 $E$、$F$、$G$ 分別為 $AB$、$BC$、$CD$ 上的點，使 $AE=638\text{ cm}$、$BF=280\text{ cm}$、$CG=480\text{ cm}$。設 $AF$ 與 $EG$ 的交點為 $H$。求 $DH$（準確至最接近的 cm）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$728\text{ cm}$</li><li><span class="ol">B</span>$729\text{ cm}$</li><li><span class="ol">C</span>$741\text{ cm}$</li><li><span class="ol">D</span>$742\text{ cm}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 400 230" width="380" height="219" role="img" aria-label="矩形 ABCD 與線段 AF、EG 交於 H">
+        <rect x="40" y="40" width="320" height="150" fill="#dbeafe" fill-opacity="0.3" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#1d4ed8" stroke-width="1.6" fill="none">
+          <line x1="40" y1="40" x2="330" y2="172"/>
+          <line x1="253" y1="40" x2="200" y2="190"/>
+          <line x1="40" y1="190" x2="200" y2="190"/>
+        </g>
+        <g fill="#0f172a" font-size="12" font-family="Georgia,serif" font-style="italic">
+          <text x="32" y="34">A</text><text x="364" y="34">B</text>
+          <text x="364" y="204">C</text><text x="32" y="204">D</text>
+          <text x="248" y="32">E</text><text x="334" y="180">F</text><text x="194" y="208">G</text>
+          <text x="214" y="120">H</text>
+        </g>
+      </svg><figcaption>$E$ 在 $AB$、$F$ 在 $BC$、$G$ 在 $CD$；$H=AF\cap EG$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle ABF$ 求 $\angle BAF$</div>
+      <div class="rule"><span class="rule-name">$\tan$</span>$\tan\angle BAF=\dfrac{BF}{AB}=\dfrac{280}{960}$。</div>
+      <p>$$\angle BAF\approx16.26^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle EGI$ 求 $\angle CGE$</div>
+      <div class="rule"><span class="rule-name">$I$ 為 $E$ 在 $CD$ 的垂足</span>$EI=597$，$GI=638-480=158$。</div>
+      <p>$$\tan\angle CGE=\frac{597}{158}\quad\Longrightarrow\quad\angle CGE\approx75.18^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle AEH$ 用正弦定理</div>
+      <div class="rule"><span class="rule-name">三個角</span>$\angle AEH=75.18^{\circ}$，$\angle EAH=16.26^{\circ}$。</div>
+      <p>$$\angle AHE=180^{\circ}-16.26^{\circ}-75.18^{\circ}\approx88.56^{\circ}$$</p>
+      <p>$$\frac{AH}{\sin75.18^{\circ}}=\frac{638}{\sin88.56^{\circ}}\quad\Longrightarrow\quad AH\approx616.96$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $\triangle ADH$ 用餘弦定理</div>
+      <div class="rule"><span class="rule-name">$AD=597$</span>$\angle DAH=90^{\circ}-16.26^{\circ}=73.74^{\circ}$。</div>
+      <p>$$DH^{2}=597^{2}+616.96^{2}-2(597)(616.96)\cos73.74^{\circ}$$</p>
+      <p>$$DH\approx728.55\approx729\text{ cm}$$</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$729\text{ cm}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 矩形 $ABCD$ 中 $AB=100$、$BC=50$，$E$ 在 $AB$ 且 $AE=60$。若 $F$ 在 $BC$ 且 $BF=20$，求 $\tan\angle BAF$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac15$</li><li><span class="ol">B</span>$\dfrac25$</li><li><span class="ol">C</span>$\dfrac35$</li><li><span class="ol">D</span>$\dfrac45$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\tan\angle BAF=\dfrac{BF}{AB}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=\dfrac{20}{100}=\dfrac15$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A（$\dfrac15$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

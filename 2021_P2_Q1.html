@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第1題 · 指數化簡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第1題</span>
+    <h1>三個底數，其實都是 2</h1>
+    <p class="sub">指數定律 · 化簡</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$$\frac{(2^{n})(8^{3n})}{64^{n}}=$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$4^{n}$</li><li><span class="ol">B</span>$4^{2n}$</li><li><span class="ol">C</span>$4^{-3n}$</li><li><span class="ol">D</span>$4^{-4n}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 8 和 64 都寫成 2 的冪</div>
+      <div class="rule"><span class="rule-name">同底數</span>$8=2^{3}$，$64=2^{6}$。</div>
+      <p>$$8^{3n}=(2^{3})^{3n}=2^{9n},\qquad 64^{n}=(2^{6})^{n}=2^{6n}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分子用指數相加，再相除</div>
+      <div class="rule"><span class="rule-name">指數定律</span>$a^{m}a^{n}=a^{m+n}$，$\dfrac{a^{m}}{a^{n}}=a^{m-n}$。</div>
+      <p>$$\frac{2^{n}\cdot2^{9n}}{2^{6n}}=\frac{2^{10n}}{2^{6n}}=2^{4n}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">改寫成選項的底數 $4$</div>
+      <div class="rule"><span class="rule-name">$4=2^{2}$</span>$2^{4n}=(2^{2})^{2n}=4^{2n}$。</div>
+      <p>$$2^{4n}=(2^{2})^{2n}=4^{2n}$$</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$4^{2n}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{3^{2n}\cdot9^{n}}{27^{n}}$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$3^{n}$</li><li><span class="ol">B</span>$3^{2n}$</li><li><span class="ol">C</span>$3^{3n}$</li><li><span class="ol">D</span>$3^{4n}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9^{n}=3^{2n}$，$27^{n}=3^{3n}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 分子 $=3^{2n+2n}=3^{4n}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $3^{4n-3n}=3^{n}$，答案 A。</div>
+          <div class="p-ans">答案：<b>A（$3^{n}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="#">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

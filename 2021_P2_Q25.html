@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第25題 · 軌跡方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第25題</span>
+    <h1>$PM=MN$：以 $M$ 為圓心、$MN$ 為半徑</h1>
+    <p class="sub">坐標幾何 · 軌跡</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+點 $M$ 及 $N$ 的坐標分別為 $(5,7)$ 及 $(6,8)$。設 $P$ 為直角坐標平面上的動點，使 $PM=MN$。求 $P$ 的軌跡方程。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x-y+2=0$</li><li><span class="ol">B</span>$x+y-13=0$</li><li><span class="ol">C</span>$x^{2}+y^{2}-10x-14y+72=0$</li><li><span class="ol">D</span>$x^{2}+y^{2}-12x-16y+98=0$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出軌跡是圓</div>
+      <div class="rule"><span class="rule-name">到定點等距</span>圓心 $M(5,7)$，半徑 $MN$。</div>
+      <p>$$MN=\sqrt{(6-5)^{2}+(8-7)^{2}}=\sqrt2$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出圓方程</div>
+      <div class="rule"><span class="rule-name">圓的標準式</span>$(x-5)^{2}+(y-7)^{2}=2$。</div>
+      <p>$$x^{2}-10x+25+y^{2}-14y+49=2$$</p>
+      <p>$$x^{2}+y^{2}-10x-14y+72=0$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $M(2,3)$、$N(4,6)$，動點 $P$ 滿足 $PM=MN$。求軌跡方程。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$(x-2)^{2}+(y-3)^{2}=13$</li><li><span class="ol">B</span>$(x-2)^{2}+(y-3)^{2}=5$</li><li><span class="ol">C</span>$(x-4)^{2}+(y-6)^{2}=13$</li><li><span class="ol">D</span>$(x-4)^{2}+(y-6)^{2}=5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $MN=\sqrt{4+9}=\sqrt{13}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 軌跡是以 $M$ 為圓心、$\sqrt{13}$ 為半徑的圓。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

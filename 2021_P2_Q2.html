@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第2題 · 變換主項</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第2題</span>
+    <h1>展開後 $ma$ 會自動抵消</h1>
+    <p class="sub">代數 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $m(m-a)=a(1-m)$，則 $a=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$m$</li><li><span class="ol">B</span>$2m$</li><li><span class="ol">C</span>$m^{2}$</li><li><span class="ol">D</span>$\dfrac{m^{2}+m}{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩邊展開</div>
+      <p>$$m^{2}-ma=a-am$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">消去相同的項</div>
+      <div class="rule"><span class="rule-name">$-ma=-am$</span>兩邊同時加 $ma$。</div>
+      <p>$$m^{2}-ma+ma=a-am+ma$$</p>
+      <p>$$m^{2}=a$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$a=m^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $n(n-b)=b(1-n)$，則 $b=$</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$n$</li><li><span class="ol">B</span>$n^{2}$</li><li><span class="ol">C</span>$2n$</li><li><span class="ol">D</span>$n^{2}+n$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$n^{2}-nb=b-bn$。</div>
+          <div class="p-step"><b>第 2 步.</b> $-nb=-bn$ 抵消，得 $n^{2}=b$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 B。</div>
+          <div class="p-ans">答案：<b>B（$b=n^{2}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

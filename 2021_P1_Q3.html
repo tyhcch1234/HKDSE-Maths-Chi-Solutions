@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第3題 · 十字相乘因式分解</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第3題</span>
+    <h1>十字相乘：拆中項，再分組抽公因式</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+(a) 因式分解 $6x^{2}+xy-2y^{2}$。
+      <br>(b) 因式分解 $8x-4y-6x^{2}-xy+2y^{2}$。<span class="marks">（3 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用十字相乘找一分為二</div>
+      <div class="rule"><span class="rule-name">十字相乘</span>要找兩數相乘為 $ac=6\times(-2)=-12$，相加為 $b=1$。</div>
+      <p>$4\times(-3)=-12$，且 $4+(-3)=1$，所以把 $xy$ 拆成 $4xy-3xy$：</p>
+      <p>$$6x^{2}+xy-2y^{2}=6x^{2}+4xy-3xy-2y^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 分組並抽出公因式</div>
+      <p>$$6x^{2}+4xy-3xy-2y^{2}
+        =2x(3x+2y)-y(3x+2y)$$</p>
+      <p>兩組都有共同括號 $(3x+2y)$：</p>
+      <p>$$=(3x+2y)(2x-y)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 看出與 (a) 的關係</div>
+      <div class="rule"><span class="rule-name">拆項分組</span>把 $(b)$ 寫成「$8x-4y$」減去「$6x^{2}+xy-2y^{2}$」。</div>
+      <p>$$8x-4y-6x^{2}-xy+2y^{2}
+        =\underbrace{(8x-4y)}_{4(2x-y)}-\underbrace{(6x^{2}+xy-2y^{2})}_{(2x-y)(3x+2y)}$$</p>
+      <p>第二個括號正好是 (a) 的結果，直接套用。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 抽出共同因式 $(2x-y)$</div>
+      <div class="rule"><span class="rule-name">減號要分配到每一項</span>$-(3x+2y)=-3x-2y$，$+2y$ 要變號。</div>
+      <p>$$=4(2x-y)-(2x-y)(3x+2y)$$</p>
+      <p>$$=(2x-y)\left[4-(3x+2y)\right]$$</p>
+      <p>$$=(2x-y)(4-3x-2y)$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $(2x-y)(3x+2y)$<br>(b) $(2x-y)(4-3x-2y)$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $4x^{2}+4xy-3y^{2}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 找兩數相乘 $-12$、相加 $4$：$6$ 與 $-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 拆中項：$4x^{2}+6xy-2xy-3y^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 分組：$2x(2x+3y)-y(2x+3y)=(2x+3y)(2x-y)$。</div>
+          <div class="p-ans">答案：<b>$(2x+3y)(2x-y)$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第23題 · 反射與旋轉</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第23題</span>
+    <h1>先反射換符號，再旋轉換坐標</h1>
+    <p class="sub">坐標幾何 · 變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+點 $P$ 的坐標為 $(7,-5)$。$P$ 沿 $y$ 軸反射至點 $Q$，再將 $Q$ 繞原點順時針旋轉 $90^{\circ}$ 至點 $R$。求 $R$ 的 $x$ 坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-7$</li><li><span class="ol">B</span>$-5$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$7$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">沿 $y$ 軸反射</div>
+      <div class="rule"><span class="rule-name">反射</span>$(x,y)\mapsto(-x,y)$。</div>
+      <p>$$Q=(-7,-5)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">順時針旋轉 $90^{\circ}$</div>
+      <div class="rule"><span class="rule-name">旋轉</span>$(x,y)\mapsto(y,-x)$。</div>
+      <p>$$R=(-5,\,7)$$</p>
+      <p>$R$ 的 $x$ 坐標為 $-5$，故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$-5$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $P(3,4)$ 先沿 $x$ 軸反射，再繞原點逆時針旋轉 $90^{\circ}$。求最後的點。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$(4,3)$</li><li><span class="ol">B</span>$(-4,3)$</li><li><span class="ol">C</span>$(4,-3)$</li><li><span class="ol">D</span>$(-4,-3)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 沿 $x$ 軸反射：$(3,-4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 逆時針 $90^{\circ}$：$(x,y)\mapsto(-y,x)$，得 $(4,3)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A（$(4,3)$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

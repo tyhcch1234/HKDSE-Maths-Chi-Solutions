@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第8題 · 餘式定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第8題</span>
+    <h1>除以二次式：設餘式 $ax+b$</h1>
+    <p class="sub">多項式 · 餘式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $P(x)$ 為多項式。當 $P(x)$ 除以 $x+1$ 時，餘數為 $-2$。若 $P(x)$ 可被 $x-1$ 整除，求 $P(x)$ 除以 $x^{2}-1$ 時的餘式。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x+1$</li><li><span class="ol">B</span>$x-1$</li><li><span class="ol">C</span>$-x+1$</li><li><span class="ol">D</span>$-x-1$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設餘式為 $ax+b$</div>
+      <div class="rule"><span class="rule-name">除式為二次</span>餘式的次數最多為 $1$。</div>
+      <p>$$P(x)=(x^{2}-1)Q(x)+ax+b$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入 $x=1$ 及 $x=-1$</div>
+      <div class="rule"><span class="rule-name">餘式定理</span>$P(1)$、$P(-1)$ 就是除以 $x-1$、$x+1$ 的餘數。</div>
+      <p>$$P(1)=a+b=0$$</p>
+      <p>$$P(-1)=-a+b=-2$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $a,b$</div>
+      <p>兩式相加：$2b=-2\Rightarrow b=-1$；代回得 $a=1$。</p>
+      <p>餘式 $=x-1$，故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$x-1$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $P(x)$ 除以 $x-1$ 餘 $5$，除以 $x+1$ 餘 $3$。求 $P(x)$ 除以 $x^{2}-1$ 的餘式。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$x+2$</li><li><span class="ol">B</span>$x+4$</li><li><span class="ol">C</span>$2x+3$</li><li><span class="ol">D</span>$4x+1$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設餘式 $ax+b$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a+b=5$；$-a+b=3$。</div>
+          <div class="p-step"><b>第 3 步.</b> $b=4$，$a=1$，餘式 $x+4$，答案 B。</div>
+          <div class="p-ans">答案：<b>B（$x+4$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

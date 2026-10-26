@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第20題 · 正方形內三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第20題</span>
+    <h1>一線三角相似：設 $BE=k$ 一路推</h1>
+    <p class="sub">平面幾何 · 相似三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為正方形。設 $E$、$F$ 分別為 $AB$、$BC$ 上的點，使 $AE=3BE$ 及 $\angle DEF=90^{\circ}$。若 $\triangle DEF$ 的面積為 $25\text{ cm}^{2}$，則 $\triangle CDF$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$48\text{ cm}^{2}$</li><li><span class="ol">B</span>$50\text{ cm}^{2}$</li><li><span class="ol">C</span>$52\text{ cm}^{2}$</li><li><span class="ol">D</span>$75\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 260" width="320" height="245" role="img" aria-label="正方形 ABCD 內的三個三角形">
+        <rect x="50" y="50" width="240" height="180" fill="#dbeafe" fill-opacity="0.3" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#1d4ed8" stroke-width="1.6" fill="none">
+          <line x1="50" y1="50" x2="230" y2="230"/>
+          <line x1="290" y1="166" x2="230" y2="230"/>
+          <line x1="50" y1="50" x2="290" y2="166"/>
+        </g>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="36" y="46">D</text><text x="296" y="46">C</text>
+          <text x="36" y="246">A</text><text x="296" y="246">B</text>
+          <text x="222" y="248">E</text><text x="300" y="172">F</text>
+        </g>
+      </svg><figcaption>$AE:BE=3:1$，且 $\angle DEF=90^{\circ}$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設邊長與 $BE$</div>
+      <p>設 $BE=k$，則 $AE=3k$，正方形邊長 $=4k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用相似三角形求 $BF$</div>
+      <div class="rule"><span class="rule-name">$\triangle ADE\sim\triangle BEF$</span>$\angle ADE=\angle BEF$（同餘角）。</div>
+      <p>$$\frac{AD}{AE}=\frac{BE}{BF}\quad\Longrightarrow\quad\frac{4k}{3k}=\frac{k}{BF}$$</p>
+      <p>$$BF=\frac34k,\qquad CF=4k-\frac34k=\frac{13}{4}k$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用面積求 $k$</div>
+      <div class="rule"><span class="rule-name">正方形減三個三角形</span>$\triangle DEF=25$。</div>
+      <p>$$16k^{2}-6k^{2}-\frac38k^{2}-\frac{13}{2}k^{2}=25$$</p>
+      <p>$$\frac{25}{8}k^{2}=25\quad\Longrightarrow\quad k^{2}=8$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $\triangle CDF$ 的面積</div>
+      <p>$$\frac12(4k)\left(\frac{13}{4}k\right)=\frac{13}{2}k^{2}=52$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$52\text{ cm}^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正方形 $ABCD$ 邊長 $8$，$E$ 在 $AB$ 上且 $AE=6$，$F$ 在 $BC$ 上且 $\angle DEF=90^{\circ}$。求 $BF$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $BE=2$，$\triangle ADE\sim\triangle BEF$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{8}{6}=\dfrac{2}{BF}\Rightarrow BF=1.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案以 $1.5$ 表示。</div>
+          <div class="p-ans">答案：<b>$1.5$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第17題 · 扇形與圓</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第17題</span>
+    <h1>扇形 $90^\circ$：先求半徑，再驗三句</h1>
+    <p class="sub">求積法 · 扇形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+扇形 $OAB$ 的面積為 $\pi\text{ cm}^{2}$，其中 $O$ 為扇形 $OAB$ 的圓心。若 $\angle AOB=90^{\circ}$，下列何者正確？
+      <br>I. 扇形 $OAB$ 的半徑為 $2\text{ cm}$。
+      <br>II. 扇形 $OAB$ 的周界為 $\pi\text{ cm}$。
+      <br>III. 通過 $O$、$A$、$B$ 的圓的面積為 $2\pi\text{ cm}^{2}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><svg viewBox="0 0 260 230" width="250" height="221" role="img" aria-label="圓心角 90 度的扇形與外接圓">
+        <path d="M 60 190 L 180 190 A 120 120 0 0 0 60 70 Z" fill="#dbeafe" fill-opacity="0.7" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="120" cy="130" r="84.85" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <g font-size="13" font-family="Georgia,serif" font-style="italic" fill="#0f172a">
+          <text x="46" y="204">O</text><text x="186" y="204">A</text><text x="46" y="64">B</text>
+        </g>
+      </svg><figcaption>$OA\perp OB$，故 $AB$ 是通過 $O,A,B$ 的圓的直徑。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">I：由面積求半徑</div>
+      <div class="rule"><span class="rule-name">扇形面積</span>$A=\frac{\theta}{360}\pi r^{2}$。</div>
+      <p>$$\frac{90}{360}\pi r^{2}=\pi\quad\Longrightarrow\quad\frac14r^{2}=1\quad\Longrightarrow\quad r=2$$</p>
+      <p>I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">II：扇形周界</div>
+      <div class="rule"><span class="rule-name">弧長 $+$ 兩半徑</span>弧長 $=\frac14(2\pi r)$。</div>
+      <p>$$\text{弧長}=\frac14(2\pi)(2)=\pi$$</p>
+      <p>周界 $=\pi+2+2=4+\pi\ne\pi$，II 錯誤。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">III：外接圓面積</div>
+      <div class="rule"><span class="rule-name">$AB$ 為直徑</span>$\angle AOB=90^{\circ}$。</div>
+      <p>$$AB=\sqrt{2^{2}+2^{2}}=2\sqrt2$$</p>
+      <p>半徑 $=\sqrt2$，面積 $=\pi(\sqrt2)^{2}=2\pi$，III 正確。</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（只有 I 及 III）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 扇形圓心角 $60^{\circ}$、半徑 $6$，求面積及弧長。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$6\pi,\ 2\pi$</li><li><span class="ol">B</span>$12\pi,\ 2\pi$</li><li><span class="ol">C</span>$6\pi,\ 6\pi$</li><li><span class="ol">D</span>$3\pi,\ \pi$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 面積 $=\frac16\pi(36)=6\pi$。</div>
+          <div class="p-step"><b>第 2 步.</b> 弧長 $=\frac16(2\pi)(6)=2\pi$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

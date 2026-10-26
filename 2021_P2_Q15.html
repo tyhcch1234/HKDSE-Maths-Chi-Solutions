@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第15題 · 正六角柱表面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第15題</span>
+    <h1>底面積 $\times$ 高 $=$ 體積，反求高</h1>
+    <p class="sub">求積法 · 稜柱</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個實心直稜柱的底為邊長 $8\text{ cm}$ 的正六邊形。若稜柱的體積為 $288\text{ cm}^{3}$，求稜柱的總表面面積（準確至最接近的 $\text{cm}^{2}$）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$166\text{ cm}^{2}$</li><li><span class="ol">B</span>$249\text{ cm}^{2}$</li><li><span class="ol">C</span>$416\text{ cm}^{2}$</li><li><span class="ol">D</span>$748\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 250" width="320" height="235" role="img" aria-label="正六角柱">
+        <g fill="#dbeafe" fill-opacity="0.55" stroke="#1d4ed8" stroke-width="1.6">
+          <polygon points="170,200 122,172 122,120 170,92 218,120 218,172"/>
+          <polygon points="170,140 122,112 122,60 170,32 218,60 218,112"/>
+          <line x1="122" y1="172" x2="122" y2="112"/><line x1="218" y1="172" x2="218" y2="112"/>
+          <line x1="170" y1="200" x2="170" y2="140"/><line x1="170" y1="92" x2="170" y2="32"/>
+        </g>
+        <text x="170" y="238" font-size="12" text-anchor="middle" fill="#475569">底為正六邊形，邊長 8 cm</text>
+      </svg><figcaption>正六角柱：底面積由 6 個等邊三角形組成。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求底面積</div>
+      <div class="rule"><span class="rule-name">正六邊形</span>由 6 個邊長 $8$ 的等邊三角形組成。</div>
+      <p>$$\text{底面積}=6\times\frac12(8)(8)\sin60^{\circ}=96\sqrt3$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由體積求高</div>
+      <div class="rule"><span class="rule-name">體積 $=$ 底面積 $\times$ 高</span>$96\sqrt3\,h=288$。</div>
+      <p>$$h=\frac{288}{96\sqrt3}=\sqrt3$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">總表面面積</div>
+      <div class="rule"><span class="rule-name">兩個底 $+$ 六個側面</span>側面積 $=6\times8\times h$。</div>
+      <p>$$6(8)(\sqrt3)+2(96\sqrt3)=48\sqrt3+192\sqrt3=240\sqrt3\approx416$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$416\text{ cm}^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正六角柱底邊長 $4\text{ cm}$、高 $5\text{ cm}$，求體積。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$40\sqrt3$</li><li><span class="ol">B</span>$60\sqrt3$</li><li><span class="ol">C</span>$120\sqrt3$</li><li><span class="ol">D</span>$240\sqrt3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 底面積 $=6\times\frac12(4)^2\sin60=24\sqrt3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 體積 $=24\sqrt3\times5=120\sqrt3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 C。</div>
+          <div class="p-ans">答案：<b>C（$120\sqrt3\text{ cm}^{3}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

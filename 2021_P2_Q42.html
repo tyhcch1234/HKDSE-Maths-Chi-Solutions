@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第42題 · 組合計數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第42題</span>
+    <h1>至少 4 位學生：四種情況逐個加</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個委員會由 $20$ 名學生及 $10$ 名教師組成。若從委員會中選出 $7$ 人組成合唱團，且合唱團最少有 $4$ 名學生，共有多少種不同的組合？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$581\,400$</li><li><span class="ol">B</span>$873\,120$</li><li><span class="ol">C</span>$1\,162\,800$</li><li><span class="ol">D</span>$1\,744\,200$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">列出四種情況</div>
+      <div class="rule"><span class="rule-name">最少 4 位學生</span>$4,5,6,7$ 位學生。</div>
+      <p>$$\text{學生 }4:\ C_4^{20}C_3^{10}$$</p>
+      <p>$$\text{學生 }5:\ C_5^{20}C_2^{10}$$</p>
+      <p>$$\text{學生 }6:\ C_6^{20}C_1^{10}$$</p>
+      <p>$$\text{學生 }7:\ C_7^{20}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">相加</div>
+      <p>$$4845(120)+15504(45)+38760(10)+77520$$</p>
+      <p>$$=581\,400+697\,680+387\,600+77\,520=1\,744\,200$$</p>
+      <p>故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$1\,744\,200$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 從 5 男 4 女中選 3 人，最少 1 女，共有多少種組合？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$74$</li><li><span class="ol">B</span>$84$</li><li><span class="ol">C</span>$64$</li><li><span class="ol">D</span>$90$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部 $C_3^9=84$。</div>
+          <div class="p-step"><b>第 2 步.</b> 全男 $C_3^5=10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $84-10=74$，答案 A。</div>
+          <div class="p-ans">答案：<b>A（$74$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

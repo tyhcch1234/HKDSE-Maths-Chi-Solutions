@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第45題 · 等差數列統計量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第45題</span>
+    <h1>兩組相隔 50 項：全距與方差相同</h1>
+    <p class="sub">統計 · 數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $T(n)$ 為一等差數列的第 $n$ 項。設 $x_1$、$y_1$、$z_1$ 分別為
+      $$\{T(1),T(2),\dots,T(49)\}$$
+      的中位數、全距及方差；$x_2$、$y_2$、$z_2$ 分別為
+      $$\{T(51),T(52),\dots,T(99)\}$$
+      的中位數、全距及方差。下列何者必為真？
+      <br>I. $x_1<x_2$
+      <br>II. $y_1=y_2$
+      <br>III. $z_1>z_2$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出各統計量</div>
+      <div class="rule"><span class="rule-name">等差數列</span>$T(n)=a+(n-1)d$。</div>
+      <p>$$x_1=T(25)=a+24d,\qquad x_2=T(75)=a+74d$$</p>
+      <p>$$y_1=T(49)-T(1)=48d,\qquad y_2=T(99)-T(51)=48d$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I</div>
+      <p>$x_2-x_1=50d$。若 $d<0$，則 $x_1>x_2$，故 I 不必然。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 II、III</div>
+      <div class="rule"><span class="rule-name">全距與方差只看差距</span>第二組只是第一組每項加 $50d$。</div>
+      <p>$y_1=y_2=48d$，II 必真。</p>
+      <p>把每項加上常數不改變方差，故 $z_1=z_2$，III 不真。</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（只有 II）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 等差數列 $T(n)=3n+1$。$T(1),\dots,T(9)$ 的全距為</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$9$</li><li><span class="ol">B</span>$12$</li><li><span class="ol">C</span>$24$</li><li><span class="ol">D</span>$27$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $T(1)=4$，$T(9)=28$。</div>
+          <div class="p-step"><b>第 2 步.</b> 全距 $=28-4=24$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 C。</div>
+          <div class="p-ans">答案：<b>C（$24$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><a href="#">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

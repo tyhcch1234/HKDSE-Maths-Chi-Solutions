@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第3題 · 乘法公式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第3題</span>
+    <h1>先配平方差，再乘第三個括號</h1>
+    <p class="sub">多項式 · 展開</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$$(u+v)(u-v)(u-1)=$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$u^{3}+u^{2}+uv^{2}+v^{2}$</li><li><span class="ol">B</span>$u^{3}+u^{2}-uv^{2}+v^{2}$</li><li><span class="ol">C</span>$u^{3}-u^{2}+uv^{2}+v^{2}$</li><li><span class="ol">D</span>$u^{3}-u^{2}-uv^{2}+v^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算前兩個括號</div>
+      <div class="rule"><span class="rule-name">平方差</span>$(a+b)(a-b)=a^{2}-b^{2}$。</div>
+      <p>$$(u+v)(u-v)=u^{2}-v^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">再乘 $(u-1)$</div>
+      <div class="rule"><span class="rule-name">逐項分配</span>$(u^{2}-v^{2})(u-1)=u^{2}(u-1)-v^{2}(u-1)$。</div>
+      <p>$$=u^{3}-u^{2}-uv^{2}+v^{2}$$</p>
+      <p>符號依次為 $+,-,-,+$，故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$u^{3}-u^{2}-uv^{2}+v^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 展開 $(x+2)(x-2)(x+1)$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$x^{3}+x^{2}-4x-4$</li><li><span class="ol">B</span>$x^{3}-x^{2}-4x+4$</li><li><span class="ol">C</span>$x^{3}+x^{2}+4x+4$</li><li><span class="ol">D</span>$x^{3}-x^{2}+4x-4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(x+2)(x-2)=x^{2}-4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $(x^{2}-4)(x+1)=x^{3}+x^{2}-4x-4$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

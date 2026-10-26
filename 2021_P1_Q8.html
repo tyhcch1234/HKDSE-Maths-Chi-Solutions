@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第8題 · 相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第8題</span>
+    <h1>A.A.A. 相似：先找共同角，再比對應邊</h1>
+    <p class="sub">平面幾何 · 相似三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在圖 1 中，延長 $AB$ 與延長 $CD$ 相交於點 $E$。已知 $\angle CAE=\angle BDE$。
+      <br>(a) 證明 $\triangle ACE\sim\triangle DBE$。
+      <br>(b) 已知 $AC=25\text{ cm}$、$AE=60\text{ cm}$、$CE=65\text{ cm}$ 及 $BD=15\text{ cm}$。
+      <br>　(i) $\triangle ACE$ 是否直角三角形？試解釋。
+      <br>　(ii) 求 $\triangle BDE$ 的面積。<span class="marks">（5 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 340 270" width="320" height="254" role="img" aria-label="三角形 ACE 與內接線段 BD">
+        <polygon points="60,220 85,220 60,160" fill="#dbeafe" fill-opacity="0.35" stroke="none"/>
+        <g fill="none" stroke="#1d4ed8" stroke-width="2">
+          <line x1="60" y1="220" x2="85" y2="220"/>
+          <line x1="60" y1="220" x2="60" y2="160"/>
+          <line x1="85" y1="220" x2="60" y2="160"/>
+        </g>
+        <line x1="60" y1="199" x2="73.85" y2="193.23" stroke="#dc2626" stroke-width="2"/>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="47" y="232">A</text>
+          <text x="88" y="232">C</text>
+          <text x="55" y="152">E</text>
+          <text x="44" y="203">B</text>
+          <text x="78" y="190">D</text>
+        </g>
+        <text x="95" y="215" font-size="11" fill="#475569">25</text>
+        <text x="38" y="192" font-size="11" fill="#475569">60</text>
+        <text x="66" y="185" font-size="11" fill="#dc2626">15</text>
+      </svg><figcaption>圖 1（示意圖）：$B$ 在 $AE$ 上、$D$ 在 $CE$ 上，$\angle CAE=\angle BDE$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 列出第一對相等角</div>
+      <div class="rule"><span class="rule-name">已知</span>$\angle CAE=\angle BDE$。</div>
+      <p>在 $\triangle ACE$ 與 $\triangle DBE$ 中，</p>
+      <p>$$\angle CAE=\angle BDE\quad(\text{已知})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 找出共同角</div>
+      <div class="rule"><span class="rule-name">公共角</span>兩角都在 $E$ 點，是同一個角。</div>
+      <p>$$\angle AEC=\angle DEB\quad(\text{公共角})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 以 A.A.A. 作結</div>
+      <div class="rule"><span class="rule-name">相似判定</span>兩對角相等已足夠；第三對角由三角形內角和自動相等。</div>
+      <p>$$\angle ACE=\angle DBE\quad(\triangle\text{ 內角和})$$</p>
+      <p>$$\therefore\ \triangle ACE\sim\triangle DBE\quad(\text{A.A.A.})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 用畢氏定理的逆定理</div>
+      <div class="rule"><span class="rule-name">最長邊是 $CE$</span>檢查 $AC^{2}+AE^{2}$ 是否等於 $CE^{2}$。</div>
+      <p>$$25^{2}+60^{2}=625+3600=4225=65^{2}$$</p>
+      <p>所以 $AC^{2}+AE^{2}=CE^{2}$，$\triangle ACE$ 是直角三角形，且 $\angle CAE=90^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 由相似比求 $DE$</div>
+      <div class="rule"><span class="rule-name">對應邊成比例</span>$\dfrac{DE}{AE}=\dfrac{BD}{AC}$。</div>
+      <p>$$\frac{DE}{60}=\frac{15}{25}=\frac{3}{5}$$</p>
+      <p>$$DE=36\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 計算面積</div>
+      <div class="rule"><span class="rule-name">直角三角形面積</span>$\angle BDE=\angle CAE=90^{\circ}$，故 $BD\perp DE$。</div>
+      <p>$$\text{面積}=\frac12\times BD\times DE=\frac12\times15\times36=270\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) 見證明（A.A.A.）<br>(b)(i) 是，$25^{2}+60^{2}=65^{2}$<br>(b)(ii) $270\text{ cm}^{2}$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle PQR$ 與 $\triangle PST$ 中，$\angle PQR=\angle PST$，且 $P$、$Q$、$S$ 共線、$P$、$R$、$T$ 共線。證明兩三角形相似，並寫出對應邊比例。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle PQR=\angle PST$（已知）。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle QPR=\angle SPT$（公共角）。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $\triangle PQR\sim\triangle PST$（A.A.A.），$\dfrac{PQ}{PS}=\dfrac{PR}{PT}=\dfrac{QR}{ST}$。</div>
+          <div class="p-ans">答案：<b>A.A.A.；$\dfrac{PQ}{PS}=\dfrac{PR}{PT}=\dfrac{QR}{ST}$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第15題 · 排列與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第15題</span>
+    <h1>學生不相鄰：先排老師，再插空隙</h1>
+    <p class="sub">概率 · 排列組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+7 位老師與 3 位學生隨機排成一隊。
+      <br>(a) 共有多少種不同的排隊方法？
+      <br>(b) 求沒有學生相鄰的概率。<span class="marks">（4 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 十個人全排列</div>
+      <div class="rule"><span class="rule-name">順序重要</span>排隊是排列，不是組合。</div>
+      <p>$$10!=3\,628\,800$$</p>
+      <p>共有 $3\,628\,800$ 種排法。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 先排 7 位老師</div>
+      <div class="rule"><span class="rule-name">插空隙</span>$n$ 個物件排好後有 $n+1$ 個空隙（包括兩端）。</div>
+      <p>7 位老師有 $7!$ 種排法，形成 $8$ 個空隙：</p>
+      <p>$$\_\;T\;\_\;T\;\_\;T\;\_\;T\;\_\;T\;\_\;T\;\_$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 把 3 位學生放入空隙</div>
+      <div class="rule"><span class="rule-name">每格最多一人</span>這樣學生才不會相鄰。</div>
+      <p>從 $8$ 個空隙選 $3$ 個，再把 $3$ 位學生排列：</p>
+      <p>$$C_3^{8}\times3!=56\times6=336$$</p>
+      <p>有利排法 $=7!\times336=1\,693\,440$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 求概率</div>
+      <p>$$P=\frac{7!\,C_3^{8}\,3!}{10!}=\frac{1\,693\,440}{3\,628\,800}=\frac{7}{15}$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $10!=3\,628\,800$<br>(b) $\dfrac{7}{15}$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 4 位男生與 2 位女生排成一隊，求兩位女生不相鄰的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總排法 $6!=720$。</div>
+          <div class="p-step"><b>第 2 步.</b> 男生 $4!$ 排好，形成 $5$ 個空隙；選 $2$ 個放女生：$C_2^{5}\times2!=20$。</div>
+          <div class="p-step"><b>第 3 步.</b> 有利 $=24\times20=480$，概率 $=\frac{480}{720}=\frac23$。</div>
+          <div class="p-ans">答案：<b>$\dfrac{2}{3}$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

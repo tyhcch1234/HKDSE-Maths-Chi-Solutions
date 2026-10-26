@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第11題 · 統計量變化</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第11題</span>
+    <h1>加人後：平均數、中位數、眾數怎樣變</h1>
+    <p class="sub">統計 · 平均數、中位數、眾數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下表顯示一組兒童在遊戲中獲得代幣數目的分布。
+
+      <table class="dtable"><tr><th>代幣數目</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+      <tr><th>兒童人數</th><td>15</td><td>9</td><td>2</td><td>5</td><td>4</td><td>2</td><td>5</td></tr></table>
+
+      (a) 求該分布的平均數。
+      <br>(b) 該分布的中位數與眾數是否相等？試解釋。
+      <br>(c) 若有 $n$ 名兒童加入遊戲，且每人皆獲得 $5$ 個代幣，寫出
+      <br>　(i) 使平均數增加 $1$ 的 $n$ 值；
+      <br>　(ii) 使中位數增加 $2$ 的 $n$ 的最小值；
+      <br>　(iii) 使眾數保持不變的 $n$ 的最大值。<span class="marks">（7 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 平均數</div>
+      <div class="rule"><span class="rule-name">平均數</span>$\bar{x}=\dfrac{\sum fx}{\sum f}$。</div>
+      <p>總人數 $=15+9+2+5+4+2+5=42$。</p>
+      <p>$$\bar{x}=\frac{1(15)+2(9)+3(2)+4(5)+5(4)+6(2)+7(5)}{42}=\frac{126}{42}=3$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 中位數</div>
+      <div class="rule"><span class="rule-name">偶數個數據</span>中位數是第 $21$ 與第 $22$ 個數據的平均。</div>
+      <p>累積頻數：$15,\,24,\,34,\,38,\,40,\,42$。</p>
+      <p>第 $21$、$22$ 個都在「$2$ 個代幣」組，故中位數 $=2$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 眾數與比較</div>
+      <div class="rule"><span class="rule-name">眾數</span>頻數最大的數據值。</div>
+      <p>「$1$ 個代幣」的頻數 $15$ 最大，故眾數 $=1$。</p>
+      <p>$2\ne1$，所以中位數與眾數<b>不相等</b>。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c)(i) 平均數增加 $1$</div>
+      <div class="rule"><span class="rule-name">新平均數 $=4$</span>總代幣與總人數都要加上新的 $n$ 人。</div>
+      <p>$$\frac{126+5n}{42+n}=4$$</p>
+      <p>$$126+5n=168+4n\quad\Longrightarrow\quad n=42$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c)(ii) 中位數增加 $2$</div>
+      <div class="rule"><span class="rule-name">由 $2$ 增至 $4$</span>新增數據都在 $5$，只會影響 $5$ 之前的位置不變。</div>
+      <p>原中位數為 $2$，增加 $2$ 後要等於 $4$。首 $26$ 個數據仍為 $1,2,3$，接着 $5$ 個是 $4$。</p>
+      <p>$n=10$ 時共 $52$ 人，中位數 $=\dfrac{3+4}{2}=3.5$，未達 $4$。</p>
+      <p>$n=11$ 時共 $53$ 人，第 $27$ 個數據是 $4$，中位數 $=4$。</p>
+      <p>故最小值 $n=11$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c)(iii) 眾數不變</div>
+      <div class="rule"><span class="rule-name">「$5$」的頻數不可追平 $15$</span>原本「$5$」有 $4$ 人；一旦追平，「$1$」不再是唯一眾數。</div>
+      <p>$$4+n<15\quad\Longrightarrow\quad n<11$$</p>
+      <p>若 $n=11$，「$5$」的頻數為 $15$，與「$1$」並列，眾數改變。故最大值 $n=10$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $3$<br>(b) 不相等（中位數 $=2$，眾數 $=1$）<br>(c)(i) $42$　(ii) $11$　(iii) $10$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 數據 $1,1,2,2,2,3,4$ 中，若加入 $n$ 個 $4$，求使平均數變為 $2.5$ 的 $n$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 原總和 $=13$，數據數 $7$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{13+4n}{7+n}=2.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $13+4n=17.5+2.5n\Rightarrow1.5n=4.5\Rightarrow n=3$。</div>
+          <div class="p-ans">答案：<b>$n=3$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

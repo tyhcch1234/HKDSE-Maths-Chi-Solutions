@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第14題 · 圓柱與圓錐</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第14題</span>
+    <h1>相似立體：體積比要對線性比的立方</h1>
+    <p class="sub">求積法 · 圓柱與圓錐</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+實心直圓柱 $X$ 與實心直圓錐 $Y$ 的底半徑相等。$X$ 與 $Y$ 的高分別為 $20\text{ cm}$ 與 $24\text{ cm}$。實心直圓錐 $Z$ 的體積等於 $X$ 的體積與 $Y$ 的體積之和。$Z$ 的底半徑等於 $X$ 的底直徑。工匠發現 $Y$ 的體積為 $800\pi\text{ cm}^{3}$。
+      <br>(a) 求 $Y$ 的底半徑。
+      <br>(b) $Y$ 與 $Z$ 是否相似？試解釋。
+      <br>(c) 工匠聲稱 $X$ 的曲面面積與 $Y$ 的曲面面積之和大於 $Z$ 的曲面面積。你是否同意？試解釋。<span class="marks">（8 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 440 260" width="420" height="248" role="img" aria-label="圓柱 X、圓錐 Y 與圓錐 Z">
+        <g stroke="#1d4ed8" stroke-width="1.8" fill="#dbeafe" fill-opacity="0.45">
+          <ellipse cx="70" cy="70" rx="34" ry="10"/>
+          <path d="M36 70 L36 200 A34 10 0 0 0 104 200 L104 70"/>
+          <ellipse cx="70" cy="200" rx="34" ry="10" fill="none"/>
+        </g>
+        <g stroke="#059669" stroke-width="1.8" fill="#d1fae5" fill-opacity="0.45">
+          <ellipse cx="190" cy="200" rx="30" ry="9"/>
+          <path d="M160 200 L190 60 L220 200"/>
+        </g>
+        <g stroke="#dc2626" stroke-width="1.8" fill="#fee2e2" fill-opacity="0.45">
+          <ellipse cx="330" cy="200" rx="48" ry="12"/>
+          <path d="M282 200 L330 50 L378 200"/>
+        </g>
+        <g font-size="12" fill="#334155" text-anchor="middle">
+          <text x="70" y="232">X：r=10, h=20</text>
+          <text x="190" y="232">Y：r=10, h=24</text>
+          <text x="330" y="232">Z：r=20, h=21</text>
+        </g>
+      </svg><figcaption>三個立體的尺寸關係（示意圖，未按比例）。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 由 $Y$ 的體積求半徑</div>
+      <div class="rule"><span class="rule-name">圓錐體積</span>$V=\frac13\pi r^{2}h$。</div>
+      <p>設 $Y$（及 $X$）的底半徑為 $r$。</p>
+      <p>$$\frac13\pi r^{2}(24)=800\pi$$</p>
+      <p>$$8r^{2}=800\quad\Longrightarrow\quad r^{2}=100\quad\Longrightarrow\quad r=10\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 求 $X$ 與 $Z$ 的體積</div>
+      <div class="rule"><span class="rule-name">圓柱體積</span>$V=\pi r^{2}h$。</div>
+      <p>$$V_X=\pi(10)^{2}(20)=2000\pi$$</p>
+      <p>$$V_Z=V_X+V_Y=2000\pi+800\pi=2800\pi$$</p>
+      <p>$Z$ 的底半徑 $=2\times10=20\text{ cm}$，故線性比 $r_Y:r_Z=10:20=1:2$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 比較體積比與線性比</div>
+      <div class="rule"><span class="rule-name">相似立體</span>體積比 $=$ 線性比的立方。</div>
+      <p>若相似，體積比應為 $\left(\frac12\right)^{3}=\frac18$。</p>
+      <p>但實際</p>
+      <p>$$\frac{V_Y}{V_Z}=\frac{800\pi}{2800\pi}=\frac{2}{7}\ne\frac18$$</p>
+      <p>所以 $Y$ 與 $Z$ <b>不相似</b>。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 求 $X$、$Y$ 的曲面面積</div>
+      <div class="rule"><span class="rule-name">圓柱、圓錐曲面面積</span>圓柱 $2\pi rh$；圓錐 $\pi rl$，$l$ 為斜高。</div>
+      <p>$$S_X=2\pi(10)(20)=400\pi$$</p>
+      <p>$$l_Y=\sqrt{10^{2}+24^{2}}=26,\qquad S_Y=\pi(10)(26)=260\pi$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 求 $Z$ 的高與曲面面積</div>
+      <div class="rule"><span class="rule-name">先由體積求高</span>$\frac13\pi(20)^{2}h=2800\pi$。</div>
+      <p>$$\frac{400h}{3}=2800\quad\Longrightarrow\quad h=21$$</p>
+      <p>$$l_Z=\sqrt{20^{2}+21^{2}}=29,\qquad S_Z=\pi(20)(29)=580\pi$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c) 比較並作結論</div>
+      <p>$$S_X+S_Y=400\pi+260\pi=660\pi>580\pi=S_Z$$</p>
+      <p>所以工匠的聲稱成立，<b>同意</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $10\text{ cm}$<br>(b) 不相似，$\frac{V_Y}{V_Z}=\frac27\ne\left(\frac12\right)^3$<br>(c) 同意，$660\pi>580\pi$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 兩個相似圓錐的底半徑比為 $2:3$。若小圓錐的體積為 $48\pi$，求大圓錐的體積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 相似立體體積比 $=2^{3}:3^{3}=8:27$。</div>
+          <div class="p-step"><b>第 2 步.</b> $48\pi:V=8:27$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V=48\pi\times\frac{27}{8}=162\pi$。</div>
+          <div class="p-ans">答案：<b>$162\pi$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

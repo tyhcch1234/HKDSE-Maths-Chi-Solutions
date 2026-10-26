@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第10題 · 部分變</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第10題</span>
+    <h1>部分變：先設 $f(x)=m(x+4)^{2}+n$</h1>
+    <p class="sub">函數 · 部分變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $f(x)$ 一部分為常數，另一部分隨 $(x+4)^{2}$ 正變。設 $f(-3)=0$ 及 $f(2)=105$。
+      <br>(a) 求 $f(0)$。
+      <br>(b) 記 $y=f(x)+3$ 的圖像為 $G$。
+      <br>　(i) 寫出 $G$ 的 $y$ 軸截距。
+      <br>　(ii) 求 $G$ 的 $x$ 軸截距。<span class="marks">（6 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 380 240" width="360" height="227" role="img" aria-label="y=f(x) 與 G 的拋物線示意圖">
+        <g stroke="#cbd5e1" stroke-width="1">
+          <line x1="30" y1="190" x2="350" y2="190"/>
+          <line x1="190" y1="30" x2="190" y2="220"/>
+        </g>
+        <path d="M 60 60 Q 190 250 320 60" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <path d="M 60 40 Q 190 230 320 40" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="5 4"/>
+        <circle cx="190" cy="190" r="3.5" fill="#dc2626"/>
+        <circle cx="190" cy="172" r="3.5" fill="#dc2626"/>
+        <g font-size="12" fill="#334155">
+          <text x="300" y="70" fill="#2563eb">y=f(x)</text>
+          <text x="300" y="50" fill="#059669">G: y=f(x)+3</text>
+          <text x="196" y="186">(-4,0)</text>
+        </g>
+      </svg><figcaption>示意圖：$G$ 由 $y=f(x)$ 向上平移 $3$ 單位，唯一零點仍在 $x=-4$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出函數形式</div>
+      <div class="rule"><span class="rule-name">部分變</span>「一部分常數、一部分隨 $(x+4)^{2}$ 正變」⇒ $f(x)=m(x+4)^{2}+n$。</div>
+      <p>設 $f(x)=m(x+4)^{2}+n$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代入兩個已知值</div>
+      <p>由 $f(-3)=0$：</p>
+      <p>$$m(1)^{2}+n=0\quad\Longrightarrow\quad m+n=0\tag{1}$$</p>
+      <p>由 $f(2)=105$：</p>
+      <p>$$m(6)^{2}+n=105\quad\Longrightarrow\quad36m+n=105\tag{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 解出 $m,n$，再求 $f(0)$</div>
+      <p>由 (1) 得 $n=-m$，代入 (2)：</p>
+      <p>$$35m=105\quad\Longrightarrow\quad m=3,\quad n=-3$$</p>
+      <p>$$f(x)=3(x+4)^{2}-3$$</p>
+      <p>$$f(0)=3(16)-3=45$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) $G$ 的 $y$ 軸截距</div>
+      <div class="rule"><span class="rule-name">向上平移 $3$ 單位</span>$y$ 軸截距由 $f(0)$ 變成 $f(0)+3$。</div>
+      <p>$$f(0)+3=45+3=48$$</p>
+      <p>即 $(0,48)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) $G$ 的 $x$ 軸截距</div>
+      <div class="rule"><span class="rule-name">令 $y=0$</span>$f(x)+3=0\Rightarrow f(x)=-3$。</div>
+      <p>$$3(x+4)^{2}-3=-3$$</p>
+      <p>$$3(x+4)^{2}=0\quad\Longrightarrow\quad x=-4$$</p>
+      <p>只有一個 $x$ 軸截距 $(-4,0)$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $f(0)=45$<br>(b)(i) $48$（即 $(0,48)$）<br>(b)(ii) $-4$（即 $(-4,0)$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $g(x)$ 一部分為常數，另一部分隨 $(x-1)^{2}$ 正變，且 $g(0)=5$、$g(3)=17$。求 $g(x)$ 及 $g(1)$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $g(x)=a(x-1)^{2}+b$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a+b=5$；$4a+b=17$ ⇒ $3a=12$，$a=4$，$b=1$。</div>
+          <div class="p-step"><b>第 3 步.</b> $g(x)=4(x-1)^{2}+1$，故 $g(1)=1$。</div>
+          <div class="p-ans">答案：<b>$g(x)=4(x-1)^{2}+1$；$g(1)=1$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

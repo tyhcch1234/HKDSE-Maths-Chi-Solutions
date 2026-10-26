@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第12題 · 正變與反變</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第12題</span>
+    <h1>正變放分子，反變放分母</h1>
+    <p class="sub">變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $w$ 隨 $x$ 的平方正變，並隨 $y$ 的立方反變，下列何者必為常數？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{x}{w^{2}y^{6}}$</li><li><span class="ol">B</span>$\dfrac{x^{2}}{wy^{3}}$</li><li><span class="ol">C</span>$\dfrac{w}{x^{2}y^{3}}$</li><li><span class="ol">D</span>$\dfrac{w^{2}}{xy^{2}}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出變分方程</div>
+      <div class="rule"><span class="rule-name">正變、反變</span>$w=k\dfrac{x^{2}}{y^{3}}$。</div>
+      <p>$$w=\frac{kx^{2}}{y^{3}}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">整理成常數</div>
+      <p>$$\frac{wy^{3}}{x^{2}}=k$$</p>
+      <p>取倒數：$\dfrac{x^{2}}{wy^{3}}=\dfrac1k$，仍是常數。</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$\dfrac{x^{2}}{wy^{3}}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $z$ 隨 $x$ 正變、隨 $y^{2}$ 反變，下列何者為常數？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{zy^{2}}{x}$</li><li><span class="ol">B</span>$\dfrac{zx}{y^{2}}$</li><li><span class="ol">C</span>$\dfrac{z}{xy^{2}}$</li><li><span class="ol">D</span>$\dfrac{z^{2}y}{x}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $z=\dfrac{kx}{y^{2}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{zy^{2}}{x}=k$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

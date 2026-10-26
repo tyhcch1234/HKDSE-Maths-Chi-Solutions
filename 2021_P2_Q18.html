@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第18題 · 圓形幾何角度</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第18題</span>
+    <h1>平行線加等腰：把角都寫成 $x$</h1>
+    <p class="sub">平面幾何 · 角度</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $AB=BC$ 且 $AB\parallel CD$。設 $E$ 為 $AD$ 與 $BC$ 的交點。若 $\angle ADC=28^{\circ}$ 及 $\angle AEB=94^{\circ}$，則 $\angle CAD=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$30^{\circ}$</li><li><span class="ol">B</span>$33^{\circ}$</li><li><span class="ol">C</span>$36^{\circ}$</li><li><span class="ol">D</span>$39^{\circ}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 360 260" width="340" height="245" role="img" aria-label="AB 等於 BC 且 AB 平行 CD 的圖形">
+        <g fill="none" stroke="#1d4ed8" stroke-width="2">
+          <line x1="50" y1="220" x2="250" y2="220"/>
+          <line x1="110" y1="90" x2="330" y2="60"/>
+          <line x1="50" y1="220" x2="330" y2="60"/>
+          <line x1="110" y1="90" x2="250" y2="220"/>
+          <line x1="110" y1="90" x2="50" y2="220"/>
+        </g>
+        <g font-size="13" font-family="Georgia,serif" font-style="italic" fill="#0f172a">
+          <text x="38" y="234">A</text><text x="100" y="80">B</text>
+          <text x="256" y="236">C</text><text x="336" y="56">D</text>
+          <text x="176" y="166">E</text>
+        </g>
+        <path d="M 74 220 A 24 24 0 0 0 66 200" fill="none" stroke="#f59e0b" stroke-width="1.6"/>
+      </svg><figcaption>虛線不必加：$A$、$B$、$C$、$D$ 如圖，$E$ 為兩對角線交點。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平行線找 $\angle BAD$</div>
+      <div class="rule"><span class="rule-name">內錯角</span>$AB\parallel CD$，截線 $AD$。</div>
+      <p>$$\angle BAD=\angle ADC=28^{\circ}$$</p>
+      <p>設 $\angle CAD=x$，則 $\angle BAC=28^{\circ}+x$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用等腰三角形找 $\angle ACB$</div>
+      <div class="rule"><span class="rule-name">$AB=BC$</span>底角相等：$\angle BCA=\angle BAC$。</div>
+      <p>$$\angle BCA=28^{\circ}+x$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle ACE$ 用外角</div>
+      <div class="rule"><span class="rule-name">外角等於兩個內對角之和</span>$\angle AEB=\angle EAC+\angle ECA$。</div>
+      <p>$$94^{\circ}=x+(28^{\circ}+x)$$</p>
+      <p>$$2x=66^{\circ}\quad\Longrightarrow\quad x=33^{\circ}$$</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$33^{\circ}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $AB=BC$ 且 $AB\parallel CD$。若 $\angle ADC=40^{\circ}$、$\angle AEB=100^{\circ}$，求 $\angle CAD$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$20^{\circ}$</li><li><span class="ol">B</span>$30^{\circ}$</li><li><span class="ol">C</span>$40^{\circ}$</li><li><span class="ol">D</span>$50^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BAC=40+x$，$\angle BCA=40+x$。</div>
+          <div class="p-step"><b>第 2 步.</b> $100=x+(40+x)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=30$，答案 B。</div>
+          <div class="p-ans">答案：<b>B（$30^{\circ}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

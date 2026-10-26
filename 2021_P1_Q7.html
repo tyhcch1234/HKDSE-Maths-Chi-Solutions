@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第7題 · 極坐標</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第7題</span>
+    <h1>極坐標兩點：先找夾角，再用餘弦定理</h1>
+    <p class="sub">極坐標 · 三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在極坐標系中，$O$ 為極點。點 $P$ 和 $Q$ 的極坐標分別為 $(r,80^{\circ})$ 和 $(r,140^{\circ})$，其中 $r$ 為正常數。已知 $P$ 與 $Q$ 的距離為 $21$。求
+      <br>(a) $\angle POQ$；
+      <br>(b) $r$；
+      <br>(c) $\triangle OPQ$ 的周界。<span class="marks">（4 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 360 250" width="330" height="229" role="img" aria-label="極坐標中 P、Q 兩點與夾角">
+        <g stroke="#cbd5e1" stroke-width="1">
+          <line x1="30" y1="200" x2="330" y2="200"/>
+          <line x1="180" y1="20" x2="180" y2="230"/>
+        </g>
+        <g fill="none" stroke="#1d4ed8" stroke-width="2">
+          <line x1="180" y1="200" x2="204.3" y2="62.1"/>
+          <line x1="180" y1="200" x2="72.8" y2="110"/>
+          <line x1="204.3" y1="62.1" x2="72.8" y2="110" stroke="#dc2626"/>
+        </g>
+        <path d="M 216 200 A 36 36 0 0 0 207 172" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <g fill="#0f172a" font-size="14" font-family="Georgia,serif" font-style="italic">
+          <text x="186" y="218">O</text>
+          <text x="212" y="56">P</text>
+          <text x="58" y="106">Q</text>
+          <text x="219" y="195" font-size="12">80°</text>
+          <text x="168" y="165" font-size="12">60°</text>
+        </g>
+        <text x="120" y="80" fill="#dc2626" font-size="12" font-family="Georgia,serif">21</text>
+      </svg><figcaption>兩射線的極角分別為 $80^{\circ}$ 和 $140^{\circ}$，夾角為 $60^{\circ}$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 兩極角相減得夾角</div>
+      <div class="rule"><span class="rule-name">極角由極軸量起</span>$\angle POQ=140^{\circ}-80^{\circ}$。</div>
+      <p>$$\angle POQ=140^{\circ}-80^{\circ}=60^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 用餘弦定理求 $r$</div>
+      <div class="rule"><span class="rule-name">餘弦定理</span>$PQ^{2}=OP^{2}+OQ^{2}-2(OP)(OQ)\cos\theta$。</div>
+      <p>因為 $OP=OQ=r$，</p>
+      <p>$$21^{2}=r^{2}+r^{2}-2r^{2}\cos60^{\circ}=2r^{2}-r^{2}=r^{2}$$</p>
+      <p>$$r=21$$</p>
+      <p>其實夾角 $60^{\circ}$ 的等腰三角形就是等邊三角形，所以 $PQ=OP=r$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c) 三邊相等，求周界</div>
+      <p>$$OP=OQ=PQ=21$$</p>
+      <p>周界 $=21+21+21=63$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $60^{\circ}$　(b) $r=21$　(c) $63$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $P$、$Q$ 的極坐標為 $(r,50^{\circ})$、$(r,110^{\circ})$，且 $PQ=18$。求 $\angle POQ$、$r$ 及 $\triangle OPQ$ 的周界。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 夾角 $=110^{\circ}-50^{\circ}=60^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 等腰且夾角 $60^{\circ}$ ⇒ 等邊，$r=18$。</div>
+          <div class="p-step"><b>第 3 步.</b> 周界 $=3\times18=54$。</div>
+          <div class="p-ans">答案：<b>$60^{\circ}$；$r=18$；$54$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

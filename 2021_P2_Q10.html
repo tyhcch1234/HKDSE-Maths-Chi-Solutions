@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第10題 · 複合不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第10題</span>
+    <h1>「或」：兩個解集合起來</h1>
+    <p class="sub">不等式 · 解集</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+不等式 $9x+8\le4(x-3)$ 或 $6-7x>20$ 的解為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x\le-4$</li><li><span class="ol">B</span>$x\ge-4$</li><li><span class="ol">C</span>$x<-2$</li><li><span class="ol">D</span>$x>-2$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">解第一條</div>
+      <p>$$9x+8\le4x-12$$</p>
+      <p>$$5x\le-20\quad\Longrightarrow\quad x\le-4$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第二條</div>
+      <div class="rule"><span class="rule-name">除以負數要變號</span>$-7x>14$ ⇒ $x<-2$。</div>
+      <p>$$6-7x>20$$</p>
+      <p>$$-7x>14\quad\Longrightarrow\quad x<-2$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取「或」的聯集</div>
+      <div class="rule"><span class="rule-name">聯集</span>$x\le-4$ 已包含在 $x<-2$ 之內。</div>
+      <p>$$x\le-4\ \text{或}\ x<-2\quad\Longrightarrow\quad x<-2$$</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$x<-2$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 不等式 $5x+1\le3(x-2)$ 或 $4-2x>10$ 的解為</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$x\le-3.5$</li><li><span class="ol">B</span>$x<-3$</li><li><span class="ol">C</span>$x\le-3.5\ \text{或}\ x>-3$</li><li><span class="ol">D</span>$-3.5\le x<-3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條：$2x\le-7\Rightarrow x\le-3.5$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$-2x>6\Rightarrow x<-3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 聯集為 $x<-3$，答案 B。</div>
+          <div class="p-ans">答案：<b>B（$x<-3$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

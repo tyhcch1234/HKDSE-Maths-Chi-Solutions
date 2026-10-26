@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第31題 · HCF 與 LCM</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第31題</span>
+    <h1>指數取最小得 HCF，取最大得 LCM</h1>
+    <p class="sub">多項式 · HCF 與 LCM</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+三個數式的 H.C.F. 及 L.C.M. 分別為 $x^{2}y^{2}z$ 及 $x^{3}y^{4}z^{5}$。若第一個數式及第二個數式分別為 $x^{3}y^{2}z^{2}$ 及 $x^{3}y^{3}z^{5}$，則第三個數式為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x^{2}y^{4}z$</li><li><span class="ol">B</span>$x^{2}y^{4}z^{2}$</li><li><span class="ol">C</span>$x^{3}y^{3}z$</li><li><span class="ol">D</span>$x^{3}y^{3}z^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">逐個字母比較指數</div>
+      <div class="rule"><span class="rule-name">HCF 取最小，LCM 取最大</span>第三式的指數要在兩者之間。</div>
+      <p>$x$：三式中最小為 $2$、最大為 $3$。已知兩式都是 $x^{3}$，故第三式必須是 $x^{2}$。</p>
+      <p>$y$：最大為 $4$。已知兩式為 $y^{2}$、$y^{3}$，故第三式必須是 $y^{4}$。</p>
+      <p>$z$：最小為 $1$。已知兩式為 $z^{2}$、$z^{5}$，故第三式必須是 $z$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">組合答案</div>
+      <p>$$x^{2}y^{4}z$$</p>
+      <p>故選 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（$x^{2}y^{4}z$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 兩數式的 HCF 為 $x^{2}y$、LCM 為 $x^{4}y^{3}z$。若第一式為 $x^{3}y^{2}$，求第二式。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$x^{2}yz$</li><li><span class="ol">B</span>$x^{4}y^{3}z$</li><li><span class="ol">C</span>$x^{4}yz$</li><li><span class="ol">D</span>$x^{2}y^{3}z$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x$：最小 2、最大 4，第一式 3 ⇒ 第二式 $x^{4}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$：最小 1、最大 3，第一式 2 ⇒ 第二式 $y^{3}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $z$：最小 0、最大 1 ⇒ 第二式 $z$。答案 $x^{4}y^{3}z$，B。</div>
+          <div class="p-ans">答案：<b>B</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

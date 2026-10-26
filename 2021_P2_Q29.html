@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第29題 · 箱形圖</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第29題</span>
+    <h1>箱的左右邊就是 $Q_1$、$Q_3$</h1>
+    <p class="sub">統計 · 箱形圖</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖顯示一組研究員年齡的分布的箱形圖。求該分布的四分位數間距。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5$</li><li><span class="ol">B</span>$10$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$34$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 400 130" width="380" height="124" role="img" aria-label="年齡箱形圖">
+        <line x1="30" y1="90" x2="370" y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+        <g stroke="#cbd5e1" stroke-dasharray="3 4">
+          <line x1="60" y1="30" x2="60" y2="100"/><line x1="100" y1="30" x2="100" y2="100"/>
+          <line x1="140" y1="30" x2="140" y2="100"/><line x1="180" y1="30" x2="180" y2="100"/>
+          <line x1="220" y1="30" x2="220" y2="100"/><line x1="260" y1="30" x2="260" y2="100"/>
+          <line x1="300" y1="30" x2="300" y2="100"/><line x1="340" y1="30" x2="340" y2="100"/>
+        </g>
+        <g stroke="#1d4ed8" stroke-width="2" fill="#dbeafe" fill-opacity="0.45">
+          <rect x="140" y="55" width="120" height="30"/>
+          <line x1="100" y1="70" x2="140" y2="70"/>
+          <line x1="260" y1="70" x2="310" y2="70"/>
+          <line x1="100" y1="55" x2="100" y2="85"/>
+          <line x1="310" y1="55" x2="310" y2="85"/>
+        </g>
+        <g font-size="11" fill="#475569" text-anchor="middle">
+          <text x="60" y="115">20</text><text x="100" y="115">24</text><text x="140" y="115">28</text>
+          <text x="180" y="115">32</text><text x="220" y="115">36</text><text x="260" y="115">40</text>
+          <text x="300" y="115">44</text>
+        </g>
+      </svg><figcaption>$Q_1=26$，$Q_3=36$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出 $Q_1$ 與 $Q_3$</div>
+      <div class="rule"><span class="rule-name">箱的兩邊</span>左邊為 $Q_1$，右邊為 $Q_3$。</div>
+      <p>由圖讀得 $Q_1=26$、$Q_3=36$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求四分位數間距</div>
+      <div class="rule"><span class="rule-name">IQR $=Q_3-Q_1$</span>$36-26$。</div>
+      <p>$$\text{IQR}=36-26=10$$</p>
+      <p>故選 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>B（$10$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 箱形圖中 $Q_1=15$、$Q_3=28$，求 IQR。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$13$</li><li><span class="ol">B</span>$15$</li><li><span class="ol">C</span>$28$</li><li><span class="ol">D</span>$43$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\text{IQR}=Q_3-Q_1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=28-15=13$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A（$13$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q28.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q30.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

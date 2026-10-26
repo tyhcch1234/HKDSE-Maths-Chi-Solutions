@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第7題 · 二次函數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第7題</span>
+    <h1>對稱軸 $x=4$：兩個 $1$ 告訴你頂點在哪</h1>
+    <p class="sub">函數 · 二次函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $f(x)=(x+h)(x-3)+k$，其中 $h$、$k$ 為常數。若 $f(0)=f(8)=1$，求 $k$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-14$</li><li><span class="ol">B</span>$-5$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$31$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 400 280" width="380" height="266" role="img" aria-label="拋物線 y=f(x) 過 A(0,1) 與 B(8,1)">
+        <g stroke="#e2e8f0" stroke-width="1">
+          <line x1="30" y1="120" x2="380" y2="120"/>
+          <line x1="40" y1="30" x2="40" y2="265"/>
+        </g>
+        <path d="M 40 120 Q 200 330 360 120" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+        <line x1="200" y1="60" x2="200" y2="255" stroke="#94a3b8" stroke-dasharray="5 4"/>
+        <circle cx="40" cy="120" r="4" fill="#dc2626"/>
+        <circle cx="360" cy="120" r="4" fill="#dc2626"/>
+        <g font-size="12" fill="#0f172a">
+          <text x="26" y="112">A(0,1)</text>
+          <text x="330" y="110">B(8,1)</text>
+          <text x="206" y="250">x=4</text>
+        </g>
+      </svg><figcaption>$f(0)=f(8)$ 表示 $A$、$B$ 同高，對稱軸為 $x=4$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">代入兩個函數值</div>
+      <p>$$f(0)=h(-3)+k=1\quad\Longrightarrow\quad-3h+k=1\tag{1}$$</p>
+      <p>$$f(8)=(8+h)(5)+k=1\quad\Longrightarrow\quad5h+k=-39\tag{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩式相減消去 $k$</div>
+      <p>$$8h=-40\quad\Longrightarrow\quad h=-5$$</p>
+      <p>代入 (1)：$15+k=1$，故 $k=-14$。</p>
+      <p>故選 <b>A</b>。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用對稱性快速檢查</div>
+      <div class="rule"><span class="rule-name">對稱軸</span>$f(0)=f(8)$ ⇒ 對稱軸 $x=4$，即頂點 $x=4$。</div>
+      <p>由 $f(x)=(x-5)(x-3)-14$，頂點在 $x=4$，與對稱軸一致。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（$k=-14$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=(x+h)(x-2)+k$。若 $f(0)=f(6)=2$，求 $k$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(0)=-2h+k=2$；$f(6)=4(6+h)+k=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相減：$24+6h=0\Rightarrow h=-4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $8+k=2\Rightarrow k=-6$，答案 A。</div>
+          <div class="p-ans">答案：<b>A（$-6$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

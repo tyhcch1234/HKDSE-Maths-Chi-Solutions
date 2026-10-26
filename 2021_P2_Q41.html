@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第41題 · 垂心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第41題</span>
+    <h1>垂心：兩條高線都過 $H$</h1>
+    <p class="sub">坐標幾何 · 三角形垂心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $O$ 為原點，點 $P$ 的坐標為 $(26,-18)$。若 $\triangle OPQ$ 的垂心坐標為 $(21,-3)$，則 $Q$ 的 $y$ 坐標為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-30$</li><li><span class="ol">B</span>$-10$</li><li><span class="ol">C</span>$10$</li><li><span class="ol">D</span>$30$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 240" width="320" height="227" role="img" aria-label="三角形 OPQ 與垂心 H">
+        <polygon points="40,50 300,190 60,190" fill="#dbeafe" fill-opacity="0.35" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#f59e0b" stroke-width="1.4" fill="none" stroke-dasharray="4 3">
+          <line x1="40" y1="50" x2="173" y2="166"/>
+          <line x1="300" y1="190" x2="53" y2="140"/>
+        </g>
+        <circle cx="173" cy="166" r="4" fill="#dc2626"/>
+        <g font-size="12" fill="#0f172a" font-style="italic" font-family="Georgia,serif">
+          <text x="28" y="44">O</text><text x="306" y="196">P</text><text x="52" y="206">Q</text>
+          <text x="180" y="162">H</text>
+        </g>
+      </svg><figcaption>$H$ 為垂心，故 $OH\perp PQ$、$PH\perp OQ$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設 $Q=(u,v)$</div>
+      <p>已知 $O(0,0)$、$P(26,-18)$、$H(21,-3)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $OH\perp PQ$</div>
+      <div class="rule"><span class="rule-name">斜率相乘 $-1$</span>$m_{OH}=-\frac17$。</div>
+      <p>$$\frac{v+18}{u-26}=7\quad\Longrightarrow\quad7u-v=200\tag{1}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用 $PH\perp OQ$</div>
+      <div class="rule"><span class="rule-name">$m_{PH}=-3$</span>$m_{OQ}=\frac vu$。</div>
+      <p>$$\frac vu=\frac13\quad\Longrightarrow\quad u=3v\tag{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解聯立</div>
+      <p>代入 (1)：$21v-v=200\Rightarrow v=10$。</p>
+      <p>故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$10$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $\triangle OPQ$ 中 $O(0,0)$、$P(4,0)$，垂心為 $(2,3)$。求 $Q$ 的 $x$ 坐標。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $OH\perp PQ$：$OH$ 斜率 $3/2$，故 $PQ$ 斜率 $-2/3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $PH\perp OQ$：$PH$ 垂直 $x=2$，故 $OQ$ 水平。</div>
+          <div class="p-step"><b>第 3 步.</b> $Q$ 在 $x$ 軸上，$x$ 坐標為 $2$（由對稱）。答案 B。</div>
+          <div class="p-ans">答案：<b>B（$2$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q40.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q42.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第39題 · 圓與切線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第39題</span>
+    <h1>切線、弓形角、半圓：三條定理接力</h1>
+    <p class="sub">平面幾何 · 圓</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $AC$ 為圓 $ABCD$ 的直徑。$EF$ 為圓於 $D$ 的切線，且 $AB\parallel EC$。若 $\angle CDF=49^{\circ}$ 及 $\angle CED=31^{\circ}$，則 $\angle ACB=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$49^{\circ}$</li><li><span class="ol">B</span>$57^{\circ}$</li><li><span class="ol">C</span>$59^{\circ}$</li><li><span class="ol">D</span>$67^{\circ}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 280" width="320" height="264" role="img" aria-label="圓 ABCD、切線 EF 與平行線 AB、EC">
+        <circle cx="170" cy="150" r="110" fill="#dbeafe" fill-opacity="0.25" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#1d4ed8" stroke-width="1.6" fill="none">
+          <line x1="60" y1="150" x2="280" y2="150"/>
+          <line x1="60" y1="150" x2="190" y2="250"/>
+          <line x1="190" y1="250" x2="280" y2="150"/>
+          <line x1="76" y1="96" x2="230" y2="42"/>
+          <line x1="150" y1="42" x2="290" y2="90"/>
+        </g>
+        <g fill="#0f172a" font-size="12" font-family="Georgia,serif" font-style="italic">
+          <text x="52" y="144">C</text><text x="286" y="144">A</text>
+          <text x="190" y="266">B</text><text x="148" y="36">D</text>
+          <text x="296" y="94">E</text><text x="60" y="94">F</text>
+        </g>
+      </svg><figcaption>$AC$ 為直徑，$EF$ 切圓於 $D$，且 $AB\parallel EC$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle CDE$ 用外角</div>
+      <div class="rule"><span class="rule-name">外角</span>$\angle CDF=\angle DCE+\angle CED$。</div>
+      <p>$$\angle DCE=49^{\circ}-31^{\circ}=18^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">切線與弦的弓形角</div>
+      <div class="rule"><span class="rule-name">內錯弓形角</span>$\angle CAD=\angle CDF$。</div>
+      <p>$$\angle CAD=49^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用直徑所對的圓周角</div>
+      <div class="rule"><span class="rule-name">半圓上的圓周角</span>$\angle ADC=90^{\circ}$。</div>
+      <p>在 $\triangle ACD$ 中：</p>
+      <p>$$\angle ACD=180^{\circ}-90^{\circ}-49^{\circ}=41^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用平行線求 $\angle ACB$</div>
+      <div class="rule"><span class="rule-name">$AB\parallel EC$</span>$\angle BAC=\angle ACE$（內錯角）。</div>
+      <p>設 $\angle ACB=x$，則 $\angle ACE=90^{\circ}-x$。</p>
+      <p>$$\angle ACD=(90^{\circ}-x)+18^{\circ}=41^{\circ}$$</p>
+      <p>$$108^{\circ}-x=41^{\circ}\quad\Longrightarrow\quad x=67^{\circ}$$</p>
+      <p>故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$67^{\circ}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓中 $AC$ 為直徑，$EF$ 切圓於 $D$。若 $\angle CDF=40^{\circ}$，求 $\angle CAD$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$40^{\circ}$</li><li><span class="ol">B</span>$50^{\circ}$</li><li><span class="ol">C</span>$80^{\circ}$</li><li><span class="ol">D</span>$90^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 切線與弦的弓形角相等。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle CAD=\angle CDF=40^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A（$40^{\circ}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

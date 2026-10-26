@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第32題 · 十六進制</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第32題</span>
+    <h1>拆成 $14\times16^{15}+16^{15}+16^{14}+16^{2}+17$</h1>
+    <p class="sub">數制 · 十六進制</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$$14\times16^{15}+17\times16^{14}+16^{2}+17=$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\texttt{E101000000000021}_{16}$</li><li><span class="ol">B</span>$\texttt{F100000000000011}_{16}$</li><li><span class="ol">C</span>$\texttt{E1100000000000021}_{16}$</li><li><span class="ol">D</span>$\texttt{F1000000000000111}_{16}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆開 $17\times16^{14}$</div>
+      <div class="rule"><span class="rule-name">$17=16+1$</span>$17\times16^{14}=16^{15}+16^{14}$。</div>
+      <p>$$14\times16^{15}+16^{15}+16^{14}+16^{2}+17$$</p>
+      <p>$$=15\times16^{15}+1\times16^{14}+1\times16^{2}+1\times16+1$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐位寫成十六進制</div>
+      <div class="rule"><span class="rule-name">$15=\texttt{F}$</span>每一位對應一個 $16$ 的冪。</div>
+      <p>最高兩位為 $\texttt{F}1$，中間補 $0$，末尾為 $111$：</p>
+      <p>$$\texttt{F1000000000000111}_{16}$$</p>
+      <p>與選項 D 相符。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">快速驗算</div>
+      <p>$14\times16^{15}\approx1.615\times10^{19}$，加上 $17\times16^{14}\approx1.22\times10^{18}$，總值約 $1.74\times10^{19}$，只有 D 的量級相符。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$\texttt{F1000000000000111}_{16}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $15\times16^{3}+16^{2}+1$ 的十六進制表示為</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\texttt{F0101}_{16}$</li><li><span class="ol">B</span>$\texttt{F101}_{16}$</li><li><span class="ol">C</span>$\texttt{E101}_{16}$</li><li><span class="ol">D</span>$\texttt{F011}_{16}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $15\times16^3$ 為首位 F。</div>
+          <div class="p-step"><b>第 2 步.</b> $16^2$ 為第三位 1。</div>
+          <div class="p-step"><b>第 3 步.</b> $1$ 為末位 1，即 F0101，答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

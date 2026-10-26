@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第35題 · 複數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第35題</span>
+    <h1>$w$ 在單位圓上：$\frac1w=\bar w$</h1>
+    <p class="sub">複數 · 共軛</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $\alpha$ 為實數。定義 $w=\dfrac{\alpha+i}{\alpha-i}$、$u=w+\dfrac1w$、$v=w-\dfrac1w$。下列何者必為真？
+      <br>I. $u$ 為實數。
+      <br>II. $v$ 的實部為 $0$。
+      <br>III. $w$ 的虛部等於 $2w$ 的虛部。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先找 $\bar w$</div>
+      <div class="rule"><span class="rule-name">$\alpha$ 為實數</span>$\overline{\alpha+i}=\alpha-i$。</div>
+      <p>$$\bar w=\frac{\alpha-i}{\alpha+i}=\frac1w$$</p>
+      <p>所以 $|w|=1$，$\frac1w=\bar w$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I、II</div>
+      <div class="rule"><span class="rule-name">$z+\bar z$ 實，$z-\bar z$ 純虛</span>$u=w+\bar w$，$v=w-\bar w$。</div>
+      <p>$$u=w+\bar w=2\operatorname{Re}(w)$$</p>
+      <p>為實數，I 正確。</p>
+      <p>$$v=w-\bar w=2i\operatorname{Im}(w)$$</p>
+      <p>實部為 $0$，II 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 III</div>
+      <p>$\operatorname{Im}(2w)=2\operatorname{Im}(w)$，一般不等於 $\operatorname{Im}(w)$。</p>
+      <p>III 錯誤，故選 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（只有 I 及 II）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $z$ 為複數且 $|z|=1$，下列何者必為實數？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$z-\bar z$</li><li><span class="ol">B</span>$z+\bar z$</li><li><span class="ol">C</span>$z^{2}-\bar z^{2}$</li><li><span class="ol">D</span>$iz$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $|z|=1$ 表示 $z$ 在單位圓上。</div>
+          <div class="p-step"><b>第 2 步.</b> $z+\bar z=2\operatorname{Re}(z)$，必為實數。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 B。</div>
+          <div class="p-ans">答案：<b>B</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

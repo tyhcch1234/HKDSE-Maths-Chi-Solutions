@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第18題 · 立體三角學</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第18題</span>
+    <h1>梯形摺成金字塔：先解平面，再處理立體角</h1>
+    <p class="sub">三角學 · 立體圖形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+(a) 一塊薄金屬片 $ABCD$ 呈梯形，其中 $AD\parallel BC$。已知 $AB=45\text{ cm}$、$\angle ADC=70^{\circ}$ 及 $\angle BAD=50^{\circ}$。求 $CD$。<span class="marks">（2 分）</span>
+      <br>(b) 現有上述金屬片。設 $E$ 為 $AD$ 上的一點，使 $BE\perp AD$。金屬片沿 $BE$ 摺起，使 $AE$ 垂直於平面 $BCDE$。再把三塊薄三角形金屬片貼上，形成一個金字塔（見圖 2）。已知 $BC=40\text{ cm}$。
+      <br>　(i) 求 $\angle CAD$。
+      <br>　(ii) 平面 $ACD$ 與平面 $BCDE$ 之間的角是否大於 $30^{\circ}$？試解釋。<span class="marks">（5 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 640 270" width="620" height="261" role="img" aria-label="梯形 ABCD 與摺成的金字塔">
+        <g stroke="#1d4ed8" stroke-width="2" fill="#dbeafe" fill-opacity="0.35">
+          <polygon points="50,220 166,72 326,72 376,220"/>
+        </g>
+        <line x1="166" y1="72" x2="166" y2="220" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <g font-size="13" font-family="Georgia,serif" font-style="italic" fill="#0f172a">
+          <text x="38" y="236">A</text><text x="158" y="62">B</text>
+          <text x="330" y="62">C</text><text x="384" y="236">D</text>
+          <text x="150" y="238">E</text>
+        </g>
+        <g font-size="11" fill="#475569">
+          <text x="92" y="140" transform="rotate(-52 92 140)">45</text>
+          <text x="210" y="64">40</text>
+          <text x="360" y="160" transform="rotate(70 360 160)">CD</text>
+          <text x="70" y="212" fill="#dc2626">50°</text>
+          <text x="342" y="206" fill="#dc2626">70°</text>
+        </g>
+
+        <g stroke="#059669" stroke-width="2" fill="#d1fae5" fill-opacity="0.35">
+          <polygon points="470,220 511,144 631,144 627,220"/>
+        </g>
+        <g stroke="#059669" stroke-width="1.6" fill="none">
+          <line x1="470" y1="220" x2="470" y2="156"/>
+          <line x1="470" y1="156" x2="511" y2="144"/>
+          <line x1="470" y1="156" x2="631" y2="144"/>
+          <line x1="470" y1="156" x2="627" y2="220"/>
+        </g>
+        <line x1="470" y1="220" x2="470" y2="156" stroke="#dc2626" stroke-width="1.8"/>
+        <g font-size="13" font-family="Georgia,serif" font-style="italic" fill="#0f172a">
+          <text x="458" y="138">A</text><text x="458" y="236">E</text>
+          <text x="504" y="138">B</text><text x="636" y="138">C</text>
+          <text x="634" y="236">D</text>
+        </g>
+        <text x="500" y="258" font-size="12" fill="#475569">圖 2：沿 BE 摺起，AE ⟂ 平面 BCDE</text>
+      </svg><figcaption>左：未摺的金屬片；右：摺起後形成的金字塔（$E$ 為 $A$ 在底面的垂足）。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 作輔助線把梯形切成平行四邊形與三角形</div>
+      <div class="rule"><span class="rule-name">作 $CP\parallel AB$</span>$ABCP$ 為平行四邊形，$CP=AB=45$。</div>
+      <p>設 $P$ 在 $AD$ 上且 $CP\parallel AB$。則 $CP=45\text{ cm}$，且</p>
+      <p>$$\angle CPD=\angle BAD=50^{\circ}\quad(\text{同位角})$$</p>
+      <p>$$\angle CDP=\angle ADC=70^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 在 $\triangle PCD$ 用正弦定理</div>
+      <div class="rule"><span class="rule-name">正弦定理</span>$\dfrac{CD}{\sin\angle CPD}=\dfrac{CP}{\sin\angle CDP}$。</div>
+      <p>$$\frac{CD}{\sin50^{\circ}}=\frac{45}{\sin70^{\circ}}$$</p>
+      <p>$$CD=\frac{45\sin50^{\circ}}{\sin70^{\circ}}\approx36.68\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 求 $AE$、$BE$ 及 $DF$</div>
+      <div class="rule"><span class="rule-name">直角三角形</span>在 $\triangle ABE$ 中，$AE=45\cos50^{\circ}$。</div>
+      <p>$$AE=45\cos50^{\circ}\approx28.93,\qquad BE=45\sin50^{\circ}\approx34.47$$</p>
+      <p>作 $CF\perp AD$，則 $CF=BE\approx34.47$。在 $\triangle CFD$ 中，</p>
+      <p>$$DF=\frac{CF}{\tan70^{\circ}}\approx12.55$$</p>
+      <p>故 $AD=AE+EF+FD\approx28.93+40+12.55=81.47\text{ cm}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 摺起後求 $AD$ 及 $AC$</div>
+      <div class="rule"><span class="rule-name">摺後 $AE\perp$ 底面</span>$AD^{2}=AE^{2}+ED^{2}$，其中 $ED=EF+FD$。</div>
+      <p>$$ED=40+12.55=52.55$$</p>
+      <p>$$AD=\sqrt{28.93^{2}+52.55^{2}}\approx59.98\text{ cm}$$</p>
+      <p>又 $AB\perp BC$，故</p>
+      <p>$$AC=\sqrt{45^{2}+40^{2}}=\sqrt{3625}\approx60.21\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(i) 在 $\triangle ACD$ 用餘弦定理</div>
+      <div class="rule"><span class="rule-name">餘弦定理</span>$\cos\angle CAD=\dfrac{AC^{2}+AD^{2}-CD^{2}}{2(AC)(AD)}$。</div>
+      <p>$$\cos\angle CAD\approx\frac{60.21^{2}+59.98^{2}-36.68^{2}}{2(60.21)(59.98)}\approx0.8154$$</p>
+      <p>$$\angle CAD\approx35.5^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 作垂足 $Q$，用面積求 $AQ$</div>
+      <div class="rule"><span class="rule-name">兩式算同一個三角形面積</span>$\frac12 CD\cdot AQ=\frac12 AC\cdot AD\sin\angle CAD$。</div>
+      <p>$$AQ=\frac{AC\cdot AD\sin35.5^{\circ}}{CD}\approx57.23\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b)(ii) 求兩平面夾角</div>
+      <div class="rule"><span class="rule-name">三垂線定理</span>$EQ\perp CD$，故夾角為 $\angle AQE$。</div>
+      <p>$$\sin\angle AQE=\frac{AE}{AQ}\approx\frac{28.93}{57.23}\approx0.5055$$</p>
+      <p>$$\angle AQE\approx30.4^{\circ}>30^{\circ}$$</p>
+      <p>所以夾角<b>大於</b> $30^{\circ}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $CD\approx36.7\text{ cm}$<br>(b)(i) $\angle CAD\approx35.5^{\circ}$<br>(b)(ii) 是，夾角約 $30.4^{\circ}>30^{\circ}$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中，$AB=8$、$\angle ABC=40^{\circ}$、$\angle ACB=70^{\circ}$。求 $AC$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BAC=70^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{AC}{\sin40^{\circ}}=\dfrac{8}{\sin70^{\circ}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AC=\dfrac{8\sin40^{\circ}}{\sin70^{\circ}}\approx5.47$。</div>
+          <div class="p-ans">答案：<b>$5.47$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

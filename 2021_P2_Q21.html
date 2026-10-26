@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第21題 · 正八邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第21題</span>
+    <h1>正八邊形：內角 $135^{\circ}$，逐句驗證</h1>
+    <p class="sub">平面幾何 · 多邊形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $ABCDEFGH$ 為正八邊形，下列何者正確？
+      <br>I. $AG\parallel BF$
+      <br>II. $BD=EG$
+      <br>III. $\angle CAG=2\angle BDH$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 300" width="320" height="282" role="img" aria-label="正八邊形 ABCDEFGH">
+        <polygon points="170,30 241,59 270,130 241,201 170,230 99,201 70,130 99,59"
+                 fill="#dbeafe" fill-opacity="0.4" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#f59e0b" stroke-width="1.4" fill="none">
+          <line x1="170" y1="30" x2="70" y2="130"/>
+          <line x1="241" y1="59" x2="99" y2="201"/>
+          <line x1="241" y1="59" x2="241" y2="201"/>
+          <line x1="270" y1="130" x2="99" y2="201"/>
+        </g>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="164" y="22">A</text><text x="248" y="54">B</text><text x="278" y="134">C</text>
+          <text x="248" y="212">D</text><text x="164" y="248">E</text><text x="90" y="212">F</text>
+          <text x="54" y="134">G</text><text x="90" y="54">H</text>
+        </g>
+      </svg><figcaption>正八邊形按 $A,B,\dots,H$ 順序排列；外接圓圓心為對稱中心。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算內角</div>
+      <div class="rule"><span class="rule-name">正 $n$ 邊形內角</span>$\dfrac{(n-2)180^{\circ}}{n}$。</div>
+      <p>$$\frac{(8-2)180^{\circ}}{8}=135^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">I：證明 $AG\parallel BF$</div>
+      <div class="rule"><span class="rule-name">同旁內角互補</span>$\angle GAB+\angle FBA=180^{\circ}$。</div>
+      <p>由對稱，$\angle GAB=112.5^{\circ}$、$\angle FBA=67.5^{\circ}$，相加 $180^{\circ}$。</p>
+      <p>故 $AG\parallel BF$，I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">II：$BD=EG$</div>
+      <div class="rule"><span class="rule-name">全等三角形</span>兩條弦所對的圓心角同為 $90^{\circ}$。</div>
+      <p>$B$ 與 $D$ 相隔兩個頂點，$E$ 與 $G$ 也相隔兩個頂點，對應弦長相等。</p>
+      <p>II 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">III：比較兩個圓周角</div>
+      <p>$\angle CAG=135^{\circ}-22.5^{\circ}-22.5^{\circ}=90^{\circ}$；</p>
+      <p>$\angle BDH=67.5^{\circ}-22.5^{\circ}=45^{\circ}$。</p>
+      <p>故 $\angle CAG=2\angle BDH$，III 正確。選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（I、II 及 III）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正六邊形的每個內角是多少？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$108^{\circ}$</li><li><span class="ol">B</span>$120^{\circ}$</li><li><span class="ol">C</span>$135^{\circ}$</li><li><span class="ol">D</span>$144^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\dfrac{(6-2)180}{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=120^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 B。</div>
+          <div class="p-ans">答案：<b>B（$120^{\circ}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

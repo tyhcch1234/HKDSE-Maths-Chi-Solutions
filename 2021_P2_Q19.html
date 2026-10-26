@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第19題 · 矩形與相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第19題</span>
+    <h1>矩形裡的直角與等腰：三句逐一驗證</h1>
+    <p class="sub">平面幾何 · 相似與全等</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為矩形。設 $E$ 為 $AC$ 上的一點，使 $BE\perp AC$。延長 $BE$ 至點 $F$，使 $CF=AD$。設 $BF$ 與 $CD$ 的交點為 $G$。下列何者正確？
+      <br>I. $\angle DAE=\angle DGF$
+      <br>II. $\triangle BCE\sim\triangle CGE$
+      <br>III. $\triangle BCE\cong\triangle FCE$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><svg viewBox="0 0 360 260" width="340" height="245" role="img" aria-label="矩形 ABCD 與點 E、F、G">
+        <rect x="40" y="70" width="260" height="150" fill="#dbeafe" fill-opacity="0.35" stroke="#1d4ed8" stroke-width="2"/>
+        <g stroke="#1d4ed8" stroke-width="1.6" fill="none">
+          <line x1="40" y1="220" x2="300" y2="70"/>
+          <line x1="300" y1="220" x2="235" y2="107"/>
+          <line x1="235" y1="107" x2="165" y2="5"/>
+          <line x1="300" y1="220" x2="165" y2="5"/>
+        </g>
+        <g fill="#0f172a" font-size="13" font-family="Georgia,serif" font-style="italic">
+          <text x="26" y="234">A</text><text x="306" y="234">B</text>
+          <text x="306" y="64">C</text><text x="26" y="64">D</text>
+          <text x="228" y="122">E</text><text x="158" y="14">F</text><text x="208" y="78">G</text>
+        </g>
+      </svg><figcaption>$E$ 在 $AC$ 上且 $BE\perp AC$；$F$ 在 $BE$ 的延長線上。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設立角度記號</div>
+      <p>設 $\angle CAB=x$，則 $\angle DAC=90^{\circ}-x$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I</div>
+      <div class="rule"><span class="rule-name">$AB\parallel CD$</span>同位角／內錯角關係。</div>
+      <p>由圖形角度關係，$\angle DAE=90^{\circ}-x$，而 $\angle DGF=90^{\circ}-x$。</p>
+      <p>故 I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 II</div>
+      <div class="rule"><span class="rule-name">A.A.</span>兩對角相等即可。</div>
+      <p>$\angle BCE=\angle CGE=90^{\circ}-x$，且 $\angle CEB=\angle GEC=90^{\circ}$。</p>
+      <p>故 $\triangle BCE\sim\triangle CGE$，II 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查 III</div>
+      <div class="rule"><span class="rule-name">S.S.S.</span>$BC=CF$、$BE=EF$、$CE=CE$。</div>
+      <p>$CF=AD=BC$；因 $\triangle BCF$ 為等腰且 $CE\perp BF$，$E$ 為 $BF$ 中點，故 $BE=EF$。</p>
+      <p>三邊相等，$\triangle BCE\cong\triangle FCE$，III 正確。</p>
+      <p>故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（I、II 及 III）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在矩形 $ABCD$ 中，$E$ 在 $AC$ 上且 $BE\perp AC$。下列何者必真？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\triangle ABE\sim\triangle BCE$</li><li><span class="ol">B</span>$\triangle ABE\cong\triangle BCE$</li><li><span class="ol">C</span>$AB^{2}=AE\cdot AC$</li><li><span class="ol">D</span>$BE^{2}=AE\cdot EC$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle ABE\sim\triangle BCE$（A.A.）。</div>
+          <div class="p-step"><b>第 2 步.</b> 由相似比可得 $BE^{2}=AE\cdot EC$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 D。</div>
+          <div class="p-ans">答案：<b>D</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

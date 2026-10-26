@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第13題 · 數列規律</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第13題</span>
+    <h1>逐項加 $(2n+3)$：由 3 加到第 8 項</h1>
+    <p class="sub">數列 · 規律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中第 1 個圖案由 $3$ 個點組成。對任意正整數 $n$，第 $(n+1)$ 個圖案由第 $n$ 個圖案加上 $(2n+3)$ 個點組成。求第 8 個圖案的點數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$63$</li><li><span class="ol">B</span>$75$</li><li><span class="ol">C</span>$80$</li><li><span class="ol">D</span>$99$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 400 130" width="380" height="124" role="img" aria-label="第1至第3個點陣圖案">
+        <g fill="#1d4ed8">
+          <circle cx="40" cy="80" r="5"/><circle cx="22" cy="108" r="5"/><circle cx="58" cy="108" r="5"/>
+        </g>
+        <text x="40" y="126" font-size="11" text-anchor="middle" fill="#475569">第 1 個（3）</text>
+        <g fill="#1d4ed8">
+          <circle cx="150" cy="55" r="5"/>
+          <circle cx="132" cy="83" r="5"/><circle cx="168" cy="83" r="5"/>
+          <circle cx="114" cy="111" r="5"/><circle cx="150" cy="111" r="5"/><circle cx="186" cy="111" r="5"/>
+          <circle cx="132" cy="111" r="5" fill="#fff" stroke="#1d4ed8" stroke-width="1.5"/>
+        </g>
+        <text x="150" y="126" font-size="11" text-anchor="middle" fill="#475569">第 2 個（8）</text>
+        <g fill="#1d4ed8">
+          <circle cx="300" cy="30" r="5"/>
+          <circle cx="282" cy="58" r="5"/><circle cx="318" cy="58" r="5"/>
+          <circle cx="264" cy="86" r="5"/><circle cx="300" cy="86" r="5"/><circle cx="336" cy="86" r="5"/>
+          <circle cx="246" cy="114" r="5"/><circle cx="282" cy="114" r="5"/><circle cx="318" cy="114" r="5"/><circle cx="354" cy="114" r="5"/>
+        </g>
+        <text x="300" y="126" font-size="11" text-anchor="middle" fill="#475569">第 3 個（15）</text>
+      </svg><figcaption>每加一層，新增點數依次為 $5,7,9,\dots$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">逐項列出</div>
+      <div class="rule"><span class="rule-name">遞推</span>第 $(n+1)$ 項 $=$ 第 $n$ 項 $+(2n+3)$。</div>
+      <p>$$3,\ 3+5=8,\ 8+7=15,\ 15+9=24,\ 24+11=35$$</p>
+      <p>$$35+13=48,\ 48+15=63,\ 63+17=80$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">確認第 8 個圖案</div>
+      <p>第 8 個圖案有 $80$ 個點，故選 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>C（$80$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 第 1 個圖案有 $3$ 點，之後每次加 $2n+3$ 點。第 5 個圖案有多少點？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$24$</li><li><span class="ol">B</span>$35$</li><li><span class="ol">C</span>$48$</li><li><span class="ol">D</span>$63$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $3,8,15,24,35$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第 5 個為 $35$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 B。</div>
+          <div class="p-ans">答案：<b>B（$35$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

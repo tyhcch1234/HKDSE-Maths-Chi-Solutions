@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第43題 · 不放回抽球</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第43題</span>
+    <h1>最多三次：逐次算，或用補集</h1>
+    <p class="sub">概率 · 不放回抽樣</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個袋中有 $7$ 個紅球、$3$ 個黃球及 $5$ 個黑球。一名兒童每次隨機從袋中抽出一個球，不放回，直到抽出黑球為止。求該兒童最多需要抽三次的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac47$</li><li><span class="ol">B</span>$\dfrac59$</li><li><span class="ol">C</span>$\dfrac{19}{27}$</li><li><span class="ol">D</span>$\dfrac{67}{91}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">第一次抽到黑球</div>
+      <p>$$P_1=\frac5{15}=\frac13$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">第二次才抽到黑球</div>
+      <div class="rule"><span class="rule-name">第一次非黑</span>$10$ 個非黑球。</div>
+      <p>$$P_2=\frac{10}{15}\times\frac5{14}=\frac5{21}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">第三次才抽到黑球</div>
+      <p>$$P_3=\frac{10}{15}\times\frac9{14}\times\frac5{13}=\frac{15}{91}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把三種情況相加</div>
+      <p>$$\frac13+\frac5{21}+\frac{15}{91}=\frac{67}{91}$$</p>
+      <p>故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$\dfrac{67}{91}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋中有 3 紅 2 黑，不放回抽取，求首次抽到黑球時已抽兩次的概率。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac25$</li><li><span class="ol">B</span>$\dfrac3{10}$</li><li><span class="ol">C</span>$\dfrac35$</li><li><span class="ol">D</span>$\dfrac12$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一次紅：$\frac35$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二次黑：$\frac24=\frac12$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\frac35\times\frac12=\frac3{10}$，答案 B。</div>
+          <div class="p-ans">答案：<b>B（$\dfrac3{10}$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

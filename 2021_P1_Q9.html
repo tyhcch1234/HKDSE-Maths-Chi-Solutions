@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第9題 · 棒形圖統計</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第9題</span>
+    <h1>由概率反求頻數，再讀四分位數</h1>
+    <p class="sub">統計 · 棒形圖、標準差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖顯示一組學生一年內閱讀書籍數目的分布。若從該組隨機選出一名學生，則選中閱讀少於 $26$ 本書的學生的概率為 $\dfrac{7}{10}$。
+      <br>(a) 求 $k$。
+      <br>(b) 寫出該分布的全距、四分位數間距及標準差。<span class="marks">（5 分）</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 420 270" width="400" height="257" role="img" aria-label="閱讀書籍數目的棒形圖">
+        <g stroke="#cbd5e1" stroke-width="1">
+          <line x1="50" y1="220" x2="400" y2="220"/>
+          <line x1="50" y1="40" x2="50" y2="220"/>
+          <line x1="50" y1="184" x2="400" y2="184" stroke-dasharray="3 3"/>
+          <line x1="50" y1="148" x2="400" y2="148" stroke-dasharray="3 3"/>
+          <line x1="50" y1="112" x2="400" y2="112" stroke-dasharray="3 3"/>
+          <line x1="50" y1="76" x2="400" y2="76" stroke-dasharray="3 3"/>
+        </g>
+        <g fill="#3b82f6">
+          <rect x="62" y="184" width="44" height="36"/>
+          <rect x="116" y="52" width="44" height="168"/>
+          <rect x="170" y="148" width="44" height="72"/>
+          <rect x="224" y="190" width="44" height="30"/>
+          <rect x="278" y="178" width="44" height="42"/>
+          <rect x="332" y="208" width="44" height="12"/>
+        </g>
+        <g fill="#0f172a" font-size="12" text-anchor="middle">
+          <text x="84" y="238">23</text><text x="138" y="238">24</text><text x="192" y="238">25</text>
+          <text x="246" y="238">26</text><text x="300" y="238">27</text><text x="354" y="238">28</text>
+        </g>
+        <g fill="#334155" font-size="12" text-anchor="middle">
+          <text x="84" y="178">12</text><text x="138" y="46">28</text><text x="192" y="142">16</text>
+          <text x="246" y="184">9</text><text x="300" y="172">11</text><text x="354" y="202">4</text>
+        </g>
+        <text x="12" y="130" font-size="12" fill="#475569" transform="rotate(-90 12 130)">學生人數</text>
+        <text x="220" y="262" font-size="12" fill="#475569" text-anchor="middle">閱讀書籍數目</text>
+      </svg><figcaption>棒形圖（$k$ 為未知頻數，直方高度以人數為單位）。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用概率建立方程</div>
+      <div class="rule"><span class="rule-name">少於 $26$ 本</span>包括 $23$、$24$、$25$ 三組。</div>
+      <p>總人數 $=12+k+16+9+11+4=52+k$；少於 $26$ 本的人數 $=28+k$。</p>
+      <p>$$\frac{28+k}{52+k}=\frac{7}{10}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 解出 $k$</div>
+      <div class="rule"><span class="rule-name">交叉相乘</span>$10(28+k)=7(52+k)$。</div>
+      <p>$$280+10k=364+7k$$</p>
+      <p>$$3k=84\quad\Longrightarrow\quad k=28$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 全距</div>
+      <div class="rule"><span class="rule-name">全距 $=$ 最大 $-$ 最小</span>只看最兩端的讀數。</div>
+      <p>最小 $=23$，最大 $=28$，全距 $=28-23=5$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 四分位數間距</div>
+      <div class="rule"><span class="rule-name">累積頻數</span>共 $80$ 人，$Q_1$ 在第 $20$ 個、$Q_3$ 在第 $60$ 個。</div>
+      <p>累積頻數：$12,\,40,\,56,\,65,\,76,\,80$。</p>
+      <p>第 $20$ 個在「$24$」組 ⇒ $Q_1=24$；第 $60$ 個在「$26$」組 ⇒ $Q_3=26$。</p>
+      <p>$$\text{IQR}=26-24=2$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 平均數與標準差</div>
+      <div class="rule"><span class="rule-name">總體標準差</span>$\sigma=\sqrt{\dfrac{\sum fx^{2}}{N}-\bar{x}^{2}}$，除以 $N=80$。</div>
+      <p>$$\bar{x}=\frac{12(23)+28(24)+16(25)+9(26)+11(27)+4(28)}{80}=\frac{1991}{80}=24.8875$$</p>
+      <p>$$\sum fx^{2}=49715,\qquad
+        \sigma=\sqrt{\frac{49715}{80}-24.8875^{2}}\approx1.43$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $k=28$<br>(b) 全距 $=5$；四分位數間距 $=2$；標準差 $\approx1.43$</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一組數據的頻數為 $4,7,9,6,4$（對應數值 $1,2,3,4,5$）。求平均數、全距及四分位數間距。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 $30$，總和 $=4+14+27+24+20=89$，平均數 $\approx2.97$。</div>
+          <div class="p-step"><b>第 2 步.</b> 全距 $=5-1=4$。</div>
+          <div class="p-step"><b>第 3 步.</b> 累積 $4,11,20,26,30$；$Q_1$ 第 $8$ 個 $=2$，$Q_3$ 第 $23$ 個 $=4$，IQR $=2$。</div>
+          <div class="p-ans">答案：<b>平均數 $\approx2.97$；全距 $4$；IQR $2$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

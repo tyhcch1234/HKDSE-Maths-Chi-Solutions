@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第14題 · 拋物線性質</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第14題</span>
+    <h1>$x^{2}$ 係數為正：開口向上；其餘未必</h1>
+    <p class="sub">函數 · 二次函數圖像</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $m$、$n$ 為實常數。下列關於 $y=(m-x)^{2}+n$ 的圖像的陳述，何者必為真？
+      <br>I. 圖像開口向上。
+      <br>II. 圖像的 $y$ 軸截距為正數。
+      <br>III. 圖像通過點 $(n,m)$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開成標準式</div>
+      <p>$$y=(m-x)^{2}+n=x^{2}-2mx+m^{2}+n$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I</div>
+      <div class="rule"><span class="rule-name">開口方向</span>看 $x^{2}$ 的係數正負。</div>
+      <p>$x^{2}$ 的係數為 $1>0$，圖像<b>開口向上</b>，I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 II、III</div>
+      <p>$y$ 軸截距 $=m^{2}+n$，符號不能確定，II 不必然。</p>
+      <p>代入 $x=n$：$y=n^{2}-2mn+m^{2}+n=(m-n)^{2}+n\ne m$（一般情況），III 不必然。</p>
+      <p>故選 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（只有 I）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 關於 $y=(x-p)^{2}+q$（$p,q$ 為實常數），下列何者必為真？</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>開口向上</li><li><span class="ol">B</span>$y$ 軸截距為正</li><li><span class="ol">C</span>通過 $(q,p)$</li><li><span class="ol">D</span>頂點在 $x$ 軸上</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開後 $x^{2}$ 係數為 $1>0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 故開口向上必為真。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

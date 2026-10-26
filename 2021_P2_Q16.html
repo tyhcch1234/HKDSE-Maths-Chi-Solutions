@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第16題 · 半球體</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第16題</span>
+    <h1>半球總表面積 $=3\pi r^{2}$</h1>
+    <p class="sub">求積法 · 球體</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+兩個實心半球體的總表面面積之和為 $351\pi\text{ cm}^{2}$。若較小半球體與較大半球體的半徑比為 $2:3$，則兩個半球體的體積之差為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$342\pi\text{ cm}^{3}$</li><li><span class="ol">B</span>$630\pi\text{ cm}^{3}$</li><li><span class="ol">C</span>$684\pi\text{ cm}^{3}$</li><li><span class="ol">D</span>$1260\pi\text{ cm}^{3}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">半球總表面積</div>
+      <div class="rule"><span class="rule-name">曲面 $+$ 平面</span>$2\pi r^{2}+\pi r^{2}=3\pi r^{2}$。</div>
+      <p>設半徑為 $2k$ 及 $3k$：</p>
+      <p>$$3\pi(2k)^{2}+3\pi(3k)^{2}=351\pi$$</p>
+      <p>$$12k^{2}+27k^{2}=351\quad\Longrightarrow\quad39k^{2}=351\quad\Longrightarrow\quad k=3$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求體積之差</div>
+      <div class="rule"><span class="rule-name">半球體積</span>$V=\frac12\cdot\frac43\pi r^{3}=\frac23\pi r^{3}$。</div>
+      <p>半徑分別為 $6$ 及 $9$。</p>
+      <p>$$\frac23\pi(9^{3}-6^{3})=\frac23\pi(729-216)=342\pi$$</p>
+      <p>故選 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>A（$342\pi\text{ cm}^{3}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 兩個半球半徑比 $1:2$，總表面積之和為 $45\pi$。求較大半球的半徑。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $3\pi r^{2}+3\pi(2r)^{2}=15\pi r^{2}=45\pi$。</div>
+          <div class="p-step"><b>第 2 步.</b> $r^{2}=3\Rightarrow r=\sqrt3$，大半徑 $2\sqrt3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 選項以 $2\sqrt3$ 表示。</div>
+          <div class="p-ans">答案：<b>$2\sqrt3$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

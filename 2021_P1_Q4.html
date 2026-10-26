@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷一 第4題 · 一元一次不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷一 · 第4題</span>
+    <h1>兩個不等式：各自解，再取交集</h1>
+    <p class="sub">不等式 · 整數解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+(a) 求同時滿足
+      $$\frac{7(x-2)}{5}+11>3(x-1)$$
+      與
+      $$x+4\ge 0$$
+      的 $x$ 的取值範圍。
+      <br>(b) 有多少個正整數同時滿足 (a) 的兩個不等式？<span class="marks">（4 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">解第一個不等式</div>
+      <div class="rule"><span class="rule-name">去分母</span>兩邊同乘 $5$（正數），不等號方向不變。</div>
+      <p>$$7(x-2)+55>15(x-1)$$</p>
+      <p>$$7x-14+55>15x-15$$</p>
+      <p>$$7x+41>15x-15$$</p>
+      <p>$$56>8x\quad\Longrightarrow\quad x<7$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第二個不等式</div>
+      <p>$$x+4\ge 0\quad\Longrightarrow\quad x\ge -4$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取兩個解集的交集</div>
+      <div class="rule"><span class="rule-name">交集</span>同時滿足「$x<7$」和「$x\ge -4$」，取重疊部分。</div>
+      <p>$$-4\le x<7$$</p>
+      <p>即區間 $[-4,\,7)$：$-4$ 包括在內，$7$ 不包括。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">數正整數解的個數</div>
+      <div class="rule"><span class="rule-name">正整數</span>正整數是 $1,2,3,\dots$，不包括 $0$。</div>
+      <p>範圍內的正整數為 $1,2,3,4,5,6$，共 $6$ 個。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $-4\le x<7$<br>(b) $6$ 個</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 解不等式 $\dfrac{5(x-1)}{2}+3>2(x+1)$，並求同時滿足 $x-3\ge 0$ 的 $x$ 範圍。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 乘 $2$：$5(x-1)+6>4(x+1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡：$5x+1>4x+4\Rightarrow x>3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 另一條：$x\ge 3$。兩者取交集：$x>3$。</div>
+          <div class="p-ans">答案：<b>$x>3$</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P1_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

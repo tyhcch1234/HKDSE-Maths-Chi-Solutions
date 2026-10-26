@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2021 卷二 第24題 · 直角三角形比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2021 · 卷二 · 第24題</span>
+    <h1>兩條斜邊共用 $AC$，全部用 $AC$ 表示</h1>
+    <p class="sub">三角學 · 直角三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中，$\dfrac{AB}{CD}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\cos\theta\sin\phi$</li><li><span class="ol">B</span>$\sin\theta\cos\phi$</li><li><span class="ol">C</span>$\tan\theta\cos\phi$</li><li><span class="ol">D</span>$\tan\theta\sin\phi$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 360 240" width="340" height="227" role="img" aria-label="兩個共用 AC 的直角三角形">
+        <g fill="none" stroke="#1d4ed8" stroke-width="2">
+          <polygon points="320,40 320,200 210,200"/>
+          <polygon points="320,40 210,200 70,90"/>
+        </g>
+        <path d="M 320 182 L 302 182 L 302 200" fill="none" stroke="#1d4ed8" stroke-width="1.4"/>
+        <path d="M 210 200 L 190 190" fill="none" stroke="#1d4ed8" stroke-width="1.4"/>
+        <g font-size="13" font-family="Georgia,serif" font-style="italic" fill="#0f172a">
+          <text x="326" y="36">A</text><text x="326" y="214">B</text>
+          <text x="202" y="216">C</text><text x="56" y="86">D</text>
+        </g>
+        <text x="86" y="112" font-size="12" fill="#dc2626">θ</text>
+        <text x="222" y="188" font-size="12" fill="#dc2626">φ</text>
+      </svg><figcaption>$\angle ABC=90^{\circ}$，$\angle ACD=90^{\circ}$；$\theta=\angle ADC$，$\phi=\angle ACB$。</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $\triangle ABC$ 表示 $AB$</div>
+      <div class="rule"><span class="rule-name">$\sin\phi=\dfrac{\text{對邊}}{\text{斜邊}}$</span>$\sin\phi=\dfrac{AB}{AC}$。</div>
+      <p>$$AB=AC\sin\phi$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $\triangle ACD$ 表示 $CD$</div>
+      <div class="rule"><span class="rule-name">$\tan\theta=\dfrac{\text{對邊}}{\text{鄰邊}}$</span>$\tan\theta=\dfrac{AC}{CD}$。</div>
+      <p>$$CD=\frac{AC}{\tan\theta}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相除</div>
+      <p>$$\frac{AB}{CD}=\frac{AC\sin\phi}{AC/\tan\theta}=\tan\theta\sin\phi$$</p>
+      <p>故選 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>D（$\tan\theta\sin\phi$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在直角三角形中，$\sin\alpha=\dfrac35$、$\cos\alpha=\dfrac45$，求 $\tan\alpha$。</div>
+        <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac34$</li><li><span class="ol">B</span>$\dfrac43$</li><li><span class="ol">C</span>$\dfrac35$</li><li><span class="ol">D</span>$\dfrac54$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=\dfrac{3/5}{4/5}=\dfrac34$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 A。</div>
+          <div class="p-ans">答案：<b>A（$\dfrac34$）</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2021_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2021_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
