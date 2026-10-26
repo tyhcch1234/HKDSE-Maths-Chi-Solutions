@@ -5,7 +5,7 @@ Usage: python3 chi_gen.py content_module.py
 Each content module defines QUESTIONS = [ {...}, ... ] with keys:
   year, paper ('卷一'/'卷二'), num, h1, sub, q, opts, fig, steps, ans, practice
 """
-import sys, os, importlib.util
+import sys, os, re, importlib.util
 
 HEAD = """<!DOCTYPE html>
 <html lang="zh-Hant">
@@ -49,6 +49,21 @@ HEAD = """<!DOCTYPE html>
 </body>
 </html>
 """
+
+
+TAG_RE = re.compile(r'<(/?)([a-zA-Z][a-zA-Z0-9]*)(?=[\s/>])')
+
+
+def escape_stray_lt(s):
+    """Escape '<' that starts nothing that looks like a real tag (math comparisons)."""
+    out = []
+    i = 0
+    for m in TAG_RE.finditer(s):
+        out.append(s[i:m.start()].replace('<', '&lt;'))
+        out.append(m.group(0))
+        i = m.end()
+    out.append(s[i:].replace('<', '&lt;'))
+    return ''.join(out)
 
 
 def opts_html(options):
@@ -121,6 +136,7 @@ def render(q):
                        steps=steps_html(q['steps']),
                        ans=q['ans'], practice=practice_html(q.get('practice')),
                        prev=prev, next=nxt)
+    html = escape_stray_lt(html)
     fn = '%s_%s_Q%d.html' % (year, code, num)
     with open(fn, 'w', encoding='utf8') as fh:
         fh.write(html)
