@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第17題 · 概率 · 組合計數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第17題</span>
+    <h1>分母固定，只數分子</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋中有 4 支綠筆、7 支藍筆及 8 支黑筆。若從袋中同時隨機抽出 5 支筆，
+<br>(a) 求恰好抽出 4 支綠筆的概率；<span class="marks">[2 分]</span>
+<br>(b) 求恰好抽出 3 支綠筆的概率；<span class="marks">[2 分]</span>
+<br>(c) 求抽出不多於 2 支綠筆的概率。<span class="marks">[2 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 恰好 4 支綠筆</div><div class="rule"><span class="rule-name">組合</span><span class="rule-math">$\dfrac{C_{4}^{4}C_{1}^{15}}{C_{5}^{19}}$</span><span class="rule-why">19 支中抽 5 支；4 支綠全取，再從其餘 15 支取 1 支。</span></div>
+\[P=\frac{C_{4}^{4}\times C_{1}^{15}}{C_{5}^{19}}
+=\frac{1\times15}{11628}=\frac{5}{3876}.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(b) 恰好 3 支綠筆</div><div class="rule"><span class="rule-name">組合</span><span class="rule-math">$\dfrac{C_{3}^{4}C_{2}^{15}}{C_{5}^{19}}$</span><span class="rule-why">4 支綠取 3，其餘 15 支取 2。</span></div>
+\[P=\frac{4\times105}{11628}=\frac{420}{11628}=\frac{35}{969}.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(c) 用補集</div><div class="rule"><span class="rule-name">補集</span><span class="rule-math">$1-P(\text{4 支})-P(\text{5 支})$</span><span class="rule-why">「不多於 2 支」的補集是「4 支或 5 支」；5 支綠不可能（只有 4 支）。</span></div>
+5 支綠筆不可能（袋中只有 4 支），故
+\[P=1-\frac{5}{3876}-\frac{35}{969}
+=1-\frac{5}{3876}-\frac{140}{3876}
+=\frac{3731}{3876}.\]
+（約 $0.9626$。）
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{5}{3876}$；(b) $\dfrac{35}{969}$；(c) $\dfrac{3731}{3876}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 袋中有 3 支紅筆、5 支藍筆及 6 支黑筆。同時抽出 4 支，求恰好抽出 2 支紅筆的概率。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $C_4^{14}=1001$；分子 $C_2^{3}C_2^{11}=3\times55=165$。</div><div class="p-step"><b>第 2 步.</b> $P=\dfrac{165}{1001}$。</div><div class="p-step"><b>第 3 步.</b> 約 $0.1648$。</div>
+        <div class="p-ans">答案：$\dfrac{165}{1001}$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

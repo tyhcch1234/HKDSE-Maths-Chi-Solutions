@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第13題 · 圓的方程 · 圓外一點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第13題</span>
+    <h1>圓心已知，半徑用距離</h1>
+    <p class="sub">坐標幾何 · 圓 · 直線方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $E$、$F$、$G$ 的坐標分別為 $(-6,5)$、$(-3,11)$ 及 $(2,-1)$。圓 $C$ 通過 $E$，且圓心為 $G$。
+<br>(a) 求 $C$ 的方程。<span class="marks">[2 分]</span>
+<br>(b) 證明 $F$ 在 $C$ 之外。<span class="marks">[2 分]</span>
+<br>(c) 設 $H$ 為 $C$ 上的動點。當 $H$ 與 $F$ 的距離最大時，(i) 描述 $F$、$G$、$H$ 的幾何關係；(ii) 求通過 $F$ 與 $H$ 的直線方程。<span class="marks">[3 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 求半徑</div><div class="rule"><span class="rule-name">圓的方程</span><span class="rule-math">$r^{2}=(-6-2)^{2}+(5+1)^{2}=100$</span><span class="rule-why">$(x-h)^{2}+(y-k)^{2}=r^{2}$，圓心 $(h,k)=G(2,-1)$。</span></div>
+\[r^{2}=GE^{2}=(-6-2)^{2}+(5-(-1))^{2}=64+36=100.\]
+\[C:\ (x-2)^{2}+(y+1)^{2}=100.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(b) 比較 $FG$ 與半徑</div><div class="rule"><span class="rule-name">圓外</span><span class="rule-math">$FG=13>10$</span><span class="rule-why">點到圓心的距離大於半徑，即在圓外。</span></div>
+\[FG=\sqrt{(-3-2)^{2}+(11+1)^{2}}=\sqrt{25+144}=13>10.\]
+所以 $F$ 在 $C$ 之外。
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(c)(i) 最遠點的幾何關係</div><div class="rule"><span class="rule-name">共線</span><span class="rule-math">$F$、$G$、$H$ 共線，且 $G$ 在 $F$ 與 $H$ 之間</span><span class="rule-why">圓上距 $F$ 最遠的點，在 $FG$ 延長線與圓的交點上。</span></div>
+當 $H$ 離 $F$ 最遠時，$F$、$G$、$H$ 三點共線，且 $G$ 位於 $F$ 與 $H$ 之間。
+</div>
+<div class="step"><span class="step-tag">第 4 步</span><div class="step-title">(c)(ii) 求直線方程</div><div class="rule"><span class="rule-name">斜率</span><span class="rule-math">$m=\dfrac{11-(-1)}{-3-2}=-\dfrac{12}{5}$</span><span class="rule-why">$FG$ 的斜率：$\dfrac{y_F-y_G}{x_F-x_G}$。</span></div>
+\[m=\frac{11-(-1)}{-3-2}=-\frac{12}{5}.\]
+以 $F(-3,11)$ 代入點斜式：
+\[y-11=-\frac{12}{5}(x+3)\ \Longrightarrow\ 5y-55=-12x-36
+\ \Longrightarrow\ 12x+5y-19=0.\]
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(x-2)^{2}+(y+1)^{2}=100$；(b) 見題解；(c)(i) 共線且 $G$ 在 $F$、$H$ 之間；(ii) $12x+5y-19=0$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 圓 $C$ 的圓心為 $(1,2)$，且通過 $(-2,6)$。(a) 求 $C$ 的方程。(b) 判斷 $(5,7)$ 在圓內、圓上還是圓外。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $r^{2}=(-2-1)^{2}+(6-2)^{2}=9+16=25$，$C:(x-1)^{2}+(y-2)^{2}=25$。</div><div class="p-step"><b>第 2 步.</b> 點 $(5,7)$ 到圓心距離 $=\sqrt{16+25}=\sqrt{41}$。</div><div class="p-step"><b>第 3 步.</b> $\sqrt{41}>5$，故在圓外。</div>
+        <div class="p-ans">答案：(a) $(x-1)^{2}+(y-2)^{2}=25$；(b) 圓外</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

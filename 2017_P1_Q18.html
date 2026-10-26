@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第18題 · 二次方程 · 判別式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第18題</span>
+    <h1>交點數看判別式，距離看 $|a-b|$</h1>
+    <p class="sub">方程 · 判別式 · 拋物線與直線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      拋物線 $\Gamma$ 的方程為 $y=2x^{2}-2kx+2x-3k+8$，其中 $k$ 為實常數。記直線 $y=19$ 為 $L$。
+<br>(a) 證明 $L$ 與 $\Gamma$ 相交於兩個相異點。<span class="marks">[3 分]</span>
+<br>(b) 設 $L$ 與 $\Gamma$ 的交點為 $A$、$B$。
+<br>(i) 設 $a$、$b$ 分別為 $A$、$B$ 的 $x$ 坐標。證明 $(a-b)^{2}=k^{2}+4k+23$。
+<br>(ii) $A$ 與 $B$ 的距離可否小於 4？試解釋。<span class="marks">[5 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 聯立求二次方程</div><div class="rule"><span class="rule-name">聯立</span><span class="rule-math">$2x^{2}+(2-2k)x-(3k+11)=0$</span><span class="rule-why">把 $y=19$ 代入 $\Gamma$，移項整理。</span></div>
+\[2x^{2}-2kx+2x-3k+8=19
+\ \Longrightarrow\ 2x^{2}+(2-2k)x-(3k+11)=0.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(a) 計算判別式</div><div class="rule"><span class="rule-name">判別式</span><span class="rule-math">$\Delta=(2-2k)^{2}+8(3k+11)$</span><span class="rule-why">$\Delta=b^{2}-4ac$，此處 $a=2$、$c=-(3k+11)$。</span></div>
+\[\Delta=(2-2k)^{2}-4(2)\left[-(3k+11)\right]
+=4(1-k)^{2}+24k+88
+=4k^{2}+16k+92
+=4\left[(k+2)^{2}+19\right]>0.\]
+$\Delta>0$ 對所有實數 $k$ 成立，故有兩個相異交點。
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b)(i) 用根與係數</div><div class="rule"><span class="rule-name">根與係數</span><span class="rule-math">$a+b=k-1$，$ab=-\dfrac{3k+11}{2}$</span><span class="rule-why">$a+b=-\dfrac{B}{A}$、$ab=\dfrac{C}{A}$。</span></div>
+由 (a) 的方程：
+\[a+b=\frac{2k-2}{2}=k-1,\qquad ab=\frac{-(3k+11)}{2}.\]
+\[(a-b)^{2}=(a+b)^{2}-4ab=(k-1)^{2}+2(3k+11)
+=k^{2}+4k+23.\]
+這正好是 $\dfrac{\Delta}{4}$，與 (a) 一致。
+</div>
+<div class="step"><span class="step-tag">第 4 步</span><div class="step-title">(b)(ii) 判斷距離能否小於 4</div><div class="rule"><span class="rule-name">距離</span><span class="rule-math">$AB=|a-b|=\sqrt{(k+2)^{2}+19}\ge\sqrt{19}$</span><span class="rule-why">$A$、$B$ 同在 $y=19$ 上，故距離就是 $|a-b|$。</span></div>
+\[(a-b)^{2}=k^{2}+4k+23=(k+2)^{2}+19\ge19.\]
+所以 $AB\ge\sqrt{19}\approx4.36>4$。
+<br>即 $A$、$B$ 的距離<strong>不可能</strong>小於 4。
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) 見題解；(b)(i) 見題解；(ii) 不可能，$AB\ge\sqrt{19}>4$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 拋物線 $\Gamma: y=x^{2}-kx+3x-2k+7$ 與直線 $L: y=10$ 交於 $A$、$B$，$a$、$b$ 為兩點的 $x$ 坐標。(a) 證明 $L$ 與 $\Gamma$ 有兩個相異交點。(b) $AB$ 的距離可否小於 4？</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $x^{2}+(3-k)x-(2k+3)=0$，$\Delta=(3-k)^{2}+4(2k+3)=k^{2}+2k+21=(k+1)^{2}+20>0$。</div><div class="p-step"><b>第 2 步.</b> $(a-b)^{2}=(k+1)^{2}+20\ge20$，故 $AB=\sqrt{(k+1)^{2}+20}\ge\sqrt{20}\approx4.47$。</div><div class="p-step"><b>第 3 步.</b> 不可能小於 4。</div>
+        <div class="p-ans">答案：(a) 見題解；(b) 不可能，$AB\ge\sqrt{20}$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q17.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q19.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

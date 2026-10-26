@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第12題 · 立體圖形 · 相似角錐</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第12題</span>
+    <h1>體積比＝邊長比的三次方</h1>
+    <p class="sub">度量 · 相似立體 · 表面面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一塊底面積為 $84\text{ cm}^{2}$、高 $20\text{ cm}$ 的金屬正稜柱熔化後，重鑄成兩個相似的直立角錐。兩個角錐的底都是正方形，且小角錐的底面積與大角錐的底面積之比為 $4:9$。
+<br>(a) 求大角錐的體積。<span class="marks">[3 分]</span>
+<br>(b) 若大角錐的高為 $12\text{ cm}$，求小角錐的總表面面積。<span class="marks">[4 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 由面積比找體積比</div><div class="rule"><span class="rule-name">相似立體</span><span class="rule-math">邊長比 $2:3$，體積比 $8:27$</span><span class="rule-why">面積比是邊長比的平方，體積比是邊長比的三次方。</span></div>
+底面積比 $4:9$ $\Rightarrow$ 邊長比 $2:3$ $\Rightarrow$ 體積比 $2^{3}:3^{3}=8:27$。
+設大角錐體積為 $V$，則小角錐為 $\dfrac{8}{27}V$。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(a) 用體積守恆立方程</div><div class="rule"><span class="rule-name">熔鑄</span><span class="rule-math">$V+\dfrac{8}{27}V=84\times20$</span><span class="rule-why">熔化前後總體積不變：稜柱體積 $=84\times20=1680$。</span></div>
+\[V+\frac{8}{27}V=1680\ \Longrightarrow\ \frac{35}{27}V=1680
+\ \Longrightarrow\ V=1296.\]
+大角錐的體積為 $1296\text{ cm}^{3}$。
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 求大角錐的底邊與斜高</div><div class="rule"><span class="rule-name">表面面積</span><span class="rule-math">$1296=\dfrac13\times(\text{底面積})\times12$</span><span class="rule-why">角錐體積 $=\dfrac13\times$ 底面積 $\times$ 高。</span></div>
+底面積 $=\dfrac{1296\times3}{12}=324$，故底邊 $=18\text{ cm}$。
+<br>側面的斜高 $=\sqrt{9^{2}+12^{2}}=15\text{ cm}$。
+\[\text{總表面面積}=324+4\times\frac12\times18\times15=324+540=864.\]
+</div>
+<div class="step"><span class="step-tag">第 4 步</span><div class="step-title">(b) 按面積比縮小</div><div class="rule"><span class="rule-name">面積比</span><span class="rule-math">$\dfrac49\times864=384$</span><span class="rule-why">相似立體的表面面積比＝邊長比的平方＝$4:9$。</span></div>
+小角錐的總表面面積
+\[=\frac49\times864=384\text{ cm}^{2}.\]
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $1296\text{ cm}^{3}$；(b) $384\text{ cm}^{2}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 一塊底面積 $60\text{ cm}^2$、高 $15\text{ cm}$ 的稜柱熔鑄成兩個相似的直立角錐，底面積比為 $1:4$。求大角錐的體積。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 邊長比 $1:2$，體積比 $1:8$。</div><div class="p-step"><b>第 2 步.</b> 總體積 $=60\times15=900$；$V+\dfrac{V}{8}=900$。</div><div class="p-step"><b>第 3 步.</b> $\dfrac{9V}{8}=900\ \Rightarrow\ V=800\text{ cm}^3$。</div>
+        <div class="p-ans">答案：$800\text{ cm}^{3}$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
