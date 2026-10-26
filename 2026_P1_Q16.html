@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第16題 · 圓的方程與切線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第16題</span>
+    <h1>圓心在兩條弦的垂直平分線上</h1>
+    <p class="sub">解析幾何 · 圓的方程與切線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $P$、$Q$、$R$ 為直角坐標平面上的三點，$P$、$Q$ 的坐標分別為 $(7,8)$ 及 $(-13,20)$。$PR$ 的垂直平分線方程為 $3x+5y-27=0$。設 $C$ 為通過 $P$、$Q$、$R$ 的圓。
+      <br>(a) 求 $C$ 的方程。
+      <br>(b) $C$ 於 $P$ 的切線與於 $R$ 的切線相交於 $H$。$\triangle HPR$ 是否直角三角形？試解釋。
+      <span class="marks">（6 分）</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 400 360" width="360" role="img" aria-label="圓 C 與 P、Q、R、H 及切線">
+        <circle cx="192" cy="179" r="169.5" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.8"/>
+        <g stroke="currentColor" stroke-width="1.2" fill="none">
+          <line x1="361" y1="192" x2="354" y2="276" stroke-dasharray="6 4"/>
+          <line x1="283" y1="322" x2="354" y2="276" stroke-dasharray="6 4"/>
+          <line x1="361" y1="192" x2="283" y2="322"/>
+          <line x1="192" y1="179" x2="361" y2="192"/>
+          <line x1="192" y1="179" x2="283" y2="322"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="192" cy="179" r="3"/><circle cx="361" cy="192" r="3.5"/>
+          <circle cx="101" cy="36" r="3.5"/><circle cx="283" cy="322" r="3.5"/>
+          <circle cx="354" cy="276" r="3.5"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="13">
+          <text x="182" y="174" text-anchor="end">O</text>
+          <text x="371" y="196">P(7, 8)</text>
+          <text x="92" y="28" text-anchor="end">Q(−13, 20)</text>
+          <text x="273" y="340" text-anchor="end">R(1, −2)</text>
+          <text x="364" y="280">H</text>
+        </g>
+      </svg>
+      <figcaption>圖：圓 $C$ 通過 $P$、$Q$、$R$，於 $P$、$R$ 的切線交於 $H$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">圓心在兩條弦的垂直平分線上</div>
+      <div class="rule">
+        <span class="rule-name">弦的垂直平分線</span>
+        <span class="rule-math">圓心在每條弦的垂直平分線上</span>
+        <span class="rule-why">$O$ 與 $P$、$Q$、$R$ 等距，故位於 $PQ$ 與 $PR$ 的垂直平分線上。</span>
+      </div>
+      <p>$PQ$ 的中點為 $(-3,\,14)$；$PQ$ 的斜率 $=\dfrac{20-8}{-13-7}=-\dfrac35$，故其垂直平分線的斜率為 $\dfrac53$：</p>
+      <p>$$y-14=\tfrac53(x+3)\quad\Longrightarrow\quad 5x-3y+57=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求圓心 $O$ 與半徑</div>
+      <p>$$\begin{cases}3x+5y-27=0\\ 5x-3y+57=0\end{cases}\quad\Longrightarrow\quad 34x+204=0$$</p>
+      <p>$$x=-6,\qquad y=9\qquad O=(-6,\,9)$$</p>
+      <p>半徑：$OP^2=(7+6)^2+(8-9)^2=170$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 寫出圓的方程</div>
+      <div class="rule">
+        <span class="rule-name">圓的方程</span>
+        <span class="rule-math">$(x-h)^{2}+(y-k)^{2}=r^{2}$</span>
+        <span class="rule-why">圓心 $O(-6,9)$、$OP^{2}=170$，故圓為 $(x+6)^{2}+(y-9)^{2}=170$。</span>
+      </div>
+      <p>$$(x+6)^2+(y-9)^2=170$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $R$ 的坐標</div>
+      <p>$PR$ 的垂直平分線法向量為 $(3,5)$，故弦 $PR$ 平行於 $(3,5)$。過 $P(7,8)$ 的直線：</p>
+      <p>$$(x,y)=(7+3t,\ 8+5t)$$</p>
+      <p>代入圓方程：</p>
+      <p>$$(13+3t)^2+(5t-1)^2=170\quad\Longrightarrow\quad 34t^2+68t=0$$</p>
+      <p>$$t=0 \text{ 或 } t=-2\qquad R=(1,\,-2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">切線與圓心四邊形 $OPHR$</div>
+      <p>於 $P$、$R$ 的切線分別垂直於 $OP$、$OR$，故在四邊形 $OPHR$ 中 $\angle OPH=\angle ORH=90^\circ$，於是</p>
+      <p>$$\angle PHR=180^\circ-\angle POR$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">求 $\angle POR$，判斷是否直角</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        <span class="rule-math">$c^{2}=a^{2}+b^{2}-2ab\cos C$</span>
+        <span class="rule-why">$\cos\angle POR=\dfrac{204}{340}=\dfrac{3}{5}$，得 $\angle PHR\approx126.9^\circ$，沒有角是 $90^\circ$。</span>
+      </div>
+      <p>$OP^{2}=13^{2}+(-1)^{2}=170$，$OR^{2}=7^{2}+(-11)^{2}=170$。</p>
+      <p>$PR^{2}=(7-1)^{2}+(8+2)^{2}=6^{2}+10^{2}=136$。由餘弦公式：</p>
+      <p>$$\cos\angle POR=\frac{170+170-136}{2(170)}=\frac{204}{340}=\frac35$$</p>
+      <p>$$\angle POR\approx53.1^\circ\quad\Longrightarrow\quad\angle PHR\approx126.9^\circ,\qquad \angle HPR=\angle HRP\approx26.6^\circ$$</p>
+      <p>沒有角等於 $90^\circ$。（亦可由 $H=(6.5,\,1.5)$ 得 $HP^2+HR^2=85\neq PR^2=136$。）</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $(x+6)^2+(y-9)^2=170$　　(b) 不是直角三角形，$\angle PHR\approx126.9^\circ$（底角約 $26.6^\circ$）。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $A(0,0)$、$B(6,0)$、$C(0,8)$ 三點在圓上。(a) 求該圓的方程。(b) 圓於 $A$ 及 $B$ 的切線交於 $H$，求 $H$ 的坐標。(c) $\triangle HAB$ 是否直角三角形？試解釋。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AB$ 的垂直平分線為 $x=3$，$AC$ 的為 $y=4$，故圓心為 $(3,4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $r=\sqrt{3^{2}+4^{2}}=5$，圓為 $(x-3)^{2}+(y-4)^{2}=25$。</div>
+          <div class="p-step"><b>第 3 步.</b> 於 $A$ 的切線：$OA$ 斜率 $\dfrac{4}{3}$，故切線為 $y=-\dfrac{3}{4}x$；於 $B$ 的切線：$OB$ 斜率 $-\dfrac{4}{3}$，故切線為 $y=\dfrac{3}{4}(x-6)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 解得 $x=3$、$y=-\dfrac{9}{4}$，故 $H=\left(3,-\dfrac{9}{4}\right)$。</div>
+          <div class="p-step"><b>第 5 步.</b> $HA^{2}=HB^{2}=9+\dfrac{81}{16}=\dfrac{225}{16}$，$AB^{2}=36$；因 $2\times\dfrac{225}{16}\neq36$，沒有角是 $90^\circ$。</div>
+          <div class="p-ans">答案：(a) $(x-3)^{2}+(y-4)^{2}=25$　(b) $H\left(3,-\dfrac{9}{4}\right)$　(c) 不是，$HA^{2}+HB^{2}\neq AB^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q15.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

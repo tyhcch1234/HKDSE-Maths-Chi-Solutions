@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第15題 · 概率（組合與容斥）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第15題</span>
+    <h1>「或」要減去重疊部分</h1>
+    <p class="sub">概率 · 組合與容斥原理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋中有 $3$ 個紅球、$3$ 個白球及 $5$ 個黑球。若同時從袋中隨機抽出 $4$ 個球，求
+      <br>(a) 恰好抽出 $2$ 個紅球的概率；
+      <br>(b) 恰好抽出 $2$ 個紅球<b>或</b>恰好抽出 $2$ 個白球的概率。
+      <span class="marks">（4 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">${}^{n}C_{r}=\dfrac{n!}{r!\,(n-r)!}$</span>
+        <span class="rule-why">從 $11$ 個球抽 $4$ 個，共有 ${}^{11}C_{4}=330$ 個等可能結果。</span>
+      </div>
+      <p>球共 $3+3+5=11$ 個，抽 $4$ 個的方法數：</p>
+      <p>$${}^{11}C_{4}=330$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 恰好 2 紅</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">$n(A\times B)=n(A)\,n(B)$</span>
+        <span class="rule-why">從 $3$ 個紅球選 $2$ 個、其餘 $8$ 個選 $2$ 個，得 $3\times28=84$ 種。</span>
+      </div>
+      <p>$${}^{3}C_{2}\times{}^{8}C_{2}=3\times28=84$$</p>
+      <p>$$P(\text{恰好 2 紅})=\frac{84}{330}=\frac{14}{55}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 容斥原理</div>
+      <div class="rule">
+        <span class="rule-name">容斥原理</span>
+        <span class="rule-math">$n(A\cup B)=n(A)+n(B)-n(A\cap B)$</span>
+        <span class="rule-why">兩事件重疊於「$2$ 紅 $2$ 白」的 $9$ 種，故 $84+84-9=159$。</span>
+      </div>
+      <p>設 $A$ 為「恰好 2 紅」、$B$ 為「恰好 2 白」。由對稱性 $n(B)={}^{3}C_{2}{}^{8}C_{2}=84$。</p>
+      <p>$A\cap B$：$2$ 紅、$2$ 白、$0$ 黑：</p>
+      <p>$${}^{3}C_{2}{}^{3}C_{2}{}^{5}C_{0}=9$$</p>
+      <p>$$n(A\cup B)=84+84-9=159$$</p>
+      <p>$$P(A\cup B)=\frac{159}{330}=\frac{53}{110}$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $P=\dfrac{14}{55}$　　(b) $P=\dfrac{53}{110}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋中有 $4$ 個紅球、$2$ 個白球及 $6$ 個黑球，同時抽出 $4$ 個球。(a) 求恰好 $2$ 個紅球的概率。(b) 求恰好 $2$ 個紅球或恰好 $2$ 個白球的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總方法數 ${}^{12}C_{4}=495$。</div>
+          <div class="p-step"><b>第 2 步.</b> 恰好 $2$ 紅：${}^{4}C_{2}\times{}^{8}C_{2}=6\times28=168$，故 $P=\dfrac{168}{495}=\dfrac{56}{165}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 恰好 $2$ 白：${}^{2}C_{2}\times{}^{10}C_{2}=1\times45=45$。</div>
+          <div class="p-step"><b>第 4 步.</b> 兩者同時：${}^{4}C_{2}\times{}^{2}C_{2}\times{}^{6}C_{0}=6$。</div>
+          <div class="p-step"><b>第 5 步.</b> $168+45-6=207$，故 $P=\dfrac{207}{495}=\dfrac{23}{55}$。</div>
+          <div class="p-ans">答案：(a) $\dfrac{56}{165}$　(b) $\dfrac{23}{55}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q14.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

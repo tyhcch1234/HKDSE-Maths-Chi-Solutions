@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第13題 · 相似立體的表面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第13題</span>
+    <h1>體積比是邊長比的三次方</h1>
+    <p class="sub">求積法 · 相似立體</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個半徑 $10$ cm 的實心金屬球熔化後鑄成三個相似的實心直圓柱 $X$、$Y$、$Z$。設 $X$、$Y$、$Z$ 的底半徑分別為 $r_1$ cm、$r_2$ cm、$r_3$ cm，已知 $r_1:r_2:r_3=2:3:5$。
+      <br>(a) 以 $\pi$ 表示 $Y$ 的體積。
+      <br>(b) 工匠發現 $Y$ 的高為 $9$ cm。
+      <br>　(i) 求 $r_2$。
+      <br>　(ii) 工匠聲稱 $Z$ 的總表面積大於球的表面積。你是否同意？試解釋。
+      <span class="marks">（8 分）</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 400 230" width="380" role="img" aria-label="球與三個相似圓柱 X、Y、Z">
+        <circle cx="70" cy="120" r="48" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.6"/>
+        <text x="70" y="196" text-anchor="middle" font-size="12" fill="currentColor">球 $r=10$</text>
+        <g stroke="currentColor" stroke-width="1.6" fill="currentColor" fill-opacity="0.06">
+          <rect x="140" y="110" width="40" height="80" rx="4"/>
+          <rect x="200" y="86" width="56" height="104" rx="4"/>
+          <rect x="276" y="58" width="84" height="132" rx="4"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <ellipse cx="160" cy="110" rx="20" ry="6"/>
+          <ellipse cx="228" cy="86" rx="28" ry="8"/>
+          <ellipse cx="318" cy="58" rx="42" ry="11"/>
+        </g>
+        <g fill="currentColor" font-size="12" text-anchor="middle" font-family="Georgia,serif">
+          <text x="160" y="206">X　$r_1$</text>
+          <text x="228" y="206">Y　$r_2$</text>
+          <text x="318" y="206">Z　$r_3$</text>
+        </g>
+        <g stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6">
+          <line x1="140" y1="110" x2="180" y2="110"/>
+        </g>
+      </svg>
+      <figcaption>圖：球熔鑄成三個相似圓柱，半徑比 $2:3:5$（示意圖，非按比例）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">球的體積</div>
+      <div class="rule">
+        <span class="rule-name">球的體積</span>
+        <span class="rule-math">$V=\dfrac{4}{3}\pi r^{3}$</span>
+        <span class="rule-why">$r=10$ 時球體積為 $\dfrac{4000}{3}\pi\text{ cm}^{3}$，熔化後體積不變。</span>
+      </div>
+      <p>$$V_{\text{sphere}}=\frac{4}{3}\pi(10)^3=\frac{4000}{3}\pi\ \text{cm}^3$$</p>
+      <p>整個球被重新鑄造，故三個圓柱的體積總和等於球的體積。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用相似立體的體積比分配</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的體積比</span>
+        <span class="rule-math">$\dfrac{V_{1}}{V_{2}}=k^{3}$</span>
+        <span class="rule-why">長度比 $2:3:5$ 對應體積比 $8:27:125$，$Y$ 佔 $160$ 份中的 $27$ 份。</span>
+      </div>
+      <p>$$V_X:V_Y:V_Z=2^3:3^3:5^3=8:27:125$$</p>
+      <p>總份數 $=8+27+125=160$，故</p>
+      <p>$$V_Y=\frac{27}{160}\times\frac{4000}{3}\pi=225\pi\ \text{cm}^3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 由體積求半徑</div>
+      <p>$$V_Y=\pi r_2^2 h=\pi r_2^2(9)=225\pi\quad\Longrightarrow\quad r_2^2=25\quad\Longrightarrow\quad r_2=5\ \text{cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 求 $Z$ 的尺寸</div>
+      <p>長度比為 $2:3:5$，以 $Y$ 為基準：</p>
+      <p>$$r_3=r_2\times\frac{5}{3}=\frac{25}{3}\ \text{cm},\qquad h_Z=9\times\frac{5}{3}=15\ \text{cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 比較表面積</div>
+      <div class="rule">
+        <span class="rule-name">圓柱的總表面積</span>
+        <span class="rule-math">$A=2\pi r(r+h)$</span>
+        <span class="rule-why">$r=\dfrac{25}{3}$、$h=15$ 時總表面積為 $\dfrac{3500\pi}{9}<400\pi$。</span>
+      </div>
+      <p>$$\text{TSA}_Z=2\pi\cdot\frac{25}{3}\left(\frac{25}{3}+15\right)=\frac{3500\pi}{9}\approx388.9\pi$$</p>
+      <p>$$S_{\text{sphere}}=4\pi(10)^2=400\pi$$</p>
+      <p>因 $\dfrac{3500\pi}{9}<400\pi$，$Z$ 的表面積<b>較小</b>，故不同意工匠的說法。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $V_Y=225\pi$ cm³　(b)(i) $r_2=5$ cm　(b)(ii) 不同意，$\text{TSA}_Z=\dfrac{3500\pi}{9}\approx388.9\pi<400\pi$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 半徑 $6$ cm 的實心金屬球熔化後鑄成三個相似圓柱 $X$、$Y$、$Z$，其高之比為 $1:2:3$。(a) 以 $\pi$ 表示 $Y$ 的體積。(b) 若 $Y$ 的高為 $4$ cm，求其底半徑。(c) 求 $Z$ 的總表面積，並判斷是否小於球的表面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $V_{\text{sphere}}=\dfrac{4}{3}\pi(6)^{3}=288\pi$ cm³。</div>
+          <div class="p-step"><b>第 2 步.</b> 體積比 $1^{3}:2^{3}:3^{3}=1:8:27$，共 $36$ 份，故 $V_Y=\dfrac{8}{36}\times288\pi=64\pi$ cm³。</div>
+          <div class="p-step"><b>第 3 步.</b> $\pi r^{2}(4)=64\pi$，得 $r^{2}=16$，$r=4$ cm。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $Y$ 到 $Z$ 長度比為 $\dfrac{3}{2}$：$r_Z=6$ cm、$h_Z=6$ cm。</div>
+          <div class="p-step"><b>第 5 步.</b> $A_Z=2\pi(6)(6+6)=144\pi$，而球表面積 $4\pi(6)^{2}=144\pi$，兩者相等，並非較小。</div>
+          <div class="p-ans">答案：(a) $64\pi$ cm³　(b) $4$ cm　(c) $144\pi$，與球相等</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q12.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

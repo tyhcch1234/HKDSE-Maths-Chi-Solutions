@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第14題 · 多項式除法與重根</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第14題</span>
+    <h1>重根有兩個來源：判別式為零，或共用因式</h1>
+    <p class="sub">多項式 · 除法恆等式與重根</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      多項式 $g(x)$ 除以 $x^2+2x+a$ 時，商式為 $x+13$，餘式為 $b(x-3)$，其中 $a$、$b$ 為常數。已知 $g(x)$ 可被 $x-3$ 整除。
+      <br>(a) 求 $a$。
+      <br>(b) 是否只有一個 $b$ 值能使方程 $g(x)=0$ 至少有兩個相等的根？試解釋。
+      <span class="marks">（8 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用除法恆等式寫出 $g(x)$</div>
+      <div class="rule">
+        <span class="rule-name">除法恆等式</span>
+        <span class="rule-math">$g(x)=q(x)(x+13)+r(x)$</span>
+        <span class="rule-why">依題意，$g(x)=(x^{2}+2x+a)(x+13)+b(x-3)$。</span>
+      </div>
+      <p>$$g(x)=(x^2+2x+a)(x+13)+b(x-3)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用因式定理：$g(3)=0$</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        <span class="rule-math">$(x-c)$ 為 $g(x)$ 的因式 $\Longleftrightarrow g(c)=0$</span>
+        <span class="rule-why">可被 $x-3$ 整除得 $g(3)=16(a+15)=0$，故 $a=-15$。</span>
+      </div>
+      <p>$$g(3)=(9+6+a)(16)+b(0)=16(a+15)=0\quad\Longrightarrow\quad a=-15$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 把 $g(x)$ 分解</div>
+      <p>$$x^2+2x-15=(x+5)(x-3)$$</p>
+      <p>$$g(x)=(x+5)(x-3)(x+13)+b(x-3)$$</p>
+      <p>$$=(x-3)\big[(x+5)(x+13)+b\big]=(x-3)\big(x^2+18x+65+b\big)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">情形一：二次式有重根</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">$\Delta=b^{2}-4ac$</span>
+        <span class="rule-why">要有重根，$18^{2}-4(65+b)=0$，故 $b=16$。</span>
+      </div>
+      <p>令判別式 $=0$：</p>
+      <p>$$18^2-4(65+b)=0\quad\Longrightarrow\quad 324-260-4b=0\quad\Longrightarrow\quad b=16$$</p>
+      <p>此時 $g(x)=(x-3)(x+9)^2$，根為 $3,\,-9,\,-9$。✓</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">情形二：二次式與 $x-3$ 共用根</div>
+      <p>$$3^2+18(3)+65+b=0\quad\Longrightarrow\quad 9+54+65+b=0\quad\Longrightarrow\quad b=-128$$</p>
+      <p>此時 $g(x)=(x-3)^2(x+53)$，根為 $3,\,3,\,-53$。✓</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 結論</div>
+      <p>$b=16$ 與 $b=-128$ 都可使至少兩個根相等，故答案為<b>否</b>，$b$ 有兩個可能值。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $a=-15$　　(b) 否，$b=16$（重根 $-9$）或 $b=-128$（重根 $3$）。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $g(x)=(x^{2}+x+a)(x+11)+b(x-2)$，其中 $a$、$b$ 為常數。(a) 若 $g(x)$ 可被 $x-2$ 整除，求 $a$。(b) 若方程 $g(x)=0$ 有重根，求 $b$ 的所有可能值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(2)=(4+2+a)(13)+b(0)=13(a+6)=0$，故 $a=-6$。</div>
+          <div class="p-step"><b>第 2 步.</b> $x^{2}+x-6=(x+3)(x-2)$，故 $g(x)=(x-2)\left[(x+3)(x+11)+b\right]=(x-2)(x^{2}+14x+33+b)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 二次式有重根：$14^{2}-4(33+b)=0$，得 $196=132+4b$，$b=16$；此時 $x^{2}+14x+49=(x+7)^{2}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 另一情形：二次式在 $x=2$ 亦為零：$4+28+33+b=0$，故 $b=-65$；此時 $x^{2}+14x-32=(x+16)(x-2)$。</div>
+          <div class="p-step"><b>第 5 步.</b> 兩個值都使方程有等根，故 $b=16$ 或 $b=-65$，多於一個可能值。</div>
+          <div class="p-ans">答案：(a) $a=-6$　(b) $b=16$ 或 $b=-65$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q13.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

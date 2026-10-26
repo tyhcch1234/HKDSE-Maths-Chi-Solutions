@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第2題 · 指數定律</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第2題</span>
+    <h1>三條指數定律，兩步化簡</h1>
+    <p class="sub">指數定律 · 化簡代數式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{(uv^2)^5}{u^7v^{-3}}$，並以正指數表示答案。
+      <span class="marks">（3 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆開括號的次方</div>
+      <div class="rule">
+        <span class="rule-name">積的次方與冪的次方</span>
+        <span class="rule-math">$(ab)^n=a^n b^n,\qquad (a^m)^n=a^{mn}$</span>
+        <span class="rule-why">括號外的指數要乘進每一個因式。</span>
+      </div>
+      <p>$$(uv^2)^5=u^5\,(v^2)^5=u^5v^{10}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同底數相除，指數相減</div>
+      <div class="rule">
+        <span class="rule-name">指數的商定律</span>
+        <span class="rule-math">$\dfrac{a^{m}}{a^{n}}=a^{m-n}\quad (a\neq 0)$</span>
+        <span class="rule-why">分母的指數減去分子的指數；此處 $10-(-3)=13$。</span>
+      </div>
+      <p>$$\frac{u^5v^{10}}{u^7v^{-3}}=u^{5-7}\,v^{10-(-3)}=u^{-2}v^{13}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把負指數改寫成正指數</div>
+      <div class="rule">
+        <span class="rule-name">負指數定律</span>
+        <span class="rule-math">$a^{-n}=\dfrac{1}{a^{n}}$</span>
+        <span class="rule-why">負指數代表倒數，把 $u^{-2}$ 移到分母。</span>
+      </div>
+      <p>$$u^{-2}v^{13}=\frac{v^{13}}{u^2}$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{v^{13}}{u^{2}}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{(x^{2}y)^{3}}{x^{4}y^{-2}}$，並以正指數表示答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 積的次方：$(x^{2}y)^{3}=x^{6}y^{3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 商定律：$\dfrac{x^{6}y^{3}}{x^{4}y^{-2}}=x^{6-4}y^{3-(-2)}=x^{2}y^{5}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 指數已全為正數，故答案為 $x^{2}y^{5}$。</div>
+          <div class="p-ans">答案：$x^{2}y^{5}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q1.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

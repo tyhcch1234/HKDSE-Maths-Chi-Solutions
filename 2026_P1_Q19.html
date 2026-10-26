@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第19題 · 二次函數與三角形內心外心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第19題</span>
+    <h1>頂點對稱於 $M(2,7)$，等腰三角形的心都在對稱軸上</h1>
+    <p class="sub">二次函數 · 配方法與三角形四心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $h(x)=-x^2+30kx+4x-225k^2-40k+3$，其中 $k$ 為正常數。在同一坐標系中，設 $y=h(x)$ 圖像的頂點及 $y=14-h(4-x)$ 圖像的頂點分別為 $A$ 及 $B$。
+      <br>(a) 用配方法，以 $k$ 表示 $A$ 的坐標。
+      <br>(b) 以 $k$ 寫出 $B$ 的坐標。
+      <br>(c) 點 $C$ 的坐標為 $(2+48k,\ 7-36k)$。設 $I$、$J$ 分別為 $\triangle ABC$ 的內心與外心。
+      <br>　(i) 設 $M$ 為 $AB$ 的中點。描述 $CM$ 與 $AB$ 的幾何關係，並解釋。
+      <br>　(ii) 以 $k$ 表示 $I$ 與 $J$ 之間的距離。
+      <br>　(iii) 點 $D$ 的坐標為 $(6-22k,\ 6-15k)$。$BDIJ$ 是否可能為平行四邊形？試解釋。
+      <span class="marks">（12 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方法求頂點 $A$</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">$y=a\left(x-h\right)^{2}+c\ \to\ \text{頂點 }(h,c)$</span>
+        <span class="rule-why">整理 $x$ 項後得 $h(x)=-\left[x-(15k+2)\right]^{2}+20k+7$，故 $A=(15k+2,\,20k+7)$。</span>
+      </div>
+      <p>先集中 $x$ 項：</p>
+      <p>$$h(x)=-x^2+(30k+4)x-225k^2-40k+3$$</p>
+      <p>對 $-x^2+(30k+4)x$ 配方：</p>
+      <p>$$\begin{aligned}h(x)&=-\bigl[x-(15k+2)\bigr]^2+(15k+2)^2-225k^2-40k+3\\&=-\bigl[x-(15k+2)\bigr]^2+\bigl(225k^2+60k+4\bigr)-225k^2-40k+3\\&=-\bigl[x-(15k+2)\bigr]^2+20k+7\end{aligned}$$</p>
+      <p>故 $A=(15k+2,\ 20k+7)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 求 $B$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">二次函數的頂點</span>
+        <span class="rule-math">$x_{\text{頂點}}=-\dfrac{b}{2a}$</span>
+        <span class="rule-why">對 $y=x^{2}+(30k-4)x+\cdots$，頂點的 $x=2-15k$，得 $B(2-15k,\,7-20k)$。</span>
+      </div>
+      <p>把 $4-x$ 代入 $h$：</p>
+      <p>$$h(4-x)=-x^2+(4-30k)x-225k^2+80k+3$$</p>
+      <p>$$y=14-h(4-x)=x^2+(30k-4)x+225k^2-80k+11$$</p>
+      <p>頂點的 $x$ 坐標為 $-\dfrac{30k-4}{2}=2-15k$，代回得 $y_B=7-20k$，故 $B=(2-15k,\ 7-20k)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c)(i) $CM\perp AB$</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直的直線</span>
+        <span class="rule-math">$m_1m_2=-1\ \Longleftrightarrow\ $ 兩線垂直</span>
+        <span class="rule-why">對任何 $k>0$ 都有 $\left(-\tfrac34\right)\left(\tfrac43\right)=-1$，故 $CM\perp AB$。</span>
+      </div>
+      <p>$AB$ 的中點：</p>
+      <p>$$M=\left(\frac{(15k+2)+(2-15k)}{2},\ \frac{(20k+7)+(7-20k)}{2}\right)=(2,\ 7)$$</p>
+      <p>由 $C(2+48k,\ 7-36k)$ 與 $M(2,\ 7)$：</p>
+      <p>$$m_{CM}=\frac{7-(7-36k)}{2-(2+48k)}=\frac{36k}{-48k}=-\frac34$$</p>
+      <p>由 $A$、$B$：</p>
+      <p>$$m_{AB}=\frac{(7-20k)-(20k+7)}{(2-15k)-(15k+2)}=\frac{-40k}{-30k}=\frac43$$</p>
+      <p>$$m_{CM}\,m_{AB}=\left(-\frac34\right)\left(\frac43\right)=-1$$</p>
+      <p>故 $CM\perp AB$；又 $M$ 為 $AB$ 中點，所以 $CM$ 是 $AB$ 的<b>垂直平分線</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c)(ii) 先求三邊長</div>
+      <p>因 $C$ 在 $AB$ 的垂直平分線上，$CA=CB$，$\triangle ABC$ 為等腰三角形。</p>
+      <p>$$AM=\tfrac12 AB=\tfrac12\sqrt{(30k)^2+(40k)^2}=25k,\qquad CM=\sqrt{(48k)^2+(36k)^2}=60k$$</p>
+      <p>$$CA=CB=\sqrt{(25k)^2+(60k)^2}=65k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c)(ii) 內心與外心都在對稱軸 $CM$ 上</div>
+      <p>以 $M$ 為原點、$CM$ 為 $y$ 軸：</p>
+      <p>$$\text{面積}=\tfrac12(50k)(60k)=1500k^2,\qquad s=\frac{50k+65k+65k}{2}=90k$$</p>
+      <p>$$r=\frac{1500k^2}{90k}=\frac{50k}{3}\quad\Longrightarrow\quad I=\left(0,\ \frac{50k}{3}\right)$$</p>
+      <p>外心：$25k^2+j^2=(60k-j)^2\Rightarrow j=\dfrac{595k}{24}$，故 $J=\left(0,\ \dfrac{595k}{24}\right)$。</p>
+      <p>因 $\dfrac{595k}{24}\approx24.79k$、$\dfrac{50k}{3}\approx16.67k$，外心離 $M$ 較遠，故</p>
+      <p>$$IJ=\frac{595k}{24}-\frac{50k}{3}=\frac{595k-400k}{24}=\frac{195k}{24}=\frac{65k}{8}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c)(iii) 平行四邊形條件</div>
+      <p>沿 $MC$ 的「水平位移 : 垂直位移 : 長度」比為 $4:(-3):5$，故由 $M$ 向 $C$ 走 $L$ 時，$x$ 增加 $\dfrac{4L}{5}$、$y$ 減少 $\dfrac{3L}{5}$。此處 $MI=\dfrac{50k}{3}$、$MJ=\dfrac{595k}{24}$：</p>
+      <p>$$I=\left(2+\frac45\cdot\frac{50k}{3},\ 7-\frac35\cdot\frac{50k}{3}\right)=\left(2+\frac{40k}{3},\ 7-10k\right)$$</p>
+      <p>$$J=\left(2+\frac45\cdot\frac{595k}{24},\ 7-\frac35\cdot\frac{595k}{24}\right)=\left(2+\frac{119k}{6},\ 7-\frac{119k}{8}\right)$$</p>
+      <p>$BDIJ$ 為平行四邊形當且僅當對角線 $BI$、$DJ$ 互相平分，即 $B+I=D+J$。</p>
+      <p>$x$ 坐標：$(2-15k)+\left(2+\dfrac{40k}{3}\right)=(6-22k)+\left(2+\dfrac{119k}{6}\right)\Rightarrow k=8$</p>
+      <p>$y$ 坐標：$(7-20k)+(7-10k)=(6-15k)+\left(7-\dfrac{119k}{8}\right)\Rightarrow k=8$</p>
+      <p>兩式一致，且 $k=8>0$，故<b>可能</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $A=(15k+2,\ 20k+7)$　(b) $B=(2-15k,\ 7-20k)$　(c)(i) $CM$ 為 $AB$ 的垂直平分線　(c)(ii) $IJ=\dfrac{65k}{8}$　(c)(iii) 可能，$k=8$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $h(x)=-x^2+(10k+2)x-25k^2-10k+4$，$k>0$。(a) 用配方法求 $y=h(x)$ 的頂點 $A$。(b) 求 $y=12-h(4-x)$ 的頂點 $B$。(c) 證明 $A$、$B$ 的中點為 $M(2,\,6)$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $h(x)=-\left[x-(5k+1)\right]^2+(5k+1)^2-25k^2-10k+4=-\left[x-(5k+1)\right]^2+5$，故 $A=(5k+1,\ 5)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $h(4-x)=-x^2+(6-10k)x-25k^2+30k-4$，故 $y=12-h(4-x)=x^2+(10k-6)x+25k^2-30k+16$。</div>
+          <div class="p-step"><b>第 3 步.</b> 頂點的 $x$ 坐標為 $-\dfrac{10k-6}{2}=3-5k$，代回得 $y=7$，故 $B=(3-5k,\ 7)$。</div>
+          <div class="p-step"><b>第 4 步.</b> $AB$ 的中點 $=\left(\dfrac{(5k+1)+(3-5k)}{2},\ \dfrac{5+7}{2}\right)=(2,\ 6)=M$。</div>
+          <div class="p-ans">答案：(a) $A(5k+1,\ 5)$　(b) $B(3-5k,\ 7)$　(c) 已證，中點為 $(2,6)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q18.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

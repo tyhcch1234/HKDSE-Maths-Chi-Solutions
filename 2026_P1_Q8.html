@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第8題 · 相似三角形與全等</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第8題</span>
+    <h1>先證相似求 $BC$，再用 SAS 證全等</h1>
+    <p class="sub">幾何 · 相似三角形與全等三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 1 中，$ABC$ 為三角形，$D$ 為 $AB$ 上的一點。$E$ 及 $F$ 分別為 $CB$ 延長線及 $CD$ 延長線上的點，使得 $BD \parallel EF$ 及 $BC=EF$。已知 $BD=8\text{ cm}$、$BE=6\text{ cm}$。
+      <br>(a) 考慮一對相似三角形，求 $BC$ 的長度。
+      <br>(b) 假設 $AD=10\text{ cm}$，證明 $\triangle ABC \cong \triangle CEF$。
+      <span class="marks">（5 分）</span>
+    </div>
+    <figure class="fig">
+      <img src="figures/2026_P1_8.png" alt="三角形 ABC，D 在 AB 上，E 在 CB 延長線，F 在 CD 延長線，BD 平行 EF">
+      <figcaption>圖：原試卷附圖（$BD \parallel EF$，$BC=EF$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 找出相似三角形</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（AAA）</span>
+        <span class="rule-math">$DB \parallel FE\ \Rightarrow\ \triangle CDB \sim \triangle CFE$</span>
+        <span class="rule-why">$DB$ 連接 $CF$、$CE$ 上的點且與 $FE$ 平行，故同位角相等。</span>
+      </div>
+      <p>設 $BC=x$。因 $E$ 在 $CB$ 延長線上，$C,B,E$ 共線；因 $F$ 在 $CD$ 延長線上，$C,D,F$ 共線。</p>
+      <p>在 $\triangle CFE$ 中，$DB$ 連接 $CF$ 與 $CE$ 上的點，且 $DB \parallel FE$，故</p>
+      <p>$$\triangle CDB \sim \triangle CFE$$</p>
+      <p>（同位角相等，例如 $\angle CDB=\angle CFE$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用對應邊成比例</div>
+      <div class="rule">
+        <span class="rule-name">對應邊之比</span>
+        <span class="rule-math">$\dfrac{CB}{CE}=\dfrac{DB}{FE}$</span>
+        <span class="rule-why">$\dfrac{x}{x+6}=\dfrac{8}{x}$ 得 $x^{2}-8x-48=0$，故 $x=12$。</span>
+      </div>
+      <p>$$\frac{CB}{CE}=\frac{DB}{FE}\quad\Longrightarrow\quad\frac{x}{x+6}=\frac{8}{x}$$</p>
+      <p>（因 $EF=BC=x$，且 $CE=CB+BE=x+6$。）</p>
+      <p>$$x^2=8(x+6)\quad\Longrightarrow\quad x^2-8x-48=0\quad\Longrightarrow\quad (x-12)(x+4)=0$$</p>
+      <p>因 $x>0$，得 $BC=12\text{ cm}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 準備 SAS 的兩組對應邊</div>
+      <p><b>邊一：</b>$AB=AD+DB=10+8=18$，而 $CE=CB+BE=12+6=18$，故</p>
+      <p>$$AB=CE$$</p>
+      <p><b>邊二：</b>已知 $BC=EF$（同為 $12$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 證明夾角相等</div>
+      <p>因 $BD \parallel EF$ 且 $CBE$ 為直線，由同位角得</p>
+      <p>$$\angle DBC=\angle FEC$$</p>
+      <p>又因 $D$ 在 $AB$ 上，射線 $BD$ 即射線 $BA$，故 $\angle ABC=\angle DBC$。因此</p>
+      <p>$$\angle ABC=\angle CEF$$</p>
+      <p>此角正是兩組等邊的夾角。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 結論</div>
+      <p>在 $\triangle ABC$ 與 $\triangle CEF$ 中：</p>
+      <p>$$AB=CE,\qquad \angle ABC=\angle CEF,\qquad BC=EF$$</p>
+      <p>$$\therefore\ \triangle ABC\cong\triangle CEF\quad(\text{SAS})\qquad\blacksquare$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $BC=12$ cm　　(b) 以 SAS 證得 $\triangle ABC\cong\triangle CEF$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $D$ 在 $AB$ 上，$E$、$F$ 分別在 $CB$ 延長線及 $CD$ 延長線上，使 $BD \parallel EF$ 及 $BC=EF$。已知 $BD=9\text{ cm}$、$BE=10\text{ cm}$。(a) 求 $BC$；(b) 若 $AD=16\text{ cm}$，證明 $\triangle ABC\cong\triangle CEF$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $BD \parallel EF$ 得 $\triangle CDB\sim\triangle CFE$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $BC=x$：$\dfrac{x}{x+10}=\dfrac{9}{x}$，得 $x^{2}-9x-90=0$，即 $(x-15)(x+6)=0$，故 $BC=15\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AB=16+9=25$，$CE=15+10=25$，故 $AB=CE$；又 $BC=EF$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由平行線同位角得 $\angle ABC=\angle CEF$，故 $\triangle ABC\cong\triangle CEF$（SAS）。</div>
+          <div class="p-ans">答案：(a) $15$ cm　(b) 已證</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q7.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

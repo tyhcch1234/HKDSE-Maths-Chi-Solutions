@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第7題 · 折扣與百分數盈利</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第7題</span>
+    <h1>售價、成本、標價三者的關係</h1>
+    <p class="sub">百分數 · 折扣與盈利</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某戒指以標價的八五折（$15\%$ 折扣）售出，盈利 $\$162$。已知戒指的標價比成本高 $\$270$。求盈利百分率。
+      <span class="marks">（4 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數</div>
+      <p>設 $M$ 為標價，$C$ 為成本。由「標價比成本高 $\$270$」：</p>
+      <p>$$M=C+270$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出售價</div>
+      <div class="rule">
+        <span class="rule-name">折扣</span>
+        <span class="rule-math">$\text{售價}=(1-d\%)\times\text{標價}$</span>
+        <span class="rule-why">八五折即售價為標價的 $85\%$。</span>
+      </div>
+      <p>$$SP=0.85M$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用盈利條件求成本</div>
+      <p>$$SP-C=162\quad\Longrightarrow\quad 0.85M-C=162$$</p>
+      <p>代入 $M=C+270$：</p>
+      <p>$$0.85(C+270)-C=162$$</p>
+      <p>$$0.85C+229.5-C=162\quad\Longrightarrow\quad -0.15C=-67.5\quad\Longrightarrow\quad C=450$$</p>
+      <p>故 $M=450+270=720$，$SP=0.85\times720=612$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">計算盈利百分率</div>
+      <div class="rule">
+        <span class="rule-name">盈利百分率</span>
+        <span class="rule-math">$\text{盈利}\%=\dfrac{\text{盈利}}{\text{成本}}\times100\%$</span>
+        <span class="rule-why">盈利 $\$162$、成本 $\$450$，故盈利百分率為 $36\%$。</span>
+      </div>
+      <p>$$\text{盈利百分率}=\frac{162}{450}\times100\%=36\%$$</p>
+    </div>
+
+    <div class="hint"><b>驗算：</b>$SP-C=612-450=162$。✓</div>
+
+    <div class="ans"><span class="lbl">答案</span>盈利百分率為 $\mathbf{36\%}$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某手袋的標價比成本高 $\$300$，以八折售出後盈利 $\$140$。求盈利百分率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $M=C+300$，$SP=0.8M$。</div>
+          <div class="p-step"><b>第 2 步.</b> $SP-C=140$，即 $0.8(C+300)-C=140$。</div>
+          <div class="p-step"><b>第 3 步.</b> $0.8C+240-C=140\Rightarrow 0.2C=100\Rightarrow C=500$，故 $M=800$。</div>
+          <div class="p-step"><b>第 4 步.</b> 盈利百分率 $=\dfrac{140}{500}\times100\%=28\%$。</div>
+          <div class="p-ans">答案：$28\%$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q6.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

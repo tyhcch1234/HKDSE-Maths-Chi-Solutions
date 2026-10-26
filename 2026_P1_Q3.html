@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第3題 · 平移與垂直線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第3題</span>
+    <h1>向下平移後，用斜率相乘等於 $-1$</h1>
+    <p class="sub">解析幾何 · 平移與垂直線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $P$、$Q$ 兩點的坐標分別為 $(-6,\,5)$ 及 $(2,\,1)$。把 $P$ 向下平移 $r$ 單位至 $R$。
+      <br>(a) 以 $r$ 表示 $R$ 的坐標。
+      <br>(b) 求 $r$，使得 $\angle PQR=90^{\circ}$。
+      <span class="marks">（3 分）</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 380 300" width="360" role="img" aria-label="P、Q、R 三點與直角標記">
+        <g stroke="currentColor" stroke-width="1" opacity="0.35">
+          <line x1="30" y1="40" x2="30" y2="280"/>
+          <line x1="30" y1="250" x2="355" y2="250"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1.6" fill="none">
+          <line x1="120" y1="80" x2="290" y2="170"/>
+          <line x1="120" y1="80" x2="120" y2="270" stroke-dasharray="6 5"/>
+          <line x1="290" y1="170" x2="120" y2="270"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="120" cy="80" r="4"/>
+          <circle cx="290" cy="170" r="4"/>
+          <circle cx="120" cy="270" r="4"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+          <text x="104" y="74" text-anchor="end">P(−6, 5)</text>
+          <text x="300" y="166">Q(2, 1)</text>
+          <text x="132" y="284">R(−6, 5−r)</text>
+        </g>
+        <g fill="currentColor" font-size="12" opacity="0.8">
+          <text x="150" y="250">向下 r 單位</text>
+          <text x="255" y="200">QR</text>
+        </g>
+        <path d="M 290 170 L 274 161 L 265 177 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      </svg>
+      <figcaption>圖：$P$ 沿直線 $x=-6$ 向下平移 $r$ 單位至 $R$，$\angle PQR=90^{\circ}$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 向下平移：$x$ 不變，$y$ 減 $r$</div>
+      <div class="rule">
+        <span class="rule-name">平移</span>
+        <span class="rule-math">$(x,y)\to(x,\ y-r)\quad(\text{向下 }r\text{ 單位})$</span>
+        <span class="rule-why">$x$ 坐標維持 $-6$，故 $R=(-6,\,5-r)$。</span>
+      </div>
+      <p>$$R=(-6,\;5-r)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $QP$ 與 $QR$ 的斜率</div>
+      <div class="rule">
+        <span class="rule-name">兩點斜率</span>
+        <span class="rule-math">$m=\dfrac{y_2-y_1}{x_2-x_1}$</span>
+        <span class="rule-why">$QP$ 的縱向變化 $4$、橫向變化 $-8$，故 $m_{QP}=-\tfrac12$；$QR$ 的橫向變化同為 $-8$，縱向變化為 $4-r$。</span>
+      </div>
+      <p>$$m_{QP}=\frac{5-1}{-6-2}=\frac{4}{-8}=-\frac{1}{2}$$</p>
+      <p>$$m_{QR}=\frac{(5-r)-1}{-6-2}=\frac{4-r}{-8}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 垂直條件：兩斜率相乘為 $-1$</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直的直線</span>
+        <span class="rule-math">$m_1m_2=-1$</span>
+        <span class="rule-why">$\dfrac{4-r}{16}=-1$，故 $4-r=-16$，即 $r=20$。</span>
+      </div>
+      <p>$$\left(-\frac{1}{2}\right)\left(\frac{4-r}{-8}\right)=\frac{4-r}{16}=-1$$</p>
+      <p>$$4-r=-16\quad\Longrightarrow\quad r=20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算</div>
+      <p>當 $r=20$，$R=(-6,\,-15)$，故 $m_{QR}=\dfrac{-15-1}{-6-2}=\dfrac{-16}{-8}=2$，而 $\left(-\dfrac12\right)(2)=-1$。✓</p>
+      <p>用畢氏定理核對：$PQ^2=(-8)^2+4^2=80$，$QR^2=(-8)^2+(-16)^2=320$，$PR^2=0^2+(-20)^2=400$，且 $80+320=400$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $R=(-6,\;5-r)$　　　(b) $r=20$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $P(4,3)$、$Q(0,1)$。把 $P$ 向下平移 $r$ 單位至 $R$，使得 $\angle PQR=90^{\circ}$，求 $r$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 向下平移：$R=(4,\,3-r)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $m_{QP}=\dfrac{3-1}{4-0}=\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m_{QR}=\dfrac{(3-r)-1}{4-0}=\dfrac{2-r}{4}$，故 $m_{QP}m_{QR}=\dfrac{1}{2}\times\dfrac{2-r}{4}=\dfrac{2-r}{8}=-1$。</div>
+          <div class="p-step"><b>第 4 步.</b> $2-r=-8$，得 $r=10$。驗算：$m_{QR}=\dfrac{2-10}{4}=-2$，$\left(\dfrac12\right)(-2)=-1$。</div>
+          <div class="p-ans">答案：$r=10$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q2.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

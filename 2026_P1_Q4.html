@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第4題 · 因式分解</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第4題</span>
+    <h1>先抽公因式，再拆中間項</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      因式分解：
+      <br>(a) $5x^2y+17xy-12y$；
+      <br>(b) $5x^2y+17xy-12y-10x+6$。
+      <span class="marks">（4 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 抽出公因式 $y$</div>
+      <div class="rule">
+        <span class="rule-name">公因式</span>
+        <span class="rule-math">$AB+AC=A(B+C)$</span>
+        <span class="rule-why">每一項都含 $y$，故 $5x^{2}y+17xy-12y=y\left(5x^{2}+17x-12\right)$。</span>
+      </div>
+      <p>$$5x^2y+17xy-12y=y(5x^2+17x-12)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 拆中間項</div>
+      <div class="rule">
+        <span class="rule-name">拆中間項</span>
+        <span class="rule-math">$ac=-60,\quad a+c=17$</span>
+        <span class="rule-why">$20$ 與 $-3$ 的積為 $-60$、和為 $17$，可分解為 $(5x-3)(x+4)$。</span>
+      </div>
+      <p>對 $5x^2+17x-12$，找兩數乘積為 $5\times(-12)=-60$、和為 $17$，即 $20$ 與 $-3$：</p>
+      <p>$$5x^2+20x-3x-12=5x(x+4)-3(x+4)=(5x-3)(x+4)$$</p>
+      <p>$$\therefore\ 5x^2y+17xy-12y=y(5x-3)(x+4)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 借用 (a) 的結果分組</div>
+      <p>把首三項（即 (a) 的結果）與最後兩項分組：</p>
+      <p>$$5x^2y+17xy-12y-10x+6=y(5x-3)(x+4)-2(5x-3)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 抽出共同因式 $(5x-3)$</div>
+      <p>$$=(5x-3)\big[y(x+4)-2\big]$$</p>
+    </div>
+
+    <div class="hint"><b>驗算：</b>$(5x-3)(yx+4y-2)=5x^2y+20xy-10x-3xy-12y+6=5x^2y+17xy-12y-10x+6$。✓</div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $y(5x-3)(x+4)$　　(b) $(5x-3)\big[y(x+4)-2\big]$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解：(a) $3x^{2}y+10xy-8y$；(b) $3x^{2}y+10xy-8y-12x+8$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 抽出 $y$：$3x^{2}y+10xy-8y=y\left(3x^{2}+10x-8\right)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 對 $3x^{2}+10x-8$：$12$ 與 $-2$ 的積為 $-24$、和為 $10$，故 $3x^{2}+12x-2x-8=(3x-2)(x+4)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 得 (a) $=y(3x-2)(x+4)$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b)：$y(3x-2)(x+4)-4(3x-2)=(3x-2)\left[y(x+4)-4\right]$。</div>
+          <div class="p-ans">答案：(a) $y(3x-2)(x+4)$　(b) $(3x-2)\left[y(x+4)-4\right]$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q3.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

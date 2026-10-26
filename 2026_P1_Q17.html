@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第17題 · 立體圖形的角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第17題</span>
+    <h1>先解底面四邊形，再處理兩平面夾角</h1>
+    <p class="sub">三角學 · 立體圖形與兩平面夾角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      金字塔 $VABCD$ 的底為四邊形 $ABCD$，面 $VAB$ 位於水平地面上。已知 $AB=90$ cm、$AD=70$ cm、$CD=100$ cm、$\angle ADC=55^\circ$、$\angle BCD=130^\circ$。
+      <br>(a) 求
+      <br>　(i) $AC$ 的長度；
+      <br>　(ii) $\angle BAD$。
+      <br>(b) 已知 $VD=80$ cm，且平面 $ABCD$ 與地面的夾角為 $65^\circ$。有學生聲稱 $VD$ 與地面的夾角小於 $50^\circ$。該說法是否正確？
+      <span class="marks">（6 分）</span>
+    </div>
+    <figure class="fig">
+      <img src="figures/2026_P1_17.png" alt="金字塔 VABCD，底面 ABCD 傾斜於地面，面 VAB 在地面上">
+      <figcaption>圖：原試卷附圖（面 $VAB$ 在水平地面上）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 在 $\triangle ACD$ 用餘弦公式</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        <span class="rule-math">$c^{2}=a^{2}+b^{2}-2ab\cos C$</span>
+        <span class="rule-why">$AD=70$、$CD=100$、$\angle ADC=55^{\circ}$，故 $AC^{2}=14900-8030.1$。</span>
+      </div>
+      <p>$$AC^2=70^2+100^2-2(70)(100)\cos55^\circ=14900-8030.1$$</p>
+      <p>$$AC^2\approx6869.9\quad\Longrightarrow\quad AC\approx82.885\text{ cm}\approx82.9\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(ii) 用正弦公式求 $\angle DAC$</div>
+      <div class="rule">
+        <span class="rule-name">正弦公式</span>
+        <span class="rule-math">$\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}$</span>
+        <span class="rule-why">由 $\dfrac{100}{\sin\angle DAC}=\dfrac{82.885}{\sin55^{\circ}}$ 得 $\angle DAC\approx81.2^{\circ}$。</span>
+      </div>
+      <p>$$\sin\angle DAC=\frac{100\sin55^\circ}{82.885}\approx0.9883\quad\Longrightarrow\quad\angle DAC\approx81.2^\circ$$</p>
+      <p>$$\angle ACD=180^\circ-55^\circ-81.2^\circ\approx43.8^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a)(ii) 在 $\triangle ABC$ 求 $BC$</div>
+      <p>因 $AC$ 在 $\angle BCD=130^\circ$ 之內：</p>
+      <p>$$\angle ACB=130^\circ-43.8^\circ\approx86.2^\circ$$</p>
+      <p>在 $\triangle ABC$ 中用餘弦公式（$AB=90$、$AC=82.885$）：</p>
+      <p>$$90^2=BC^2+82.885^2-2(BC)(82.885)\cos86.2^\circ$$</p>
+      <p>$$BC^2-10.99\,BC-1230.1=0\quad\Longrightarrow\quad BC\approx41.0\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a)(ii) 求 $\angle BAD$</div>
+      <p>在 $\triangle ABC$ 用正弦公式：</p>
+      <p>$$\sin\angle BAC=\frac{41.0\sin86.2^\circ}{90}\approx0.4545\quad\Longrightarrow\quad\angle BAC\approx27.0^\circ$$</p>
+      <p>$$\angle BAD=\angle DAC+\angle BAC\approx81.2^\circ+27.0^\circ\approx108.2^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 求 $D$ 離地面的高度</div>
+      <div class="rule">
+        <span class="rule-name">由距離與角度求垂直高度</span>
+        <span class="rule-math">$d=AD\sin\angle DAB$</span>
+        <span class="rule-why">$d=70\sin108.2^{\circ}\approx66.5$ cm，再乘 $\sin65^{\circ}$ 得 $60.3$ cm。</span>
+      </div>
+      <p>在平面 $ABCD$ 內，$D$ 到 $AB$ 的垂直距離：</p>
+      <p>$$d=AD\sin\angle DAB=70\sin108.2^\circ\approx66.5\text{ cm}$$</p>
+      <p>兩平面夾角為 $65^\circ$，故 $D$ 離地面的高度：</p>
+      <p>$$DD'=d\sin65^\circ\approx66.5\times0.9063\approx60.3\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 求 $VD$ 與地面的夾角</div>
+      <p>$V$ 在地面上，故在直角三角形 $VDD'$（$D'$ 為直角）中：</p>
+      <p>$$\sin\theta=\frac{DD'}{VD}=\frac{60.3}{80}\approx0.753\quad\Longrightarrow\quad\theta\approx48.9^\circ$$</p>
+      <p>因 $48.9^\circ<50^\circ$，該學生的說法<b>正確</b>。✔</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a)(i) $AC\approx82.9$ cm　(a)(ii) $\angle BAD\approx108.2^\circ$　(b) 正確，$VD$ 與地面的夾角約 $48.9^\circ<50^\circ$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $AD=50$ cm、$CD=80$ cm、$\angle ADC=60^\circ$。(a) 求 $AC$。(b) 求 $\angle DAC$。(c) 由此求 $\angle ACD$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC^{2}=50^{2}+80^{2}-2(50)(80)\cos60^{\circ}=2500+6400-4000=4900$，故 $AC=70$ cm。</div>
+          <div class="p-step"><b>第 2 步.</b> 正弦公式：$\dfrac{\sin\angle DAC}{80}=\dfrac{\sin60^{\circ}}{70}$，得 $\sin\angle DAC\approx0.9897$，$\angle DAC\approx81.8^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ACD=180^{\circ}-60^{\circ}-81.8^{\circ}\approx38.2^{\circ}$。</div>
+          <div class="p-ans">答案：(a) $70$ cm　(b) $81.8^{\circ}$　(c) $38.2^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q16.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

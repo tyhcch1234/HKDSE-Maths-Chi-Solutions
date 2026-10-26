@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷一 第10題 · 莖葉圖、四分位數與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷一 · 第10題</span>
+    <h1>全距與四分位距之比，反推 $w$</h1>
+    <p class="sub">統計學 · 莖葉圖、四分位數與概率</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的莖葉圖顯示一組的士司機一星期駕駛時數的分佈。
+      <table style="border-collapse:collapse;margin:14px auto 6px;text-align:center;">
+        <tr>
+          <th style="padding:2px 16px;border-bottom:1.5px solid #475569;">莖（十位）</th>
+          <th style="padding:2px 16px;border-bottom:1.5px solid #475569;border-left:1px solid #475569;text-align:left;">葉（個位）</th>
+        </tr>
+        <tr><td style="padding:1px 16px;">$2$</td><td style="padding:1px 16px;text-align:left;">$5\quad 6\quad 9$</td></tr>
+        <tr><td style="padding:1px 16px;">$3$</td><td style="padding:1px 16px;text-align:left;">$2\quad 3\quad 3\quad 6\quad 6\quad 7\quad 8$</td></tr>
+        <tr><td style="padding:1px 16px;">$4$</td><td style="padding:1px 16px;text-align:left;">$0\quad 0\quad 2\quad 2\quad 5\quad 5\quad 7\quad 7\quad 7$</td></tr>
+        <tr><td style="padding:1px 16px;">$5$</td><td style="padding:1px 16px;text-align:left;">$w$</td></tr>
+      </table>
+      已知該分佈的全距與四分位距之比為 $7:3$。
+      <br>(a) 求 $w$。
+      <br>(b)(i) 寫出該分佈的眾數。
+      <br>(b)(ii) 若從該組司機中隨機選出兩人，求他們該星期駕駛時數的平均值大於眾數的概率。
+      <span class="marks">（6 分）</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">列出 21 個數據，寫出全距</div>
+      <div class="rule">
+        <span class="rule-name">全距</span>
+        <span class="rule-math">$\text{全距}=\text{最大值}-\text{最小值}$</span>
+        <span class="rule-why">最大值為 $50+w$、最小值為 $25$，故全距為 $25+w$。</span>
+      </div>
+      <p>$25,\ 26,\ 29,\ 32,\ 33,\ 33,\ 36,\ 36,\ 37,\ 38,\ 40,\ 40,\ 42,\ 42,\ 45,\ 45,\ 45,\ 47,\ 47,\ 47,\ (50+w)$。</p>
+      <p>最小值為 $25$，故全距 $=(50+w)-25=25+w$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求四分位數與四分位距</div>
+      <div class="rule">
+        <span class="rule-name">有序數據的四分位數</span>
+        <span class="rule-math">$Q_{1}=\text{下半部的中位數},\quad Q_{3}=\text{上半部的中位數}$</span>
+        <span class="rule-why">$n=21$，中位數為第 $11$ 個數據 $40$，而 $Q_{1}=33$、$Q_{3}=45$。</span>
+      </div>
+      <p>$n=21$，中位數為第 $11$ 個數據 $=40$。</p>
+      <p>$Q_1$ 為下半部第 $5$、$6$ 個數據的平均 $=(33+33)/2=33$。</p>
+      <p>$Q_3$ 為上半部第 $5$、$6$ 個數據的平均 $=(45+45)/2=45$。</p>
+      <p>四分位距 $=Q_3-Q_1=45-33=12$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用 $7:3$ 求 $w$</div>
+      <p>$$\frac{\text{全距}}{\text{四分位距}}=\frac{7}{3}\quad\Longrightarrow\quad\frac{25+w}{12}=\frac{7}{3}$$</p>
+      <p>$$25+w=28\quad\Longrightarrow\quad w=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 眾數</div>
+      <p>$45$ 與 $47$ 各出現三次（頻數最高），故分佈為<b>雙峰</b>，眾數為 $45$ 及 $47$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 求概率</div>
+      <div class="rule">
+        <span class="rule-name">等可能結果的概率</span>
+        <span class="rule-math">$P(E)=\dfrac{n(E)}{n(S)}$</span>
+        <span class="rule-why">在 ${}^{21}C_{2}=210$ 對組合中，只有 $8$ 對的和超過 $94$，故概率為 $\dfrac{4}{105}$。</span>
+      </div>
+      <p>選兩人的方法數：${}^{21}C_{2}=210$。</p>
+      <p>設二人的時數為 $x$、$y$，要求平均值大於眾數，即 $x+y>2\times47=94$。</p>
+      <p>由於 $47+47=94$ 不合（須大於 $94$），只有含 $53$ 的組合才可能：$53$ 配 $42$、$45$、$47$：</p>
+      <p>$$1\times(2+3+3)=8 \text{ 對}$$</p>
+      <p>$$P=\frac{8}{210}=\frac{4}{105}$$</p>
+    </div>
+
+    <div class="hint"><b>註：</b>若只把 $45$ 視為眾數（即平均值 $>45$、總和 $>90$），有利組合為：$53$ 配 $\{40,42,45,47\}$（$10$ 對）、$47$ 配 $45$（$9$ 對）、$47$ 配 $47$（$3$ 對），得 $\dfrac{22}{210}=\dfrac{11}{105}$。</div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $w=3$　(b)(i) $45$ 及 $47$（雙峰）　(b)(ii) $\dfrac{4}{105}$（若「眾數」只指 $45$，則為 $\dfrac{11}{105}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $19$ 名工人的每週工時為：$12, 15, 15, 15, 18, 20, 22, 25, 27, 28, 30, 32, 34, 36, 36, 38, 40, 42, 45$。(a) 求中位數。(b) 求四分位距。(c) 隨機選出一名工人，求其工時大於眾數的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $n=19$，中位數為第 $10$ 個數據，即 $28$。</div>
+          <div class="p-step"><b>第 2 步.</b> 下半部為首 $9$ 個數據，$Q_{1}=18$；上半部為末 $9$ 個數據，$Q_{3}=36$。</div>
+          <div class="p-step"><b>第 3 步.</b> 四分位距 $=36-18=18$。</div>
+          <div class="p-step"><b>第 4 步.</b> 眾數為 $15$（出現三次）。</div>
+          <div class="p-step"><b>第 5 步.</b> 大於 $15$ 的數據有 $15$ 個，故 $P=\dfrac{15}{19}$。</div>
+          <div class="p-ans">答案：(a) $28$　(b) $18$　(c) $\dfrac{15}{19}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P1_Q9.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
