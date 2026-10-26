@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第16題 · 兩圓重疊求陰影區域面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第16題</span>
+  <h1>兩圓重疊求陰影區域面積</h1>
+  <p class="sub">求積法 · 圓形與扇形面積 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在圖中，$AC$ 是圓 $ABCD$ 的一條直徑，而 $BD$ 與 $EF$ 是圓 $BEDF$ 的直徑。已知 $C$ 與 $E$ 位於 $AF$ 上。設 $G$ 為 $AF$ 與 $BD$ 的交點。若 $AG=30\text{ cm}$ 及 $CG=10\text{ cm}$，求陰影區域的面積，準確至最接近的 $\text{cm}^{2}$。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $209\text{ cm}^{2}$</li>
+      <li><span class="ol">B.</span> $367\text{ cm}^{2}$</li>
+      <li><span class="ol">C.</span> $383\text{ cm}^{2}$</li>
+      <li><span class="ol">D.</span> $540\text{ cm}^{2}$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_16.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由 $AC$ 求大圓半徑及 $HG$</div>
+      <div class="rule">
+        <span class="rule-name">直徑與半徑</span>
+        <span class="rule-math">\(r=\frac{AC}{2}\)</span>
+      </div>
+$A$、$G$、$C$ 共線且 $G$ 在 $A$ 與 $C$ 之間，故 \[AC=AG+CG=30+10=40\text{ cm}.\] 設 $H$ 為圓 $ABCD$ 的圓心，則 $AH=HC=20\text{ cm}$，於是 \[HG=HC-CG=20-10=10\text{ cm}.\]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">證明 $BD\perp AC$ 並求小圓半徑</div>
+      <div class="rule">
+        <span class="rule-name">對稱性與勾股定理</span>
+        <span class="rule-math">\(GB=\sqrt{HB^{2}-HG^{2}}\)</span>
+        <span class="rule-why">兩個圓都關於直線 $AF$（即直線 $AC$）對稱，故公共弦 $BD$ 垂直於連心線，$G$ 為垂足。</span>
+      </div>
+在直角三角形 $HGB$ 中，$HB=20$、$HG=10$：\[\cos\angle BHG=\frac{10}{20}=\frac12\ \Longrightarrow\ \angle BHG=60^{\circ},\] \[GB=\sqrt{20^{2}-10^{2}}=\sqrt{300}=10\sqrt{3}\text{ cm}.\] 因 $BD$ 是圓 $BEDF$ 的直徑，$G$ 就是該圓的圓心，故小圓半徑為 $10\sqrt{3}\text{ cm}$，且 $\angle BHD=120^{\circ}$、$BD=20\sqrt{3}\text{ cm}$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求兩圓的重疊部分</div>
+      <div class="rule">
+        <span class="rule-name">扇形與弓形面積</span>
+        <span class="rule-math">\(\text{弓形}=\frac{\theta}{360^{\circ}}\pi R^{2}-\frac12 R^{2}\sin\theta\)</span>
+      </div>
+公共弦 $BD$ 把重疊部分分成兩塊。大圓一邊（含 $C$）：弓形面積 \[=\frac{120}{360}\pi(20)^{2}-\frac12\cdot BD\cdot HG=\frac{400\pi}{3}-\frac12(20\sqrt3)(10)=\frac{400\pi}{3}-100\sqrt3.\] 小圓一邊：$BD$ 是直徑，故為半圓，面積 \[=\frac12\pi(10\sqrt3)^{2}=150\pi.\] 故重疊部分 \[=\frac{400\pi}{3}-100\sqrt3+150\pi=\frac{850\pi}{3}-100\sqrt3\approx716.9\text{ cm}^{2}.\]
+      <div class="hint">小圓的半徑是 $10\sqrt3$，平方後是 $300$，不是 $30$；$\frac12\pi(300)=150\pi$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">大圓面積減去重疊部分</div>
+大圓面積 $=\pi(20)^{2}=400\pi\approx1256.6\text{ cm}^{2}$。陰影是大圓以內、小圓以外的部分，故 \[400\pi-\left(\frac{850\pi}{3}-100\sqrt3\right)=\frac{350\pi}{3}+100\sqrt3\approx366.5+173.2=539.7\text{ cm}^{2}.\] 準確至最接近的 $\text{cm}^{2}$ 為 $540\text{ cm}^{2}$，即選 D。
+      <div class="hint">$367$ 正是漏掉三角形部分 $100\sqrt3$ 的結果，$383$ 則是漏算其中一個扇形，兩者都是干擾項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{350\pi}{3}+100\sqrt3\approx540\text{ cm}^{2}$（D）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在圖中，$AC$ 是圓 $ABCD$ 的直徑，$BD$ 與 $EF$ 是圓 $BEDF$ 的直徑，$C$ 與 $E$ 位於 $AF$ 上，$G$ 為 $AF$ 與 $BD$ 的交點。若 $AG=18\text{ cm}$ 及 $CG=6\text{ cm}$，求陰影區域的面積，準確至最接近的 $\text{cm}^{2}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC=18+6=24$，大圓半徑 $12\text{ cm}$，$HG=12-6=6\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\cos\angle BHG=\frac{6}{12}=\frac12$，故 $\angle BHG=60^{\circ}$、$\angle BHD=120^{\circ}$，小圓半徑 $GB=12\sin60^{\circ}=6\sqrt3\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 重疊部分 $=$ 大圓弓形 $+$ 小圓半圓 $=\left(\frac{120}{360}\pi(12)^{2}-\frac12(12\sqrt3)(6)\right)+\frac12\pi(6\sqrt3)^{2}=48\pi-36\sqrt3+54\pi=102\pi-36\sqrt3$。</div>
+          <div class="p-step"><b>第 4 步.</b> 陰影 $=\pi(12)^{2}-(102\pi-36\sqrt3)=42\pi+36\sqrt3\approx132.0+62.4=194.3\text{ cm}^{2}$，即約 $194\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：$42\pi+36\sqrt3\approx194\text{ cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第9題 · 餘式定理與奇偶次項對稱</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第9題</span>
+  <h1>餘式定理與奇偶次項對稱</h1>
+  <p class="sub">多項式 · 餘式定理 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $h(x)=ax^{6}+16x^{3}+b$，其中 $a$、$b$ 為常數。若 $h(x)$ 可被 $2x-3$ 整除，求 $h(x)$ 除以 $2x+3$ 時的餘數。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $-108$</li>
+      <li><span class="ol">B.</span> $-54$</li>
+      <li><span class="ol">C.</span> $54$</li>
+      <li><span class="ol">D.</span> $108$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用餘式定理寫出整除條件</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        <span class="rule-math">\(f(x) \text{ 除以 } (ax-b) \text{ 的餘數為 } f\left(\tfrac{b}{a}\right)\)</span>
+        <span class="rule-why">把除式 $2x-3$ 的根 $x=\tfrac{3}{2}$ 代入，餘數就是函數值。</span>
+      </div>
+$h(x)$ 可被 $2x-3$ 整除，即餘數為 $0$：\[h\left(\tfrac{3}{2}\right)=0\;\Longrightarrow\;a\left(\tfrac{3}{2}\right)^{6}+16\left(\tfrac{3}{2}\right)^{3}+b=0.\] 化簡得 \[\frac{729}{64}a+54+b=0.\]
+      <div class="hint">$16\left(\tfrac{3}{2}\right)^{3}=16\times\tfrac{27}{8}=54$，不要漏掉這個常數。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出所求餘數的表達式</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        <span class="rule-math">\(r=f\left(-\tfrac{b}{a}\right)\)</span>
+        <span class="rule-why">除式 $2x+3$ 的根為 $x=-\tfrac{3}{2}$。</span>
+      </div>
+由 $2x+3=0$ 得 $x=-\tfrac{3}{2}$，故所求餘數 \[r=h\left(-\tfrac{3}{2}\right)=a\left(\tfrac{3}{2}\right)^{6}-16\left(\tfrac{3}{2}\right)^{3}+b=\frac{729}{64}a-54+b.\]
+      <div class="hint">$a$ 與 $b$ 未知，不能直接求值，要把 $r$ 與已知的 $h\left(\tfrac{3}{2}\right)$ 連繫起來。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較 $h(x)$ 與 $h(-x)$ 找出對稱關係</div>
+      <div class="rule">
+        <span class="rule-name">奇偶次項的符號</span>
+        <span class="rule-math">\((-x)^{6}=x^{6},\quad (-x)^{3}=-x^{3}\)</span>
+      </div>
+偶次項與常數項在 $x\to-x$ 時不變，只有奇次項變號，所以 \[h(x)-h(-x)=\left(ax^{6}+16x^{3}+b\right)-\left(ax^{6}-16x^{3}+b\right)=32x^{3}.\] 這條恆等式把未知的 $a$、$b$ 完全消去。
+      <div class="hint">$a$、$b$ 在相減時一併抵銷，所以最終答案與 $a$、$b$ 無關。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入 $x=\tfrac{3}{2}$ 求餘數並驗算</div>
+取 $x=\tfrac{3}{2}$：\[h\left(\tfrac{3}{2}\right)-h\left(-\tfrac{3}{2}\right)=32\left(\tfrac{3}{2}\right)^{3}=32\times\frac{27}{8}=108,\] 即 $0-r=108$，故 $r=-108$。驗算：取 $a=0$、$b=-54$，則 $h(x)=16x^{3}-54$，$h\left(\tfrac{3}{2}\right)=54-54=0$（符合整除），$h\left(-\tfrac{3}{2}\right)=-54-54=-108$，與答案一致。
+      <div class="hint">餘數是 $h\left(-\tfrac{3}{2}\right)$ 而非 $-h\left(-\tfrac{3}{2}\right)$，正負號決定 A 與 D 的取捨。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$-108$（A）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $h(x)=ax^{6}+10x^{3}+b$，其中 $a$、$b$ 為常數。若 $h(x)$ 可被 $x-2$ 整除，求 $h(x)$ 除以 $x+2$ 時的餘數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 整除條件：$h(2)=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 所求餘數 $r=h(-2)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 對稱關係：$h(x)-h(-x)=20x^{3}$（偶次項與常數項抵銷）。</div>
+          <div class="p-step"><b>第 4 步.</b> 取 $x=2$：$0-r=20\times 8=160$，故 $r=-160$；驗算取 $a=0$、$b=-80$，$h(x)=10x^{3}-80$，$h(2)=0$、$h(-2)=-160$，相符。</div>
+          <div class="p-ans">答案：$-160$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

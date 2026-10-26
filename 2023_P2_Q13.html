@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第13題 · 聯變求值（平方與立方根）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第13題</span>
+  <h1>聯變求值（平方與立方根）</h1>
+  <p class="sub">變分 · 聯變 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $z$ 隨 $x$ 的平方及 $y$ 的立方根正變。當 $x=12$ 及 $y=64$ 時，$z=36$。當 $x=16$ 及 $y=729$ 時，$z=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $108$</li>
+      <li><span class="ol">B.</span> $144$</li>
+      <li><span class="ol">C.</span> $162$</li>
+      <li><span class="ol">D.</span> $216$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出聯變方程</div>
+      <div class="rule">
+        <span class="rule-name">聯變（正變）</span>
+        <span class="rule-math">\(z=k\,x^{2}\sqrt[3]{y}\)</span>
+        <span class="rule-why">「隨 $x$ 的平方及 $y$ 的立方根正變」即同時與這兩個量正變，故以乘積形式相連。</span>
+      </div>
+設 $k$ 為非零常數，則 \[z=k\,x^{2}\sqrt[3]{y}.\] 其中 $x^{2}$ 對應「$x$ 的平方」，$\sqrt[3]{y}$ 對應「$y$ 的立方根」。
+      <div class="hint">不要把「平方」寫成 $x$，也不要把立方根寫成 $y^{3}$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入第一組數據求 $k$</div>
+      <div class="rule">
+        <span class="rule-name">代入已知數據</span>
+        <span class="rule-math">\(z=k\,x^{2}\sqrt[3]{y}\)</span>
+      </div>
+代入 $x=12$、$y=64$、$z=36$：\[36=k(12)^{2}\sqrt[3]{64}=k\cdot144\cdot4=576k,\] 故 \[k=\frac{36}{576}=\frac{1}{16}.\]
+      <div class="hint">$\sqrt[3]{64}=4$（因 $4^{3}=64$），先把冪與根算好才不易出錯。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出完整的變分方程並驗算</div>
+\[z=\frac{1}{16}x^{2}\sqrt[3]{y}.\] 驗算常數：取 $x=12$、$y=64$，得 $\frac{1}{16}(144)(4)=36$，與題給 $z=36$ 相符。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入第二組數據並核對選項</div>
+當 $x=16$、$y=729$ 時，$16^{2}=256$、$\sqrt[3]{729}=9$，故 \[z=\frac{1}{16}\cdot256\cdot9=16\cdot9=144.\] $256\div16=16$ 可先約簡。與選項 B（$144$）完全一致。
+      <div class="hint">$729=9^{3}$，所以 $\sqrt[3]{729}=9$，不是 $243$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$z=144$（B）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $x$ 的平方及 $y$ 的立方根正變。當 $x=2$ 及 $y=27$ 時，$z=18$。當 $x=4$ 及 $y=64$ 時，$z=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $z=k x^{2}\sqrt[3]{y}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $x=2$、$y=27$、$z=18$：$18=k(4)(3)=12k$，故 $k=\frac{3}{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $x=4$、$y=64$：$z=\frac{3}{2}(16)(4)=96$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：以 $k=\frac{3}{2}$ 代回第一組數據得 $\frac{3}{2}(4)(3)=18$，相符。</div>
+          <div class="p-ans">答案：$z=96$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

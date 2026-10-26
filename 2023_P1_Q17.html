@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第17題 · 立體圖中兩平面的夾角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第17題</span>
+  <h1>立體圖中兩平面的夾角</h1>
+  <p class="sub">三角學 · 正弦定理與兩平面夾角 · 6 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p><b>(a)</b> 已知 $WXY$ 是一個三角形，其中 $WX=6\text{ cm}$、$XY=5\text{ cm}$ 及 $\angle WYX=70^\circ$。求 $\angle XWY$。<span class="marks">[2 分]</span></p>
+      <p><b>(b)</b> 圖 3 所示為角錐 $WXYZ$，其中 $WZ=XZ=YZ$。此角錐的底面就是 (a) 部所述的三角形 $WXY$。已知 $WZ$ 與三角形 $WXY$ 之間的夾角為 $30^\circ$。三角形 $WXY$ 與 $XYZ$ 之間的夾角是否超過 $45^\circ$？試解釋你的答案。<span class="marks">[4 分]</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2023_P1_Q17.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用正弦定理求 ∠XWY</div>
+      <div class="rule">
+        <span class="rule-name">正弦定理</span>
+        <span class="rule-math">\(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\)</span>
+        <span class="rule-why">已知兩邊（$WX=6$、$XY=5$）及其中一邊的對角（$\angle WYX=70^\circ$ 對邊為 $WX$），屬「兩邊一角」中的 SSA 情況，可用正弦定理。</span>
+      </div>
+在 $\triangle WXY$ 中，與 $XY=5$ 相對的是 $\angle XWY$，與 $WX=6$ 相對的是 $\angle WYX=70^\circ$，故
+      \[\frac{\sin\angle XWY}{XY}=\frac{\sin\angle WYX}{WX}\]
+      \[\sin\angle XWY=\frac{5\sin 70^\circ}{6}=\frac{5(0.93969)}{6}\approx 0.78308\]
+      由此得 $\angle XWY\approx 51.54^\circ$，或 $180^\circ-51.54^\circ=128.46^\circ$（正弦在 $0^\circ$ 至 $180^\circ$ 有兩個解，須逐一檢查）。
+      <div class="hint">SSA 一定要考慮兩個解，不可只取計算機顯示的銳角。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查並捨去鈍角解</div>
+若 $\angle XWY=128.46^\circ$，則
+      \[\angle XWY+\angle WYX=128.46^\circ+70^\circ=198.46^\circ>180^\circ\]
+      三角形內角和只有 $180^\circ$，故 $128.46^\circ$ 不合，捨去。於是
+      \[\angle XWY\approx 51.5^\circ\quad(\text{準確至三位有效數字})\]
+      驗算：第三個角 $\angle WXY=180^\circ-70^\circ-51.543^\circ=58.457^\circ$，由正弦定理 $WY=\dfrac{6\sin 58.457^\circ}{\sin 70^\circ}\approx 5.4417$；再用餘弦定理
+      \[XY^{2}=6^{2}+5.4417^{2}-2(6)(5.4417)\cos 51.543^\circ\approx 36+29.61-40.61=25.0\]
+      即 $XY\approx 5.0$，與題設相符。✔
+      <div class="hint">「正弦值相同」不等於「角相同」；$\sin\theta=\sin(180^\circ-\theta)$，所以要用內角和排除鈍角。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明 Z 的垂足是 △WXY 的外心</div>
+      <div class="rule">
+        <span class="rule-name">全等直角三角形（RHS）</span>
+        <span class="rule-math">\(PW=PX=PY\iff P\text{ 為 }\triangle WXY\text{ 的外心}\)</span>
+        <span class="rule-why">三條斜邊相等、且共用同一條垂直邊 $PZ$，故三個直角三角形全等，水平距離必相等。</span>
+      </div>
+設 $P$ 為 $Z$ 在平面 $WXY$ 上的垂足，則 $PZ\perp$ 平面 $WXY$，即 $PZ\perp PW$、$PZ\perp PX$、$PZ\perp PY$。
+      在直角三角形 $PWZ$、$PXZ$、$PYZ$ 中，$PZ$ 為公共邊，且 $WZ=XZ=YZ$（斜邊相等），故
+      \[PW=PX=PY\]
+      即 $P$ 到 $W$、$X$、$Y$ 三點等距，所以 $P$ 是 $\triangle WXY$ 的外心（三條邊的垂直平分線交點）。於是
+      \[PW=R=\frac{XY}{2\sin\angle XWY}=\frac{5}{2\sin 51.543^\circ}\approx 3.1925\]
+      <div class="hint">不要假設 $P$ 是重心或內心；「三條側棱等長」只保證垂足是外心。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">找出兩平面的夾角 ∠PMZ</div>
+      <div class="rule">
+        <span class="rule-name">兩平面的夾角</span>
+        <span class="rule-math">\(\text{沿交線 }XY\text{ 各作垂線，兩垂線的夾角即兩平面夾角}\)</span>
+        <span class="rule-why">平面 $WXY$ 與平面 $XYZ$ 的交線是 $XY$，故要在兩平面內各作一條垂直於 $XY$ 的直線。</span>
+      </div>
+設 $M$ 為 $XY$ 的中點。
+      因為 $PX=PY$（外心）且 $M$ 為中點，所以 $PM\perp XY$；
+      因為 $ZX=ZY$（題設）且 $M$ 為中點，所以 $ZM\perp XY$。
+      兩平面沿 $XY$ 相交，$MP$ 在平面 $WXY$ 內、$MZ$ 在平面 $XYZ$ 內，且兩者都垂直於交線 $XY$，故兩平面的夾角就是
+      \[\angle PMZ.\]
+      又 $P$ 在 $XY$ 的垂直平分線上，$PM$ 平分 $\angle XPY$，而 $\angle XPY$ 是弧 $XY$ 的圓心角、$\angle XWY$ 是同弧的圓周角，故 $\angle MPX=\tfrac12\angle XPY=\angle XWY$。在直角三角形 $PMX$ 中
+      \[MP=PX\cos\angle MPX=PW\cos\angle XWY\approx 3.1925\cos 51.543^\circ\approx 1.9855\]
+      <div class="hint">夾角要與交線 $XY$ 垂直才有意義；$\angle PZY$ 或 $\angle ZMY$ 之類都不是兩平面的夾角。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">由 30° 求高 PZ，再算 tan∠PMZ</div>
+      <div class="rule">
+        <span class="rule-name">直線與平面的夾角</span>
+        <span class="rule-math">\(\tan\theta=\frac{PZ}{PW},\quad \tan\angle PMZ=\frac{PZ}{MP}\)</span>
+        <span class="rule-why">$\angle PWZ$ 是 $WZ$ 與其在平面上的投影 $WP$ 的夾角，即直線與平面的夾角；$PZ\perp MP$ 亦使 $\triangle PMZ$ 為直角三角形。</span>
+      </div>
+因 $PZ\perp$ 平面 $WXY$，$WP$ 是 $WZ$ 在該平面上的投影，故 $WZ$ 與平面 $WXY$ 的夾角為 $\angle PWZ=30^\circ$。在直角三角形 $PWZ$ 中：
+      \[\tan 30^\circ=\frac{PZ}{PW}\;\Longrightarrow\;PZ=PW\tan 30^\circ\approx 3.1925(0.57735)\approx 1.8432\]
+      在直角三角形 $PMZ$ 中（$PZ\perp MP$）：
+      \[\tan\angle PMZ=\frac{PZ}{MP}=\frac{PW\tan 30^\circ}{PW\cos\angle XWY}=\frac{\tan 30^\circ}{\cos\angle XWY}\]
+      \[\tan\angle PMZ\approx\frac{0.57735}{0.62192}\approx 0.9283\]
+      驗算 $MP$：用畢氏定理 $MP=\sqrt{PW^{2}-XM^{2}}=\sqrt{3.1925^{2}-2.5^{2}}=\sqrt{10.192-6.25}\approx 1.9855$，與上一步一致；$PZ/MP=1.8432/1.9855\approx 0.9283$。✔
+      <div class="hint">注意分母是 $MP$（較短）而不是 $PW$；$P$、$M$、$W$ 不共線，$MP\neq PW$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">判斷夾角是否超過 45°</div>
+因為 $\tan 45^\circ=1$，而 $\tan$ 在 $0^\circ$ 至 $90^\circ$ 遞增，由
+      \[\tan\angle PMZ\approx 0.9283<1=\tan 45^\circ\]
+      可得 $\angle PMZ<45^\circ$，具體數值為
+      \[\angle PMZ\approx 42.87^\circ\approx 42.9^\circ\]
+      所以三角形 $WXY$ 與 $XYZ$ 之間的夾角**不超過** $45^\circ$。
+      另一角度理解：$\cos\angle XWY\approx0.622<1$，所以 $\dfrac{\tan 30^\circ}{\cos\angle XWY}$ 比 $\tan 30^\circ$ 略大，即 $\angle PMZ$ 略大於 $30^\circ$；但它仍小於 $\tan 45^\circ=1$，故夾角介乎 $30^\circ$ 與 $45^\circ$ 之間。
+      <div class="hint">題目問「是否超過」，必須明確回答「否／不超過」，並以 $\tan\angle PMZ<1$ 或角度數值作理由，只寫數值不算解釋。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\angle XWY\approx 51.5^\circ$（$128.5^\circ$ 因內角和超過 $180^\circ$ 而捨去）；(b) 否，$\tan\angle PMZ=\dfrac{\tan 30^\circ}{\cos\angle XWY}\approx 0.928<1$，故 $\angle PMZ\approx 42.9^\circ<45^\circ$，即夾角不超過 $45^\circ$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $\triangle WXY$ 中 $WX=7\text{ cm}$、$XY=6\text{ cm}$、$\angle WYX=65^\circ$。角錐 $WXYZ$ 中 $WZ=XZ=YZ$，底面為 $\triangle WXY$，且 $WZ$ 與平面 $WXY$ 的夾角為 $40^\circ$。(a) 求 $\angle XWY$；(b) 三角形 $WXY$ 與 $XYZ$ 的夾角是否超過 $45^\circ$？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 正弦定理：$\dfrac{\sin\angle XWY}{6}=\dfrac{\sin 65^\circ}{7}$，得 $\sin\angle XWY\approx 0.77684$，故 $\angle XWY\approx 50.97^\circ$ 或 $129.03^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> 捨去鈍角：$129.03^\circ+65^\circ=194.03^\circ>180^\circ$，故 $\angle XWY\approx 51.0^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> 垂足 $P$ 為外心，$PW=\dfrac{XY}{2\sin\angle XWY}=\dfrac{6}{2\sin 50.97^\circ}\approx 3.861$；取 $XY$ 中點 $M$，夾角為 $\angle PMZ$，且 $MP=PW\cos 50.97^\circ\approx 2.430$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $\angle PWZ=40^\circ$：$PZ=PW\tan 40^\circ\approx 3.240$，故 $\tan\angle PMZ=\dfrac{3.240}{2.430}\approx 1.333$。</div>
+          <div class="p-step"><b>第 5 步.</b> 因 $\tan\angle PMZ\approx 1.333>1$，得 $\angle PMZ\approx 53.1^\circ>45^\circ$，即夾角超過 $45^\circ$。</div>
+          <div class="p-ans">答案：(a) $\angle XWY\approx 51.0^\circ$；(b) 是，$\tan\angle PMZ=\dfrac{\tan 40^\circ}{\cos 50.97^\circ}\approx 1.333$，$\angle PMZ\approx 53.1^\circ>45^\circ$。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

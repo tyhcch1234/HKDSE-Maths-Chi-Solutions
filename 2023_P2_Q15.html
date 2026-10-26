@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第15題 · 等體積等表面積求圓柱半徑</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第15題</span>
+  <h1>等體積等表面積求圓柱半徑</h1>
+  <p class="sub">求積法 · 圓柱與正方體 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個實心正方體的邊長為 $60\text{ cm}$。一個實心直立圓柱的體積等於該正方體的體積，而該圓柱的曲面面積等於該正方體的總表面面積。求該圓柱的底半徑。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $20\text{ cm}$</li>
+      <li><span class="ol">B.</span> $30\text{ cm}$</li>
+      <li><span class="ol">C.</span> $76\text{ cm}$</li>
+      <li><span class="ol">D.</span> $172\text{ cm}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數並列出兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">圓柱的體積與曲面面積</span>
+        <span class="rule-math">\(V=\pi r^{2}h,\qquad A=2\pi r h\)</span>
+      </div>
+設圓柱的底半徑為 $r\text{ cm}$、高為 $h\text{ cm}$。正方體體積 $=60^{3}=216000\text{ cm}^{3}$，總表面面積 $=6(60)^{2}=21600\text{ cm}^{2}$。由「體積相等」與「曲面面積相等」得 \[\pi r^{2}h=216000\ \cdots(1),\qquad 2\pi rh=21600\ \cdots(2).\]
+      <div class="hint">曲面面積只計側面 $2\pi rh$，不包括兩個底圓。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡表面面積方程</div>
+把 (2) 兩邊除以 $2$：\[\pi r h=10800\ \cdots(3).\]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩式相除消去 $h$ 求 $r$</div>
+      <div class="rule">
+        <span class="rule-name">同類項相除</span>
+        <span class="rule-math">\(\frac{\pi r^{2}h}{\pi r h}=r\)</span>
+      </div>
+把 (1) 除以 (3)：\[\frac{\pi r^{2}h}{\pi r h}=\frac{216000}{10800}\;\Longrightarrow\;r=20.\] $\pi$ 與 $h$ 一同約去，所以不必先求 $h$。
+      <div class="hint">若先由 (3) 硬解 $h$ 再代入 (1)，會多出很多計算且容易出錯。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算並核對選項</div>
+由 (3)：$h=\dfrac{10800}{20\pi}=\dfrac{540}{\pi}\approx171.9\text{ cm}$。檢查體積：$\pi(20)^{2}\cdot\dfrac{540}{\pi}=400\cdot540=216000$ ✓；檢查曲面面積：$2\pi(20)\cdot\dfrac{540}{\pi}=21600$ ✓。故 $r=20\text{ cm}$，選 A。
+      <div class="hint">$172$ 是圓柱的高（約值），不是半徑，屬干擾項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$r=20\text{ cm}$（A）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個實心正方體的邊長為 $45\text{ cm}$。一個實心直立圓柱的體積等於該正方體的體積，而該圓柱的曲面面積等於該正方體的總表面面積。求該圓柱的底半徑。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設底半徑 $r$、高 $h$：$\pi r^{2}h=45^{3}=91125$，$2\pi rh=6(45)^{2}=12150$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡第二式：$\pi rh=6075$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩式相除：$r=\frac{91125}{6075}=15$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：$h=\frac{6075}{15\pi}=\frac{405}{\pi}$，體積 $=\pi(225)\cdot\frac{405}{\pi}=91125$ ✓，曲面面積 $=2\pi(15)\cdot\frac{405}{\pi}=12150$ ✓。</div>
+          <div class="p-ans">答案：$r=15\text{ cm}$（一般地 $r=\frac{a}{3}$，$a$ 為正方體邊長）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

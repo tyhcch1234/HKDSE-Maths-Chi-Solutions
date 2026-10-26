@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第12題 · 比例尺換算地圖上的面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第12題</span>
+  <h1>比例尺換算地圖上的面積</h1>
+  <p class="sub">比例尺 · 面積換算 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某地圖的比例尺為 $1:50000$。若某機場的實際面積為 $10\text{ km}^{2}$，則該機場在地圖上的面積是
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $2\text{ cm}^{2}$</li>
+      <li><span class="ol">B.</span> $4\text{ cm}^{2}$</li>
+      <li><span class="ol">C.</span> $20\text{ cm}^{2}$</li>
+      <li><span class="ol">D.</span> $40\text{ cm}^{2}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把長度比平方成面積比</div>
+      <div class="rule">
+        <span class="rule-name">相似圖形的面積比</span>
+        <span class="rule-math">\(\text{長度比}=1:n \;\Longrightarrow\; \text{面積比}=1:n^{2}\)</span>
+        <span class="rule-why">地圖與實地為相似圖形，邊長放大 $n$ 倍，面積便放大 $n^{2}$ 倍。</span>
+      </div>
+比例尺 $1:50000$ 是**長度**之比，所以面積比為 \[1:50000^{2}=1:2.5\times10^{9}.\] 換言之，地圖上 $1\text{ cm}^{2}$ 代表實地 $2.5\times10^{9}\text{ cm}^{2}$。
+      <div class="hint">最常見的錯誤是直接除以 $50000$（只用一次方），這樣會把答案放大 $50000$ 倍。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把實際面積化成平方厘米</div>
+      <div class="rule">
+        <span class="rule-name">長度單位換算</span>
+        <span class="rule-math">\(1\text{ km}=1000\text{ m}=10^{5}\text{ cm}\)</span>
+      </div>
+邊長換算要平方：\[1\text{ km}^{2}=\left(10^{5}\text{ cm}\right)^{2}=10^{10}\text{ cm}^{2},\] 故 \[10\text{ km}^{2}=10\times10^{10}=1.0\times10^{11}\text{ cm}^{2}.\]
+      <div class="hint">$1\text{ km}^{2}=10^{10}\text{ cm}^{2}$，不是 $10^{5}\text{ cm}^{2}$，面積的換算因子要平方。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">除以面積比求出地圖面積</div>
+地圖面積 $=\dfrac{\text{實際面積}}{50000^{2}}$：\[\text{地圖面積}=\frac{1.0\times10^{11}}{2.5\times10^{9}}=40\text{ cm}^{2}.\]
+      <div class="hint">$\dfrac{10^{11}}{2.5\times10^{9}}=\dfrac{100}{2.5}=40$，指數部分要先約簡。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">反向驗算並核對選項</div>
+把 $40\text{ cm}^{2}$ 還原：地圖上邊長 $\sqrt{40}\approx6.32\text{ cm}$ 的正方形，放大 $50000$ 倍後邊長為 $6.32\times50000\approx3.16\times10^{5}\text{ cm}=3.16\text{ km}$，面積 $\approx3.16^{2}\approx10\text{ km}^{2}$ ✓。故答案為 $40\text{ cm}^{2}$，即選項 D。
+      <div class="hint">選項 $4\text{ cm}^{2}$ 是漏掉平方（除以 $50000$ 後再錯位）的典型干擾項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$40\text{ cm}^{2}$（D）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某地圖的比例尺為 $1:20000$。若某湖泊在地圖上的面積為 $5\text{ cm}^{2}$，求該湖泊的實際面積（以 $\text{km}^{2}$ 表示）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 面積比 $=1:20000^{2}=1:4\times10^{8}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 實際面積 $=5\times4\times10^{8}=2\times10^{9}\text{ cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 換算：$1\text{ km}^{2}=10^{10}\text{ cm}^{2}$，故實際面積 $=\dfrac{2\times10^{9}}{10^{10}}=0.2\text{ km}^{2}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：$0.2\text{ km}^{2}=2\times10^{9}\text{ cm}^{2}$，除以 $4\times10^{8}$ 得 $5\text{ cm}^{2}$ ✓。</div>
+          <div class="p-ans">答案：$0.2\text{ km}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

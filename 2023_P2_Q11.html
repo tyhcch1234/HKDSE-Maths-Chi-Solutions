@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第11題 · 標價加價與折扣求成本</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第11題</span>
+  <h1>標價加價與折扣求成本</h1>
+  <p class="sub">百分數 · 標價與折扣 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一件外套的標價比成本高 $60\%$。若以標價的七五折（即減價 $25\%$）售出該外套，可獲利 $104$ 元。求該外套的成本。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $416$ 元</li>
+      <li><span class="ol">B.</span> $520$ 元</li>
+      <li><span class="ol">C.</span> $728$ 元</li>
+      <li><span class="ol">D.</span> $832$ 元</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設成本為未知數</div>
+設外套的成本為 $C$ 元。由於標價與售價都是以成本為基數按百分數變化，把 $C$ 設為未知數最直接，最後只需解一個一元一次方程。
+      <div class="hint">不要一開始就把成本當作 $100$；用 $C$ 表示，方程式才能一步列出。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由「高 $60\%$」求標價</div>
+      <div class="rule">
+        <span class="rule-name">百分數增減</span>
+        <span class="rule-math">\(\text{新值}=\text{原值}\times(1+r)\)</span>
+      </div>
+標價比成本高 $60\%$，即標價是成本的 $1+60\%=1.6$ 倍：\[\text{標價}=C(1+60\%)=1.6C.\]
+      <div class="hint">「高 $60\%$」是乘 $1.6$，不是乘 $0.6$；乘 $0.6$ 會變成「只有成本的六成」。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $25\%$ 折扣求售價</div>
+      <div class="rule">
+        <span class="rule-name">折扣</span>
+        <span class="rule-math">\(\text{售價}=\text{標價}\times(1-d)\)</span>
+      </div>
+折扣以標價為基數，減 $25\%$ 即付 $75\%$：\[\text{售價}=1.6C\times(1-25\%)=1.6C\times0.75=1.2C.\]
+      <div class="hint">折扣一定乘在標價上，不是乘在成本上，否則會低估售價。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用利潤列方程求解並驗算</div>
+      <div class="rule">
+        <span class="rule-name">利潤</span>
+        <span class="rule-math">\(\text{利潤}=\text{售價}-\text{成本}\)</span>
+      </div>
+由利潤為 $104$ 元：\[1.2C-C=104\;\Longrightarrow\;0.2C=104\;\Longrightarrow\;C=\frac{104}{0.2}=520.\] 驗算：成本 $520$ 元，標價 $=1.6\times520=832$，售價 $=0.75\times832=624$，利潤 $=624-520=104$ ✓，與題意相符。
+      <div class="hint">其餘選項都是過程中的中間量：$416$ 元是 $0.8\times520$、$832$ 元是標價、$728$ 元是 $1.4\times520$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$520$ 元（B）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一本書的標價比成本高 $40\%$，書店以標價八折售出，結果獲利 $12$ 元。求該書的成本。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設成本為 $C$，標價 $=C(1+40\%)=1.4C$。</div>
+          <div class="p-step"><b>第 2 步.</b> 八折即付 $80\%$：售價 $=1.4C\times0.8=1.12C$。</div>
+          <div class="p-step"><b>第 3 步.</b> 利潤 $=1.12C-C=0.12C=12$，故 $C=100$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：標價 $140$ 元、售價 $112$ 元、利潤 $112-100=12$ ✓。</div>
+          <div class="p-ans">答案：$100$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

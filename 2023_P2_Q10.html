@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第10題 · 由頂點式判斷拋物線性質</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第10題</span>
+  <h1>由頂點式判斷拋物線性質</h1>
+  <p class="sub">二次函數 · 圖像性質 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下列哪一項關於 $y=5+(x-3)^{2}$ 的圖像的描述是正確的？
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> 圖像開口向下。</li>
+      <li><span class="ol">B.</span> 圖像的 $x$ 截距為 $3$。</li>
+      <li><span class="ol">C.</span> 圖像的 $y$ 截距為 $5$。</li>
+      <li><span class="ol">D.</span> 圖像經過點 $(3,5)$。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">化成頂點式讀出頂點</div>
+      <div class="rule">
+        <span class="rule-name">頂點式</span>
+        <span class="rule-math">\(y=a(x-h)^{2}+k \text{ 的頂點為 } (h,k)\)</span>
+      </div>
+把題目寫成標準形式：\[y=5+(x-3)^{2}=1\cdot(x-3)^{2}+5,\] 對照得 $a=1$、$h=3$、$k=5$，故頂點為 $(3,5)$，對稱軸為 $x=3$。
+      <div class="hint">$k=5$ 是頂點的 $y$ 坐標（圖像的最低點），不是 $y$ 截距。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $a$ 的正負檢驗選項 A</div>
+      <div class="rule">
+        <span class="rule-name">開口方向</span>
+        <span class="rule-math">\(a>0 \text{ 開口向上};\quad a<0 \text{ 開口向下}\)</span>
+      </div>
+本題 $a=1>0$，所以圖像開口**向上**，$(3,5)$ 是最低點。選項 A 說「開口向下」，與 $a=1$ 矛盾，故 A 錯誤。
+      <div class="hint">開口方向只取決於 $a$ 的正負；即使頂點的 $y$ 坐標是正數，$a>0$ 仍然是開口向上。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $x$ 截距與 $y$ 截距檢驗 B、C</div>
+令 $y=0$：\[(x-3)^{2}+5=0\;\Longrightarrow\;(x-3)^{2}=-5,\] 任何實數的平方均非負，故無實數解，圖像與 $x$ 軸不相交（沒有 $x$ 截距）；$x=3$ 只是頂點的 $x$ 坐標，不是截距，B 錯誤。再令 $x=0$：\[y=(0-3)^{2}+5=9+5=14,\] 故 $y$ 截距為 $14$ 而非 $5$，C 錯誤。
+      <div class="hint">「$x$ 截距為 $a$」的意思是圖像經過 $(a,0)$，必須解 $y=0$，不能照抄頂點的 $x$ 坐標。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入點 $(3,5)$ 檢驗 D 並驗算</div>
+把 $x=3$ 代入：\[y=(3-3)^{2}+5=0+5=5,\] 所以點 $(3,5)$ 在圖像上（它正是頂點），D 正確。驗算：展開得 $y=x^{2}-6x+14$，判別式 $=(-6)^{2}-4(1)(14)=36-56=-20<0$，確認無 $x$ 截距；又 $x=0$ 時 $y=14$，與上一步一致。
+      <div class="hint">四個選項要逐一用定義核對：開口看 $a$、$x$ 截距解 $y=0$、$y$ 截距代 $x=0$、點是否在圖像上則直接代入。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>圖像經過點 $(3,5)$（D）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列哪一項關於 $y=4-(x+2)^{2}$ 的圖像的描述是正確的？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $y=-(x+2)^{2}+4$，故 $a=-1$、頂點為 $(-2,4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a=-1<0$，圖像開口向下，故「開口向上」錯誤。</div>
+          <div class="p-step"><b>第 3 步.</b> 令 $y=0$：$(x+2)^{2}=4$，得 $x=0$ 或 $x=-4$，$x$ 截距為 $0$ 與 $-4$，不是 $-2$。</div>
+          <div class="p-step"><b>第 4 步.</b> 令 $x=0$：$y=4-4=0$，$y$ 截距為 $0$ 而非 $4$；代 $x=-2$ 得 $y=4$，故 $(-2,4)$ 在圖像上，只有該項成立。</div>
+          <div class="p-ans">答案：$(-2,4)$ 在圖像上（D）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

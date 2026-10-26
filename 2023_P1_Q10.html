@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第10題 · 垂直平分線軌跡與圓方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第10題</span>
+  <h1>垂直平分線軌跡與圓方程</h1>
+  <p class="sub">坐標幾何 · 軌跡與圓 · 6 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $A$ 與 $B$ 為直角坐標平面上的兩個相異點。設 $P$ 為直角坐標平面上的一個動點，使 $P$ 與 $A$ 及 $B$ 的距離相等。記 $P$ 的軌跡為 $\Gamma$。<br><br><b>(a)</b> 描述 $\Gamma$ 與 $AB$ 之間的幾何關係。<span class="marks">[1 分]</span><br><br><b>(b)</b> 假設 $A$ 的坐標為 $(2,-4)$，且 $\Gamma$ 的方程為 $3x+y-12=0$。求<br>&nbsp;&nbsp;(i) 通過 $A$ 與 $B$ 的直線的方程，<br>&nbsp;&nbsp;(ii) 以 $AB$ 為直徑的圓的方程。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由「距離相等」認出軌跡</div>
+      <div class="rule">
+        <span class="rule-name">垂直平分線的判別</span>
+        <span class="rule-math">\(PA=PB\)</span>
+        <span class="rule-why">與線段兩端距離相等的點，必定落在該線段的垂直平分線上；反之，垂直平分線上任一點都與兩端等距。</span>
+      </div>
+題目給出 $PA=PB$，即 $P$ 到 $A$、$B$ 兩點的距離永遠相等，所以 $P$ 恆在 $AB$ 的垂直平分線上。
+反過來，設 $Q$ 為 $AB$ 的垂直平分線上任一點，$M$ 為 $AB$ 的中點，則 $AM=BM$、$\angle QMA=\angle QMB=90^\circ$、$QM$ 為公共邊，故 $\triangle QMA\cong\triangle QMB$（SAS），得 $QA=QB$，即整條垂直平分線上的點都符合條件。
+所以 $\Gamma$ 就是 $AB$ 的垂直平分線：一條通過 $AB$ 中點、且與 $AB$ 垂直的直線。
+      <div class="hint">只寫「$\Gamma$ 是一條直線」只得部分分數；必須點出它「垂直」於 $AB$ 且「平分」$AB$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由垂直關係求 $AB$ 的斜率</div>
+      <div class="rule">
+        <span class="rule-name">垂直直線的斜率關係</span>
+        <span class="rule-math">\(m_1m_2=-1\)</span>
+        <span class="rule-why">兩條互相垂直的直線（均非鉛垂線）斜率之積為 $-1$。</span>
+      </div>
+把 $\Gamma:\;3x+y-12=0$ 改寫為斜截式：
+\[y=-3x+12,\]
+故 $\Gamma$ 的斜率為 $-3$。
+因為 $\Gamma\perp AB$，設 $AB$ 的斜率為 $m$，則
+\[-3\times m=-1 \;\Longrightarrow\; m=\frac{1}{3}.\]
+驗算：$(-3)\times\dfrac{1}{3}=-1$，符合垂直條件。
+      <div class="hint">負倒數是「取倒數再變號」：$-3$ 的負倒數是 $\dfrac{1}{3}$，不是 $-\dfrac{1}{3}$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出 (b)(i) 中 $AB$ 的方程</div>
+      <div class="rule">
+        <span class="rule-name">點斜式</span>
+        <span class="rule-math">\(y-y_1=m(x-x_1)\)</span>
+      </div>
+$AB$ 通過 $A(2,-4)$，斜率為 $\dfrac{1}{3}$：
+\[y-(-4)=\frac{1}{3}(x-2)\]
+兩邊乘以 $3$：
+\[3y+12=x-2 \;\Longrightarrow\; x-3y-14=0.\]
+驗算：代入 $A(2,-4)$，得 $2-3(-4)-14=2+12-14=0$，$A$ 確在線上。
+      <div class="hint">最後要寫成一般式 $ax+by+c=0$；係數化簡為整數更符合標準答案形式。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求圓心（$AB$ 的中點）</div>
+      <div class="rule">
+        <span class="rule-name">中點公式</span>
+        <span class="rule-math">\(\left(\frac{x_1+x_2}{2},\ \frac{y_1+y_2}{2}\right)\)</span>
+        <span class="rule-why">以 $AB$ 為直徑的圓，圓心就是 $AB$ 的中點；而中點同時在 $AB$ 與其垂直平分線 $\Gamma$ 上。</span>
+      </div>
+圓心 $C$ 是 $AB$ 與 $\Gamma$ 的交點，解聯立方程：
+\[\begin{cases}3x+y-12=0\\[2pt] x-3y-14=0\end{cases}\]
+由第二式得 $x=3y+14$，代入第一式：
+\[3(3y+14)+y-12=0 \;\Longrightarrow\; 10y+30=0 \;\Longrightarrow\; y=-3,\]
+\[x=3(-3)+14=5.\]
+故圓心 $C=(5,-3)$。
+驗算：$3(5)+(-3)-12=15-3-12=0$，且 $5-3(-3)-14=5+9-14=0$，兩式同時成立。
+      <div class="hint">圓心不是原點，也不是 $A$；先聯立兩線才不會把圓心與 $A$ 混淆。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">求直徑另一端 $B$ 與半徑</div>
+      <div class="rule">
+        <span class="rule-name">兩點距離公式</span>
+        <span class="rule-math">\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\)</span>
+      </div>
+$C$ 是 $AB$ 的中點，故 $B=2C-A$：
+\[B=\left(2(5)-2,\;2(-3)-(-4)\right)=(8,-2).\]
+半徑 $r=CA$：
+\[r=\sqrt{(5-2)^2+(-3+4)^2}=\sqrt{9+1}=\sqrt{10}.\]
+驗算：$CB=\sqrt{(8-5)^2+(-2+3)^2}=\sqrt{9+1}=\sqrt{10}$，與 $CA$ 相等，且 $B$ 滿足 $8-3(-2)-14=0$，確在直線 $AB$ 上。
+      <div class="hint">半徑是「圓心到圓上一點」的距離；用 $C$ 到 $A$ 或 $C$ 到 $B$ 計算都應得到同一結果。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">寫出圓的方程並覆核</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        <span class="rule-math">\((x-h)^2+(y-k)^2=r^2\)</span>
+        <span class="rule-why">圓心 $(h,k)$、半徑 $r$ 的圓，其上每一點與圓心的距離都等於 $r$。</span>
+      </div>
+圓心 $C(5,-3)$、半徑 $r=\sqrt{10}$，故
+\[(x-5)^2+(y+3)^2=10.\]
+展開覆核：$x^2-10x+25+y^2+6y+9=10$，即 $x^2+y^2-10x+6y+24=0$。
+代入 $A(2,-4)$：$4+16-20-24+24=0$；代入 $B(8,-2)$：$64+4-80-12+24=0$。兩端點都在圓上。
+      <div class="hint">留意 $(y+3)^2$ 的正負號：圓心縱坐標是 $-3$，所以是 $y+3$ 而非 $y-3$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\Gamma$ 是 $AB$ 的垂直平分線；(b)(i) $x-3y-14=0$；(b)(ii) $(x-5)^2+(y+3)^2=10$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $A$ 與 $B$ 為兩個相異點，動點 $P$ 與 $A$、$B$ 等距，其軌跡 $\Gamma$ 的方程為 $x+y-4=0$。若 $A$ 的坐標為 $(1,-1)$，求 (i) 直線 $AB$ 的方程；(ii) 以 $AB$ 為直徑的圓的方程。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $\Gamma:\;x+y-4=0$ 得斜率 $-1$，故 $AB$ 的斜率為 $-1$ 的負倒數，即 $1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 用點斜式：$y+1=1(x-1)$，得 $x-y-2=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 圓心是 $AB$ 與 $\Gamma$ 的交點，解聯立得 $x=3,\;y=1$，即 $C(3,1)$；$B=2C-A=(5,3)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 半徑 $r=\sqrt{(3-1)^2+(1+1)^2}=\sqrt{8}$，故圓的方程為 $(x-3)^2+(y-1)^2=8$。</div>
+          <div class="p-ans">答案：(i) $x-y-2=0$；(ii) $(x-3)^2+(y-1)^2=8$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

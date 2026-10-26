@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第14題 · 由遞推關係逆推數列的項</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第14題</span>
+  <h1>由遞推關係逆推數列的項</h1>
+  <p class="sub">數列 · 遞推關係 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $a_{n}$ 為某數列的第 $n$ 項。若 $a_{6}=23$、$a_{8}=60$，且對任意正整數 $n$ 都有 $a_{n+2}=a_{n}+a_{n+1}$，則 $a_{3}=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $4$</li>
+      <li><span class="ol">B.</span> $5$</li>
+      <li><span class="ol">C.</span> $9$</li>
+      <li><span class="ol">D.</span> $14$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把遞推式改寫成逆推式</div>
+      <div class="rule">
+        <span class="rule-name">遞推關係的移項</span>
+        <span class="rule-math">\(a_{n+2}=a_{n}+a_{n+1}\;\Longrightarrow\;a_{n}=a_{n+2}-a_{n+1}\)</span>
+        <span class="rule-why">每一項等於前兩項之和，因此「前一項 = 後一項減再後一項」，可由已知的後面項向左逆推。</span>
+      </div>
+由 $a_{n+2}=a_{n}+a_{n+1}$，把 $a_{n+1}$ 移到另一邊：\[a_{n}=a_{n+2}-a_{n+1}.\] 這樣便可由 $a_{8}$、$a_{6}$ 逐步退回 $a_{3}$。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">先求 $a_{7}$</div>
+取 $n=6$：由 $a_{6}=a_{8}-a_{7}$ 得 \[a_{7}=a_{8}-a_{6}=60-23=37.\]
+      <div class="hint">是「後面減前面」，不是相加：$a_{7}\neq 60+23$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">再求 $a_{5}$ 與 $a_{4}$</div>
+取 $n=5$：\[a_{5}=a_{7}-a_{6}=37-23=14.\] 取 $n=4$：\[a_{4}=a_{6}-a_{5}=23-14=9.\]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $a_{3}$ 並整段驗算</div>
+取 $n=3$：\[a_{3}=a_{5}-a_{4}=14-9=5.\] 驗算：$5+9=14=a_{5}$，$9+14=23=a_{6}$，$14+23=37=a_{7}$，$23+37=60=a_{8}$，全部符合。故 $a_{3}=5$，選 B。
+      <div class="hint">選項 $14$ 其實是 $a_{5}$、$9$ 是 $a_{4}$，都是中途算出的項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$a_{3}=5$（B）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a_{n}$ 為某數列的第 $n$ 項。若 $a_{5}=13$、$a_{7}=34$，且對任意正整數 $n$ 都有 $a_{n+2}=a_{n}+a_{n+1}$，則 $a_{3}=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 改寫為 $a_{n}=a_{n+2}-a_{n+1}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 取 $n=5$：$a_{6}=a_{7}-a_{5}=34-13=21$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取 $n=4$：$a_{4}=a_{6}-a_{5}=21-13=8$。</div>
+          <div class="p-step"><b>第 4 步.</b> 取 $n=3$：$a_{3}=a_{5}-a_{4}=13-8=5$。驗算：$5+8=13$、$8+13=21$、$13+21=34$，全部符合。</div>
+          <div class="p-ans">答案：$a_{3}=5$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

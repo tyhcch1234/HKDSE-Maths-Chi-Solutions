@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第7題 · 有效數字求取值範圍</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第7題</span>
+  <h1>有效數字求取值範圍</h1>
+  <p class="sub">估算與誤差 · 有效數字 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $y=73.8$（準確至三位有效數字），求 $y$ 的取值範圍。
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $73.75\le y<73.8$</li>
+      <li><span class="ol">B.</span> $73.75<y\le73.8$</li>
+      <li><span class="ol">C.</span> $73.75\le y<73.85$</li>
+      <li><span class="ol">D.</span> $73.8\le y<73.85$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出第三位有效數字的位置</div>
+      <div class="rule">
+        <span class="rule-name">有效數字的位值</span>
+        <span class="rule-math">\(\text{最大誤差}=\frac{\text{最後一位有效數字的位值}}{2}\)</span>
+      </div>
+$73.8$ 的三個有效數字順序為 $7$、$3$、$8$，第三位有效數字 $8$ 位於小數後第一位（十分位），其位值為 $0.1$。
+      <div class="hint">捨入單位等於最後一位有效數字的位值，本題是 $0.1$，不是 $1$，也不是 $0.01$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求最大誤差</div>
+最大誤差\[=\frac{0.1}{2}=0.05.\]即真值與 $73.8$ 相差必定小於 $0.05$。
+      <div class="hint">「準確至最接近的 $0.1$」代表誤差嚴格小於半個單位。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出取值範圍</div>
+      <div class="rule">
+        <span class="rule-name">捨入區間</span>
+        <span class="rule-math">\(a-\frac{h}{2}\le x<a+\frac{h}{2}\)</span>
+      </div>
+\[73.8-0.05\le y<73.8+0.05,\]即\[73.75\le y<73.85.\]
+      <div class="hint">下限用「$\le$」、上限用「$<$」，兩端不等號不同是這題的關鍵。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查兩個端點並核對選項</div>
+$y=73.75$：捨入至最接近的 $0.1$ 得 $73.8$（五入），故 $73.75$ 要包括。$y=73.85$：捨入得 $73.9$，不是 $73.8$，故 $73.85$ 不包括。$y=73.82$ 亦可捨入得 $73.8$，可見區間必須延伸到 $73.85$，選項 A、B 只到 $73.8$，把 $73.82$ 這類值錯誤排除。故選 C。
+      <div class="hint">用 $73.82$ 這類中間值測試，可立即淘汰 A、B、D。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$73.75\le y<73.85$（C）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $z=0.0468$（準確至三位有效數字），求 $z$ 的取值範圍。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $0.0468$ 的有效數字為 $4$、$6$、$8$，最後一位 $8$ 位於小數後第四位，位值為 $0.0001$。</div>
+          <div class="p-step"><b>第 2 步.</b> 最大誤差 $=0.0001\div2=0.00005$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取值範圍為 $0.0468-0.00005\le z<0.0468+0.00005$，即 $0.04675\le z<0.04685$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：$0.04675$ 五入得 $0.0468$（包括）；$0.04685$ 得 $0.0469$（不包括），與「$<$」一致。</div>
+          <div class="p-ans">答案：$0.04675\le z<0.04685$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第5題 · 恆等式比較係數求 d</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第5題</span>
+  <h1>恆等式比較係數求 d</h1>
+  <p class="sub">多項式 · 恆等式與比較係數 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $c$ 與 $d$ 均為常數，且\[(x+2)(x+c)+12 \equiv x(x+d)+6c(x+1),\]則 $d=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $-13$</li>
+      <li><span class="ol">B.</span> $-3$</li>
+      <li><span class="ol">C.</span> $3$</li>
+      <li><span class="ol">D.</span> $17$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開恆等式左邊</div>
+      <div class="rule">
+        <span class="rule-name">分配律（展開兩個括號）</span>
+        <span class="rule-math">\((p+q)(r+s)=pr+ps+qr+qs\)</span>
+        <span class="rule-why">先把左邊化成 $x^{2}$、$x$ 與常數三部分，才可與右邊逐項比較。</span>
+      </div>
+\[(x+2)(x+c)+12=x^{2}+cx+2x+2c+12=x^{2}+(c+2)x+(2c+12).\]
+      <div class="hint">兩個括號要全乘：$x\cdot x$、$x\cdot c$、$2\cdot x$、$2\cdot c$ 共四項，最後加上常數 $12$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開恆等式右邊</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        <span class="rule-math">\(a(b+c)=ab+ac\)</span>
+      </div>
+\[x(x+d)+6c(x+1)=x^{2}+dx+6cx+6c=x^{2}+(6c+d)x+6c.\]
+      <div class="hint">$6c(x+1)$ 的常數項是 $6c\times1=6c$，不要漏掉。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較係數列出方程組</div>
+      <div class="rule">
+        <span class="rule-name">恆等式的定義</span>
+        <span class="rule-math">\(ax^{2}+bx+c \equiv a'x^{2}+b'x+c' \iff a=a',\;b=b',\;c=c'\)</span>
+        <span class="rule-why">式子對所有 $x$ 都成立，故同類項的係數必須相等。</span>
+      </div>
+兩邊的 $x^{2}$ 係數同為 $1$，自動相等。比較 $x$ 的係數及常數項：\[\begin{cases} c+2=6c+d & \cdots(1)\\ 2c+12=6c & \cdots(2)\end{cases}\]
+      <div class="hint">常數項的方程 (2) 只有 $c$ 一個未知數，先解它最省時。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">由 (2) 求 c，再代入 (1) 求 d</div>
+      <div class="rule">
+        <span class="rule-name">解一元一次方程</span>
+        <span class="rule-math">\(ax=b \;\Longrightarrow\; x=\frac{b}{a}\;(a\neq0)\)</span>
+      </div>
+由 (2)：\[2c+12=6c \;\Longrightarrow\; 12=4c \;\Longrightarrow\; c=3.\]代入 (1)：\[3+2=6(3)+d \;\Longrightarrow\; 5=18+d \;\Longrightarrow\; d=-13.\]驗算：取 $c=3,\;d=-13$，左邊 $=x^{2}+5x+18$，右邊 $=x^{2}+(18-13)x+18=x^{2}+5x+18$，兩邊完全相同，與選項 A 一致。
+      <div class="hint">求得的 $d$ 要代回整個恆等式核對；$17$ 是漏掉負號的干擾項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$d=-13$（A）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $p$ 與 $q$ 均為常數，且 $(x+3)(x+p)+6 \equiv x(x+q)+4p(x+1)$，求 $q$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開左邊：$(x+3)(x+p)+6=x^{2}+(p+3)x+(3p+6)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開右邊：$x(x+q)+4p(x+1)=x^{2}+(q+4p)x+4p$。</div>
+          <div class="p-step"><b>第 3 步.</b> 比較常數項：$3p+6=4p$，得 $p=6$。</div>
+          <div class="p-step"><b>第 4 步.</b> 比較 $x$ 的係數：$p+3=q+4p$，即 $9=q+24$，故 $q=-15$。驗算：$p=6$ 時左邊 $=x^{2}+9x+24$，右邊 $=x^{2}-15x+24x+24=x^{2}+9x+24$，相符。</div>
+          <div class="p-ans">答案：$q=-15$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2023_P2_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
