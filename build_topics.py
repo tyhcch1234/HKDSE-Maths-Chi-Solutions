@@ -121,8 +121,9 @@ def parse(html):
 
 
 def key(f):
+    """排序：年份 → 卷 → 題號（皆由小至大）。"""
     m = re.match(r'(\d{4})_P(\d)_Q(\d+)\.html', f)
-    return (-int(m.group(1)), int(m.group(2)), int(m.group(3))) if m else (0, 9, 999)
+    return (int(m.group(1)), int(m.group(2)), int(m.group(3))) if m else (9999, 9, 999)
 
 
 def main():
@@ -178,6 +179,8 @@ def main():
 
     total_pages = len(glob.glob("20*_P*_Q*.html"))
     html = re.sub(r'共 \d+ 題', f'共 {total_pages} 題', html, count=1)
+    html = re.sub(r'(<p class="sub">[^<]*?)</p>',
+                  r'\1 · 排序：年份 → 卷 → 題號</p>', html, count=1)
 
     start = html.index('<h2 class="topic-head">')
     end = html.rindex('</div>') + len('</div>')
