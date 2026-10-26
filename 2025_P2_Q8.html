@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第8題 · 函數值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第8題</span>
+    <h1>奇次項自動抵消</h1>
+    <p class="sub">函數及其圖像 · 函數值與對稱</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=x^{2}+7x+k$，其中 $k$ 為常數。若 $f(4)+f(-4)=38$，求 $k$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$-3$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$6$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分別求 $f(4)$ 與 $f(-4)$</div>
+      <div class="rule">
+        <span class="rule-name">函數值</span>
+        把 $x$ 代入函數式。
+      </div>
+      <p>$f(4)=16+28+k=44+k$</p>
+      <p>$f(-4)=16-28+k=-12+k$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">相加</div>
+      <div class="rule">
+        <span class="rule-name">同類項合併</span>
+        $x^{2}$ 項相同，一次項互相抵消。
+      </div>
+      <p>$$f(4)+f(-4)=(44+k)+(-12+k)=32+2k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程</div>
+      <div class="rule">
+        <span class="rule-name">解一元一次方程</span>
+        兩邊減 $32$，再除 $2$。
+      </div>
+      <p>$$32+2k=38\;\Longrightarrow\;2k=6\;\Longrightarrow\;k=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算</div>
+      <div class="rule">
+        <span class="rule-name">代入檢驗</span>
+        以 $k=3$ 重算。
+      </div>
+      <p>$f(4)=47$、$f(-4)=-9$，和為 $38$ ✓，答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$k=3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=x^{2}+5x+k$。若 $f(3)+f(-3)=40$，求 $k$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$11$</li><li><span class="ol">B</span>$9$</li><li><span class="ol">C</span>$-11$</li><li><span class="ol">D</span>$20$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(3)=9+15+k=24+k$，$f(-3)=9-15+k=-6+k$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相加：$18+2k=40$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2k=22$，故 $k=11$。</div>
+          <div class="p-ans">答案：<b>A</b>（$k=11$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

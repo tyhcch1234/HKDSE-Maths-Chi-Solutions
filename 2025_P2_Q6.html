@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第6題 · 捨入誤差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第6題</span>
+    <h1>最大絕對誤差是半個單位</h1>
+    <p class="sub">估算、近似與誤差 · 最大絕對誤差與取值範圍</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $x=5.67$（準確至二位小數），求 $x$ 的取值範圍。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5.66<x\leq 5.68$</li><li><span class="ol">B</span>$5.66\leq x<5.68$</li><li><span class="ol">C</span>$5.665<x\leq 5.675$</li><li><span class="ol">D</span>$5.665\leq x<5.675$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出捨入單位</div>
+      <div class="rule">
+        <span class="rule-name">捨入</span>
+        準確至二位小數，單位是 $0.01$。
+      </div>
+      <p>$5.67$ 是準確至二位小數，最小刻度為 $0.01$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">計算最大絕對誤差</div>
+      <div class="rule">
+        <span class="rule-name">最大絕對誤差</span>
+        最大絕對誤差 $=\dfrac{\text{捨入單位}}{2}$。
+      </div>
+      <p>$$\text{最大絕對誤差}=\frac{0.01}{2}=0.005$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出上下限</div>
+      <div class="rule">
+        <span class="rule-name">取值範圍</span>
+        下限 $=5.67-0.005$，上限 $=5.67+0.005$。
+      </div>
+      <p>下限 $=5.665$，上限 $=5.675$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷端點是否包括</div>
+      <div class="rule">
+        <span class="rule-name">端點檢驗</span>
+        下界包括（本身會捨入成 $5.67$），上界不包括（會捨入成 $5.68$）。
+      </div>
+      <p>$5.665$ 捨入至二位小數得 $5.67$ ✓，故包括；</p>
+      <p>$5.675$ 會進位成 $5.68$ ✗，故不包括。</p>
+      <p>$$5.665\leq x<5.675$$</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$5.665\leq x<5.675$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $y=3.48$（準確至二位小數），求 $y$ 的取值範圍。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3.47<y\leq 3.49$</li><li><span class="ol">B</span>$3.475\leq y<3.485$</li><li><span class="ol">C</span>$3.475<y\leq 3.485$</li><li><span class="ol">D</span>$3.47\leq y<3.49$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 最大絕對誤差 $=0.01\div 2=0.005$。</div>
+          <div class="p-step"><b>第 2 步.</b> 下限 $=3.48-0.005=3.475$（包括）；上限 $=3.48+0.005=3.485$（不包括）。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $3.475\leq y<3.485$。</div>
+          <div class="p-ans">答案：<b>B</b>（$3.475\leq y<3.485$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

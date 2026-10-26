@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第3題 · 恆等式比較係數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第3題</span>
+    <h1>展開右邊，係數逐一對上</h1>
+    <p class="sub">多項式 · 恆等式與比較係數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $a$、$b$ 為常數且 $(x+8)(x+a)+b\equiv x^{2}+5a(x+3)$，則 $b=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-14$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$14$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開左邊</div>
+      <div class="rule">
+        <span class="rule-name">多項式乘法</span>
+        $(x+p)(x+q)=x^{2}+(p+q)x+pq$。
+      </div>
+      <p>$$(x+8)(x+a)+b=x^{2}+(a+8)x+8a+b$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開右邊</div>
+      <div class="rule">
+        <span class="rule-name">去括號</span>
+        $5a(x+3)=5ax+15a$。
+      </div>
+      <p>$$x^{2}+5a(x+3)=x^{2}+5ax+15a$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較 $x$ 的係數</div>
+      <div class="rule">
+        <span class="rule-name">恆等式</span>
+        恆等式兩邊同類項係數相等。
+      </div>
+      <p>$$a+8=5a\;\Longrightarrow\;4a=8\;\Longrightarrow\;a=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較常數項求 $b$</div>
+      <div class="rule">
+        <span class="rule-name">恆等式</span>
+        常數項：左邊 $8a+b$，右邊 $15a$。
+      </div>
+      <p>$$8(2)+b=15(2)\;\Longrightarrow\;16+b=30\;\Longrightarrow\;b=14$$</p>
+      <p>代回驗算：左邊 $x^{2}+10x+30$，右邊 $x^{2}+10x+30$ ✓，答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$b=14$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $p$、$q$ 為常數且 $(x+3)(x+p)+q\equiv x^{2}+4p(x+1)$，求 $q$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-3$</li><li><span class="ol">B</span>$0$</li><li><span class="ol">C</span>$1$</li><li><span class="ol">D</span>$3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 左邊 $=x^{2}+(p+3)x+3p+q$；右邊 $=x^{2}+4px+4p$。</div>
+          <div class="p-step"><b>第 2 步.</b> 比較 $x$ 係數：$p+3=4p\Rightarrow p=1$。</div>
+          <div class="p-step"><b>第 3 步.</b> 比較常數項：$3p+q=4p\Rightarrow q=p=1$。</div>
+          <div class="p-ans">答案：<b>C</b>（$q=1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第10題 · 複利息</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第10題</span>
+    <h1>半年結息，期數與利率都要減半</h1>
+    <p class="sub">百分數 · 複利息</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一筆 \$40000 以年利率 $3\%$ 存入銀行 5 年，每半年結息一次。求本利和（準確至最接近的元）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>\$46000</li><li><span class="ol">B</span>\$46371</li><li><span class="ol">C</span>\$46422</li><li><span class="ol">D</span>\$46465</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">確認每期利率與期數</div>
+      <div class="rule">
+        <span class="rule-name">複利息</span>
+        每半年結息：每期利率 $=\dfrac{\text{年利率}}{2}$，期數 $=\text{年數}\times 2$。
+      </div>
+      <p>每期利率 $=\dfrac{3\%}{2}=1.5\%$，期數 $=5\times 2=10$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入複利息公式</div>
+      <div class="rule">
+        <span class="rule-name">複利息公式</span>
+        $A=P\left(1+\dfrac{r}{n}\right)^{nt}$。
+      </div>
+      <p>$$A=40000\left(1+\frac{3\%}{2}\right)^{5\times 2}=40000(1.015)^{10}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算數值</div>
+      <div class="rule">
+        <span class="rule-name">計算機運算</span>
+        先算 $1.015^{10}$，再乘 $40000$。
+      </div>
+      <p>$1.015^{10}\approx 1.1605408$</p>
+      <p>$$A\approx 40000\times 1.1605408=46421.63$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">捨入</div>
+      <div class="rule">
+        <span class="rule-name">捨入</span>
+        準確至最接近的元，取整數。
+      </div>
+      <p>$46421.63$ 取整為 \$46422，答案 <b>C</b>。</p>
+      <p>若誤把期數當 5 期（每年結息），會得 $40000(1.03)^{5}\approx 46371$，即選項 B 的陷阱。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（\$46422）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一筆 \$25000 以年利率 $4\%$ 存入銀行 3 年，每季結息一次。求本利和（準確至最接近的元）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>\$28125</li><li><span class="ol">B</span>\$28171</li><li><span class="ol">C</span>\$28181</li><li><span class="ol">D</span>\$28253</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每期利率 $=4\%\div 4=1\%$，期數 $=3\times 4=12$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A=25000(1.01)^{12}\approx 25000\times 1.1268250=28170.6$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取整為 \$28171。</div>
+          <div class="p-ans">答案：<b>B</b>（\$28171）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

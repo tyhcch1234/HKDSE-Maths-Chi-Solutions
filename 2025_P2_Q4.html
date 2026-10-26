@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第4題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第4題</span>
+    <h1>先把 $c$ 集中，再除過去</h1>
+    <p class="sub">方程 · 公式的主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $(3c+1)(d-4)=2d(5c-1)$，則 $c=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{3d-4}{7d+12}$</li><li><span class="ol">B</span>$\dfrac{3d+4}{7d-12}$</li><li><span class="ol">C</span>$\dfrac{7d-12}{3d+4}$</li><li><span class="ol">D</span>$\dfrac{7d+12}{3d-4}$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩邊展開</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        $(a+b)(c+d)=ac+ad+bc+bd$。
+      </div>
+      <p>左邊 $=3cd-12c+d-4$；右邊 $=10cd-2d$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把含 $c$ 的項集中</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        移項時變號；目標是 $c$ 只在同一邊。
+      </div>
+      <p>$$3cd-12c+d-4=10cd-2d$$</p>
+      <p>把 $10cd$ 搬到左、$d-4$ 搬到右：</p>
+      <p>$$3cd-10cd-12c=-2d-d+4$$</p>
+      <p>$$-7cd-12c=-3d+4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩邊乘 $-1$ 並提出 $c$</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        $c(7d+12)=3d-4$。
+      </div>
+      <p>$$7cd+12c=3d-4\;\Longrightarrow\;c(7d+12)=3d-4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩邊除以括號</div>
+      <div class="rule">
+        <span class="rule-name">主項變換</span>
+        只要 $7d+12\neq 0$ 即可除。
+      </div>
+      <p>$$c=\frac{3d-4}{7d+12}$$</p>
+      <p>以 $d=1$ 驗算：原式為 $(3c+1)(-3)=2(5c-1)$，即 $-9c-3=10c-2$，得 $c=-\dfrac{1}{19}$；</p>
+      <p>A 式給 $\dfrac{3-4}{7+12}=-\dfrac{1}{19}$ ✓，答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$c=\dfrac{3d-4}{7d+12}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $(2a+3)(b-5)=3b(4a-2)$，則 $a=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{3b+15}{10b-6}$</li><li><span class="ol">B</span>$\dfrac{3b-15}{10b+6}$</li><li><span class="ol">C</span>$\dfrac{10b-6}{3b+15}$</li><li><span class="ol">D</span>$\dfrac{10b+6}{3b-15}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$2ab-10a+3b-15=12ab-6b$。</div>
+          <div class="p-step"><b>第 2 步.</b> 集中 $a$：$2ab-10a-12ab=-6b-3b+15$，即 $-10ab-10a=-9b+15$。</div>
+          <div class="p-step"><b>第 3 步.</b> 乘 $-1$：$10a(b+1)=9b-15$，故 $a=\dfrac{9b-15}{10(b+1)}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$a=\dfrac{3b-15}{10b-6}$（同值））</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

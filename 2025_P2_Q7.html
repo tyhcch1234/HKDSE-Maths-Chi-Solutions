@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第7題 · 複合不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第7題</span>
+    <h1>拆成兩條，取交集</h1>
+    <p class="sub">不等式與線性規劃 · 複合不等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $4y+1<5y-3\leq 8y-9$ 的解是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$y>-4$</li><li><span class="ol">B</span>$y\geq -2$</li><li><span class="ol">C</span>$y\geq 2$</li><li><span class="ol">D</span>$y>4$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆成兩條不等式</div>
+      <div class="rule">
+        <span class="rule-name">複合不等式</span>
+        $a<b\leq c$ 即 $a<b$ 且 $b\leq c$。
+      </div>
+      <p>需要同時滿足：$4y+1<5y-3$ 及 $5y-3\leq 8y-9$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第一條</div>
+      <div class="rule">
+        <span class="rule-name">解不等式</span>
+        兩邊加減同一數，不等號方向不變。
+      </div>
+      <p>$$4y+1<5y-3\;\Longrightarrow\;1+3<5y-4y\;\Longrightarrow\;y>4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解第二條</div>
+      <div class="rule">
+        <span class="rule-name">解不等式</span>
+        兩邊除以正數，不等號方向不變。
+      </div>
+      <p>$$5y-3\leq 8y-9\;\Longrightarrow\;-3+9\leq 8y-5y\;\Longrightarrow\;6\leq 3y\;\Longrightarrow\;y\geq 2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取交集</div>
+      <div class="rule">
+        <span class="rule-name">交集</span>
+        同時滿足 $y>4$ 與 $y\geq 2$ 的部分。
+      </div>
+      <p>$y>4$ 已包含 $y\geq 2$ 的所有可能（$4>2$），故解為 $y>4$。</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$y>4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $3y+2<4y-1\leq 6y-8$ 的解是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$y>3$</li><li><span class="ol">B</span>$y\geq 3.5$</li><li><span class="ol">C</span>$y\geq 3$</li><li><span class="ol">D</span>$y>3.5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條：$3y+2<4y-1\Rightarrow y>3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$4y-1\leq 6y-8\Rightarrow 7\leq 2y\Rightarrow y\geq 3.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 交集為 $y\geq 3.5$。</div>
+          <div class="p-ans">答案：<b>B</b>（$y\geq 3.5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
