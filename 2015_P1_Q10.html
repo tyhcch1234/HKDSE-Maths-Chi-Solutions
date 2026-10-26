@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第10題 · 部分變</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第10題</span>
+    <h1>部分變：常數部分＋正變部分</h1>
+    <p class="sub">變分 · 建立方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      當 Susan 一個月賣出 $n$ 個手袋，該月收入為 $\$S$。已知 $S$ 由兩部分組成：一部分為常數，另一部分隨 $n$ 正變。當 $n=10$ 時，$S=10600$；當 $n=6$ 時，$S=9000$。
+      <br>(a) 當她一個月賣出 20 個手袋，求該月收入。<span class="marks">[4 分]</span>
+      <br>(b) 是否可能有一個月她賣出若干個手袋而收入為 $\$10000$？試解釋。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設出部分變關係式</div>
+      <div class="rule">
+        <span class="rule-name">部分變</span>
+        「一部分常數、另一部分隨 $n$ 正變」⟹ $S=C+kn$，其中 $C$、$k$ 為常數。
+      </div>
+      <p>故 $S=C+kn$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入兩組數據求 $C$、$k$</div>
+      <p>$$\begin{cases} C+10k=10600\\ C+6k=9000\end{cases}$$</p>
+      <p>兩式相減：$4k=1600\Rightarrow k=400$；代回 $C+6(400)=9000\Rightarrow C=6600$。</p>
+      <p>所以 $S=6600+400n$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">作答並檢查整數限制</div>
+      <p>(a) $n=20$：$S=6600+400(20)=14600$。</p>
+      <p>(b) 令 $S=10000$：$400n=3400\Rightarrow n=8.5$。手袋數目必須為整數，$8.5$ 不合，故<b>不可能</b>。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $\$14600$　(b) 不可能（$n=8.5$ 不是整數）
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">某公司每月收入 $\$P$ 由固定部分與隨銷量 $q$ 正變的部分組成。已知 $q=8$ 時 $P=9400$，$q=3$ 時 $P=6900$。(a) 求 $q=15$ 時的 $P$。(b) 是否可能 $P=8000$？</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 設 $P=C+kq$。</div>
+      <div class="p-step"><b>第 2 步.</b> $\begin{cases}C+8k=9400\\ C+3k=6900\end{cases}\Rightarrow 5k=2500\Rightarrow k=500$，$C=5400$，故 $P=5400+500q$。</div>
+      <div class="p-step"><b>第 3 步.</b> (a) $P=5400+7500=12900$。(b) $500q=2600\Rightarrow q=5.2$ 非整數，不可能。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $\$12900$　(b) 不可能</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2015_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer><div class="wrap">HKDSE 數學（必修部分）中文題解 · 非官方學習資源</div></footer>
+</body>
+</html>

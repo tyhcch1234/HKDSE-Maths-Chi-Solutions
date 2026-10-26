@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第12題 · 幹葉圖統計量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第12題</span>
+    <h1>幹葉圖：平均數、中位數、全距</h1>
+    <p class="sub">統計 · 數據的集中趨勢</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下幹葉圖顯示足球俱樂部學生的體重（單位：kg）。
+      <pre class="stem">
+Stem (tens) | Leaf (units)
+4 | 0 2 3 3 3 3 9
+5 | 1 1 2 2 3 7 9
+6 | 3 5 8 9
+7 | 8 9</pre>
+      (a) 求上述分佈的平均數、中位數及全距。<span class="marks">[3 分]</span>
+      <br>(b) 現有兩名學生加入俱樂部。已知加入後體重分佈的平均數及全距都不變，問是否可能？試舉例說明。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出全部數據</div>
+      <div class="rule">
+        <span class="rule-name">幹葉圖讀法</span>
+        幹 = 十位，葉 = 個位。例如「5 | 3」代表 53 kg。
+      </div>
+      <p>共 $7+7+4+2=20$ 個數據：</p>
+      <p>40, 42, 43, 43, 43, 43, 49, 51, 51, 52, 52, 53, 57, 59, 63, 65, 68, 69, 78, 79。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">計算三個統計量</div>
+      <p>總和 $=303+375+265+157=1100$，故平均數 $=\dfrac{1100}{20}=55$ kg。</p>
+      <p>20 個數據，中位數為第 10 與第 11 個的平均：$\dfrac{52+52}{2}=52$ kg。</p>
+      <p>全距 $=79-40=39$ kg。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查「平均數與全距不變」的可行性</div>
+      <p>平均數不變 ⟹ 兩名新學生的體重總和 $=2\times55=110$ kg。</p>
+      <p>全距不變 ⟹ 兩人的體重必須在 $[40,79]$ 之內（40 與 79 已存在，不會被取代）。</p>
+      <p>例如兩人都重 55 kg：總和 110、且 55 在區間內，平均數與全距都不變。</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) 平均數 55 kg、中位數 52 kg、全距 39 kg　(b) 可能，例如兩名學生均為 55 kg
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">某班 10 名學生的零用錢（元）為：12, 15, 15, 18, 20, 22, 22, 25, 30, 31。(a) 求平均數、中位數、全距。(b) 若新增一名學生後平均數與全距都不變，問該學生的零用錢是多少？</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 總和 $=210$，平均數 $=21$ 元。</div>
+      <div class="p-step"><b>第 2 步.</b> 中位數 $=\dfrac{20+22}{2}=21$ 元；全距 $=31-12=19$ 元。</div>
+      <div class="p-step"><b>第 3 步.</b> 新增一人後平均數仍為 21 ⟹ 其零用錢 $=21$ 元；21 在 $[12,31]$ 內，全距不變。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) 21 元、21 元、19 元　(b) 21 元</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="index.html">下一題 ›</a></nav>
+</div>
+<footer><div class="wrap">HKDSE 數學（必修部分）中文題解 · 非官方學習資源</div></footer>
+</body>
+</html>

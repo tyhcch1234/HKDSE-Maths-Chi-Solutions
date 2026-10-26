@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第16題 · 組合計概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2015 · 卷一 · 第16題</span>
+    <h1>同時抽出 4 個：至少 2 個紅碗</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個箱內有 5 個紅碗、6 個黃碗及 3 個白碗。若從箱中隨機同時抽出 4 個碗，
+      <br>(a) 求恰好抽出 2 個紅碗的概率。<span class="marks">[2 分]</span>
+      <br>(b) 求至少抽出 2 個紅碗的概率。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">確定樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        同時抽出不計次序，用 $C_r^n=\dfrac{n!}{r!(n-r)!}$。全部碗數 $=5+6+3=14$，故總可能數 $=C_4^{14}=1001$。
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 恰好 2 個紅碗</div>
+      <p>從 5 個紅碗取 2 個：$C_2^{5}=10$；從其餘 9 個（6 黃 + 3 白）取 2 個：$C_2^{9}=36$。</p>
+      <p>$$P=\frac{10\times36}{1001}=\frac{360}{1001}\approx0.360$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 至少 2 個紅碗</div>
+      <p>分三個互斥情況：2 紅、3 紅、4 紅。</p>
+      <p>$C_2^{5}C_2^{9}=360$；$C_3^{5}C_1^{9}=10\times9=90$；$C_4^{5}=5$。</p>
+      <p>$$P=\frac{360+90+5}{1001}=\frac{455}{1001}=\frac{5}{11}\approx0.455$$</p>
+    </div>
+
+    <div class="ans">
+      <b>答案</b>：(a) $\dfrac{360}{1001}$　(b) $\dfrac{455}{1001}=\dfrac{5}{11}$
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>同類練習</h2>
+    <p class="p-q">袋中有 4 個紅球、5 個藍球及 3 個綠球。隨機同時抽出 3 個球。(a) 求恰好 1 個紅球的概率。(b) 求至少 1 個紅球的概率。</p>
+    <div class="p-sol">
+      <div class="p-step"><b>第 1 步.</b> 總數 12，$C_3^{12}=220$。</div>
+      <div class="p-step"><b>第 2 步.</b> (a) $C_1^{4}\times C_2^{8}=4\times28=112$，$P=\dfrac{112}{220}=\dfrac{28}{55}$。</div>
+      <div class="p-step"><b>第 3 步.</b> (b) 用補集：全無紅球 $=C_3^{8}=56$，故 $P=1-\dfrac{56}{220}=\dfrac{164}{220}=\dfrac{41}{55}$。</div>
+      <div class="p-ans"><b>練習答案</b>：(a) $\dfrac{28}{55}$　(b) $\dfrac{41}{55}$</div>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2015_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="index.html">下一題 ›</a></nav>
+</div>
+<footer><div class="wrap">HKDSE 數學（必修部分）中文題解 · 非官方學習資源</div></footer>
+</body>
+</html>
