@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷二 第39題 · 由圖像讀出 k 與 θ</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷二 · 第39題</span>
+  <h1>由零點距離定 $k$，由零點位置定 $\theta$</h1>
+  <p class="sub">三角函數圖像 · 週期與平移</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $k$ 為正常數，且 $-180^\circ&lt;\theta&lt;180^\circ$。圖中所示為 $y=\sin(kx^\circ+\theta)$ 的圖像，其中 $x$ 軸截距為 $75^\circ$ 及 $165^\circ$。求 $k$ 及 $\theta$。
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$k=\dfrac{1}{2}$，$\theta=-30^\circ$</li>
+      <li><span class="ol">B</span>$k=\dfrac{1}{2}$，$\theta=30^\circ$</li>
+      <li><span class="ol">C</span>$k=2$，$\theta=-30^\circ$</li>
+      <li><span class="ol">D</span>$k=2$，$\theta=30^\circ$</li>
+    </ol>
+    <figure style="margin:12px 0;text-align:center;">
+      <img src="figures/2015_P2_Q39.png" alt="原卷附圖：y=sin(kx+θ) 的圖像" style="max-width:100%;height:auto;border:1px solid #e2e8f0;border-radius:10px;background:#fff;">
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩個相鄰零點的距離＝半個週期</div>
+      <div class="rule">
+        <span class="rule-name">正弦零點</span>
+        <span class="rule-math">\(\sin u=0\iff u=180^\circ n\)</span>
+        <span class="rule-why">相鄰零點之間相差半個週期，所以由圖可直接讀出週期。</span>
+      </div>
+      \[165^\circ-75^\circ=90^\circ=\frac{\text{週期}}{2}
+      \;\Longrightarrow\;\text{週期}=180^\circ.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由週期求 $k$</div>
+      <div class="rule">
+        <span class="rule-name">週期公式</span>
+        <span class="rule-math">\(\text{週期}=\dfrac{360^\circ}{k}\)</span>
+        <span class="rule-why">$k$ 是 $x$ 的係數，會壓縮圖像，故 $k=\dfrac{360^\circ}{\text{週期}}$。</span>
+      </div>
+      \[k=\frac{360^\circ}{180^\circ}=2.\]
+      這一步已可排除 A、B（$k=\dfrac{1}{2}$ 的週期是 $720^\circ$，圖中只會有一個零點）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入零點求 $\theta$，並檢查範圍</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        <span class="rule-math">\(\sin(2x+\theta)=0\Rightarrow 2x+\theta=180^\circ n\)</span>
+        <span class="rule-why">代 $x=75^\circ$，取 $n=1$ 可得範圍內的 $\theta$；若取 $n=0$ 得 $\theta=-150^\circ$ 亦在範圍內，但與另一零點不符，故取 $n=1$。</span>
+      </div>
+      代 $x=75^\circ$：
+      \[2(75^\circ)+\theta=180^\circ
+      \;\Longrightarrow\;\theta=30^\circ.\]
+      檢查另一零點：$x=165^\circ$ 時 $2(165^\circ)+30^\circ=360^\circ$，亦為零點，一致。<br>
+      若取 $\theta=-30^\circ$（選項 C），第一個零點會是 $\dfrac{180^\circ+30^\circ}{2}=105^\circ$，與圖不符。<br>
+      故 $k=2$、$\theta=30^\circ$，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$k=2$，$\theta=30^\circ$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $k$ 為正常數，$-180^\circ&lt;\theta&lt;180^\circ$。$y=\sin(kx^\circ+\theta)$ 的圖像之相鄰 $x$ 軸截距為 $20^\circ$ 及 $110^\circ$。求 $k$ 及 $\theta$。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$k=2$，$\theta=140^\circ$</li>
+        <li><span class="ol">B</span>$k=2$，$\theta=-40^\circ$</li>
+        <li><span class="ol">C</span>$k=\dfrac{1}{2}$，$\theta=140^\circ$</li>
+        <li><span class="ol">D</span>$k=\dfrac{1}{2}$，$\theta=-40^\circ$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $110^\circ-20^\circ=90^\circ$ 為半週期，週期 $=180^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $k=\dfrac{360^\circ}{180^\circ}=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2(20^\circ)+\theta=180^\circ\Rightarrow\theta=140^\circ$，在範圍內；驗算 $2(110^\circ)+140^\circ=360^\circ$ 亦為零點。答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$k=2$，$\theta=140^\circ$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P2_Q38.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P2_Q40.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
