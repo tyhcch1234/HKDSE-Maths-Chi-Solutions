@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第23題 · 對稱軸要整塊圖形對摺重合，不是旋轉重合</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第23題</span>
+    <h1>對稱軸要整塊圖形對摺重合，不是旋轉重合</h1>
+    <p class="sub">幾何 · 對稱</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖由八個相同的正六邊形組成。該圖形的反射對稱軸數目是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$8$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q23.png" alt="2016 卷二第 23 題：八個正六邊形組成的圖形"><figcaption>圖：八個相同的正六邊形（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先看整體輪廓，而不是單個六邊形</div>
+      <div class="rule"><span class="rule-name">反射對稱</span>沿某條直線對摺，左右（或上下）兩半能完全重合，該直線才是一條對稱軸。</div>
+<p>單個正六邊形有 $6$ 條對稱軸，但八個拼在一起之後，大部分方向都會被「多出來的部分」破壞，因此不能照搬 $6$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐一對摺測試候選方向</div>
+<p>把八個六邊形看成一個整體，沿着穿過圖形中心的直線逐個方向試：其中兩個方向對摺後，兩邊的六邊形可以一一對應重合；其餘方向（包括單個六邊形本身的邊方向）一試就會發現某一側多出半個六邊形，無法重合。</p>
+<p>實測時可用一張透明紙描出外輪廓，再沿直線對摺，能完全重合的直線才計入。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">排除「旋轉對稱」的干擾</div>
+<p>圖形轉 $180^{\circ}$ 會與自己重合，但「旋轉重合」不等於「對摺重合」。$60^{\circ}$、$120^{\circ}$ 的旋轉會把整個圖形移位，那些方向也不是對稱軸。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">得出數目</div>
+<p>能够把圖形分成兩個全等鏡像部分的直線只有 $2$ 條。</p>
+<p>答案為 <b>A</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$2$ 條）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把三個相同的正方形排成一個「L」形（兩個橫放、一個疊在其中一端的上面）。該圖形的反射對稱軸數目是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$1$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 「L」形只在沿斜向穿過轉角那條直線對摺時，兩臂才重合。</div>
+          <div class="p-step"><b>第 2 步.</b> 水平或鉛直方向對摺都會一邊多一格，不能重合。</div>
+          <div class="p-step"><b>第 3 步.</b> 故只有 $1$ 條對稱軸，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$1$ 條）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

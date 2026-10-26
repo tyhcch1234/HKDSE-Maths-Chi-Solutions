@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第41題 · 中點的 $y$ 坐標，可由根之和配合直線方程求得</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第41題</span>
+    <h1>中點的 $y$ 坐標，可由根之和配合直線方程求得</h1>
+    <p class="sub">解析幾何 · 直線與圓的交點</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $2x-y-6=0$ 與圓 $x^{2}+y^{2}-8y-14=0$ 相交於 $P$ 及 $Q$。求 $PQ$ 的中點的 $y$ 坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-4$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$4$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由直線方程表示 $y$</div>
+<p>$$y=2x-6$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入圓方程</div>
+      <div class="rule"><span class="rule-name">代入法</span>把直線方程代入圓方程，得到只含 $x$ 的二次方程，其兩根就是 $P$、$Q$ 的 $x$ 坐標。</div>
+<p>$$x^{2}+(2x-6)^{2}-8(2x-6)-14=0$$</p>
+<p>$$x^{2}+4x^{2}-24x+36-16x+48-14=0$$</p>
+<p>$$5x^{2}-40x+70=0\ \Rightarrow\ x^{2}-8x+14=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用根之和求中點的 $x$ 坐標</div>
+      <div class="rule"><span class="rule-name">根與係數</span>兩根之和 $=-\dfrac{b}{a}$，中點的 $x$ 坐標就是兩根的平均。</div>
+<p>$$x_{1}+x_{2}=8\ \Rightarrow\ x_{\text{中點}}=4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代回直線方程求 $y$</div>
+<p>$$y=2(4)-6=2$$</p>
+<p>故中點的 $y$ 坐標為 $2$，答案為 <b>C</b>。</p>
+<p>（另一個做法：圓心 $(0,4)$ 到直線的垂線必平分 $PQ$，先求垂足再核對。）</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $y=x+1$ 與圓 $x^{2}+y^{2}-6x-2y+5=0$ 相交於 $P$、$Q$。求 $PQ$ 中點的 $x$ 坐標。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$1.5$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$2.5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入：$x^{2}+(x+1)^{2}-6x-2(x+1)+5=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 整理得 $2x^{2}-6x+4=0$，即 $x^{2}-3x+2=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩根之和為 $3$，中點 $x=\dfrac{3}{2}=1.5$。</div>
+          <div class="p-step"><b>第 4 步.</b> 核對：圓心 $(3,1)$ 到直線 $x-y+1=0$ 的垂足也是 $x=1.5$。答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$1.5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q40.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q42.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

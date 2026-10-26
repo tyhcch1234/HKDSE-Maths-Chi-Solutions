@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第38題 · 把 $\sin\theta$ 當成 $u$，先解二次方程再數根的數目</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第38題</span>
+    <h1>把 $\sin\theta$ 當成 $u$，先解二次方程再數根的數目</h1>
+    <p class="sub">三角學 · 三角方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+對 $0^{\circ}\le\theta\le360^{\circ}$，方程 $5\sin^{2}\theta+\sin\theta-4=0$ 有多少個根？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把方程看成 $u$ 的二次式</div>
+      <div class="rule"><span class="rule-name">代入法</span>令 $u=\sin\theta$，方程變成 $5u^{2}+u-4=0$。</div>
+<p>$$5u^{2}+u-4=0\ \Rightarrow\ (5u-4)(u+1)=0$$</p>
+<p>$$u=\frac{4}{5}\quad\text{或}\quad u=-1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解 $\sin	heta=\dfrac{4}{5}$</div>
+      <div class="rule"><span class="rule-name">三角方程</span>正弦值為正，角在第一或第二象限；參考角 $\approx53.13^{\circ}$。</div>
+<p>$$\theta\approx53.13^{\circ}\quad\text{或}\quad \theta\approx180^{\circ}-53.13^{\circ}=126.87^{\circ}$$</p>
+<p>兩個解都在 $0^{\circ}$ 至 $360^{\circ}$ 之內。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解 $\sin	heta=-1$</div>
+<p>$$\theta=270^{\circ}$$</p>
+<p>只有一個解（在 $0^{\circ}$ 至 $360^{\circ}$ 內，正弦值為 $-1$ 的角只有 $270^{\circ}$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合計根的分數</div>
+<p>$$2+1=3$$</p>
+<p>故共有 $3$ 個根，答案為 <b>B</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$3$ 個）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 對 $0^{\circ}\le\theta\le360^{\circ}$，方程 $2\cos^{2}\theta+\cos\theta-1=0$ 有多少個根？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(2\cos\theta-1)(\cos\theta+1)=0$，得 $\cos\theta=\dfrac{1}{2}$ 或 $\cos\theta=-1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\cos\theta=\dfrac{1}{2}$ 給出 $\theta=60^{\circ}$ 及 $300^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\cos\theta=-1$ 給出 $\theta=180^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 共 $3$ 個根，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$3$ 個）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

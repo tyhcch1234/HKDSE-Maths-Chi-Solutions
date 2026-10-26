@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第34題 · 有理化之後，兩個數只是虛部符號相反</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第34題</span>
+    <h1>有理化之後，兩個數只是虛部符號相反</h1>
+    <p class="sub">指數與對數 · 複數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $u=\dfrac{7}{a+i}$ 及 $v=\dfrac{7}{a-i}$，其中 $a$ 為實數。下列哪項必定正確？
+I. $uv$ 是有理數。
+II. $u$ 的實部等於 $v$ 的實部。
+III. $\dfrac{1}{u}$ 的虛部等於 $\dfrac{1}{v}$ 的虛部。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">有理化 $u$</div>
+      <div class="rule"><span class="rule-name">共軛</span>$(a+i)(a-i)=a^{2}-i^{2}=a^{2}+1$。</div>
+<p>$$u=\frac{7(a-i)}{(a+i)(a-i)}=\frac{7a-7i}{a^{2}+1}=\frac{7a}{a^{2}+1}-\frac{7}{a^{2}+1}i$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">有理化 $v$</div>
+<p>$$v=\frac{7(a+i)}{(a-i)(a+i)}=\frac{7a}{a^{2}+1}+\frac{7}{a^{2}+1}i$$</p>
+<p>兩者的實部同為 $\dfrac{7a}{a^{2}+1}$，故 II 必定正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I：$a$ 可以無理</div>
+      <div class="rule"><span class="rule-name">實數</span>題目只說 $a$ 是實數，沒有說 $a$ 是有理數。</div>
+<p>$$uv=\frac{49}{(a+i)(a-i)}=\frac{49}{a^{2}+1}$$</p>
+<p>當 $a=0$ 時 $uv=49$ 是有理數；但取 $a=\sqrt{7}-1$，則 $a^{2}+1=9-2\sqrt{7}$，</p>
+<p>$$uv=\frac{49}{9-2\sqrt{7}}=\frac{49(9+2\sqrt{7})}{53}$$</p>
+<p>這是無理數。既然有反例，I 並非「必定」正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III：倒數的虛部符號相反</div>
+<p>$$\frac{1}{u}=\frac{a+i}{7}=\frac{a}{7}+\frac{1}{7}i,\qquad
+    \frac{1}{v}=\frac{a-i}{7}=\frac{a}{7}-\frac{1}{7}i$$</p>
+<p>虛部分別是 $\dfrac{1}{7}$ 與 $-\dfrac{1}{7}$，不相等，III 錯。</p>
+<p>只有 II 必定正確，答案為 <b>B</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $u=\dfrac{4}{b+i}$ 及 $v=\dfrac{4}{b-i}$，其中 $b$ 為實數。下列哪項必定正確？
+I. $u+v$ 是實數。
+II. $u$ 的虛部等於 $v$ 的虛部的相反數。
+III. $uv$ 是整數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 I 及 II</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>只有 I 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 有理化：$u=\dfrac{4b-4i}{b^{2}+1}$，$v=\dfrac{4b+4i}{b^{2}+1}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $u+v=\dfrac{8b}{b^{2}+1}$，是實數，I 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 虛部為 $-\dfrac{4}{b^{2}+1}$ 與 $\dfrac{4}{b^{2}+1}$，互為相反數，II 正確。</div>
+          <div class="p-step"><b>第 4 步.</b> $uv=\dfrac{16}{b^{2}+1}$ 不一定是整數（例如 $b=1$ 時為 $8$，$b=2$ 時為 $\dfrac{16}{5}$），III 錯。答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

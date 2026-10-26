@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第33題 · 由右邊數位，$B$ 在 $16^{12}$ 位</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第33題</span>
+    <h1>由右邊數位，$B$ 在 $16^{12}$ 位</h1>
+    <p class="sub">公式與數列 · 進位制</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$BC000DE000000_{16}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$188\times16^{11}+222\times16^{6}$</li><li><span class="ol">B</span>$205\times16^{11}+239\times16^{6}$</li><li><span class="ol">C</span>$188\times16^{12}+222\times16^{7}$</li><li><span class="ol">D</span>$205\times16^{12}+239\times16^{7}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把字母換成數值</div>
+      <div class="rule"><span class="rule-name">十六進位</span>$A=10$、$B=11$、$C=12$、$D=13$、$E=14$、$F=15$。</div>
+<p>$$B=11,\ C=12,\ D=13,\ E=14$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數清楚位數，定出最高次方</div>
+<p>$BC000DE000000$ 共有 $13$ 個位。最左邊的 $B$ 是第 $13$ 位，對應 $16^{12}$；$C$ 對應 $16^{11}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出各位的展開式</div>
+<p>由右邊數起：$E$ 在第 $7$ 位（$16^{6}$）、$D$ 在第 $8$ 位（$16^{7}$）。故</p>
+<p>$$BC000DE000000_{16}=11\times16^{12}+12\times16^{11}+13\times16^{7}+14\times16^{6}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把相鄰兩項合併</div>
+      <div class="rule"><span class="rule-name">提取公因式</span>把次方較小的那個提出來，括號內是「高位數字 $\times16+$ 低位數字」。</div>
+<p>$$11\times16^{12}+12\times16^{11}=16^{11}(11\times16+12)=16^{11}(188)$$</p>
+<p>$$13\times16^{7}+14\times16^{6}=16^{6}(13\times16+14)=16^{6}(222)$$</p>
+<p>$$\therefore\ BC000DE000000_{16}=188\times16^{11}+222\times16^{6}$$</p>
+<p>答案為 <b>A</b>。選項 C、D 把位數多算了一位（用了 $16^{12}$ 作 $B$ 的位值再乘 $16$）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$188\times16^{11}+222\times16^{6}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $3D0E00_{16}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$61\times16^{4}+14\times16^{2}$</li><li><span class="ol">B</span>$61\times16^{5}+14\times16^{3}$</li><li><span class="ol">C</span>$49\times16^{4}+14\times16^{2}$</li><li><span class="ol">D</span>$49\times16^{5}+14\times16^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共有 $6$ 位，最左的 $3$ 對應 $16^{5}$，$D$ 對應 $16^{4}$，$E$ 對應 $16^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $3\times16^{5}+13\times16^{4}=16^{4}(48+13)=61\times16^{4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $E$ 的那一項是 $14\times16^{2}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 故為 $61\times16^{4}+14\times16^{2}$，答案為 A。</div>
+          <div class="p-ans">答案：<b>A</b>（$61\times16^{4}+14\times16^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q34.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

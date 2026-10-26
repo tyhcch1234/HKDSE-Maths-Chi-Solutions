@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第45題 · 乘常數要平方，加常數不影響方差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第45題</span>
+    <h1>乘常數要平方，加常數不影響方差</h1>
+    <p class="sub">統計學 · 方差的性質</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一組數的方差是 $49$。把該組每個數乘以 $4$，然後每個結果加 $9$，形成一組新數。求新數組的方差。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$196$</li><li><span class="ol">B</span>$205$</li><li><span class="ol">C</span>$784$</li><li><span class="ol">D</span>$793$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出變換的形式</div>
+<p>新數據 $Y=4X+9$，其中 $X$ 為原數據。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用方差的性质</div>
+      <div class="rule"><span class="rule-name">方差的性质</span>$\operatorname{Var}(aX+b)=a^{2}\operatorname{Var}(X)$。加常數只是整體平移，不改變離散程度。</div>
+<p>$$\operatorname{Var}(Y)=4^{2}\operatorname{Var}(X)=16\times49$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算結果</div>
+<p>$$16\times49=784$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查常見錯誤</div>
+<p>選項 D 的 $793=784+9$ 是誤以為「加 $9$」也要加到方差；選項 A 的 $196=4\times49$ 是忘記平方。正確答案為 <b>C</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$784$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一組數的標準差是 $6$。把每個數乘以 $3$ 後再加 $5$，求新數組的方差。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$18$</li><li><span class="ol">B</span>$54$</li><li><span class="ol">C</span>$324$</li><li><span class="ol">D</span>$329$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 原方差 $=6^{2}=36$。</div>
+          <div class="p-step"><b>第 2 步.</b> 乘以 $3$ 後方差變成 $3^{2}\times36=324$；加 $5$ 不變。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案為 C。</div>
+          <div class="p-ans">答案：<b>C</b>（$324$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第11題 · 相似圓錐的體積比等於高度比的立方</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第11題</span>
+    <h1>相似圓錐的體積比等於高度比的立方</h1>
+    <p class="sub">求積法 · 圓錐的相似性質</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個倒置的直立圓錐形容器載有一些牛奶。容器內牛奶的深度為 $12$ cm。彼得把 $444\pi\ \text{cm}^{3}$ 牛奶倒入容器（沒有溢出），此時牛奶的深度為 $16$ cm。
+(a) 以 $\pi$ 表示容器內牛奶的最終體積。
+(b) 彼得聲稱容器內濕潤曲面的最終面積至少為 $800\ \text{cm}^{2}$。你是否同意？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用相似圓錐比較前後</div>
+      <div class="rule"><span class="rule-name">相似立體的體積比</span>兩個相似圓錐的體積比等於對應長度比的立方。牛奶本身形成一個小圓錐，前後兩個小圓錐相似。</div>
+<p>設最終體積為 $V\ \text{cm}^{3}$，則原本體積為 $V-444\pi$。</p>
+<p>$$\frac{V-444\pi}{V}=\left(\frac{12}{16}\right)^{3}=\frac{27}{64}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 解出 $V$</div>
+<p>$$64(V-444\pi)=27V\ \Rightarrow\ 37V=64\times444\pi$$</p>
+<p>$$V=\frac{28416\pi}{37}=768\pi$$</p>
+<p>即最終體積為 $768\pi\ \text{cm}^{3}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 先求牛奶面的半徑</div>
+      <div class="rule"><span class="rule-name">圓錐體積</span>$V=\dfrac{1}{3}\pi r^{2}h$。</div>
+<p>$$\frac{1}{3}\pi r^{2}(16)=768\pi\ \Rightarrow\ r^{2}=144\ \Rightarrow\ r=12$$</p>
+<p>即牛奶面半徑為 $12$ cm，與原本的深度 $12$ cm 數值相同只是巧合。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 計算濕潤曲面面積</div>
+      <div class="rule"><span class="rule-name">圓錐側面積</span>側面積 $=\pi r l$，其中 $l$ 為斜高，$l=\sqrt{r^{2}+h^{2}}$。</div>
+<p>$$l=\sqrt{12^{2}+16^{2}}=20$$</p>
+<p>$$\text{面積}=\pi(12)(20)=240\pi\approx 754\ \text{cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 與 800 比較</div>
+<p>$$240\pi\approx753.98 \lt 800$$</p>
+<p>故不同意彼得的聲稱。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $768\pi\ \text{cm}^{3}$；(b) 不同意，濕潤曲面面積為 $240\pi\approx754\ \text{cm}^{2} \lt 800\ \text{cm}^{2}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個倒置圓錐形容器內水深 $6$ cm。注入 $190\pi\ \text{cm}^{3}$ 水後（沒有溢出），水深變為 $9$ cm。求容器內水的最終體積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設最終體積 $V$，原本體積 $V-190\pi$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相似圓錐：$\dfrac{V-190\pi}{V}=\left(\dfrac{6}{9}\right)^{3}=\dfrac{8}{27}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $27(V-190\pi)=8V$，即 $19V=27\times190\pi$。</div>
+          <div class="p-step"><b>第 4 步.</b> $V=270\pi\ \text{cm}^{3}$。</div>
+          <div class="p-ans">答案：$270\pi\ \text{cm}^{3}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

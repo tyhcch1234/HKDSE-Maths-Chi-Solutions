@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第43題 · 「至多 2 名女生」分三類相加</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第43題</span>
+    <h1>「至多 2 名女生」分三類相加</h1>
+    <p class="sub">概率 · 組合計數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某班有 $20$ 名男生及 $15$ 名女生。若從班中選出 $6$ 名學生組成一個委員會，而委員會中至多有 $2$ 名女生，求可組成的委員會數目。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$271\,320$</li><li><span class="ol">B</span>$324\,415$</li><li><span class="ol">C</span>$508\,725$</li><li><span class="ol">D</span>$780\,045$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「至多 2 名女生」分成三類</div>
+      <div class="rule"><span class="rule-name">分類計數</span>女生人數可以是 $0$、$1$ 或 $2$，三類互斥。</div>
+<p>委員會共 $6$ 人，男生人數相應為 $6$、$5$、$4$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">0 名女生</div>
+<p>$$\binom{15}{0}\binom{20}{6}=38\,760$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">1 名女生</div>
+<p>$$\binom{15}{1}\binom{20}{5}=15\times15\,504=232\,560$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">2 名女生</div>
+<p>$$\binom{15}{2}\binom{20}{4}=105\times4\,845=508\,725$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">三類相加</div>
+<p>$$38\,760+232\,560+508\,725=780\,045$$</p>
+<p>答案為 <b>D</b>。留意選項 C 只是「剛好 2 名女生」的數目，是常見的陷阱。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$780\,045$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組有 $10$ 名男生及 $8$ 名女生。若選出 $4$ 人，而其中至多有 $1$ 名女生，求選法數目。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$210$</li><li><span class="ol">B</span>$960$</li><li><span class="ol">C</span>$1\,170$</li><li><span class="ol">D</span>$1\,230$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 0 名女生（全男）：$\binom{10}{4}=210$。</div>
+          <div class="p-step"><b>第 2 步.</b> 1 名女生：$\binom{8}{1}\binom{10}{3}=8\times120=960$。</div>
+          <div class="p-step"><b>第 3 步.</b> 合計 $210+960=1170$。</div>
+          <div class="p-step"><b>第 4 步.</b> 答案為 C（$210$ 只是全男的情況，$960$ 只是 1 名女生的情況）。</div>
+          <div class="p-ans">答案：<b>C</b>（$1\,170$ 種）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

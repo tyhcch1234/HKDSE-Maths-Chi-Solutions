@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第15題 · 過中間頂點加一條平行線，把 $b$ 切開</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第15題</span>
+    <h1>過中間頂點加一條平行線，把 $b$ 切開</h1>
+    <p class="sub">幾何 · 平行線與角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+根據下圖，下列哪項必定正確？
+I. $a+c=180^{\circ}$
+II. $a+b-c=180^{\circ}$
+III. $b+c=360^{\circ}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q15.png" alt="2016 卷二第 15 題：兩平行線之間的折線，標示角 a、b、c"><figcaption>圖：上下兩條直線平行（箭頭標記），折線在 $b$ 的頂點轉向（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $b$ 的頂點加一條輔助線</div>
+      <div class="rule"><span class="rule-name">輔助線</span>過 $b$ 的頂點作一條與上下兩條平行線都平行的直線，把 $b$ 分成兩部分。</div>
+<p>設上部分為 $b_{1}$、下部分為 $b_{2}$，則 $b=b_{1}+b_{2}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用內錯角處理上方部分</div>
+      <div class="rule"><span class="rule-name">內錯角</span>兩平行線被截線所截，內錯角相等。</div>
+<p>上方那條平行線與折線的上段，和輔助線形成內錯角，故</p>
+<p>$$b_{1}=c$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用同旁內角處理下方部分</div>
+      <div class="rule"><span class="rule-name">同旁內角</span>兩平行線被截線所截，同旁內角互補，即和為 $180^{\circ}$。</div>
+<p>下方那條平行線與折線的下段，和輔助線形成同旁內角，故</p>
+<p>$$b_{2}=180^{\circ}-a$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合併兩個部分</div>
+<p>$$b=b_{1}+b_{2}=c+(180^{\circ}-a)$$</p>
+<p>移項即得</p>
+<p>$$a+b-c=180^{\circ}$$</p>
+<p>所以 II 必定正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢查 I 與 III</div>
+<p>I 要求 $a+c=180^{\circ}$，III 要求 $b+c=360^{\circ}$，這兩個等式都需要額外的條件（例如 $a$ 與 $c$ 剛好互補）才成立，圖中並無保證。</p>
+<p>例如取 $a=70^{\circ}$、$c=95^{\circ}$，則 $b=95^{\circ}+110^{\circ}=205^{\circ}$：此時 $a+c=165^{\circ}$、$b+c=300^{\circ}$，I 與 III 都不成立，但 II 仍成立。</p>
+<p>故答案為 <b>B</b>（只有 II）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 兩平行線之間有一條折線，三個角依次為 $x$、$y$、$z$（位置與上題相同）。已知 $x+y-z=180^{\circ}$，且 $x=68^{\circ}$、$y=205^{\circ}$，求 $z$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$83^{\circ}$</li><li><span class="ol">B</span>$93^{\circ}$</li><li><span class="ol">C</span>$103^{\circ}$</li><li><span class="ol">D</span>$113^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 把 $x+y-z=180^{\circ}$ 移項：$z=x+y-180^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $z=68^{\circ}+205^{\circ}-180^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $z=93^{\circ}$，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$93^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

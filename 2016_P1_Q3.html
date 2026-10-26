@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第3題 · 通分之後，$x$ 項自己對消</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第3題</span>
+    <h1>通分之後，$x$ 項自己對消</h1>
+    <p class="sub">多項式 · 分式的加減</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{2}{4x-5}+\dfrac{3}{1-6x}$。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出公分母</div>
+      <div class="rule"><span class="rule-name">通分</span>兩個分母 $4x-5$ 與 $1-6x$ 沒有公因式，最小公倍數就是它們的乘積。</div>
+<p>$$\text{公分母}=(4x-5)(1-6x)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把每個分數補上缺少的因式</div>
+<p>$$\frac{2}{4x-5}+\frac{3}{1-6x}
+    =\frac{2(1-6x)+3(4x-5)}{(4x-5)(1-6x)}$$</p>
+<p>分子要整體寫在公分母之上，尤其是第二項的 $+3(4x-5)$，括號不可省略。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">展開分子</div>
+<p>$$2(1-6x)=2-12x,\qquad 3(4x-5)=12x-15$$</p>
+<p>$$\Rightarrow\ \frac{2-12x+12x-15}{(4x-5)(1-6x)}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合併同類項，整理符號</div>
+      <div class="rule"><span class="rule-name">同類項</span>$-12x$ 與 $+12x$ 互為相反數，相加為 $0$；$2-15=-13$。</div>
+<p>$$\frac{-13}{(4x-5)(1-6x)}=\frac{13}{(4x-5)(6x-1)}$$</p>
+<p>最後一步只是把 $1-6x=-(6x-1)$ 的負號吸進分子，令分母的首項為正；兩種寫法都算正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{13}{(4x-5)(6x-1)}$（等於 $\dfrac{-13}{(4x-5)(1-6x)}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{2}{3x+1}+\dfrac{5}{1-2x}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 公分母為 $(3x+1)(1-2x)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 通分：$\dfrac{2(1-2x)+5(3x+1)}{(3x+1)(1-2x)}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 展開分子：$2-4x+15x+5=11x+7$。</div>
+          <div class="p-step"><b>第 4 步.</b> 答案：$\dfrac{11x+7}{(3x+1)(1-2x)}$。</div>
+          <div class="p-ans">答案：$\dfrac{11x+7}{(3x+1)(1-2x)}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第40題 · 切線夾角定出圓心角，再用圓周角與三角形內角和</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第40題</span>
+    <h1>切線夾角定出圓心角，再用圓周角與三角形內角和</h1>
+    <p class="sub">幾何 · 圓與切線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $AC$ 為圓 $ABCD$ 的直徑。$PB$ 及 $PD$ 為該圓的切線。$AD$ 延長與 $BC$ 延長相交於 $Q$。若 $\angle BPD=68^{\circ}$，則 $\angle AQB=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$22^{\circ}$</li><li><span class="ol">B</span>$28^{\circ}$</li><li><span class="ol">C</span>$32^{\circ}$</li><li><span class="ol">D</span>$34^{\circ}$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q40.png" alt="2016 卷二第 40 題：圓 ABCD，AC 為直徑，PB、PD 為切線，AD 與 BC 延長交於 Q"><figcaption>圖：$PB$、$PD$ 為切線，$AD$ 與 $BC$ 延長後交於 $Q$（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由兩切線的夾角求圓心角</div>
+      <div class="rule"><span class="rule-name">切線性質</span>由外點引兩切線，$\angle BPD+\angle BOD=180^{\circ}$（$O$ 為圓心）。</div>
+<p>$$\angle BOD=180^{\circ}-68^{\circ}=112^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用圓周角定理</div>
+      <div class="rule"><span class="rule-name">圓周角</span>同弧所對的圓周角是圓心角的一半。</div>
+<p>$\angle BAD$ 對着弧 $BD$，故</p>
+<p>$$\angle BAD=\frac{112^{\circ}}{2}=56^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用直徑所對的圓周角</div>
+      <div class="rule"><span class="rule-name">半圓上的圓周角</span>$AC$ 為直徑，故 $\angle ABC=90^{\circ}$。</div>
+<p>$$\angle ABC=90^{\circ}$$</p>
+<p>因為 $Q$ 在 $BC$ 的延長線上，$\angle ABQ=\angle ABC=90^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle ABQ$ 用內角和</div>
+<p>$$\angle AQB=180^{\circ}-\angle QAB-\angle ABQ=180^{\circ}-56^{\circ}-90^{\circ}=34^{\circ}$$</p>
+<p>其中 $\angle QAB=\angle DAB=56^{\circ}$（$Q$ 在 $AD$ 的延長線上）。答案為 <b>D</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$34^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 承上題的圖，若 $\angle BPD=80^{\circ}$，則 $\angle AQB=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30^{\circ}$</li><li><span class="ol">B</span>$40^{\circ}$</li><li><span class="ol">C</span>$50^{\circ}$</li><li><span class="ol">D</span>$60^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BOD=180^{\circ}-80^{\circ}=100^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle BAD=50^{\circ}$，即 $\angle QAB=50^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABQ=90^{\circ}$（$AC$ 為直徑）。</div>
+          <div class="p-step"><b>第 4 步.</b> $\angle AQB=180^{\circ}-50^{\circ}-90^{\circ}=40^{\circ}$，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$40^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q41.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

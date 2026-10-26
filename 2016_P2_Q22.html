@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第22題 · 菱形給平行，圓心給等半徑，兩邊夾出 $87^{\circ}$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第22題</span>
+    <h1>菱形給平行，圓心給等半徑，兩邊夾出 $87^{\circ}$</h1>
+    <p class="sub">幾何 · 菱形與圓</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為菱形。$C$ 為圓 $BDE$ 的圓心，而 $ADE$ 是一條直線。$BE$ 與 $CD$ 相交於 $F$。若 $\angle ADC=118^{\circ}$，則 $\angle DFE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$59^{\circ}$</li><li><span class="ol">B</span>$62^{\circ}$</li><li><span class="ol">C</span>$78^{\circ}$</li><li><span class="ol">D</span>$87^{\circ}$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q22.png" alt="2016 卷二第 22 題：菱形 ABCD 與以 C 為圓心的圓，BE 與 CD 交於 F"><figcaption>圖：$C$ 為圓心，$B$、$D$、$E$ 在圓上（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「圓心」翻譯成等長</div>
+      <div class="rule"><span class="rule-name">圓的半徑</span>圓上任何一點到圓心的距離都等於半徑。</div>
+<p>$B$、$D$、$E$ 都在圓上，故 $CB=CD=CE$。又 $ABCD$ 是菱形，$CB=CD=AB=AD$，所以 $CB=CD=CE$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $	riangle CDE$ 的角</div>
+      <div class="rule"><span class="rule-name">等腰三角形</span>$CD=CE$，故底角相等：$\angle CDE=\angle CED$。</div>
+<p>因為 $ADE$ 是直線，$\angle CDE=180^{\circ}-\angle ADC=180^{\circ}-118^{\circ}=62^{\circ}$。</p>
+<p>故 $\angle CED=62^{\circ}$，而</p>
+<p>$$\angle DCE=180^{\circ}-62^{\circ}-62^{\circ}=56^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $	riangle BCE$ 的頂角</div>
+      <div class="rule"><span class="rule-name">菱形對邊平行</span>$AD\parallel BC$，故同旁內角互補：$\angle BCD=180^{\circ}-\angle ADC=62^{\circ}$。</div>
+<p>$$\angle BCE=\angle BCD+\angle DCE=62^{\circ}+56^{\circ}=118^{\circ}$$</p>
+<p>$CB=CE$，故 $\angle CEB=\angle CBE=\dfrac{180^{\circ}-118^{\circ}}{2}=31^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $	riangle CEF$ 求 $ngle CFE$，再取補角</div>
+      <div class="rule"><span class="rule-name">對頂角與補角</span>$D$、$F$、$C$ 共線，故 $\angle DFE$ 與 $\angle CFE$ 互補。</div>
+<p>在 $\triangle CEF$ 中：$\angle CEF=31^{\circ}$（$E$、$F$、$B$ 共線）、$\angle ECF=\angle ECD=56^{\circ}$，故</p>
+<p>$$\angle CFE=180^{\circ}-31^{\circ}-56^{\circ}=93^{\circ}$$</p>
+<p>$$\therefore\ \angle DFE=180^{\circ}-93^{\circ}=87^{\circ}$$</p>
+<p>答案為 <b>D</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$87^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABCD$ 為菱形，$C$ 為圓 $BDE$ 的圓心，$ADE$ 為直線，$BE$ 與 $CD$ 交於 $F$。若 $\angle ADC=130^{\circ}$，則 $\angle DFE=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$95^{\circ}$</li><li><span class="ol">B</span>$100^{\circ}$</li><li><span class="ol">C</span>$105^{\circ}$</li><li><span class="ol">D</span>$110^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle CDE=180^{\circ}-130^{\circ}=50^{\circ}$；$CD=CE$，故 $\angle CED=50^{\circ}$，$\angle DCE=80^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle BCD=180^{\circ}-130^{\circ}=50^{\circ}$，故 $\angle BCE=130^{\circ}$，$\angle CEB=25^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle CFE=180^{\circ}-25^{\circ}-80^{\circ}=75^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\angle DFE=180^{\circ}-75^{\circ}=105^{\circ}$，答案為 C。</div>
+          <div class="p-ans">答案：<b>C</b>（$105^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

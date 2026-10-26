@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第6題 · 兩段解集接起來，覆蓋整條數線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第6題</span>
+    <h1>兩段解集接起來，覆蓋整條數線</h1>
+    <p class="sub">不等式 · 複合不等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+考慮複合不等式
+$$x+6 \lt 6(x+11)\quad \text{或}\quad x \le -5 \qquad \cdots (*)$$
+(a) 解 $(*)$。
+(b) 寫出滿足 $(*)$ 的最大負整數。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先解左邊的不等式</div>
+<p>$$x+6 \lt 6(x+11)$$</p>
+<p>這是「或」的複合不等式，兩段分開解，任何一段成立就滿足 $(*)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開並移項</div>
+      <div class="rule"><span class="rule-name">解一元一次不等式</span>展開右邊時 $6$ 要乘進括號的兩項。</div>
+<p>$$x+6 \lt 6x+66$$</p>
+<p>$$x-6x \lt 66-6\ \Rightarrow\ -5x \lt 60$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">除以負數，不等號要反向</div>
+      <div class="rule"><span class="rule-name">不等號反向</span>兩邊同除以 $-5$（負數）時，$\lt$ 要變成 $\gt$。</div>
+<p>$$x \gt -12$$</p>
+<p>這是整題最常見的失分位：忘記反向就會答成 $x \lt -12$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把兩段解集合併</div>
+      <div class="rule"><span class="rule-name">聯集</span>「或」代表取兩段解集的聯集。</div>
+<p>$$x \gt -12\quad \text{或}\quad x \le -5$$</p>
+<p>$x \le -5$ 的每一個值都已經大於 $-12$，所以第二段完全落在第一段之內，兩段合起來就是全部實數。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 在數線上找最大負整數</div>
+<p>負整數 $-1,-2,-3,\dots$ 全部滿足 $(*)$，其中最大的是 $-1$（$0$ 不是負數）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 全體實數（即 $x \gt -12$ 或 $x \le -5$）；(b) $-1$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮複合不等式 $x+4 \lt 4(x+10)$ 或 $x \le -6$。(a) 解此不等式。(b) 寫出滿足條件的最大負整數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 左邊：$x+4 \lt 4x+40$，移項得 $-3x \lt 36$。</div>
+          <div class="p-step"><b>第 2 步.</b> 除以 $-3$ 並反向：$x \gt -12$。</div>
+          <div class="p-step"><b>第 3 步.</b> 另一段 $x \le -6$ 完全包含在 $x \gt -12$ 之內，故解集為全體實數。</div>
+          <div class="p-step"><b>第 4 步.</b> 所有負整數都滿足，最大者為 $-1$。</div>
+          <div class="p-ans">答案：(a) 全體實數；(b) $-1$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

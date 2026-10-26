@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第9題 · 累積頻數由下往上加，逐格回推</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第9題</span>
+    <h1>累積頻數由下往上加，逐格回推</h1>
+    <p class="sub">統計學 · 頻數分佈表</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下表顯示花園內植物高度的頻數分佈及累積頻數分佈。
+(a) 求 $x$、$y$ 及 $z$。
+(b) 若從花園隨機選出一株植物，求所選植物高度小於 $1.25$ m 但不小於 $0.65$ m 的概率。
+    </div>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P1_Q9.png" alt="2016 卷一第 9 題的頻數及累積頻數分佈表"><figcaption>圖：頻數分佈表（左）與累積頻數分佈表（右）（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先由「小於 0.35」讀出第一組</div>
+      <div class="rule"><span class="rule-name">累積頻數</span>「小於 $0.35$」只覆蓋 $0.1$–$0.3$ 這一組，所以它的累積頻數就是該組的頻數。</div>
+<p>$$a=2$$</p>
+<p>「小於 $0.65$」覆蓋首兩組，故 $x=2+4=6$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用「小於 0.95」求 $b$</div>
+<p>$$a+4+b=13\ \Rightarrow\ 2+4+b=13\ \Rightarrow\ b=7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用「小於 1.55」求 $c$ 與 $y$</div>
+<p>「小於 $1.55$」覆蓋首五組：$13+c+15=37$，故 $c=9$。</p>
+<p>「小於 $1.25$」覆蓋首四組：$y=13+c=13+9=22$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">補上 $z$ 並檢查總數</div>
+<p>$$z=37+3=40$$</p>
+<p>把頻數欄相加：$2+4+7+9+15+3=40$，與 $z$ 一致。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 把文字條件翻譯成區間</div>
+      <div class="rule"><span class="rule-name">概率</span>概率 $=\dfrac{\text{符合條件的頻數}}{\text{總頻數}}$。</div>
+<p>「小於 $1.25$ m 但不小於 $0.65$ m」即 $0.65\le h \lt 1.25$，對應 $0.4$–$0.6$、$0.7$–$0.9$、$1.0$–$1.2$ 三組。</p>
+<p>$$\text{概率}=\frac{y-x}{z}=\frac{22-6}{40}=\frac{2}{5}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x=6$、$y=22$、$z=40$（並得 $a=2$、$b=7$、$c=9$）；(b) $\dfrac{2}{5}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某農場記錄樹苗高度：$0.2$–$0.4$ m 有 $p$ 株，$0.5$–$0.7$ m 有 $5$ 株，$0.8$–$1.0$ m 有 $q$ 株，$1.1$–$1.3$ m 有 $12$ 株。累積頻數為：小於 $0.45$ m 共 $3$ 株，小於 $0.75$ m 共 $8$ 株，小於 $1.05$ m 共 $r$ 株，小於 $1.35$ m 共 $26$ 株。(a) 求 $p$、$q$、$r$。(b) 隨機選一株，求高度為 $0.75$ m 至 $1.05$ m（不小於 $0.75$ 且小於 $1.05$）的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) 小於 $0.45$ 只覆蓋第一組，故 $p=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 小於 $0.75$ 覆蓋首兩組：$3+5=8$，與題相符。</div>
+          <div class="p-step"><b>第 3 步.</b> 小於 $1.35$ 是全部 $26$ 株，故 $r+12=26$，$r=14$；再由 $8+q=14$ 得 $q=6$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) 概率 $=\dfrac{r-8}{26}=\dfrac{14-8}{26}=\dfrac{3}{13}$。</div>
+          <div class="p-ans">答案：(a) $p=3$、$q=6$、$r=14$；(b) $\dfrac{3}{13}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

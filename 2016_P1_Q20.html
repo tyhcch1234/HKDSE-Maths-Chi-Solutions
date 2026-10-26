@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第20題 · 內心角平分、外心等半徑，證出 $OP=PQ$ 後一切可用坐標</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第20題</span>
+    <h1>內心角平分、外心等半徑，證出 $OP=PQ$ 後一切可用坐標</h1>
+    <p class="sub">解析幾何 · 圓方程與切線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$\triangle OPQ$ 是一個鈍角三角形。設 $I$ 及 $J$ 分別為 $\triangle OPQ$ 的內心及外心。已知 $P$、$I$、$J$ 三點共線。
+(a) 證明 $OP=PQ$。
+(b) 引入直角坐標系，使 $O$ 及 $Q$ 的坐標分別為 $(0,0)$ 及 $(40,30)$，而 $P$ 的 $y$ 坐標為 $19$。設 $C$ 為通過 $O$、$P$、$Q$ 三點的圓。
+(i) 求 $C$ 的方程。
+(ii) 設 $L_{1}$ 及 $L_{2}$ 為 $C$ 的兩條切線，斜率均為 $\dfrac{3}{4}$，且 $L_{1}$ 的 $y$ 截距大於 $L_{2}$ 的 $y$ 截距。$L_{1}$ 與 $x$ 軸、$y$ 軸分別交於 $S$、$T$；$L_{2}$ 與 $x$ 軸、$y$ 軸分別交於 $U$、$V$。有人聲稱梯形 $STUV$ 的面積超過 $17\,000$。該聲稱是否正確？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先寫出內心與外心提供的條件</div>
+      <div class="rule"><span class="rule-name">內心、外心</span>內心在角平分線上；外心到三個頂點等距。</div>
+<p>$PI$ 平分 $\angle OPQ$，故 $\angle IPO=\angle IPQ$。</p>
+<p>$J$ 為外心，故 $JO=JP=JQ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用等腰三角形把角搬過去</div>
+      <div class="rule"><span class="rule-name">等腰三角形底角相等</span>$JO=JP$ 給出 $\angle JOP=\angle JPO$；$JP=JQ$ 給出 $\angle JQP=\angle JPQ$。</div>
+<p>由 $\angle JPO=\angle JPQ$，得</p>
+<p>$$\angle JOP=\angle JPO=\angle JPQ=\angle JQP$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用 AAS 證明全等</div>
+      <div class="rule"><span class="rule-name">AAS</span>兩角及一條對應邊相等即可全等。</div>
+<p>在 $\triangle JOP$ 與 $\triangle JQP$ 中：$\angle JOP=\angle JQP$、$\angle JPO=\angle JPQ$、$JP=JP$（公共邊）。</p>
+<p>$$\therefore\ \triangle JOP\cong\triangle JQP\ (\text{AAS})\ \Rightarrow\ OP=PQ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 用 $OP=PQ$ 定出 $P$</div>
+<p>設 $P=(p,19)$。由 $OP=PQ$：</p>
+<p>$$p^{2}+19^{2}=(p-40)^{2}+(19-30)^{2}$$</p>
+<p>$$p^{2}+361=p^{2}-80p+1721\ \Rightarrow\ 80p=1360\ \Rightarrow\ p=17$$</p>
+<p>即 $P=(17,19)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(i) 設圓方程求係數</div>
+      <div class="rule"><span class="rule-name">圓方程</span>$x^{2}+y^{2}+Dx+Ey+F=0$。</div>
+<p>圓過 $O(0,0)$，故 $F=0$；代入 $P(17,19)$ 得 $17D+19E=-650$；代入 $Q(40,30)$ 得 $4D+3E=-250$。</p>
+<p>解得 $D=-112$、$E=66$，故</p>
+<p>$$C:\ x^{2}+y^{2}-112x+66y=0$$</p>
+<p>（圓心 $(56,-33)$，半徑 $65$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 用「相切即判別式為零」求 $c$</div>
+      <div class="rule"><span class="rule-name">切線條件</span>直線與圓相切時，代入後的一元二次方程只有一個解，判別式 $=0$。</div>
+<p>設切線為 $y=\dfrac{3}{4}x+c$，代入圓方程：</p>
+<p>$$25x^{2}+(24c-1000)x+16c^{2}+1056c=0$$</p>
+<p>令判別式為零：$16c^{2}+2400c-15625=0$，即 $(4c-25)(4c+625)=0$。</p>
+<p>$$c=\frac{25}{4}\quad\text{或}\quad c=-\frac{625}{4}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b)(ii) 求四個截距與梯形面積</div>
+      <div class="rule"><span class="rule-name">梯形面積</span>梯形面積 $=\dfrac{1}{2}(\text{上底}+\text{下底})\times\text{高}$；兩平行線的距離 $=\dfrac{|c_{1}-c_{2}|}{\sqrt{1+m^{2}}}$。</div>
+<p>$L_{1}:y=\dfrac{3}{4}x+\dfrac{25}{4}$，得 $S\left(-\dfrac{25}{3},0\right)$、$T\left(0,\dfrac{25}{4}\right)$；</p>
+<p>$L_{2}:y=\dfrac{3}{4}x-\dfrac{625}{4}$，得 $U\left(\dfrac{625}{3},0\right)$、$V\left(0,-\dfrac{625}{4}\right)$。</p>
+<p>$ST$ 與 $UV$ 平行（斜率同為 $\dfrac{3}{4}$），是梯形的兩底：</p>
+<p>$$ST=\frac{125}{12},\qquad UV=\frac{3125}{12},\qquad h=\frac{\left|\frac{25}{4}+\frac{625}{4}\right|}{\sqrt{1+\frac{9}{16}}}=130$$</p>
+<p>$$\text{面積}=\frac{1}{2}\left(\frac{125}{12}+\frac{3125}{12}\right)(130)
+=\frac{1}{2}\left(\frac{3250}{12}\right)(130)\approx17\,604$$</p>
+<p>$$17\,604 \gt 17\,000$$</p>
+<p>故聲稱正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 見題解；(b)(i) $x^{2}+y^{2}-112x+66y=0$；(ii) 正確，面積約 $17\,604 \gt 17\,000$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C:x^{2}+y^{2}-10x-4y+20=0$。求斜率為 $2$ 的兩條切線的 $y$ 截距。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設切線 $y=2x+c$，代入圓方程：$x^{2}+(2x+c)^{2}-10x-4(2x+c)+20=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 整理得 $5x^{2}+(4c-18)x+c^{2}-4c+20=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 判別式為零：$(4c-18)^{2}-20(c^{2}-4c+20)=0$，即 $-4c^{2}-64c-76=0$。</div>
+          <div class="p-step"><b>第 4 步.</b> 化簡得 $c^{2}+16c+19=0$，故 $c=-8\pm3\sqrt{5}$。</div>
+          <div class="p-ans">答案：$c=-8+3\sqrt{5}$ 或 $c=-8-3\sqrt{5}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第44題 · 莖葉圖：先數清 20 個數據，再逐一驗證三句</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第44題</span>
+    <h1>莖葉圖：先數清 20 個數據，再逐一驗證三句</h1>
+    <p class="sub">統計學 · 莖葉圖、四分位數與標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖的莖葉圖顯示一組學生在某測驗中的得分（以分為單位）的分佈。Ada 在該測驗中取得最高分。下列哪項正確？
+I. 該分佈的上四分位數是 $55$ 分。
+II. Ada 在該測驗的標準分低於 $2$。
+III. 該分佈的標準差大於 $12$ 分。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q44.png" alt="2016 卷二第 44 題：成績的莖葉圖"><figcaption>圖：莖（十位）與葉（個位）（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把莖葉圖讀成 20 個數據</div>
+<p>$$45,46,47,48;\ 55,55,56,58;\ 63,65,65,66,69,69;\ 70,70,71;\ 80,82,85$$</p>
+<p>共 $20$ 個數據，最高分為 $85$ 分，即 Ada 得 $85$ 分。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I：上四分位數</div>
+      <div class="rule"><span class="rule-name">四分位數</span>把數據由小至大排列後，上四分位數 $Q_{3}$ 約在 $\dfrac{3(n+1)}{4}$ 的位置。</div>
+<p>$$\frac{3(21)}{4}=15.75$$</p>
+<p>第 $15$ 及第 $16$ 個數據都是 $70$，故 $Q_{3}=70$ 分，不是 $55$ 分。I 錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II：先求平均數與標準差</div>
+      <div class="rule"><span class="rule-name">平均數與標準差</span>$\bar{x}=\dfrac{\sum x}{n}$，$\sigma=\sqrt{\dfrac{\sum x^{2}}{n}-\bar{x}^{2}}$。</div>
+<p>$$\sum x=1265\ \Rightarrow\ \bar{x}=63.25$$</p>
+<p>$$\sum x^{2}=82\,691\ \Rightarrow\ \sigma=\sqrt{\frac{82\,691}{20}-63.25^{2}}\approx11.6$$</p>
+<p>Ada 的標準分：</p>
+<p>$$z=\frac{85-63.25}{11.6}\approx1.88 \lt 2$$</p>
+<p>II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III 並下結論</div>
+<p>標準差約為 $11.6$ 分，小於 $12$ 分，III 錯。</p>
+<p>只有 II 正確，答案為 <b>B</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據為 $12,15,15,18,20,22,25$。下列哪項正確？
+I. 中位數是 $18$。
+II. 眾數是 $15$。
+III. 平均數大於中位數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共 $7$ 個數據，中位數是第 $4$ 個：$18$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 出現最多次的是 $15$（兩次），II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 平均數 $=\dfrac{12+15+15+18+20+22+25}{7}=\dfrac{127}{7}\approx18.14 \gt 18$，III 正確。</div>
+          <div class="p-step"><b>第 4 步.</b> 答案為 D。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q43.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

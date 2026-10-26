@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第39題 · 放入坐標系，用叉積一次算出 $\sin\angle PFQ$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第39題</span>
+    <h1>放入坐標系，用叉積一次算出 $\sin\angle PFQ$</h1>
+    <p class="sub">三角學 · 立體圖形中的角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCDEFGH$ 為一個長方體。$AC$ 與 $BD$ 相交於 $P$。$Q$ 為 $CH$ 上的一點，使得 $CQ=9\ \text{cm}$ 及 $QH=15\ \text{cm}$。求 $\sin\angle PFQ$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{33}{65}$</li><li><span class="ol">B</span>$\dfrac{56}{65}$</li><li><span class="ol">C</span>$\dfrac{13}{5\sqrt{181}}$</li><li><span class="ol">D</span>$\dfrac{58}{13\sqrt{181}}$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q39.png" alt="2016 卷二第 39 題：長方體 ABCDEFGH，P 為底面中心，Q 在 CH 上"><figcaption>圖：$AB=16\ \text{cm}$、$BC=12\ \text{cm}$、$CH=24\ \text{cm}$（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">建立坐標系</div>
+      <div class="rule"><span class="rule-name">坐標法</span>以 $A$ 為原點，$AB$、$AD$、$AE$ 分別沿 $x$、$y$、$z$ 軸。</div>
+<p>$$A(0,0,0),\ B(16,0,0),\ C(16,12,0),\ F(0,0,24)$$</p>
+<p>$P$ 是底面對角線的交點，即底面中心：$P(8,6,0)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">定出 $Q$ 的坐標</div>
+<p>$CH=9+15=24$，而 $Q$ 在 $CH$ 上距 $C$ 為 $9$，故 $Q$ 在 $C$ 之上 $9$ 個單位：</p>
+<p>$$Q(16,12,9)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出兩個向量</div>
+<p>$$\overrightarrow{FP}=(8,6,-24),\qquad \overrightarrow{FQ}=(16,12,-15)$$</p>
+<p>$$|\overrightarrow{FP}|=\sqrt{64+36+576}=26,\qquad |\overrightarrow{FQ}|=\sqrt{256+144+225}=25$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用叉積求 $\sin$</div>
+      <div class="rule"><span class="rule-name">叉積</span>$|\mathbf{u}\times\mathbf{v}|=|\mathbf{u}||\mathbf{v}|\sin\theta$。</div>
+<p>$$\overrightarrow{FP}\times\overrightarrow{FQ}=
+    \begin{vmatrix}\mathbf{i}&\mathbf{j}&\mathbf{k}\\ 8&6&-24\\ 16&12&-15\end{vmatrix}
+    =(198,\,-264,\,0)$$</p>
+<p>$$|\overrightarrow{FP}\times\overrightarrow{FQ}|=\sqrt{198^{2}+264^{2}}=330$$</p>
+<p>$$\sin\angle PFQ=\frac{330}{26\times25}=\frac{330}{650}=\frac{33}{65}$$</p>
+<p>答案為 <b>A</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{33}{65}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 承上題的長方體，求 $\cos\angle PFQ$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{56}{65}$</li><li><span class="ol">B</span>$\dfrac{33}{65}$</li><li><span class="ol">C</span>$\dfrac{16}{65}$</li><li><span class="ol">D</span>$\dfrac{63}{65}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 用點積：$\overrightarrow{FP}\cdot\overrightarrow{FQ}=8(16)+6(12)+(-24)(-15)=128+72+360=560$。</div>
+          <div class="p-step"><b>第 2 步.</b> $|\overrightarrow{FP}|=26$、$|\overrightarrow{FQ}|=25$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\cos\angle PFQ=\dfrac{560}{650}=\dfrac{56}{65}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 核對：$\left(\dfrac{33}{65}\right)^{2}+\left(\dfrac{56}{65}\right)^{2}=\dfrac{1089+3136}{4225}=1$。答案為 A。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{56}{65}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

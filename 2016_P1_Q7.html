@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第7題 · 兩邊等長、夾角 $60^{\circ}$，就是等邊三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第7題</span>
+    <h1>兩邊等長、夾角 $60^{\circ}$，就是等邊三角形</h1>
+    <p class="sub">三角學 · 極坐標與對稱</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在極坐標系統中，$O$ 為極點。已知 $A$、$B$ 兩點的極坐標分別為 $(12,75^{\circ})$ 與 $(12,135^{\circ})$。
+(a) 求 $\angle AOB$。
+(b) 求 $\triangle AOB$ 的周界。
+(c) 寫出 $\triangle AOB$ 的旋轉對稱重數。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 兩點的極角相減</div>
+      <div class="rule"><span class="rule-name">極坐標的意義</span>$(r,\theta)$ 中 $\theta$ 是由極軸逆時針量度的極角，所以兩點的夾角就是極角之差。</div>
+<p>$$\angle AOB=135^{\circ}-75^{\circ}=60^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 判斷三角形的形狀</div>
+      <div class="rule"><span class="rule-name">等腰三角形的底角</span>$OA=OB=12$，故底角相等：$\angle OAB=\angle OBA$。</div>
+<p>$$\angle OAB=\angle OBA=\frac{180^{\circ}-60^{\circ}}{2}=60^{\circ}$$</p>
+<p>三個角都是 $60^{\circ}$，所以 $\triangle AOB$ 是等邊三角形，$AB=OA=OB=12$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 三邊相加</div>
+<p>$$\text{周界}=12+12+12=36$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 數旋轉對稱重數</div>
+      <div class="rule"><span class="rule-name">旋轉對稱</span>圖形繞中心旋轉一周，能與自己重合的次數就是重數。</div>
+<p>等邊三角形每轉 $120^{\circ}$ 就重合一次，轉一周共重合 $3$ 次，故旋轉對稱重數為 $3$。</p>
+<p>注意「重數」與「對稱軸數」不同：等邊三角形有 $3$ 條反射對稱軸，同時旋轉重數也是 $3$，本題問的是後者。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $60^{\circ}$；(b) $36$；(c) $3$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在極坐標系統中，$O$ 為極點，$A$、$B$ 的極坐標分別為 $(9,30^{\circ})$ 與 $(9,90^{\circ})$。(a) 求 $\angle AOB$。(b) 求 $\triangle AOB$ 的周界。(c) 寫出 $\triangle AOB$ 的旋轉對稱重數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $\angle AOB=90^{\circ}-30^{\circ}=60^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $OA=OB=9$ 且夾角 $60^{\circ}$，故為等邊三角形，$AB=9$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) 周界 $=9\times3=27$。</div>
+          <div class="p-step"><b>第 4 步.</b> (c) 等邊三角形每 $120^{\circ}$ 重合一次，重數為 $3$。</div>
+          <div class="p-ans">答案：(a) $60^{\circ}$；(b) $27$；(c) $3$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

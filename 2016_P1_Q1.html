@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第1題 · 分子先平方，再逐個底數相減指數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第1題</span>
+    <h1>分子先平方，再逐個底數相減指數</h1>
+    <p class="sub">指數定律 · 冪的冪與除法律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{(x^{8}y^{7})^{2}}{x^{5}y^{-6}}$，並以正指數表示答案。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先處理分子的括號</div>
+      <div class="rule"><span class="rule-name">冪的冪</span>$(a^{m})^{n}=a^{mn}$。括號內的每個因式都要各自平方。</div>
+<p>$$(x^{8}y^{7})^{2}=x^{8\times 2}y^{7\times 2}=x^{16}y^{14}$$</p>
+<p>易錯：只把 $x$ 平方而漏掉 $y$，或把指數寫成 $8^{2}=64$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫成同底相除</div>
+      <div class="rule"><span class="rule-name">除法律</span>$\dfrac{a^{m}}{a^{n}}=a^{m-n}$。分子分母同底時，指數相減。</div>
+<p>$$\frac{x^{16}y^{14}}{x^{5}y^{-6}}=x^{16-5}\cdot y^{14-(-6)}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">小心負指數：減負等於加</div>
+<p>$$x^{16-5}=x^{11},\qquad y^{14-(-6)}=y^{14+6}=y^{20}$$</p>
+<p>這一步是整題最容易失分的位置：$y$ 的指數是 $-6$，相減之後變成 $+6$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查指數是否全為正</div>
+<p>$$x^{11}y^{20}$$</p>
+<p>$11$ 與 $20$ 都是正數，已符合「以正指數表示」的要求，不必再改寫成倒數。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$x^{11}y^{20}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{(x^{3}y^{5})^{2}}{x^{7}y^{-2}}$，並以正指數表示答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分子：$(x^{3}y^{5})^{2}=x^{6}y^{10}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同底相除：$x^{6-7}y^{10-(-2)}=x^{-1}y^{12}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 把負指數移到分母：$\dfrac{y^{12}}{x}$。</div>
+          <div class="p-ans">答案：$\dfrac{y^{12}}{x}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2016_P1_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

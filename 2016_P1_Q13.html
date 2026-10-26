@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第13題 · 等角對等邊，先證 $AD=AE$ 再用 SAS</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第13題</span>
+    <h1>等角對等邊，先證 $AD=AE$ 再用 SAS</h1>
+    <p class="sub">幾何 · 全等三角形與畢氏定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在圖 1 中，$ABC$ 是一個三角形。$D$、$E$ 及 $M$ 是位於 $BC$ 上的點，使得 $BD=CE$、$\angle ADC=\angle AEB$ 及 $DM=EM$。
+(a) 證明 $\triangle ACD \cong \triangle ABE$。
+(b) 設 $AD=15\ \text{cm}$、$BD=7\ \text{cm}$ 及 $DE=18\ \text{cm}$。
+(i) 求 $AM$。
+(ii) $\triangle ABE$ 是否直角三角形？試解釋。
+    </div>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P1_Q13.png" alt="2016 卷一第 13 題：三角形 ABC，D、M、E 在 BC 上"><figcaption>圖 1：$D$、$M$、$E$ 依次位於 $BC$ 上（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先證 $AD=AE$</div>
+      <div class="rule"><span class="rule-name">等角對等邊</span>在 $\triangle ADE$ 中，$D$、$E$ 在 $BC$ 上且 $D$ 在 $E$ 左邊，故 $\angle ADE=\angle ADC$，而 $\angle AED=180^{\circ}-\angle AEB$。</div>
+<p>已知 $\angle ADC=\angle AEB$，所以</p>
+<p>$$\angle ADE=\angle ADC=\angle AEB=180^{\circ}-\angle AED$$</p>
+<p>由此 $\angle ADE=\angle AED$，故 $AD=AE$（等角對等邊）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 補上第三組條件</div>
+      <div class="rule"><span class="rule-name">全等三角形</span>要用 SAS，需要兩邊及其夾角。</div>
+<p>$$DC=DE+EC,\qquad BE=BD+DE$$</p>
+<p>因為 $BD=CE$，所以 $DC=BE$。</p>
+<p>在 $\triangle ACD$ 與 $\triangle ABE$ 中：$AD=AE$（已證）、$\angle ADC=\angle AEB$（已知）、$DC=BE$（已證）。</p>
+<p>$$\therefore\ \triangle ACD\cong\triangle ABE\quad(\text{SAS})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 認出 $AM\perp DE$</div>
+      <div class="rule"><span class="rule-name">等腰三角形的性質</span>$AD=AE$ 且 $M$ 為 $DE$ 的中點（$DM=EM$），所以 $AM$ 是底邊上的中線，也是高。</div>
+<p>$DE=18$，故 $DM=ME=9$。在直角三角形 $AMD$ 中</p>
+<p>$$AM=\sqrt{AD^{2}-DM^{2}}=\sqrt{15^{2}-9^{2}}=\sqrt{144}=12\ \text{cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 求 $AB$ 與 $BE$</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$AM\perp BC$，故 $\triangle AMB$ 是直角三角形。</div>
+<p>$$MB=MD+DB=9+7=16$$</p>
+<p>$$AB=\sqrt{AM^{2}+MB^{2}}=\sqrt{12^{2}+16^{2}}=20\ \text{cm}$$</p>
+<p>$$BE=BM+ME=16+9=25\ \text{cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 用畢氏定理的逆定理檢驗</div>
+      <div class="rule"><span class="rule-name">畢氏定理的逆定理</span>若最長邊的平方等於另外兩邊平方之和，則該邊所對的角是直角。</div>
+<p>$$AB^{2}+AE^{2}=20^{2}+15^{2}=400+225=625=25^{2}=BE^{2}$$</p>
+<p>故 $\angle BAE=90^{\circ}$，$\triangle ABE$ 是直角三角形。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 見題解；(b)(i) $12\ \text{cm}$；(ii) 是，因 $AB^{2}+AE^{2}=BE^{2}$，$\angle BAE=90^{\circ}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中，$D$、$M$、$E$ 依次位於 $BC$ 上，$BD=CE$、$\angle ADC=\angle AEB$、$DM=EM$。設 $AD=13\ \text{cm}$、$BD=5\ \text{cm}$、$DE=10\ \text{cm}$。(a) 求 $AM$。(b) $\triangle ABE$ 是否直角三角形？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 (a) 的證明知 $AD=AE=13$，且 $M$ 為 $DE$ 中點，$AM\perp DE$。</div>
+          <div class="p-step"><b>第 2 步.</b> $DM=ME=5$，故 $AM=\sqrt{13^{2}-5^{2}}=12$ cm。</div>
+          <div class="p-step"><b>第 3 步.</b> $MB=5+5=10$，$AB=\sqrt{12^{2}+10^{2}}=\sqrt{244}$；$BE=10+5=15$。</div>
+          <div class="p-step"><b>第 4 步.</b> $AB^{2}+AE^{2}=244+169=413\neq225=BE^{2}$，故不是直角三角形。</div>
+          <div class="p-ans">答案：(a) $12\ \text{cm}$；(b) 不是，因 $AB^{2}+AE^{2}\neq BE^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

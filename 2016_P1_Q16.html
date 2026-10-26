@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第16題 · 由標準分倒推標準差，再比較極差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第16題</span>
+    <h1>由標準分倒推標準差，再比較極差</h1>
+    <p class="sub">統計學 · 標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在某測驗中，一班學生成績的分佈的平均值為 $61$ 分。亞拔與瑪麗的標準分分別為 $-2.6$ 與 $1.4$。亞拔得 $22$ 分。有學生聲稱該分佈的極差至多為 $59$ 分。該聲稱是否正確？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用亞拔的資料求標準差</div>
+      <div class="rule"><span class="rule-name">標準分</span>標準分 $z=\dfrac{x-\bar{x}}{\sigma}$。</div>
+<p>$$\frac{22-61}{\sigma}=-2.6\ \Rightarrow\ \sigma=\frac{-39}{-2.6}=15$$</p>
+<p>即該班成績的標準差為 $15$ 分。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求瑪麗的分數</div>
+<p>$$\frac{x-61}{15}=1.4\ \Rightarrow\ x=61+21=82$$</p>
+<p>瑪麗得 $82$ 分。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較最高分與最低分的差距</div>
+      <div class="rule"><span class="rule-name">極差</span>極差 $=$ 最大值 $-$ 最小值；而任何分佈的極差不會小於「最高分與最低分之差」。</div>
+<p>亞拔與瑪麗相差 $82-22=60$ 分，故極差至少為 $60$ 分。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗聲稱</div>
+<p>$$60 \gt 59$$</p>
+<p>所以極差必定超過 $59$ 分，學生的聲稱不正確。</p>
+<p>要留意推理方向：我們不知道亞拔是否最低分、瑪麗是否最高分，但即使不是，極差只會更大，因此「至少 $60$ 分」的結論仍然成立。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>不正確；標準差為 $15$，瑪麗得 $82$ 分，兩人已相差 $60$ 分，故極差必定超過 $59$ 分</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某測驗成績的平均值為 $50$ 分，亞明的標準分為 $-2$，他得 $26$ 分。亞珍的標準分為 $2.5$。有學生聲稱該分佈的極差至多為 $50$ 分，是否正確？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $\dfrac{26-50}{\sigma}=-2$ 得 $\sigma=12$。</div>
+          <div class="p-step"><b>第 2 步.</b> 亞珍的分數：$50+2.5\times12=80$ 分。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩人相差 $80-26=54$ 分，故極差至少 $54$ 分。</div>
+          <div class="p-step"><b>第 4 步.</b> $54 \gt 50$，聲稱不正確。</div>
+          <div class="p-ans">答案：不正確（極差至少 $54$ 分）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

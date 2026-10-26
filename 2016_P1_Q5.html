@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第5題 · 「多 $40\%$」是乘以 $1.4$，不是 $0.4$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第5題</span>
+    <h1>「多 $40\%$」是乘以 $1.4$，不是 $0.4$</h1>
+    <p class="sub">百分數 · 增減與應用題</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某康樂會共有 $180$ 名會員，其中男性會員人數比女性會員人數多 $40\%$。求男性會員與女性會員人數之差。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設定未知數</div>
+<p>設男性有 $x$ 人、女性有 $y$ 人。先寫清楚每個字母代表甚麼，之後列式才不會混亂。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把兩個條件寫成方程</div>
+      <div class="rule"><span class="rule-name">增百分率</span>「比 $y$ 多 $40\%$」即 $y\times(1+40\%)=1.4y$，不是 $0.4y$。</div>
+<p>$$\begin{cases}x+y=180\\[4pt] x=(1+40\%)y=1.4y\end{cases}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入消去一個未知數</div>
+      <div class="rule"><span class="rule-name">代入法</span>把 $x=1.4y$ 代入總人數的方程，只剩 $y$ 一個未知數。</div>
+<p>$$1.4y+y=180\ \Rightarrow\ 2.4y=180\ \Rightarrow\ y=75$$</p>
+<p>於是 $x=1.4\times75=105$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">回答題目所問的「差」</div>
+<p>$$x-y=105-75=30$$</p>
+<p>驗算：$105+75=180$，且 $105=1.4\times75$，兩個條件都符合。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$30$ 人（男 $105$ 人、女 $75$ 人）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某學會共有 $220$ 名會員，男性會員人數比女性會員人數多 $20\%$。求兩者人數之差。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設女性 $y$ 人，則男性 $1.2y$ 人。</div>
+          <div class="p-step"><b>第 2 步.</b> $1.2y+y=220$，即 $2.2y=220$，得 $y=100$。</div>
+          <div class="p-step"><b>第 3 步.</b> 男性 $120$ 人，相差 $120-100=20$ 人。</div>
+          <div class="p-ans">答案：$20$ 人</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

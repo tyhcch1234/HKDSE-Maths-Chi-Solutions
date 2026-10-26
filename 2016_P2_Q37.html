@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第37題 · $x=0$ 時 $y$ 為負，$a$ 必為負；最高點決定 $b$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第37題</span>
+    <h1>$x=0$ 時 $y$ 為負，$a$ 必為負；最高點決定 $b$</h1>
+    <p class="sub">三角學 · 三角函數的圖像</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $a$、$b$ 為常數。若下圖為 $y=a\cos 2x^{\circ}$ 的圖像，則
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$a=-2$ 且 $b=90$</li><li><span class="ol">B</span>$a=-2$ 且 $b=360$</li><li><span class="ol">C</span>$a=2$ 且 $b=90$</li><li><span class="ol">D</span>$a=2$ 且 $b=360$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q37.png" alt="2016 卷二第 37 題：y = a cos 2x 度的圖像，最高點在 x = b"><figcaption>圖：圖像的最高點為 $(b,2)$（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $y$ 截距判斷 $a$ 的符號</div>
+      <div class="rule"><span class="rule-name">餘弦函數</span>$\cos 0^{\circ}=1$，所以 $x=0$ 時 $y=a\cos0^{\circ}=a$。</div>
+<p>圖像與 $y$ 軸相交於 $x$ 軸之下，即 $a \lt 0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用最高點判斷 $|a|$</div>
+      <div class="rule"><span class="rule-name">振幅</span>$y=a\cos\theta$ 的最大值是 $|a|$。</div>
+<p>圖中最高點的 $y$ 坐標為 $2$，故 $|a|=2$，配合 $a \lt 0$ 得 $a=-2$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由最高點的位置求 $b$</div>
+<p>$$y=-2\cos 2x^{\circ}$$</p>
+<p>要取最大值 $2$，需 $\cos 2x^{\circ}=-1$，即 $2x=180$（在一個周期內），故 $x=90$。</p>
+<p>所以 $b=90$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對周期與選項</div>
+<p>函數的周期為 $\dfrac{360^{\circ}}{2}=180^{\circ}$，圖中兩個相鄰的最高點相距 $180^{\circ}$，與圖像相符。</p>
+<p>答案為 <b>A</b>（$a=-2$、$b=90$）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$a=-2$ 且 $b=90$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a$、$b$ 為常數。若 $y=a\sin 3x^{\circ}$ 的圖像的最低點為 $(b,-4)$，且 $b$ 取最小正數值，則</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$a=4$ 且 $b=30$</li><li><span class="ol">B</span>$a=4$ 且 $b=90$</li><li><span class="ol">C</span>$a=-4$ 且 $b=30$</li><li><span class="ol">D</span>$a=-4$ 且 $b=90$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 最低點的 $y$ 坐標為 $-4$，而 $\sin$ 的最小值為 $-1$，故 $a=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 要 $\sin 3x^{\circ}=-1$，需 $3x=270$，即 $x=90$。</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $a=4$、$b=90$，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$a=4$ 且 $b=90$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q36.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q38.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第35題 · 線性函數的極值一定在頂點出現，逐點代入即可</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第35題</span>
+    <h1>線性函數的極值一定在頂點出現，逐點代入即可</h1>
+    <p class="sub">不等式與線性規劃 · 極值</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $PQ$ 與 $SR$ 均平行於 $x$ 軸。若 $(x,y)$ 為陰影區域 $PQRS$（包括邊界）內的一點，則 $7y-5x+3$ 在哪一點取得最大值？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$P$</li><li><span class="ol">B</span>$Q$</li><li><span class="ol">C</span>$R$</li><li><span class="ol">D</span>$S$</li></ol>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P2_Q35.png" alt="2016 卷二第 35 題：陰影區域 PQRS 與兩條直線"><figcaption>圖：$P$、$Q$ 在 $y=6$ 上，$S$、$R$ 在 $y=12$ 上（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出四點的坐標</div>
+      <div class="rule"><span class="rule-name">圖像閱讀</span>外側直線通過 $(0,24)$ 與 $(24,0)$；內側直線通過 $(0,24)$ 與 $(12,0)$。</div>
+<p>外側直線：$y=24-x$；內側直線：$y=24-2x$。</p>
+<p>在 $y=6$：內側 $x=9$（即 $P$）、外側 $x=18$（即 $Q$）。在 $y=12$：內側 $x=6$（即 $S$）、外側 $x=12$（即 $R$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">說明為何只需檢查頂點</div>
+      <div class="rule"><span class="rule-name">線性規劃</span>線性函數在多邊形區域上的最大值、最小值必定在頂點取得。</div>
+<p>令 $f(x,y)=7y-5x+3$，它是 $x$、$y$ 的線性函數，故只需比較四個頂點的函数值。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐點代入</div>
+<p>$$f(P)=7(6)-5(9)+3=0$$</p>
+<p>$$f(Q)=7(6)-5(18)+3=-45$$</p>
+<p>$$f(R)=7(12)-5(12)+3=27$$</p>
+<p>$$f(S)=7(12)-5(6)+3=57$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較並下結論</div>
+<p>最大值 $57$ 在 $S$ 取得。</p>
+<p>直觀理解：$y$ 的係數為正、$x$ 的係數為負，所以要「盡量高、盡量左」，$S$ 正是左上角的頂點。答案為 <b>D</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$S$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 承上題的區域，求 $3x-2y$ 在 $PQRS$ 上的最大值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30$</li><li><span class="ol">B</span>$36$</li><li><span class="ol">C</span>$42$</li><li><span class="ol">D</span>$48$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $3x-2y$ 要最大，就要 $x$ 大、$y$ 小，即右下角的 $Q(18,6)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $3(18)-2(6)=54-12=42$。</div>
+          <div class="p-step"><b>第 3 步.</b> 核對其他頂點：$P$ 得 $15$、$R$ 得 $12$、$S$ 得 $-6$，皆小於 $42$。</div>
+          <div class="p-step"><b>第 4 步.</b> 最大值為 $42$，答案為 C。</div>
+          <div class="p-ans">答案：<b>C</b>（$42$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

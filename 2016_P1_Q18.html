@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第18題 · 配方找出頂點，再看圖像如何被移動</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第18題</span>
+    <h1>配方找出頂點，再看圖像如何被移動</h1>
+    <p class="sub">函數及其圖像 · 配方法與變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $f(x)=\dfrac{-1}{3}x^{2}+12x-121$。
+(a) 用配方法求 $y=f(x)$ 的圖像的頂點坐標。
+(b) $y=g(x)$ 的圖像由 $y=f(x)$ 的圖像鉛直平移而得。若 $y=g(x)$ 的圖像與 $x$ 軸相切，求 $g(x)$。
+(c) 在某變換下，$f(x)$ 變為 $\dfrac{-1}{3}x^{2}-12x-121$。描述該變換的幾何意義。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 抽出 $x^{2}$ 的係數</div>
+      <div class="rule"><span class="rule-name">配方法</span>先把含 $x$ 的兩項提出 $-\dfrac{1}{3}$。</div>
+<p>$$f(x)=-\frac{1}{3}\left(x^{2}-36x\right)-121$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 加上再減去 $18^{2}$</div>
+<p>$$=-\frac{1}{3}\left(x^{2}-36x+18^{2}-18^{2}\right)-121
+    =-\frac{1}{3}(x-18)^{2}+108-121$$</p>
+<p>$$=-\frac{1}{3}(x-18)^{2}-13$$</p>
+<p>故頂點為 $(18,-13)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 「與 $x$ 軸相切」代表最高點在 $x$ 軸上</div>
+      <div class="rule"><span class="rule-name">圖像變換</span>鉛直平移 $k$ 單位即 $g(x)=f(x)+k$；相切表示頂點的 $y$ 坐標為 $0$。</div>
+<p>頂點原為 $(18,-13)$，要升到 $y=0$，需向上平移 $13$ 單位：</p>
+<p>$$g(x)=f(x)+13=-\frac{1}{3}(x-18)^{2}-13+13=-\frac{1}{3}(x-18)^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 把新函數寫成 $f$ 的變換</div>
+<p>$$\frac{-1}{3}x^{2}-12x-121=f(-x)$$</p>
+<p>因為自變數由 $x$ 換成 $-x$，圖像沿 $y$ 軸反射（左右翻轉）。</p>
+<p>另一個等價描述：展開 $f(x+36)=-\dfrac{1}{3}(x+36)^{2}+12(x+36)-121=-\dfrac{1}{3}x^{2}-12x-121$，可見新圖像也是原圖像向左平移 $36$ 單位。兩種描述在評卷中都接納。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(18,-13)$；(b) $g(x)=-\dfrac{1}{3}(x-18)^{2}$；(c) 沿 $y$ 軸反射（或向左平移 $36$ 單位）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=-\dfrac{1}{2}x^{2}+8x-25$。(a) 用配方法求頂點。(b) 若 $y=g(x)$ 由 $y=f(x)$ 鉛直平移而得且與 $x$ 軸相切，求 $g(x)$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $f(x)=-\dfrac{1}{2}(x^{2}-16x)-25=-\dfrac{1}{2}\left[(x-8)^{2}-64\right]-25$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=-\dfrac{1}{2}(x-8)^{2}+32-25=-\dfrac{1}{2}(x-8)^{2}+7$，頂點 $(8,7)$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) 要令頂點落在 $x$ 軸上，需下移 $7$ 單位。</div>
+          <div class="p-step"><b>第 4 步.</b> $g(x)=f(x)-7=-\dfrac{1}{2}(x-8)^{2}$。</div>
+          <div class="p-ans">答案：(a) $(8,7)$；(b) $g(x)=-\dfrac{1}{2}(x-8)^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

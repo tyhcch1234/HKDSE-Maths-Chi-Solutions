@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第12題 · 中位數 7.5，代表中間兩個數是 7 和 8</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第12題</span>
+    <h1>中位數 7.5，代表中間兩個數是 7 和 8</h1>
+    <p class="sub">統計學 · 中位數與平均數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下圖的棒形圖顯示一組兒童的年齡分佈，其中 $a \gt 11$ 且 $4 \lt b \lt 10$。這組兒童年齡的中位數為 $7.5$。
+(a) 求 $a$ 及 $b$。
+(b) 現有四位兒童加入這組，他們的年齡各不相同，而這組兒童年齡的範圍維持不變。求
+(i) 這組兒童年齡的可能最大中位數，
+(ii) 這組兒童年齡的可能最小平均數。
+    </div>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P1_Q12.png" alt="2016 卷一第 12 題的棒形圖：6 至 10 歲的兒童人數"><figcaption>圖：各年齡的兒童人數（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 由中位數鎖定中間位置</div>
+      <div class="rule"><span class="rule-name">中位數</span>數據個數為偶數時，中位數是第 $\frac{N}{2}$ 與第 $\frac{N}{2}+1$ 個數據的平均。</div>
+<p>中位數為 $7.5$，而年齡只有整數值，故中間兩個數據必定是 $7$ 和 $8$。</p>
+<p>累積至 $6$ 歲有 $11$ 人，至 $7$ 歲有 $11+a$ 人，所以第 $\frac{N}{2}$ 個數據是 $7$ 歲，即</p>
+<p>$$\frac{N}{2}=11+a$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用總人數建立等式</div>
+<p>$$N=11+a+11+b+4=26+a+b$$</p>
+<p>代入 $\dfrac{N}{2}=11+a$：$26+a+b=22+2a$，即 $a=b+4$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用範圍條件收窄</div>
+      <div class="rule"><span class="rule-name">不等式</span>$4 \lt b \lt 10$ 且 $a \gt 11$，配合 $a=b+4$ 可逐一篩選。</div>
+<p>由 $a=b+4 \gt 11$ 得 $b \gt 7$，配合 $b \lt 10$ 得 $b=8$ 或 $9$。</p>
+<p>故 $(a,b)=(12,8)$ 或 $(13,9)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 把新數據放得越高越好</div>
+      <div class="rule"><span class="rule-name">中位數的極值</span>要令中位數最大，四位新兒童的年齡應盡量取大，但年齡範圍不變（仍是 $6$ 至 $10$ 歲）。</div>
+<p>取 $7,8,9,10$ 歲。以 $(a,b)=(12,8)$ 為例，加入後各年齡人數為 $11,13,12,9,5$，共 $50$ 人。</p>
+<p>第 $25$、$26$ 個數據都是 $8$ 歲，故最大中位數為 $8$。</p>
+<p>（用 $(13,9)$ 檢驗：同樣得中位數 $8$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 把新數據放得越低越好</div>
+<p>取 $6,7,8,9$ 歲。$(a,b)=(12,8)$ 時共有 $50$ 人，總年齡為</p>
+<p>$$12(6)+13(7)+12(8)+9(9)+4(10)=380$$</p>
+<p>$$\text{平均數}=\frac{380}{50}=7.6$$</p>
+<p>若 $(a,b)=(13,9)$，平均數為 $\dfrac{396}{52}\approx7.615 \gt 7.6$，故最小平均數為 $7.6$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(a,b)=(12,8)$ 或 $(13,9)$；(b)(i) $8$；(ii) $7.6$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組兒童年齡的分佈為：$5$ 歲 $8$ 人、$6$ 歲 $x$ 人、$7$ 歲 $8$ 人、$8$ 歲 $y$ 人、$9$ 歲 $3$ 人，其中 $x \gt 8$ 且 $3 \lt y \lt 8$。若中位數為 $6.5$，求 $x$ 與 $y$ 的所有可能值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 中位數 $6.5$ 表示中間兩個數據是 $6$ 和 $7$。</div>
+          <div class="p-step"><b>第 2 步.</b> 總人數 $N=19+x+y$，累積至 $6$ 歲有 $8+x$ 人，故 $\dfrac{N}{2}=8+x$。</div>
+          <div class="p-step"><b>第 3 步.</b> $19+x+y=16+2x$，即 $x=y+3$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $x \gt 8$ 得 $y \gt 5$，配合 $3 \lt y \lt 8$ 得 $y=6$ 或 $7$，故 $(x,y)=(9,6)$ 或 $(10,7)$。</div>
+          <div class="p-ans">答案：$(x,y)=(9,6)$ 或 $(10,7)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

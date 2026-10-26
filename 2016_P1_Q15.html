@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第15題 · 先排好女生，男生只能插空隙</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第15題</span>
+    <h1>先排好女生，男生只能插空隙</h1>
+    <p class="sub">概率 · 排列與限制條件</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $4$ 名男生與 $5$ 名女生隨機排成一列，求沒有男生相鄰的概率。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算沒有規限的總排列數</div>
+      <div class="rule"><span class="rule-name">排列</span>$9$ 個不同的人排成一列，共有 $9!$ 種排法。</div>
+<p>$$n(\text{總數})=9!=362\,880$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">先排女生，造出空隙</div>
+      <div class="rule"><span class="rule-name">插空法</span>$5$ 名女生先排好，前後及之間共有 $6$ 個空隙，男生要各自佔一個空隙才不會相鄰。</div>
+<p>女生排列：$5!$ 種；空隙位置：$\binom{6}{4}$ 種。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">男生在空隙內排列</div>
+<p>$$n(\text{符合條件})=5!\times\binom{6}{4}\times4!=120\times15\times24=43\,200$$</p>
+<p>三個因式分別代表：女生次序、選哪 4 個空隙、男生的次序。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求概率並約簡</div>
+      <div class="rule"><span class="rule-name">概率</span>概率 $=\dfrac{\text{符合條件的排列數}}{\text{總排列數}}$。</div>
+<p>$$P=\frac{43\,200}{362\,880}=\frac{5}{42}$$</p>
+<p>約簡時可用 $43\,200=5!\times\binom{6}{4}\times4!$，分子分母同除以 $9!$ 的因式。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{5}{42}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $3$ 名男生與 $4$ 名女生隨機排成一列，求沒有男生相鄰的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總排列數 $7!=5040$。</div>
+          <div class="p-step"><b>第 2 步.</b> 先排 $4$ 名女生：$4!$ 種，形成 $5$ 個空隙。</div>
+          <div class="p-step"><b>第 3 步.</b> 選 $3$ 個空隙並排男生：$\binom{5}{3}\times3!=10\times6=60$。</div>
+          <div class="p-step"><b>第 4 步.</b> 符合條件共 $24\times60=1440$，概率 $=\dfrac{1440}{5040}=\dfrac{2}{7}$。</div>
+          <div class="p-ans">答案：$\dfrac{2}{7}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第2題 · 先拆括號，再把 $x$ 集中同一邊</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第2題</span>
+    <h1>先拆括號，再把 $x$ 集中同一邊</h1>
+    <p class="sub">方程 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+把公式 $Ax=(4x+B)C$ 的主項變換為 $x$。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開右邊的括號</div>
+      <div class="rule"><span class="rule-name">乘法分配律</span>$C$ 要分別乘進括號內的 $4x$ 與 $B$，不可只乘一項。</div>
+<p>$$Ax=4Cx+BC$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把所有含 $x$ 的項搬到同一邊</div>
+<p>$$Ax-4Cx=BC$$</p>
+<p>搬項時符號要變：右邊的 $+4Cx$ 移到左邊成為 $-4Cx$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">提出公因數 $x$</div>
+      <div class="rule"><span class="rule-name">提取公因式</span>$Ax-4Cx=x(A-4C)$。提出 $x$ 之後，剩下的一個括號就是 $x$ 的係數。</div>
+<p>$$(A-4C)x=BC$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩邊除以 $x$ 的係數</div>
+<p>$$x=\frac{BC}{A-4C}$$</p>
+<p>因為 $A-4C$ 是整個係數，除以它時必須把 $BC$ 全部放在分子；寫成 $\dfrac{B}{A-4C}C$ 雖然等值，但化簡程度不及一個分數。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$x=\dfrac{BC}{A-4C}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把公式 $3x+A=(x-B)C$ 的主項變換為 $x$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$3x+A=Cx-BC$。</div>
+          <div class="p-step"><b>第 2 步.</b> 移項：$3x-Cx=-BC-A$，即 $(3-C)x=-(A+BC)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩邊除以 $3-C$：$x=\dfrac{-(A+BC)}{3-C}=\dfrac{A+BC}{C-3}$。</div>
+          <div class="p-ans">答案：$x=\dfrac{A+BC}{C-3}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

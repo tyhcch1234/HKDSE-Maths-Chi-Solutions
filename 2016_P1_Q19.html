@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第19題 · 四面體：先解 $\triangle ABD$，再用餘弦定理求 $CD$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第19題</span>
+    <h1>四面體：先解 $\triangle ABD$，再用餘弦定理求 $CD$</h1>
+    <p class="sub">三角學 · 立體圖形與正弦、餘弦定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 2 顯示一個四面體形式的幾何模型 $ABCD$。已知 $\angle BAD=86^{\circ}$、$\angle CBD=43^{\circ}$、$AB=10\ \text{cm}$、$AC=6\ \text{cm}$、$BC=8\ \text{cm}$ 及 $BD=15\ \text{cm}$。
+(a) 求 $\angle ABD$ 及 $CD$。
+(b) 有工匠聲稱 $AB$ 與面 $BCD$ 之間的角是 $\angle ABC$。你是否同意？試解釋。
+    </div>
+    <figure class="fig">    <figure class="fig"><img src="figures/2016_P1_Q19.png" alt="2016 卷一第 19 題：四面體 ABCD"><figcaption>圖 2：四面體 $ABCD$（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 在 $	riangle ABD$ 用正弦定理</div>
+      <div class="rule"><span class="rule-name">正弦定理</span>$\dfrac{AB}{\sin\angle ADB}=\dfrac{BD}{\sin\angle BAD}$。</div>
+<p>$$\frac{10}{\sin\angle ADB}=\frac{15}{\sin 86^{\circ}}$$</p>
+<p>$$\sin\angle ADB=\frac{10\sin86^{\circ}}{15}=0.6652\ldots$$</p>
+<p>$$\angle ADB\approx41.69^{\circ}\quad(\text{或 }138.31^{\circ}\text{，因 }86^{\circ}+138.31^{\circ} \gt 180^{\circ}\text{ 而捨去})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用三角形內角和求 $ngle ABD$</div>
+<p>$$\angle ABD=180^{\circ}-86^{\circ}-41.69^{\circ}\approx52.3^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 在 $	riangle BCD$ 用餘弦定理</div>
+      <div class="rule"><span class="rule-name">餘弦定理</span>$CD^{2}=BC^{2}+BD^{2}-2(BC)(BD)\cos\angle CBD$。</div>
+<p>$$CD^{2}=8^{2}+15^{2}-2(8)(15)\cos43^{\circ}\approx113.47$$</p>
+<p>$$CD\approx10.7\ \text{cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 檢驗 $AC$ 是否垂直於面 $BCD$</div>
+      <div class="rule"><span class="rule-name">直線與平面的夾角</span>$AB$ 與面 $BCD$ 的夾角，是 $AB$ 與它在該平面上的投影之間的角。若 $AC\perp$ 面 $BCD$，投影便是 $CB$，夾角才會是 $\angle ABC$。</div>
+<p>先看 $\triangle ABC$：$6^{2}+8^{2}=100=10^{2}$，故 $\angle ACB=90^{\circ}$，即 $AC\perp BC$。</p>
+<p>再看 $AC$ 是否垂直於 $CD$。由餘弦定理算 $AD$：</p>
+<p>$$AD^{2}=10^{2}+15^{2}-2(10)(15)\cos52.31^{\circ}\approx141.60\ \Rightarrow\ AD\approx11.90$$</p>
+<p>$$\cos\angle ACD=\frac{6^{2}+10.65^{2}-11.90^{2}}{2(6)(10.65)}\approx0.0618
+\ \Rightarrow\ \angle ACD\approx86.5^{\circ}\neq90^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 下結論</div>
+<p>因為 $AC$ 不垂直於 $CD$，$AC$ 不垂直於面 $BCD$，所以 $AB$ 在面 $BCD$ 上的投影不是 $CB$，$AB$ 與面 $BCD$ 的夾角不等於 $\angle ABC$。</p>
+<p>故不同意工匠的聲稱。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\angle ABD\approx52.3^{\circ}$，$CD\approx10.7\ \text{cm}$；(b) 不同意，因 $AC$ 不垂直於面 $BCD$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在四面體 $ABCD$ 中，$\angle BAD=70^{\circ}$、$\angle CBD=50^{\circ}$、$AB=12\ \text{cm}$、$BD=18\ \text{cm}$、$BC=9\ \text{cm}$。求 (a) $\angle ABD$；(b) $CD$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) 正弦定理：$\dfrac{12}{\sin\angle ADB}=\dfrac{18}{\sin70^{\circ}}$，得 $\sin\angle ADB\approx0.6265$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle ADB\approx38.8^{\circ}$（另一個 $141.2^{\circ}$ 會使內角和超過 $180^{\circ}$，捨去），故 $\angle ABD\approx180^{\circ}-70^{\circ}-38.8^{\circ}=71.2^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) 餘弦定理：$CD^{2}=9^{2}+18^{2}-2(9)(18)\cos50^{\circ}\approx196.7$。</div>
+          <div class="p-step"><b>第 4 步.</b> $CD\approx14.0\ \text{cm}$。</div>
+          <div class="p-ans">答案：(a) $\approx71.2^{\circ}$；(b) $\approx14.0\ \text{cm}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

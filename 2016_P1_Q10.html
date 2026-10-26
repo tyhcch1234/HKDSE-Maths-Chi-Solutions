@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第10題 · 到兩點等距的軌跡就是垂直平分線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第10題</span>
+    <h1>到兩點等距的軌跡就是垂直平分線</h1>
+    <p class="sub">解析幾何 · 軌跡與圓</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $A$、$B$ 兩點的坐標分別為 $(5,7)$ 與 $(13,1)$。設 $P$ 為直角坐標平面上的一個動點，使 $P$ 與 $A$、$B$ 兩點的距離相等，記 $P$ 的軌跡為 $\Gamma$。
+(a) 求 $\Gamma$ 的方程。
+(b) $\Gamma$ 與 $x$ 軸及 $y$ 軸分別相交於 $H$ 及 $K$。設 $O$ 為原點，$C$ 為通過 $O$、$H$、$K$ 三點的圓。有人聲稱 $C$ 的圓周超過 $30$。該聲稱是否正確？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用「距離相等」列式</div>
+      <div class="rule"><span class="rule-name">軌跡</span>$PA=PB$ 的軌跡是 $AB$ 的垂直平分線。</div>
+<p>$$\sqrt{(x-5)^{2}+(y-7)^{2}}=\sqrt{(x-13)^{2}+(y-1)^{2}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 平方後化簡</div>
+<p>$$x^{2}-10x+25+y^{2}-14y+49=x^{2}-26x+169+y^{2}-2y+1$$</p>
+<p>$$16x-12y-96=0\ \Rightarrow\ 4x-3y-24=0$$</p>
+<p>故 $\Gamma$ 的方程為 $4x-3y-24=0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求 $H$、$K$ 的坐標</div>
+<p>令 $y=0$：$4x=24$，$H=(6,0)$。令 $x=0$：$-3y=24$，$K=(0,-8)$。</p>
+<p>驗算：中點 $\left(\dfrac{5+13}{2},\dfrac{7+1}{2}\right)=(9,4)$ 滿足 $4(9)-3(4)-24=0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 認出直徑</div>
+      <div class="rule"><span class="rule-name">半圓上的圓周角</span>若 $\angle HOK=90^{\circ}$，則 $HK$ 是圓的直徑（半圓上的圓周角的逆定理）。</div>
+<p>$OH$ 在 $x$ 軸上、$OK$ 在 $y$ 軸上，故 $\angle HOK=90^{\circ}$，$HK$ 為 $C$ 的直徑。</p>
+<p>$$HK=\sqrt{(6-0)^{2}+(0-(-8))^{2}}=\sqrt{36+64}=10$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 比較圓周與 30</div>
+<p>$$\text{圓周}=10\pi\approx 31.42 \gt 30$$</p>
+<p>故聲稱正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $4x-3y-24=0$；(b) 正確，圓周為 $10\pi\approx31.4 \gt 30$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $A(1,2)$、$B(9,6)$。$P$ 為動點且 $PA=PB$，軌跡記為 $\Gamma$。(a) 求 $\Gamma$ 的方程。(b) $\Gamma$ 與兩軸交於 $H$、$K$，$C$ 為通過 $O$、$H$、$K$ 的圓。有人聲稱 $C$ 的圓周超過 $45$，是否正確？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $(x-1)^{2}+(y-2)^{2}=(x-9)^{2}+(y-6)^{2}$，展開化簡得 $16x+8y-112=0$，即 $2x+y-14=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> (b) $y=0$ 得 $H(7,0)$；$x=0$ 得 $K(0,14)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle HOK=90^{\circ}$，故 $HK$ 為直徑，$HK=\sqrt{49+196}=\sqrt{245}\approx15.65$。</div>
+          <div class="p-step"><b>第 4 步.</b> 圓周 $=\pi\sqrt{245}\approx49.2 \gt 45$，聲稱正確。</div>
+          <div class="p-ans">答案：(a) $2x+y-14=0$；(b) 正確（圓周約 $49.2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

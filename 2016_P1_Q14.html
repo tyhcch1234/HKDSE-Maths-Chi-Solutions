@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷一 第14題 · 比較係數先取 $l$、$m$、$n$，餘式條件只用來定 $b$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷一 · 第14題</span>
+    <h1>比較係數先取 $l$、$m$、$n$，餘式條件只用來定 $b$</h1>
+    <p class="sub">多項式 · 恆等式與餘式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $p(x)=6x^{4}+7x^{3}+ax^{2}+bx+c$，其中 $a$、$b$、$c$ 為常數。當 $p(x)$ 除以 $x+2$ 與除以 $x-2$ 時，兩個餘數相等。已知 $p(x)=(lx^{2}+5x+8)(2x^{2}+mx+n)$，其中 $l$、$m$、$n$ 為常數。
+(a) 求 $l$、$m$ 及 $n$。
+(b) 方程 $p(x)=0$ 有幾個實根？試解釋。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 比較 $x^{4}$ 的係數</div>
+      <div class="rule"><span class="rule-name">恆等式</span>恆等式兩邊同次項的係數相等。</div>
+<p>左邊 $x^{4}$ 的係數是 $6$，右邊是 $l\times2$，故 $2l=6$，$l=3$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 比較 $x^{3}$ 的係數</div>
+<p>右邊 $x^{3}$ 的係數為 $3m+10$，故</p>
+<p>$$3m+10=7\ \Rightarrow\ m=-1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用「餘數相等」求 $b$</div>
+      <div class="rule"><span class="rule-name">餘式定理</span>$p(x)$ 除以 $x-a$ 的餘數是 $p(a)$。</div>
+<p>$$p(2)=96+56+4a+2b+c,\qquad p(-2)=96-56+4a-2b+c$$</p>
+<p>$$p(2)=p(-2)\ \Rightarrow\ 112+4b=0\ \Rightarrow\ b=-28$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a) 比較 $x$ 的係數求 $n$</div>
+<p>右邊 $x$ 的係數為 $5n+8m=5n-8$，故</p>
+<p>$$5n-8=-28\ \Rightarrow\ n=-4$$</p>
+<p>所以 $l=3$、$m=-1$、$n=-4$，即 $p(x)=(3x^{2}+5x+8)(2x^{2}-x-4)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 分別檢驗兩個二次因式</div>
+      <div class="rule"><span class="rule-name">判別式</span>$ax^{2}+bx+c=0$ 的判別式為 $b^{2}-4ac$：$\Delta \lt 0$ 無實根，$\Delta \gt 0$ 有兩個相異實根。</div>
+<p>對 $3x^{2}+5x+8=0$：$\Delta=25-96=-71 \lt 0$，無實根。</p>
+<p>對 $2x^{2}-x-4=0$：$\Delta=1+32=33 \gt 0$，有兩個相異實根。</p>
+<p>故 $p(x)=0$ 共有 $2$ 個實根。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $l=3$、$m=-1$、$n=-4$；(b) $2$ 個實根</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p(x)=(2x^{2}+3x+5)(3x^{2}+mx+n)$，其中 $m$、$n$ 為常數，且 $p(x)$ 展開後 $x^{3}$ 的係數為 $5$、常數項為 $-20$。(a) 求 $m$ 及 $n$。(b) 方程 $p(x)=0$ 有幾個實根？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $x^{3}$ 係數：$2m+9=5$，故 $m=-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 常數項：$5n=-20$，故 $n=-4$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) $2x^{2}+3x+5=0$ 的 $\Delta=9-40=-31 \lt 0$，無實根。</div>
+          <div class="p-step"><b>第 4 步.</b> $3x^{2}-2x-4=0$ 的 $\Delta=4+48=52 \gt 0$，有兩實根，故共 $2$ 個實根。</div>
+          <div class="p-ans">答案：(a) $m=-2$、$n=-4$；(b) $2$ 個</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P1_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

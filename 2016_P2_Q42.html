@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第42題 · 「至少 2 罐茶」＝ 剛好 2 罐或 3 罐</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第42題</span>
+    <h1>「至少 2 罐茶」＝ 剛好 2 罐或 3 罐</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個盒子內有 $9$ 罐咖啡及 $3$ 罐茶。若從盒中隨機抽出 $4$ 罐，求抽到至少 $2$ 罐茶的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{13}{55}$</li><li><span class="ol">B</span>$\dfrac{21}{55}$</li><li><span class="ol">C</span>$\dfrac{34}{55}$</li><li><span class="ol">D</span>$\dfrac{42}{55}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算總組合數</div>
+      <div class="rule"><span class="rule-name">組合</span>從 $12$ 罐中抽 $4$ 罐，不計次序。</div>
+<p>$$\binom{12}{4}=495$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">情況一：剛好 2 罐茶</div>
+<p>$$\binom{3}{2}\binom{9}{2}=3\times36=108$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">情況二：剛好 3 罐茶</div>
+<p>$$\binom{3}{3}\binom{9}{1}=1\times9=9$$</p>
+<p>（不可能有 4 罐茶，因為盒中只有 3 罐。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合計並約簡</div>
+      <div class="rule"><span class="rule-name">互斥事件</span>兩種情況互斥，概率相加。</div>
+<p>$$P=\frac{108+9}{495}=\frac{117}{495}=\frac{13}{55}$$</p>
+<p>答案為 <b>A</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{13}{55}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個盒內有 $6$ 個紅球及 $4$ 個白球。隨機抽出 $3$ 個，求抽到至少 $2$ 個白球的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{3}$</li><li><span class="ol">B</span>$\dfrac{2}{5}$</li><li><span class="ol">C</span>$\dfrac{1}{2}$</li><li><span class="ol">D</span>$\dfrac{3}{5}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 $\binom{10}{3}=120$。</div>
+          <div class="p-step"><b>第 2 步.</b> 剛好 2 白：$\binom{4}{2}\binom{6}{1}=6\times6=36$。</div>
+          <div class="p-step"><b>第 3 步.</b> 3 白：$\binom{4}{3}=4$。</div>
+          <div class="p-step"><b>第 4 步.</b> $P=\dfrac{36+4}{120}=\dfrac{40}{120}=\dfrac{1}{3}$，答案為 A。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

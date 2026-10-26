@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第24題 · 先由內角和定出 $n$，再逐項驗證</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第24題</span>
+    <h1>先由內角和定出 $n$，再逐項驗證</h1>
+    <p class="sub">幾何 · 多邊形的角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若一個正 $n$ 邊形的內角和為 $3240^{\circ}$，下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$n$ 的值是 $16$。</li><li><span class="ol">B</span>該多邊形每個外角是 $18^{\circ}$。</li><li><span class="ol">C</span>該多邊形的對角線數目是 $20$。</li><li><span class="ol">D</span>該多邊形每個內角是 $160^{\circ}$。</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用內角和公式求 $n$</div>
+      <div class="rule"><span class="rule-name">多邊形內角和</span>$n$ 邊形的內角和 $=(n-2)\times180^{\circ}$。</div>
+<p>$$(n-2)\times180^{\circ}=3240^{\circ}\ \Rightarrow\ n-2=18\ \Rightarrow\ n=20$$</p>
+<p>所以 A 錯（$n=20$ 而非 $16$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查外角</div>
+      <div class="rule"><span class="rule-name">外角和</span>任何凸多邊形的外角和都是 $360^{\circ}$；正多邊形每個外角 $=\dfrac{360^{\circ}}{n}$。</div>
+<p>$$\frac{360^{\circ}}{20}=18^{\circ}$$</p>
+<p>B 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查對角線數目</div>
+      <div class="rule"><span class="rule-name">對角線數目</span>對角線數目 $=\dfrac{n(n-3)}{2}$。</div>
+<p>$$\frac{20\times17}{2}=170\neq20$$</p>
+<p>C 錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查內角</div>
+<p>每個內角 $=180^{\circ}-18^{\circ}=162^{\circ}\neq160^{\circ}$，D 錯。</p>
+<p>答案為 <b>B</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（每個外角 $18^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若一個正 $n$ 邊形的內角和為 $2520^{\circ}$，則該多邊形每個外角是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$20^{\circ}$</li><li><span class="ol">B</span>$22.5^{\circ}$</li><li><span class="ol">C</span>$25^{\circ}$</li><li><span class="ol">D</span>$30^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(n-2)\times180^{\circ}=2520^{\circ}$，得 $n=16$。</div>
+          <div class="p-step"><b>第 2 步.</b> 每個外角 $=\dfrac{360^{\circ}}{16}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=22.5^{\circ}$，答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$22.5^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2016_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
