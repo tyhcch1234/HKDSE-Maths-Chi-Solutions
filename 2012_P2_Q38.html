@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2012 卷二 Q38 · 先平移右下，再核對兩條曲線的相對位置</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2012 · 卷二 · Q38</span>
+    <h1>先平移右下，再核對兩條曲線的相對位置</h1>
+    <p class="sub">函數及其圖像 · 圖像變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下列哪一幅圖可能表示 $y=f(x)$ 與 $y=f(x-2)+1$ 在同一長方形坐標系中的圖像？
+    </div>
+    <figure class="fig">    <figure class="fig"><img src="figures/2012_P2_Q38.png" alt="2012 卷二 Q38：四個選項 A、B、C、D，每幅各有兩條拋物線"><figcaption>四個選項的圖像（原卷附圖）</figcaption></figure>
+</figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆開兩個變換</div>
+      <div class="rule"><span class="rule-name">圖像變換</span>括號內的 $x-2$ 是水平變換，外面的 $+1$ 是垂直變換；兩者都是平移，不會改變形狀。</div>
+<p>$$y=f(x)\ \longrightarrow\ y=f(x-2)+1$$</p>
+<p>括號內：$x\mapsto x-2$，圖像<b>向右</b>移 $2$ 單位；括號外：$+1$，圖像<b>向上</b>移 $1$ 單位。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">先認出「右 2、上 1」這對關係</div>
+<p>因為只是平移，兩條曲線必然<b>全等</b>（同一形狀、同一開口方向）。判斷時只需看：把其中一條向右移 $2$、向上移 $1$，會不會得到另一條。</p>
+<p>換句話說，$y=f(x-2)+1$ 的每一點都比 $y=f(x)$ 的對應點「右 $2$、上 $1$」。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐個選項檢查</div>
+<p>A：$y=f(x)$ 在右、$y=f(x-2)+1$ 在左且較低 —— 方向完全相反 ✗</p>
+<p>B：$y=f(x)$ 在左、$y=f(x-2)+1$ 在右但<b>較低</b> —— 左右對，上下錯 ✗</p>
+<p>C：$y=f(x)$ 在左、$y=f(x-2)+1$ 在右且<b>較高</b> —— 右 $2$、上 $1$ ✓</p>
+<p>D：$y=f(x-2)+1$ 在左、$y=f(x)$ 在右 —— 變成向左移 ✗</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">結論</div>
+<p>只有 C 圖中兩條曲線的相對位置是「右 $2$、上 $1$」，所以答案為 C。</p>
+<p>口訣：<b>括號內加減看左右（相反方向），括號外加減看上下（相同方向）</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $y=f(x)$ 的圖像向右移 $3$ 單位、向下移 $2$ 單位後得到 $y=g(x)$。試以 $f$ 表示 $g(x)$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$g(x)=f(x+3)-2$</li><li><span class="ol">B</span>$g(x)=f(x-3)-2$</li><li><span class="ol">C</span>$g(x)=f(x-3)+2$</li><li><span class="ol">D</span>$g(x)=f(x+3)+2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 向右移 $3$：把 $x$ 換成 $x-3$，即 $f(x-3)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 向下移 $2$：整條曲線減 $2$，即 $f(x-3)-2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 括號內是「相反」：向右要寫 $x-3$；括號外同方向：向下寫 $-2$。</div>
+          <div class="p-step"><b>第 4 步.</b> 答案為 B。</div>
+          <div class="p-ans">答案：<b>B</b>（$g(x)=f(x-3)-2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2012_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2012_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
