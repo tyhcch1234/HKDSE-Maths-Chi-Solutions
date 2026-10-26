@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第39題 · 三角方程根數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第39題</span>
+  <h1>因式分解後逐個數根</h1>
+  <p class="sub">三角學 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      當 $0^{\circ}<\theta\le360^{\circ}$ 時，方程 $4\cos^{2}\theta-3\cos\theta-1=0$ 有多少個根？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$6$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分解</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘</span>
+        <span class="rule-math">$4c^{2}-3c-1=(4c+1)(c-1)$</span>
+        <span class="rule-why">把 $\cos\theta$ 當作一個未知數。</span>
+      </div>
+<p>$\cos\theta=-\dfrac{1}{4}$ 或 $\cos\theta=1$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數根</div>
+<p>$\cos\theta=1$：在 $0^{\circ}<\theta\le360^{\circ}$ 中只有 $\theta=360^{\circ}$（$0^{\circ}$ 不合）→ $1$ 個根。</p><p>$\cos\theta=-\dfrac{1}{4}$：$\theta\approx104.5^{\circ}$ 或 $255.5^{\circ}$ → $2$ 個根。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合計</div>
+<p>共 $3$ 個根，故選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$3$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q40.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第33題 · 對數方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第33題</span>
+  <h1>設 $u=\log_{2}y$，化為二次方程</h1>
+  <p class="sub">對數 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $x=\log_{2}y-2$ 及 $(\log_{2}y)^{2}=5\log_{2}y+x-7$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$8$</li><li><span class="ol">C</span>$1$ 或 $3$</li><li><span class="ol">D</span>$3$ 或 $8$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">換元</div>
+<p>設 $u=\log_{2}y$，則 $x=u-2$，且 $u^{2}=5u+(u-2)-7$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解二次方程</div>
+      <div class="rule">
+        <span class="rule-name">完全平方</span>
+        <span class="rule-math">$u^{2}-6u+9=0$</span>
+        <span class="rule-why">$(u-3)^{2}=0$。</span>
+      </div>
+<p>$u^{2}-6u+9=0\Rightarrow u=3$（重根）。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">還原</div>
+<p>$\log_{2}y=3\Rightarrow y=2^{3}=8$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$8$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q34.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

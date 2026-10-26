@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第7題 · 二次方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第7題</span>
+  <h1>兩邊同形，先移項再分解</h1>
+  <p class="sub">二次方程 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $m$ 為一常數。解方程 $x^{2}-3x=(m-1)^{2}-3(m-1)$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=m-1$ 或 $x=m-4$</li><li><span class="ol">B</span>$x=m-1$ 或 $x=4-m$</li><li><span class="ol">C</span>$x=1-m$ 或 $x=m-4$</li><li><span class="ol">D</span>$x=1-m$ 或 $x=4-m$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">移項</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        <span class="rule-math">$x^{2}-(m-1)^{2}=3x-3(m-1)$</span>
+        <span class="rule-why">左邊集中平方，右邊集中一次項。</span>
+      </div>
+<p>$x^{2}-(m-1)^{2}-3\big[x-(m-1)\big]=0$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用平方差分解</div>
+<p>$\big[x+(m-1)\big]\big[x-(m-1)\big]-3\big[x-(m-1)\big]=0$</p><p>$\big[x-(m-1)\big]\big[x+(m-1)-3\big]=0$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">讀出兩個根</div>
+<p>$x=m-1$ 或 $x=4-m$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$x=m-1$ 或 $x=4-m$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q8.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

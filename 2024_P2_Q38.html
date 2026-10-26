@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第38題 · 圓切線與圓內接四邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第38題</span>
+  <h1>切線角帶出交錯弓形角</h1>
+  <p class="sub">圓形性質 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$TA$ 為圓 $ABCDE$ 在點 $A$ 的切線，$BC$ 的延線與 $ED$ 的延線相交於點 $P$。若 $\angle ACB=43^{\circ}$、$\angle DAT=55^{\circ}$ 及 $\angle CPD=29^{\circ}$，則 $\angle CBE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$64^{\circ}$</li><li><span class="ol">B</span>$69^{\circ}$</li><li><span class="ol">C</span>$72^{\circ}$</li><li><span class="ol">D</span>$78^{\circ}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">連接 $CD$</div>
+      <div class="rule">
+        <span class="rule-name">切線與弦</span>
+        <span class="rule-math">切線角 $=$ 交錯弓形角</span>
+        <span class="rule-why">$\angle DCA=\angle DAT=55^{\circ}$。</span>
+      </div>
+<p>$\angle DCA=55^{\circ}$，故 $\angle BCD=43^{\circ}+55^{\circ}=98^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle PCD$ 用外角</div>
+<p>$98^{\circ}=29^{\circ}+\angle PDC\Rightarrow\angle PDC=69^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">圓內接四邊形外角</div>
+      <div class="rule">
+        <span class="rule-name">圓內接四邊形</span>
+        <span class="rule-math">外角 $=$ 內對角</span>
+        <span class="rule-why">$BCDE$ 為圓內接四邊形。</span>
+      </div>
+<p>$\angle CBE=\angle CDE=\angle PDC=69^{\circ}$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$69^{\circ}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q39.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

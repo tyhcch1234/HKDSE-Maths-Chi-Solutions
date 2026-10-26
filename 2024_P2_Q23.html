@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第23題 · 三角比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第23題</span>
+  <h1>用 $DC$ 作橋樑</h1>
+  <p class="sub">三角學 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABC$ 為一直線。$\dfrac{BC}{AD}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{\sin\theta}{\tan\phi}$</li><li><span class="ol">B</span>$\dfrac{\tan\phi}{\sin\theta}$</li><li><span class="ol">C</span>$\dfrac{\cos\theta}{\tan\phi}$</li><li><span class="ol">D</span>$\dfrac{\tan\phi}{\cos\theta}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle BCD$ 表示 $BC$</div>
+      <div class="rule">
+        <span class="rule-name">正切</span>
+        <span class="rule-math">$\tan\phi=\dfrac{DC}{BC}$</span>
+        <span class="rule-why">$\angle BCD=90^{\circ}$。</span>
+      </div>
+<p>$BC=\dfrac{DC}{\tan\phi}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ACD$ 表示 $AD$</div>
+<p>$\sin\theta=\dfrac{DC}{AD}\Rightarrow AD=\dfrac{DC}{\sin\theta}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相除</div>
+<p>$\dfrac{BC}{AD}=\dfrac{DC/\tan\phi}{DC/\sin\theta}=\dfrac{\sin\theta}{\tan\phi}$，故選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$\dfrac{\sin\theta}{\tan\phi}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q24.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

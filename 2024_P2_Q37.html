@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第37題 · 線性規劃</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第37題</span>
+  <h1>極值必在頂點出現</h1>
+  <p class="sub">不等式 · 線性規劃 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下不等式組：$\begin{cases}x-2y\le1\\ x+4y\le13\\ 2x-y\ge-1\end{cases}$。設 $R$ 為表示以上不等式組的解之區域。求常數 $c$ 使得 $5x-2y+c$ 的最小值為 $22$，其中 $(x,y)$ 為 $R$ 中的一點。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$23$</li><li><span class="ol">C</span>$25$</li><li><span class="ol">D</span>$29$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求三個頂點</div>
+      <div class="rule">
+        <span class="rule-name">聯立方程</span>
+        <span class="rule-math">邊界線兩兩相交</span>
+        <span class="rule-why">$R$ 是三角形區域。</span>
+      </div>
+<p>$x-2y=1$ 與 $x+4y=13$ → $(5,2)$；<br>$x+4y=13$ 與 $2x-y=-1$ → $(1,3)$；<br>$x-2y=1$ 與 $2x-y=-1$ → $(-1,-1)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入 $5x-2y$</div>
+<p>$(5,2)$：$21$；$(1,3)$：$-1$；$(-1,-1)$：$-3$。最小值為 $-3$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $c$</div>
+<p>$-3+c=22\Rightarrow c=25$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$25$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q36.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q38.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

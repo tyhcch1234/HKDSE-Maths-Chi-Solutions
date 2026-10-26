@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第31題 · 代數式的 H.C.F.</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第31題</span>
+  <h1>每個字母取最小指數</h1>
+  <p class="sub">多項式 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $u^{2}v^{3}w$、$u^{3}vw^{2}$ 及 $u^{2}v^{3}w^{4}$ 的 H.C.F. 為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$uvw$</li><li><span class="ol">B</span>$u^{2}vw$</li><li><span class="ol">C</span>$u^{2}v^{3}w^{4}$</li><li><span class="ol">D</span>$u^{3}v^{3}w^{4}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">列出各字母指數</div>
+<p>$u$：$2,3,2$；$v$：$3,1,3$；$w$：$1,2,4$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">取最小指數</div>
+      <div class="rule">
+        <span class="rule-name">H.C.F.</span>
+        <span class="rule-math">每個字母取最小指數</span>
+        <span class="rule-why">$w$ 沒有寫指數即 $w^{1}$。</span>
+      </div>
+<p>$u^{\min(2,3,2)}=u^{2}$、$v^{\min(3,1,3)}=v$、$w^{\min(1,2,4)}=w$，故 H.C.F. $=u^{2}vw$，選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$u^{2}vw$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q32.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第5題 · 聯立方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第5題</span>
+  <h1>兩個組合，求出單價</h1>
+  <p class="sub">聯立方程 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      2 個蘋果和 3 個檸檬的價錢為 $\$38$。若 3 個蘋果和 2 個檸檬的價錢為 $\$47$，則 4 個蘋果和 7 個檸檬的價錢為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\$78$</li><li><span class="ol">B</span>$\$80$</li><li><span class="ol">C</span>$\$82$</li><li><span class="ol">D</span>$\$84$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設未知數</div>
+<p>設蘋果每個 $\$x$、檸檬每個 $\$y$：</p><p>$2x+3y=38\quad\cdots(1)$；$3x+2y=47\quad\cdots(2)$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解方程</div>
+      <div class="rule">
+        <span class="rule-name">消元法</span>
+        <span class="rule-math">$(1)\times 2$、$(2)\times 3$</span>
+        <span class="rule-why">把 $y$ 的係數化為相同。</span>
+      </div>
+<p>$4x+6y=76$；$9x+6y=141$。相減得 $5x=65$，即 $x=13$；代回 $(1)$：$3y=38-26=12$，$y=4$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求所需金額</div>
+<p>$4(13)+7(4)=52+28=80$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$\$80$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q6.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

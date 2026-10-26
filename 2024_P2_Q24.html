@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第24題 · 旋轉與反射</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第24題</span>
+  <h1>旋轉 $90^{\circ}$ 就是 $(x,y)\to(-y,x)$</h1>
+  <p class="sub">坐標幾何 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $U$ 的坐標為 $(-3,-8)$。$U$ 繞原點逆時針方向旋轉 $90^{\circ}$ 至點 $V$，然後 $V$ 對直線 $x=2$ 作反射至點 $W$。求 $W$ 的 $x$ 坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-4$</li><li><span class="ol">B</span>$-3$</li><li><span class="ol">C</span>$7$</li><li><span class="ol">D</span>$12$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">旋轉</div>
+      <div class="rule">
+        <span class="rule-name">逆時針 $90^{\circ}$</span>
+        <span class="rule-math">$(x,y)\to(-y,x)$</span>
+        <span class="rule-why">繞原點旋轉。</span>
+      </div>
+<p>$U(-3,-8)\to V(8,-3)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">反射</div>
+      <div class="rule">
+        <span class="rule-name">對 $x=a$ 反射</span>
+        <span class="rule-math">$x\to 2a-x$</span>
+        <span class="rule-why">反射只改變 $x$ 坐標。</span>
+      </div>
+<p>$V$ 的 $x=8$ 對 $x=2$ 反射：$x_W=2(2)-8=-4$，故選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$-4$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q25.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

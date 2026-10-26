@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第43題 · 獨立事件</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第43題</span>
+  <h1>「最少一題」用補集</h1>
+  <p class="sub">概率 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某測驗有三道題目。某學生答對第一題、第二題及第三題的概率分別為 $0.6$、$0.7$ 及 $0.8$。求該學生在此測驗中至少答對一題的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0.024$</li><li><span class="ol">B</span>$0.188$</li><li><span class="ol">C</span>$0.812$</li><li><span class="ol">D</span>$0.976$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">全錯的概率</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        <span class="rule-math">$P(\text{最少一題})=1-P(\text{全錯})$</span>
+        <span class="rule-why">各題獨立。</span>
+      </div>
+<p>$P(\text{全錯})=(1-0.6)(1-0.7)(1-0.8)=0.4\times0.3\times0.2=0.024$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求補集</div>
+<p>$1-0.024=0.976$，故選 D。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>D　$0.976$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q44.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

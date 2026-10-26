@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第21題 · 菱形與矩形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第21題</span>
+  <h1>角度追蹤找出等腰三角形</h1>
+  <p class="sub">平面幾何 · 全等 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 為一菱形。將 $AC$ 與 $BD$ 的交點記為 $E$。設 $F$ 為一點使得 $BH\parallel EF$ 且 $CFHG$ 為一矩形，其中 $G$ 及 $H$ 分別為 $AC$ 的延線及 $BC$ 的延線上的點。將 $CD$ 與 $EF$ 的交點記為 $I$。下列何者必為正確？<br>I. $CI=FI$<br>II. $\angle ABE=\angle GCH$<br>III. $\triangle ADE\cong\triangle HCF$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">處理 I</div>
+      <div class="rule">
+        <span class="rule-name">內錯角</span>
+        <span class="rule-math">$DE\parallel FC$</span>
+        <span class="rule-why">菱形對角線互相垂直，矩形對邊平行。</span>
+      </div>
+<p>由 $DE\parallel FC$ 及菱形對角線平分頂角，可證 $\angle IFC=\angle ICF$，故 $CI=FI$，I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">處理 II</div>
+<p>設 $\angle ABE=x$，則 $\angle BCE=90^{\circ}-x$，而 $\angle GCH=\angle BCE=90^{\circ}-x\ne x$（一般情況），II 不必然正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">處理 III</div>
+<p>先證 $\triangle DEC\cong\triangle FCE$（AAS）得 $DE=FC$，再配合 $\angle DAE=\angle CHF$ 及 $\angle DEA=\angle CFH=90^{\circ}$，得 $\triangle ADE\cong\triangle HCF$（AAS），III 正確。</p><p>故答案為 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　只有 I 及 III</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q22.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

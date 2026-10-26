@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第1題 · 平方差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第1題</span>
+  <h1>平方差：一次消去平方項</h1>
+  <p class="sub">多項式 · 恆等式 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $(x+3y)^{2}-(x-3y)^{2}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2x^{2}$</li><li><span class="ol">B</span>$6xy$</li><li><span class="ol">C</span>$12xy$</li><li><span class="ol">D</span>$2x^{2}+18y^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">套用平方差公式</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">$a^{2}-b^{2}=(a+b)(a-b)$</span>
+        <span class="rule-why">把 $x+3y$ 與 $x-3y$ 分別看成 $a$ 與 $b$。</span>
+      </div>
+<p>取 $a=x+3y$、$b=x-3y$：</p><p>$(x+3y)^{2}-(x-3y)^{2}=\big[(x+3y)+(x-3y)\big]\big[(x+3y)-(x-3y)\big]$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡兩個括號</div>
+<p>第一個括號：$x+3y+x-3y=2x$；第二個括號：$x+3y-x+3y=6y$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相乘</div>
+<p>$(2x)(6y)=12xy$，故選 C。</p><p>驗算：直接展開亦得 $(x^{2}+6xy+9y^{2})-(x^{2}-6xy+9y^{2})=12xy$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$12xy$</div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2024_P2_Q2.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

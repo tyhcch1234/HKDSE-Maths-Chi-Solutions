@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第28題 · 組合與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第28題</span>
+  <h1>同時抽兩張，用組合</h1>
+  <p class="sub">概率 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      從分別編號 $1,2,3,4,5$ 及 $6$ 的六張卡中同時隨機抽出兩個數。求所抽得的數之積不小於 $12$ 的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{3}$</li><li><span class="ol">B</span>$\dfrac{2}{3}$</li><li><span class="ol">C</span>$\dfrac{7}{15}$</li><li><span class="ol">D</span>$\dfrac{8}{15}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">$C_{2}^{6}=\dfrac{6\times5}{2}$</span>
+        <span class="rule-why">「同時」代表不計次序。</span>
+      </div>
+<p>共有 $C_{2}^{6}=15$ 個組合。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數出有利組合</div>
+<p>積 $\ge12$：$\{2,6\},\{3,4\},\{3,5\},\{3,6\},\{4,5\},\{4,6\},\{5,6\}$，共 $7$ 個。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率</div>
+<p>$P=\dfrac{7}{15}$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$\dfrac{7}{15}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q27.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q29.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

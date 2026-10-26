@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第35題 · 複數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第35題</span>
+  <h1>$z$ 為實數 $\Rightarrow$ 虛部為零</h1>
+  <p class="sub">複數 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $z=(a-5)i+\dfrac{(a+2)i}{2+i}$，其中 $i^{2}=-1$。若 $a$ 及 $z$ 均為實數，則 $a-z=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">有理化分母</div>
+      <div class="rule">
+        <span class="rule-name">共軛</span>
+        <span class="rule-math">乘以 $\dfrac{2-i}{2-i}$</span>
+        <span class="rule-why">分母變成 $2^{2}+1^{2}=5$。</span>
+      </div>
+<p>$\dfrac{(a+2)i(2-i)}{5}=\dfrac{(a+2)(2i+1)}{5}=\dfrac{a+2}{5}+\dfrac{2a+4}{5}i$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">虛部為零</div>
+<p>$(a-5)+\dfrac{2a+4}{5}=0\Rightarrow 5a-25+2a+4=0\Rightarrow 7a=21\Rightarrow a=3$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $z$ 與 $a-z$</div>
+<p>$z=\dfrac{3+2}{5}=1$，故 $a-z=3-1=2$，選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$2$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q36.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

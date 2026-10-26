@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第17題 · 正方形內的相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第17題</span>
+  <h1>先由相似比定出 $k$，再算面積</h1>
+  <p class="sub">平面幾何 · 面積比 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 為一正方形。設 $M$ 為 $BC$ 的中點，$E$ 為 $AD$ 上的一點使得 $AE:ED=3:1$，$F$ 為 $BC$ 的延線上的一點使得 $EF\parallel AM$，$CD$ 與 $EF$ 相交於點 $G$，而 $AM$ 與 $BG$ 相交於點 $H$。若 $\triangle BMH$ 的面積為 $4\ \text{cm}^{2}$，則梯形 $AEGH$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$12\ \text{cm}^{2}$</li><li><span class="ol">B</span>$33\ \text{cm}^{2}$</li><li><span class="ol">C</span>$39\ \text{cm}^{2}$</li><li><span class="ol">D</span>$45\ \text{cm}^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設邊長並找 $F$</div>
+      <div class="rule">
+        <span class="rule-name">平行四邊形</span>
+        <span class="rule-math">$EF\parallel AM$ 且 $AE\parallel MF$</span>
+        <span class="rule-why">$AMFE$ 是平行四邊形，故 $AE=MF$。</span>
+      </div>
+<p>設 $ED=k$，則 $AE=3k$，邊長 $4k$，$BM=MC=2k$。</p><p>由平行四邊形 $AMFE$：$MF=AE=3k$，故 $CF=MF-MC=k$，且 $BF=5k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用相似三角形求 $k^{2}$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形</span>
+        <span class="rule-math">面積比 $=$ 邊長比$^{2}$</span>
+        <span class="rule-why">$\triangle BMH\sim\triangle BFG$（$BM\parallel BF$，$MH\parallel FG$）。</span>
+      </div>
+<p>$\dfrac{[BMH]}{[BFG]}=\left(\dfrac{BM}{BF}\right)^{2}=\left(\dfrac{2}{5}\right)^{2}=\dfrac{4}{25}$，故 $[BFG]=25$。</p><p>又 $\triangle GDE\cong\triangle GCF$，得 $DG=GC=2k$，所以 $G$ 到 $BC$ 的高為 $2k$。</p><p>$[BFG]=\dfrac{1}{2}(5k)(2k)=5k^{2}=25\Rightarrow k^{2}=5$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">以坐標計算 $AEGH$</div>
+<p>取 $B(0,0)$、$M(2k,0)$、$G(4k,2k)$：直線 $AM$ 為 $y=4k-2x$，直線 $BG$ 為 $y=\dfrac{x}{2}$，解得 $H(1.6k,0.8k)$。</p><p>$[AEGH]=[ABGE]-[\triangle ABH]=11k^{2}-3.2k^{2}=7.8k^{2}=7.8(5)=39\ \text{cm}^{2}$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$39\ \text{cm}^{2}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q18.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

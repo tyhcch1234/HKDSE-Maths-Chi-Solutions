@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第30題 · 標準差、眾數、中位數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第30題</span>
+  <h1>先由平均數鎖定 $m+n$</h1>
+  <p class="sub">統計 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下正整數：$5,\ 5,\ 5,\ 6,\ 9,\ 9,\ 11,\ 13,\ m,\ n$。設 $p$、$q$ 及 $r$ 分別為上述正整數的標準差、眾數及中位數。若上述正整數的平均數為 $7$，則下列何者必為正確？<br>I. $p>3$　II. $q=5$　III. $r<7$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平均數</div>
+<p>總和 $=10\times7=70$，已知八個數之和為 $63$，故 $m+n=7$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">可能組合</div>
+<p>正整數組合只有 $\{1,6\},\{2,5\},\{3,4\}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐項檢查</div>
+<p>三組的標準差分別約為 $3.32,3.19,3.13$，皆 $>3$ ✓；三組的眾數都是 $5$ ✓；中位數分別為 $6,5.5,5.5$，皆 $<7$ ✓。</p><p>故選 D。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>D　I、II 及 III</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q29.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q31.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第32題 · 十六進制</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第32題</span>
+  <h1>高位合併，低位相加</h1>
+  <p class="sub">進制 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\texttt{AF000000000BC}_{16}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$175\times16^{11}+188$</li><li><span class="ol">B</span>$192\times16^{11}+205$</li><li><span class="ol">C</span>$175\times16^{12}+188$</li><li><span class="ol">D</span>$192\times16^{12}+205$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按位值展開</div>
+      <div class="rule">
+        <span class="rule-name">十六進制</span>
+        <span class="rule-math">$\texttt{A}=10$、$\texttt{B}=11$、$\texttt{C}=12$、$\texttt{F}=15$</span>
+        <span class="rule-why">共 13 個位，最高位是 $16^{12}$。</span>
+      </div>
+<p>$\texttt{AF000000000BC}_{16}=10\times16^{12}+15\times16^{11}+11\times16+12$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">合併高位</div>
+<p>$10\times16^{12}+15\times16^{11}=16^{11}(160+15)=175\times16^{11}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併低位</div>
+<p>$11\times16+12=176+12=188$，故答案為 $175\times16^{11}+188$，選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$175\times16^{11}+188$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q33.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

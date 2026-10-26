@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第6題 · 恆等式比較係數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第6題</span>
+  <h1>展開右邊，逐項對比</h1>
+  <p class="sub">多項式 · 恆等式 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $a$、$b$ 及 $c$ 均為非零的常數使得 $4x^{2}+2ax+3a\equiv x(4x+b)+2c$，則 $a:b:c=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2:4:3$</li><li><span class="ol">B</span>$3:4:2$</li><li><span class="ol">C</span>$4:6:3$</li><li><span class="ol">D</span>$6:4:3$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開右邊</div>
+<p>$x(4x+b)+2c=4x^{2}+bx+2c$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">比較係數</div>
+      <div class="rule">
+        <span class="rule-name">恆等式</span>
+        <span class="rule-math">係數相等</span>
+        <span class="rule-why">$x^{2}$ 項兩邊都是 $4$，自動相等。</span>
+      </div>
+<p>$2a=b$，$3a=2c$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">化為連比</div>
+<p>取 $a=2$：$b=4$、$c=\dfrac{3(2)}{2}=3$，故 $a:b:c=2:4:3$，選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$2:4:3$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q7.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

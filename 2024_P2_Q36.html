@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第36題 · 數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第36題</span>
+  <h1>由 $S(n)-S(n-1)$ 求通項</h1>
+  <p class="sub">數列 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某數列的首 $n$ 項之和為 $n(2n+3)$。下列何者正確？<br>I. $14$ 為該數列的其中一項。<br>II. 該數列的第 $n$ 項為 $4n+1$。<br>III. 該數列為一等差數列。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求通項</div>
+      <div class="rule">
+        <span class="rule-name">通項</span>
+        <span class="rule-math">$T(n)=S(n)-S(n-1)$</span>
+        <span class="rule-why">適用於 $n\ge2$。</span>
+      </div>
+<p>$T(n)=n(2n+3)-(n-1)(2n+1)=2n^{2}+3n-(2n^{2}-n-1)=4n+1$，故 II 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I</div>
+<p>$4n+1=14\Rightarrow n=3.25$ 不是整數，故 $14$ 不是該數列的項，I 錯誤。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 III</div>
+<p>$T(n)-T(n-1)=4$ 為常數，故為等差數列，III 正確。答案為 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　只有 II 及 III</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q37.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

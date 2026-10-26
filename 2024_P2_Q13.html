@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第13題 · 變分與百分數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第13題</span>
+  <h1>代入新值，看倍數變化</h1>
+  <p class="sub">變分 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $z$ 隨 $x$ 的平方正變，並隨 $y$ 反變。若 $x$ 增加 $20\%$ 而 $y$ 減少 $20\%$，則 $z$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>增加 $20\%$</li><li><span class="ol">B</span>減少 $20\%$</li><li><span class="ol">C</span>增加 $80\%$</li><li><span class="ol">D</span>減少 $80\%$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出關係式</div>
+      <div class="rule">
+        <span class="rule-name">變分</span>
+        <span class="rule-math">$z=\dfrac{kx^{2}}{y}$</span>
+        <span class="rule-why">先引入常數 $k$。</span>
+      </div>
+<p>$z=\dfrac{kx^{2}}{y}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入新值</div>
+<p>新 $z=\dfrac{k(1.2x)^{2}}{0.8y}=\dfrac{1.44}{0.8}\cdot\dfrac{kx^{2}}{y}=1.8z$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求百分數變化</div>
+<p>$\dfrac{1.8z-z}{z}\times100\%=80\%$，即增加 $80\%$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　增加 $80\%$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q14.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

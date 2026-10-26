@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第22題 · 圓內兩弦相交</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第22題</span>
+  <h1>先找圓心，再算各段弧</h1>
+  <p class="sub">圓形性質 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCDE$ 為一圓。$AC$ 及 $BE$ 均為該圓的直徑。設 $P$ 為 $AC$ 與 $BD$ 的交點。若 $\angle ABE=46^{\circ}$ 及 $\angle DBE=16^{\circ}$，則 $\angle APD=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$104^{\circ}$</li><li><span class="ol">B</span>$108^{\circ}$</li><li><span class="ol">C</span>$120^{\circ}$</li><li><span class="ol">D</span>$135^{\circ}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求弧 $AB$ 與弧 $BC$</div>
+      <div class="rule">
+        <span class="rule-name">圓周角</span>
+        <span class="rule-math">圓周角 $=\dfrac{1}{2}$ 所對弧</span>
+        <span class="rule-why">$\angle ABE$ 對弧 $AE$。</span>
+      </div>
+<p>弧 $AE=2(46^{\circ})=92^{\circ}$。$BE$ 為直徑，故弧 $AB=180^{\circ}-92^{\circ}=88^{\circ}$；$AC$ 亦為直徑，故弧 $BC=180^{\circ}-88^{\circ}=92^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求弧 $CD$ 與弧 $AD$</div>
+<p>$\angle DBE=16^{\circ}$ 對弧 $DE=32^{\circ}$，而弧 $CE=180^{\circ}-92^{\circ}=88^{\circ}$，故弧 $CD=88^{\circ}-32^{\circ}=56^{\circ}$。</p><p>由 $AC$ 為直徑：弧 $AD=180^{\circ}-56^{\circ}=124^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩弦相交</div>
+      <div class="rule">
+        <span class="rule-name">相交弦</span>
+        <span class="rule-math">$\angle=\dfrac{1}{2}(\text{兩段對頂弧之和})$</span>
+        <span class="rule-why">$\angle APD$ 對弧 $AD$ 與弧 $BC$。</span>
+      </div>
+<p>$\angle APD=\dfrac{1}{2}(124^{\circ}+92^{\circ})=108^{\circ}$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$108^{\circ}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q23.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第42題 · 排列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第42題</span>
+  <h1>先排主任，再插入經理</h1>
+  <p class="sub">排列與組合 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      2 名經理與 7 名主任排成一隊。若沒有經理相鄰而排，則可排成多少不同的隊？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$80\,640$</li><li><span class="ol">B</span>$141\,120$</li><li><span class="ol">C</span>$282\,240$</li><li><span class="ol">D</span>$362\,880$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">全部排列</div>
+<p>$9!=362\,880$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">減去經理相鄰</div>
+      <div class="rule">
+        <span class="rule-name">捆綁法</span>
+        <span class="rule-math">$8!\times2!$</span>
+        <span class="rule-why">把 2 名經理視為一體。</span>
+      </div>
+<p>相鄰的排列數 $=8!\times2!=80\,640$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相減</div>
+<p>$362\,880-80\,640=282\,240$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$282\,240$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q43.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

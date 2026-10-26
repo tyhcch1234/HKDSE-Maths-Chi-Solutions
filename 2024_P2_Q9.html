@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第9題 · 餘式定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第9題</span>
+  <h1>先用因式定理找 $k$</h1>
+  <p class="sub">多項式 · 餘式定理 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=x^{3}+kx^{2}+5x+10$，其中 $k$ 為常數。若 $f(x)$ 可被 $x+k$ 整除，求 $f(x)$ 除以 $x+1$ 的餘式。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-2$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$18$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">因式定理</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        <span class="rule-math">$f(-k)=0$</span>
+        <span class="rule-why">可被 $x+k$ 整除即 $f(-k)=0$。</span>
+      </div>
+<p>$(-k)^{3}+k(-k)^{2}+5(-k)+10=-k^{3}+k^{3}-5k+10=0$，故 $k=2$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">餘式定理</div>
+<p>$f(x)=x^{3}+2x^{2}+5x+10$，餘式為 $f(-1)=-1+2-5+10=6$，選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$6$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q10.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

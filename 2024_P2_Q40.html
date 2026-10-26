@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第40題 · 立體三角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第40題</span>
+  <h1>把高設為 $h$，逐邊表示</h1>
+  <p class="sub">三角學 · 3D · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，四面體 $PQRS$ 的底 $PQR$ 在水平地面上。已知 $Q$ 鉛垂於 $S$ 之下。若 $\angle PQR=90^{\circ}$、$\angle QPS=30^{\circ}$ 及 $\angle QRS=45^{\circ}$，則 $\cos\angle PRS=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{3}{4}$</li><li><span class="ol">C</span>$\dfrac{\sqrt{2}}{4}$</li><li><span class="ol">D</span>$\dfrac{\sqrt{3}}{6}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設 $QS=h$</div>
+      <div class="rule">
+        <span class="rule-name">鉛垂線</span>
+        <span class="rule-math">$SQ\perp$ 地面</span>
+        <span class="rule-why">故 $\triangle SQP$、$\triangle SQR$ 均在 $Q$ 成直角。</span>
+      </div>
+<p>$\tan30^{\circ}=\dfrac{h}{QP}\Rightarrow QP=h\sqrt{3}$；$\sin30^{\circ}=\dfrac{h}{SP}\Rightarrow SP=2h$；</p><p>$\tan45^{\circ}=\dfrac{h}{QR}\Rightarrow QR=h$；$\sin45^{\circ}=\dfrac{h}{SR}\Rightarrow SR=h\sqrt{2}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $PR$</div>
+<p>$\angle PQR=90^{\circ}$：$PR^{2}=QP^{2}+QR^{2}=3h^{2}+h^{2}=4h^{2}$，故 $PR=2h$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用餘弦公式</div>
+<p>$\cos\angle PRS=\dfrac{SR^{2}+PR^{2}-SP^{2}}{2(SR)(PR)}=\dfrac{2h^{2}+4h^{2}-4h^{2}}{2(h\sqrt{2})(2h)}=\dfrac{1}{2\sqrt{2}}=\dfrac{\sqrt{2}}{4}$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$\dfrac{\sqrt{2}}{4}$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q41.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

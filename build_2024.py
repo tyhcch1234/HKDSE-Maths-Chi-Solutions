@@ -25,9 +25,9 @@ HEAD = """<!DOCTYPE html>
   <div class="card">
     <h2>題目</h2>
     <div class="question">
-      {q}<span class="marks">[{marks}]</span>
+      {q}{mspan}
     </div>
-{fig}  </div>
+{opts}{fig}  </div>
 
   <div class="card">
     <h2>題解</h2>
@@ -83,8 +83,18 @@ def render(item, paper='P1', year=2024):
     if item.get('fig'):
         fig = ('    <figure class="fig">\n      %s\n      <figcaption>%s</figcaption>\n    </figure>\n'
                % (item['fig'], item.get('cap', '')))
+    opts = ''
+    marks = item['marks']
+    if item.get('opts'):
+        marks = ''
+        opts = ('    <ol class="opts">'
+                + ''.join('<li><span class="ol">%s</span>%s</li>' % (L, v)
+                          for L, v in zip('ABCD', item['opts']))
+                + '</ol>\n')
+    mspan = '<span class="marks">[%s]</span>' % marks if marks else ''
     out = HEAD.format(title=item['title'], tag=item['tag'], h1=item['h1'],
-                      sub=item['sub'], q=item['q'], marks=item['marks'], fig=fig)
+                      sub=item['sub'], q=item['q'], marks=marks,
+                      fig=fig, opts=opts, mspan=mspan)
     for s in item['steps']:
         rule = ''
         if s.get('rule'):

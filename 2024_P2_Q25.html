@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第25題 · 垂直平分線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第25題</span>
+  <h1>$AP=PB$ 即在中垂線上</h1>
+  <p class="sub">坐標幾何 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$ 及 $B$ 的坐標分別為 $(-3,1)$ 及 $(-7,-5)$。若 $P$ 為直線 $x-y+13=0$ 上的一點使得 $AP=PB$，則 $P$ 的 $y$ 坐標為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-11$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$11$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $AB$ 的中點與斜率</div>
+<p>中點 $M\left(\dfrac{-3-7}{2},\dfrac{1-5}{2}\right)=(-5,-2)$；$m_{AB}=\dfrac{1+5}{-3+7}=\dfrac{3}{2}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出垂直平分線</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直</span>
+        <span class="rule-math">$m_1m_2=-1$</span>
+        <span class="rule-why">中垂線斜率為 $-\frac{2}{3}$。</span>
+      </div>
+<p>$y+2=-\dfrac{2}{3}(x+5)\Rightarrow 2x+3y+16=0$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">與已知直線聯立</div>
+<p>由 $x=y-13$ 代入：$2(y-13)+3y+16=0\Rightarrow 5y=10\Rightarrow y=2$，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$2$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q26.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

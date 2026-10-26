@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第29題 · 箱形圖</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第29題</span>
+  <h1>分佈域是 $Q_{3}$ 的函數</h1>
+  <p class="sub">統計 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的箱形圖顯示一組兒童在遊戲中所得代幣數目的分佈。若該分佈的分佈域是其四分位數間距的三倍，求 $m$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$248$</li><li><span class="ol">B</span>$275$</li><li><span class="ol">C</span>$336$</li><li><span class="ol">D</span>$360$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出五數概括</div>
+<p>最小值 $136$、$Q_{1}=163$、中位數 $224$、$Q_{3}=m$、最大值 $472$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分佈域與四分位數間距</div>
+      <div class="rule">
+        <span class="rule-name">定義</span>
+        <span class="rule-math">分佈域 $=$ 最大 $-$ 最小；$\text{IQR}=Q_{3}-Q_{1}$</span>
+        <span class="rule-why">留意 $m$ 只出現在 IQR。</span>
+      </div>
+<p>分佈域 $=472-136=336$；$\text{IQR}=m-163$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程</div>
+<p>$336=3(m-163)\Rightarrow m-163=112\Rightarrow m=275$，故選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>B　$275$</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q28.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q30.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

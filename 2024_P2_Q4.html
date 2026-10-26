@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第4題 · 近似值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第4題</span>
+  <h1>四個選項，四種捨入</h1>
+  <p class="sub">近似與誤差 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\sqrt{333}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$18$（準確至最接近的整數）</li><li><span class="ol">B</span>$18.24$（準確至二位小數）</li><li><span class="ol">C</span>$18.248$（準確至三位有效數字）</li><li><span class="ol">D</span>$18.2482$（準確至四位小數）</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出精確值</div>
+<p>由計算機，$\sqrt{333}=18.248\,287\,59\ldots$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項檢查</div>
+      <div class="rule">
+        <span class="rule-name">捨入</span>
+        <span class="rule-math">下一位 $\ge 5$ 便進位</span>
+        <span class="rule-why">每個選項只是同一數的不同捨入方式。</span>
+      </div>
+<p>A：$18.248\ldots\to 18$ ✓<br>B：二位小數應為 $18.25$（第三位小數是 $8$）✗<br>C：三位有效數字應為 $18.2$（第四位有效數字是 $4$）✗<br>D：四位小數應為 $18.2483$（第五位小數是 $8$）✗</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">結論</div>
+<p>只有 A 正確，故選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>A　$18$（準確至最接近的整數）</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q5.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

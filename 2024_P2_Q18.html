@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷二 第18題 · 畢氏定理逆定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷二 · 第18題</span>
+  <h1>先證直角，再逐邊求長度</h1>
+  <p class="sub">平面幾何 · 1 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABC$ 為一直線。已知 $AD=37$ cm、$BC=5$ cm、$BD=12$ cm、$CD=13$ cm 及 $CE=9$ cm。若 $\angle ACE=90^{\circ}$，求四邊形 $ADCE$ 的周界。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$76$ cm</li><li><span class="ol">B</span>$90$ cm</li><li><span class="ol">C</span>$100$ cm</li><li><span class="ol">D</span>$180$ cm</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">證明 $\angle CBD=90^{\circ}$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理逆定理</span>
+        <span class="rule-math">$5^{2}+12^{2}=13^{2}$</span>
+        <span class="rule-why">三邊符合畢氏關係，故為直角三角形。</span>
+      </div>
+<p>$BC^{2}+BD^{2}=25+144=169=CD^{2}$，故 $\angle CBD=90^{\circ}$，從而 $\angle ABD=90^{\circ}$（$A$、$B$、$C$ 共線）。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $AB$ 與 $AC$</div>
+<p>$AB=\sqrt{37^{2}-12^{2}}=\sqrt{1225}=35$，故 $AC=5+35=40$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $AE$ 與周界</div>
+<p>$AE=\sqrt{40^{2}+9^{2}}=\sqrt{1681}=41$。</p><p>周界 $=37+13+9+41=100$ cm，故選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>C　$100$ cm</div>
+  </div>
+
+  <nav class="pager"><a href="2024_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P2_Q19.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>
