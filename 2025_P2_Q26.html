@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第26題 · 垂直直線與三角形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第26題</span>
+    <h1>垂直條件先鎖定 $m$ 與 $n$ 的關係</h1>
+    <p class="sub">直線方程 · 垂直條件與三角形面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      直線 $L_1$ 與 $L_2$ 互相垂直，它們的方程分別為 $3x+4y-20=0$ 及 $mx+ny-20=0$，其中 $m$、$n$ 為常數。設 $L_1$、$L_2$ 分別與 $x$ 軸相交於 $A$、$B$。設 $C$ 為 $L_1$ 與 $L_2$ 的交點，已知 $C$ 在 $x$ 軸上方。若 $\triangle ABC$ 的面積為 $6$，求 $n$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-12$</li><li><span class="ol">B</span>$-9$</li><li><span class="ol">C</span>$9$</li><li><span class="ol">D</span>$12$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 300 220" width="300" height="220" xmlns="http://www.w3.org/2000/svg" role="img">
+      <line x1="30" y1="190" x2="290" y2="190" stroke="#334155" stroke-width="1.2"/>
+      <line x1="60" y1="205" x2="60" y2="20" stroke="#334155" stroke-width="1.2"/>
+      <line x1="193" y1="190" x2="73" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="93" y1="190" x2="163" y2="97" stroke="#059669" stroke-width="1.5"/>
+      <circle cx="193" cy="190" r="3.2" fill="#0f172a"/><text x="196" y="205" font-size="11" font-weight="700" fill="#0f172a">A</text>
+      <circle cx="93" cy="190" r="3.2" fill="#0f172a"/><text x="86" y="205" font-size="11" font-weight="700" fill="#0f172a">B</text>
+      <circle cx="129" cy="142" r="3.2" fill="#e11d48"/><text x="134" y="138" font-size="11" font-weight="700" fill="#0f172a">C</text>
+      <text x="76" y="102" font-size="11" font-weight="700" fill="#2563eb">L₁</text>
+      <text x="166" y="96" font-size="11" font-weight="700" fill="#059669">L₂</text>
+      <text x="150" y="216" font-size="10" fill="#475569" text-anchor="middle">L₁ ⊥ L₂，C 在 x 軸上方（示意圖，不按比例）</text>
+    </svg></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用垂直條件把 $m$ 寫成 $n$ 的式子</div>
+      <div class="rule">
+        <span class="rule-name">兩直線垂直的條件</span>
+        對 $ax+by+c=0$ 與 $px+qy+r=0$，垂直 $\iff ap+bq=0$（等價於斜率之積為 $-1$）。
+      </div>
+      <p>$$3m+4n=0\Rightarrow m=-\frac{4n}{3}$$</p>
+      <p>（用斜率驗證：$L_1$ 的斜率為 $-\dfrac34$，$L_2$ 的斜率為 $-\dfrac{m}{n}$，故 $\left(-\dfrac34\right)\left(-\dfrac mn\right)=-1$，同樣得 $3m+4n=0$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $A$、$B$，寫出底邊 $AB$</div>
+      <div class="rule">
+        <span class="rule-name">截距</span>
+        令 $y=0$ 得與 $x$ 軸的交點：$ax+c=0\Rightarrow x=-\dfrac ca$。
+      </div>
+      <p>$L_1$：$3x-20=0\Rightarrow A=\left(\dfrac{20}{3},0\right)$。</p>
+      <p>$L_2$：$mx-20=0\Rightarrow B=\left(\dfrac{20}{m},0\right)=\left(-\dfrac{15}{n},0\right)$。</p>
+      <p>$$AB=\left|\frac{20}{3}+\frac{15}{n}\right|$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解方程組求 $C$ 的縱坐標（即高）</div>
+      <div class="rule">
+        <span class="rule-name">解聯立方程</span>
+        把 $m=-\dfrac{4n}{3}$ 代入 $L_2$，再與 $L_1$ 聯立。
+      </div>
+      <p>$L_2$：$-\dfrac{4n}{3}x+ny=20$，乘以 $\dfrac{3}{n}$（$n\neq0$）得</p>
+      <p>$$-4x+3y=\frac{60}{n}$$</p>
+      <p>$L_1$ 乘 $3$、上式乘 $4$ 後相減：$9x+12y=60$，$-16x+12y=\dfrac{240}{n}$，故</p>
+      <p>$$x_C=\frac{60-\frac{240}{n}}{25},\qquad y_C=\frac{180+80n}{25n}$$</p>
+      <p>$C$ 在 $x$ 軸上方，即以 $AB$ 為底時的高 $h=y_C>0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用面積 $6$ 解 $n$，再檢查 $C$ 的位置</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        $S=\dfrac12\times\text{底}\times\text{高}$。
+      </div>
+      <p>$$6=\frac12\left|\frac{20}{3}+\frac{15}{n}\right|\cdot\frac{180+80n}{25n}$$</p>
+      <p>在 $h>0$ 的範圍（$n<-\dfrac94$）內，兩式皆為正，化簡得</p>
+      <p>$$\frac{(20n+45)(180+80n)}{50n^{2}}=6\Rightarrow 700n^{2}+7200n+8100=0\Rightarrow 7n^{2}+72n+81=0$$</p>
+      <p>$$n=\frac{-72\pm54}{14}=-9\ \text{或}\ -\frac{9}{7}$$</p>
+      <p>檢驗：$n=-\dfrac97$ 時 $y_C=\dfrac{180+80\left(-\frac97\right)}{25\left(-\frac97\right)}=-2.4<0$，$C$ 在 $x$ 軸下方，不合；</p>
+      <p>$n=-9$ 時 $m=12$，$A\left(\dfrac{20}3,0\right)$、$B\left(\dfrac53,0\right)$，$AB=5$，$y_C=2.4$，面積 $=\dfrac12\times5\times2.4=6$ ✓。</p>
+      <p>答案 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$n=-9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L_1$ 與 $L_2$ 互相垂直，方程分別為 $3x+4y-24=0$ 及 $mx+ny-24=0$。$L_1$、$L_2$ 分別與 $x$ 軸相交於 $A$、$B$，$C$ 為兩線交點且在 $x$ 軸上方。若 $\triangle ABC$ 的面積為 $6$，求 $n$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-12$</li><li><span class="ol">B</span>$-9$</li><li><span class="ol">C</span>$-6$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 垂直：$3m+4n=0$，故 $m=-\dfrac{4n}{3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A=(8,0)$，$B=\left(\dfrac{24}{m},0\right)=\left(-\dfrac{18}{n},0\right)$，$AB=\left|8+\dfrac{18}{n}\right|$。</div>
+          <div class="p-step"><b>第 3 步.</b> $L_2$ 化為 $-4x+3y=\dfrac{72}{n}$，與 $3x+4y=24$ 聯立得 $y_C=\dfrac{216+96n}{25n}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\dfrac12\left|8+\dfrac{18}{n}\right|y_C=6$ 化簡為 $13n^{2}+96n+108=0$，得 $n=-6$ 或 $-\dfrac{18}{13}$；後者 $y_C=-2.4<0$ 不合。故 $n=-6$（此時 $m=8$，$A(8,0)$、$B(3,0)$、$AB=5$、$y_C=2.4$，面積 $=6$ ✓）。</div>
+          <div class="p-ans">答案：<b>C</b>（$n=-6$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q25.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q27.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

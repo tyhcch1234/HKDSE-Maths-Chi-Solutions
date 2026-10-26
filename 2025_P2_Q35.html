@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第35題 · i 的冪之和</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第35題</span>
+    <h1>$i$ 的冪以 4 為週期，四項一組和為 0</h1>
+    <p class="sub">複數 · 虛數單位的冪、週期與分組求和</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $i^9+i^{10}+i^{11}+\cdots+i^{999}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-1$</li><li><span class="ol">B</span>$0$</li><li><span class="ol">C</span>$1$</li><li><span class="ol">D</span>$i$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出 $i$ 的冪的週期</div>
+      <div class="rule">
+        <span class="rule-name">虛數單位的週期性</span>
+        $i^1=i$，$i^2=-1$，$i^3=-i$，$i^4=1$；之後每 $4$ 次重複，即 $i^{k+4}=i^k$。
+      </div>
+      <p>$$i^{4m}=1,\quad i^{4m+1}=i,\quad i^{4m+2}=-1,\quad i^{4m+3}=-i$$</p>
+      <p>例如 $i^9=i^{4\times2+1}=i$，$i^{10}=-1$，$i^{11}=-i$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數清共有多少項</div>
+      <div class="rule">
+        <span class="rule-name">連續整數項數</span>
+        由 $i^{a}$ 加到 $i^{b}$ 共有 $b-a+1$ 項。
+      </div>
+      <p>指數由 $9$ 連續增加到 $999$，項數</p>
+      <p>$$999-9+1=991$$</p>
+      <p>注意不是 $999-9=990$：兩端都要計算在內。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">每四項一組，和為 0</div>
+      <div class="rule">
+        <span class="rule-name">分組求和</span>
+        連續四個冪之和 $i^k+i^{k+1}+i^{k+2}+i^{k+3}=i^k(1+i-1-i)=0$。
+      </div>
+      <p>把 $991$ 項按次序四個一組：</p>
+      <p>$$991=4\times247+3$$</p>
+      <p>其中 $247$ 組完整，每組和為 $0$，故總和只剩最後餘下的 $3$ 項。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">計算餘下三項</div>
+      <div class="rule">
+        <span class="rule-name">餘項定位</span>
+        由起點指數 $9$ 開始分組，餘下的必是<strong>最後</strong>三項；用「指數除以 4 的餘數」定出每一項的值。
+      </div>
+      <p>最後三項為 $i^{997},i^{998},i^{999}$。因為 $999=4\times249+3$，故</p>
+      <p>$$i^{997}=i,\quad i^{998}=-1,\quad i^{999}=-i$$</p>
+      <p>總和 $=i+(-1)+(-i)=-1$。</p>
+      <p>（另一種看法：$991$ 項由 $i^9=i$ 開始，餘下三項的指數除以 $4$ 的餘數依次為 $1,2,3$，和 $=i-1-i=-1$，結果相同。）</p>
+      <p>答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-1$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $i^{10}+i^{11}+i^{12}+\cdots+i^{1000}=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-1$</li><li><span class="ol">B</span>$0$</li><li><span class="ol">C</span>$i$</li><li><span class="ol">D</span>$-i$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 項數 $=1000-10+1=991$。</div>
+          <div class="p-step"><b>第 2 步.</b> $991=4\times247+3$，完整 $247$ 組每組和為 $0$，只剩最後三項。</div>
+          <div class="p-step"><b>第 3 步.</b> 最後三項為 $i^{998},i^{999},i^{1000}$；$998\equiv2$、$999\equiv3$、$1000\equiv0\pmod 4$，故依次為 $-1$、$-i$、$1$。</div>
+          <div class="p-step"><b>第 4 步.</b> 總和 $=-1+(-i)+1=-i$。</div>
+          <div class="p-ans">答案：<b>D</b>（$-i$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

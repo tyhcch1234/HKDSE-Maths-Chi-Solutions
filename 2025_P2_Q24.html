@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第24題 · 極坐標中的等邊三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第24題</span>
+    <h1>先看 $\triangle OXY$ 是直角三角形</h1>
+    <p class="sub">極坐標 · 餘弦公式、勾股定理與旋轉</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $X$、$Y$、$Z$ 的極坐標分別為 $(1,20^\circ)$、$(2,80^\circ)$ 及 $(r,\theta)$，其中 $20^\circ<\theta<80^\circ$。若 $\triangle XYZ$ 是等邊三角形，求 $r$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\sqrt{3}$</li><li><span class="ol">B</span>$\sqrt{5}$</li><li><span class="ol">C</span>$\sqrt{7}$</li><li><span class="ol">D</span>$\sqrt{10}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 340 240" width="340" height="240" xmlns="http://www.w3.org/2000/svg" role="img">
+      <line x1="40" y1="160" x2="320" y2="160" stroke="#334155" stroke-width="1.4"/>
+      <text x="322" y="164" font-size="10" fill="#475569">極軸</text>
+      <line x1="70" y1="160" x2="117" y2="143" stroke="#94a3b8" stroke-width="1"/>
+      <line x1="70" y1="160" x2="87" y2="61.6" stroke="#94a3b8" stroke-width="1"/>
+      <line x1="70" y1="160" x2="172.6" y2="76.6" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+      <polygon points="117,143 87,61.6 172.6,76.6" fill="none" stroke="#2563eb" stroke-width="1.4"/>
+      <circle cx="117" cy="143" r="3.5" fill="#e11d48"/><text x="122" y="152" font-size="11" font-weight="700" fill="#0f172a">X(1, 20°)</text>
+      <circle cx="87" cy="61.6" r="3.5" fill="#e11d48"/><text x="60" y="55" font-size="11" font-weight="700" fill="#0f172a">Y(2, 80°)</text>
+      <circle cx="172.6" cy="76.6" r="3.5" fill="#e11d48"/><text x="178" y="72" font-size="11" font-weight="700" fill="#0f172a">Z(r, θ)</text>
+      <circle cx="70" cy="160" r="3" fill="#334155"/><text x="54" y="174" font-size="12" font-weight="700" fill="#0f172a">O</text>
+      <text x="170" y="228" font-size="10" fill="#475569" text-anchor="middle">∠XOY = 60°，OX ⊥ XY（示意圖，不按比例）</text>
+    </svg></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用餘弦公式求 $XY$</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        $c^2=a^2+b^2-2ab\cos C$；在極坐標中兩點的夾角就是極角之差。
+      </div>
+      <p>$\angle XOY=80^\circ-20^\circ=60^\circ$，$OX=1$，$OY=2$。</p>
+      <p>$$XY^2=1^2+2^2-2(1)(2)\cos 60^\circ=1+4-2=3$$</p>
+      <p>故 $XY=\sqrt3$。因 $\triangle XYZ$ 等邊，所以 $XZ=YZ=XY=\sqrt3$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">發現 $\angle OXY=90^\circ$，建立方便坐標</div>
+      <div class="rule">
+        <span class="rule-name">勾股定理的逆定理</span>
+        若三角形三邊滿足 $a^2+b^2=c^2$，則 $c$ 所對的角是直角。
+      </div>
+      <p>$OX^2+XY^2=1+3=4=OY^2$，故 $\angle OXY=90^\circ$，即 $OX\perp XY$。</p>
+      <p>把極軸轉 $20^\circ$（只改變方向，不改 $r$），令 $X=(1,0)$，則</p>
+      <p>$$Y=(2\cos60^\circ,\,2\sin60^\circ)=(1,\sqrt3),\qquad \vec{XY}=(0,\sqrt3)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $\vec{XY}$ 轉 $60^\circ$ 得 $Z$</div>
+      <div class="rule">
+        <span class="rule-name">旋轉向量</span>
+        把向量 $(x,y)$ 逆時針轉 $\varphi$：$(x\cos\varphi-y\sin\varphi,\;x\sin\varphi+y\cos\varphi)$；順時針則用 $-\varphi$。
+      </div>
+      <p>等邊三角形中 $\angle YXZ=60^\circ$ 且 $XZ=\sqrt3=|\vec{XY}|$，故 $\vec{XZ}$ 是 $\vec{XY}$ 轉 $\pm60^\circ$：</p>
+      <p>順時針：$\vec{XZ}=\left(\tfrac32,\tfrac{\sqrt3}{2}\right)\Rightarrow Z=\left(1+\tfrac32,\tfrac{\sqrt3}{2}\right)=\left(\tfrac52,\tfrac{\sqrt3}{2}\right)$</p>
+      <p>逆時針：$\vec{XZ}=\left(-\tfrac32,\tfrac{\sqrt3}{2}\right)\Rightarrow Z=\left(-\tfrac12,\tfrac{\sqrt3}{2}\right)$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求 $|OZ|$，並用 $\theta$ 的範圍篩選</div>
+      <div class="rule">
+        <span class="rule-name">極坐標的意義</span>
+        極坐標 $(r,\theta)$ 中 $r=|OZ|$ 是與原點的距離，$\theta$ 是與極軸的夾角。
+      </div>
+      <p>$$\left(\tfrac52,\tfrac{\sqrt3}{2}\right):\quad r=\sqrt{\tfrac{25}{4}+\tfrac34}=\sqrt7$$</p>
+      <p>$$\left(-\tfrac12,\tfrac{\sqrt3}{2}\right):\quad r=\sqrt{\tfrac14+\tfrac34}=1$$</p>
+      <p>篩選：$r=1$ 時 $Z$ 的方向角為 $120^\circ$，即 $\theta=120^\circ+20^\circ=140^\circ$，不合 $20^\circ<\theta<80^\circ$。</p>
+      <p>$r=\sqrt7$ 時 $\tan\theta'=\dfrac{\sqrt3/2}{5/2}=\dfrac{\sqrt3}{5}$，得 $\theta'\approx19.1^\circ$，即 $\theta\approx39.1^\circ$，符合範圍。</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$r=\sqrt7$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $X$、$Y$、$Z$ 的極坐標分別為 $(2,15^\circ)$、$(4,75^\circ)$ 及 $(r,\theta)$，其中 $15^\circ<\theta<75^\circ$。若 $\triangle XYZ$ 是等邊三角形，求 $r$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2\sqrt3$</li><li><span class="ol">B</span>$2\sqrt5$</li><li><span class="ol">C</span>$2\sqrt6$</li><li><span class="ol">D</span>$2\sqrt7$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle XOY=60^\circ$，$XY^2=2^2+4^2-2(2)(4)\cos60^\circ=4+16-8=12$，故 $XY=2\sqrt3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $OX^2+XY^2=4+12=16=OY^2$，故 $\angle OXY=90^\circ$。轉極軸 $15^\circ$ 後取 $X=(2,0)$，$Y=(4\cos60^\circ,4\sin60^\circ)=(2,2\sqrt3)$，即 $\vec{XY}=(0,2\sqrt3)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 以 $X$ 為原點看：$\vec{XY}=(0,2\sqrt3)$，順時針轉 $60^\circ$ 得 $\vec{XZ}=(3,\sqrt3)$，故 $Z=(5,\sqrt3)$，$r=\sqrt{25+3}=2\sqrt7$。（另一解 $\vec{XZ}=(-3,\sqrt3)$ 給 $r=2$，方向角 $120^\circ$ 即 $\theta=135^\circ$，不合範圍。）</div>
+          <div class="p-ans">答案：<b>D</b>（$2\sqrt7$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第20題 · 梯形內作垂線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第20題</span>
+    <h1>梯形作兩條垂線，拆成三段相加</h1>
+    <p class="sub">三角學 · 直角三角形的投影與正弦</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $PQRS$ 是梯形，其中 $PQ\parallel SR$。若 $PS=41\text{ cm}$、$RS=53\text{ cm}$、$\angle PSR=120^\circ$ 及 $\angle QRS=150^\circ$，則 $PQ=$
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 180" width="300" height="180" role="img" aria-label="梯形 PQRS，PQ 平行 SR，由 P、Q 向 SR 作垂線">
+        <polygon points="7,93 223,93 125,150 40,150" fill="none" stroke="#333" stroke-width="2"/>
+        <line x1="0" y1="150" x2="240" y2="150" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <line x1="7" y1="93" x2="7" y2="150" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <line x1="223" y1="93" x2="223" y2="150" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <text x="0" y="88" font-size="13">P</text><text x="228" y="88" font-size="13">Q</text>
+        <text x="128" y="166" font-size="13">R</text><text x="32" y="166" font-size="13">S</text>
+        <text x="8" y="142" font-size="11" fill="#c0392b">M</text><text x="210" y="142" font-size="11" fill="#c0392b">N</text>
+        <text x="14" y="128" font-size="12" fill="#555">41</text>
+        <text x="76" y="166" font-size="12" fill="#555">53</text>
+        <text x="165" y="128" font-size="12" fill="#555">QR</text>
+      </svg>
+    </figure>
+    <ol class="opts"><li><span class="ol">A</span>$82\text{ cm}$</li><li><span class="ol">B</span>$100\text{ cm}$</li><li><span class="ol">C</span>$106\text{ cm}$</li><li><span class="ol">D</span>$135\text{ cm}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從 P、Q 向 SR 所在直線作垂線</div>
+      <div class="rule">
+        <span class="rule-name">作垂線法</span>
+        設 $M$、$N$ 分別為 $P$、$Q$ 在直線 $SR$ 上的垂足。因 $PQ\parallel SR$，故 $PM=QN=h$（梯形的高）。
+      </div>
+      <p>兩個鈍角 $120^\circ$、$150^\circ$ 使垂足 $M$、$N$ 都落在線段 $SR$ 之外：$M$ 在 $S$ 的左方，$N$ 在 $R$ 的右方。</p>
+      <p>於是 $PQ=SM+SR+RN$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 PS 求高 h</div>
+      <div class="rule">
+        <span class="rule-name">正弦定義</span>
+        在直角三角形中，對邊 $=$ 斜邊 $\times\sin\theta$；此處 $h=PS\sin120^\circ$。
+      </div>
+      <p>$$h=41\sin120^\circ=41\times\frac{\sqrt3}{2}=\frac{41\sqrt3}{2}=20.5\sqrt3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由同一個高求 QR</div>
+      <div class="rule">
+        <span class="rule-name">同高列方程</span>
+        $h=QR\sin150^\circ=QR\times\dfrac12$，故 $QR=2h$。
+      </div>
+      <p>$$QR=2\times\frac{41\sqrt3}{2}=41\sqrt3\approx 71.0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求三段水平距離相加</div>
+      <div class="rule">
+        <span class="rule-name">餘弦投影</span>
+        $SM=PS\cos60^\circ$、$RN=QR\cos30^\circ$（用與 $SR$ 的銳角 $60^\circ$、$30^\circ$）。
+      </div>
+      <p>$$SM=41\cos60^\circ=41\times\frac12=20.5$$</p>
+      <p>$$RN=41\sqrt3\cos30^\circ=41\sqrt3\times\frac{\sqrt3}{2}=61.5$$</p>
+      <p>$$PQ=SM+SR+RN=20.5+53+61.5=135$$</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$135\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 梯形 $PQRS$ 中 $PQ\parallel SR$，$PS=25\text{ cm}$、$RS=30\text{ cm}$、$\angle PSR=120^\circ$、$\angle QRS=150^\circ$。求 $PQ$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$60\text{ cm}$</li><li><span class="ol">B</span>$70\text{ cm}$</li><li><span class="ol">C</span>$80\text{ cm}$</li><li><span class="ol">D</span>$90\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 作垂線，高 $h=25\sin120^\circ=\dfrac{25\sqrt3}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $h=QR\sin150^\circ=\dfrac{QR}{2}\Rightarrow QR=25\sqrt3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩端外伸部分：$SM=25\cos60^\circ=12.5$；$RN=25\sqrt3\cos30^\circ=25\sqrt3\times\dfrac{\sqrt3}{2}=37.5$。</div>
+          <div class="p-step"><b>第 4 步.</b> $PQ=12.5+30+37.5=80\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$80\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

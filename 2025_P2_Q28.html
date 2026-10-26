@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第28題 · 期望值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第28題</span>
+    <h1>期望值就是每個結果的加權平均</h1>
+    <p class="sub">概率 · 期望值與概率分佈</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個盒內有六張卡，分別寫上 $2,2,2,3,4,5$。遊戲中隨機從盒中抽出一個數，並按下表獲得代幣：
+      <table class="dtable">
+        <thead><tr><th>抽到的數</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody><tr><td class="rowhead">獲得代幣數目</td><td>10</td><td>15</td><td>25</td><td>50</td></tr></tbody>
+      </table>
+      求遊戲中獲得代幣數目的期望值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$25$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">逐個結果寫出概率</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        每個結果的概率 $=\dfrac{\text{該結果的卡數}}{\text{卡總數}}$，各概率之和必須為 $1$。
+      </div>
+      <p>共 $6$ 張卡，其中寫上 $2$ 的有 $3$ 張，其餘各 $1$ 張。</p>
+      <p>$$P(2)=\frac{3}{6},\quad P(3)=\frac{1}{6},\quad P(4)=\frac{1}{6},\quad P(5)=\frac{1}{6}$$</p>
+      <p>檢查：$\dfrac{3+1+1+1}{6}=1$ ✓</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出期望值的定義式</div>
+      <div class="rule">
+        <span class="rule-name">期望值定義</span>
+        $E(X)=\sum x\,P(X=x)$，即把每個取值乘以其概率後相加。
+      </div>
+      <p>$$\begin{aligned}E&=10\times\frac{3}{6}+15\times\frac{1}{6}+25\times\frac{1}{6}+50\times\frac{1}{6}\end{aligned}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">通分計算</div>
+      <div class="rule">
+        <span class="rule-name">加權平均</span>
+        概率相同的項可先把分子相加，再除以同一個分母。
+      </div>
+      <p>$$E=\frac{30+15+25+50}{6}=\frac{120}{6}=20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對選項，排除陷阱</div>
+      <div class="rule">
+        <span class="rule-name">選項核對</span>
+        期望值必定介乎最小與最大取值之間，且不必等於某個可能的取值。
+      </div>
+      <p>A 的 $3$ 其實是卡上數字的平均數 $\dfrac{2+2+2+3+4+5}{6}=3$，不是代幣的期望值。</p>
+      <p>B 的 $4$ 與 D 的 $25$ 都不符合加權計算；只有 $20$ 落於 $10$ 與 $50$ 之間並與上式相符。</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$20$ 個代幣）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個盒內有六張卡，分別寫上 $1,1,1,2,3,4$。隨機抽出一張，抽到 $1$、$2$、$3$、$4$ 分別可得 $4$、$12$、$20$、$40$ 個代幣。求獲得代幣數目的期望值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$8$</li><li><span class="ol">B</span>$12$</li><li><span class="ol">C</span>$14$</li><li><span class="ol">D</span>$20$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $P(1)=\dfrac{3}{6}$，$P(2)=P(3)=P(4)=\dfrac{1}{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $E=4\times\dfrac{3}{6}+12\times\dfrac{1}{6}+20\times\dfrac{1}{6}+40\times\dfrac{1}{6}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $E=\dfrac{12+12+20+40}{6}=\dfrac{84}{6}=14$。</div>
+          <div class="p-ans">答案：<b>C</b>（$14$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q27.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q29.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

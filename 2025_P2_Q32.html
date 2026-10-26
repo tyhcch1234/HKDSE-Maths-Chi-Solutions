@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第32題 · 多項式的 L.C.M.</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第32題</span>
+    <h1>先完全因式分解，再取最高次冪</h1>
+    <p class="sub">多項式 · 因式分解與最低公倍式（L.C.M.）</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $p^2-4q^2$、$p^3-8q^3$ 與 $(p+2q)(p^2-4q^2)$ 的 L.C.M.（最低公倍式）是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$p-2q$</li><li><span class="ol">B</span>$p^2-4q^2$</li><li><span class="ol">C</span>$(p+2q)^2(p^3-8q^3)$</li><li><span class="ol">D</span>$(p+2q)(p^2-4q^2)(p^3-8q^3)$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三個多項式完全因式分解</div>
+      <div class="rule">
+        <span class="rule-name">平方差與立方差公式</span>
+        $a^2-b^2=(a-b)(a+b)$，$a^3-b^3=(a-b)(a^2+ab+b^2)$。
+      </div>
+      <p>$$p^2-4q^2=(p-2q)(p+2q)$$</p>
+      <p>$$p^3-8q^3=p^3-(2q)^3=(p-2q)(p^2+2pq+4q^2)$$</p>
+      <p>$$(p+2q)(p^2-4q^2)=(p+2q)(p-2q)(p+2q)=(p-2q)(p+2q)^2$$</p>
+      <p>其中 $p^2+2pq+4q^2$ 在實數範圍內不能再分解。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">列出全部質因式</div>
+      <div class="rule">
+        <span class="rule-name">質因式清單</span>
+        求 L.C.M. 前，先把每個多項式寫成不可再分解的因式之積，然後列出所有出現過的質因式。
+      </div>
+      <p>三個多項式合共只用到三個質因式：</p>
+      <p>$$(p-2q),\quad (p+2q),\quad (p^2+2pq+4q^2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">每個質因式取最高次冪</div>
+      <div class="rule">
+        <span class="rule-name">L.C.M. 取最高次冪</span>
+        L.C.M. $=$ 各質因式的最高次冪之積；H.C.F. 才是取最低次冪。
+      </div>
+      <p>$p-2q$：三個多項式中最多出現 $1$ 次 → 取 $(p-2q)^1$。</p>
+      <p>$p+2q$：第三個多項式含 $(p+2q)^2$ → 取 $(p+2q)^2$。</p>
+      <p>$p^2+2pq+4q^2$：只在 $p^3-8q^3$ 出現 → 取 $1$ 次。</p>
+      <p>$$\text{L.C.M.}=(p-2q)(p+2q)^2(p^2+2pq+4q^2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把答案還原成選項的形式</div>
+      <div class="rule">
+        <span class="rule-name">立方差公式逆用</span>
+        $(p-2q)(p^2+2pq+4q^2)=p^3-8q^3$，可把兩個因式合併回原多項式。
+      </div>
+      <p>$$\text{L.C.M.}=(p+2q)^2\underbrace{(p-2q)(p^2+2pq+4q^2)}_{=\,p^3-8q^3}=(p+2q)^2(p^3-8q^3)$$</p>
+      <p>檢查：$(p+2q)^2(p^3-8q^3)$ 可被三個多項式整除 ✓，而 A、B 次數太低（不能同時被三個多項式整除），D 多乘了一次 $(p-2q)$ 與 $(p+2q)$，不是「最低」公倍式。</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$(p+2q)^2(p^3-8q^3)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $x^2-9y^2$、$x^3+27y^3$ 與 $(x-3y)(x^2-9y^2)$ 的 L.C.M. 是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(x-3y)(x+3y)$</li><li><span class="ol">B</span>$(x-3y)^2(x^3+27y^3)$</li><li><span class="ol">C</span>$(x+3y)^2(x^3-27y^3)$</li><li><span class="ol">D</span>$(x-3y)(x+3y)(x^3+27y^3)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 完全因式分解：$x^2-9y^2=(x-3y)(x+3y)$；$x^3+27y^3=x^3+(3y)^3=(x+3y)(x^2-3xy+9y^2)$；$(x-3y)(x^2-9y^2)=(x-3y)^2(x+3y)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 質因式為 $(x-3y)$、$(x+3y)$、$(x^2-3xy+9y^2)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 各取最高次冪：$(x-3y)^2$、$(x+3y)^1$、$(x^2-3xy+9y^2)^1$，故 L.C.M. $=(x-3y)^2(x+3y)(x^2-3xy+9y^2)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 合併後兩個因式：$(x+3y)(x^2-3xy+9y^2)=x^3+27y^3$，故 L.C.M. $=(x-3y)^2(x^3+27y^3)$。D 多乘了一次 $(x-3y)(x+3y)$，非最低。</div>
+          <div class="p-ans">答案：<b>B</b>（$(x-3y)^2(x^3+27y^3)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

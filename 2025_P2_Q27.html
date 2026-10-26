@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第27題 · 圓的方程與弦</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第27題</span>
+    <h1>弦心距與半弦長合起來就是半徑</h1>
+    <p class="sub">解析幾何 · 圓的方程與弦的性質</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 的圓心坐標為 $(7,-5)$。若 $C$ 與 $x$ 軸相交於 $P$、$Q$ 兩點，且 $PQ=24$，則 $C$ 的方程是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x^2+y^2-14x+10y-95=0$</li><li><span class="ol">B</span>$x^2+y^2+14x-10y-95=0$</li><li><span class="ol">C</span>$x^2+y^2-14x+10y-119=0$</li><li><span class="ol">D</span>$x^2+y^2+14x-10y-119=0$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">指出 $PQ$ 是圓的一條弦</div>
+      <div class="rule">
+        <span class="rule-name">弦心距</span>
+        $P$、$Q$ 都在 $x$ 軸上，故 $PQ$ 是圓的弦；圓心到這條弦的垂直距離，就是圓心到 $x$ 軸的距離。
+      </div>
+      <p>圓心 $(7,-5)$ 到 $x$ 軸（即 $y=0$）的距離是 $|-5-0|=5$。</p>
+      <p>設 $M$ 為垂足，則弦心距 $OM=5$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $PQ$ 分成兩半</div>
+      <div class="rule">
+        <span class="rule-name">垂足平分弦</span>
+        圓心到弦的垂線必平分該弦，即 $PM=MQ=\dfrac{PQ}{2}$。
+      </div>
+      <p>$$PM=\frac{PQ}{2}=\frac{24}{2}=12$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在直角三角形 $OMP$ 中求半徑</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        直角三角形的斜邊平方等於兩直角邊平方之和：$OP^2=OM^2+PM^2$。
+      </div>
+      <p>$OM\perp PQ$，故 $\triangle OMP$ 在 $M$ 處為直角，且 $OP$ 就是半徑 $r$。</p>
+      <p>$$r^2=5^2+12^2=25+144=169$$</p>
+      <p>$r=13$（取正根，因半徑為正數）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出方程並展開成一般式</div>
+      <div class="rule">
+        <span class="rule-name">圓方程展開</span>
+        $(x-h)^2+(y-k)^2=r^2$ 展開後為 $x^2+y^2-2hx-2ky+(h^2+k^2-r^2)=0$。
+      </div>
+      <p>$$(x-7)^2+(y+5)^2=13^2$$</p>
+      <p>$$x^2-14x+49+y^2+10y+25=169$$</p>
+      <p>常數項 $=49+25-169=-95$，故</p>
+      <p>$$x^2+y^2-14x+10y-95=0$$</p>
+      <p>答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$x^2+y^2-14x+10y-95=0$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $C$ 的圓心坐標為 $(3,6)$。若 $C$ 與 $x$ 軸相交於 $P$、$Q$ 兩點，且 $PQ=16$，則 $C$ 的方程是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x^2+y^2-6x-12y-55=0$</li><li><span class="ol">B</span>$x^2+y^2+6x-12y-55=0$</li><li><span class="ol">C</span>$x^2+y^2-6x-12y-145=0$</li><li><span class="ol">D</span>$x^2+y^2-6x+12y-55=0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 弦心距 $=$ 圓心到 $x$ 軸的距離 $=6$。</div>
+          <div class="p-step"><b>第 2 步.</b> 半弦長 $=16\div 2=8$。</div>
+          <div class="p-step"><b>第 3 步.</b> $r^2=6^2+8^2=36+64=100$，故 $r=10$。</div>
+          <div class="p-step"><b>第 4 步.</b> $(x-3)^2+(y-6)^2=100$，展開得 $x^2+y^2-6x-12y+(9+36-100)=0$，即 $x^2+y^2-6x-12y-55=0$。（$y-6$ 展開為 $-12y$，故 D 的 $+12y$ 不對。）</div>
+          <div class="p-ans">答案：<b>A</b>（$x^2+y^2-6x-12y-55=0$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q26.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q28.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

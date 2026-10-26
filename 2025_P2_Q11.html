@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第11題 · 連比求 α:β</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第11題</span>
+    <h1>三數連比：先設 k，再代入消元</h1>
+    <p class="sub">比與比例 · 連比、代入消元求兩數之比</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\alpha$、$\beta$、$\gamma$ 為非零常數，且
+      $$(\alpha+2\beta):(\beta+2\gamma):(\gamma+2\alpha)=4:9:5$$
+      則 $\alpha:\beta=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2:5$</li><li><span class="ol">B</span>$5:2$</li><li><span class="ol">C</span>$128:149$</li><li><span class="ol">D</span>$149:128$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把連比寫成三個等式</div>
+      <div class="rule">
+        <span class="rule-name">連比設定</span>
+        連比 $a:b:c=m:n:p$ 表示存在非零常數 $k$，使 $a=mk$、$b=nk$、$c=pk$。
+      </div>
+      <p>設
+      $$\alpha+2\beta=4k,\qquad \beta+2\gamma=9k,\qquad \gamma+2\alpha=5k$$
+      其中 $k\neq 0$。三個未知數、三條方程，本可解出 $\alpha,\beta,\gamma$ 與 $k$ 的比例。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用第三式消去 γ</div>
+      <div class="rule">
+        <span class="rule-name">代入消元</span>
+        由一條方程解出某個字母，代入其餘方程，把三個未知數減為兩個。
+      </div>
+      <p>由 $\gamma+2\alpha=5k$ 得 $\gamma=5k-2\alpha$，代入 $\beta+2\gamma=9k$：
+      $$\beta+2(5k-2\alpha)=9k\ \Rightarrow\ \beta=4\alpha-k$$</p>
+      <p>現在 $\beta$、$\gamma$ 都用 $\alpha$ 與 $k$ 表示。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入第一式，解出 α 與 β</div>
+      <div class="rule">
+        <span class="rule-name">解一次方程</span>
+        只剩一個未知數時，合併同類項後直接解方程。
+      </div>
+      <p>代入 $\alpha+2\beta=4k$：
+      $$\alpha+2(4\alpha-k)=4k\ \Rightarrow\ 9\alpha=6k\ \Rightarrow\ \alpha=\frac{2k}{3}$$</p>
+      <p>於是
+      $$\beta=4\left(\frac{2k}{3}\right)-k=\frac{5k}{3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">化簡成最簡整數比</div>
+      <div class="rule">
+        <span class="rule-name">比例化簡</span>
+        同乘或同除同一個非零數，比值不變；最後要寫成最簡整數比。
+      </div>
+      <p>$$\alpha:\beta=\frac{2k}{3}:\frac{5k}{3}=2:5$$</p>
+      <p>驗算（取 $k=3$）：$\alpha=2$、$\beta=5$、$\gamma=5(3)-2(2)=11$，則
+      $(\alpha+2\beta):(\beta+2\gamma):(\gamma+2\alpha)=12:27:15=4:9:5$ ✓</p>
+      <p>答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\alpha:\beta=2:5$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\alpha$、$\beta$、$\gamma$ 為非零常數，且
+      $(\alpha+2\beta):(\beta+2\gamma):(\gamma+2\alpha)=6:11:7$，求 $\alpha:\beta$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$7:4$</li><li><span class="ol">B</span>$4:7$</li><li><span class="ol">C</span>$6:11$</li><li><span class="ol">D</span>$11:6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $\alpha+2\beta=6k$、$\beta+2\gamma=11k$、$\gamma+2\alpha=7k$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由第三式 $\gamma=7k-2\alpha$，代入第二式：$\beta+14k-4\alpha=11k$，得 $\beta=4\alpha-3k$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入第一式：$\alpha+2(4\alpha-3k)=6k$，即 $9\alpha=12k$，故 $\alpha=\frac{4k}{3}$、$\beta=\frac{7k}{3}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\alpha:\beta=4:7$。驗算（$k=3$）：$(\alpha,\beta,\gamma)=(4,7,13)$，得 $18:33:21=6:11:7$ ✓</div>
+          <div class="p-ans">答案：<b>B</b>（$4:7$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

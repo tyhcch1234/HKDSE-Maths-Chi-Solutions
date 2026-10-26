@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第34題 · 對數與指數圖像相交</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第34題</span>
+    <h1>交點在對稱軸 $y=x$ 上</h1>
+    <p class="sub">指數與對數 · 反函數圖像的對稱、截距與夾角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在同一平面直角坐標系中，$y=\log_a x$ 的圖像與 $y=a^x$ 的圖像及 $x$ 軸分別相交於點 $P$ 及 $Q$，其中 $a$ 為正常數，原點記為 $O$。下列何者正確？<br>
+      I. $a&lt;1$<br>
+      II. $OQ&gt;a$<br>
+      III. $\angle POQ=45^\circ$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 400 330" width="400" height="330" role="img" aria-label="a 小於 1 時 y 等於 a 的 x 次方與 y 等於 log 以 a 為底 x 的圖像">
+        <line x1="50" y1="270" x2="330" y2="270" stroke="#8a8a8a" stroke-width="1.5"/>
+        <line x1="70" y1="310" x2="70" y2="110" stroke="#8a8a8a" stroke-width="1.5"/>
+        <polygon points="338,270 326,265 326,275" fill="#8a8a8a"/>
+        <polygon points="70,102 65,114 75,114" fill="#8a8a8a"/>
+        <line x1="70" y1="270" x2="150" y2="190" stroke="#b9b9b9" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <polyline points="70,200 87.5,220.5 105,235 122.5,245.2 140,252.5 175,261.3 210,265.6 260,268.4" fill="none" stroke="#2f6fb3" stroke-width="2.4"/>
+        <polyline points="77,153.8 80.5,174.2 84,188.7 87.5,200 105,235 122.5,284.5 140,270 175,290.5 210,305" fill="none" stroke="#d07a2c" stroke-width="2.4"/>
+        <circle cx="105" cy="235" r="4" fill="#333"/>
+        <circle cx="140" cy="270" r="4" fill="#333"/>
+        <circle cx="70" cy="200" r="3.5" fill="#2f6fb3"/>
+        <text x="96" y="228" font-size="13" fill="#333">P</text>
+        <text x="144" y="288" font-size="13" fill="#333">Q(1, 0)</text>
+        <text x="52" y="288" font-size="13" fill="#333">O</text>
+        <text x="196" y="252" font-size="12" fill="#2f6fb3">y = aˣ</text>
+        <text x="186" y="312" font-size="12" fill="#d07a2c">y = logₐx</text>
+        <text x="300" y="262" font-size="13" fill="#333">x</text>
+        <text x="62" y="112" font-size="13" fill="#333">y</text>
+      </svg>
+      <figcaption>圖為 $0&lt;a&lt;1$ 的情形：$y=a^x$ 與 $y=\log_a x$ 均遞減，交點 $P$ 在直線 $y=x$ 上，而 $Q=(1,0)$。</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出 $Q$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">對數的零值點</span>
+        對任何容許的底 $a$，$\log_a 1=0$，即圖像與 $x$ 軸的交點必為 $(1,0)$。
+      </div>
+      <p>$y=\log_a x$ 與 $x$ 軸相交時 $y=0$：</p>
+      <p>$$\log_a x=0\iff x=a^0=1$$</p>
+      <p>故 $Q=(1,0)$，於是 $OQ=1$（與 $a$ 的取值無關）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 II 翻譯成對 $a$ 的不等式</div>
+      <div class="rule">
+        <span class="rule-name">等價變形</span>
+        兩邊代入已知量後比較同一個量，即可判斷兩句敘述是否等價。
+      </div>
+      <p>由第 1 步，$OQ=1$，所以</p>
+      <p>$$\text{II}:\ OQ&gt;a\iff 1&gt;a\iff a&lt;1\iff \text{I}$$</p>
+      <p>結論：<b>I 與 II 同真同假</b>，不可能一個真、一個假。（又 $a$ 為正常數，故 $a&lt;1$ 等價於 $0&lt;a&lt;1$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用對稱性處理 III</div>
+      <div class="rule">
+        <span class="rule-name">反函數圖像關於 $y=x$ 對稱</span>
+        $y=a^x$ 與 $y=\log_a x$ 互為反函數，兩圖像關於直線 $y=x$ 成鏡像。
+      </div>
+      <p>$P$ 同時在 $y=a^x$ 與 $y=\log_a x$ 上，即 $P$ 是兩圖像的交點。將 $P$ 對直線 $y=x$ 反射，仍然落在這兩條互為反函數的圖像上；交點只有一個，故反射後仍是 $P$ 本身。</p>
+      <p>所以 $P$ 在對稱軸 $y=x$ 上，設 $P=(t,t)$，則 $OP$ 與正 $x$ 軸成 $45^\circ$；而 $Q=(1,0)$ 在正 $x$ 軸上，故</p>
+      <p>$$\angle POQ=45^\circ$$</p>
+      <p>III 為真。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">結合兩個結論選出答案</div>
+      <div class="rule">
+        <span class="rule-name">等價命題與選項排除</span>
+        III 已確定為真；再由 I $\iff$ II，任何「只有其中一句為真」的選項都不可能成立。
+      </div>
+      <p>III 真，故 A（只有 I 及 II）不成立；由第 2 步 I 與 II 同真同假，故 B（只有 I 及 III）、C（只有 II 及 III）亦不成立。</p>
+      <p>剩下的只有 D。驗證一致性：取 $a=\dfrac14$，$(0.25)^{0.5}=0.5$，兩圖像確在 $P=(0.5,\,0.5)$ 相交，且 $OQ=1&gt;\dfrac14$、$\angle POQ=45^\circ$，三句同時成立。</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III 全部正確）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在同一平面直角坐標系中，$y=\log_a x$（其中 $0&lt;a&lt;1$）的圖像與 $x$ 軸相交於 $Q$，並與 $y=a^x$ 的圖像相交於 $P$。若 $a=\dfrac{1}{16}$，則 $OQ$ 及 $\angle POQ$ 分別為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$ 及 $45^\circ$</li><li><span class="ol">B</span>$\dfrac{1}{16}$ 及 $45^\circ$</li><li><span class="ol">C</span>$1$ 及 $90^\circ$</li><li><span class="ol">D</span>$16$ 及 $45^\circ$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $y=\log_a x$ 與 $x$ 軸相交：$\log_a x=0\Rightarrow x=1$，故 $Q=(1,0)$、$OQ=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $P$ 同時在 $y=a^x$ 與 $y=\log_a x$ 上，兩者互為反函數，交點必在對稱軸 $y=x$ 上，故設 $P=(t,t)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $OP$ 沿 $y=x$，與正 $x$ 軸成 $45^\circ$；$OQ$ 沿正 $x$ 軸，故 $\angle POQ=45^\circ$。</div>
+          <div class="p-step"><b>第 4 步.</b> 順帶核對：$\left(\dfrac{1}{16}\right)^{0.5}=\dfrac14\neq0.5$，故 $t$ 不是 $0.5$；但 $t$ 的確實值不影響 $OQ$ 與夾角。答案為 $OQ=1$、$\angle POQ=45^\circ$。</div>
+          <div class="p-ans">答案：<b>A</b>（$1$ 及 $45^\circ$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

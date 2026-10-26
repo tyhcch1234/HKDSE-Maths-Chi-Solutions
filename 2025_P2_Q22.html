@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第22題 · 共圓五邊形與平行弦</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第22題</span>
+    <h1>用弧的度數追出圓周角</h1>
+    <p class="sub">圓形性質 · 圓周角、平行弦與角平分線</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$RSTUV$ 是一個圓。已知 $RT\parallel VU$，且 $RT$ 平分 $\angle SRU$。若 $\angle RTS=\angle URV=33^\circ$，則 $\angle RUT=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$36^\circ$</li><li><span class="ol">B</span>$49^\circ$</li><li><span class="ol">C</span>$65^\circ$</li><li><span class="ol">D</span>$71^\circ$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 320 250" width="320" height="250" xmlns="http://www.w3.org/2000/svg" role="img">
+      <circle cx="160" cy="120" r="85" fill="none" stroke="#cbd5e1" stroke-width="1.2"/>
+      <polygon points="245,120 194.6,42.3 93,67.7 93,172.3 180.6,202.5" fill="none" stroke="#1e293b" stroke-width="1.4"/>
+      <line x1="245" y1="120" x2="93" y2="67.7" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="5 3"/>
+      <line x1="180.6" y1="202.5" x2="93" y2="172.3" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="5 3"/>
+      <text x="253" y="124" font-size="12" font-weight="700" fill="#0f172a">R</text>
+      <text x="200" y="36" font-size="12" font-weight="700" fill="#0f172a">S</text>
+      <text x="78" y="63" font-size="12" font-weight="700" fill="#0f172a">T</text>
+      <text x="78" y="180" font-size="12" font-weight="700" fill="#0f172a">U</text>
+      <text x="186" y="220" font-size="12" font-weight="700" fill="#0f172a">V</text>
+      <text x="160" y="243" font-size="10" fill="#475569" text-anchor="middle">RT // VU，RT 平分 ∠SRU（示意圖，不按比例）</text>
+    </svg></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圓周角求出兩段弧</div>
+      <div class="rule">
+        <span class="rule-name">圓周角定理</span>
+        同弧所對的圓周角等於該弧的度數的一半；反過來，弧的度數 $=2\times$ 圓周角。
+      </div>
+      <p>$\angle RTS=33^\circ$ 對著弧 $RS$，故弧 $RS=2\times 33^\circ=66^\circ$。</p>
+      <p>$\angle URV=33^\circ$ 對著弧 $UV$，故弧 $UV=2\times 33^\circ=66^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">角平分線給出等弧</div>
+      <div class="rule">
+        <span class="rule-name">等角對等弧</span>
+        $RT$ 平分 $\angle SRU$，即 $\angle SRT=\angle TRU$；這兩個圓周角分別對著弧 $ST$ 與弧 $TU$，所以兩弧相等。
+      </div>
+      <p>設弧 $ST=$ 弧 $TU=a$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">平行弦截出等弧</div>
+      <div class="rule">
+        <span class="rule-name">平行弦性質</span>
+        圓中兩條平行弦在它們之間截出的兩段弧相等。
+      </div>
+      <p>因 $RT\parallel VU$，弦 $RT$ 與弦 $VU$ 之間截出弧 $VR$ 與弧 $TU$，故弧 $VR=$ 弧 $TU=a$。</p>
+      <p>於是三段弧相等：弧 $ST=$ 弧 $TU=$ 弧 $VR=a$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用全圓 $360^\circ$ 求 $a$，再求 $\angle RUT$</div>
+      <div class="rule">
+        <span class="rule-name">圓周角與弧的關係</span>
+        五段弧合起來是一個圓：弧 $RS+$ 弧 $ST+$ 弧 $TU+$ 弧 $UV+$ 弧 $VR=360^\circ$；而 $\angle RUT$ 對著弧 $RT$。
+      </div>
+      <p>$$66^\circ+66^\circ+a+a+a=360^\circ\Rightarrow 3a=228^\circ\Rightarrow a=76^\circ$$</p>
+      <p>$\angle RUT$ 的兩邊是 $UR$、$UT$，所對的弧是弧 $RT$（不經 $U$ 的那段），即</p>
+      <p>$$\text{弧 }RT=\text{弧 }RS+\text{弧 }ST=66^\circ+76^\circ=142^\circ$$</p>
+      <p>$$\angle RUT=\frac{142^\circ}{2}=71^\circ$$</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$71^\circ$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 五邊形 $ABCDE$ 內接於一圓（頂點按 $A,B,C,D,E$ 順序排列）。已知 $AC\parallel ED$，且 $AC$ 平分 $\angle BAD$。若 $\angle ACB=\angle DAE=30^\circ$，求 $\angle ADC$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$55^\circ$</li><li><span class="ol">B</span>$60^\circ$</li><li><span class="ol">C</span>$70^\circ$</li><li><span class="ol">D</span>$75^\circ$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle ACB=30^\circ$ 對弧 $AB$，故弧 $AB=60^\circ$；$\angle DAE=30^\circ$ 對弧 $DE$，故弧 $DE=60^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AC$ 平分 $\angle BAD$，即 $\angle BAC=\angle CAD$，故弧 $BC=$ 弧 $CD=b$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AC\parallel ED$，兩平行弦之間截出弧 $CD$ 與弧 $EA$，故弧 $EA=$ 弧 $CD=b$。由 $60^\circ+60^\circ+3b=360^\circ$ 得 $b=80^\circ$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\angle ADC$ 對著弧 $AC=$ 弧 $AB+$ 弧 $BC=60^\circ+80^\circ=140^\circ$，故 $\angle ADC=70^\circ$。</div>
+          <div class="p-ans">答案：<b>C</b>（$70^\circ$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第15題 · 扇形周界與面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第15題</span>
+    <h1>由周界反求弧長，再算面積與圓心角</h1>
+    <p class="sub">求積法 · 扇形周界、扇形面積、弧度與三角形周界</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      扇形 $OMN$ 的周界為 $12\pi\text{ cm}$，其中 $O$ 為扇形 $OMN$ 的圓心。若扇形 $OMN$ 的半徑為 $3\pi\text{ cm}$，下列何者正確？
+      <br>I. 扇形 $OMN$ 的面積為 $9\pi^{2}\text{ cm}^{2}$。
+      <br>II. $\triangle OMN$ 的周界小於 $35\text{ cm}$。
+      <br>III. 扇形 $OMN$ 的圓心角大於 $100^{\circ}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由周界減去兩條半徑，得弧長</div>
+      <div class="rule">
+        <span class="rule-name">扇形周界</span>
+        扇形周界 $=2r+\ell$（兩條半徑加一段弧），故 $\ell=\text{周界}-2r$。
+      </div>
+      <p>$$\ell=12\pi-2(3\pi)=12\pi-6\pi=6\pi$$</p>
+      <p>弧長 $MN=6\pi\text{ cm}$。注意扇形周界不是 $2\pi r$，切勿用圓周公式。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用弧長算面積（檢驗 I）</div>
+      <div class="rule">
+        <span class="rule-name">扇形面積公式</span>
+        $A=\dfrac{1}{2}r\ell=\dfrac{1}{2}r^{2}\theta$（$\theta$ 以弧度為單位）。
+      </div>
+      <p>$$A=\frac{1}{2}(3\pi)(6\pi)=9\pi^{2}$$</p>
+      <p>即約 $88.8\text{ cm}^{2}$，故敘述 <b>I 正確</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由弧長求圓心角（檢驗 III）</div>
+      <div class="rule">
+        <span class="rule-name">弧度定義</span>
+        $\theta=\dfrac{\ell}{r}$（弧度）；換算用 $1\text{ rad}=\dfrac{180^{\circ}}{\pi}\approx 57.3^{\circ}$。
+      </div>
+      <p>$$\theta=\frac{6\pi}{3\pi}=2\text{ rad}$$</p>
+      <p>$$2\text{ rad}\approx 2\times 57.3^{\circ}=114.6^{\circ}>100^{\circ}$$</p>
+      <p>故敘述 <b>III 正確</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">算三角形 OMN 的周界（檢驗 II）</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形與正弦</span>
+        $OM=ON=r$，夾角 $\theta$，則底邊 $MN=2r\sin\dfrac{\theta}{2}$。
+      </div>
+      <p>$$MN=2(3\pi)\sin 1\approx 6\pi\times 0.8415\approx 15.86$$</p>
+      <p>周界 $=3\pi+3\pi+15.86\approx 18.85+15.86=34.71<35$，故敘述 <b>II 正確</b>。</p>
+      <p>三項全部正確，答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II、III 全部正確）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 扇形 $OAB$ 的周界為 $10\pi\text{ cm}$，其中 $O$ 為圓心，半徑為 $2\pi\text{ cm}$。下列何者正確？
+      <br>I. 扇形 $OAB$ 的面積為 $6\pi^{2}\text{ cm}^{2}$。
+      <br>II. $\triangle OAB$ 的周界小於 $26\text{ cm}$。
+      <br>III. 扇形 $OAB$ 的圓心角大於 $175^{\circ}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 弧長 $\ell=10\pi-2(2\pi)=6\pi$。</div>
+          <div class="p-step"><b>第 2 步.</b> 面積 $=\dfrac{1}{2}(2\pi)(6\pi)=6\pi^{2}$，I 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $\theta=\dfrac{6\pi}{2\pi}=3\text{ rad}\approx 3\times 57.3^{\circ}=171.9^{\circ}$，不大於 $175^{\circ}$，III 錯誤。</div>
+          <div class="p-step"><b>第 4 步.</b> $AB=2(2\pi)\sin 1.5\approx 4\pi\times 0.9975\approx 12.53$；周界 $\approx 12.57+12.53=25.10<26$，II 正確。只有 I 及 II 正確。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I 及 II 正確）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

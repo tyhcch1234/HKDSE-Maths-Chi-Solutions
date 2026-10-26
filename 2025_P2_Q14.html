@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第14題 · 直線的截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第14題</span>
+    <h1>看兩軸截距，判斷 p 與 q 的大小</h1>
+    <p class="sub">坐標幾何 · 直線方程 $px+qy=c$ 的截距與不等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中直線 $L$ 的方程為 $px+qy=7$，其中 $p$、$q$ 為常數。下列何者正確？
+      <br>I. $p>7$
+      <br>II. $q>7$
+      <br>III. $q>p$
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 320 270" width="330" role="img" aria-label="直線 L 與兩坐標軸的截距">
+        <line x1="25" y1="210" x2="298" y2="210" stroke="#334155" stroke-width="1.4"/>
+        <polygon points="300,210 288,205 288,215" fill="#334155"/>
+        <line x1="70" y1="245" x2="70" y2="22" stroke="#334155" stroke-width="1.4"/>
+        <polygon points="70,20 65,32 75,32" fill="#334155"/>
+        <text x="288" y="203" font-size="13" fill="#334155" font-style="italic">x</text>
+        <text x="55" y="36" font-size="13" fill="#334155" font-style="italic">y</text>
+        <text x="56" y="228" font-size="13" fill="#334155">O</text>
+        <line x1="125" y1="206" x2="125" y2="214" stroke="#334155" stroke-width="1.4"/>
+        <text x="120" y="230" font-size="12" fill="#334155">1</text>
+        <line x1="66" y1="155" x2="74" y2="155" stroke="#334155" stroke-width="1.4"/>
+        <text x="51" y="160" font-size="12" fill="#334155">1</text>
+        <line x1="45" y1="179" x2="122" y2="237" stroke="#0f172a" stroke-width="1.9"/>
+        <text x="31" y="176" font-size="13" fill="#0f172a" font-style="italic">L</text>
+        <circle cx="108.5" cy="210" r="2.8" fill="#0f172a"/>
+        <circle cx="70" cy="122" r="2.8" fill="#0f172a"/>
+      </svg>
+      <figcaption>直線 $L$ 與兩坐標軸相交（示意圖，非按比例）</figcaption>
+    </figure>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從圖讀出兩個截距的位置</div>
+      <div class="rule">
+        <span class="rule-name">截距的意義</span>
+        直線與 $x$ 軸交於 $(a,0)$ 稱 $x$ 截距為 $a$；與 $y$ 軸交於 $(0,b)$ 稱 $y$ 截距為 $b$。
+      </div>
+      <p>圖中：$L$ 與 $x$ 軸交於原點右方、$1$ 的刻度左方，故 $0<x\text{ 截距}<1$；</p>
+      <p>$L$ 與 $y$ 軸交於 $1$ 的刻度上方，故 $y\text{ 截距}>1$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 p、q 表示兩個截距</div>
+      <div class="rule">
+        <span class="rule-name">截距公式</span>
+        在 $px+qy=7$ 中，令 $y=0$ 得 $x$ 截距 $=\dfrac{7}{p}$；令 $x=0$ 得 $y$ 截距 $=\dfrac{7}{q}$。
+      </div>
+      <p>$$0<\frac{7}{p}<1,\qquad \frac{7}{q}>1$$</p>
+      <p>兩截距都是正數，說明 $p>0$ 且 $q>0$，所以可以放心在不等式兩邊乘 $p$、$q$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解兩個不等式，逐一檢驗 I、II</div>
+      <div class="rule">
+        <span class="rule-name">不等式性質</span>
+        $p>0$ 時 $\dfrac{7}{p}<1\iff 7<p$；同理 $q>0$ 時 $\dfrac{7}{q}>1\iff 7>q$。
+      </div>
+      <p>由 $\dfrac{7}{p}<1$ 得 $p>7$ → 敘述 <b>I 正確</b>；</p>
+      <p>由 $\dfrac{7}{q}>1$ 得 $q<7$ → 敘述 <b>II 錯誤</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較兩截距，檢驗 III</div>
+      <div class="rule">
+        <span class="rule-name">同號取倒數</span>
+        若 $a,b>0$ 且 $a>b$，則 $\dfrac{1}{a}<\dfrac{1}{b}$：取倒數要變號。
+      </div>
+      <p>由圖 $y$ 截距大於 $x$ 截距，即 $\dfrac{7}{q}>\dfrac{7}{p}$。因 $p,q>0$，取倒數得 $q<p$，即 $q$ 不大於 $p$ → 敘述 <b>III 錯誤</b>。</p>
+      <p>（也可看斜率：直線由左上向右下，斜率 $-\dfrac{p}{q}<0$ 且比 $-1$ 更陡，故 $p>q$。）</p>
+      <p>只有 I 正確，答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 正確，即 $p>7$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 的方程為 $px+qy=8$，其中 $p$、$q$ 為常數。已知 $L$ 的 $x$ 截距為 $2$、$y$ 截距為 $4$。下列何者正確？
+      <br>I. $p>4$
+      <br>II. $q<4$
+      <br>III. $q>p$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 II</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x$ 截距 $=\dfrac{8}{p}=2$，得 $p=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距 $=\dfrac{8}{q}=4$，得 $q=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $p=4$ 不大於 $4$，I 錯；$q=2<4$，II 對；$q=2<p=4$，III 錯。</div>
+          <div class="p-step"><b>第 4 步.</b> 只有 II 正確。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 II 正確，即 $q<4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

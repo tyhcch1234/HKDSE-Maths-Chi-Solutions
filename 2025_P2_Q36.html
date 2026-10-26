@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第36題 · 線性規劃的最大值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第36題</span>
+    <h1>最大值必在可行區域的角點取得</h1>
+    <p class="sub">不等式與線性規劃 · 可行區域、角點與目標函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下不等式組：<br>
+      $$x\le 11,\qquad 4x+5y-19\ge 0,\qquad 7x-6y+11\le 0$$
+      設 $D$ 為代表上述不等式組的解的區域。若 $(x,y)$ 為 $D$ 內的一點，則 $8x-6y+11$ 的最大值為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$11$</li><li><span class="ol">C</span>$15$</li><li><span class="ol">D</span>$129$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三條不等式整理成 $y$ 的範圍</div>
+      <div class="rule">
+        <span class="rule-name">不等式變形</span>
+        兩邊乘以負數（或移項後除以負數）時，不等號要反向。
+      </div>
+      <p>$$x\le 11$$</p>
+      <p>$$4x+5y-19\ge 0\iff 5y\ge 19-4x\iff y\ge\frac{19-4x}{5}$$</p>
+      <p>$$7x-6y+11\le 0\iff 6y\ge 7x+11\iff y\ge\frac{7x+11}{6}$$</p>
+      <p>故 $D$ 是「$x\le 11$，且在兩條斜線之上」的區域，下邊界由這兩條斜線中<strong>較高</strong>的一段組成。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求兩條斜線的交點 $P$</div>
+      <div class="rule">
+        <span class="rule-name">解聯立一次方程</span>
+        把邊界寫成 $4x+5y=19$ 與 $7x-6y=-11$，用消元法求交點。
+      </div>
+      <p>第一式乘 $6$、第二式乘 $5$：$24x+30y=114$，$35x-30y=-55$。相加得</p>
+      <p>$$59x=59\iff x=1$$</p>
+      <p>代回 $4x+5y=19$：$4+5y=19\Rightarrow y=3$。故 $P=(1,3)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求垂直邊界上的角點 $Q$</div>
+      <div class="rule">
+        <span class="rule-name">代入邊界值</span>
+        角點是邊界的交點：把 $x=11$ 代入仍有 $y\ge\cdots$ 的那條邊界。
+      </div>
+      <p>把 $x=11$ 代入 $7x-6y+11=0$：$77-6y+11=0\Rightarrow y=\dfrac{88}{6}=\dfrac{44}{3}$，故 $Q=\left(11,\dfrac{44}{3}\right)$。</p>
+      <p>另一個交點（$x=11$ 與 $4x+5y=19$）得 $y=-5$，但代入 $7x-6y+11=77+30+11=118&gt;0$，不符合 $7x-6y+11\le 0$，故不是可行角點。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在角點計算目標函數</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃的角點定理</span>
+        線性目標函數在可行區域上的最大值、最小值必在角點取得（區域無界時比較各角點及沿邊界的變化趨勢）。
+      </div>
+      <p>設 $f(x,y)=8x-6y+11$。</p>
+      <p>在 $P(1,3)$：$f=8-18+11=1$。</p>
+      <p>在 $Q\left(11,\dfrac{44}{3}\right)$：$f=88-6\times\dfrac{44}{3}+11=88-88+11=11$。</p>
+      <p>再看邊界：在 $1\le x\le 11$ 的下邊界 $7x-6y+11=0$ 上，$6y=7x+11$，故</p>
+      <p>$$f=8x-(7x+11)+11=x$$</p>
+      <p>它隨 $x$ 增大而增大，在 $x=11$ 取最大值 $11$；在 $x\le 1$ 的下邊界 $4x+5y=19$ 上，$f=\dfrac{64x-59}{5}$ 亦於 $x=1$ 才取到 $1$。故整體最大值為 $11$。</p>
+      <p>答案 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$11$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮不等式組 $x\le 7$、$x+y-3\ge 0$、$2x-3y+4\le 0$。設 $D$ 為代表其解的區域。若 $(x,y)$ 為 $D$ 內的一點，則 $6x-5y+8$ 的最大值為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$11$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$30$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 整理：$y\ge 3-x$、$y\ge\dfrac{2x+4}{3}$，且 $x\le 7$；下邊界取兩者中較高的一段。</div>
+          <div class="p-step"><b>第 2 步.</b> 解 $x+y=3$ 與 $2x-3y+4=0$：由第一式 $y=3-x$，代入 $2x-9+3x+4=0\Rightarrow 5x=5\Rightarrow x=1$，$y=2$，得角點 $(1,2)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 把 $x=7$ 代入 $2x-3y+4=0$：$14-3y+4=0\Rightarrow y=6$，得角點 $(7,6)$（另一交點 $x=7$、$y=3-7=-4$ 不滿足 $y\ge\frac{2x+4}{3}=6$，故不可行）。</div>
+          <div class="p-step"><b>第 4 步.</b> 在 $(1,2)$：$6-10+8=4$；在 $(7,6)$：$42-30+8=20$。又位於 $1\le x\le 7$ 的下邊界時 $6y=2x+4$，$f=6x-\dfrac{5(2x+4)}{3}+8=\dfrac{8x+4}{3}$，隨 $x$ 增大，故最大值為 $20$。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

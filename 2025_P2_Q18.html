@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第18題 · 等比中項與畢氏定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第18題</span>
+    <h1>先證直角，再用等比關係</h1>
+    <p class="sub">三角形 · 畢氏定理的逆定理與等比中項</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為三角形 $WXY$。設 $Z$ 為 $WY$ 上的一點，使得 $WY:XY=XY:YZ$。若 $WX=65\text{ cm}$、$WZ=25\text{ cm}$ 及 $XZ=60\text{ cm}$，則 $XY=$
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 230" width="300" height="230" role="img" aria-label="三角形 WXY，Z 在 WY 上，XZ 垂直 WY">
+        <polygon points="40,190 200,190 200,70" fill="none" stroke="#333" stroke-width="2"/>
+        <line x1="40" y1="190" x2="262" y2="190" stroke="#333" stroke-width="2"/>
+        <line x1="200" y1="70" x2="200" y2="190" stroke="#c0392b" stroke-width="1.6"/>
+        <path d="M200 178 L188 178 L188 190" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+        <circle cx="40" cy="190" r="2.5" fill="#333"/><circle cx="200" cy="190" r="2.5" fill="#333"/>
+        <circle cx="200" cy="70" r="2.5" fill="#333"/><circle cx="262" cy="190" r="2.5" fill="#333"/>
+        <text x="28" y="206" font-size="14">W</text><text x="194" y="206" font-size="14">Z</text>
+        <text x="206" y="66" font-size="14">X</text><text x="264" y="206" font-size="14">Y</text>
+        <text x="110" y="182" font-size="13" fill="#555">25</text>
+        <text x="208" y="135" font-size="13" fill="#c0392b">60</text>
+        <text x="100" y="115" font-size="13" fill="#555">65</text>
+      </svg>
+    </figure>
+    <ol class="opts"><li><span class="ol">A</span>$131\text{ cm}$</li><li><span class="ol">B</span>$144\text{ cm}$</li><li><span class="ol">C</span>$156\text{ cm}$</li><li><span class="ol">D</span>$169\text{ cm}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用三邊長判別 △WZX 是直角三角形</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        若 $a^2+b^2=c^2$（$c$ 為最長邊），則該三角形為直角三角形，$c$ 所對的角為 $90^\circ$。
+      </div>
+      <p>$$WZ^2+XZ^2=25^2+60^2=625+3600=4225=65^2=WX^2$$</p>
+      <p>所以 $\angle WZX=90^\circ$，即 $XZ\perp WY$。</p>
+      <p>於是 $\triangle XZY$ 亦在 $Z$ 處成直角。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把等比關係寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">等比中項</span>
+        $WY:XY=XY:YZ\iff XY^2=WY\cdot YZ$。
+      </div>
+      <p>設 $YZ=z$，$XY=y$。因 $Z$ 在 $W$ 與 $Y$ 之間，$WY=WZ+ZY=25+z$。</p>
+      <p>由 $WY:XY=XY:YZ$ 得 $y^2=(25+z)\,z$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在直角三角形 XZY 中再用畢氏定理</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        在 $\angle Z=90^\circ$ 的 $\triangle XZY$ 中，$XY^2=XZ^2+ZY^2$。
+      </div>
+      <p>$$y^2=60^2+z^2=3600+z^2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">聯立求解，$z^2$ 會消去</div>
+      <div class="rule">
+        <span class="rule-name">聯立方程</span>
+        令兩個 $y^2$ 的表達式相等，解出 $z$，再代回求 $y$。
+      </div>
+      <p>$$3600+z^2=25z+z^2\ \Longrightarrow\ 25z=3600\ \Longrightarrow\ z=144$$</p>
+      <p>$$y^2=3600+144^2=3600+20736=24336\ \Longrightarrow\ y=156$$</p>
+      <p>檢查：$WY=169$，$WY:XY=169:156=13:12$，$XY:YZ=156:144=13:12$ ✓</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$156\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在三角形 $PQR$ 中，$S$ 為 $PR$ 上的一點，使 $PR:RQ=RQ:RS$。若 $PQ=15\text{ cm}$、$PS=9\text{ cm}$ 及 $QS=12\text{ cm}$，求 $RQ$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$16\text{ cm}$</li><li><span class="ol">B</span>$18\text{ cm}$</li><li><span class="ol">C</span>$20\text{ cm}$</li><li><span class="ol">D</span>$25\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $PS^2+QS^2=9^2+12^2=81+144=225=15^2=PQ^2$，故 $\angle PSQ=90^\circ$，$QS\perp PR$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $RS=s$、$RQ=r$，則 $PR=9+s$，由等比關係得 $r^2=s(9+s)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在直角 $\triangle QSR$ 中 $r^2=12^2+s^2=144+s^2$。</div>
+          <div class="p-step"><b>第 4 步.</b> 令兩式相等：$144+s^2=9s+s^2\Rightarrow 9s=144\Rightarrow s=16$。</div>
+          <div class="p-step"><b>第 5 步.</b> $r^2=144+256=400\Rightarrow r=20$。檢查：$PR=25$，$25:20=20:16=5:4$ ✓</div>
+          <div class="p-ans">答案：<b>C</b>（$20\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

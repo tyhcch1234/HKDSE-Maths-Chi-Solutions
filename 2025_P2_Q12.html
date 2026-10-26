@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第12題 · 聯合變分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第12題</span>
+    <h1>一個正變、一個反變：先寫 k，再用比例法</h1>
+    <p class="sub">變分 · 聯合變分、變分常數與比例法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $z$ 隨 $x$ 的立方正變，並隨 $y$ 的平方反變。當 $x=3$、$y=6$ 時，$z=3$。當 $x=5$、$y=2$ 時，$z=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5$</li><li><span class="ol">B</span>$25$</li><li><span class="ol">C</span>$125$</li><li><span class="ol">D</span>$243$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出聯合變分方程</div>
+      <div class="rule">
+        <span class="rule-name">聯合變分</span>
+        $z$ 隨 $x$ 的立方正變且隨 $y$ 的平方反變，即 $z=\dfrac{kx^{3}}{y^{2}}$，$k\neq 0$ 為變分常數。
+      </div>
+      <p>「正變」放在分子，「反變」放在分母，次方要照抄：$x$ 三次方、$y$ 二次方。</p>
+      <p>$$z=\frac{kx^{3}}{y^{2}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入已知一組值求 k</div>
+      <div class="rule">
+        <span class="rule-name">代入求常數</span>
+        把已知的 $x$、$y$、$z$ 代入方程，解出變分常數 $k$。
+      </div>
+      <p>代入 $x=3$、$y=6$、$z=3$：
+      $$3=\frac{k(3)^{3}}{6^{2}}=\frac{27k}{36}=\frac{3k}{4}$$</p>
+      <p>故 $k=4$，即 $z=\dfrac{4x^{3}}{y^{2}}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用比例法看 z 放大多少倍</div>
+      <div class="rule">
+        <span class="rule-name">比例法</span>
+        不必重算 $k$：$\dfrac{z_{2}}{z_{1}}=\left(\dfrac{x_{2}}{x_{1}}\right)^{3}\left(\dfrac{y_{1}}{y_{2}}\right)^{2}$，因為 $y$ 在分母，比值要倒轉。
+      </div>
+      <p>$x$ 由 $3$ 變 $5$，放大 $\dfrac{5}{3}$ 倍，立方後為 $\dfrac{125}{27}$；</p>
+      <p>$y$ 由 $6$ 變 $2$，縮小至 $\dfrac{1}{3}$，平方後在分母，於是 $z$ 放大 $3^{2}=9$ 倍。</p>
+      <p>$$\frac{z_{2}}{z_{1}}=\frac{125}{27}\times 9=\frac{125}{3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">算出新的 z 並核對</div>
+      <div class="rule">
+        <span class="rule-name">求值與驗算</span>
+        用同一條方程再直接代入一次，兩種算法結果須相同。
+      </div>
+      <p>$$z_{2}=3\times\frac{125}{3}=125$$</p>
+      <p>直接代入：$z=\dfrac{4(5)^{3}}{2^{2}}=\dfrac{4\times 125}{4}=125$ ✓</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$125$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $x$ 的立方正變，並隨 $y$ 的平方反變。當 $x=2$、$y=3$ 時，$z=8$。當 $x=4$、$y=6$ 時，$z=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$16$</li><li><span class="ol">C</span>$24$</li><li><span class="ol">D</span>$36$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $z=\dfrac{kx^{3}}{y^{2}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $x=2$、$y=3$、$z=8$：$8=\dfrac{8k}{9}$，得 $k=9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 比例法：$\dfrac{z_{2}}{z_{1}}=\left(\dfrac{4}{2}\right)^{3}\left(\dfrac{3}{6}\right)^{2}=8\times\dfrac{1}{4}=2$。</div>
+          <div class="p-step"><b>第 4 步.</b> $z_{2}=8\times 2=16$。驗算：$\dfrac{9(4)^{3}}{6^{2}}=\dfrac{576}{36}=16$ ✓</div>
+          <div class="p-ans">答案：<b>B</b>（$16$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

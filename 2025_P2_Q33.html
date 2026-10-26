@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第33題 · 對數圖像的截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第33題</span>
+    <h1>用兩個截距寫出直線，再換底還原</h1>
+    <p class="sub">指數與對數 · 對數圖像、換底公式與指數律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $\log_5 y$ 是 $\log_{25}x$ 的線性函數。該線性函數的圖像在縱軸及橫軸上的截距分別為 $12$ 及 $2$。若 $y=mx^n$，則 $n=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-\dfrac{1}{2}$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$-3$</li><li><span class="ol">D</span>$-1$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 440 320" width="440" height="320" role="img" aria-label="縱截距 12、橫截距 2 的直線">
+        <line x1="58" y1="270" x2="312" y2="270" stroke="#8a8a8a" stroke-width="1.5"/>
+        <line x1="80" y1="292" x2="80" y2="22" stroke="#8a8a8a" stroke-width="1.5"/>
+        <polygon points="320,270 308,265 308,275" fill="#8a8a8a"/>
+        <polygon points="80,14 75,26 85,26" fill="#8a8a8a"/>
+        <line x1="80" y1="30" x2="200" y2="270" stroke="#2f6fb3" stroke-width="2.5"/>
+        <line x1="80" y1="30" x2="200" y2="30" stroke="#c9c9c9" stroke-width="1" stroke-dasharray="5 4"/>
+        <line x1="200" y1="30" x2="200" y2="270" stroke="#c9c9c9" stroke-width="1" stroke-dasharray="5 4"/>
+        <circle cx="80" cy="30" r="4" fill="#2f6fb3"/>
+        <circle cx="200" cy="270" r="4" fill="#2f6fb3"/>
+        <text x="46" y="26" font-size="13" fill="#333">12</text>
+        <text x="194" y="290" font-size="13" fill="#333">2</text>
+        <text x="58" y="288" font-size="13" fill="#333">O</text>
+        <text x="318" y="258" font-size="13" fill="#333">X</text>
+        <text x="64" y="14" font-size="13" fill="#333">Y</text>
+        <text x="206" y="20" font-size="12" fill="#888">(2, 12)</text>
+      </svg>
+      <figcaption>橫軸為 $X=\log_{25}x$，縱軸為 $Y=\log_5 y$；直線的縱截距為 $12$、橫截距為 $2$。</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把兩個變量改寫成 $X$、$Y$</div>
+      <div class="rule">
+        <span class="rule-name">截距式</span>
+        若直線在橫軸、縱軸的截距分別為 $a$、$b$，則方程為 $\dfrac{X}{a}+\dfrac{Y}{b}=1$。
+      </div>
+      <p>設 $X=\log_{25}x$、$Y=\log_5 y$。題目說 $Y$ 是 $X$ 的線性函數，故圖像是一條直線；橫截距 $a=2$、縱截距 $b=12$。</p>
+      <p>$$\frac{X}{2}+\frac{Y}{12}=1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化為斜截式</div>
+      <div class="rule">
+        <span class="rule-name">直線方程的斜截式</span>
+        $Y=kX+c$，其中 $c$ 是縱截距、$k$ 是斜率。
+      </div>
+      <p>把截距式兩邊乘 $12$：$6X+Y=12$，即</p>
+      <p>$$Y=12-6X$$</p>
+      <p>驗算：$X=0$ 時 $Y=12$ ✓；$Y=0$ 時 $X=2$ ✓，與題目的兩個截距相符。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用換底公式統一底數</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        $\log_{b^c}x=\dfrac{\log_b x}{c}$，故 $\log_{25}x=\dfrac{\log_5 x}{2}$。
+      </div>
+      <p>把 $X=\log_{25}x=\dfrac{\log_5 x}{2}$ 代回 $Y=12-6X$：</p>
+      <p>$$\log_5 y=12-6\cdot\frac{\log_5 x}{2}=12-3\log_5 x$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取指數還原 $y$，讀出 $n$</div>
+      <div class="rule">
+        <span class="rule-name">對數律與指數互逆</span>
+        $\log_5 y=\log_5 A \iff y=A$；又 $k\log_5 x=\log_5 x^k$，$12=\log_5 5^{12}$。
+      </div>
+      <p>$$\log_5 y=\log_5 5^{12}-\log_5 x^{3}=\log_5\frac{5^{12}}{x^{3}}$$</p>
+      <p>$$y=5^{12}x^{-3}$$</p>
+      <p>與 $y=mx^n$ 比較，得 $m=5^{12}$、$n=-3$。</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$n=-3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $\log_3 y$ 是 $\log_9 x$ 的線性函數。該線性函數的圖像在縱軸及橫軸上的截距分別為 $6$ 及 $3$。若 $y=mx^n$，則 $n=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-6$</li><li><span class="ol">B</span>$-3$</li><li><span class="ol">C</span>$-1$</li><li><span class="ol">D</span>$1$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $X=\log_9 x$、$Y=\log_3 y$，由截距 $3$ 與 $6$ 得 $\dfrac{X}{3}+\dfrac{Y}{6}=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩邊乘 $6$：$2X+Y=6$，即 $Y=6-2X$（驗算：$X=3$ 時 $Y=0$ ✓）。</div>
+          <div class="p-step"><b>第 3 步.</b> 換底：$\log_9 x=\dfrac{\log_3 x}{2}$，故 $\log_3 y=6-2\cdot\dfrac{\log_3 x}{2}=6-\log_3 x$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\log_3 y=\log_3 3^{6}-\log_3 x=\log_3\dfrac{3^6}{x}$，故 $y=3^6x^{-1}$，$n=-1$。</div>
+          <div class="p-ans">答案：<b>C</b>（$n=-1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q32.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q34.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

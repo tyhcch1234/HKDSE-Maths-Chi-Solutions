@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第31題 · 十六進制與 2 的冪</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第31題</span>
+    <h1>十六進制拆成五個 2 的冪之和</h1>
+    <p class="sub">指數定律 · 進位制與 2 的冪</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $\texttt{3E000000000000}_{16}=2^a+2^b+2^c+2^d+2^e$，其中 $a<b<c<d<e$ 均為整數。求 $e$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$49$</li><li><span class="ol">B</span>$51$</li><li><span class="ol">C</span>$52$</li><li><span class="ol">D</span>$53$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按位值寫出這個數</div>
+      <div class="rule">
+        <span class="rule-name">十六進制的位值</span>
+        由右至左，每個位對應 $16$ 的冪；$E$ 代表 $14$，而且 $16^{13}=16\times16^{12}$。
+      </div>
+      <p>$\texttt{3E000000000000}$ 共 $14$ 個位，最高兩位是 $3$ 與 $E$，其後 $12$ 個位都是 $0$。</p>
+      <p>$$\texttt{3E000000000000}_{16}=3\times16^{13}+14\times16^{12}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">提出 $16^{12}$ 這個公因數</div>
+      <div class="rule">
+        <span class="rule-name">指數定律（同底相乘）</span>
+        $16^{13}=16^{12}\times16$，故兩項可提出 $16^{12}$。
+      </div>
+      <p>$$3\times16^{13}+14\times16^{12}=(3\times16+14)\times16^{12}$$</p>
+      <p>$$=(48+14)\times16^{12}=62\times16^{12}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $16$ 的冪換成 $2$ 的冪</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        $\left(2^m\right)^n=2^{mn}$，而 $16=2^4$。
+      </div>
+      <p>$$16^{12}=\left(2^4\right)^{12}=2^{48}$$</p>
+      <p>故原數 $=62\times2^{48}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把 $62$ 拆成五個 2 的冪</div>
+      <div class="rule">
+        <span class="rule-name">二進制展開</span>
+        $62=111110_2$，二進制中每個「$1$」對應一個 $2$ 的冪。
+      </div>
+      <p>$$62=32+16+8+4+2=2^5+2^4+2^3+2^2+2^1$$</p>
+      <p>乘以 $2^{48}$ 時，指數各自加 $48$：</p>
+      <p>$$62\times2^{48}=2^{53}+2^{52}+2^{51}+2^{50}+2^{49}$$</p>
+      <p>五項的指數正好是 $49,50,51,52,53$，最大者 $e=53$。</p>
+      <p>答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$e=53$，即最大的一項為 $2^{53}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\texttt{6A000000000000}_{16}=2^p+2^q+2^r+2^s$，其中 $p<q<r<s$ 均為整數。求 $s$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$52$</li><li><span class="ol">B</span>$53$</li><li><span class="ol">C</span>$54$</li><li><span class="ol">D</span>$55$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\texttt{6A000000000000}_{16}=6\times16^{13}+10\times16^{12}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 提出 $16^{12}$：$(6\times16+10)\times16^{12}=106\times16^{12}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $16^{12}=2^{48}$，故原數 $=106\times2^{48}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $106=1101010_2=64+32+8+2=2^6+2^5+2^3+2^1$，故原數 $=2^{54}+2^{53}+2^{51}+2^{49}$，最大指數 $s=48+6=54$。</div>
+          <div class="p-ans">答案：<b>C</b>（$54$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第19題 · 正方形內的菱形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第19題</span>
+    <h1>正方形斜邊上長出一個菱形</h1>
+    <p class="sub">四邊形 · 菱形性質、相似三角形與坐標法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 是正方形。設 $E$ 為一點，使得 $CDEF$ 是菱形，其中 $F$ 為 $AC$ 延長線上的一點。延長 $DF$ 至點 $G$，使得 $AF\parallel BG$。下列何者正確？
+      <br>I. $DF=FG$
+      <br>II. $\triangle BFG\sim\triangle DEF$
+      <br>III. $\angle ABG+\angle BFD=180^\circ$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設坐標，定出 F 與 E</div>
+      <div class="rule">
+        <span class="rule-name">坐標法（不失一般性取邊長 1）</span>
+        設 $A(0,0)$、$B(1,0)$、$C(1,1)$、$D(0,1)$；菱形四邊相等，故 $CF=CD=1$，且 $DE\parallel CF$、$DE=CF$。
+      </div>
+      <p>$AC$ 的方向是 $45^\circ$，$F$ 在 $AC$ 延長線上且 $CF=1$，故</p>
+      <p>$$F=\left(1+\frac{\sqrt2}{2},\ 1+\frac{\sqrt2}{2}\right)$$</p>
+      <p>由 $DE=CF$ 且 $DE\parallel CF$ 得 $E=D+(F-C)$：</p>
+      <p>$$E=\left(\frac{\sqrt2}{2},\ 1+\frac{\sqrt2}{2}\right)$$</p>
+      <p>（可直接驗證 $EF=1$ 且與 $CD$ 平行，故 $CDEF$ 確為菱形。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 G 的位置，檢驗 I</div>
+      <div class="rule">
+        <span class="rule-name">平行條件與參數式</span>
+        $AF\parallel BG\Rightarrow BG$ 的斜率為 $1$，即 $G=(1+m,m)$；同時 $G$ 在直線 $DF$ 上。
+      </div>
+      <p>直線 $DF$：$D+s(F-D)=\left(s\left(1+\tfrac{\sqrt2}{2}\right),\ 1+s\tfrac{\sqrt2}{2}\right)$。</p>
+      <p>與 $G=(1+m,m)$ 比較：$1+m=s\left(1+\tfrac{\sqrt2}{2}\right)$，$m=1+s\tfrac{\sqrt2}{2}$。</p>
+      <p>兩式相減得 $2=s$，故 $G=D+2(F-D)$，即 $F$ 是 $DG$ 的中點。</p>
+      <p>$$DF=FG\quad\text{（I 正確）}$$</p>
+      <p>$G=\left(2+\sqrt2,\ 1+\sqrt2\right)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較三組邊長，檢驗 II</div>
+      <div class="rule">
+        <span class="rule-name">SSS 相似判定</span>
+        三組對應邊成同一比例，則兩三角形相似。
+      </div>
+      <p>菱形邊長：$DE=EF=1$。又</p>
+      <p>$$DF^2=\left(1+\tfrac{\sqrt2}{2}\right)^2+\left(\tfrac{\sqrt2}{2}\right)^2=2+\sqrt2,\qquad BF^2=\left(\tfrac{\sqrt2}{2}\right)^2+\left(1+\tfrac{\sqrt2}{2}\right)^2=2+\sqrt2$$</p>
+      <p>故 $BF=DF=\sqrt{2+\sqrt2}$；由第 2 步 $FG=DF=\sqrt{2+\sqrt2}$；而</p>
+      <p>$$BG=\sqrt{(1+\sqrt2)^2+(1+\sqrt2)^2}=\sqrt2(1+\sqrt2)=2+\sqrt2$$</p>
+      <p>$$\frac{BF}{DE}=\frac{FG}{EF}=\frac{BG}{DF}=\sqrt{2+\sqrt2}$$</p>
+      <p>所以 $\triangle BFG\sim\triangle DEF$（II 正確）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">計算兩個角，檢驗 III</div>
+      <div class="rule">
+        <span class="rule-name">餘弦定理求角</span>
+        $\cos\angle BFD=\dfrac{DF^2+BF^2-DB^2}{2\cdot DF\cdot BF}$。
+      </div>
+      <p>$\angle ABG$：$BA$ 指向左（$180^\circ$），$BG$ 沿 $45^\circ$ 方向，故 $\angle ABG=180^\circ-45^\circ=135^\circ$。</p>
+      <p>$\angle BFD$：$DB^2=1^2+1^2=2$，$DF^2=BF^2=2+\sqrt2$，</p>
+      <p>$$\cos\angle BFD=\frac{2(2+\sqrt2)-2}{2(2+\sqrt2)}=\frac{1+\sqrt2}{2+\sqrt2}=\frac{\sqrt2}{2}$$</p>
+      <p>故 $\angle BFD=45^\circ$，於是 $\angle ABG+\angle BFD=135^\circ+45^\circ=180^\circ$（III 正確）。</p>
+      <p>三項皆正確，答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 是邊長 $4\text{ cm}$ 的正方形，$CDEF$ 是菱形，其中 $F$ 在 $AC$ 延長線上。求 $\angle CFD$ 及 $DF$ 的準確值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$22.5^\circ$，$4\sqrt{2+\sqrt2}\text{ cm}$</li><li><span class="ol">B</span>$22.5^\circ$，$4\sqrt2\text{ cm}$</li><li><span class="ol">C</span>$45^\circ$，$4\sqrt{2+\sqrt2}\text{ cm}$</li><li><span class="ol">D</span>$22.5^\circ$，$4(\sqrt2+1)\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 菱形四邊相等，故 $CD=CF=4$；$CF$ 沿對角線方向，與 $CD$ 的夾角為 $\angle DCF=135^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle CDF$ 中 $CD=CF$，故 $\angle CFD=\angle CDF=\dfrac{180^\circ-135^\circ}{2}=22.5^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> 用餘弦定理：$DF^2=4^2+4^2-2(4)(4)\cos135^\circ=32+16\sqrt2=16(2+\sqrt2)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 故 $DF=4\sqrt{2+\sqrt2}\approx 7.39\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$22.5^\circ$，$4\sqrt{2+\sqrt2}\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

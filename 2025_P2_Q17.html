@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第17題 · 平行四邊形的面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第17題</span>
+    <h1>沿邊上的比例切開平行四邊形</h1>
+    <p class="sub">面積與體積 · 相似三角形與面積比</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在圖中，$ABCD$ 是平行四邊形。設 $E$、$F$、$G$ 分別為 $AB$、$AD$、$CD$ 上的點，使得 $BE=3AE$、$2DF=3AF$ 及 $DG=2CG$。已知 $BC$ 延長線與 $EG$ 延長線相交於 $H$。若 $\triangle CGH$ 的面積為 $16\text{ cm}^2$，則四邊形 $DFEG$ 的面積是
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 250" width="300" height="250" role="img" aria-label="平行四邊形 ABCD，E 在 AB 上，F 在 AD 上，G 在 CD 上，H 在 BC 延長線上">
+        <polygon points="30,200 230,200 270,60 70,60" fill="none" stroke="#333" stroke-width="2"/>
+        <line x1="270" y1="60" x2="270" y2="10" stroke="#999" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="80" y1="200" x2="220" y2="200" stroke="none"/>
+        <line x1="75.5" y1="200" x2="240" y2="10" stroke="#c0392b" stroke-width="1.6"/>
+        <line x1="70" y1="60" x2="165" y2="130" stroke="#2a7ab9" stroke-width="1.6"/>
+        <circle cx="30" cy="200" r="2.5" fill="#333"/><circle cx="230" cy="200" r="2.5" fill="#333"/>
+        <circle cx="270" cy="60" r="2.5" fill="#333"/><circle cx="70" cy="60" r="2.5" fill="#333"/>
+        <text x="18" y="216" font-size="14">A</text><text x="234" y="216" font-size="14">B</text>
+        <text x="276" y="56" font-size="14">C</text><text x="54" y="56" font-size="14">D</text>
+        <text x="62" y="216" font-size="14">E</text><text x="54" y="86" font-size="14">F</text>
+        <text x="90" y="56" font-size="14">G</text><text x="276" y="16" font-size="14">H</text>
+      </svg>
+    </figure>
+    <ol class="opts"><li><span class="ol">A</span>$46\text{ cm}^2$</li><li><span class="ol">B</span>$49\text{ cm}^2$</li><li><span class="ol">C</span>$105\text{ cm}^2$</li><li><span class="ol">D</span>$115\text{ cm}^2$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三條邊上的比例化成分數</div>
+      <div class="rule">
+        <span class="rule-name">按比例分點</span>
+        設 $AB=4p$、$AD=5q$，則 $AE=p$、$AF=2q$、$FD=3q$、$CG=\dfrac{CD}{3}=\dfrac{4p}{3}$、$DG=\dfrac{8p}{3}$。
+      </div>
+      <p>$BE=3AE$ 把 $AB$ 分成 $1:3$，故 $AB=4p$、$AE=p$、$EB=3p$。</p>
+      <p>$2DF=3AF$ 即 $AF:FD=2:3$，故 $AD=5q$、$AF=2q$、$FD=3q$。</p>
+      <p>$DG=2CG$ 即 $DG:CG=2:1$，而 $CD=AB=4p$，故 $CG=\dfrac{4p}{3}$、$DG=\dfrac{8p}{3}$。</p>
+      <p>設 $\angle BAD=\theta$，記基本量 $U=pq\sin\theta$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用相似三角形求出 CH</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（平行線截三角形）</span>
+        $GC\parallel EB$，且 $G$ 在 $HE$ 上、$C$ 在 $HB$ 上，故 $\triangle HGC\sim\triangle HEB$。
+      </div>
+      <p>因為 $ABCD$ 是平行四邊形，$GC$（在 $CD$ 上）與 $EB$（在 $AB$ 上）互相平行，所以</p>
+      <p>$$\frac{HG}{HE}=\frac{HC}{HB}=\frac{GC}{EB}=\frac{\tfrac{4p}{3}}{3p}=\frac{4}{9}$$</p>
+      <p>設 $CH=t$，則 $HB=5q+t$，於是 $\dfrac{t}{5q+t}=\dfrac{4}{9}$，得 $9t=20q+4t$，即 $t=4q$。</p>
+      <p>所以 $CH=4q=\dfrac{4}{5}AD$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 △CGH 的面積反求基本量</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積公式 $\tfrac12 ab\sin C$</span>
+        $\triangle CGH=\dfrac12\cdot CG\cdot CH\cdot\sin\theta$，其中 $\sin\angle GCH=\sin(180^\circ-\theta)=\sin\theta$。
+      </div>
+      <p>$CG=\dfrac{4p}{3}$、$CH=4q$，且 $CG$ 沿 $CD$、$CH$ 沿 $CB$ 延長（與 $AD$ 平行），兩者夾角為 $180^\circ-\theta$。</p>
+      <p>$$\triangle CGH=\frac12\cdot\frac{4p}{3}\cdot 4q\cdot\sin\theta=\frac{8}{3}\,pq\sin\theta=16$$</p>
+      <p>故 $pq\sin\theta=6$，即 $U=6$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把四邊形 DFEG 分成兩個三角形</div>
+      <div class="rule">
+        <span class="rule-name">分割法求面積</span>
+        連 $DE$，$DFEG=\triangle DFE+\triangle DGE$；$E$ 到 $AD$ 的距離為 $p\sin\theta$，到 $CD$ 的距離為 $5q\sin\theta$。
+      </div>
+      <p>$$\triangle DFE=\frac12\cdot FD\cdot(p\sin\theta)=\frac12\cdot 3q\cdot p\sin\theta=\frac32\,U$$</p>
+      <p>$$\triangle DGE=\frac12\cdot DG\cdot(5q\sin\theta)=\frac12\cdot\frac{8p}{3}\cdot 5q\sin\theta=\frac{20}{3}\,U$$</p>
+      <p>（$E$ 在 $AB$ 上，而 $AB\parallel CD$，故 $E$ 到 $CD$ 的距離就是兩平行線 $AB$、$CD$ 的距離 $AD\sin\theta=5q\sin\theta$。）</p>
+      <p>$$DFEG=\left(\frac32+\frac{20}{3}\right)U=\frac{49}{6}\times 6=49$$</p>
+      <p>答案 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$49\text{ cm}^2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在平行四邊形 $ABCD$ 中，$E$、$F$、$G$ 分別在 $AB$、$AD$、$CD$ 上，使 $BE=2AE$、$AF:FD=1:4$、$DG=CG$。$BC$ 延長線與 $EG$ 延長線交於 $H$。若 $\triangle CGH$ 的面積為 $45\text{ cm}^2$，求四邊形 $DFEG$ 的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$21\text{ cm}^2$</li><li><span class="ol">B</span>$23\text{ cm}^2$</li><li><span class="ol">C</span>$25\text{ cm}^2$</li><li><span class="ol">D</span>$27\text{ cm}^2$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $AB=3p$、$AD=5q$，$\angle BAD=\theta$。則 $AE=p$、$EB=2p$、$AF=q$、$FD=4q$、$CG=DG=\dfrac{3p}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $GC\parallel EB$，故 $\triangle HGC\sim\triangle HEB$：$\dfrac{HC}{HB}=\dfrac{GC}{EB}=\dfrac{3p/2}{2p}=\dfrac34$。設 $CH=t$，由 $\dfrac{t}{5q+t}=\dfrac34$ 得 $4t=15q+3t$，即 $CH=15q$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\triangle CGH=\dfrac12\cdot\dfrac{3p}{2}\cdot 15q\cdot\sin\theta=\dfrac{45}{4}pq\sin\theta=45$，故 $pq\sin\theta=4$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\triangle DFE=\dfrac12\cdot 4q\cdot p\sin\theta=2pq\sin\theta$；$\triangle DGE=\dfrac12\cdot\dfrac{3p}{2}\cdot 5q\sin\theta=\dfrac{15}{4}pq\sin\theta$。</div>
+          <div class="p-step"><b>第 5 步.</b> $DFEG=\left(2+\dfrac{15}{4}\right)\times 4=23$。</div>
+          <div class="p-ans">答案：<b>B</b>（$23\text{ cm}^2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2025_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

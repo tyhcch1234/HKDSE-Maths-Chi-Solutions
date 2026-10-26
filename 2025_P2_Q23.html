@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第23題 · 直角三角形相似與正切</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第23題</span>
+    <h1>兩個直角，一對互餘角，於是相似</h1>
+    <p class="sub">三角比與相似三角形 · 直角三角形中的正切</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示四邊形 $ABCD$。若 $\angle ABC+\angle ADC=\angle ACD=\angle BAC=90^\circ$，下列何者必定正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\tan\angle ACB=\dfrac{AB}{AD}$</li><li><span class="ol">B</span>$\tan\angle ACB=\dfrac{AB}{CD}$</li><li><span class="ol">C</span>$\tan\angle ADC=\dfrac{BC}{AD}$</li><li><span class="ol">D</span>$\tan\angle ADC=\dfrac{BC}{CD}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆開兩個直角三角形</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形兩銳角互餘</span>
+        直角三角形中，兩個銳角之和是 $90^\circ$。
+      </div>
+      <p>對角線 $AC$ 把四邊形分成 $\triangle ABC$ 與 $\triangle ACD$。</p>
+      <p>在 $\triangle ABC$ 中 $\angle BAC=90^\circ$，故 $\angle ABC+\angle ACB=90^\circ$。</p>
+      <p>在 $\triangle ACD$ 中 $\angle ACD=90^\circ$，故 $\angle CAD+\angle ADC=90^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用已知條件把角配對</div>
+      <div class="rule">
+        <span class="rule-name">同角的餘角相等</span>
+        若 $\alpha+\beta=90^\circ$ 且 $\alpha+\gamma=90^\circ$，則 $\beta=\gamma$。
+      </div>
+      <p>已知 $\angle ABC+\angle ADC=90^\circ$，而 $\angle ABC+\angle ACB=90^\circ$，兩式相減得</p>
+      <p>$$\angle ADC=\angle ACB$$</p>
+      <p>再由 $\angle CAD+\angle ADC=90^\circ$ 與 $\angle ABC+\angle ADC=90^\circ$ 得</p>
+      <p>$$\angle CAD=\angle ABC$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明兩個三角形相似</div>
+      <div class="rule">
+        <span class="rule-name">AA 相似判定</span>
+        兩組角分別相等，則兩個三角形相似。
+      </div>
+      <p>$\triangle ABC$：$\angle A=90^\circ$，$\angle B=\angle ABC$，$\angle C=\angle ACB$。</p>
+      <p>$\triangle CAD$：$\angle C=90^\circ$，$\angle A=\angle CAD=\angle ABC$，$\angle D=\angle ADC=\angle ACB$。</p>
+      <p>故 $\triangle ABC\sim\triangle CAD$（對應頂點 $A\leftrightarrow C$、$B\leftrightarrow A$、$C\leftrightarrow D$）。</p>
+      <p>對應邊成比例：</p>
+      <p>$$\frac{AB}{CA}=\frac{BC}{AD}=\frac{AC}{CD}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把比例寫成正切，逐一檢查選項</div>
+      <div class="rule">
+        <span class="rule-name">正切的定義</span>
+        在直角三角形中，$\tan\theta=\dfrac{\text{對邊}}{\text{鄰邊}}$。
+      </div>
+      <p>在 $\triangle ABC$（直角在 $A$）：$\tan\angle ACB=\dfrac{AB}{AC}$。</p>
+      <p>在 $\triangle ACD$（直角在 $C$）：$\tan\angle ADC=\dfrac{AC}{CD}$。</p>
+      <p>由第 3 步 $\dfrac{AC}{CD}=\dfrac{BC}{AD}$，故</p>
+      <p>$$\tan\angle ADC=\frac{BC}{AD}$$</p>
+      <p>這正是選項 C。</p>
+      <p>其餘選項要額外假設 $AC=AD$（A）、$AC=CD$（B）、$AD=CD$（D），並非必然。</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\tan\angle ADC=\dfrac{BC}{AD}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 四邊形 $PQRS$ 中，$\angle PQR+\angle PSR=\angle PRS=\angle QPR=90^\circ$。若 $PQ=9$、$PR=12$，求 $PS$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$15$</li><li><span class="ol">B</span>$20$</li><li><span class="ol">C</span>$24$</li><li><span class="ol">D</span>$25$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $\angle PQR+\angle PSR=90^\circ$ 及 $\angle PRQ+\angle PQR=90^\circ$ 得 $\angle PSR=\angle PRQ$；同法 $\angle SPR=\angle PQR$。</div>
+          <div class="p-step"><b>第 2 步.</b> 故 $\triangle PQR\sim\triangle RPS$（$P\leftrightarrow R$、$Q\leftrightarrow P$、$R\leftrightarrow S$），對應邊 $\dfrac{PQ}{RP}=\dfrac{QR}{PS}=\dfrac{PR}{RS}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 在直角 $\triangle PQR$（直角在 $P$）：$QR=\sqrt{9^2+12^2}=15$，相似比 $=\dfrac{PQ}{RP}=\dfrac{9}{12}=\dfrac{3}{4}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $\dfrac{QR}{PS}=\dfrac{3}{4}$ 得 $PS=15\times\dfrac{4}{3}=20$。（亦可驗算：$RS=12\times\dfrac{4}{3}=16$，$12^2+16^2=20^2$ ✓）</div>
+          <div class="p-ans">答案：<b>B</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
