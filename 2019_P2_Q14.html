@@ -1,0 +1,82 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第14題 · 由「每次加 4」寫出通項，再代 $n=9$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第14題</span>
+    <h1>由「每次加 4」寫出通項，再代 $n=9$</h1>
+    <p class="sub">數列 · 等差數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中第 1 個圖案由 6 點組成。對任意正整數 $n$，第 $(n+1)$ 個圖案由第 $n$ 個圖案加上 4 點而成。求第 9 個圖案的點數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$30$</li><li><span class="ol">B</span>$34$</li><li><span class="ol">C</span>$38$</li><li><span class="ol">D</span>$42$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出首幾項</div>
+<p>第 1 個：$6$；第 2 個：$6+4=10$；第 3 個：$14$……</p>
+<p>每次加 $4$，是等差數列，首項 $6$、公差 $4$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用通項公式</div>
+      <div class="rule"><span class="rule-name">等差數列通項</span>$T(n)=a+(n-1)d$。</div>
+<p>$$T(n)=6+(n-1)\times4=4n+2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $n=9$</div>
+<p>$$T(9)=4(9)+2=38$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">另一種看法：由第 1 個起加了 8 次</div>
+<p>$$6+8\times4=38$$</p>
+<p>易錯：誤把「第 9 個」當成加 9 次，得 $42$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$38$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某圖案第 1 個由 5 點組成，之後每一個圖案由前一個加上 3 點而成。求第 10 個圖案的點數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$29$</li><li><span class="ol">B</span>$32$</li><li><span class="ol">C</span>$35$</li><li><span class="ol">D</span>$38$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 等差數列，首項 $5$、公差 $3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $T(n)=5+3(n-1)=3n+2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $T(10)=32$。</div>
+          <div class="p-ans">答案：<b>B</b>（$32$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

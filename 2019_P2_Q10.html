@@ -1,0 +1,95 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第10題 · 先展開成 $y=-x^{2}+x+12$，再逐句核對</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第10題</span>
+    <h1>先展開成 $y=-x^{2}+x+12$，再逐句核對</h1>
+    <p class="sub">二次函數 · 圖像特徵</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下列關於 $y=(3-x)(x+2)+6$ 的圖像的陳述，哪些正確？<br>
+I. 圖像開口向下。<br>
+II. 圖像通過點 $(1,10)$。<br>
+III. 圖像的 $x$ 截距為 $-2$ 及 $3$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開成標準式</div>
+<p>$$y=(3-x)(x+2)+6=-x^{2}+x+6+6=-x^{2}+x+12$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I：開口方向</div>
+      <div class="rule"><span class="rule-name">二次函數的開口</span>$x^{2}$ 的係數 $a&lt;0$ 開口向下；$a>0$ 開口向上。</div>
+<p>此處 $a=-1&lt;0$，圖像開口向下，I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：代入 $x=1$</div>
+<p>$$y(1)=-1+1+12=12\neq10$$</p>
+<p>圖像不通過 $(1,10)$，II 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：解 $y=0$</div>
+      <div class="rule"><span class="rule-name">因式分解</span>$-x^{2}+x+12=0\iff x^{2}-x-12=0$。</div>
+<p>$$x^{2}-x-12=(x+3)(x-4)=0\quad\Longrightarrow\quad x=-3\ \text{或}\ 4$$</p>
+<p>$x$ 截距是 $-3$ 與 $4$，不是 $-2$ 與 $3$，III 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">結論</div>
+<p>只有 I 正確，故選 A。易錯：把括號內的 $3$ 與 $-2$ 直接當成截距，忘了先展開常數項。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列關於 $y=(2-x)(x+3)+6$ 的圖像的陳述，哪些正確？<br>
+I. 圖像開口向下。<br>
+II. 圖像通過點 $(1,10)$。<br>
+III. 圖像的 $x$ 截距為 $-4$ 及 $3$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$y=-x^{2}-x+6+6=-x^{2}-x+12$，$a=-1&lt;0$，I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $y(1)=-1-1+12=10$，II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> $-x^{2}-x+12=0\Rightarrow x^{2}+x-12=0\Rightarrow(x+4)(x-3)=0$，截距 $-4$、$3$，III 正確。</div>
+          <div class="p-ans">答案：<b>D</b>（I、II 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

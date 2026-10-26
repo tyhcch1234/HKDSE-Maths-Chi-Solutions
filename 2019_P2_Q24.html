@@ -1,0 +1,78 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第24題 · 把兩條直線化為斜截式，斜率相乘等於 $-1$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第24題</span>
+    <h1>把兩條直線化為斜截式，斜率相乘等於 $-1$</h1>
+    <p class="sub">直線 · 垂直條件</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+求常數 $k$，使直線 $3x+2y+k=0$ 與 $kx+12y-6=0$ 互相垂直。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-8$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$8$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩式都改寫成 $y=mx+c$</div>
+      <div class="rule"><span class="rule-name">斜截式</span>$Ax+By+C=0\Rightarrow y=-\dfrac{A}{B}x-\dfrac{C}{B}$。</div>
+<p>$$3x+2y+k=0\Rightarrow y=-\frac{3}{2}x-\frac{k}{2}$$</p>
+<p>$$kx+12y-6=0\Rightarrow y=-\frac{k}{12}x+\frac{1}{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用垂直條件</div>
+      <div class="rule"><span class="rule-name">垂直的斜率關係</span>$m_{1}m_{2}=-1$（兩線皆非垂直線時）。</div>
+<p>$$\left(-\frac{3}{2}\right)\left(-\frac{k}{12}\right)=-1$$</p>
+<p>$$\frac{3k}{24}=-1\quad\Longrightarrow\quad \frac{k}{8}=-1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $k$</div>
+<p>$$k=-8$$</p>
+<p>覆核：兩斜率為 $-\dfrac{3}{2}$ 與 $\dfrac{2}{3}$，乘積 $=-1$ ✓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$k=-8$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求常數 $k$，使直線 $2x+5y+k=0$ 與 $kx+10y+3=0$ 互相垂直。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-25$</li><li><span class="ol">B</span>$-10$</li><li><span class="ol">C</span>$10$</li><li><span class="ol">D</span>$25$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜率分別為 $-\dfrac{2}{5}$ 與 $-\dfrac{k}{10}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\left(-\dfrac{2}{5}\right)\left(-\dfrac{k}{10}\right)=-1\Rightarrow\dfrac{2k}{50}=-1$。</div>
+          <div class="p-step"><b>第 3 步.</b> $k=-25$。</div>
+          <div class="p-ans">答案：<b>A</b>（$k=-25$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q23.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

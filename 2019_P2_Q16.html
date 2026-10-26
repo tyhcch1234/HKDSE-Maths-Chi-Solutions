@@ -1,0 +1,97 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第16題 · 先設比例，再用相似三角形的面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第16題</span>
+    <h1>先設比例，再用相似三角形的面積比</h1>
+    <p class="sub">幾何 · 相似三角形與面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為平行四邊形，$AEFG$ 為正方形。已知 $BE:EF:FC=2:7:3$。$BD$ 分別與 $AE$、$FG$ 相交於 $X$、$Y$。若 $\triangle ABX$ 的面積為 $24\text{ cm}^{2}$，則四邊形 $CDYF$ 的面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$54\text{ cm}^{2}$</li><li><span class="ol">B</span>$77\text{ cm}^{2}$</li><li><span class="ol">C</span>$81\text{ cm}^{2}$</li><li><span class="ol">D</span>$87\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q16.png" alt="平行四邊形 ABCD 與正方形 AEFG，BD 交 AE 於 X、交 FG 於 Y"><figcaption>圖：$ABCD$ 為平行四邊形，$AEFG$ 為正方形，$BE:EF:FC=2:7:3$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設比例並讀出邊長</div>
+      <div class="rule"><span class="rule-name">正方形與平行四邊形</span>正方形四邊相等；平行四邊形對邊相等，故 $AD=BC$。</div>
+<p>設 $BE=2k$、$EF=7k$、$FC=3k$。正方形邊長 $=EF=7k$，所以 $AE=7k$。</p>
+<p>$$BC=BE+EF+FC=12k\quad\Longrightarrow\quad AD=12k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $BE\parallel AD$ 找 $EX:AX$</div>
+      <div class="rule"><span class="rule-name">相似三角形</span>$BE\parallel AD$，故 $\triangle BEX\sim\triangle DAX$，對應邊成比例。</div>
+<p>$$EX:AX=BE:AD=2k:12k=1:6$$</p>
+<p>配合 $AE=7k$ 得 $EX=k$、$AX=6k$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由同高三角形求 $	riangle BEX$</div>
+      <div class="rule"><span class="rule-name">同高三角形</span>兩個三角形若高相同，面積比等於底邊比。</div>
+<p>$\triangle ABX$ 與 $\triangle BEX$ 同高（由 $B$ 到 $AE$ 的距離），底分別是 $AX=6k$、$EX=k$：</p>
+<p>$$\frac{[BEX]}{[ABX]}=\frac{1}{6}\quad\Longrightarrow\quad [BEX]=24\times\frac{1}{6}=4\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">再用相似求 $	riangle BFY$</div>
+      <div class="rule"><span class="rule-name">面積比＝邊長比的平方</span>相似三角形：$\dfrac{[BEX]}{[BFY]}=\left(\dfrac{EX}{FY}\right)^{2}$。</div>
+<p>$BF=BE+EF=9k$，$AD=12k$，由 $\triangle BEX\sim\triangle BFY$ 得</p>
+<p>$$EX:FY=BE:BF=2k:9k=2:9$$</p>
+<p>$$\frac{4}{[BFY]}=\left(\frac{2}{9}\right)^{2}=\frac{4}{81}\quad\Longrightarrow\quad [BFY]=81\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">用平行四邊形面積作差</div>
+<p>由 $[ABX]=6k^{2}=24$ 得 $k=2$，平行四邊形面積 $=AD\times AE=12k\times7k=84k^{2}=336$。</p>
+<p>對角線 $BD$ 把平行四邊形平分：$[BCD]=168$。</p>
+<p>$$[CDYF]=[BCD]-[BFY]=168-81=87\text{ cm}^{2}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$87\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $DE\parallel BC$，$AD:DB=1:2$。若 $\triangle ADE$ 的面積為 $5\text{ cm}^{2}$，則 $\triangle ABC$ 的面積是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$15\text{ cm}^{2}$</li><li><span class="ol">B</span>$20\text{ cm}^{2}$</li><li><span class="ol">C</span>$45\text{ cm}^{2}$</li><li><span class="ol">D</span>$60\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AD:AB=1:3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\triangle ADE\sim\triangle ABC$，面積比 $=1^{2}:3^{2}=1:9$。</div>
+          <div class="p-step"><b>第 3 步.</b> $[ABC]=5\times9=45\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$45\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

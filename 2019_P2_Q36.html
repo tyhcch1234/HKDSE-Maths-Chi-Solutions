@@ -1,0 +1,88 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第36題 · 兩式相除，$r^{5}$ 一次過求出</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第36題</span>
+    <h1>兩式相除，$r^{5}$ 一次過求出</h1>
+    <p class="sub">數列 · 等比數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某等比數列第 2 項與第 5 項之和為 $9$，而第 7 項與第 10 項之和為 $288$。求該數列的第 20 項。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$65\,536$</li><li><span class="ol">B</span>$131\,072$</li><li><span class="ol">C</span>$262\,144$</li><li><span class="ol">D</span>$524\,288$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設首項 $a$、公比 $r$，寫出兩條方程</div>
+      <div class="rule"><span class="rule-name">等比數列通項</span>第 $n$ 項 $=ar^{n-1}$。</div>
+<p>$$ar+ar^{4}=9\quad\cdots(1)$$</p>
+<p>$$ar^{6}+ar^{9}=288\quad\cdots(2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 (2) 式提出 $r^{5}$</div>
+<p>$$ar^{6}+ar^{9}=r^{5}(ar+ar^{4})=r^{5}\times9$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩式相除求 $r$</div>
+<p>$$9r^{5}=288\quad\Longrightarrow\quad r^{5}=32\quad\Longrightarrow\quad r=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">回代求 $a$</div>
+<p>$$a(2)+a(16)=9\quad\Longrightarrow\quad 18a=9\quad\Longrightarrow\quad a=\frac{1}{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">求第 20 項</div>
+<p>$$ar^{19}=\frac{1}{2}\times2^{19}=2^{18}=262\,144$$</p>
+<p>易錯：把第 20 項寫成 $ar^{20}$，會得 $524\,288$（選項 D）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$262\,144$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某等比數列第 1 項與第 3 項之和為 $10$，第 4 項與第 6 項之和為 $80$。求該數列的第 8 項。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$128$</li><li><span class="ol">B</span>$256$</li><li><span class="ol">C</span>$320$</li><li><span class="ol">D</span>$512$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $a+ar^{2}=10$；$ar^{3}+ar^{5}=r^{3}(a+ar^{2})=80$。</div>
+          <div class="p-step"><b>第 2 步.</b> $10r^{3}=80\Rightarrow r=2$；$a(1+4)=10\Rightarrow a=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 第 8 項 $=ar^{7}=2\times128=256$。</div>
+          <div class="p-ans">答案：<b>B</b>（$256$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q37.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

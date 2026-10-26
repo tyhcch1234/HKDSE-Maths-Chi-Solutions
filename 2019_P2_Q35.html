@@ -1,0 +1,101 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第35題 · 線性規劃：最大值必在可行域的頂點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第35題</span>
+    <h1>線性規劃：最大值必在可行域的頂點</h1>
+    <p class="sub">線性規劃 · 可行域與目標函數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+考慮以下不等式組：
+$$\begin{cases}x+2y\le 20\\ 7x-6y\le 20\\ 13x+6y\ge 20\end{cases}$$
+設 $R$ 為代表上述不等式組解的區域。若 $(x,y)$ 為 $R$ 內的一點，則 $7x+8y+9$ 的最大值是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$15$</li><li><span class="ol">B</span>$77$</li><li><span class="ol">C</span>$113$</li><li><span class="ol">D</span>$115$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 250 200" width="250" height="200" role="img" aria-label="三條邊界線圍成的三角形可行域，頂點為 (2,-1)、(-4,12)、(8,6)">
+        <g stroke="currentColor" stroke-width="1" fill="none" opacity="0.6">
+          <line x1="10" y1="153" x2="240" y2="153"/><line x1="98" y1="192" x2="98" y2="12"/>
+        </g>
+        <g fill="currentColor" font-size="10" font-family="Georgia,serif">
+          <text x="232" y="166">x</text><text x="104" y="18">y</text><text x="86" y="166">O</text>
+        </g>
+        <polygon points="46,45 124,162 202,99" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+        <g fill="currentColor" font-size="10" font-family="Georgia,serif">
+          <circle cx="46" cy="45" r="2.4"/><text x="20" y="38">(−4,12)</text>
+          <circle cx="124" cy="162" r="2.4"/><text x="112" y="178">(2,−1)</text>
+          <circle cx="202" cy="99" r="2.4"/><text x="206" y="94">(8,6)</text>
+        </g>
+      </svg><figcaption>圖：$R$ 為三條邊界線圍成的三角形（示意）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三條邊界線兩兩求交點</div>
+      <div class="rule"><span class="rule-name">解聯立方程</span>可行域的頂點就是邊界線的交點。</div>
+<p>解得三個頂點：$(2,-1)$、$(-4,12)$、$(8,6)$。</p>
+<p>覆核 $(8,6)$：$8+12=20$ ✓、$56-36=20$ ✓、$104+36=140\ge20$ ✓。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">確認 $R$ 是三角形</div>
+<p>三個不等式分別是「下方」、「下方」、「上方」，交集就是上述三點圍成的三角形。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把頂點逐一代入目標函數</div>
+<p>設 $P=7x+8y+9$：</p>
+<p>$$P(2,-1)=14-8+9=15$$</p>
+<p>$$P(-4,12)=-28+96+9=77$$</p>
+<p>$$P(8,6)=56+48+9=113$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取最大值</div>
+      <div class="rule"><span class="rule-name">線性規劃的頂點定理</span>線性目標函數在凸多邊形可行域上的最大值、最小值必在頂點取得。</div>
+<p>最大值為 $113$，在 $(8,6)$ 取得，選 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$113$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮不等式組 $\begin{cases}x+y\le 8\\ x-y\le 2\\ x+3y\ge 6\end{cases}$。若 $(x,y)$ 在可行域內，則 $3x+5y$ 的最大值是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24$</li><li><span class="ol">B</span>$30$</li><li><span class="ol">C</span>$34$</li><li><span class="ol">D</span>$40$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 頂點：$x+y=8$ 與 $x-y=2$ 交於 $(5,3)$；$x+y=8$ 與 $x+3y=6$ 交於 $(9,-1)$；$x-y=2$ 與 $x+3y=6$ 交於 $(3,1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $3x+5y$：$(5,3)\to30$；$(9,-1)\to22$；$(3,1)\to14$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大值 $30$。</div>
+          <div class="p-ans">答案：<b>B</b>（$30$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

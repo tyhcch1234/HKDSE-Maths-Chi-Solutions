@@ -1,0 +1,83 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第15題 · 斜高要用「半邊底＋高」求，不是直接用高</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第15題</span>
+    <h1>斜高要用「半邊底＋高」求，不是直接用高</h1>
+    <p class="sub">度量 · 稜錐的表面面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個正四角錐的底是邊長 $18\text{ cm}$ 的正方形。若該角錐的高為 $12\text{ cm}$，則其總表面面積是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$432\text{ cm}^{2}$</li><li><span class="ol">B</span>$540\text{ cm}^{2}$</li><li><span class="ol">C</span>$756\text{ cm}^{2}$</li><li><span class="ol">D</span>$864\text{ cm}^{2}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分清「高」與「斜高」</div>
+      <div class="rule"><span class="rule-name">斜高</span>側面的三角形以斜高為高；斜高、角錐高、半邊底組成直角三角形。</div>
+<p>半邊底 $=9\text{ cm}$，角錐高 $=12\text{ cm}$，斜高 $l$ 滿足</p>
+<p>$$l=\sqrt{12^{2}+9^{2}}=15\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">算底面積</div>
+<p>$$18\times18=324\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">算四個側面</div>
+      <div class="rule"><span class="rule-name">三角形面積</span>$A=\dfrac{1}{2}\times\text{底}\times\text{高}$，此處的高是斜高。</div>
+<p>每個側面 $=\dfrac{1}{2}\times18\times15=135\text{ cm}^{2}$，四個共 $540\text{ cm}^{2}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">相加</div>
+<p>$$324+540=864\text{ cm}^{2}$$</p>
+<p>易錯：用 $12$ 當側面高，會得 $324+432=756$（選項 C 的陷阱）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$864\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個正四角錐的底是邊長 $12\text{ cm}$ 的正方形，高為 $8\text{ cm}$。其總表面面積是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$336\text{ cm}^{2}$</li><li><span class="ol">B</span>$384\text{ cm}^{2}$</li><li><span class="ol">C</span>$432\text{ cm}^{2}$</li><li><span class="ol">D</span>$480\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜高 $=\sqrt{8^{2}+6^{2}}=10\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 底面積 $=144$；四個側面 $=4\times\dfrac{1}{2}\times12\times10=240$。</div>
+          <div class="p-step"><b>第 3 步.</b> 總表面面積 $=384\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$384\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

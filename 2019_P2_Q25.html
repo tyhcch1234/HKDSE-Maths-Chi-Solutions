@@ -1,0 +1,101 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第25題 · 平移只改 $x$；逆時針 $90^{\circ}$ 是 $(x,y)	o(-y,x)$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第25題</span>
+    <h1>平移只改 $x$；逆時針 $90^{\circ}$ 是 $(x,y)	o(-y,x)$</h1>
+    <p class="sub">坐標幾何 · 變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+點 $A$ 的坐標為 $(-5,-2)$。$A$ 向右平移 $9$ 單位至 $B$，$B$ 再繞原點逆時針旋轉 $90^{\circ}$ 至 $C$。求 $C$ 的 $y$ 坐標。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-4$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$4$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 260 200" width="260" height="200" role="img" aria-label="A(-5,-2) 右移 9 單位到 B(4,-2)，再逆時針轉 90 度到 C(2,4)">
+        <g stroke="currentColor" stroke-width="1" fill="none" opacity="0.55">
+          <line x1="20" y1="140" x2="240" y2="140"/><line x1="70" y1="190" x2="70" y2="15"/>
+          <path d="M70 140 l6 -3 v6 z" fill="currentColor" stroke="none"/>
+        </g>
+        <g fill="currentColor" font-size="11" font-family="Georgia,serif">
+          <text x="60" y="156" text-anchor="middle">O</text>
+          <text x="228" y="156">x</text><text x="78" y="24">y</text>
+        </g>
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <path d="M20 175 L105 175" stroke-dasharray="4 3"/>
+          <path d="M105 175 A85 85 0 0 1 190 90" stroke-dasharray="2 0" opacity="0.6"/>
+          <line x1="105" y1="175" x2="105" y2="90" stroke-dasharray="4 3"/>
+        </g>
+        <g fill="currentColor" font-size="12" font-family="Georgia,serif">
+          <circle cx="20" cy="175" r="2.6"/><text x="8" y="192">A(−5,−2)</text>
+          <circle cx="105" cy="175" r="2.6"/><text x="86" y="192">B(4,−2)</text>
+          <circle cx="105" cy="90" r="2.6"/><text x="112" y="86">C(2,4)</text>
+        </g>
+      </svg><figcaption>圖：$A$ 右移 $9$ 單位到 $B$，再逆時針轉 $90^{\circ}$ 到 $C$（示意，非按比例）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先做平移</div>
+      <div class="rule"><span class="rule-name">平移</span>向右平移 $h$ 單位：$(x,y)\to(x+h,\,y)$，$y$ 坐標不變。</div>
+<p>$$A(-5,-2)\ \longrightarrow\ B(-5+9,\,-2)=(4,-2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">記住逆時針 $90^{\circ}$ 的公式</div>
+      <div class="rule"><span class="rule-name">旋轉</span>繞原點逆時針 $90^{\circ}$：$(x,y)\to(-y,\,x)$。</div>
+<p>可用一點驗證：$(1,0)$ 逆時針轉 $90^{\circ}$ 應到 $(0,1)$，而 $(-0,\,1)=(0,1)$ ✓。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $B$ 求 $C$</div>
+<p>$$B(4,-2)\ \longrightarrow\ C\bigl(-(-2),\,4\bigr)=(2,4)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">讀出答案</div>
+<p>$C$ 的 $y$ 坐標是 $4$，選 D。易錯：用了順時針公式 $(x,y)\to(y,-x)$，會得 $(−2,−4)$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $A$ 的坐標為 $(-3,4)$。$A$ 向下平移 $7$ 單位至 $B$，$B$ 再繞原點順時針旋轉 $90^{\circ}$ 至 $C$。求 $C$ 的 $x$ 坐標。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-3$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 向下 $7$ 單位：$B(-3,-3)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 順時針 $90^{\circ}$：$(x,y)\to(y,-x)$，得 $C(-3,3)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $C$ 的 $x$ 坐標為 $-3$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

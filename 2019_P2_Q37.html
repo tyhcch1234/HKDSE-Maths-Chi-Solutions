@@ -1,0 +1,89 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第37題 · 把直線代入圓，用「兩根之和」找中點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第37題</span>
+    <h1>把直線代入圓，用「兩根之和」找中點</h1>
+    <p class="sub">圓與直線 · 二次方程的根</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $k$ 為常數。直線 $3x-y-2=0$ 與圓 $5x^{2}+5y^{2}+kx+4y-20=0$ 相交於點 $P$ 及 $Q$。若 $PQ$ 的中點的 $x$ 坐標為 $2$，求 $k$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-152$</li><li><span class="ol">B</span>$-52$</li><li><span class="ol">C</span>$148$</li><li><span class="ol">D</span>$248$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由直線方程寫出 $y$</div>
+<p>$$y=3x-2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入圓方程</div>
+<p>$$5x^{2}+5(3x-2)^{2}+kx+4(3x-2)-20=0$$</p>
+<p>$$5x^{2}+45x^{2}-60x+20+kx+12x-8-20=0$$</p>
+<p>$$50x^{2}+(k-48)x-8=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用兩根之和表示中點的 $x$ 坐標</div>
+      <div class="rule"><span class="rule-name">韋達定理</span>兩根 $x_{1},x_{2}$ 滿足 $x_{1}+x_{2}=-\dfrac{b}{a}$；中點 $x=\dfrac{x_{1}+x_{2}}{2}$。</div>
+<p>$$x_{1}+x_{2}=-\frac{k-48}{50},\qquad \text{中點 }x=-\frac{k-48}{100}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入中點條件解 $k$</div>
+<p>$$-\frac{k-48}{100}=2\quad\Longrightarrow\quad k-48=-200\quad\Longrightarrow\quad k=-152$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">覆核</div>
+<p>此時方程為 $50x^{2}-200x-8=0$，兩根之和 $=4$，中點 $x=2$ ✓。</p>
+<p>易錯：忘記把「兩根之和」再除以 $2$，會得 $k=-52$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$k=-152$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $y=x+1$ 與圓 $x^{2}+y^{2}+kx-3y-6=0$ 相交於 $P$、$Q$。若 $PQ$ 中點的 $x$ 坐標為 $2$，求 $k$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-12$</li><li><span class="ol">B</span>$-9$</li><li><span class="ol">C</span>$9$</li><li><span class="ol">D</span>$12$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入：$x^{2}+(x+1)^{2}+kx-3(x+1)-6=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡得 $2x^{2}+(k-1)x-8=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 中點 $x=-\dfrac{k-1}{4}=2$，故 $k-1=-8$，即 $k=-9$。</div>
+          <div class="p-ans">答案：<b>B</b>（$k=-9$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q36.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q38.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

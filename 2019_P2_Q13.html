@@ -1,0 +1,82 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第13題 · 把百分數改寫成乘數，直接比較新舊比值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第13題</span>
+    <h1>把百分數改寫成乘數，直接比較新舊比值</h1>
+    <p class="sub">變分 · 正變與反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $z$ 隨 $x$ 的平方正變，並隨 $y$ 的平方根反變。若 $x$ 減少 $40\%$，而 $y$ 增加 $44\%$，則 $z$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>減少 $70\%$</li><li><span class="ol">B</span>增加 $70\%$</li><li><span class="ol">C</span>減少 $76\%$</li><li><span class="ol">D</span>增加 $76\%$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出變分關係</div>
+      <div class="rule"><span class="rule-name">聯合變分</span>$z=\dfrac{kx^{2}}{\sqrt{y}}$，$k$ 為非零常數。</div>
+<p>$$z=\frac{kx^{2}}{\sqrt{y}}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「增減百分數」變成乘數</div>
+      <div class="rule"><span class="rule-name">百分數乘數</span>減少 $40\%$ 即乘 $0.6$；增加 $44\%$ 即乘 $1.44$。</div>
+<p>$$x'=0.6x,\qquad y'=1.44y$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入新值，與原式比較</div>
+<p>$$z'=\frac{k(0.6x)^{2}}{\sqrt{1.44y}}=\frac{0.36kx^{2}}{1.2\sqrt{y}}=0.3\cdot\frac{kx^{2}}{\sqrt{y}}=0.3z$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">化成百分數變化</div>
+<p>$$\frac{z'-z}{z}\times100\%=(0.3-1)\times100\%=-70\%$$</p>
+<p>即減少 $70\%$，選 A。易錯：把 $40\%$ 與 $44\%$ 直接相減，或忘記平方根要開方。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（減少 $70\%$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $z$ 隨 $x$ 的平方正變，並隨 $y$ 的平方根反變。若 $x$ 增加 $20\%$，而 $y$ 減少 $36\%$，則 $z$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>增加 $80\%$</li><li><span class="ol">B</span>減少 $80\%$</li><li><span class="ol">C</span>增加 $44\%$</li><li><span class="ol">D</span>減少 $44\%$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 新的 $x$ 乘 $1.2$，新的 $y$ 乘 $0.64$。</div>
+          <div class="p-step"><b>第 2 步.</b> $z=\dfrac{k(1.44x^{2})}{0.8\sqrt{y}}=1.8\times$ 原值。</div>
+          <div class="p-step"><b>第 3 步.</b> $(1.8-1)\times100\%=+80\%$，即增加 $80\%$。</div>
+          <div class="p-ans">答案：<b>A</b>（增加 $80\%$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

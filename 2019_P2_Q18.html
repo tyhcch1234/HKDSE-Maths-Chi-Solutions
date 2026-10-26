@@ -1,0 +1,93 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第18題 · 先證 $ngle AEC=90^{\circ}$，再用直角三角形斜邊中點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第18題</span>
+    <h1>先證 $ngle AEC=90^{\circ}$，再用直角三角形斜邊中點</h1>
+    <p class="sub">幾何 · 相似、畢氏定理與中點定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABC$ 為等腰三角形，$AB=AC$。$D$、$E$ 為 $AB$ 上的點，使 $AD=DE=2EB$；$F$ 為 $AC$ 上的點，使 $DF\parallel EC$。若 $\angle ADF=90^{\circ}$ 且 $CE=60\text{ cm}$，則 $EF=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$40\text{ cm}$</li><li><span class="ol">B</span>$45\text{ cm}$</li><li><span class="ol">C</span>$48\text{ cm}$</li><li><span class="ol">D</span>$50\text{ cm}$</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q18.png" alt="等腰三角形 ABC，D、E 在 AB 上，F 在 AC 上，DF∥EC"><figcaption>圖：$AB=AC$，$AD=DE=2EB$，$DF\parallel EC$，$\angle ADF=90^{\circ}$，$CE=60\text{ cm}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設 $EB=x$，把各段寫成 $x$</div>
+<p>$$EB=x,\quad AD=DE=2x,\quad AE=4x,\quad AB=AD+DE+EB=5x$$</p>
+<p>因 $AB=AC$，故 $AC=5x$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由平行線得直角</div>
+      <div class="rule"><span class="rule-name">同位角</span>$DF\parallel EC$，$AD$ 為截線，同位角相等。</div>
+<p>$$\angle AEC=\angle ADF=90^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $	riangle AEC$ 用畢氏定理求 $x$</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$AE^{2}+EC^{2}=AC^{2}$。</div>
+<p>$$(4x)^{2}+60^{2}=(5x)^{2}$$</p>
+<p>$$16x^{2}+3600=25x^{2}\quad\Longrightarrow\quad x^{2}=400,\ x=20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用中點定理定位 $F$</div>
+      <div class="rule"><span class="rule-name">中點定理</span>在 $\triangle AEC$ 中，$D$ 為 $AE$ 中點且 $DF\parallel EC$，故 $F$ 為 $AC$ 中點。</div>
+<p>$$AF=FC=\frac{AC}{2}=\frac{100}{2}=50\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">直角三角形斜邊中點到三頂點等距</div>
+      <div class="rule"><span class="rule-name">斜邊中點性質</span>$\angle AEC=90^{\circ}$，$F$ 為斜邊 $AC$ 的中點，則 $FA=FE=FC$。</div>
+<p>$$EF=FA=50\text{ cm}$$</p>
+<p>易錯：只算出 $AF=50$ 便停手；要再利用直角三角形的斜邊中點性質，才知 $EF$ 同樣是 $50$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$50\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABC$ 為等腰三角形，$AB=AC$。$AD=DE=2EB$，$DF\parallel EC$，$\angle ADF=90^{\circ}$，$CE=48\text{ cm}$。則 $EF=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$32\text{ cm}$</li><li><span class="ol">B</span>$40\text{ cm}$</li><li><span class="ol">C</span>$45\text{ cm}$</li><li><span class="ol">D</span>$50\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AE=4x$，$AC=5x$，$\angle AEC=90^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $16x^{2}+48^{2}=25x^{2}\Rightarrow x^{2}=256\Rightarrow x=16$，$AC=80$。</div>
+          <div class="p-step"><b>第 3 步.</b> $F$ 為 $AC$ 中點，$EF=FA=\dfrac{80}{2}=40\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$40\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第28題 · 先數有利結果，再用組合數算總數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第28題</span>
+    <h1>先數有利結果，再用組合數算總數</h1>
+    <p class="sub">概率 · 組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+從分別編上 $1,2,3,4,5,6,7,8,9$ 的九個球中同時隨機抽出兩個。求抽出的兩個數為連續整數的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{2}$</li><li><span class="ol">B</span>$\dfrac{1}{4}$</li><li><span class="ol">C</span>$\dfrac{2}{9}$</li><li><span class="ol">D</span>$\dfrac{7}{9}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數有利結果</div>
+<p>連續的一對只有：$(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(7,8),(8,9)$，共 $8$ 對。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">算所有可能結果</div>
+      <div class="rule"><span class="rule-name">組合</span>同時抽出，不計次序：$C_{2}^{9}=\dfrac{9\times8}{2}=36$。</div>
+<p>總數 $=C_{2}^{9}=36$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求概率</div>
+      <div class="rule"><span class="rule-name">古典概率</span>$P=\dfrac{\text{有利結果數}}{\text{所有結果數}}$。</div>
+<p>$$P=\frac{8}{36}=\frac{2}{9}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查常見錯誤</div>
+<p>若誤用排列 $9\times8=72$ 作分母，會得 $\dfrac{8}{72}=\dfrac{1}{9}$（不在選項）；用 $P_{2}^{9}$ 時分子也要用 $16$ 才是同一個樣本空間。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{2}{9}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 從編上 $1$ 至 $10$ 的十個球中同時隨機抽出兩個。求抽出的兩個數為連續整數的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{5}$</li><li><span class="ol">B</span>$\dfrac{2}{9}$</li><li><span class="ol">C</span>$\dfrac{1}{9}$</li><li><span class="ol">D</span>$\dfrac{2}{5}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 連續的一對有 $(1,2)$ 至 $(9,10)$，共 $9$ 對。</div>
+          <div class="p-step"><b>第 2 步.</b> 總數 $C_{2}^{10}=45$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{9}{45}=\dfrac{1}{5}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{5}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q27.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q29.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

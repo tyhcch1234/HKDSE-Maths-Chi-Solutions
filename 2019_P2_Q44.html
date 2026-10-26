@@ -1,0 +1,80 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第44題 · 標準分 $z=\dfrac{x-\mu}{\sigma}$ 反求平均數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第44題</span>
+    <h1>標準分 $z=\dfrac{x-\mu}{\sigma}$ 反求平均數</h1>
+    <p class="sub">統計 · 標準分</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在某考試中，考試分數的標準差為 $8$ 分。瑪麗的考試分數為 $69$ 分，其標準分為 $0.5$。若約翰在該考試的標準分為 $-1.5$，則他的考試分數是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$45$ 分</li><li><span class="ol">B</span>$53$ 分</li><li><span class="ol">C</span>$65$ 分</li><li><span class="ol">D</span>$77$ 分</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出標準分公式</div>
+      <div class="rule"><span class="rule-name">標準分</span>$z=\dfrac{x-\mu}{\sigma}$，$\mu$ 為平均數、$\sigma$ 為標準差。</div>
+<p>$$\frac{69-\mu}{8}=0.5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">反求平均數</div>
+<p>$$69-\mu=4\quad\Longrightarrow\quad \mu=65$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由約翰的標準分求分數</div>
+<p>$$-1.5=\frac{x-65}{8}\quad\Longrightarrow\quad x=65-12=53$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對</div>
+<p>標準分 $0.5$ 在平均之上 $4$ 分，$-1.5$ 在平均之下 $12$ 分，兩者相差 $16$ 分：$69-53=16$ ✓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$53$ 分）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某測驗分數的標準差為 $10$ 分。阿明的分數為 $72$ 分，標準分為 $0.4$。若阿芬的標準分為 $-0.9$，則她的分數是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$59$ 分</li><li><span class="ol">B</span>$61$ 分</li><li><span class="ol">C</span>$63$ 分</li><li><span class="ol">D</span>$67$ 分</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\mu=72-0.4\times10=68$。</div>
+          <div class="p-step"><b>第 2 步.</b> $x=68+(-0.9)(10)=59$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 $59$ 分。</div>
+          <div class="p-ans">答案：<b>A</b>（$59$ 分）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q43.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第26題 · 到定直線距離固定＝兩條平行線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第26題</span>
+    <h1>到定直線距離固定＝兩條平行線</h1>
+    <p class="sub">軌跡 · 與直線的距離</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+直線 $L$ 的方程為 $5x-7y-14=0$。若 $P$ 為直角坐標平面上的一個動點，且 $P$ 到 $L$ 的垂直距離等於 $3$，則 $P$ 的軌跡是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>一個扇形</li><li><span class="ol">B</span>一個正方形</li><li><span class="ol">C</span>一條拋物線</li><li><span class="ol">D</span>一對直線</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把條件寫成方程</div>
+      <div class="rule"><span class="rule-name">點到直線的距離</span>$\dfrac{|Ax_{0}+By_{0}+C|}{\sqrt{A^{2}+B^{2}}}=d$。</div>
+<p>$$\frac{|5x-7y-14|}{\sqrt{5^{2}+7^{2}}}=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡絕對值方程</div>
+<p>$$\sqrt{74}=\sqrt{25+49},\qquad |5x-7y-14|=3\sqrt{74}$$</p>
+<p>去掉絕對值，得兩條方程：</p>
+<p>$$5x-7y-14=3\sqrt{74}\quad\text{或}\quad 5x-7y-14=-3\sqrt{74}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判別軌跡的形狀</div>
+      <div class="rule"><span class="rule-name">平行線</span>兩式 $x$、$y$ 的係數相同，只有常數項不同，故為兩條平行線。</div>
+<p>兩條直線都平行於 $L$，分別在 $L$ 的兩側，各距 $3$ 單位。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">結論</div>
+<p>軌跡是一對（平行的）直線，選 D。易錯：以為「距離固定」一定是圓——圓是到定點的距離固定。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（一對直線）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 的方程為 $3x+4y-10=0$。若動點 $P$ 到 $L$ 的垂直距離等於 $2$，則 $P$ 的軌跡是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>一個圓</li><li><span class="ol">B</span>一對平行線</li><li><span class="ol">C</span>一條拋物線</li><li><span class="ol">D</span>一個正方形</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\dfrac{|3x+4y-10|}{5}=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $|3x+4y-10|=10$，得 $3x+4y-20=0$ 或 $3x+4y=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 兩條直線斜率相同，故為一對平行線。</div>
+          <div class="p-ans">答案：<b>B</b>（一對平行線）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q25.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q27.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第23題 · 由圖讀截距的正負與大小，逐一驗證三句</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第23題</span>
+    <h1>由圖讀截距的正負與大小，逐一驗證三句</h1>
+    <p class="sub">直線方程 · 截距</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中直線 $L$ 的方程為 $ax+by+15=0$。下列哪些正確？<br>
+I. $a>b$<br>
+II. $a>-3$<br>
+III. $b>-5$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q23.png" alt="直線 L 交 x 軸於 5 之右，交 y 軸於 0 與 3 之間"><figcaption>圖：$L$ 的 $x$ 截距大於 $5$，$y$ 截距在 $0$ 與 $3$ 之間</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">分別令 $x=0$、$y=0$ 求截距</div>
+      <div class="rule"><span class="rule-name">截距</span>$y$ 截距：令 $x=0$；$x$ 截距：令 $y=0$。</div>
+<p>$$y\text{ 截距}=-\frac{15}{b},\qquad x\text{ 截距}=-\frac{15}{a}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $x$ 截距的圖像位置定 $a$</div>
+      <div class="rule"><span class="rule-name">不等式</span>圖中截距在 $5$ 之右且為正，故 $-\dfrac{15}{a}>5$。</div>
+<p>因截距為正，$a&lt;0$；兩邊乘 $a$（負數，不等號反轉）：</p>
+<p>$$-15&lt;5a\quad\Longrightarrow\quad a>-3$$</p>
+<p>即 $-3&lt;a&lt;0$，所以 II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $y$ 截距的圖像位置定 $b$</div>
+<p>圖中 $y$ 截距為正且在 $3$ 之下：$0&lt;-\dfrac{15}{b}&lt;3$。</p>
+<p>由 $-\dfrac{15}{b}>0$ 得 $b&lt;0$；再由 $-\dfrac{15}{b}&lt;3$ 得 $-15>3b$，即 $b&lt;-5$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較 $a$ 與 $b$，並檢查 III</div>
+<p>$a>-3$ 而 $b&lt;-5$，所以 $a>b$，I 正確；但 $b&lt;-5$，III（$b>-5$）錯誤。</p>
+<p>結論：I、II 正確，選 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 的方程為 $ax+by+12=0$，其 $x$ 截距大於 $4$，$y$ 截距在 $0$ 與 $2$ 之間。下列哪些正確？<br>
+I. $a>b$<br>
+II. $a>-3$<br>
+III. $b>-6$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x$ 截距 $=-\dfrac{12}{a}>4\Rightarrow a>-3$（且 $a&lt;0$），II 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 截距 $=-\dfrac{12}{b}$ 在 $(0,2)$：得 $b&lt;-6$，III 錯誤。</div>
+          <div class="p-step"><b>第 3 步.</b> $a>-3>-6>b$，故 $a>b$，I 正確。</div>
+          <div class="p-ans">答案：<b>A</b>（只有 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q22.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

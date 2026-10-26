@@ -1,0 +1,91 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第19題 · 補上高 $BD$，把梯形拆成兩個直角三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第19題</span>
+    <h1>補上高 $BD$，把梯形拆成兩個直角三角形</h1>
+    <p class="sub">度量 · 梯形面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $ABCD$ 為梯形，$AB\parallel DC$ 且 $\angle ABD=90^{\circ}$。若 $AB=18\text{ cm}$、$BC=26\text{ cm}$ 及 $AD=30\text{ cm}$，求梯形 $ABCD$ 的面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$336\text{ cm}^{2}$</li><li><span class="ol">B</span>$400\text{ cm}^{2}$</li><li><span class="ol">C</span>$504\text{ cm}^{2}$</li><li><span class="ol">D</span>$552\text{ cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q19.png" alt="梯形 ABCD，AB∥DC，∠ABD=90°，AB=18，BC=26，AD=30"><figcaption>圖：$AB\parallel DC$，$\angle ABD=90^{\circ}$，$AB=18\text{ cm}$，$BC=26\text{ cm}$，$AD=30\text{ cm}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $	riangle ABD$ 求 $BD$</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$\angle ABD=90^{\circ}$，$AD$ 是斜邊。</div>
+<p>$$18^{2}+BD^{2}=30^{2}\quad\Longrightarrow\quad BD=\sqrt{900-324}=24\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用平行線找 $ngle CDB$</div>
+      <div class="rule"><span class="rule-name">內錯角</span>$AB\parallel DC$，$BD$ 為截線，$\angle CDB=\angle ABD=90^{\circ}$。</div>
+<p>所以 $\triangle BCD$ 在 $D$ 為直角。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $	riangle BCD$ 求 $DC$</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$DC^{2}+BD^{2}=BC^{2}$。</div>
+<p>$$DC^{2}+24^{2}=26^{2}\quad\Longrightarrow\quad DC=10\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把梯形拆成兩個三角形</div>
+<p>$BD$ 把梯形分成 $\triangle ABD$ 與 $\triangle BCD$：</p>
+<p>$$\frac{1}{2}\times18\times24+\frac{1}{2}\times10\times24=216+120=336\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">或用梯形公式覆核</div>
+      <div class="rule"><span class="rule-name">梯形面積</span>$A=\dfrac{1}{2}(a+b)h$，兩平行邊為 $AB=18$、$DC=10$，高為 $BD=24$。</div>
+<p>$$\frac{1}{2}(18+10)\times24=336\text{ cm}^{2}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$336\text{ cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 梯形 $ABCD$ 中 $AB\parallel DC$，$\angle ABD=90^{\circ}$，$AB=12\text{ cm}$，$AD=20\text{ cm}$，$BC=20\text{ cm}$。其面積是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$156\text{ cm}^{2}$</li><li><span class="ol">B</span>$192\text{ cm}^{2}$</li><li><span class="ol">C</span>$210\text{ cm}^{2}$</li><li><span class="ol">D</span>$240\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BD=\sqrt{20^{2}-12^{2}}=16\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $DC=\sqrt{20^{2}-16^{2}}=12\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 面積 $=\dfrac{1}{2}(12+12)\times16=192\text{ cm}^{2}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$192\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
