@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第20題 · 矩形與相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第20題</span>
+    <h1>先求 $FB$，再用畢氏定理求 $EF$</h1>
+    <p class="sub">幾何 · 矩形與相似三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為矩形，$E$ 為 $BC$ 上的一點。$AB$ 的延長線與 $DE$ 的延長線交於 $F$。若 $AB=3\text{ cm}$、$BE=12\text{ cm}$、$CE=4\text{ cm}$，則 $EF=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$13$ cm</li>
+        <li><span class="ol">B</span>$15$ cm</li>
+        <li><span class="ol">C</span>$16$ cm</li>
+        <li><span class="ol">D</span>$20$ cm</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 360 200" width="330" role="img" aria-label="矩形 ABCD，E 在 BC 上，AB 與 DE 延長交於 F">
+        <polygon points="120,150 260,150 260,50 120,50" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.6"/>
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <line x1="120" y1="150" x2="40" y2="150"/>
+          <line x1="200" y1="150" x2="40" y2="80"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="120" cy="150" r="3"/><circle cx="260" cy="150" r="3"/>
+          <circle cx="260" cy="50" r="3"/><circle cx="120" cy="50" r="3"/>
+          <circle cx="200" cy="150" r="3"/><circle cx="40" cy="80" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="112" y="166">A</text><text x="266" y="166">B</text>
+          <text x="266" y="46">C</text><text x="110" y="46">D</text>
+          <text x="198" y="168">E</text><text x="26" y="80" text-anchor="end">F</text>
+        </g>
+      </svg>
+      <figcaption>圖：$F$ 在 $AB$ 延長線上，$E$ 在 $BC$ 上（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $AD$</div>
+      <div class="rule">
+        <span class="rule-name">矩形的對邊相等</span>
+        <span class="rule-math">$AD=BC$</span>
+        <span class="rule-why">$BC=BE+CE=12+4=16$，故 $AD=16$ cm。</span>
+      </div>
+      <p>$$AD=BC=12+4=16\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用相似三角形求 $FB$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形對應邊</span>
+        <span class="rule-math">$\dfrac{FB}{FA}=\dfrac{BE}{AD}$</span>
+        <span class="rule-why">$BE\parallel AD$ 給出 $\triangle FBE\sim\triangle FAD$，故 $\dfrac{FB}{FB+3}=\dfrac{12}{16}$，得 $FB=9$。</span>
+      </div>
+      <p>因 $BE\parallel AD$，$\triangle FBE\sim\triangle FAD$，而 $FA=FB+AB=FB+3$：</p>
+      <p>$$\frac{FB}{FB+3}=\frac{12}{16}=\frac34\quad\Longrightarrow\quad 4FB=3FB+9\quad\Longrightarrow\quad FB=9$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在直角三角形 $FBE$ 求 $EF$</div>
+      <p>$\angle FBE=90^\circ$（矩形的角），故</p>
+      <p>$$EF=\sqrt{FB^2+BE^2}=\sqrt{9^2+12^2}=\sqrt{225}=15\text{ cm}$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$15$ cm</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 矩形 $ABCD$ 中 $AB=5$ cm，$E$ 在 $BC$ 上，$BE=9$ cm、$CE=3$ cm。$AB$ 與 $DE$ 的延長線交於 $F$，求 $EF$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AD=BC=12$ cm。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{FB}{FB+5}=\dfrac{9}{12}=\dfrac34$，得 $FB=15$。</div>
+          <div class="p-step"><b>第 3 步.</b> $EF=\sqrt{15^2+9^2}=\sqrt{306}=3\sqrt{34}$ cm。</div>
+          <div class="p-ans">答案：$3\sqrt{34}$ cm（約 $17.5$ cm）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q19.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

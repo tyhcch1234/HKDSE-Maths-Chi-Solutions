@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第19題 · 直角三角形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第19題</span>
+    <h1>斜邊 $p$ 不是直角邊，先化 $PQ$</h1>
+    <p class="sub">三角學 · 直角三角形面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $\triangle PQR$ 為直角三角形，$\angle QPR=90^\circ$。設 $\triangle PQR$ 的面積為 $S$。若 $QR=p$、$PR=q$、$\angle PQR=\theta$，則下列哪一項必然正確？
+      <ol class="opts">
+        <li><span class="ol">A</span>$S=\dfrac{1}{2}pq$</li>
+        <li><span class="ol">B</span>$S=\dfrac{1}{2}pq\sin\theta$</li>
+        <li><span class="ol">C</span>$S=\dfrac{1}{2}pq\cos\theta$</li>
+        <li><span class="ol">D</span>$S=\dfrac{1}{2}pq\tan\theta$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 200" width="280" role="img" aria-label="直角三角形 PQR，直角在 P">
+        <polygon points="50,160 50,40 240,160" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.7"/>
+        <path d="M 50 146 L 64 146 L 64 160" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13">
+          <text x="36" y="36">Q</text><text x="34" y="176">P</text><text x="246" y="166">R</text>
+          <text x="120" y="34" font-size="12">p</text>
+          <text x="26" y="106" font-size="12">q</text>
+          <text x="64" y="120" font-size="12">θ</text>
+        </g>
+      </svg>
+      <figcaption>圖：$\angle QPR=90^\circ$，$QR=p$（斜邊）、$PR=q$</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認清哪條是斜邊</div>
+      <div class="rule">
+        <span class="rule-name">斜邊</span>
+        <span class="rule-math">直角所對的邊</span>
+        <span class="rule-why">$\angle P=90^\circ$，故 $QR=p$ 為斜邊，$PQ$ 與 $PR=q$ 為兩條直角邊。</span>
+      </div>
+      <p>$QR=p$ 是斜邊，不是直角邊。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用餘弦求 $PQ$</div>
+      <div class="rule">
+        <span class="rule-name">餘弦比</span>
+        <span class="rule-math">$\cos\theta=\dfrac{\text{鄰邊}}{\text{斜邊}}$</span>
+        <span class="rule-why">在 $Q$ 處鄰邊為 $PQ$、斜邊為 $p$，故 $PQ=p\cos\theta$。</span>
+      </div>
+      <p>$$\cos\theta=\frac{PQ}{QR}=\frac{PQ}{p}\quad\Longrightarrow\quad PQ=p\cos\theta$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用兩條直角邊求面積</div>
+      <p>$$S=\tfrac12\times PQ\times PR=\tfrac12(p\cos\theta)(q)=\tfrac12 pq\cos\theta$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$S=\dfrac{1}{2}pq\cos\theta$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle PQR$ 中，$\angle P=90^\circ$，$QR=p$，$\angle PQR=\theta$。(a) 以 $p$、$\theta$ 表示 $PQ$ 及 $PR$。(b) 由此以 $p$、$\theta$ 表示面積 $S$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $QR=p$ 為斜邊；$PQ=p\cos\theta$（鄰邊），$PR=p\sin\theta$（對邊）。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩直角邊互相垂直，故 $S=\tfrac12(p\cos\theta)(p\sin\theta)=\tfrac12 p^2\sin\theta\cos\theta$。</div>
+          <div class="p-ans">答案：$PQ=p\cos\theta$、$PR=p\sin\theta$；$S=\tfrac12 p^2\sin\theta\cos\theta$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q18.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

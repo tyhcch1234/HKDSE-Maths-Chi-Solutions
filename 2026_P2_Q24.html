@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第24題 · 平移與旋轉</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第24題</span>
+    <h1>逆時針 $270^\circ$ 等於順時針 $90^\circ$</h1>
+    <p class="sub">變換 · 平移與旋轉</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把點 $(3,1)$ 向左平移 $5$ 單位至 $U$，再把 $U$ 繞原點逆時針旋轉 $270^\circ$ 至 $V$。求 $V$ 的 $y$ 坐標。
+      <ol class="opts">
+        <li><span class="ol">A</span>$-2$</li>
+        <li><span class="ol">B</span>$-1$</li>
+        <li><span class="ol">C</span>$1$</li>
+        <li><span class="ol">D</span>$2$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">平移</div>
+      <div class="rule">
+        <span class="rule-name">向左平移</span>
+        <span class="rule-math">$(x,y)\to(x-5,\ y)$</span>
+        <span class="rule-why">向左 $5$ 單位即 $x$ 坐標減 $5$：$(3,1)\to(-2,1)$。</span>
+      </div>
+      <p>$$U=(3-5,\ 1)=(-2,\ 1)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">旋轉規則</div>
+      <div class="rule">
+        <span class="rule-name">繞原點旋轉</span>
+        <span class="rule-math">$270^\circ$ 逆時針：$(x,y)\to(y,\ -x)$</span>
+        <span class="rule-why">$270^\circ$ 逆時針等於 $90^\circ$ 順時針，$(x,y)$ 變為 $(y,-x)$。</span>
+      </div>
+      <p>$$V=(y,\ -x)=(1,\ -(-2))=(1,\ 2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">讀出 $y$ 坐標</div>
+      <p>$V$ 的 $y$ 坐標為 $2$，即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　$2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把點 $(-1,4)$ 向下平移 $3$ 單位至 $U$，再繞原點順時針旋轉 $90^\circ$ 至 $V$，求 $V$ 的坐標。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 向下平移：$U=(-1,\ 1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 順時針 $90^\circ$：$(x,y)\to(y,\ -x)$，故 $V=(1,\ 1)$。</div>
+          <div class="p-ans">答案：$V=(1,\ 1)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q23.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q25.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

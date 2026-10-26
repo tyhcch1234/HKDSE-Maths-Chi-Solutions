@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第23題 · 正六邊形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第23題</span>
+    <h1>正六邊形每個內角 $120^\circ$，等腰三角形給 $30^\circ$</h1>
+    <p class="sub">幾何 · 正多邊形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $ABCDEF$ 為正六邊形。若 $AC$ 與 $BF$ 交於 $G$，下列哪幾項正確？
+      <br>I. $BG\parallel CE$
+      <br>II. $\triangle ABG\sim\triangle BDC$
+      <br>III. $\triangle AGF\cong\triangle BGC$
+      <ol class="opts">
+        <li><span class="ol">A</span>只有 I 及 II</li>
+        <li><span class="ol">B</span>只有 I 及 III</li>
+        <li><span class="ol">C</span>只有 II 及 III</li>
+        <li><span class="ol">D</span>I、II 及 III</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 250" width="280" role="img" aria-label="正六邊形 ABCDEF 與對角線 AC、BF">
+        <polygon points="150,30 240,82 240,182 150,234 60,182 60,82" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-width="1.6"/>
+        <g stroke="currentColor" stroke-width="1.3" fill="none">
+          <line x1="150" y1="30" x2="240" y2="182"/>
+          <line x1="60" y1="82" x2="240" y2="182"/>
+        </g>
+        <circle cx="150" cy="30" r="0"/><circle cx="175" cy="120" r="3" fill="currentColor"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="146" y="22" text-anchor="middle">A</text>
+          <text x="248" y="80">B</text>
+          <text x="248" y="190">C</text>
+          <text x="146" y="248" text-anchor="middle">D</text>
+          <text x="44" y="190" text-anchor="end">E</text>
+          <text x="44" y="80" text-anchor="end">F</text>
+          <text x="182" y="118">G</text>
+        </g>
+      <figcaption>圖：正六邊形 $ABCDEF$，$AC$ 與 $BF$ 交於 $G$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">內角與等腰三角形</div>
+      <div class="rule">
+        <span class="rule-name">正多邊形內角</span>
+        <span class="rule-math">$\dfrac{(n-2)\times180^\circ}{n}=120^\circ$</span>
+        <span class="rule-why">$AB=AF$，$\angle BAF=120^\circ$，故 $\angle ABF=30^\circ$。</span>
+      </div>
+      <p>在 $\triangle ABF$ 中，$AB=AF$、$\angle BAF=120^\circ$，故 $\angle ABF=\angle AFB=30^\circ$。</p>
+      <p>於是 $\angle FBC=120^\circ-30^\circ=90^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">判斷 I：$BG\parallel CE$</div>
+      <p>同理在 $\triangle CDE$ 中 $CD=DE$、$\angle CDE=120^\circ$，得 $\angle DCE=30^\circ$，故 $\angle BCE=120^\circ-30^\circ=90^\circ$。</p>
+      <p>因 $\angle FBC=\angle BCE=90^\circ$，同旁內角互補，所以 $BF\parallel CE$，即 $BG\parallel CE$。I 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 II：$\triangle ABG\sim\triangle BDC$</div>
+      <p>在等腰 $\triangle ABC$ 中，$AB=BC$、$\angle ABC=120^\circ$，故 $\angle BAC=\angle BCA=30^\circ$，即 $\angle BAG=30^\circ$。</p>
+      <p>又 $\angle ABG=\angle ABF=30^\circ$，故 $\triangle ABG$ 的角為 $30^\circ,30^\circ,120^\circ$。</p>
+      <p>在等腰 $\triangle BCD$ 中，$BC=CD$、$\angle BCD=120^\circ$，故 $\angle CBD=\angle BDC=30^\circ$，三角形角為 $30^\circ,30^\circ,120^\circ$。</p>
+      <p>兩三角形三組角分別相等，故 $\triangle ABG\sim\triangle BDC$（A.A.A.）。II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">判斷 III：$\triangle AGF\cong\triangle BGC$</div>
+      <p>由正六邊形的對稱性，$AF=BC$；又 $\angle AFG=\angle BCG=30^\circ$ 及 $\angle AGF=\angle BGC$（對頂角），故</p>
+      <p>$$\triangle AGF\cong\triangle BGC\quad(\text{A.A.S.})$$</p>
+      <p>III 正確。三項皆正確，即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　I、II 及 III</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCDEF$ 為正六邊形，求 $\angle ABF$ 及 $\angle FBC$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 內角 $=120^\circ$，$AB=AF$ 故 $\triangle ABF$ 為等腰。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle ABF=(180^\circ-120^\circ)/2=30^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle FBC=120^\circ-30^\circ=90^\circ$。</div>
+          <div class="p-ans">答案：$\angle ABF=30^\circ$，$\angle FBC=90^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q22.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q24.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

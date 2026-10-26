@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第25題 · 圓形幾何</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第25題</span>
+    <h1>先求圓心角，再由圓周角取一半</h1>
+    <p class="sub">幾何 · 圓形定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $O$ 為圓 $PQRS$ 的圓心，$PR$ 與 $OQ$ 交於 $T$。若 $\angle POT=82^\circ$、$\angle PTQ=104^\circ$，則 $\angle QSR=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$22^\circ$</li>
+        <li><span class="ol">B</span>$27^\circ$</li>
+        <li><span class="ol">C</span>$30^\circ$</li>
+        <li><span class="ol">D</span>$49^\circ$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 260" width="280" role="img" aria-label="圓 PQRS，弦 PR 與半徑 OQ 交於 T">
+        <circle cx="150" cy="130" r="105" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <g stroke="currentColor" stroke-width="1.3" fill="none">
+          <line x1="150" y1="130" x2="55" y2="70"/>
+          <line x1="150" y1="130" x2="245" y2="70"/>
+          <line x1="150" y1="130" x2="196" y2="233"/>
+          <line x1="55" y1="70" x2="196" y2="233"/>
+          <line x1="150" y1="130" x2="55" y2="70" stroke="currentColor"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="150" cy="130" r="3"/><circle cx="55" cy="70" r="3.2"/>
+          <circle cx="245" cy="70" r="3.2"/><circle cx="196" cy="233" r="3.2"/>
+          <circle cx="98" cy="140" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="154" y="142">O</text>
+          <text x="40" y="64">P</text>
+          <text x="252" y="66">Q</text>
+          <text x="200" y="248">R</text>
+          <text x="66" y="150">S</text>
+          <text x="90" y="134" font-size="11">T</text>
+        </g>
+      </svg>
+      <figcaption>圖：$O$ 為圓心，$PR$ 與 $OQ$ 交於 $T$（示意圖）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">$O,T,Q$ 共線</div>
+      <div class="rule">
+        <span class="rule-name">圓心角</span>
+        <span class="rule-math">$\angle POQ=\angle POT=82^\circ$</span>
+        <span class="rule-why">$T$ 在 $OQ$ 上，故 $\angle POQ$ 與 $\angle POT$ 是同一個角。</span>
+      </div>
+      <p>$$\angle POQ=82^\circ\quad\Longrightarrow\quad\text{弧 }PQ=82^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle PTO$，再求 $\angle OPT$</div>
+      <div class="rule">
+        <span class="rule-name">直線上的鄰角</span>
+        <span class="rule-math">$\angle PTO=180^\circ-104^\circ=76^\circ$</span>
+        <span class="rule-why">$T$ 在 $OQ$ 上，同一直線上的角相加為 $180^\circ$。</span>
+      </div>
+      <p>$$\angle PTO=180^\circ-104^\circ=76^\circ$$</p>
+      <p>在 $\triangle POT$ 中：$\angle OPT=180^\circ-82^\circ-76^\circ=22^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用等腰三角形求圓心角 $\angle POR$</div>
+      <p>$T$ 在弦 $PR$ 上，故 $\angle OPR=\angle OPT=22^\circ$。因 $OP=OR$（半徑），$\triangle OPR$ 為等腰，$\angle ORP=22^\circ$：</p>
+      <p>$$\angle POR=180^\circ-2(22^\circ)=136^\circ$$</p>
+      <p>即弧 $PR=136^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求弧 $QR$ 與圓周角</div>
+      <p>$$\text{弧 }QR=136^\circ-82^\circ=54^\circ$$</p>
+      <div class="rule">
+        <span class="rule-name">圓周角</span>
+        <span class="rule-math">$\text{圓周角}=\tfrac12\times\text{同弧的圓心角}$</span>
+        <span class="rule-why">$\angle QSR$ 對弧 $QR$，故為 $54^\circ$ 的一半。</span>
+      </div>
+      <p>$$\angle QSR=\frac{54^\circ}{2}=27^\circ$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>　$27^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓心 $O$，$A$、$B$、$C$ 在圓上。若圓心角 $\angle AOB=110^\circ$，求圓周角 $\angle ACB$（$C$ 在優弧 $AB$ 上）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle ACB$ 對弧 $AB$，圓心角為 $110^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> 圓周角 $=\dfrac{110^\circ}{2}=55^\circ$。</div>
+          <div class="p-ans">答案：$55^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q24.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

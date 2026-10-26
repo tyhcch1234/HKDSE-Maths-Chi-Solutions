@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第22題 · 多邊形內角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第22題</span>
+    <h1>凹角要用 $360^\circ-q$ 代入內角和</h1>
+    <p class="sub">幾何 · 多邊形的內角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      根據圖示，下列哪一項必然正確？
+      <ol class="opts">
+        <li><span class="ol">A</span>$p=r$</li>
+        <li><span class="ol">B</span>$q=90^\circ$</li>
+        <li><span class="ol">C</span>$p+r=q$</li>
+        <li><span class="ol">D</span>$p+q+r=180^\circ$</li>
+      </ol>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 320 210" width="300" role="img" aria-label="五邊形，右邊內凹，標示 p、q、r 及兩個直角">
+        <polygon points="40,40 230,40 180,105 230,170 40,170" fill="currentColor" fill-opacity="0.07" stroke="currentColor" stroke-width="1.7"/>
+        <g stroke="currentColor" stroke-width="1.2" fill="none">
+          <path d="M 40 56 L 56 56 L 56 40"/>
+          <path d="M 40 154 L 56 154 L 56 170"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="214" y="34">p</text>
+          <text x="188" y="110">q</text>
+          <text x="214" y="188">r</text>
+          <text x="62" y="34" font-size="11">90°</text>
+          <text x="62" y="186" font-size="11">90°</text>
+        </g>
+      </svg>
+      <figcaption>圖：左邊兩個角為直角，右邊內凹處的角記為 $q$（在凹口外側量度）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">五邊形內角和</div>
+      <div class="rule">
+        <span class="rule-name">多邊形內角和</span>
+        <span class="rule-math">$(n-2)\times180^\circ$</span>
+        <span class="rule-why">五邊形 $n=5$，內角和為 $540^\circ$。</span>
+      </div>
+      <p>$$(5-2)\times180^\circ=540^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">凹頂點的內角是反角</div>
+      <div class="rule">
+        <span class="rule-name">凹頂點的反角</span>
+        <span class="rule-math">$\text{內角}=360^\circ-q$</span>
+        <span class="rule-why">$q$ 在凹口外側量度，多邊形內部的角是反角 $360^\circ-q$。</span>
+      </div>
+      <p>凹頂點處的內角 $=360^\circ-q$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">列方程並化簡</div>
+      <p>五個內角為 $90^\circ$、$p$、$360^\circ-q$、$r$、$90^\circ$，故</p>
+      <p>$$90^\circ+p+(360^\circ-q)+r+90^\circ=540^\circ$$</p>
+      <p>兩個 $90^\circ$ 與 $360^\circ$ 合共 $540^\circ$，剛好抵消：</p>
+      <p>$$p-q+r+540^\circ=540^\circ\quad\Longrightarrow\quad p+r=q$$</p>
+      <p>即選項 <b>C</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">排除其他選項</div>
+      <p>凹口可以不對稱，故 $p=r$ 未必成立（A 錯）；凹口可深可淺，$q$ 不必是 $90^\circ$（B 錯）；由 $p+r=q$ 得 $p+q+r=2q$ 可變，故 D 亦錯。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>　$p+r=q$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 凹六邊形中，兩個角為 $90^\circ$，凹口外側的角為 $q$，其餘三個內角為 $p$、$r$、$s$。求 $p+r+s$ 與 $q$ 的關係。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 六邊形內角和 $=(6-2)\times180^\circ=720^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $90^\circ+p+(360^\circ-q)+r+s+90^\circ=720^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> 化簡得 $p+r+s=360^\circ+q$。</div>
+          <div class="p-ans">答案：$p+r+s=360^\circ+q$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q21.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
