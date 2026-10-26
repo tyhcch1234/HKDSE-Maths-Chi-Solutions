@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第8題 · 變分 · 反變（平方根）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第8題</span>
+    <h1>先設 $y=\dfrac{k}{\sqrt{x}}$</h1>
+    <p class="sub">變分 · 反變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $y$ 隨 $\sqrt{x}$ 反變。當 $x=144$ 時，$y=81$。
+<br>(a) 以 $x$ 表示 $y$。
+<br>(b) 若 $x$ 由 $144$ 增加至 $324$，求 $y$ 的值的改變。<span class="marks">[5 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 設出變分關係</div><div class="rule"><span class="rule-name">反變</span><span class="rule-math">$y=\dfrac{k}{\sqrt{x}}$</span><span class="rule-why">「隨 $\sqrt{x}$ 反變」即 $y\sqrt{x}=k$（$k\neq0$）。</span></div>
+設 $y=\dfrac{k}{\sqrt{x}}$，其中 $k$ 為非零常數。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(a) 代入求 $k$</div><div class="rule"><span class="rule-name">代入</span><span class="rule-math">$81=\dfrac{k}{\sqrt{144}}=\dfrac{k}{12}$</span><span class="rule-why">$\sqrt{144}=12$。</span></div>
+\[81=\frac{k}{12}\ \Longrightarrow\ k=972.\]
+所以
+\[y=\frac{972}{\sqrt{x}}.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 求新值並相減</div><div class="rule"><span class="rule-name">求值</span><span class="rule-math">$y=\dfrac{972}{\sqrt{324}}=54$</span><span class="rule-why">$\sqrt{324}=18$。</span></div>
+當 $x=324$：
+\[y=\frac{972}{18}=54.\]
+與原本的 $81$ 比較，$y$ 減少了
+\[81-54=27.\]
+（題目問「改變」，答「減少 27」最清楚。）
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $y=\dfrac{972}{\sqrt{x}}$；(b) 減少 $27$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 已知 $y$ 隨 $\sqrt{x}$ 反變。當 $x=25$ 時，$y=60$。(a) 以 $x$ 表示 $y$。(b) 若 $x$ 由 $25$ 增加至 $100$，求 $y$ 的值的改變。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $y=\dfrac{k}{\sqrt{x}}$，$60=\dfrac{k}{5}$，$k=300$。</div><div class="p-step"><b>第 2 步.</b> $y=\dfrac{300}{\sqrt{x}}$；$x=100$ 時 $y=30$。</div><div class="p-step"><b>第 3 步.</b> 減少了 $30$。</div>
+        <div class="p-ans">答案：(a) $y=\dfrac{300}{\sqrt{x}}$；(b) 減少 $30$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q7.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

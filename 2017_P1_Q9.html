@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第9題 · 誤差 · 標準瓶的容量</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第9題</span>
+    <h1>先寫出上下限，再判斷是否可能</h1>
+    <p class="sub">估算 · 誤差 · 範圍</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若某瓶的容量量度為 $200\text{ mL}$（準確至最接近的 $10\text{ mL}$），則該瓶稱為標準瓶。
+<br>(a) 求標準瓶容量的最小可能值。
+<br>(b) 有人聲稱 120 個標準瓶的總容量可量度為 $23.3\text{ L}$（準確至最接近的 $0.1\text{ L}$）。你是否同意？試解釋。<span class="marks">[5 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 寫出容量的範圍</div><div class="rule"><span class="rule-name">最大誤差</span><span class="rule-math">$195\le C\lt 205$</span><span class="rule-why">準確至最接近 $10\text{ mL}$，最大誤差是 $5\text{ mL}$。</span></div>
+設一瓶的容量為 $C$：
+\[195\text{ mL}\le C\lt205\text{ mL}.\]
+所以最小可能容量是 $195\text{ mL}$。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(b) 求總容量的下限</div><div class="rule"><span class="rule-name">乘以瓶數</span><span class="rule-math">$120\times195=23400\text{ mL}$</span><span class="rule-why">總容量的最小值＝每瓶最小值 × 瓶數。</span></div>
+120 個標準瓶的總容量 $T$ 必滿足
+\[T\ge120\times195=23400\text{ mL}=23.4\text{ L}.\]
+（上界同理為 $120\times205=24600\text{ mL}=24.6\text{ L}$，但不含等號。）
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 對照聲稱的準確度</div><div class="rule"><span class="rule-name">準確至 0.1 L</span><span class="rule-math">$23.25\le T\lt23.35$</span><span class="rule-why">若總容量可量度為 $23.3\text{ L}$（準確至最接近 $0.1\text{ L}$），真值必須落在這個區間。</span></div>
+若量度值為 $23.3\text{ L}$（準確至最接近 $0.1\text{ L}$），則
+\[23.25\text{ L}\le T\lt23.35\text{ L}.\]
+但我們已知 $T\ge23.4\text{ L}$，兩個範圍沒有交集。
+<br>所以<strong>不同意</strong>：總容量最少已是 $23.4\text{ L}$，不可能量度為 $23.3\text{ L}$。
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $195\text{ mL}$；(b) 不同意，總容量 $\ge23.4\text{ L}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 某盒朱古力標示淨重 $250\text{ g}$（準確至最接近的 $5\text{ g}$）。(a) 求最小可能淨重。(b) 8 盒的總淨重可否量度為 $1.99\text{ kg}$（準確至最接近 $0.01\text{ kg}$）？試解釋。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $247.5\le W\lt252.5$，最小 $247.5\text{ g}$。</div><div class="p-step"><b>第 2 步.</b> 8 盒總重 $\ge8\times247.5=1980\text{ g}=1.98\text{ kg}$。</div><div class="p-step"><b>第 3 步.</b> $1.99\text{ kg}$（準確至 $0.01\text{ kg}$）即 $1.985\le T\lt1.995$，與 $T\ge1.98$ 有交集（例如 $1.99$），故<b>可能</b>。</div>
+        <div class="p-ans">答案：(a) $247.5\text{ g}$；(b) 可能</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

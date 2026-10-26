@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第11題 · 統計 · 幹葉圖</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第11題</span>
+    <h1>先用平均數與全距定 $a$、$b$</h1>
+    <p class="sub">統計 · 幹葉圖 · 標準差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的幹葉圖顯示某組工人的時薪（以元為單位）分佈。
+<table class="dtable"><tr><th>幹（十位）</th><th colspan="9">葉（個位）</th></tr>
+<tr><td>6</td><td>1</td><td>1</td><td>1</td><td>3</td><td>4</td><td>6</td><td>8</td><td>9</td><td>9</td></tr>
+<tr><td>7</td><td><i>a</i></td><td>7</td><td>7</td><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td>1</td><td><i>b</i></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+已知上述分佈的平均數及全距分別為 ＄70 及 ＄22。
+<br>(a) 求上述分佈的中位數及標準差。<span class="marks">[5 分]</span>
+<br>(b) 若從該組隨機選出一名工人，求所選工人的時薪超過 ＄70 的概率。<span class="marks">[2 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 用全距定 $b$</div><div class="rule"><span class="rule-name">全距</span><span class="rule-math">$(80+b)-61=22$</span><span class="rule-why">全距＝最大値 − 最小値；最小值是 $61$，最大值是 $80+b$。</span></div>
+全距 $=22$，而最小值為 $61$：
+\[(80+b)-61=22\ \Longrightarrow\ b=3.\]
+所以八位字頭是 $81$、$83$。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(a) 用平均數定 $a$</div><div class="rule"><span class="rule-name">平均數</span><span class="rule-math">總和 $=15\times70=1050$</span><span class="rule-why">15 個數據的平均數為 70，故總和為 1050；未定的兩項是 $(70+a)$ 與 $83$。</span></div>
+把已定的數據相加（暫不含 $a$）：
+\[61\times3+63+64+66+68+69\times2+70+77+77+78+81+83=1048.\]
+再加上 $(70+a)$ 中的 $a$，總和應為 $1050$：
+\[1048+a=1050\ \Longrightarrow\ a=2.\]
+數據為 $61,61,61,63,64,66,68,69,69,72,77,77,78,81,83$。
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(a) 求中位數與標準差</div><div class="rule"><span class="rule-name">中位數、標準差</span><span class="rule-math">中位數 $=69$，標準差 $\approx7.33$</span><span class="rule-why">15 個數據的中位數是第 8 個；標準差 $=\sqrt{\dfrac{\sum(x-\bar{x})^{2}}{15}}$。</span></div>
+排序後第 8 個數據是 $69$，故<strong>中位數 $=＄69$</strong>。
+<br>各數據與 $70$ 的差：$-9,-9,-9,-7,-6,-4,-2,-1,-1,2,7,7,8,11,13$，平方和
+\[=81\times3+49+36+16+4+1+1+4+49\times2+64+121+169=806.\]
+\[\text{標準差}=\sqrt{\frac{806}{15}}\approx7.33.\]
+即標準差約為 ＄7.33。
+</div>
+<div class="step"><span class="step-tag">第 4 步</span><div class="step-title">(b) 數出超過 ＄70 的工人</div><div class="rule"><span class="rule-name">概率</span><span class="rule-math">$\dfrac{6}{15}=\dfrac25$</span><span class="rule-why">超過 ＄70 的數據：$72,77,77,78,81,83$。</span></div>
+時薪超過 ＄70 的有 $6$ 人，總人數 $15$：
+\[P=\frac{6}{15}=\frac25.\]
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) 中位數 ＄69，標準差 $\approx$ ＄7.33；(b) $\dfrac25$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 某組數據的幹葉圖為：幹 5，葉 2、4、4、7；幹 6，葉 1、3、<i>a</i>；幹 7，葉 0、<i>b</i>（共 9 個數據）。已知平均數為 61、全距為 22，求 $a$、$b$。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 全距：$(70+b)-52=22\ \Rightarrow\ b=4$。</div><div class="p-step"><b>第 2 步.</b> 平均數：總和 $=9\times61=549$。</div><div class="p-step"><b>第 3 步.</b> $52+54+54+57+61+63+(60+a)+70+74=549\ \Rightarrow\ a=4$。</div>
+        <div class="p-ans">答案：$a=4$，$b=4$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

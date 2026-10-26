@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第7題 · 統計 · 圓形圖與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第7題</span>
+    <h1>角度就是概率的「百分率」</h1>
+    <p class="sub">統計 · 圓形圖 · 概率</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的圓形圖顯示某校學生出生季節的分佈。若從該校隨機選出一名學生，則選中在春季出生的學生的概率為 $\dfrac19$。
+<br>(a) 求 $x$。
+<br>(b) 該校有 180 名學生在冬季出生，求該校的學生人數。<span class="marks">[4 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 用概率定出圓心角</div><div class="rule"><span class="rule-name">角度與概率</span><span class="rule-math">$\dfrac{x}{360}=\dfrac19$</span><span class="rule-why">概率＝該扇形圓心角 ÷ $360^{\circ}$。</span></div>
+\[\frac{x}{360}=\frac19\ \Longrightarrow\ x=\frac{360}{9}=40^{\circ}.\]
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(b) 先求冬季的圓心角</div><div class="rule"><span class="rule-name">角度和</span><span class="rule-math">$360-90-158-40=72$</span><span class="rule-why">秋季是直角（圖中標示），夏季 $158^{\circ}$，春季 $40^{\circ}$。</span></div>
+冬季的圓心角
+\[=360^{\circ}-90^{\circ}-158^{\circ}-40^{\circ}=72^{\circ}.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 按比例求人數</div><div class="rule"><span class="rule-name">比例</span><span class="rule-math">$\dfrac{n}{360}=\dfrac{180}{72}$</span><span class="rule-why">總人數對應 $360^{\circ}$，180 人對應 $72^{\circ}$。</span></div>
+\[\frac{n}{360}=\frac{180}{72}\ \Longrightarrow\ n=\frac{180\times360}{72}=900.\]
+該校共有 $900$ 名學生。    <figure class="fig">
+      <svg viewBox="0 0 340 310" width="340" height="310" role="img" aria-label="學生出生季節的圓形圖">
+        <path d="M170,150 L285.0,150.0 A115,115 0 0 1 63.4,193.1 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M170,150 L63.4,193.1 A115,115 0 0 1 126.9,43.4 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M170,150 L126.9,43.4 A115,115 0 0 1 258.1,76.1 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M170,150 L258.1,76.1 A115,115 0 0 1 285.0,150.0 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M170,150 L233,150 L233,190" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="95" y="75" width="12" height="12" fill="none" stroke="currentColor"/>
+        <text x="184" y="220" text-anchor="middle" font-size="12" fill="currentColor">Summer</text>
+        <text x="104" y="122" text-anchor="middle" font-size="12" fill="currentColor">Autumn</text>
+        <text x="187" y="81" text-anchor="middle" font-size="12" fill="currentColor">Winter</text>
+        <text x="237" y="126" text-anchor="middle" font-size="12" fill="currentColor">Spring</text>
+        <text x="200" y="132" font-size="12" fill="currentColor">158°</text>
+        <text x="182" y="184" font-size="12" font-style="italic" fill="currentColor">x</text>
+      </svg>
+      <figcaption>四類季節的出生人數分佈（圓心角以度為單位）。</figcaption>
+    </figure>
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x=40^{\circ}$；(b) $900$ 人</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 某校學生的出生季節圓形圖中，夏季佔 $120^{\circ}$、秋季佔 $90^{\circ}$、冬季佔 $100^{\circ}$，其餘為春季。若有 150 名學生在春季出生，求該校學生人數。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 春季圓心角 $=360-120-90-100=50^{\circ}$。</div><div class="p-step"><b>第 2 步.</b> $\dfrac{n}{360}=\dfrac{150}{50}$。</div><div class="p-step"><b>第 3 步.</b> $n=1080$。</div>
+        <div class="p-ans">答案：$1080$ 人</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q8.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

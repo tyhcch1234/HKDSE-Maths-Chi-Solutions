@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第6題 · 坐標幾何 · 旋轉與反射</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第6題</span>
+    <h1>先寫出 $A'$、$B'$，再算斜率</h1>
+    <p class="sub">坐標幾何 · 旋轉 · 反射 · 垂直</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$、$B$ 的坐標分別為 $(-3,4)$ 及 $(9,-9)$。$A$ 繞原點逆時針旋轉 $90^{\circ}$ 至 $A'$；$B'$ 是 $B$ 對 $x$ 軸的反射影像。
+<br>(a) 寫出 $A'$ 及 $B'$ 的坐標。
+<br>(b) 證明 $AB$ 垂直於 $A'B'$。<span class="marks">[4 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 旋轉 $90^{\circ}$</div><div class="rule"><span class="rule-name">旋轉公式</span><span class="rule-math">$(x,y)\to(-y,x)$</span><span class="rule-why">繞原點逆時針轉 $90^{\circ}$：$(x,y)\mapsto(-y,x)$。</span></div>
+\[A(-3,4)\ \longrightarrow\ A'(-4,-3).\]
+（$-3$ 與 $4$ 交換位置，新的 $x$ 坐標取原本 $y$ 的相反數。）
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(a) 對 $x$ 軸反射</div><div class="rule"><span class="rule-name">反射公式</span><span class="rule-math">$(x,y)\to(x,-y)$</span><span class="rule-why">對 $x$ 軸反射只改變 $y$ 的符號。</span></div>
+\[B(9,-9)\ \longrightarrow\ B'(9,9).\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 算兩條線的斜率</div><div class="rule"><span class="rule-name">斜率</span><span class="rule-math">$m_{AB}=\dfrac{-9-4}{9-(-3)}=-\dfrac{13}{12}$，$m_{A\'B\'}=\dfrac{9+3}{9+4}=\dfrac{12}{13}$</span><span class="rule-why">$m=\dfrac{y_2-y_1}{x_2-x_1}$。</span></div>
+\[m_{AB}=\frac{-9-4}{9-(-3)}=\frac{-13}{12},\qquad
+m_{A'B'}=\frac{9-(-3)}{9-(-4)}=\frac{12}{13}.\]
+\[m_{AB}\times m_{A'B'}=-\frac{13}{12}\times\frac{12}{13}=-1.\]
+兩線斜率的乘積為 $-1$，故 $AB\perp A'B'$。
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) $A'(-4,-3)$，$B'(9,9)$；(b) 見題解</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 點 $A$、$B$ 的坐標分別為 $(2,5)$ 及 $(-6,1)$。$A$ 繞原點順時針旋轉 $90^{\circ}$ 至 $A'$；$B'$ 是 $B$ 對 $y$ 軸的反射影像。求 $A'$、$B'$ 的坐標。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> 順時針 $90^{\circ}$：$(x,y)\mapsto(y,-x)$，故 $A\'(5,-2)$。</div><div class="p-step"><b>第 2 步.</b> 對 $y$ 軸反射：$(x,y)\mapsto(-x,y)$，故 $B\'(6,1)$。</div><div class="p-step"><b>第 3 步.</b> 答案 $A\'(5,-2)$、$B\'(6,1)$。</div>
+        <div class="p-ans">答案：$A'(5,-2)$，$B'(6,1)$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q5.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q7.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

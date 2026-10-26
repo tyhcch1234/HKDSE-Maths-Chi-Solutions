@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷一 第10題 · 幾何 · 全等與扇形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷一 · 第10題</span>
+    <h1>先 SSS 全等，再用圓心角</h1>
+    <p class="sub">幾何 · 全等三角形 · 圓 · 扇形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 1 中，$OPQR$ 為四邊形，$OP=OQ=OR$。$OQ$ 與 $PR$ 相交於點 $S$，$S$ 是 $PR$ 的中點。
+<br>(a) 證明 $\triangle OPS\cong\triangle ORS$。<span class="marks">[2 分]</span>
+<br>(b) 已知 $O$ 為通過 $P$、$Q$、$R$ 的圓的圓心。若 $OQ=6\text{ cm}$ 及 $\angle PRQ=10^{\circ}$，求扇形 $OPQR$ 的面積（以 $\pi$ 表示）。<span class="marks">[4 分]</span>
+    </div>
+    
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step"><span class="step-tag">第 1 步</span><div class="step-title">(a) 用 SSS 證明全等</div><div class="rule"><span class="rule-name">全等條件</span><span class="rule-math">$OP=OR$、$PS=RS$、$OS=OS$</span><span class="rule-why">三對對應邊相等，故 SSS。</span></div>
+在 $\triangle OPS$ 與 $\triangle ORS$ 中：
+\[OP=OR\ (\text{已知}),\quad PS=RS\ (S\text{ 為中點}),\quad OS=OS\ (\text{公共邊}).\]
+所以 $\triangle OPS\cong\triangle ORS$（SSS）。
+</div>
+<div class="step"><span class="step-tag">第 2 步</span><div class="step-title">(b) 先求 $\angle POQ$，再找 $\angle POR$</div><div class="rule"><span class="rule-name">圓心角 vs 圓周角</span><span class="rule-math">$\angle POQ=2\angle PRQ=20^{\circ}$</span><span class="rule-why">同弧 $PQ$ 所對的圓心角是圓周角的兩倍。</span></div>
+$\angle POQ$ 與 $\angle PRQ$ 同對弧 $PQ$，故
+\[\angle POQ=2\angle PRQ=2\times10^{\circ}=20^{\circ}.\]
+又 $OP=OR$ 且 $S$ 為 $PR$ 中點，故 $OS\perp PR$；由 (a) 的對稱性，
+$OQ$ 是 $PR$ 的垂直平分線，反射後 $P\leftrightarrow R$，所以
+\[\angle QOR=\angle POQ=20^{\circ}.\]
+\[\therefore\ \angle POR=20^{\circ}+20^{\circ}=40^{\circ}.\]
+</div>
+<div class="step"><span class="step-tag">第 3 步</span><div class="step-title">(b) 求圓心角與扇形面積</div><div class="rule"><span class="rule-name">扇形面積</span><span class="rule-math">$\dfrac{40}{360}\times\pi(6)^{2}=4\pi$</span><span class="rule-why">扇形面積 $=\dfrac{\theta}{360}\pi r^{2}$。</span></div>
+由全等關係（$Q$ 在 $OR$ 的對稱位置）得
+\[\angle QOR=\angle POQ=20^{\circ},\quad \angle POR=40^{\circ}.\]
+\[\text{扇形 }OPQR\text{ 面積}=\frac{40}{360}\times\pi\times6^{2}=4\pi\text{ cm}^{2}.\]
+    <figure class="fig">
+      <svg viewBox="0 0 380 280" width="380" height="280" role="img" aria-label="四邊形 OPQR，對角線 OQ 與 PR 交於 S">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M40 240 L200 70 L270 180 L340 240 Z"/>
+          <line x1="40" y1="240" x2="270" y2="180"/>
+          <line x1="200" y1="70" x2="340" y2="240"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="26" y="252">O</text>
+          <text x="192" y="60">P</text>
+          <text x="276" y="176">Q</text>
+          <text x="346" y="252">R</text>
+          <text x="232" y="176">S</text>
+        </g>
+        <circle cx="40" cy="240" r="2.5" fill="currentColor"/>
+        <circle cx="200" cy="70" r="2.5" fill="currentColor"/>
+        <circle cx="270" cy="180" r="2.5" fill="currentColor"/>
+        <circle cx="340" cy="240" r="2.5" fill="currentColor"/>
+      </svg>
+      <figcaption>$OP=OQ=OR$，$OQ$ 與 $PR$ 交於 $S$，$S$ 是 $PR$ 的中點。</figcaption>
+    </figure>
+
+</div>
+    <div class="ans"><span class="lbl">答案</span>(a) 見題解；(b) $4\pi\text{ cm}^{2}$</div>
+  </div>
+  <div class="practice">
+  <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+  <div class="p-body">
+    <div class="p-q"><b>題目.</b> 圖中 $OP=OQ=OR$，$S$ 為 $PR$ 的中點。若 $OQ=9\text{ cm}$、$\angle PRQ=15^{\circ}$，求扇形 $OPQR$ 的面積（以 $\pi$ 表示）。</div>
+    
+    <details>
+      <summary>顯示題解</summary>
+      <div class="p-sol">
+        <div class="p-step"><b>第 1 步.</b> $\angle POQ=2\times15^{\circ}=30^{\circ}$，故 $\angle POR=60^{\circ}$。</div><div class="p-step"><b>第 2 步.</b> 面積 $=\dfrac{60}{360}\pi(9)^2$。</div><div class="p-step"><b>第 3 步.</b> $=\dfrac{81\pi}{6}=\dfrac{27\pi}{2}\text{ cm}^2$。</div>
+        <div class="p-ans">答案：$\dfrac{27\pi}{2}\text{ cm}^{2}$</div>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="pager"><a href="2017_P1_Q9.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P1_Q11.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
