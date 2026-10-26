@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第1題 · 分組分解</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第1題</span>
+    <h1>先分組，後抽公因式</h1>
+    <p class="sub">多項式 · 因式分解 · 四項式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $3m^{2}-5mn+2n^{2}+m-n=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(m-n)(3m-2n+1)$</li><li><span class="ol">B</span>$(m-n)(3m+2n+1)$</li><li><span class="ol">C</span>$(m+n)(3m-2n-1)$</li><li><span class="ol">D</span>$(m+n)(3m+2n-1)$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把二次部分當成一個「小包裹」</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘</span>
+        <span class="rule-math">\(3m^{2}-5mn+2n^{2}=(m-n)(3m-2n)\)</span>
+        <span class="rule-why">先只看 $m^{2}$、$mn$、$n^{2}$ 三項，用十字相乘把它們分解成兩個括號。</span>
+      </div>
+      先把前三項抽出來處理：
+\[3m^{2}-5mn+2n^{2}=(m-n)(3m-2n).\]
+驗算：$(m-n)(3m-2n)=3m^{2}-2mn-3mn+2n^{2}=3m^{2}-5mn+2n^{2}$，相符。<br>
+十字相乘的做法：左欄放 $m$ 與 $3m$（乘出 $3m^{2}$），右欄放 $-n$ 與 $-2n$（乘出 $2n^{2}$），<br>
+交叉相乘 $m\times(-2n)+3m\times(-n)=-2mn-3mn=-5mn$，正好是中項。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把餘下兩項接上，找出共同括號</div>
+      <div class="rule">
+        <span class="rule-name">分組分解</span>
+        <span class="rule-math">\(A\cdot B+A=A(B+1)\)</span>
+        <span class="rule-why">兩部分都含有同一個因式 $(m-n)$，就可以把它「抽」出來。</span>
+      </div>
+      原式 $=(m-n)(3m-2n)+(m-n)$。<br>
+留意最後的 $+m-n$ 正好是 $+(m-n)$，於是兩項有共同的 $(m-n)$：
+\[(m-n)(3m-2n)+(m-n)=(m-n)\bigl[(3m-2n)+1\bigr].\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">整理並核對選項</div>
+      <div class="rule">
+        <span class="rule-name">提出公因式</span>
+        <span class="rule-math">\(ab+a=a(b+1)\)</span>
+        <span class="rule-why">抽出的括號內只餘 $(3m-2n)+1$，這就是最後的答案。</span>
+      </div>
+      \[3m^{2}-5mn+2n^{2}+m-n=(m-n)(3m-2n+1).\]
+與選項比較，答案為 <b>A</b>。<br>
+選項 B 的常數項是 $+1$ 但中間符號變成 $+2n$，展開會得 $-mn$ 一類的項，不符；
+選項 C、D 以 $(m+n)$ 為因式，代入 $m=n$ 時原式 $=3n^{2}-5n^{2}+2n^{2}+0=0$ 看似成立，<br>
+但代入 $m=1,\ n=0$：原式 $=3+1=4$，而 $(m+n)(3m-2n-1)=1\times(3-1)=2$，明顯不符。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$(m-n)(3m-2n+1)$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $2x^{2}-3xy+y^{2}+2x-2y$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(x-y)(2x-y+2)$</li><li><span class="ol">B</span>$(x-y)(2x-y-2)$</li><li><span class="ol">C</span>$(x+y)(2x-y+2)$</li><li><span class="ol">D</span>$(x-y)(2x+y+2)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 前三項十字相乘：$2x^{2}-3xy+y^{2}=(2x-y)(x-y)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 餘下 $+2x-2y=2(x-y)$，與前面的 $(x-y)$ 有共同因式。</div>
+          <div class="p-step"><b>第 3 步.</b> 原式 $=(x-y)(2x-y)+2(x-y)=(x-y)(2x-y+2)$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$(x-y)(2x-y+2)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q2.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

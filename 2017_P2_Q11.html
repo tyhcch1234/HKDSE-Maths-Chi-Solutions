@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第11題 · 地圖比例與面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第11題</span>
+    <h1>長度比要平方才變成面積比</h1>
+    <p class="sub">率、比與變分 · 比例尺 · 面積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某地圖的比例尺為 $1:20000$。若動物園在地圖上的面積為 $4\text{ cm}^{2}$，則動物園的實際面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$8\times10^{4}\text{ m}^{2}$</li><li><span class="ol">B</span>$1.6\times10^{5}\text{ m}^{2}$</li><li><span class="ol">C</span>$3.2\times10^{5}\text{ m}^{2}$</li><li><span class="ol">D</span>$1\times10^{6}\text{ m}^{2}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">地圖與實際地形相似</div>
+      <div class="rule">
+        <span class="rule-name">相似圖形</span>
+        <span class="rule-math">$\dfrac{\text{地圖面積}}{\text{實際面積}}=\left(\dfrac{1}{20000}\right)^{2}$</span>
+        <span class="rule-why">長度按比例縮小，面積就按比例的平方縮小。</span>
+      </div>
+      比例尺 $1:20000$ 表示地圖上 $1\text{ cm}$ 代表實際 $20000\text{ cm}$。
+由於兩個圖形相似，面積比是長度比的平方：
+\[\frac{\text{地圖面積}}{\text{實際面積}}=\left(\frac{1}{20000}\right)^{2}=\frac{1}{4\times10^{8}}.\]
+最常見的錯誤是只用 $1:20000$ 這個一次方比例去乘面積。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用面積比反求實際面積</div>
+      <div class="rule">
+        <span class="rule-name">反比</span>
+        <span class="rule-math">實際面積 $=$ 地圖面積 $\times\left(20000\right)^{2}$</span>
+        <span class="rule-why">地圖面積是實際面積的 $\dfrac{1}{4\times10^{8}}$，所以反過來要乘 $4\times10^{8}$。</span>
+      </div>
+      \[4\times(20000)^{2}=4\times4\times10^{8}=1.6\times10^{9}\text{ cm}^{2}.\]
+注意單位仍是 $\text{cm}^{2}$，題目四個選項都以 $\text{m}^{2}$ 為單位。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">換算單位</div>
+      <div class="rule">
+        <span class="rule-name">面積單位換算</span>
+        <span class="rule-math">$1\text{ m}^{2}=(100\text{ cm})^{2}=10^{4}\text{ cm}^{2}$</span>
+        <span class="rule-why">由 $\text{cm}^{2}$ 轉 $\text{m}^{2}$ 要除以 $10^{4}$（不是除以 $100$）。</span>
+      </div>
+      \[1.6\times10^{9}\text{ cm}^{2}=\frac{1.6\times10^{9}}{10^{4}}\text{ m}^{2}=1.6\times10^{5}\text{ m}^{2}.\]
+答案為 <b>B</b>。<br>
+選項 A（$8\times10^{4}$）正是「只乘 20000」再加單位換算的結果；<br>
+選項 C、D 則來自把面積比誤當成 $1:40000$ 等錯誤比例。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$1.6\times10^{5}\text{ m}^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某地圖的比例尺為 $1:50000$。若某公園在地圖上的面積為 $6\text{ cm}^{2}$，則公園的實際面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3\times10^{5}\text{ m}^{2}$</li><li><span class="ol">B</span>$1.5\times10^{6}\text{ m}^{2}$</li><li><span class="ol">C</span>$3\times10^{6}\text{ m}^{2}$</li><li><span class="ol">D</span>$1.5\times10^{7}\text{ m}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 面積比 $=\left(\dfrac{1}{50000}\right)^{2}=\dfrac{1}{2.5\times10^{9}}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 實際面積 $=6\times2.5\times10^{9}=1.5\times10^{10}\text{ cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 除以 $10^{4}$：$1.5\times10^{6}\text{ m}^{2}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$1.5\times10^{6}\text{ m}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q10.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q12.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第2題 · 指數運算</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第2題</span>
+    <h1>先把底數統一，再合併指數</h1>
+    <p class="sub">指數定律 · 同底數冪</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\left(\dfrac{1}{9^{555}}\right)3^{444}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$\dfrac{1}{3^{111}}$</li><li><span class="ol">C</span>$\dfrac{1}{3^{222}}$</li><li><span class="ol">D</span>$\dfrac{1}{3^{666}}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $9$ 換成 $3^{2}$</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        <span class="rule-math">\(\left(a^{m}\right)^{n}=a^{mn}\)</span>
+        <span class="rule-why">$9=3^{2}$，所以 $9^{555}=\left(3^{2}\right)^{555}=3^{1110}$，全部變成以 $3$ 為底。</span>
+      </div>
+      \[9^{555}=\left(3^{2}\right)^{555}=3^{2\times555}=3^{1110}.\]
+於是
+\[\frac{1}{9^{555}}=\frac{1}{3^{1110}}=3^{-1110}.\]
+底數統一之後，才可以和後面的 $3^{444}$ 合併。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同底數相乘，指數相加</div>
+      <div class="rule">
+        <span class="rule-name">指數相加</span>
+        <span class="rule-math">\(a^{m}\cdot a^{n}=a^{m+n}\)</span>
+        <span class="rule-why">$3^{-1110}\times3^{444}$ 的底數同為 $3$，指數直接相加：$-1110+444$。</span>
+      </div>
+      \[3^{-1110}\times3^{444}=3^{-1110+444}=3^{-666}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">負指數寫成分數</div>
+      <div class="rule">
+        <span class="rule-name">負指數</span>
+        <span class="rule-math">\(a^{-n}=\dfrac{1}{a^{n}}\)</span>
+        <span class="rule-why">題目的四個選項全部是分數，所以要把 $3^{-666}$ 寫成 $1$ 除以 $3^{666}$。</span>
+      </div>
+      \[3^{-666}=\frac{1}{3^{666}}.\]
+答案為 <b>D</b>。<br>
+其餘選項是「指數只計了一半」的常見錯誤：$1/3^{111}$ 來自 $1110\div10$ 這類無依據的約簡，<br>
+$1/3^{222}$ 來自誤把 $444$ 當成 $2\times222$ 再胡亂相加，都不符合指數定律。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{1}{3^{666}}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $\left(\dfrac{1}{27^{333}}\right)9^{500}$ 的值。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{3}$</li><li><span class="ol">B</span>$1$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$9$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $27^{333}=\left(3^{3}\right)^{333}=3^{999}$，故 $\dfrac{1}{27^{333}}=3^{-999}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $9^{500}=\left(3^{2}\right)^{500}=3^{1000}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相乘：$3^{-999}\times3^{1000}=3^{1}=3$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q1.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q3.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

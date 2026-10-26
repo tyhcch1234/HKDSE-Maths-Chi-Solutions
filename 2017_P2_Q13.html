@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第13題 · 數列與圖形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第13題</span>
+    <h1>把「每次加幾點」寫成遞推式</h1>
+    <p class="sub">公式與數列 · 遞推關係</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，第 1 個圖案由 1 點組成。對任何正整數 $n$，第 $(n+1)$ 個圖案是把 $(2n+2)$ 點加到第 $n$ 個圖案而成。求第 7 個圖案的點數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$41$</li><li><span class="ol">B</span>$55$</li><li><span class="ol">C</span>$71$</li><li><span class="ol">D</span>$161$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把文字翻譯成遞推關係</div>
+      <div class="rule">
+        <span class="rule-name">遞推式</span>
+        <span class="rule-math">$T(n+1)=T(n)+(2n+2)$，$T(1)=1$</span>
+        <span class="rule-why">$T(m)$ 表示第 $m$ 個圖案的點數；「加上 $2n+2$ 點」就是這個意思。</span>
+      </div>
+      設 $T(m)$ 為第 $m$ 個圖案的點數：
+\[T(1)=1,\qquad T(n+1)=T(n)+(2n+2).\]
+要求 $T(7)$，就要由 $T(1)$ 一層一層加上去，或把每次加的量寫成數列。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐層相加，看出每次加多少</div>
+      <div class="rule">
+        <span class="rule-name">展開遞推</span>
+        <span class="rule-math">$T(7)=T(1)+4+6+8+10+12+14$</span>
+        <span class="rule-why">由 $n=1$ 到 $n=6$，每次加 $2n+2$，即 $4,6,8,10,12,14$。</span>
+      </div>
+      \[T(7)=T(6)+14=T(5)+12+14=\cdots=T(1)+4+6+8+10+12+14.\]
+亦可先求通項：$T(n)=n^{2}+n-1$。<br>
+驗證：$T(1)=1$、$T(2)=5$、$T(3)=11$、$T(4)=19$，與圖中的 $1,5,11$ 點相符。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算總和</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        <span class="rule-math">$4+6+8+10+12+14=54$</span>
+        <span class="rule-why">六項，首項 $4$、末項 $14$，平均 $9$，故和為 $6\times9=54$。</span>
+      </div>
+      \[T(7)=1+54=55.\]
+（用通項亦得 $T(7)=7^{2}+7-1=49+6=55$。）
+答案為 <b>B</b>。<br>
+選項 D（$161$）來自把「加 $2n+2$」誤當成「乘」或其他錯誤遞推；
+選項 A（$41$）則是少加了一層。    <figure class="fig">
+      <svg viewBox="0 0 420 110" width="420" height="110" role="img" aria-label="首三個圖案的點子數目">
+        <g font-size="11" fill="#475569" font-family="Georgia,serif" text-anchor="middle">
+          <text x="40" y="100">1 點</text>
+          <text x="150" y="100">5 點</text>
+          <text x="285" y="100">11 點</text>
+        </g>
+        <g><circle cx="46.0" cy="70.0" r="3.1" fill="currentColor"/></g>
+        <g><circle cx="141.0" cy="70.0" r="3.1" fill="currentColor"/><circle cx="154.0" cy="70.0" r="3.1" fill="currentColor"/><circle cx="128.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="141.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="154.0" cy="83.0" r="3.1" fill="currentColor"/></g>
+        <g><circle cx="263.0" cy="70.0" r="3.1" fill="currentColor"/><circle cx="276.0" cy="70.0" r="3.1" fill="currentColor"/><circle cx="289.0" cy="70.0" r="3.1" fill="currentColor"/><circle cx="250.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="263.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="276.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="289.0" cy="83.0" r="3.1" fill="currentColor"/><circle cx="250.0" cy="96.0" r="3.1" fill="currentColor"/><circle cx="263.0" cy="96.0" r="3.1" fill="currentColor"/><circle cx="276.0" cy="96.0" r="3.1" fill="currentColor"/><circle cx="289.0" cy="96.0" r="3.1" fill="currentColor"/></g>
+        <g stroke="currentColor" stroke-width="1.2" fill="none">
+          <path d="M62 62 L78 62 L72 56"/>
+          <path d="M186 62 L202 62 L196 56"/>
+          <path d="M350 62 L366 62 L360 56"/>
+        </g>
+      </svg>
+      <figcaption>第 1 個圖案有 1 點；由第 $n$ 個到第 $n+1$ 個，每次加上 $2n+2$ 點。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$55$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某數列的首項為 $2$，且對任何正整數 $n$，第 $(n+1)$ 項比第 $n$ 項多 $(3n+1)$。求第 5 項。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30$</li><li><span class="ol">B</span>$36$</li><li><span class="ol">C</span>$42$</li><li><span class="ol">D</span>$48$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每次加 $3n+1$：由 $n=1$ 到 $n=4$，加 $4,7,10,13$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第 5 項 $=2+4+7+10+13$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=36$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$36$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q12.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q14.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

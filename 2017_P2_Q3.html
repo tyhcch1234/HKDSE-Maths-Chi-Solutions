@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第3題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第3題</span>
+    <h1>右邊先通分，再交叉相乘</h1>
+    <p class="sub">公式 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\dfrac{a+4b}{2a}=2+\dfrac{b}{a}$，則 $a=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{2b}{3}$</li><li><span class="ol">B</span>$\dfrac{3b}{2}$</li><li><span class="ol">C</span>$\dfrac{5b}{6}$</li><li><span class="ol">D</span>$\dfrac{6b}{5}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把右邊化為單一分數</div>
+      <div class="rule">
+        <span class="rule-name">通分</span>
+        <span class="rule-math">\(2+\dfrac{b}{a}=\dfrac{2a+b}{a}\)</span>
+        <span class="rule-why">整數 $2$ 写成 $\dfrac{2a}{a}$，就可以和 $\dfrac{b}{a}$ 合併。</span>
+      </div>
+      \[2+\frac{b}{a}=\frac{2a}{a}+\frac{b}{a}=\frac{2a+b}{a}.\]
+於是方程變成
+\[\frac{a+4b}{2a}=\frac{2a+b}{a}.\]
+右邊是一個分數，左右兩邊才可以直接比較。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">交叉相乘去分母</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        <span class="rule-math">\(\dfrac{A}{B}=\dfrac{C}{D}\iff AD=BC\ (B,D\neq0)\)</span>
+        <span class="rule-why">兩邊同乘 $2a\cdot a$，一次把兩個分母消掉。</span>
+      </div>
+      \[\frac{a+4b}{2a}=\frac{2a+b}{a}
+\ \Longrightarrow\ a(a+4b)=2a(2a+b).\]
+兩邊同除以 $a$（題目隱含 $a\neq0$）：
+\[a+4b=2(2a+b)=4a+2b.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $a$ 集中到一邊</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        <span class="rule-math">\(a+4b=4a+2b\iff -3a=-2b\)</span>
+        <span class="rule-why">含 $a$ 的項移到左邊、含 $b$ 的項移到右邊，再同除以係數。</span>
+      </div>
+      \[a+4b=4a+2b
+\ \Longrightarrow\ a-4a=2b-4b
+\ \Longrightarrow\ -3a=-2b.\]
+兩邊同除以 $-3$：
+\[a=\frac{-2b}{-3}=\frac{2b}{3}.\]
+答案為 <b>A</b>。<br>
+驗算：取 $b=3$，則 $a=2$。左邊 $=\dfrac{2+12}{4}=\dfrac{14}{4}=3.5$，<br>
+右邊 $=2+\dfrac{3}{2}=3.5$，相符。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{2b}{3}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{2x+3y}{5x}=1+\dfrac{y}{x}$，則 $x=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-\dfrac{2y}{3}$</li><li><span class="ol">B</span>$\dfrac{2y}{3}$</li><li><span class="ol">C</span>$-\dfrac{3y}{2}$</li><li><span class="ol">D</span>$\dfrac{3y}{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 右邊通分：$1+\dfrac{y}{x}=\dfrac{x+y}{x}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 交叉相乘：$2x+3y=5(x+y)=5x+5y$。</div>
+          <div class="p-step"><b>第 3 步.</b> 整理：$-3x=2y\Rightarrow x=-\dfrac{2y}{3}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$-\dfrac{2y}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q2.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q4.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

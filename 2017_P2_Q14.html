@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第14題 · 三角形面積與周界</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第14題</span>
+    <h1>同高三角形：面積比等於底邊比</h1>
+    <p class="sub">求積法 · 三角形面積 · 畢氏定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$D$ 為 $AC$ 上的一點，使 $BD\perp AC$。已知 $AC=14\text{ cm}$、$BD=12\text{ cm}$。若 $\triangle ABD$ 的面積比 $\triangle BCD$ 的面積大 $24\text{ cm}^{2}$，則 $\triangle ABC$ 的周界為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$30\text{ cm}$</li><li><span class="ol">B</span>$42\text{ cm}$</li><li><span class="ol">C</span>$54\text{ cm}$</li><li><span class="ol">D</span>$84\text{ cm}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩個三角形同高</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">$A=\dfrac{1}{2}\times\text{底}\times\text{高}$</span>
+        <span class="rule-why">兩個三角形的底分別是 $AD$ 與 $CD$，高都是 $BD=12$。</span>
+      </div>
+      設 $AD=x$，則 $CD=14-x$：
+\[\frac{1}{2}(12)(x)-\frac{1}{2}(12)(14-x)=24.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解出 $AD$ 與 $CD$</div>
+      <div class="rule">
+        <span class="rule-name">解方程</span>
+        <span class="rule-math">$6x-6(14-x)=24$</span>
+        <span class="rule-why">兩邊同除以 $6$ 之後方程會簡單得多。</span>
+      </div>
+      \[6x-6(14-x)=24
+\ \Longrightarrow\ 6(2x-14)=24
+\ \Longrightarrow\ 2x-14=4
+\ \Longrightarrow\ x=9.\]
+所以 $AD=9\text{ cm}$、$CD=14-9=5\text{ cm}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用畢氏定理求兩條斜邊</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">$AB^{2}=AD^{2}+BD^{2}$，$BC^{2}=CD^{2}+BD^{2}$</span>
+        <span class="rule-why">$\triangle ABD$ 與 $\triangle BCD$ 都是直角三角形，直角在 $D$。</span>
+      </div>
+      \[AB=\sqrt{9^{2}+12^{2}}=\sqrt{225}=15\text{ cm},\]
+\[BC=\sqrt{5^{2}+12^{2}}=\sqrt{169}=13\text{ cm}.\]
+這裡的 $9,12,15$ 與 $5,12,13$ 都是常見的整數畢氏三元組。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求周界</div>
+      <div class="rule">
+        <span class="rule-name">周界</span>
+        <span class="rule-math">$AB+BC+AC$</span>
+        <span class="rule-why">三條邊相加，注意 $AC$ 已經是整條底邊。</span>
+      </div>
+      \[\text{周界}=15+13+14=42\text{ cm}.\]
+答案為 <b>B</b>。<br>
+選項 D（$84$）是重複計算底邊（$15+13+2\times14$）的常見錯誤。    <figure class="fig">
+      <svg viewBox="0 0 260 270" width="260" height="270" role="img" aria-label="三角形 ABC，D 在 AC 上，BD 垂直 AC">
+        <polygon points="40,240 208,240 148,96" fill="currentColor" fill-opacity="0.06" stroke="none"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M40 240 L208 240 L148 96 Z"/>
+          <line x1="148" y1="240" x2="148" y2="96"/>
+          <polyline points="148,228 160,228 160,240"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="30" y="256" text-anchor="end">A</text>
+          <text x="214" y="256">C</text>
+          <text x="148" y="88" text-anchor="middle">B</text>
+          <text x="148" y="258" text-anchor="middle">D</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="72" y="232" text-anchor="middle">9 cm</text>
+          <text x="180" y="232" text-anchor="middle">5 cm</text>
+          <text x="157" y="172">12 cm</text>
+        </g>
+      </svg>
+      <figcaption>圖中 $D$ 在 $AC$ 上，$BD\perp AC$，故 $\triangle ABD$ 與 $\triangle BCD$ 同高（$BD=12$ cm）。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$42\text{ cm}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$D$ 為 $AC$ 上的一點，使 $BD\perp AC$。已知 $AC=14\text{ cm}$、$BD=12\text{ cm}$。若 $\triangle BCD$ 的面積比 $\triangle ABD$ 的面積大 $24\text{ cm}^{2}$，則 $\triangle ABC$ 的周界為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$40\text{ cm}$</li><li><span class="ol">B</span>$42\text{ cm}$</li><li><span class="ol">C</span>$44\text{ cm}$</li><li><span class="ol">D</span>$46\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $AD=x$：$\dfrac{1}{2}(12)(14-x)-\dfrac{1}{2}(12)(x)=24$。</div>
+          <div class="p-step"><b>第 2 步.</b> $6(14-2x)=24\Rightarrow14-2x=4\Rightarrow x=5$，故 $AD=5$、$CD=9$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AB=\sqrt{25+144}=13$、$BC=\sqrt{81+144}=15$，周界 $=13+15+14=42\text{ cm}$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$42\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q13.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q15.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

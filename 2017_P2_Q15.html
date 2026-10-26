@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第15題 · 圓柱與圓錐體積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第15題</span>
+    <h1>把體積比寫成一條比例式</h1>
+    <p class="sub">求積法 · 柱體與錐體體積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      直立圓錐的底半徑是直立圓柱底半徑的 2 倍，而圓柱的高是圓錐高的 3 倍。若圓錐的體積為 $36\pi\text{ cm}^{3}$，則圓柱的體積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$27\pi\text{ cm}^{3}$</li><li><span class="ol">B</span>$48\pi\text{ cm}^{3}$</li><li><span class="ol">C</span>$81\pi\text{ cm}^{3}$</li><li><span class="ol">D</span>$144\pi\text{ cm}^{3}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出兩個體積公式</div>
+      <div class="rule">
+        <span class="rule-name">體積</span>
+        <span class="rule-math">$V_{\text{柱}}=\pi r^{2}h$，$V_{\text{錐}}=\dfrac{1}{3}\pi r^{2}h$</span>
+        <span class="rule-why">注意圓錐的公式前面有 $\dfrac{1}{3}$，這是本題最容易漏掉的地方。</span>
+      </div>
+      設圓柱的底半徑為 $r_{1}$、高為 $h_{1}$；圓錐的底半徑為 $r_{2}$、高為 $h_{2}$。
+\[V_{\text{柱}}=\pi r_{1}^{2}h_{1},\qquad V_{\text{錐}}=\frac{1}{3}\pi r_{2}^{2}h_{2}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把已知的倍數關係代入</div>
+      <div class="rule">
+        <span class="rule-name">代入 $r_{2}=2r_{1}$、$h_{1}=3h_{2}$</span>
+        <span class="rule-math">$\dfrac{V_{\text{柱}}}{V_{\text{錐}}}=3\left(\dfrac{r_{1}}{r_{2}}\right)^{2}\left(\dfrac{h_{1}}{h_{2}}\right)$</span>
+        <span class="rule-why">兩式相除時，$\pi$ 會消去，剩下的就是半徑比與高比的乘積（再乘 3）。</span>
+      </div>
+      \[\frac{V_{\text{柱}}}{V_{\text{錐}}}
+=\frac{\pi r_{1}^{2}h_{1}}{\frac{1}{3}\pi r_{2}^{2}h_{2}}
+=3\left(\frac{r_{1}}{r_{2}}\right)^{2}\left(\frac{h_{1}}{h_{2}}\right)
+=3\left(\frac{1}{2}\right)^{2}(3)=\frac{9}{4}.\]
+所以圓柱的體積是圓錐的 $\dfrac{9}{4}$ 倍。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由圓錐體積求圓柱體積</div>
+      <div class="rule">
+        <span class="rule-name">比例</span>
+        <span class="rule-math">$V_{\text{柱}}=\dfrac{9}{4}\times36\pi$</span>
+        <span class="rule-why">已知圓錐體積 $36\pi$，直接乘比例即可，不必分別求出 $r$ 與 $h$。</span>
+      </div>
+      \[V_{\text{柱}}=36\pi\times\frac{9}{4}=81\pi\text{ cm}^{3}.\]
+答案為 <b>C</b>。<br>
+選項 A（$27\pi$）是漏掉「圓錐的 $\frac13$」所致（比例變成 $\frac34$）；
+選項 D（$144\pi$）則是誤把半徑比寫成 $2:1$ 的正向比例。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$81\pi\text{ cm}^{3}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直立圓錐的底半徑是直立圓柱底半徑的一半，而圓柱的高是圓錐高的 2 倍。若圓錐的體積為 $5\pi\text{ cm}^{3}$，則圓柱的體積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$15\pi\text{ cm}^{3}$</li><li><span class="ol">B</span>$30\pi\text{ cm}^{3}$</li><li><span class="ol">C</span>$120\pi\text{ cm}^{3}$</li><li><span class="ol">D</span>$240\pi\text{ cm}^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設圓柱半徑 $r_{1}$、高 $h_{1}$；圓錐半徑 $r_{2}=\dfrac{r_{1}}{2}$、高 $h_{2}=\dfrac{h_{1}}{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{V_{\text{柱}}}{V_{\text{錐}}}=3\left(\dfrac{r_{1}}{r_{2}}\right)^{2}\left(\dfrac{h_{1}}{h_{2}}\right)=3(2)^{2}(2)=24$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V_{\text{柱}}=24\times5\pi=120\pi\text{ cm}^{3}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$120\pi\text{ cm}^{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q14.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

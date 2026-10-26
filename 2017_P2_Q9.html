@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第9題 · 二次函數圖象</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第9題</span>
+    <h1>由頂點位置判斷 $p$、$q$ 的正負</h1>
+    <p class="sub">函數與圖象 · 頂點式 · 配方法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為 $y=(px+5)^{2}+q$ 的圖象，其中 $p$、$q$ 為常數。下列何者正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$p<0$ 且 $q<0$</li><li><span class="ol">B</span>$p<0$ 且 $q>0$</li><li><span class="ol">C</span>$p>0$ 且 $q<0$</li><li><span class="ol">D</span>$p>0$ 且 $q>0$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把式子寫成標準頂點式</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">$y=a(x-h)^{2}+k\Rightarrow$ 頂點 $(h,k)$</span>
+        <span class="rule-why">先把括號內的 $p$ 抽出來，化成 $y=a(x-h)^{2}+k$ 的形式。</span>
+      </div>
+      \[y=(px+5)^{2}+q=p^{2}\left(x+\frac{5}{p}\right)^{2}+q.\]
+與 $y=a(x-h)^{2}+k$ 比較：
+\[a=p^{2},\qquad h=-\frac{5}{p},\qquad k=q.\]
+所以頂點是 $\left(-\dfrac{5}{p},\ q\right)$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由圖象讀出頂點在哪一象限</div>
+      <div class="rule">
+        <span class="rule-name">讀圖</span>
+        <span class="rule-math">頂點在第三象限 $\Rightarrow h<0,\ k<0$</span>
+        <span class="rule-why">圖中最低點同時在 $y$ 軸左邊、$x$ 軸下方。</span>
+      </div>
+      圖中曲線開口向上，最低點（頂點）位於 $y$ 軸左方、$x$ 軸下方，即第三象限：
+\[h=-\frac{5}{p}<0,\qquad k=q<0.\]
+所以 $q<0$ 立即確定，答案只可能在 A 或 C。    <figure class="fig">
+      <svg viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="拋物線 y=(px+5)^2+q，頂點在第三象限">
+        <line x1="20" y1="150" x2="390" y2="150" stroke="currentColor" stroke-width="1.3"/>
+        <polygon points="390,150 380,146 380,154" fill="currentColor"/>
+        <line x1="210" y1="235" x2="210" y2="20" stroke="currentColor" stroke-width="1.3"/>
+        <polygon points="210,20 206,30 214,30" fill="currentColor"/>
+        <polyline points="48.0,-158.6 52.5,-124.9 57.0,-92.8 61.5,-62.2 66.0,-33.4 70.5,-6.1 75.0,19.6 79.5,43.6 84.0,66.0 88.5,86.8 93.0,106.0 97.5,123.5 102.0,139.4 106.5,153.8 111.0,166.4 115.5,177.5 120.0,187.0 124.5,194.8 129.0,201.0 133.5,205.6 138.0,208.6 142.5,209.9 147.0,209.6 151.5,207.7 156.0,204.2 160.5,199.1 165.0,192.4 169.5,184.0 174.0,174.0 178.5,162.4 183.0,149.2 187.5,134.3 192.0,117.8 196.5,99.7 201.0,80.0 205.5,58.7 210.0,35.8 214.5,11.2 219.0,-15.0 223.5,-42.8 228.0,-72.2 232.5,-103.3" fill="none" stroke="#1d4ed8" stroke-width="2.2"/>
+        <circle cx="144.0" cy="210.0" r="3.5" fill="#dc2626"/>
+        <text x="128" y="228" font-size="12" fill="#dc2626" font-family="Georgia,serif">頂點</text>
+        <text x="192" y="170" font-size="13" font-style="italic" font-family="Georgia,serif">O</text>
+        <text x="372" y="168" font-size="13" font-style="italic" font-family="Georgia,serif">x</text>
+        <text x="218" y="34" font-size="13" font-style="italic" font-family="Georgia,serif">y</text>
+        <text x="40" y="42" font-size="13" font-family="Georgia,serif">y = (px+5)² + q</text>
+      </svg>
+      <figcaption>圖中曲線開口向上、頂點在第三象限（$x<0$、$y<0$），且與 $y$ 軸交於正數位置。</figcaption>
+    </figure>
+
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">判斷 $p$ 的正負</div>
+      <div class="rule">
+        <span class="rule-name">不等號</span>
+        <span class="rule-math">$-\dfrac{5}{p}<0\iff p>0$</span>
+        <span class="rule-why">$-5$ 本身是負數，要令整個分數為負，分母 $p$ 必須是正數。</span>
+      </div>
+      由 $-\dfrac{5}{p}<0$，兩邊乘 $-1$ 並反號得 $\dfrac{5}{p}>0$，故 $p>0$。
+（也可直接想：分子 $-5<0$，分數要為負，分母必須與分子同號，即 $p>0$。）
+所以 $p>0$ 且 $q<0$，答案為 <b>C</b>。<br>
+順帶檢查 $y$ 截距：$x=0$ 時 $y=25+q$，圖中截距為正，與 $q<0$ 並不矛盾（只要 $q>-25$）。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$p>0$ 且 $q<0$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中所示為 $y=(ax-4)^{2}+b$ 的圖象，其頂點位於第四象限。下列何者正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$a<0$ 且 $b<0$</li><li><span class="ol">B</span>$a>0$ 且 $b<0$</li><li><span class="ol">C</span>$a>0$ 且 $b>0$</li><li><span class="ol">D</span>$a<0$ 且 $b>0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $y=a^{2}\left(x-\dfrac{4}{a}\right)^{2}+b$，頂點為 $\left(\dfrac{4}{a},\ b\right)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第四象限：$\dfrac{4}{a}>0$ 且 $b<0$，故 $a>0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 所以 $a>0$ 且 $b<0$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$a>0$ 且 $b<0$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q8.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q10.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

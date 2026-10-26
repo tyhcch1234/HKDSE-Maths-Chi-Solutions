@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第10題 · 複利息</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第10題</span>
+    <h1>半年計息一次：利率與期數都要調整</h1>
+    <p class="sub">百分數 · 複利息</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把 ＄2000 存入銀行，年利率 $5\%$，為期 4 年，每半年計息一次。求利息（準確至最接近的元）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>＄400</li><li><span class="ol">B</span>＄431</li><li><span class="ol">C</span>＄437</li><li><span class="ol">D</span>＄440</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出複利息公式</div>
+      <div class="rule">
+        <span class="rule-name">複利息</span>
+        <span class="rule-math">$A=P\left(1+\dfrac{r}{n}\right)^{nt}$</span>
+        <span class="rule-why">$P$ 為本金、$r$ 為年利率、$n$ 為每年計息次數、$t$ 為年數。</span>
+      </div>
+      本題 $P=2000$、$r=5\%=0.05$、$t=4$，「每半年計息一次」即 $n=2$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">調整每期利率與期數</div>
+      <div class="rule">
+        <span class="rule-name">每期利率與總期數</span>
+        <span class="rule-math">$\dfrac{5\%}{2}=2.5\%,\qquad 2\times4=8$ 期</span>
+        <span class="rule-why">半年一期，所以每期利率要除以 2，期數要乘以 2。</span>
+      </div>
+      \[A=2000\left(1+\frac{0.05}{2}\right)^{2\times4}=2000(1.025)^{8}.\]
+只把利率除以 2 而忘記把期數乘以 2（用 4 期），就會得到偏低的答案。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算本利和，再減去本金</div>
+      <div class="rule">
+        <span class="rule-name">利息 $=A-P$</span>
+        <span class="rule-math">$2000(1.025)^{8}-2000$</span>
+        <span class="rule-why">題目問的是「利息」，不是「本利和」。</span>
+      </div>
+      \[(1.025)^{8}\approx1.2184029,\qquad A\approx2436.81.\]
+\[\text{利息}\approx2436.81-2000=436.81\approx＄437.\]
+答案為 <b>C</b>。<br>
+選項 A（＄400）是單利息 $2000\times5\%\times4=400$ 的結果，正是忽略「複利」的陷阱；
+選項 B（＄431）則是誤用「每年計息一次」：$2000(1.05)^{4}-2000\approx431$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（＄437）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 ＄5000 存入銀行，年利率 $4\%$，為期 3 年，每季計息一次。求利息（準確至最接近的元）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>＄600</li><li><span class="ol">B</span>＄624</li><li><span class="ol">C</span>＄634</li><li><span class="ol">D</span>＄648</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每季計息：每期利率 $=\dfrac{4\%}{4}=1\%$，期數 $=4\times3=12$。</div>
+          <div class="p-step"><b>第 2 步.</b> 本利和 $=5000(1.01)^{12}\approx5000\times1.126825=5634.13$。</div>
+          <div class="p-step"><b>第 3 步.</b> 利息 $\approx5634.13-5000=634.13\approx＄634$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（＄634）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q9.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q11.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

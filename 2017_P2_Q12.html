@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第12題 · 變分</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第12題</span>
+    <h1>$y$ 由「常數部分」與「$x^{2}$ 部分」相加</h1>
+    <p class="sub">變分 · 聯立方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $y$ 由兩部分組成：一部分為常數，另一部分隨 $x^{2}$ 正變。當 $x=1$ 時 $y=7$；當 $x=2$ 時 $y=13$。若 $x=3$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$19$</li><li><span class="ol">B</span>$20$</li><li><span class="ol">C</span>$23$</li><li><span class="ol">D</span>$47$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">按題意寫出關係式</div>
+      <div class="rule">
+        <span class="rule-name">正變</span>
+        <span class="rule-math">$y=k_{1}+k_{2}x^{2}$</span>
+        <span class="rule-why">「一部分為常數」寫成 $k_{1}$；「隨 $x^{2}$ 正變」寫成 $k_{2}x^{2}$。</span>
+      </div>
+      \[y=k_{1}+k_{2}x^{2},\]
+其中 $k_{1}$、$k_{2}$ 為非零常數。注意 $k_{1}$ 不是 $k_{2}$ 的倍數，兩個常數要分別求出。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">代入兩組已知值，解聯立方程</div>
+      <div class="rule">
+        <span class="rule-name">聯立方程</span>
+        <span class="rule-math">（1）$k_{1}+k_{2}=7$，（2）$k_{1}+4k_{2}=13$</span>
+        <span class="rule-why">$x=1$ 時 $x^{2}=1$；$x=2$ 時 $x^{2}=4$。</span>
+      </div>
+      \[\begin{cases}k_{1}+k_{2}=7 & (1)\\ k_{1}+4k_{2}=13 & (2)\end{cases}\]
+(2) $-$ (1)：$3k_{2}=6$，故 $k_{2}=2$，代回 (1) 得 $k_{1}=5$。
+所以
+\[y=5+2x^{2}.\]
+（$x=3$ 不可以用來求常數，它正是要回答的部分。）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $x=3$</div>
+      <div class="rule">
+        <span class="rule-name">代入</span>
+        <span class="rule-math">$y=5+2(3)^{2}$</span>
+        <span class="rule-why">先算 $3^{2}=9$，再乘 $2$，最後加 $5$。</span>
+      </div>
+      \[y=5+2(9)=5+18=23.\]
+答案為 <b>C</b>。<br>
+選項 D（$47$）來自把 $2x^{2}$ 誤算成 $2\times3^{2}=18$ 後再乘 2 之類的運算錯誤；
+選項 A（$19$）來自假設 $y$ 與 $x^{2}$ 成正比（$y=kx^{2}$）的錯誤模型。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$23$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $y$ 由兩部分組成：一部分為常數，另一部分隨 $x^{2}$ 正變。當 $x=1$ 時 $y=9$；當 $x=2$ 時 $y=33$。若 $x=3$，則 $y=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$57$</li><li><span class="ol">B</span>$65$</li><li><span class="ol">C</span>$73$</li><li><span class="ol">D</span>$81$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $y=k_{1}+k_{2}x^{2}$，得 $k_{1}+k_{2}=9$、$k_{1}+4k_{2}=33$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相減：$3k_{2}=24\Rightarrow k_{2}=8$，故 $k_{1}=1$，$y=1+8x^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=3$：$y=1+8(9)=73$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$73$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q11.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q13.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
