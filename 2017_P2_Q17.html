@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第17題 · 等邊三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第17題</span>
+    <h1>用 $60^{\circ}$ 造出一對相似三角形</h1>
+    <p class="sub">幾何 · 相似三角形 · 等邊三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABC$ 為邊長 $16\text{ cm}$ 的等邊三角形。$D$、$E$ 分別為 $AB$、$BC$ 上的點，使 $AD=4\text{ cm}$ 及 $\angle CDE=60^{\circ}$。求 $CE$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$9\text{ cm}$</li><li><span class="ol">B</span>$10\text{ cm}$</li><li><span class="ol">C</span>$12\text{ cm}$</li><li><span class="ol">D</span>$13\text{ cm}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出 $\triangle ACD$ 與 $\triangle BDE$ 的等角</div>
+      <div class="rule">
+        <span class="rule-name">等邊三角形</span>
+        <span class="rule-math">$\angle CAD=\angle DBE=60^{\circ}$</span>
+        <span class="rule-why">等邊三角形的三個內角都是 $60^{\circ}$，$A$ 與 $B$ 的角都是 $60^{\circ}$。</span>
+      </div>
+      在 $\triangle ACD$ 中，$\angle CAD=60^{\circ}$；在 $\triangle BDE$ 中，$\angle DBE=60^{\circ}$，所以已有一組等角。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用直線上的角證明另一組等角</div>
+      <div class="rule">
+        <span class="rule-name">直線上的角</span>
+        <span class="rule-math">$\angle ADC+\angle CDE+\angle EDB=180^{\circ}$</span>
+        <span class="rule-why">$A$、$D$、$B$ 在同一直線上，$D$ 點周圍的三個角相加為 $180^{\circ}$。</span>
+      </div>
+      由 $\angle CDE=60^{\circ}$：
+\[\angle ADC+\angle EDB=180^{\circ}-60^{\circ}=120^{\circ}.\]
+在 $\triangle ACD$ 中：
+\[\angle ACD=180^{\circ}-60^{\circ}-\angle ADC=120^{\circ}-\angle ADC=\angle EDB.\]
+所以 $\triangle ACD\sim\triangle BDE$（AAA）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用對應邊求 $BE$，再求 $CE$</div>
+      <div class="rule">
+        <span class="rule-name">對應邊成比例</span>
+        <span class="rule-math">$\dfrac{AC}{BD}=\dfrac{AD}{BE}$</span>
+        <span class="rule-why">$AC$ 對應 $BD$（都是 $60^{\circ}$ 角的對邊），$AD$ 對應 $BE$。</span>
+      </div>
+      $AC=16$，$BD=AB-AD=16-4=12$，故
+\[\frac{AC}{BD}=\frac{16}{12}=\frac{4}{3},\qquad
+\frac{AD}{BE}=\frac{4}{BE}=\frac{4}{3}
+\ \Longrightarrow\ BE=3\text{ cm}.\]
+於是
+\[CE=BC-BE=16-3=13\text{ cm}.\]
+答案為 <b>D</b>。    <figure class="fig">
+      <svg viewBox="0 0 320 270" width="320" height="270" role="img" aria-label="等邊三角形 ABC，D 在 AB 上，E 在 BC 上">
+        <polygon points="40,250 280,250 160,42" fill="currentColor" fill-opacity="0.05" stroke="none"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M40 250 L280 250 L160 42 Z"/>
+          <line x1="160" y1="42" x2="100" y2="250"/>
+          <line x1="100" y1="250" x2="257.5" y2="211"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="30" y="266">A</text>
+          <text x="286" y="266">B</text>
+          <text x="156" y="34" text-anchor="middle">C</text>
+          <text x="96" y="266" text-anchor="middle">D</text>
+          <text x="266" y="208">E</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="62" y="242">4 cm</text>
+          <text x="269" y="240">16 cm</text>
+        </g>
+      </svg>
+      <figcaption>等邊三角形 $ABC$ 邊長 16 cm，$AD=4$ cm，$E$ 在 $BC$ 上且 $ngle CDE=60^{\circ}$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$13\text{ cm}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$ABC$ 為邊長 $16\text{ cm}$ 的等邊三角形。$D$、$E$ 分別在 $AB$、$BC$ 上，使 $AD=8\text{ cm}$ 及 $\angle CDE=60^{\circ}$。求 $CE$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$9\text{ cm}$</li><li><span class="ol">B</span>$10\text{ cm}$</li><li><span class="ol">C</span>$12\text{ cm}$</li><li><span class="ol">D</span>$13\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同理 $\triangle ACD\sim\triangle BDE$，故 $\dfrac{AC}{BD}=\dfrac{AD}{BE}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AC=16$，$BD=16-8=8$，故 $\dfrac{AC}{BD}=2$，即 $\dfrac{AD}{BE}=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> $BE=\dfrac{8}{2}=4$，$CE=16-4=12\text{ cm}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$12\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q16.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q18.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第16題 · 平行四邊形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第16題</span>
+    <h1>先找相似三角形，再比較同高</h1>
+    <p class="sub">求積法 · 相似三角形 · 平行四邊形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 與 $BEDF$ 均為平行四邊形。$E$ 為 $BC$ 上的一點，使 $BE:EC=2:3$。$AC$ 分別與 $BF$、$DE$ 交於 $G$、$H$。若 $\triangle ABG$ 的面積為 $135\text{ cm}^{2}$，則四邊形 $DFGH$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$60\text{ cm}^{2}$</li><li><span class="ol">B</span>$81\text{ cm}^{2}$</li><li><span class="ol">C</span>$90\text{ cm}^{2}$</li><li><span class="ol">D</span>$144\text{ cm}^{2}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先證 $\triangle AFG\sim\triangle CBG$</div>
+      <div class="rule">
+        <span class="rule-name">AAA 相似</span>
+        <span class="rule-math">兩組內錯角相等 $\Rightarrow$ 相似</span>
+        <span class="rule-why">$AD\parallel BC$，故 $AF\parallel BC$，內錯角相等；對頂角亦相等。</span>
+      </div>
+      在 $\triangle AFG$ 與 $\triangle CBG$ 中：
+\[\angle AGF=\angle CGB\ (\text{對頂角}),\quad
+\angle GAF=\angle GCB\ (\text{內錯角}),\quad
+\angle GFA=\angle GBC\ (\text{內錯角}).\]
+所以 $\triangle AFG\sim\triangle CBG$。
+
+由平行四邊形性質 $AD=CB$、$FD=EB$，於是
+\[AF=AD-FD=CB-EB=CE.\]
+已知 $BE:EC=2:3$，即 $EC=\dfrac{3}{5}BC$，故
+\[\frac{AF}{CB}=\frac{CE}{CB}=\frac{3}{5},\qquad
+\frac{AG}{CG}=\frac{AF}{CB}=\frac{3}{5}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $AC=AG+GC$ 求 $\triangle ABC$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形</span>
+        <span class="rule-math">面積比 $=$ 底邊比</span>
+        <span class="rule-why">$\triangle ABC$ 與 $\triangle ABG$ 由 $B$ 向 $AC$ 作高，高相同。</span>
+      </div>
+      $\dfrac{AG}{CG}=\dfrac{3}{5}$，故 $AG:AC=3:8$。
+
+$\triangle ABC$ 與 $\triangle ABG$ 同高，面積比等於底邊比：
+\[\frac{[\triangle ABC]}{[\triangle ABG]}=\frac{AC}{AG}=\frac{8}{3}
+\ \Longrightarrow\ [\triangle ABC]=135\times\frac{8}{3}=360\text{ cm}^{2}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $DFGH$ 與 $BEDF$、$ABCD$ 連起來</div>
+      <div class="rule">
+        <span class="rule-name">平行四邊形被對角線平分</span>
+        <span class="rule-math">$[\triangle ABC]=\dfrac{1}{2}[ABCD]$</span>
+        <span class="rule-why">$DFGH$ 與 $BEHG$ 全等，所以 $[BEDF]=2x$。</span>
+      </div>
+      $AC$ 把平行四邊形 $ABCD$ 分成兩個全等三角形：
+\[[ABCD]=2\times360=720\text{ cm}^{2}.\]
+又 $DFGH$ 與 $BEHG$ 全等（$BD$ 把 $BEDF$ 分成兩半），設 $[DFGH]=x$，則
+\[[BEDF]=2x.\]
+$BEDF$ 與 $ABCD$ 同高（兩者都以 $BC$ 所在直線為底），故面積比 $=$ 底邊比：
+\[\frac{2x}{720}=\frac{BE}{BC}=\frac{2}{5}
+\ \Longrightarrow\ 2x=288
+\ \Longrightarrow\ x=144.\]
+答案為 <b>D</b>。    <figure class="fig">
+      <svg viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="兩個平行四邊形 ABCD 與 BEDF，對角線相交於 G、H">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M60 55 L320 55 L350 200 L30 200 Z"/>
+          <path d="M30 200 L190 55 L158 200 L60 55"/>
+          <path d="M320 55 L350 200"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="52" y="46">D</text>
+          <text x="190" y="46" text-anchor="middle">F</text>
+          <text x="326" y="46">A</text>
+          <text x="22" y="216">B</text>
+          <text x="150" y="216" text-anchor="middle">E</text>
+          <text x="352" y="216">C</text>
+          <text x="238" y="118">G</text>
+          <text x="128" y="150">H</text>
+        </g>
+      </svg>
+      <figcaption>平行四邊形 $ABCD$ 與 $BEDF$ 共用邊 $BD$；$E$ 在 $BC$ 上且 $BE:EC=2:3$。$AC$ 分別與 $BF$、$DE$ 交於 $G$、$H$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$144\text{ cm}^{2}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABCD$ 與 $BEDF$ 均為平行四邊形，$E$ 在 $BC$ 上且 $BE:EC=1:2$。若 $\triangle ABG$ 的面積為 $48\text{ cm}^{2}$，則四邊形 $DFGH$ 的面積為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$36\text{ cm}^{2}$</li><li><span class="ol">B</span>$40\text{ cm}^{2}$</li><li><span class="ol">C</span>$45\text{ cm}^{2}$</li><li><span class="ol">D</span>$54\text{ cm}^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AF=CE$，故 $AF:CB=EC:BC=2:3$，即 $AG:CG=2:3$，$AG:AC=2:5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $[\triangle ABC]=48\times\dfrac{5}{2}=120$，$[ABCD]=240$。</div>
+          <div class="p-step"><b>第 3 步.</b> 設 $[DFGH]=x$，$[BEDF]=2x$；同高故 $\dfrac{2x}{240}=\dfrac{BE}{BC}=\dfrac{1}{3}\Rightarrow x=40$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$40\text{ cm}^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q15.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q17.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

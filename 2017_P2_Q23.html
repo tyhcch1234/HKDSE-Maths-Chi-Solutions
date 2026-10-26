@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第23題 · 直線方程與圖象</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第23題</span>
+    <h1>把斜率、截距化成 $m$、$p$、$n$、$q$</h1>
+    <p class="sub">坐標幾何 · 直線的斜率與截距</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，直線 $L_1$ 與 $L_2$ 的方程分別為 $x+my=n$ 及 $x+py=q$。下列何者正確？
+<br>I. $m \lt p$
+<br>II. $n \gt q$
+<br>III. $n+m \lt p+q$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把方程改寫成斜截式</div>
+      <div class="rule">
+        <span class="rule-name">主項變換</span>
+        <span class="rule-math">$x+my=n\Rightarrow y=-\dfrac{1}{m}x+\dfrac{n}{m}$</span>
+        <span class="rule-why">斜率是 $-\dfrac{1}{m}$，$x$ 截距是 $n$。</span>
+      </div>
+      \[L_1:\ y=-\frac{1}{m}x+\frac{n}{m},\qquad L_2:\ y=-\frac{1}{p}x+\frac{q}{p}.\]
+兩線都向右上方傾斜，斜率為正，即
+\[-\frac{1}{m} \gt 0,\quad -\frac{1}{p} \gt 0\ \Longrightarrow\ m \lt 0,\ p \lt 0.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">比較斜率：$L_2$ 較陡</div>
+      <div class="rule">
+        <span class="rule-name">斜率比較</span>
+        <span class="rule-math">$-\dfrac{1}{p} \gt -\dfrac{1}{m}\Rightarrow m \lt p$</span>
+        <span class="rule-why">$m$、$p$ 都是負數，兩邊同乘 $mp \gt 0$ 時不等號方向不變。</span>
+      </div>
+      $L_2$ 較陡（斜率較大）：
+\[-\frac{1}{p} \gt -\frac{1}{m}
+\ \xrightarrow{\ \times mp \gt 0\ }\ -m \gt -p
+\ \Longrightarrow\ m \lt p.\]
+所以 <b>I 正確</b>。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較 $x$ 截距，並檢查 III</div>
+      <div class="rule">
+        <span class="rule-name">$x$ 截距</span>
+        <span class="rule-math">$L_1$ 的 $x$ 截距為 $n$，$L_2$ 的為 $q$</span>
+        <span class="rule-why">圖中 $L_1$ 交 $x$ 軸的位置在 $L_2$ 的右方。</span>
+      </div>
+      由圖可見 $L_1$ 的 $x$ 截距較大，故 $n \gt q$，<b>II 正確</b>。
+
+III 要看 $y=-1$ 時的 $x$ 值：
+\[L_1:\ x=n+m,\qquad L_2:\ x=p+q.\]
+圖中在 $y=-1$ 這條水平線上，$L_1$ 的點在 $L_2$ 的右方，所以 $n+m \gt p+q$，<b>III 錯誤</b>。<br>
+只有 I 及 II 正確，答案為 <b>A</b>。    <figure class="fig">
+      <svg viewBox="0 0 340 240" width="340" height="240" role="img" aria-label="兩條斜率為正的直線 L1 與 L2">
+        <line x1="20" y1="150" x2="320" y2="150" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="200" y1="230" x2="200" y2="20" stroke="currentColor" stroke-width="1.2"/>
+        <g stroke="#1d4ed8" stroke-width="1.8" fill="none">
+          <line x1="120" y1="230" x2="240" y2="40"/>
+          <line x1="150" y1="230" x2="300" y2="46"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12" font-style="italic">
+          <text x="308" y="166">x</text>
+          <text x="206" y="30">y</text>
+          <text x="188" y="166">O</text>
+          <text x="112" y="222">L₁</text>
+          <text x="286" y="222">L₂</text>
+          <text x="206" y="196">-1</text>
+        </g>
+      </svg>
+      <figcaption>$L_1:x+my=n$，$L_2:x+py=q$；兩線斜率均為正，且 $L_2$ 較陡。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（只有 I 及 II）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中直線 $L_1$、$L_2$ 的方程為 $x+my=n$ 及 $x+py=q$，兩線斜率均為正且 $L_1$ 較陡，$L_1$ 的 $x$ 截距較小。下列何者正確？
+<br>I. $m \gt p$　II. $n \lt q$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>I 及 II</li><li><span class="ol">D</span>兩者皆錯</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜率 $-\dfrac{1}{m}$、$-\dfrac{1}{p}$ 均為正，故 $m,p \lt 0$。</div>
+          <div class="p-step"><b>第 2 步.</b> $L_1$ 較陡：$-\dfrac{1}{m} \gt -\dfrac{1}{p}\Rightarrow m \lt p$，故 I 錯。</div>
+          <div class="p-step"><b>第 3 步.</b> $x$ 截距 $n \lt q$，故 II 對，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q22.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q24.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

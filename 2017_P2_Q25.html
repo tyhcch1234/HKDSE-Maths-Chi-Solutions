@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第25題 · 極坐標的距離</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第25題</span>
+    <h1>先看極角，發現 $P$、$O$、$R$ 共線</h1>
+    <p class="sub">坐標幾何 · 極坐標 · 點到直線距離</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $P$、$Q$、$R$ 的極坐標分別為 $(3,160^{\circ})$、$(4,280^{\circ})$、$(6,340^{\circ})$。由 $Q$ 至 $PR$ 的垂直距離為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$2\sqrt{3}$</li><li><span class="ol">D</span>$3\sqrt{3}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">比較極角，看三點的位置關係</div>
+      <div class="rule">
+        <span class="rule-name">極角</span>
+        <span class="rule-math">$340^{\circ}-160^{\circ}=180^{\circ}$</span>
+        <span class="rule-why">極角相差 $180^{\circ}$ 表示兩點在極點 $O$ 的兩側、同一條直線上。</span>
+      </div>
+      $P$ 的極角為 $160^{\circ}$，$R$ 的極角為 $340^{\circ}$，相差剛好 $180^{\circ}$，所以 $P$、$O$、$R$ 共線，直線 $PR$ 通過極點 $O$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「到直線的距離」化成三角形的高</div>
+      <div class="rule">
+        <span class="rule-name">垂直距離</span>
+        <span class="rule-math">$d=OQ\cdot\sin\angle QOR$</span>
+        <span class="rule-why">直線 $PR$ 過 $O$，所以 $Q$ 到 $PR$ 的距離就是直角三角形的高。</span>
+      </div>
+      $OQ=4$，而 $\angle QOR$ 是 $OQ$ 與 $OR$ 的夾角：
+\[280^{\circ}-340^{\circ}=-60^{\circ}\ \Longrightarrow\ \angle QOR=60^{\circ}.\]
+（等價地，$\angle QOP=280^{\circ}-160^{\circ}=120^{\circ}$，而 $\sin120^{\circ}=\sin60^{\circ}$。）
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算</div>
+      <div class="rule">
+        <span class="rule-name">正弦</span>
+        <span class="rule-math">$d=4\sin60^{\circ}=4\times\dfrac{\sqrt{3}}{2}$</span>
+        <span class="rule-why">$\sin60^{\circ}=\dfrac{\sqrt{3}}{2}$。</span>
+      </div>
+      \[d=2\sqrt{3}\approx3.46.\]
+答案為 <b>C</b>。<br>
+選項 A（$2$）是忘記乘 $OQ=4$；選項 B（$3$）是誤用 $\sin49^{\circ}$ 之類的近似。    <figure class="fig">
+      <svg viewBox="0 0 330 300" width="330" height="300" role="img" aria-label="極坐標圖，P、Q、R 三點">
+        <line x1="165" y1="150" x2="310" y2="150" stroke="currentColor" stroke-width="1.2"/>
+        <g fill="none" stroke="#1d4ed8" stroke-width="1.5">
+          <line x1="165" y1="150" x2="85" y2="113"/>
+          <line x1="165" y1="150" x2="191" y2="254"/>
+          <line x1="165" y1="150" x2="303" y2="184"/>
+          <line x1="85" y1="113" x2="303" y2="184"/>
+          <line x1="191" y1="254" x2="303" y2="184"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="14" font-style="italic">
+          <text x="70" y="106">P</text>
+          <text x="188" y="272">Q</text>
+          <text x="300" y="202">R</text>
+          <text x="150" y="166">O</text>
+        </g>
+      </svg>
+      <figcaption>$P(3,160^{\circ})$、$Q(4,280^{\circ})$、$R(6,340^{\circ})$；$340^{\circ}-160^{\circ}=180^{\circ}$，所以 $P$、$O$、$R$ 共線。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$2\sqrt{3}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $P$、$Q$、$R$ 的極坐標分別為 $(5,120^{\circ})$、$(6,210^{\circ})$、$(4,300^{\circ})$。由 $Q$ 至 $PR$ 的垂直距離為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$3\sqrt{3}$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$6\sqrt{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $300^{\circ}-120^{\circ}=180^{\circ}$，故 $P$、$O$、$R$ 共線。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle QOR=300^{\circ}-210^{\circ}=90^{\circ}$，故 $OQ\perp PR$。</div>
+          <div class="p-step"><b>第 3 步.</b> 距離就是 $OQ=6$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$6$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q24.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

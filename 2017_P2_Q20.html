@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第20題 · 平行四邊形與角平分線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第20題</span>
+    <h1>角平分線加中點，推出 $AB=BD$</h1>
+    <p class="sub">幾何 · 平行四邊形 · 全等三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $ABCD$ 為平行四邊形。設 $E$ 為 $AD$ 的中點。若 $\angle ABE=\angle CBD=\angle DBE$，下列何者正確？
+<br>I. $AB=BD$
+<br>II. $\angle ABC=135^{\circ}$
+<br>III. $\triangle ABE\cong\triangle DBE$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">$BE$ 是 $\angle ABD$ 的角平分線</div>
+      <div class="rule">
+        <span class="rule-name">角平分線定理</span>
+        <span class="rule-math">$\dfrac{AE}{ED}=\dfrac{AB}{BD}$</span>
+        <span class="rule-why">因為 $\angle ABE=\angle DBE$，$BE$ 平分 $\angle ABD$。</span>
+      </div>
+      $\angle ABE=\angle DBE$，所以 $BE$ 平分 $\angle ABD$。由角平分線定理：
+\[\frac{AE}{ED}=\frac{AB}{BD}.\]
+$E$ 是 $AD$ 的中點，$AE=ED$，故
+\[\frac{AB}{BD}=1\ \Longrightarrow\ AB=BD.\]
+所以 <b>I 正確</b>。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用等腰三角形求各個角</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形</span>
+        <span class="rule-math">$AB=BD\Rightarrow\angle BAD=\angle BDA$</span>
+        <span class="rule-why">$AD\parallel BC$，所以 $\angle BDA=\angle DBC$（內錯角）。</span>
+      </div>
+      設 $\angle ABE=\angle DBE=\theta$，則 $\angle ABD=2\theta$；又設 $\angle CBD=\theta$。
+
+因為 $AB=BD$，$\triangle ABD$ 等腰，$\angle BAD=\angle BDA$。
+由 $AD\parallel BC$，$\angle BDA=\angle DBC=\theta$，故 $\angle BAD=\theta$。
+在 $\triangle ABD$ 中：
+\[\theta+\theta+2\theta=180^{\circ}\ \Longrightarrow\ \theta=45^{\circ}.\]
+於是
+\[\angle ABC=\angle ABD+\angle DBC=2\theta+\theta=135^{\circ}.\]
+所以 <b>II 正確</b>。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 III 的全等條件</div>
+      <div class="rule">
+        <span class="rule-name">SAS</span>
+        <span class="rule-math">$AB=BD$、$\angle ABE=\angle DBE$、$BE$ 公共</span>
+        <span class="rule-why">兩邊及其夾角分別相等，符合 SAS。</span>
+      </div>
+      在 $\triangle ABE$ 與 $\triangle DBE$ 中：
+\[AB=BD,\qquad \angle ABE=\angle DBE,\qquad BE=BE\ (\text{公共邊}).\]
+所以 $\triangle ABE\cong\triangle DBE$（SAS），<b>III 正確</b>。<br>
+三項全部成立，答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 為平行四邊形，$E$ 為 $AD$ 的中點。若 $\angle ABE=\angle DBE$，則下列何者必然正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$AB=BD$</li><li><span class="ol">B</span>$AB=AD$</li><li><span class="ol">C</span>$\angle ABC=90^{\circ}$</li><li><span class="ol">D</span>$AE=AB$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BE$ 平分 $\angle ABD$，由角平分線定理 $\dfrac{AE}{ED}=\dfrac{AB}{BD}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AE=ED$，故 $AB=BD$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$AB=BD$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q19.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q21.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
