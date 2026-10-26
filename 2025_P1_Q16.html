@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第16題 · 對數方程與換底</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第16題</span>
+  <h1>兩條對數式，先換底再解二次</h1>
+  <p class="sub">對數 · 換底公式、對數方程、二次方程 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $\log_3 x+\log_3 y=9$ 及 $\log_x 81-\log_y 9=1$，其中 $0<x<y$。<br>
+      (a) 設 $u=\log_3 y$，證明 $u^2-3u-18=0$。<span class="marks">[2 分]</span><br>
+      (b) 求 $x$。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把第二式的底全部換成 3</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        <span class="rule-math">$\log_b m=\dfrac{\log_a m}{\log_a b}$</span>
+        <span class="rule-why">第一式的底是 $3$，所以把 $\log_x 81$ 與 $\log_y 9$ 的底都換成 $3$，全式就只剩 $\log_3 x$ 與 $\log_3 y$ 兩種量。</span>
+      </div>
+      <p>由第一式，$\log_3 x=9-\log_3 y=9-u$；又 $\log_3 81=4$、$\log_3 9=2$，故</p>
+      <p>$$\log_x 81=\frac{\log_3 81}{\log_3 x}=\frac{4}{9-u},\qquad \log_y 9=\frac{\log_3 9}{\log_3 y}=\frac{2}{u}$$</p>
+      <p>留意 $u\ne 0$（因 $y>1$ 時才可能，而 $u=0$ 會使底為 $1$，無定義）及 $u\ne 9$（否則 $x=1$，$\log_x$ 無定義）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代入後清分母，得二次方程</div>
+      <div class="rule">
+        <span class="rule-name">分式方程（兩邊乘 $u(9-u)$）</span>
+        <span class="rule-math">$\dfrac{4}{9-u}-\dfrac{2}{u}=1$</span>
+        <span class="rule-why">兩邊同乘 $u(9-u)$ 便可去掉分母；因為已確認 $u\ne0$、$u\ne9$，這步不會引入增根。</span>
+      </div>
+      <p>$$4u-2(9-u)=u(9-u)$$</p>
+      <p>$$4u-18+2u=9u-u^2$$</p>
+      <p>把所有項移到同一邊：</p>
+      <p>$$u^2-3u-18=0\quad\text{（證畢）}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">因式分解，得兩個候選 $u$</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘（因式分解）</span>
+        <span class="rule-math">$u^2-3u-18=(u-6)(u+3)$</span>
+        <span class="rule-why">要找兩數相乘為 $-18$、相加為 $-3$，即 $6$ 與 $-3$，故分解為 $(u-6)(u+3)$。</span>
+      </div>
+      <p>$$(u-6)(u+3)=0\;\Rightarrow\;u=6\ \text{或}\ u=-3$$</p>
+      <p>兩個值都符合 $u\ne0$、$u\ne9$，所以還要靠題目給的範圍去篩。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用 $0<x<y$ 篩走 $u=-3$，再取冪</div>
+      <div class="rule">
+        <span class="rule-name">對數函數的單調性</span>
+        <span class="rule-math">$0<x<y\ \Rightarrow\ \log_3 x<\log_3 y$</span>
+        <span class="rule-why">底 $3>1$，$\log_3$ 是嚴格遞增函數，故 $x<y$ 等價於 $\log_3 x<\log_3 y$，即 $9-u<u$。</span>
+      </div>
+      <p>由 $9-u<u$ 得 $u>4.5$，所以 $u=-3$ 不合，只能取 $u=6$。</p>
+      <p>$$u=6:\ \log_3 y=6\Rightarrow y=3^6=729;\qquad \log_3 x=9-6=3\Rightarrow x=3^3=27$$</p>
+      <p>驗算：$\log_{27}81=\dfrac{4}{3}$，$\log_{729}9=\dfrac{2}{6}=\dfrac{1}{3}$，相減得 $1$ ✓；且 $27<729$ ✓。</p>
+      <p>常見錯誤：只寫 $u=6$ 或 $-3$ 而不說明為何捨去負值；或把 $u=-3$ 代回得 $y=3^{-3}=\dfrac{1}{27}$，卻忘了此時 $x=3^{12}>y$，違反 $0<x<y$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 已證 $u^2-3u-18=0$（$(u-6)(u+3)=0$）　(b) $x=27$（此時 $y=729$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $\log_2 x+\log_2 y=12$ 及 $\log_x 32-\log_y 4=1$，其中 $0<x<y$。(a) 設 $u=\log_2 y$，證明 $u^2-5u-24=0$；(b) 求 $x$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\log_2 x=12-u$，故 $\log_x 32=\dfrac{5}{12-u}$、$\log_y 4=\dfrac{2}{u}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{5}{12-u}-\dfrac{2}{u}=1\Rightarrow 5u-2(12-u)=u(12-u)\Rightarrow u^2-5u-24=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $(u-8)(u+3)=0$，$u=8$ 或 $-3$；由 $0<x<y$ 得 $u>6$，故 $u=8$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\log_2 y=8\Rightarrow y=256$，$\log_2 x=4\Rightarrow x=16$；驗算 $\dfrac{5}{4}-\dfrac{2}{8}=1$ ✓。</div>
+          <div class="p-ans">答案：(a) 已證；(b) $x=16$（$y=256$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

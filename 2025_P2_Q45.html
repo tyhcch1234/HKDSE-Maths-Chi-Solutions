@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第45題 · 平移與放大</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第45題</span>
+    <h1>數據放大與平移的影響</h1>
+    <p class="sub">統計 · 平均值、全距與方差的變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $a$、$b$、$c$、$d$ 為四個相異實數。設 $m_1$、$r_1$ 及 $v_1$ 分別為數組 $\{a,b,c,d\}$ 的平均值、全距及方差，而 $m_2$、$r_2$ 及 $v_2$ 分別為數組 $\{2a,2b,2c,2d\}$ 的平均值、全距及方差。並以 $m_3$、$r_3$ 及 $v_3$ 表示數組 $\{a+3,b+3,c+3,d+3\}$ 的平均值、全距及方差。下列何者正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>僅 I 及 II</li><li><span class="ol">B</span>僅 I 及 III</li><li><span class="ol">C</span>僅 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <div class="question">
+      <p>I. $m_1+m_3>m_2$</p>
+      <p>II. $r_1+r_3=r_2$</p>
+      <p>III. $v_1+v_3<v_2$</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">全體乘 2 的影響</div>
+      <div class="rule">
+        <span class="rule-name">數據伸縮（乘常數 $k$）</span>
+        每個數據乘 $k$：平均值乘 $k$，全距乘 $|k|$，方差乘 $k^2$。
+      </div>
+      <p>取 $k=2>0$：</p>
+      <p>$$m_2=2m_1,\qquad r_2=2r_1,\qquad v_2=4v_1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">全體加 3 的影響</div>
+      <div class="rule">
+        <span class="rule-name">數據平移（加常數 $c$）</span>
+        每個數據加 $c$：平均值加 $c$，全距與方差都不變。
+      </div>
+      <p>取 $c=3$：</p>
+      <p>$$m_3=m_1+3,\qquad r_3=r_1,\qquad v_3=v_1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I 與 II</div>
+      <div class="rule">
+        <span class="rule-name">代入化簡</span>
+        把 $m_1$、$r_1$ 的關係式代入命題，看是否恆成立。
+      </div>
+      <p>I：$m_1+m_3=m_1+(m_1+3)=2m_1+3$，而 $m_2=2m_1$，故</p>
+      <p>$$2m_1+3>2m_1\iff 3>0$$</p>
+      <p>恆成立，I 為真。</p>
+      <p>II：$r_1+r_3=r_1+r_1=2r_1=r_2$，恆成立，II 為真。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 III，並用相異條件</div>
+      <div class="rule">
+        <span class="rule-name">方差的正值性</span>
+        四個數據相異 $\Rightarrow$ 方差 $v_1>0$，故可用 $v_1$ 的正負判斷不等式。
+      </div>
+      <p>III：$v_1+v_3=v_1+v_1=2v_1$，而 $v_2=4v_1$。</p>
+      <p>$$2v_1<4v_1\iff 2v_1>0$$</p>
+      <p>因 $a,b,c,d$ 相異，$v_1>0$，故不等式成立，III 為真。</p>
+      <p>I、II、III 全部正確，答案 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $a$、$b$、$c$、$d$ 為四個相異實數。$m_1$、$r_1$、$v_1$ 分別為 $\{a,b,c,d\}$ 的平均值、全距及方差；$m_2$、$r_2$、$v_2$ 分別為 $\{2a,2b,2c,2d\}$ 的平均值、全距及方差；$m_3$、$r_3$、$v_3$ 分別為 $\{a+5,b+5,c+5,d+5\}$ 的平均值、全距及方差。下列何者正確？</div>
+      <div class="p-q">I. $m_2+m_3=3m_1+5$　II. $r_2-r_3=r_1$　III. $v_2+v_3=2v_1$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>僅 I 及 II</li><li><span class="ol">B</span>僅 I 及 III</li><li><span class="ol">C</span>僅 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 乘 2：$m_2=2m_1$，$r_2=2r_1$，$v_2=4v_1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 加 5：$m_3=m_1+5$，$r_3=r_1$，$v_3=v_1$。</div>
+          <div class="p-step"><b>第 3 步.</b> I：$m_2+m_3=2m_1+(m_1+5)=3m_1+5$ ✓；II：$r_2-r_3=2r_1-r_1=r_1$ ✓。</div>
+          <div class="p-step"><b>第 4 步.</b> III：$v_2+v_3=4v_1+v_1=5v_1\neq 2v_1$（因 $v_1>0$）✗。故僅 I 及 II 正確。</div>
+          <div class="p-ans">答案：<b>A</b>（僅 I 及 II）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

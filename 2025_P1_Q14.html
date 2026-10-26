@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第14題 · 圓錐與平截頭體</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第14題</span>
+  <h1>大圓錐切走小圓錐，剩下平截頭體</h1>
+  <p class="sub">求積法 · 圓錐、平截頭體的體積與表面積 · 9 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個實心金屬直立圓錐的高及底半徑分別為 $45\text{ cm}$ 及 $24\text{ cm}$。該圓錐被一個平行於其底面的平面分成一個圓錐及一個平截頭體 $X$。已知 $X$ 的高為 $30\text{ cm}$。<br>
+      (a) 以 $\pi$ 表示 $X$ 的體積。<span class="marks">[3 分]</span><br>
+      (b) 以 $\pi$ 表示 $X$ 的總表面積。<span class="marks">[3 分]</span><br>
+      (c) $X$ 被熔化並重鑄成一個實心立方體。該立方體的總表面積是否超過 $X$ 的總表面積？試解釋你的答案。<span class="marks">[3 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 340 240" width="330" role="img" aria-label="圓錐被平行底面的平面切成小圓錐與平截頭體 X">
+        <ellipse cx="170" cy="196" rx="110" ry="15" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M60 196 L170 22 L280 196" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <ellipse cx="170" cy="80" rx="37" ry="5" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="133" y1="80" x2="207" y2="80" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/>
+        <line x1="170" y1="22" x2="170" y2="196" stroke="currentColor" stroke-width="1" stroke-dasharray="5 4"/>
+        <line x1="300" y1="80" x2="300" y2="196" stroke="currentColor" stroke-width="1"/>
+        <line x1="294" y1="80" x2="306" y2="80" stroke="currentColor" stroke-width="1"/>
+        <line x1="294" y1="196" x2="306" y2="196" stroke="currentColor" stroke-width="1"/>
+        <line x1="170" y1="196" x2="132" y2="196" stroke="currentColor" stroke-width="1"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13">
+          <text x="308" y="142">30</text>
+          <text x="176" y="146" text-anchor="start">15</text>
+          <text x="140" y="212" text-anchor="middle">24</text>
+          <text x="186" y="78">8</text>
+          <text x="196" y="150" font-style="italic">X</text>
+        </g>
+      </svg>
+      <figcaption>高之比 $15:45=1:3$，故小圓錐的半徑 $=\dfrac{24}{3}=8\text{ cm}$，$X$ 的上底半徑亦即 $8\text{ cm}$</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">切出的「小圓錐」有多大？</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形（平行截面）</span>
+        <span class="rule-math">$\dfrac{r}{24}=\dfrac{15}{45}=\dfrac13$</span>
+        <span class="rule-why">用平行於底面的平面切圓錐，切出的小圓錐與原圓錐相似，對應的線性長度（高、半徑、斜高）成同一比例。</span>
+      </div>
+    <p>$X$ 的高為 $30\text{ cm}$，故小圓錐的高 $=45-30=15\text{ cm}$，高之比 $=15:45=1:3$。</p>
+    <p>$$r_{\text{小}}=24\times\frac{1}{3}=8\text{ cm}$$</p>
+    <p>平截頭體 $X$ 的下底半徑為 $24\text{ cm}$、上底半徑為 $8\text{ cm}$、高為 $30\text{ cm}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 體積＝大圓錐減小圓錐</div>
+      <div class="rule">
+        <span class="rule-name">圓錐體積</span>
+        <span class="rule-math">$V=\dfrac13\pi r^{2}h$</span>
+        <span class="rule-why">平截頭體不能直接用公式，但可以看成大圓錐減去頂部的小圓錐；體積相差，比例為 $1^{3}:3^{3}=1:27$。</span>
+      </div>
+    <p>$$V_{\text{大}}=\frac13\pi(24)^{2}(45)=8640\pi,\qquad V_{\text{小}}=\frac13\pi(8)^{2}(15)=320\pi$$</p>
+    <p>$$V_X=8640\pi-320\pi=8320\pi\text{ cm}^{3}$$</p>
+    <p>驗算（用相似比）：$V_X=V_{\text{大}}\left(1-\dfrac{1}{27}\right)=8640\pi\times\dfrac{26}{27}=8320\pi$ ✓</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 斜高與側面面積</div>
+      <div class="rule">
+        <span class="rule-name">圓錐的斜高（畢氏定理）</span>
+        <span class="rule-math">$l=\sqrt{r^{2}+h^{2}}$</span>
+        <span class="rule-why">斜高是大圓錐母線的長度；平截頭體的斜高就是同一母線被切剩的部分，比例同樣是 $\dfrac23$。</span>
+      </div>
+    <p>大圓錐的斜高 $l=\sqrt{24^{2}+45^{2}}=\sqrt{576+2025}=\sqrt{2601}=51\text{ cm}$。</p>
+    <p>小圓錐的斜高 $=51\times\dfrac13=17\text{ cm}$，故 $X$ 的斜高 $=51-17=34\text{ cm}$（亦即 $51\times\dfrac23$）。</p>
+    <p>$$A_{\text{側面}}=\pi(R+r)l=\pi(24+8)(34)=1088\pi\text{ cm}^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 加上下兩個圓形底面</div>
+      <div class="rule">
+        <span class="rule-name">總表面積</span>
+        <span class="rule-math">$A_{\text{總}}=A_{\text{側面}}+\pi R^{2}+\pi r^{2}$</span>
+        <span class="rule-why">平截頭體是封閉的立體，除了曲面還要算下底（半徑 $24$）與上底（半徑 $8$）兩個圓。</span>
+      </div>
+    <p>$$A_{\text{總}}=1088\pi+\pi(24)^{2}+\pi(8)^{2}=1088\pi+576\pi+64\pi=1728\pi\text{ cm}^{2}$$</p>
+    <p>若把大圓錐的總表面積減去小圓錐的部分，會多減／少減了切口那個圓，所以最穩妥是「側面＋兩底」逐項相加。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 重鑄成立方體後比較表面積</div>
+      <div class="rule">
+        <span class="rule-name">立方體的體積與表面積</span>
+        <span class="rule-math">$V=x^{3},\quad A=6x^{2}$</span>
+        <span class="rule-why">重鑄不改變體積，故 $x^{3}=8320\pi$；求出邊長後用 $6x^{2}$ 與 $1728\pi$ 比較。</span>
+      </div>
+    <p>設立方體邊長為 $x\text{ cm}$：</p>
+    <p>$$x^{3}=8320\pi\;\Longrightarrow\;x=\sqrt[3]{8320\pi}\approx 29.677$$</p>
+    <p>$$A_{\text{立方體}}=6(29.677)^{2}\approx 5284\text{ cm}^{2}$$</p>
+    <p>而 $A_X=1728\pi\approx 5429\text{ cm}^{2}$。因 $5284<5429$，立方體的總表面積<b>沒有</b>超過 $X$ 的總表面積。</p>
+    <p>常見錯誤：把 $x^{3}=8320\pi$ 算成 $x=8320\pi/3$，或忘記把 $1728\pi$ 乘出數值就比較 $5284$ 與 $1728$（後者其實是「以 $\pi$ 為單位」的係數，兩者單位不同，不能直接比）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $8320\pi\text{ cm}^{3}$　(b) $1728\pi\text{ cm}^{2}$　(c) 沒有超過：$6x^{2}\approx 5284\text{ cm}^{2}<1728\pi\approx 5429\text{ cm}^{2}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個直立圓錐的高及底半徑分別為 $36\text{ cm}$ 及 $15\text{ cm}$。一個平行於底面的平面把它分成一個圓錐及平截頭體 $Y$，已知 $Y$ 的高為 $24\text{ cm}$。(a) 以 $\pi$ 表示 $Y$ 的體積；(b) 以 $\pi$ 表示 $Y$ 的總表面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 小圓錐高 $=36-24=12$，比 $=12:36=1:3$，半徑 $=15\times\dfrac13=5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $V_{\text{大}}=\dfrac13\pi(15)^{2}(36)=2700\pi$，$V_{\text{小}}=\dfrac13\pi(5)^{2}(12)=100\pi$，$V_Y=2600\pi$。</div>
+          <div class="p-step"><b>第 3 步.</b> 斜高 $=\sqrt{15^{2}+36^{2}}=39$，$Y$ 的斜高 $=39\times\dfrac23=26$，側面積 $=\pi(15+5)(26)=520\pi$。</div>
+          <div class="p-step"><b>第 4 步.</b> 總表面積 $=520\pi+225\pi+25\pi=770\pi$。</div>
+          <div class="p-ans">答案：(a) $2600\pi\text{ cm}^{3}$；(b) $770\pi\text{ cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q15.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

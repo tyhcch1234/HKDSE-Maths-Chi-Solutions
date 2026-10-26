@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第17題 · 等差與等比數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第17題</span>
+  <h1>等比條件把公差鎖死，再求首項</h1>
+  <p class="sub">數列 · 等差數列、等比數列、首 $n$ 項之和 · 6 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $T(n)$ 為等差數列的第 $n$ 項，其中 $T(1)\ne T(2)$ 且 $T(47)=456$。已知 $T(9)$、$T(47)$、$T(199)$ 成等比數列。<br>
+      (a) 求 $T(1)$。<span class="marks">[3 分]</span><br>
+      (b) 求最小的 $n$，使該等差數列首 $n$ 項之和大於 $10^6$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設首項與公差，寫出 $T(9)$、$T(47)$、$T(199)$</div>
+      <div class="rule">
+        <span class="rule-name">等差數列的通項</span>
+        <span class="rule-math">$T(n)=a+(n-1)d$</span>
+        <span class="rule-why">把所有項都用首項 $a$ 與公差 $d$ 表示，未知數就只剩兩個，題目的兩個條件剛好夠用。</span>
+      </div>
+      <p>設首項為 $a=T(1)$、公差為 $d$。由 $T(47)=456$：</p>
+      <p>$$a+46d=456\quad\cdots(1)$$</p>
+      <p>於是</p>
+      <p>$$T(9)=a+8d=(456-46d)+8d=456-38d$$</p>
+      <p>$$T(199)=a+198d=(456-46d)+198d=456+152d$$</p>
+      <p>留意 $T(1)\ne T(2)\Rightarrow d\ne 0$，這個條件在最後會用來捨去一個根。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用等比性質建立方程</div>
+      <div class="rule">
+        <span class="rule-name">等比數列的性質</span>
+        <span class="rule-math">$(\text{中項})^2=\text{前項}\times\text{後項}$</span>
+        <span class="rule-why">三數成等比數列，中間一項的平方等於兩邊之積；這裡中間項是 $T(47)$。</span>
+      </div>
+      <p>$$T(47)^2=T(9)\cdot T(199)$$</p>
+      <p>$$456^2=(456-38d)(456+152d)$$</p>
+      <p>右邊展開：</p>
+      <p>$$456^2+456(152-38)d-38\times152\,d^2=456^2+51984d-5776d^2$$</p>
+      <p>兩邊消去 $456^2$：</p>
+      <p>$$51984d-5776d^2=0\;\Rightarrow\;5776d(9-d)=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 捨去 $d=0$，得公差與首項</div>
+      <div class="rule">
+        <span class="rule-name">二次方程的根與題設條件</span>
+        <span class="rule-math">$d=0$ 或 $d=9$</span>
+        <span class="rule-why">$d=0$ 會令所有項相等，與 $T(1)\ne T(2)$ 矛盾；所以只能取 $d=9$。</span>
+      </div>
+      <p>代 $d=9$ 入 $(1)$：$a+46(9)=456\Rightarrow a=456-414=42$。</p>
+      <p>$$T(1)=42$$</p>
+      <p>驗算：$T(9)=42+8(9)=114$，$T(47)=456$，$T(199)=42+198(9)=1824$；而 $456^2=207936$、$114\times1824=207936$ ✓。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 首 $n$ 項之和，解二次不等式</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和公式</span>
+        <span class="rule-math">$S_n=\dfrac{n}{2}\,[\,2a+(n-1)d\,]$</span>
+        <span class="rule-why">把 $a=42$、$d=9$ 代入，$S_n$ 就是 $n$ 的二次函數，解不等式後取最小正整數。</span>
+      </div>
+      <p>$$S_n=\frac{n}{2}\,[\,84+9(n-1)\,]=\frac{9n^2+75n}{2}$$</p>
+      <p>要求 $S_n>10^6$，即</p>
+      <p>$$9n^2+75n-2\,000\,000>0$$</p>
+      <p>先解對應方程 $9n^2+75n-2\,000\,000=0$：</p>
+      <p>$$n=\frac{-75+\sqrt{75^2+4(9)(2\,000\,000)}}{18}=\frac{-75+\sqrt{72\,005\,625}}{18}\approx\frac{-75+8485.65}{18}\approx467.3$$</p>
+      <p>因為 $9n^2+75n-2\,000\,000$ 的圖像開口向上，故 $n>467.3$，最小整數為 $468$。</p>
+      <p>驗算兩邊：$S_{467}=\dfrac{467(9\times467+75)}{2}=467\times2139=998\,913<10^6$；而 $S_{468}=234\times4287=1\,003\,158>10^6$ ✓，所以 $n=468$。</p>
+      <p>常見錯誤：把 $10^6$ 誤當成 $106$；或把不等式解成 $n<467.3$ 而取 $467$（忘記開口向上要取較大的一邊）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $T(1)=42$（公差 $d=9$）　(b) $n=468$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $T(n)$ 為等差數列的第 $n$ 項，$T(1)\ne T(2)$ 且 $T(21)=240$。已知 $T(1)$、$T(21)$、$T(101)$ 成等比數列。(a) 求 $T(1)$；(b) 求最小的 $n$，使首 $n$ 項之和大於 $10^4$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設首項 $a$、公差 $d$：$a+20d=240$，故 $T(1)=240-20d$、$T(101)=240+80d$。</div>
+          <div class="p-step"><b>第 2 步.</b> 等比：$240^2=(240-20d)(240+80d)=240^2+240(60)d-1600d^2\Rightarrow d(14400-1600d)=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $d\ne0\Rightarrow d=9$，$a=240-180=60$，即 $T(1)=60$（驗算 $60\times960=57600=240^2$ ✓）。</div>
+          <div class="p-step"><b>第 4 步.</b> $S_n=\dfrac{n}{2}(120+9n-9)=\dfrac{n(9n+111)}{2}$；解 $9n^2+111n-20000>0$ 得 $n>41.4$，最小 $n=42$（$S_{41}=9840$，$S_{42}=10269$）。</div>
+          <div class="p-ans">答案：(a) $T(1)=60$；(b) $n=42$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

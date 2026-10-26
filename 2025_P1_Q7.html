@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第7題 · 折扣與百分增減</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第7題</span>
+  <h1>由售價倒推標價，再倒推成本</h1>
+  <p class="sub">百分數 · 折扣與百分增減 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某紀念品的售價為 \&#36;378。該紀念品按標價減價 $60\%$ 出售。該紀念品的標價比成本高 $75\%$。<br>
+      (a) 求該紀念品的標價。<span class="marks">[2 分]</span><br>
+      (b) 求該紀念品的成本。<span class="marks">[1 分]</span><br>
+      (c) 判斷售出該紀念品後是賺還是蝕，並解釋你的答案。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把「減價 $60\%$」寫成一條乘法關係</div>
+      <div class="rule">
+        <span class="rule-name">百分減少</span>
+        <span class="rule-math">新值 $=(1-r\%)\times$ 原值</span>
+        <span class="rule-why">減價 $60\%$ 即只需付標價的 $40\%$，百分數的基數是「標價」。</span>
+      </div>
+      <p>設標價為 $M$，則</p>
+      <p>$$\text{售價}=(1-60\%)\times M=0.4M$$</p>
+      <p>售價 $=&#36;378$，所以 $0.4M=378$。留意 $0.4$ 不是 $0.6$：減價 $60\%$ 不等於付 $60\%$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 求標價</div>
+      <div class="rule">
+        <span class="rule-name">由百分數反求原值</span>
+        <span class="rule-math">原值 $=\dfrac{\text{新值}}{1-r\%}$</span>
+        <span class="rule-why">已知「標價的 $40\%$」是多少，除以 $40\%$ 就還原成標價。</span>
+      </div>
+      <p>$$M=\frac{378}{0.4}=\frac{378}{40}\times 100=945$$</p>
+      <p>驗算：$945\times 40\%=378$，與題目的售價相符。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求成本</div>
+      <div class="rule">
+        <span class="rule-name">百分增加</span>
+        <span class="rule-math">標價 $=(1+75\%)\times$ 成本</span>
+        <span class="rule-why">「比成本高 $75\%$」以成本為基數，所以標價是成本的 $175\%$。</span>
+      </div>
+      <p>$$945=1.75\times C \;\Longrightarrow\; C=\frac{945}{1.75}=540$$</p>
+      <p>驗算：$540\times(1+75\%)=540\times 1.75=945$，即標價比成本高 $405$，而 $405\div 540=75\%$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 比較售價與成本，判斷賺蝕</div>
+      <div class="rule">
+        <span class="rule-name">賺蝕的定義</span>
+        <span class="rule-math">賺 $=$ 售價 $-$ 成本；結果為負即蝕</span>
+        <span class="rule-why">賺蝕一定要跟「成本」比較，不能跟標價比較；標價只是定價，並非實際收入。</span>
+      </div>
+      <p>$$\text{售價}-\text{成本}=378-540=-162$$</p>
+      <p>售價低於成本 \&#36;162，所以是蝕。</p>
+      <p>常見錯誤：用「標價 $945$ 減售價 $378$」得出 $567$ 並稱之為「蝕 $567$」——那只是折扣金額，不是虧損。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 標價 $=&#36;945$　(b) 成本 $=&#36;540$　(c) 有蝕，因為售價 \&#36;378 低於成本 \&#36;540，蝕 \&#36;162。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某保溫杯的售價為 \&#36;612，按標價減價 $55\%$ 出售。其標價比成本高 $70\%$。(a) 求標價。(b) 求成本。(c) 判斷售出後是賺還是蝕，並求金額。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 售價 $=(1-55\%)\times$ 標價 $=0.45M$，故 $M=\dfrac{612}{0.45}=1360$。</div>
+          <div class="p-step"><b>第 2 步.</b> 標價 $=1.7\times$ 成本，故成本 $=\dfrac{1360}{1.7}=800$。</div>
+          <div class="p-step"><b>第 3 步.</b> $612-800=-188<0$，所以是蝕 \&#36;188。</div>
+          <div class="p-ans">答案：(a) \&#36;1360　(b) \&#36;800　(c) 蝕 \&#36;188</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

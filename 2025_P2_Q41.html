@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第41題 · 內心與面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第41題</span>
+    <h1>內心在坐標軸上，半徑就是坐標</h1>
+    <p class="sub">坐標幾何 · 三角形的內心與內切圓半徑</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      記原點為 $O$。點 $U$ 的坐標為 $(20,0)$。設 $V$ 為位於正 $y$ 軸上的一點，使 $\triangle OUV$ 的內心的 $x$ 坐標為 $6$。求 $\triangle OUV$ 的面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$70$</li><li><span class="ol">B</span>$87$</li><li><span class="ol">C</span>$210$</li><li><span class="ol">D</span>$250$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">內心坐標就是 (r, r)</div>
+      <div class="rule">
+        <span class="rule-name">內心的坐標（兩邊在坐標軸上）</span>
+        若三角形兩邊分別沿 $x$ 軸與 $y$ 軸，內心到兩軸的距離都等於內切圓半徑 $r$，故內心為 $(r,r)$。
+      </div>
+      <p>$OU$ 在 $x$ 軸上，$OV$ 在 $y$ 軸上，且 $\angle UOV=90^\circ$。</p>
+      <p>內心 $(r,r)$ 的 $x$ 坐標為 $6$，所以</p>
+      <p>$$r=6$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用半徑公式建立方程</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形內切圓半徑公式</span>
+        若兩股為 $a$、$b$，斜邊為 $c$，則 $r=\dfrac{a+b-c}{2}$。
+      </div>
+      <p>設 $V=(0,v)$，$v>0$。兩股 $OU=20$、$OV=v$，斜邊 $UV=\sqrt{400+v^2}$。</p>
+      <p>$$6=\frac{20+v-\sqrt{400+v^2}}{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">移項、平方，解出 v</div>
+      <div class="rule">
+        <span class="rule-name">移項後平方</span>
+        先把根號孤立在一邊，再兩邊平方；平方後 $v^2$ 會相消，方程退化成一次。
+      </div>
+      <p>$$20+v-\sqrt{400+v^2}=12$$</p>
+      <p>$$\sqrt{400+v^2}=v+8$$</p>
+      <p>$$400+v^2=v^2+16v+64$$</p>
+      <p>$$16v=336\quad\Rightarrow\quad v=21$$</p>
+      <p>驗算：$v+8=29$，$\sqrt{400+441}=\sqrt{841}=29$ ✓（故 $V=(0,21)$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩股相乘除二</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形面積</span>
+        面積 $=\dfrac{1}{2}\times\text{底}\times\text{高}$，此處兩股互相垂直，可直接當底與高。
+      </div>
+      <p>$$\text{面積}=\frac{1}{2}\times 20\times 21=210$$</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$210$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 記原點為 $O$。點 $U$ 的坐標為 $(16,0)$。設 $V$ 為位於正 $y$ 軸上的一點，使 $\triangle OUV$ 的內心的 $x$ 坐標為 $4$。求 $\triangle OUV$ 的面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$72$</li><li><span class="ol">B</span>$96$</li><li><span class="ol">C</span>$108$</li><li><span class="ol">D</span>$144$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 內心為 $(r,r)$，故 $r=4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $4=\dfrac{16+v-\sqrt{256+v^2}}{2}$，即 $\sqrt{256+v^2}=v+8$。</div>
+          <div class="p-step"><b>第 3 步.</b> 平方得 $256+v^2=v^2+16v+64$，故 $v=12$。</div>
+          <div class="p-step"><b>第 4 步.</b> 面積 $=\dfrac{1}{2}\times16\times12=96$。</div>
+          <div class="p-ans">答案：<b>B</b>（$96$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q40.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q42.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

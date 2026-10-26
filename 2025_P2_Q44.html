@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第44題 · 標準分求未知值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第44題</span>
+    <h1>由標準分還原分數</h1>
+    <p class="sub">統計 · 標準分、標準差與絕對值方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某次數學測驗中，一名男生及一名女生的標準分分別為 $-2$ 及 $z$。該測驗分數的標準差為 2 分。若該男生與該女生的測驗分數相差 6 分，求 $z$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-5$ 或 $1$</li><li><span class="ol">B</span>$-5$ 或 $3$</li><li><span class="ol">C</span>$-3$ 或 $1$</li><li><span class="ol">D</span>$-3$ 或 $3$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出標準分的定義</div>
+      <div class="rule">
+        <span class="rule-name">標準分</span>
+        標準分 $z=\dfrac{x-\bar{x}}{\sigma}$，故分數 $x=\bar{x}+z\sigma$，其中 $\bar{x}$ 為平均分、$\sigma$ 為標準差。
+      </div>
+      <p>已知 $\sigma=2$，設全班平均分為 $\bar{x}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把兩人的標準分還原成分數</div>
+      <div class="rule">
+        <span class="rule-name">代入標準分公式</span>
+        分數 $=\bar{x}+(\text{標準分})\times\sigma$。
+      </div>
+      <p>男生分數 $=\bar{x}+(-2)(2)=\bar{x}-4$；</p>
+      <p>女生分數 $=\bar{x}+z(2)=\bar{x}+2z$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把「相差 6 分」寫成絕對值方程</div>
+      <div class="rule">
+        <span class="rule-name">絕對值方程</span>
+        相差 $6$ 分即差的絕對值為 $6$：$|(\bar{x}+2z)-(\bar{x}-4)|=6$。
+      </div>
+      <p>$\bar{x}$ 互相抵消：</p>
+      <p>$$|2z+4|=6$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">分兩個情況求解</div>
+      <div class="rule">
+        <span class="rule-name">絕對值的兩分支</span>
+        $|X|=k\ (k>0)$ 等價於 $X=k$ 或 $X=-k$。
+      </div>
+      <p>情況一：$2z+4=6\Rightarrow 2z=2\Rightarrow z=1$；</p>
+      <p>情況二：$2z+4=-6\Rightarrow 2z=-10\Rightarrow z=-5$。</p>
+      <p>故 $z=-5$ 或 $1$，答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-5$ 或 $1$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某次測驗中，一名男生及一名女生的標準分分別為 $-1.5$ 及 $z$。該測驗分數的標準差為 4 分。若該男生與該女生的測驗分數相差 10 分，求 $z$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-1$ 或 $4$</li><li><span class="ol">B</span>$-4$ 或 $1$</li><li><span class="ol">C</span>$-4$ 或 $4$</li><li><span class="ol">D</span>$-1$ 或 $1$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 男生分數 $=\bar{x}+(-1.5)(4)=\bar{x}-6$；女生分數 $=\bar{x}+4z$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相差 10 分：$|(\bar{x}+4z)-(\bar{x}-6)|=10$，即 $|4z+6|=10$。</div>
+          <div class="p-step"><b>第 3 步.</b> $4z+6=10\Rightarrow z=1$；$4z+6=-10\Rightarrow z=-4$。</div>
+          <div class="p-ans">答案：<b>B</b>（$-4$ 或 $1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q43.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q45.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

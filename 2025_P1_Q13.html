@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第13題 · 軌跡與垂直平分線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第13題</span>
+  <h1>等距的軌跡就是垂直平分線</h1>
+  <p class="sub">坐標幾何 · 軌跡、垂直平分線、四邊形面積 · 7 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      直線 $L$ 分別與 $x$ 軸正半軸及 $y$ 軸正半軸交於點 $M$ 及 $N$。設 $P$ 為直角坐標平面上的一個動點，使 $MP=NP$。記 $P$ 的軌跡為 $\Gamma$。已知 $\Gamma$ 的方程為 $3x-2y-30=0$。<br>
+      (a) 描述 $\Gamma$ 與 $MN$ 的幾何關係。<span class="marks">[1 分]</span><br>
+      (b) 求 $L$ 的方程。<span class="marks">[3 分]</span><br>
+      (c) 設 $\Gamma$ 分別與 $L$ 及 $x$ 軸交於點 $Q$ 及 $R$。求四邊形 $ONQR$ 的面積，其中 $O$ 為原點。<span class="marks">[3 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 340 250" width="330" role="img" aria-label="直線 L、軌跡 Γ 與四邊形 ONQR">
+        <line x1="20" y1="210" x2="320" y2="210" stroke="currentColor" stroke-width="1"/>
+        <line x1="30" y1="235" x2="30" y2="20" stroke="currentColor" stroke-width="1"/>
+        <polygon points="30,210 30,42 156,126 100,210" fill="currentColor" fill-opacity="0.12" stroke="none"/>
+        <line x1="30" y1="42" x2="282" y2="210" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="100" y1="210" x2="212" y2="42" stroke="currentColor" stroke-width="1.3" stroke-dasharray="6 4"/>
+        <g fill="currentColor">
+          <circle cx="30" cy="210" r="3"/><circle cx="30" cy="42" r="3"/><circle cx="282" cy="210" r="3"/>
+          <circle cx="156" cy="126" r="3"/><circle cx="100" cy="210" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+          <text x="18" y="226" text-anchor="end">O</text>
+          <text x="22" y="38" text-anchor="end">N</text>
+          <text x="288" y="226">M</text>
+          <text x="163" y="120">Q</text>
+          <text x="98" y="228" text-anchor="middle">R</text>
+          <text x="216" y="38" font-size="12">Γ</text>
+          <text x="266" y="196" font-size="12">L</text>
+        </g>
+      </svg>
+      <figcaption>$\Gamma$（虛線）與 $L$ 互相垂直，並穿過 $MN$ 的中點</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 認出軌跡的身份</div>
+      <div class="rule">
+        <span class="rule-name">垂直平分線的軌跡</span>
+        <span class="rule-math">$MP=NP\;\Longleftrightarrow\;P \text{ 在 } MN \text{ 的垂直平分線上}$</span>
+        <span class="rule-why">與兩定點等距的點的軌跡，就是該兩點連線的垂直平分線，是一條直線。</span>
+      </div>
+    <p>因 $M$、$N$ 固定而 $MP=NP$，故 $\Gamma$ 是線段 $MN$ 的垂直平分線。</p>
+    <p>這一句同時給出兩個重要資訊：$\Gamma\perp MN$，而且 $MN$ 的中點在 $\Gamma$ 上。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 由垂直關係定 $L$ 的斜率</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直的斜率</span>
+        <span class="rule-math">$m_1m_2=-1$</span>
+        <span class="rule-why">兩條非鉛垂直線互相垂直，斜率的乘積等於 $-1$。</span>
+      </div>
+    <p>把 $\Gamma$ 寫成斜截式：$3x-2y-30=0\Rightarrow y=\dfrac{3x}{2}-15$，斜率為 $\dfrac{3}{2}$。</p>
+    <p>因 $L\perp\Gamma$，$L$ 的斜率 $=-\dfrac{1}{3/2}=-\dfrac{2}{3}$。</p>
+    <p>設 $L$ 的方程為 $y=-\dfrac{2}{3}x+k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用「中點在 $\Gamma$ 上」定出 $k$</div>
+      <div class="rule">
+        <span class="rule-name">中點在垂直平分線上</span>
+        <span class="rule-math">$M=(m,0),\;N=(0,n)\Rightarrow$ 中點 $\left(\dfrac{m}{2},\dfrac{n}{2}\right)$ 滿足 $\Gamma$</span>
+        <span class="rule-why">$L$ 的斜率 $-\dfrac{n}{m}=-\dfrac{2}{3}$ 給出 $n=\dfrac{2m}{3}$；再把中點代入 $\Gamma$ 就得到 $m$。</span>
+      </div>
+    <p>設 $M=(m,0)$、$N=(0,n)$，$m,n>0$。由斜率：$-\dfrac{n}{m}=-\dfrac{2}{3}\Rightarrow n=\dfrac{2m}{3}$。</p>
+    <p>中點 $\left(\dfrac{m}{2},\dfrac{n}{2}\right)$ 在 $\Gamma:3x-2y=30$ 上：</p>
+    <p>$$3\cdot\frac{m}{2}-2\cdot\frac{n}{2}=30\;\Longrightarrow\;\frac{3m}{2}-\frac{2m}{3}=30\;\Longrightarrow\;\frac{5m}{6}=30$$</p>
+    <p>故 $m=36$、$n=24$，即 $M=(36,0)$、$N=(0,24)$。</p>
+    <p>$$L:\;\frac{x}{36}+\frac{y}{24}=1\;\Longrightarrow\;2x+3y=72$$</p>
+    <p>驗算：$L$ 的斜率 $=-\dfrac{2}{3}$ ✓；$MN$ 中點 $(18,12)$ 滿足 $3(18)-2(12)=30$ ✓</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 求 $Q$ 與 $R$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">解聯立方程</span>
+        <span class="rule-math">$\Gamma:3x-2y=30$ 與 $L:2x+3y=72$</span>
+        <span class="rule-why">交點同時滿足兩條方程；$R$ 是 $\Gamma$ 與 $x$ 軸的交點，代入 $y=0$ 即可。</span>
+      </div>
+    <p>$R$（$y=0$）：$3x=30\Rightarrow x=10$，得 $R=(10,0)$。</p>
+    <p>$Q$：解 $\begin{cases}3x-2y=30\\ 2x+3y=72\end{cases}$，第一式乘 $3$、第二式乘 $2$ 後相加：</p>
+    <p>$$9x-6y+4x+6y=90+144\;\Longrightarrow\;13x=234\;\Longrightarrow\;x=18,\quad y=12$$</p>
+    <p>得 $Q=(18,12)$。驗算：$2(18)+3(12)=36+36=72$ ✓</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 求四邊形 $ONQR$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">鞋帶公式（或分割法）</span>
+        <span class="rule-math">$\text{面積}=\dfrac12\left|\sum x_iy_{i+1}-\sum x_{i+1}y_i\right|$</span>
+        <span class="rule-why">頂點須按次序 $O\to N\to Q\to R$ 排列；亦可切成 $\triangle ONQ$ 與 $\triangle OQR$ 兩個三角形相加。</span>
+      </div>
+    <p>頂點依次為 $O(0,0)$、$N(0,24)$、$Q(18,12)$、$R(10,0)$：</p>
+    <p>$$\text{面積}=\frac12\left|(0\cdot24-0\cdot0)+(0\cdot12-18\cdot24)+(18\cdot0-10\cdot12)+(10\cdot0-0\cdot0)\right|$$</p>
+    <p>$$=\frac12\left|0-432-120+0\right|=\frac12(552)=276$$</p>
+    <p>用分割法核對：$\triangle ONQ=\dfrac12(24)(18)=216$，$\triangle OQR=\dfrac12(10)(12)=60$，合共 $276$ ✓</p>
+    <p>常見錯誤：把 $\Gamma$ 的常數項 $30$ 直接當成 $x$ 截距而寫 $R=(30,0)$；正確做法是代入 $y=0$ 得 $3x=30$，即 $x=10$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\Gamma$ 是 $MN$ 的垂直平分線　(b) $2x+3y=72$（即 $2x+3y-72=0$）　(c) $276$ 平方單位</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 分別與 $x$ 軸正半軸及 $y$ 軸正半軸交於 $M$、$N$，$MP=NP$ 的軌跡 $\Gamma$ 為 $3x-2y-60=0$。(a) 描述 $\Gamma$ 與 $MN$ 的關係；(b) 求 $L$ 的方程；(c) 若 $\Gamma$ 與 $L$ 交於 $Q$、與 $x$ 軸交於 $R$，求四邊形 $ONQR$ 的面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\Gamma$ 是 $MN$ 的垂直平分線；$\Gamma$ 的斜率為 $\dfrac32$，故 $L$ 的斜率為 $-\dfrac23$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $M=(m,0)$、$N=(0,n)$，則 $n=\dfrac{2m}{3}$；中點 $\left(\dfrac m2,\dfrac n2\right)$ 代入 $\Gamma$：$\dfrac{3m}{2}-\dfrac{2m}{3}=60\Rightarrow\dfrac{5m}{6}=60\Rightarrow m=72$，$n=48$。</div>
+          <div class="p-step"><b>第 3 步.</b> $L:\dfrac{x}{72}+\dfrac{y}{48}=1$，即 $2x+3y=144$。$y=0$ 得 $R=(20,0)$；解得 $Q=(36,24)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 鞋帶公式：$\dfrac12\left|0-36(48)-20(24)\right|=\dfrac12(1728+480)=1104$。</div>
+          <div class="p-ans">答案：(a) 垂直平分線；(b) $2x+3y=144$；(c) $1104$ 平方單位</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q14.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

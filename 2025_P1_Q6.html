@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第6題 · 複合不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第6題</span>
+  <h1>「或」字當頭：先各自解，再取聯集</h1>
+  <p class="sub">不等式與線性規劃 · 複合不等式 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮複合不等式
+      $$(*)\qquad \frac{6x+1}{2} < x-8 \quad \text{或} \quad 3x \le -21$$
+      (a) 解 (*)。<span class="marks">[3 分]</span><br>
+      (b) 寫出滿足 (*) 的最大整數。<span class="marks">[1 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 去分母，解第一條不等式</div>
+      <div class="rule">
+        <span class="rule-name">不等式的性質（乘正數不變號）</span>
+        <span class="rule-math">$a<b \Rightarrow 2a<2b$</span>
+        <span class="rule-why">兩邊同乘正數 $2$，不等號方向不變；分子 $6x+1$ 要整條乘以 $2$，右邊 $x-8$ 也要乘 $2$。</span>
+      </div>
+      <p>$$\frac{6x+1}{2}<x-8 \;\Longrightarrow\; 6x+1<2x-16$$</p>
+      <p>$$6x-2x<-16-1 \;\Longrightarrow\; 4x<-17 \;\Longrightarrow\; x<-\frac{17}{4}$$</p>
+      <p>即 $x<-4.25$。留意 $-\dfrac{17}{4}$ 不是整數，這正是第 (b) 部要小心的地方。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 解第二條不等式</div>
+      <div class="rule">
+        <span class="rule-name">不等式的性質（除以正數）</span>
+        <span class="rule-math">$ax\le b,\;a>0 \Rightarrow x\le \dfrac{b}{a}$</span>
+        <span class="rule-why">$3$ 是正數，兩邊同除以 $3$，$\le$ 的方向保持不變。</span>
+      </div>
+      <p>$$3x\le -21 \;\Longrightarrow\; x\le -7$$</p>
+      <p>這條的邊界是整數 $-7$，而且端點是閉的（有等號）。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 取「或」的聯集</div>
+      <div class="rule">
+        <span class="rule-name">複合不等式的「或」</span>
+        <span class="rule-math">解集 $=A\cup B$（滿足其中一條即可）</span>
+        <span class="rule-why">「或」是聯集，兩段都要保留；若寫成「且」才是交集，答案會完全不同。</span>
+      </div>
+      <p>第一段的解是 $x<-\dfrac{17}{4}$，第二段的解是 $x\le -7$。</p>
+      <p>由於 $-7<-\dfrac{17}{4}$，所有 $x\le -7$ 都自動滿足 $x<-\dfrac{17}{4}$，所以第二段被第一段完全包住：</p>
+      <p>$$\text{解集}=(-\infty,-\tfrac{17}{4}) \cup (-\infty,-7] = \Big(-\infty,-\tfrac{17}{4}\Big)$$</p>
+      <p>在數線上畫：$-7$ 那一點整個落在 $-\dfrac{17}{4}$ 的左邊，兩支射線重疊後只剩一支，由 $-\dfrac{17}{4}$ 向左無限伸延。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 在解集內找最大整數</div>
+      <div class="rule">
+        <span class="rule-name">端點是否可取</span>
+        <span class="rule-math">$x<-\dfrac{17}{4}$ 即 $x<-4.25$</span>
+        <span class="rule-why">嚴格不等號代表端點不可取，所以要退到「小於 $-4.25$」的第一個整數。</span>
+      </div>
+      <p>整數由右向左數：$-4$ 不滿足（$-4>-4.25$），$-5$ 滿足（$-5<-4.25$）。</p>
+      <p>$$-5<-4.25 \;\Longrightarrow\; \text{最大整數}=-5$$</p>
+      <p>常見錯誤：把 $-\dfrac{17}{4}$ 當成 $-4$ 然後答 $-4$，或者誤把「或」當成「且」而寫成 $x\le -7$（那只是其中一段，並非 (*) 的解集）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x<-\dfrac{17}{4}$　(b) $-5$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮複合不等式 $\dfrac{4x-3}{2}>x+5$ 或 $5x\le -40$。(a) 解此不等式。(b) 寫出滿足此不等式的最大負整數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 去分母：$4x-3>2x+10$，故 $2x>13$，即 $x>6.5$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$5x\le -40$，即 $x\le -8$。</div>
+          <div class="p-step"><b>第 3 步.</b> 「或」取聯集，兩段互不重疊：$x\le -8$ 或 $x>6.5$。小於 $0$ 的部分只有 $x\le -8$，其中最大負整數為 $-8$。</div>
+          <div class="p-ans">答案：(a) $x\le -8$ 或 $x>6.5$　(b) $-8$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

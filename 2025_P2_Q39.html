@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第39題 · 三角方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第39題</span>
+    <h1>先因式分解，再逐個象限數根</h1>
+    <p class="sub">三角方程 · 正切函數、參考角與週期</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      就 $90^\circ<\theta<270^\circ$，方程 $\tan^3\theta=2\tan\theta$ 有多少個根？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">移項後抽出 tanθ</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        把全部項移到同一邊，令 $\tan\theta=t$，方程就變成三次多項式方程 $t^3-2t=0$。
+      </div>
+      <p>$$\tan^3\theta-2\tan\theta=0$$</p>
+      <p>$$\tan\theta\left(\tan^2\theta-2\right)=0$$</p>
+      <p>於是分成兩個情況：$\tan\theta=0$ 或 $\tan^2\theta=2$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">第一個情況：tanθ = 0</div>
+      <div class="rule">
+        <span class="rule-name">正切為零</span>
+        $\tan\theta=0 \iff \theta=180^\circ k$（$k$ 為整數）。
+      </div>
+      <p>在 $90^\circ<\theta<270^\circ$ 內，只有 $\theta=180^\circ$ 合乎範圍（$0^\circ$ 與 $360^\circ$ 都在範圍外）。</p>
+      <p>此情況得 1 個根。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">第二個情況：tanθ = ±√2</div>
+      <div class="rule">
+        <span class="rule-name">參考角</span>
+        先求 $\tan\alpha=\sqrt2$ 的銳角 $\alpha$，得 $\alpha\approx54.7^\circ$，再按正負決定象限。
+      </div>
+      <p>$$\tan^2\theta=2\quad\Rightarrow\quad \tan\theta=\sqrt2\ \text{或}\ \tan\theta=-\sqrt2$$</p>
+      <p>$\tan\theta=\sqrt2>0$：$\theta$ 在第一或第三象限，即 $\theta\approx54.7^\circ$ 或 $234.7^\circ$。</p>
+      <p>$\tan\theta=-\sqrt2<0$：$\theta$ 在第二或第四象限，即 $\theta\approx125.3^\circ$ 或 $305.3^\circ$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">只留下範圍內的角</div>
+      <div class="rule">
+        <span class="rule-name">正切的週期</span>
+        $\tan$ 的週期是 $180^\circ$，故每組解只需加減 $180^\circ$ 的倍數，再檢查是否落在 $90^\circ<\theta<270^\circ$。
+      </div>
+      <p>$\theta=54.7^\circ$ ✗（小於 $90^\circ$）；$\theta=305.3^\circ$ ✗（大於 $270^\circ$）。</p>
+      <p>合乎範圍的根：</p>
+      <p>$$\theta=125.3^\circ,\quad 180^\circ,\quad 234.7^\circ$$</p>
+      <p>共 3 個根，答案 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$3$ 個根）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 就 $0^\circ<\theta<360^\circ$，方程 $\tan^3\theta=3\tan\theta$ 有多少個根？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\tan\theta\left(\tan^2\theta-3\right)=0$，故 $\tan\theta=0$ 或 $\tan\theta=\pm\sqrt3$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\tan\theta=0$：$\theta=0^\circ$（不合，端點）或 $180^\circ$，得 1 個根。</div>
+          <div class="p-step"><b>第 3 步.</b> $\tan\theta=\sqrt3$：$\theta=60^\circ,\ 240^\circ$，得 2 個根。</div>
+          <div class="p-step"><b>第 4 步.</b> $\tan\theta=-\sqrt3$：$\theta=120^\circ,\ 300^\circ$，得 2 個根。</div>
+          <div class="p-step"><b>第 5 步.</b> 合計 $1+2+2=5$ 個根。</div>
+          <div class="p-ans">答案：<b>C</b>（$5$ 個根）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

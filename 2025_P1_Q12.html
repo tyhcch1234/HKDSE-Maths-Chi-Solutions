@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第12題 · 幹葉圖與四分位數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第12題</span>
+  <h1>由分佈域倒推四分位數</h1>
+  <p class="sub">統計 · 幹葉圖、分佈域、四分位數間距、箱線圖 · 7 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下面的幹葉圖顯示一些運動員訓練前體重（以 kg 為單位）的分佈。
+      <table style="border-collapse:collapse;margin:10px 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:1.05rem">
+        <tr>
+          <th style="border:1px solid #94a3b8;padding:5px 16px;background:#eef2ff">幹（十位）</th>
+          <th style="border:1px solid #94a3b8;padding:5px 16px;background:#eef2ff">葉（個位）</th>
+        </tr>
+        <tr><td style="border:1px solid #94a3b8;padding:5px 16px;text-align:center">4</td><td style="border:1px solid #94a3b8;padding:5px 16px;letter-spacing:.4em">5 6 8</td></tr>
+        <tr><td style="border:1px solid #94a3b8;padding:5px 16px;text-align:center">5</td><td style="border:1px solid #94a3b8;padding:5px 16px;letter-spacing:.4em">w w 6 7</td></tr>
+        <tr><td style="border:1px solid #94a3b8;padding:5px 16px;text-align:center">6</td><td style="border:1px solid #94a3b8;padding:5px 16px;letter-spacing:.4em">3 4 5 6 9 9 9</td></tr>
+        <tr><td style="border:1px solid #94a3b8;padding:5px 16px;text-align:center">7</td><td style="border:1px solid #94a3b8;padding:5px 16px;letter-spacing:.4em">0 2</td></tr>
+        <tr><td style="border:1px solid #94a3b8;padding:5px 16px;text-align:center">8</td><td style="border:1px solid #94a3b8;padding:5px 16px;letter-spacing:.4em">7</td></tr>
+      </table>
+      上述分佈的分佈域與四分位數間距之差為 $25\text{ kg}$。<br>
+      (a) 寫出上述分佈的分佈域。由此，求 $w$。<span class="marks">[3 分]</span><br>
+      (b) 下面的箱線圖顯示該批運動員訓練後體重（以 kg 為單位）的分佈。<br>
+      &nbsp;&nbsp;(i) 求訓練引致該分佈的上四分位數的改變。<br>
+      &nbsp;&nbsp;(ii) 訓練後體重的分佈是否較訓練前分散程度為小？試解釋你的答案。<span class="marks">[4 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 360 120" width="360" role="img" aria-label="訓練後體重的箱線圖">
+        <line x1="25" y1="60" x2="340" y2="60" stroke="currentColor" stroke-width="1"/>
+        <g stroke="currentColor" stroke-width="1">
+          <line x1="62" y1="60" x2="62" y2="66"/><line x1="116" y1="60" x2="116" y2="66"/>
+          <line x1="169" y1="60" x2="169" y2="66"/><line x1="223" y1="60" x2="223" y2="66"/>
+          <line x1="276" y1="60" x2="276" y2="66"/><line x1="330" y1="60" x2="330" y2="66"/>
+        </g>
+        <g font-family="Georgia,serif" font-size="11" fill="currentColor" text-anchor="middle">
+          <text x="62" y="82">45</text><text x="116" y="82">50</text><text x="169" y="82">55</text>
+          <text x="223" y="82">60</text><text x="276" y="82">65</text><text x="330" y="82">70</text>
+          <text x="182" y="103">體重（kg）</text>
+        </g>
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <line x1="73" y1="60" x2="159" y2="60"/>
+          <line x1="266" y1="60" x2="298" y2="60"/>
+          <line x1="73" y1="42" x2="73" y2="78"/>
+          <line x1="298" y1="42" x2="298" y2="78"/>
+          <rect x="159" y="38" width="107" height="44" fill="currentColor" fill-opacity="0.08"/>
+          <line x1="234" y1="38" x2="234" y2="82"/>
+        </g>
+        <g font-family="Georgia,serif" font-size="11" fill="currentColor" text-anchor="middle">
+          <text x="73" y="34">46</text><text x="159" y="34">54</text><text x="234" y="34">61</text>
+          <text x="266" y="34">64</text><text x="298" y="34">67</text>
+        </g>
+      </svg>
+      <figcaption>訓練後：最小值 $46$、下四分位數 $54$、中位數 $61$、上四分位數 $64$、最大值 $67$（kg）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 讀出極值，先寫分佈域</div>
+      <div class="rule">
+        <span class="rule-name">分佈域</span>
+        <span class="rule-math">$\text{分佈域}=\text{最大值}-\text{最小值}$</span>
+        <span class="rule-why">分佈域只看兩個極端數據，與 $w$ 無關；幹葉圖中最小是 $45$（幹 4、葉 5），最大是 $87$（幹 8、葉 7）。</span>
+      </div>
+    <p>最大體重 $=87$，最小體重 $=45$：</p>
+    <p>$$\text{分佈域}=87-45=42\text{ kg}$$</p>
+    <p>兩個未知數 $w$ 都位於幹 5，不會影響極值，所以分佈域可以即時寫出。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用「分佈域 − 四分位數間距 = 25」求間距</div>
+      <div class="rule">
+        <span class="rule-name">四分位數間距</span>
+        <span class="rule-math">$\text{IQR}=Q_3-Q_1$</span>
+        <span class="rule-why">四分位數間距是中間一半數據的跨度，代表分佈的集中程度。</span>
+      </div>
+    <p>已知 分佈域 $-$ 四分位數間距 $=25$：</p>
+    <p>$$\text{IQR}=42-25=17\text{ kg}$$</p>
+    <p>換句話說，只要再找到 $Q_3$ 或 $Q_1$ 其中一個，另一個就可以用 $17$ 補出來。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 由上四分位數推出下四分位數</div>
+      <div class="rule">
+        <span class="rule-name">四分位數的位置</span>
+        <span class="rule-math">$n=17$：下半 8 個、上半 8 個</span>
+        <span class="rule-why">共 $17$ 個數據（$3+4+7+2+1$），中位數是第 $9$ 個；$Q_1$、$Q_3$ 分別是下半部與上半部 $8$ 個數據的中位數，即第 $4$、$5$ 個與第 $13$、$14$ 個數據的平均。</span>
+      </div>
+    <p>把數據由小到大排列：</p>
+    <p>$$45,46,48,\;5w,5w,56,57,\;63,\;64,\;65,66,69,69,69,\;70,72,\;87$$</p>
+    <p>上半部 $8$ 個是 $65,66,69,69,69,70,72,87$，中間兩個都是 $69$，所以</p>
+    <p>$$Q_3=\frac{69+69}{2}=69\text{ kg}\quad(\text{與 } w \text{ 無關})$$</p>
+    <p>於是 $Q_1=69-17=52\text{ kg}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a) 由 $Q_1=52$ 反求 $w$</div>
+      <div class="rule">
+        <span class="rule-name">中位數（下半部）</span>
+        <span class="rule-math">$Q_1=\dfrac{(50+w)+(50+w)}{2}$</span>
+        <span class="rule-why">下半部 $8$ 個數據是 $45,46,48,5w,5w,56,57,63$，中間兩個就是兩個 $5w$，故 $Q_1=50+w$。</span>
+      </div>
+    <p>$$Q_1=\frac{(50+w)+(50+w)}{2}=50+w$$</p>
+    <p>由 $50+w=52$ 得：</p>
+    <p>$$w=2$$</p>
+    <p>驗算：幹 5 的葉依次為 $2,2,6,7$，即 $52,52,56,57$，排列有序 ✓；此時 $Q_1=52$、$Q_3=69$、$\text{IQR}=17$、$42-17=25$ ✓</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 比較訓練前後的分散程度</div>
+      <div class="rule">
+        <span class="rule-name">離差量度</span>
+        <span class="rule-math">分佈域、四分位數間距愈小 → 愈集中</span>
+        <span class="rule-why">比較分散程度要用同一種量度：分佈域對分佈域、四分位數間距對四分位數間距，不可一個用分佈域、另一個用間距。</span>
+      </div>
+    <p>(i) 訓練前 $Q_3=69$，訓練後由箱線圖讀得 $Q_3=64$：</p>
+    <p>$$\text{改變}=64-69=-5\text{ kg}\quad(\text{即上四分位數下降了 }5\text{ kg})$$</p>
+    <p>(ii) 訓練後：分佈域 $=67-46=21\text{ kg}$，$\text{IQR}=64-54=10\text{ kg}$；訓練前：$42\text{ kg}$ 與 $17\text{ kg}$。</p>
+    <p>兩個量度都同時變小（$21<42$ 且 $10<17$），所以訓練後的分佈分散程度較小。</p>
+    <p>常見錯誤：只答「是」而沒有數據支持；或把四分位數的位置數錯（$n=17$ 時 $Q_3$ 是第 $13$、$14$ 個數據的平均）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 分佈域 $=42\text{ kg}$，$w=2$　(b)(i) $-5\text{ kg}$（上四分位數由 $69$ 降至 $64$）　(b)(ii) 是，分佈域由 $42$ 降至 $21$、四分位數間距由 $17$ 降至 $10$，故較不分散。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班學生體重（kg）的幹葉圖如下：幹 3 的葉為 $1,4,7$；幹 4 的葉為 $2,2,5,8$；幹 5 的葉為 $0,3,9$。已知分佈域與四分位數間距之差為 $15\text{ kg}$，求分佈域、四分位數間距及下四分位數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 數據共 $10$ 個：$31,34,37,42,42,45,48,50,53,59$；分佈域 $=59-31=28$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\text{IQR}=28-15=13$。</div>
+          <div class="p-step"><b>第 3 步.</b> 下半部 $5$ 個為 $31,34,37,42,42$，$Q_1=37$；上半部 $5$ 個為 $45,48,50,53,59$，$Q_3=50$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：$Q_3-Q_1=50-37=13$ ✓，$28-13=15$ ✓。</div>
+          <div class="p-ans">答案：分佈域 $=28\text{ kg}$，四分位數間距 $=13\text{ kg}$，$Q_1=37\text{ kg}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q13.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

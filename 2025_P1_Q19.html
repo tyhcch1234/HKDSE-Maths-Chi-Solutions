@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第19題 · 圓方程與切線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第19題</span>
+  <h1>相切即是「只有一個交點」：判別式為零</h1>
+  <p class="sub">圓方程 · 判別式、切線性質、內切圓與外接圓 · 12 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      直線 $L$ 的方程為 $4x-3y+83=0$。圓 $C$ 的方程為 $x^2+y^2+ax-2y+b=0$，其中 $a$、$b$ 為正常數。已知 $C$ 經過點 $(-10,9)$，且 $L$ 與 $C$ 相切。<br>
+      (a) 證明方程 $25x^2+(9a+640)x+(90a+4924)=0$ 有等根，並由此求 $a$ 和 $b$。<span class="marks">[4 分]</span><br>
+      (b) 點 $P$ 的坐標為 $(-20,1)$。設 $Q$ 為 $L$ 下方的一點，使 $PQ$ 與 $C$ 相切且 $PQ=25$。記 $C$ 的圓心為 $I$。<br>
+      (i) 求 $\cos\angle IPQ$。<br>
+      (ii) 以根式表示 $I$ 與 $Q$ 之間的距離。<br>
+      (iii) 設 $R$ 為 $L$ 上的一點，使 $C$ 為 $\triangle PQR$ 的內切圓。記 $\triangle PQR$ 的外接圓半徑為 $r$。有人聲稱 $r>PQ$。該聲稱是否正確？試解釋。<span class="marks">[8 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先用圓上的點消去 $b$，再代入 $L$</div>
+      <div class="rule">
+        <span class="rule-name">點在圓上（代入圓方程）</span>
+        <span class="rule-math">$(-10)^2+9^2+a(-10)-2(9)+b=0$</span>
+        <span class="rule-why">$C$ 經過 $(-10,9)$，坐標必滿足圓方程；這條方程把 $b$ 用 $a$ 表示，令未知數只剩一個。</span>
+      </div>
+      <p>$$100+81-10a-18+b=0\;\Rightarrow\;b=10a-163\quad\cdots(1)$$</p>
+      <p>把 $L$ 寫成 $y=\dfrac{4x+83}{3}$，代入圓方程並全式乘 $9$：</p>
+      <p>$$9x^2+(4x+83)^2+9ax-6(4x+83)+9b=0$$</p>
+      <p>其中 $(4x+83)^2=16x^2+664x+6889$、$-6(4x+83)=-24x-498$，合併得</p>
+      <p>$$25x^2+(9a+640)x+(9b+6391)=0$$</p>
+      <p>用 $(1)$：$9b+6391=9(10a-163)+6391=90a+4924$，故</p>
+      <p>$$25x^2+(9a+640)x+(90a+4924)=0\quad\cdots(2)$$</p>
+      <p>這個二次方程的根，就是 $L$ 與 $C$ 交點的 $x$ 坐標。由於 $L$ 與 $C$ <b>相切</b>，兩者只有一個交點，所以 $(2)$ 只有一個（重）根，即有<b>等根</b>（證畢）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 判別式為零，解出 $a$、$b$ 並驗證</div>
+      <div class="rule">
+        <span class="rule-name">二次方程有等根的條件（$\Delta=0$）</span>
+        <span class="rule-math">$\Delta=(9a+640)^2-4(25)(90a+4924)=0$</span>
+        <span class="rule-why">$Ax^2+Bx+C=0$ 有等根 $\iff B^2-4AC=0$；這給出關於 $a$ 的二次方程。</span>
+      </div>
+      <p>$$81a^2+11520a+409600-9000a-492400=0$$</p>
+      <p>$$81a^2+2520a-82800=0\;\Rightarrow\;9a^2+280a-9200=0$$</p>
+      <p>$$a=\frac{-280\pm\sqrt{280^2+4(9)(9200)}}{18}=\frac{-280\pm\sqrt{409600}}{18}=\frac{-280\pm640}{18}$$</p>
+      <p>得 $a=20$ 或 $a=-\dfrac{920}{18}<0$；因 $a$ 為正常數，故 $a=20$，再由 $(1)$ 得 $b=200-163=37$。</p>
+      <p>驗證：$C:\ x^2+y^2+20x-2y+37=0$，圓心 $I=(-10,\ 1)$，半徑平方 $=100+1-37=64$，即半徑 $8$。</p>
+      <p>$I$ 到 $L$ 的距離 $=\dfrac{|4(-10)-3(1)+83|}{\sqrt{4^2+(-3)^2}}=\dfrac{40}{5}=8$，與半徑相等，確為相切 ✓；而 $(-10,9)$ 與 $I$ 相距 $8$，亦在圓上 ✓。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i)(ii) 切線長 → 直角三角形 → 求 $\cos$ 與 $IQ$</div>
+      <div class="rule">
+        <span class="rule-name">切線性質（半徑垂直切線、切線長相等）</span>
+        <span class="rule-math">$PI^2=PW^2+r^2$</span>
+        <span class="rule-why">設 $W$ 為 $PQ$ 與 $C$ 的切點，則 $IW\perp PQ$ 且 $IW=r=8$，$\triangle PIW$ 是直角三角形，由勾股定理可求 $PW$。</span>
+      </div>
+      <p>先留意 $P$ 在 $L$ 上：$4(-20)-3(1)+83=0$ ✓。又 $PI=\sqrt{(-10+20)^2+(1-1)^2}=10$。</p>
+      <p>由 $PI^2=PW^2+IW^2$：$100=PW^2+64\Rightarrow PW=6$。</p>
+      <p>(i) 在 $\triangle PIW$ 中，$\angle IPW=\angle IPQ$，故</p>
+      <p>$$\cos\angle IPQ=\frac{PW}{PI}=\frac{6}{10}=\frac{3}{5}$$</p>
+      <p>又 $\overrightarrow{PI}=(10,0)$ 水平，而 $Q$ 在 $L$ 下方，故 $\overrightarrow{PQ}$ 的單位向量為 $\left(\dfrac{3}{5},-\dfrac{4}{5}\right)$，得</p>
+      <p>$$Q=(-20,1)+25\left(\tfrac35,-\tfrac45\right)=(-5,\ -19)$$</p>
+      <p>（驗證：$L$ 在 $x=-5$ 時 $y=21$，$-19<21$，故 $Q$ 確在 $L$ 下方。）</p>
+      <p>(ii) $W$ 在 $PQ$ 上且 $PW=6<25$，故 $WQ=25-6=19$。在直角三角形 $IQW$ 中 $IW\perp WQ$：</p>
+      <p>$$IQ^2=IW^2+WQ^2=8^2+19^2=64+361=425\;\Rightarrow\;IQ=5\sqrt{17}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(iii) 內切圓定出三邊，再算外接圓半徑</div>
+      <div class="rule">
+        <span class="rule-name">內切圓的切線長相等 + 外接圓半徑公式</span>
+        <span class="rule-math">$r=\dfrac{abc}{4\Delta},\qquad \Delta=(\text{內切圓半徑})\times s$</span>
+        <span class="rule-why">由同一頂點引出的兩條切線等長，可設未知數 $x$ 定出三邊；再用 $\Delta=rs$ 與 $r=\frac{abc}{4\Delta}$ 求外接圓半徑。</span>
+      </div>
+      <p>$C$ 為 $\triangle PQR$ 的內切圓，故三邊 $PQ$、$QR$、$RP$ 都與 $C$ 相切，內切圓半徑為 $8$。因 $P$ 在 $L$ 上而 $R$ 在 $L$ 上，邊 $PR$ 就是 $L$ 的一部分，其切點距 $P$ 為 $6$（與 $PW$ 相等）。</p>
+      <p>設由 $R$ 引出的切線長為 $x$，則</p>
+      <p>$$PR=6+x,\qquad QR=19+x,\qquad PQ=25$$</p>
+      <p>$L$ 的方向向量為 $(3,4)$（因 $4x-3y$ 的係數），故</p>
+      <p>$$R=P+(6+x)\cdot\tfrac{(3,4)}{5}=\bigl(-16.4+0.6x,\ 5.8+0.8x\bigr)$$</p>
+      <p>由 $RQ=19+x$ 及 $Q(-5,-19)$：</p>
+      <p>$$(0.6x-11.4)^2+(0.8x+24.8)^2=(19+x)^2$$</p>
+      <p>展開：$x^2+26x+745=x^2+38x+361\;\Rightarrow\;12x=384\;\Rightarrow\;x=32$</p>
+      <p>故三邊為 $PQ=25$、$PR=38$、$QR=51$（$R=(2.8,\ 31.4)$，可驗證在 $L$ 上且 $RQ=51$）。</p>
+      <p>半周長 $s=\dfrac{25+38+51}{2}=57$，面積 $\Delta=8\times57=456$（亦可用海倫公式：$\sqrt{57\cdot32\cdot19\cdot6}=456$ ✓）。</p>
+      <p>$$r=\frac{25\times38\times51}{4\times456}=\frac{48450}{1824}=\frac{425}{16}=26.5625$$</p>
+      <p>因為 $26.5625>25=PQ$，故聲稱<b>正確</b>。</p>
+      <p>常見錯誤：把 $Q$ 當成切點（則 $IQ=8$，$PQ$ 應為 $6$，與 $PQ=25$ 矛盾）；或誤用 $r=\Delta/s$（那是內切圓半徑 $8$，不是外接圓半徑）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 已證有等根；$a=20$、$b=37$　(b)(i) $\cos\angle IPQ=\dfrac{3}{5}$　(ii) $IQ=5\sqrt{17}$　(iii) 正確，$r=\dfrac{425}{16}=26.5625>25=PQ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 的方程為 $4x-3y+48=0$。圓 $C$ 的方程為 $x^2+y^2+ax-2y+b=0$，其中 $a$、$b$ 為正常數。已知 $C$ 經過點 $(-1,4)$，且 $L$ 與 $C$ 相切。(a) 證明方程 $25x^2+(9a+360)x+(9a+1935)=0$ 有等根，並求 $a$、$b$；(b) 求 $L$ 與 $C$ 的切點坐標。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入 $(-1,4)$：$1+16-a-8+b=0\Rightarrow b=a-9$。</div>
+          <div class="p-step"><b>第 2 步.</b> 以 $y=\dfrac{4x+48}{3}$ 代入並乘 $9$，得 $25x^2+(9a+360)x+(9b+2016)=0$，即 $25x^2+(9a+360)x+(9a+1935)=0$；相切故有等根。</div>
+          <div class="p-step"><b>第 3 步.</b> $\Delta=(9a+360)^2-100(9a+1935)=81a^2+5580a-63900=0\Rightarrow 9a^2+620a-7100=0\Rightarrow a=10$（另一根為負），$b=1$。</div>
+          <div class="p-step"><b>第 4 步.</b> 圓心 $I(-5,1)$、半徑 $\sqrt{25+1-1}=5$。切點為 $I$ 到 $L$ 的垂足：$\dfrac{4(-5)-3(1)+48}{5}=5$，垂足 $=(-5,1)-5\cdot\dfrac{(4,-3)}{5}=(-9,\ 4)$。</div>
+          <div class="p-ans">答案：(a) $a=10$、$b=1$；(b) 切點 $(-9,\ 4)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

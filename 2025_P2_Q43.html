@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第43題 · 至多三罐葡萄汁</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第43題</span>
+    <h1>「至多」太長，就數它的反面</h1>
+    <p class="sub">概率 · 組合計數與對立事件</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋內有 9 罐蘋果汁及 4 罐葡萄汁。若同時從袋中隨機抽出 6 罐，求抽出至多 3 罐葡萄汁的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{9}{13}$</li><li><span class="ol">B</span>$\dfrac{133}{143}$</li><li><span class="ol">C</span>$\dfrac{140}{143}$</li><li><span class="ol">D</span>$\dfrac{714}{715}$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">算出樣本空間的大小</div>
+      <div class="rule">
+        <span class="rule-name">組合數（同時抽取）</span>
+        同時抽出 $r$ 個對象，不計次序，總數為 $\binom{n}{r}$。
+      </div>
+      <p>袋內共 $9+4=13$ 罐，抽出 6 罐：</p>
+      <p>$$\binom{13}{6}=1716$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把「至多 3 罐」寫成補集</div>
+      <div class="rule">
+        <span class="rule-name">對立事件</span>
+        葡萄汁只有 4 罐，故「至多 3 罐」的反面就是「剛好 4 罐」。
+      </div>
+      <p>$P(\text{至多 }3)=1-P(\text{剛好 }4)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">計算反面情形的概率</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理（分類選取）</span>
+        4 罐葡萄汁全部取出，其餘 2 罐由 9 罐蘋果汁中選。
+      </div>
+      <p>有利組合數 $=\binom{4}{4}\binom{9}{2}=1\times 36=36$。</p>
+      <p>$$P(\text{剛好 }4)=\frac{36}{1716}=\frac{3}{143}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用 $1$ 減去反面概率</div>
+      <div class="rule">
+        <span class="rule-name">餘概率</span>
+        $P(A)=1-P(A')$，並把分數約至最簡。
+      </div>
+      <p>$$P(\text{至多 }3)=1-\frac{3}{143}=\frac{140}{143}$$</p>
+      <p>答案 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{140}{143}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋內有 7 罐蘋果汁及 3 罐葡萄汁。若同時從袋中隨機抽出 4 罐，求抽出至多 2 罐葡萄汁的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{29}{30}$</li><li><span class="ol">B</span>$\dfrac{7}{30}$</li><li><span class="ol">C</span>$\dfrac{1}{30}$</li><li><span class="ol">D</span>$\dfrac{14}{15}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共 10 罐，抽出 4 罐，總數 $\binom{10}{4}=210$。</div>
+          <div class="p-step"><b>第 2 步.</b> 「至多 2 罐」的反面是「剛好 3 罐葡萄汁」，組合數 $\binom{3}{3}\binom{7}{1}=7$。</div>
+          <div class="p-step"><b>第 3 步.</b> 反面概率 $=\dfrac{7}{210}=\dfrac{1}{30}$，故所求 $=1-\dfrac{1}{30}=\dfrac{29}{30}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{29}{30}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

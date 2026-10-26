@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第9題 · 中位數與標準差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第9題</span>
+  <h1>中位數鎖住 $s$ 的範圍，標準差揀最大</h1>
+  <p class="sub">統計學 · 中位數與標準差 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示一些學生擁有筆的數目的分佈。
+      <table class="dtable">
+        <tr><th>筆的數目</th><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+        <tr><th>學生人數</th><td>9</td><td>13</td><td>2</td><td>$s$</td><td>11</td></tr>
+      </table>
+      該分佈的中位數為 $7$。<br>
+      (a) 求 $s$ 的最小可能值。<span class="marks">[2 分]</span><br>
+      (b) 寫出 $s$ 的最大可能值。<span class="marks">[1 分]</span><br>
+      (c) 求該分佈的最大可能標準差。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算累積頻數與總人數</div>
+      <div class="rule">
+        <span class="rule-name">累積頻數</span>
+        <span class="rule-math">第 $k$ 個數據落在累積頻數首次 $\ge k$ 的一組</span>
+        <span class="rule-why">中位數只看「位置」，所以要把各組人數順序累加，找出中間位置落在哪一格。</span>
+      </div>
+      <p>總人數 $n=9+13+2+s+11=35+s$。累積頻數：</p>
+      <p>$$5:\ 9,\quad 6:\ 22,\quad 7:\ 24,\quad 8:\ 24+s,\quad 9:\ 35+s$$</p>
+      <p>「$7$」佔了第 $23$ 及第 $24$ 兩個位置。中位數要等於 $7$，中間位置就必須落在這兩個位置之內。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 最小 $s$：讓中間位置剛好踩到第一個 $7$</div>
+      <div class="rule">
+        <span class="rule-name">中位數的位置</span>
+        <span class="rule-math">$n$ 為奇數取第 $\dfrac{n+1}{2}$ 個；$n$ 為偶數取第 $\dfrac{n}{2}$ 與 $\dfrac{n}{2}+1$ 個的平均</span>
+        <span class="rule-why">奇、偶要分開討論，因為偶數時中位數可能是兩個不同數據的平均值。</span>
+      </div>
+      <p>取 $s=9$：$n=44$，中位數為第 $22$、$23$ 個數據的平均 $=\dfrac{6+7}{2}=6.5\ne 7$，不合。</p>
+      <p>取 $s=10$：$n=45$，中位數為第 $23$ 個數據。第 $22$ 個是最後一個 $6$，故第 $23$ 個是 $7$，中位數 $=7$，符合。</p>
+      <p>$$\therefore\ s\ge 10,\qquad s\text{ 的最小可能值}=10$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 最大 $s$：中間位置仍要留在 $7$ 之內</div>
+      <div class="rule">
+        <span class="rule-name">中位數不變的條件</span>
+        <span class="rule-math">中間位置 $\le 24$（最後一個 $7$ 的位置）</span>
+        <span class="rule-why">$s$ 增大只會把 $8$ 之後的數據往右推，中間位置一旦越過第 $24$ 位就會踩到 $8$。</span>
+      </div>
+      <p>取 $s=12$：$n=47$，中位數為第 $24$ 個數據 $=7$，符合。</p>
+      <p>取 $s=13$：$n=48$，中位數為第 $24$、$25$ 個數據的平均 $=\dfrac{7+8}{2}=7.5\ne 7$，不合。</p>
+      <p>$$\therefore\ s\le 12,\qquad s\text{ 的最大可能值}=12$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 比較 $s=10,11,12$ 的標準差</div>
+      <div class="rule">
+        <span class="rule-name">標準差</span>
+        <span class="rule-math">$\sigma=\sqrt{\dfrac{\sum x^2}{n}-\left(\dfrac{\sum x}{n}\right)^2}$</span>
+        <span class="rule-why">先算平方和與平均數，再取「平方的平均減平均的平方」，最後開方。</span>
+      </div>
+      <p>$s=10$（$n=45$）：$\sum x=45+78+14+80+99=316$，$\sum x^2=225+468+98+640+891=2322$</p>
+      <p>$$\sigma^2=\frac{2322}{45}-\left(\frac{316}{45}\right)^2=51.6-49.3116\approx 2.288,\qquad \sigma\approx 1.51$$</p>
+      <p>$s=11$（$n=46$）：$\sum x=324,\ \sum x^2=2386$，$\sigma^2\approx 2.259$，$\sigma\approx 1.50$。</p>
+      <p>$s=12$（$n=47$）：$\sum x=332,\ \sum x^2=2450$，$\sigma^2\approx 2.230$，$\sigma\approx 1.49$。</p>
+      <p>$s$ 越大，越多數據堆在靠近平均數的「$8$」，離散程度越小，所以標準差在 $s=10$ 時最大。</p>
+      <p>$$\text{最大可能標準差}\approx 1.51$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $10$　(b) $12$　(c) $1.51$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某分佈中，數據值 $6,7,8,9,10$ 的頻數分別為 $7,12,4,t,9$，且中位數為 $8$。(a) 求 $t$ 的最小可能值。(b) 求 $t$ 的最大可能值。(c) 當 $t=13$ 時，求該分佈的標準差（取三位有效數字）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 累積頻數：$7,\ 19,\ 23,\ 23+t,\ 32+t$。$8$ 位於第 $20$ 至第 $23$ 位。</div>
+          <div class="p-step"><b>第 2 步.</b> $t=6$ 時 $n=38$，第 $19$、$20$ 位為 $7$ 與 $8$，中位數 $7.5$；$t=7$ 時 $n=39$，第 $20$ 位為 $8$。故最小 $t=7$。</div>
+          <div class="p-step"><b>第 3 步.</b> $t=13$ 時 $n=45$，第 $23$ 位為 $8$；$t=14$ 時 $n=46$，第 $23$、$24$ 位為 $8$ 與 $9$，中位數 $8.5$。故最大 $t=13$。</div>
+          <div class="p-step"><b>第 4 步.</b> $t=13$：$\sum x=365$，$\sum x^2=3049$，$n=45$。$\sigma^2=\dfrac{3049}{45}-\left(\dfrac{365}{45}\right)^2=67.7556-65.7901\approx 1.9654$，$\sigma\approx 1.40$。</div>
+          <div class="p-ans">答案：(a) $7$　(b) $13$　(c) $1.40$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第38題 · 圓與切線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第38題</span>
+    <h1>切線與弦的夾角，等於另一弓形的圓周角</h1>
+    <p class="sub">圓的基本性質 · 半圓上的圓周角、內錯弓形角與三角形外角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$AC$ 是圓 $ABCD$ 的一條直徑。設 $E$ 為 $AC$ 與 $BD$ 的交點。已知 $TD$ 是圓於 $D$ 的切線。若 $\angle BEC=96^\circ$ 及 $\angle CDT=41^\circ$，則 $\angle CDE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$47^\circ$</li><li><span class="ol">B</span>$48^\circ$</li><li><span class="ol">C</span>$52^\circ$</li><li><span class="ol">D</span>$55^\circ$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 420 340" width="420" height="340" role="img" aria-label="圓 ABCD，AC 為直徑，BD 與 AC 交於 E，TD 為切線">
+        <g fill="none" stroke="#334155" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="210" cy="165" r="130"/>
+          <line x1="80" y1="165" x2="340" y2="165"/>
+          <line x1="80" y1="165" x2="228" y2="294"/>
+          <line x1="228" y1="294" x2="340" y2="165"/>
+          <line x1="201" y1="35" x2="228" y2="294"/>
+          <line x1="299" y1="284" x2="207" y2="297"/>
+          <path d="M254,264 A40,40 0 0 1 268,288" stroke="#b91c1c" stroke-width="1.3"/>
+          <path d="M244.5,165 A30,30 0 0 0 211.4,135.2" stroke="#b91c1c" stroke-width="1.3"/>
+        </g>
+        <g fill="#0f172a" font-size="15" font-style="italic" font-family="Georgia,serif">
+          <text x="62" y="171" text-anchor="end">A</text>
+          <text x="352" y="171">C</text>
+          <text x="200" y="24" text-anchor="middle">B</text>
+          <text x="236" y="315">D</text>
+          <text x="310" y="292">T</text>
+          <text x="196" y="188">E</text>
+        </g>
+        <g fill="#b91c1c" font-size="13" font-family="Georgia,serif">
+          <text x="258" y="253">41°</text>
+          <text x="236" y="133">96°</text>
+        </g>
+      </svg>
+      <figcaption>圓 ABCD 中 $AC$ 為直徑，$B$、$D$ 在圓上，$E$ 為 $AC$ 與 $BD$ 的交點，$TD$ 與圓切於 $D$。</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">直徑一出，先取 90°</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的圓周角</span>
+        若 $AC$ 是直徑，則圓上任意一點 $D$ 都滿足 $\angle ADC=90^\circ$（半圓上的圓周角）。
+      </div>
+      <p>$D$ 在圓上而 $AC$ 為直徑，所以 $\triangle ADC$ 是直角三角形：</p>
+      <p>$$\angle ADC=90^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">切線與弦的夾角搬到 A 點</div>
+      <div class="rule">
+        <span class="rule-name">切線與弦的夾角（內錯弓形角）</span>
+        切線 $TD$ 與弦 $DC$ 的夾角，等於另一弓形內的圓周角 $\angle DAC$。
+      </div>
+      <p>$$\angle CAD=\angle CDT=41^\circ$$</p>
+      <p>留意這個角是「弦 $DC$、切線 $DT$」之間的銳角，對應的圓周角在 $A$ 那一邊。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 △ACD 內補出第三隻角</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        三角形三隻內角相加等於 $180^\circ$。
+      </div>
+      <p>$$\angle ACD+41^\circ+90^\circ=180^\circ$$</p>
+      <p>$$\angle ACD=49^\circ$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用外角把 96° 減出答案</div>
+      <div class="rule">
+        <span class="rule-name">三角形的外角</span>
+        三角形任一隻外角等於兩個不相鄰內角之和。此處 $\angle BEC$ 正是 $\triangle CDE$ 於 $E$ 的外角。
+      </div>
+      <p>$$\angle CDE+\angle DCE=\angle BEC$$</p>
+      <p>$$\angle CDE+49^\circ=96^\circ\quad\Rightarrow\quad \angle CDE=47^\circ$$</p>
+      <p>驗算：$E$ 在 $AC$ 上，鄰角 $\angle CED=180^\circ-96^\circ=84^\circ$，再算 $\angle CDE=180^\circ-49^\circ-84^\circ=47^\circ$ ✓</p>
+      <p>答案 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$47^\circ$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $ABCD$ 中，$AC$ 是直徑，$TD$ 是圓於 $D$ 的切線，$E$ 為 $AC$ 與 $BD$ 的交點。若 $\angle BEC=110^\circ$ 及 $\angle CDT=35^\circ$，求 $\angle CDE$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$45^\circ$</li><li><span class="ol">B</span>$50^\circ$</li><li><span class="ol">C</span>$55^\circ$</li><li><span class="ol">D</span>$60^\circ$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC$ 為直徑，故 $\angle ADC=90^\circ$（半圓上的圓周角）。</div>
+          <div class="p-step"><b>第 2 步.</b> 切線與弦的夾角：$\angle CAD=\angle CDT=35^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ACD=180^\circ-90^\circ-35^\circ=55^\circ$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\angle BEC$ 為 $\triangle CDE$ 的外角：$\angle CDE=110^\circ-55^\circ=55^\circ$。</div>
+          <div class="p-ans">答案：<b>C</b>（$55^\circ$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第15題 · 古典概率與組合</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第15題</span>
+  <h1>同時抽 3 隻：數組合，不數次序</h1>
+  <p class="sub">概率 · 組合、互斥事件、古典概率 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個盒內有 $8$ 隻白碟、$4$ 隻紅碟及 $1$ 隻黑碟。若從盒中隨機同時抽出 $3$ 隻碟，求<br>
+      (a) 抽出的 $3$ 隻碟顏色相同的概率；<span class="marks">[2 分]</span><br>
+      (b) 抽出的 $3$ 隻碟顏色全都不同的概率。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數清總數與樣本空間</div>
+      <div class="rule">
+        <span class="rule-name">組合數</span>
+        <span class="rule-math">$C^{n}_{r}=\dfrac{n!}{r!\,(n-r)!}$</span>
+        <span class="rule-why">「同時抽出」即不計次序，所以用組合；盒內共有 $8+4+1=13$ 隻碟，從中取 $3$ 隻。</span>
+      </div>
+    <p>碟的總數 $=8+4+1=13$。</p>
+    <p>$$C^{13}_{3}=\frac{13\times12\times11}{3\times2\times1}=286$$</p>
+    <p>所以樣本空間共有 $286$ 個同樣可能的結果。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 三隻同色：分顏色各自數，再相加</div>
+      <div class="rule">
+        <span class="rule-name">互斥事件（加法定律）</span>
+        <span class="rule-math">$P(A\cup B)=P(A)+P(B)$</span>
+        <span class="rule-why">「全白」與「全紅」不可能同時發生，是互斥事件，所以把各情況的組合數直接相加。</span>
+      </div>
+    <p>全白：$C^{8}_{3}=56$；全紅：$C^{4}_{3}=4$；黑碟只有 $1$ 隻，不可能抽到 $3$ 隻全黑。</p>
+    <p>$$56+4=60$$</p>
+    <p>$$P(\text{三隻同色})=\frac{60}{286}=\frac{30}{143}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 三色齊：三種顏色各取一隻</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">$8\times4\times1=32$</span>
+        <span class="rule-why">「顏色全都不同」而只有三種顏色、又要抽三隻，就必須白、紅、黑各一隻；每一步的選擇數相乘。</span>
+      </div>
+    <p>白 $8$ 選 $1$、紅 $4$ 選 $1$、黑 $1$ 選 $1$：</p>
+    <p>$$C^{8}_{1}\times C^{4}_{1}\times C^{1}_{1}=8\times4\times1=32$$</p>
+    <p>$$P(\text{三色各一})=\frac{32}{286}=\frac{16}{143}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用「三類情況相加為 1」驗算</div>
+      <div class="rule">
+        <span class="rule-name">概率的總和為 1</span>
+        <span class="rule-math">$P(\text{同色})+P(\text{兩同一異})+P(\text{全異})=1$</span>
+        <span class="rule-why">三隻碟的顏色組合只有這三類，把第三類的數目算出，就可以檢驗前面兩個答案有沒有漏算。</span>
+      </div>
+    <p>「剛好兩隻同色」的組合數：</p>
+    <p>$$C^{8}_{2}(4)+C^{8}_{2}(1)+C^{4}_{2}(8)+C^{4}_{2}(1)=112+28+48+6=194$$</p>
+    <p>三類合計：$60+32+194=286$ ✓，正好等於樣本空間的總數，可見 (a)、(b) 都沒有漏算或多算。</p>
+    <p>常見錯誤：用排列 $P^{13}_{3}$ 作分母卻用組合數作分子；或把 (a) 寫成 $\dfrac{C^{8}_{3}+C^{4}_{3}+C^{1}_{3}}{286}$（$C^{1}_{3}$ 無意義，應為 $0$）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{30}{143}$　(b) $\dfrac{16}{143}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個袋內有 $6$ 個白球、$3$ 個紅球及 $2$ 個黑球。若隨機同時抽出 $3$ 個球，求 (a) 三個球顏色相同的概率；(b) 三個球顏色全都不同的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 共 $11$ 個球，$C^{11}_{3}=165$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同色：$C^{6}_{3}+C^{3}_{3}=20+1=21$，概率 $=\dfrac{21}{165}=\dfrac{7}{55}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 全異：$6\times3\times2=36$，概率 $=\dfrac{36}{165}=\dfrac{12}{55}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：兩同一異 $=165-21-36=108$，$21+36+108=165$ ✓。</div>
+          <div class="p-ans">答案：(a) $\dfrac{7}{55}$；(b) $\dfrac{12}{55}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q16.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

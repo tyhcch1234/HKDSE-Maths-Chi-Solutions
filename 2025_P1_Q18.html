@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第18題 · 配方法、平移與垂心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第18題</span>
+  <h1>配方法讀出頂點，垂心反推第三點</h1>
+  <p class="sub">二次函數 · 配方法、圖像平移、垂心與四點共圓 · 9 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $g(x)=3x^2-6kx+24x+3k^2-24k+55$，其中 $k$ 為正常數。記 $y=g(x)$ 的圖像的頂點為 $R$。<br>
+      (a) 用配方法，以 $k$ 表示 $R$ 的坐標。<span class="marks">[2 分]</span><br>
+      (b) 把 $y=g(x)$ 的圖像向右平移 $6$ 單位、再向下平移 $10$ 單位，得 $y=h(x)$ 的圖像，記其頂點為 $S$。設 $T$ 為一點，使 $\triangle RST$ 的垂心為原點 $O$。<br>
+      (i) 以 $k$ 表示 $T$ 的坐標。<br>
+      (ii) 點 $U$ 的坐標為 $(-5,5)$。設 $V$ 為 $RS$ 上的一點，使 $TV\perp RS$。已知 $S$、$T$、$U$、$V$ 共圓，求 $k$。<span class="marks">[7 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方法：先抽係數 3，再補平方</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">$ax^2+bx+c=a\left(x+\dfrac{b}{2a}\right)^2+c-\dfrac{b^2}{4a}$</span>
+        <span class="rule-why">二次項係數是 $3$，要先抽出 $3$ 才可寫成完全平方；頂點的 $x$ 坐標就是令平方項為 $0$ 的值。</span>
+      </div>
+      <p>先合併 $x$ 的一次項：$g(x)=3x^2+(24-6k)x+(3k^2-24k+55)$。</p>
+      <p>$$g(x)=3\left[x^2+(8-2k)x\right]+3k^2-24k+55$$</p>
+      <p>$$=3\left[(x+4-k)^2-(4-k)^2\right]+3k^2-24k+55$$</p>
+      <p>展開常數部分：$-3(k^2-8k+16)=-3k^2+24k-48$，與餘下的 $3k^2-24k+55$ 相加得 $7$，故</p>
+      <p>$$g(x)=3\bigl(x-(k-4)\bigr)^2+7$$</p>
+      <p>因此 $R=(k-4,\ 7)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 平移讀出 $S$，並寫出 $RS$ 的方向</div>
+      <div class="rule">
+        <span class="rule-name">圖像平移</span>
+        <span class="rule-math">右移 $6$、下移 $10$：$(x,y)\mapsto(x+6,\ y-10)$</span>
+        <span class="rule-why">平移不改變形狀，只移動頂點；向右平移使 $x$ 坐標加 $6$，向下平移使 $y$ 坐標減 $10$。</span>
+      </div>
+      <p>把 $x$ 換成 $x-6$、整式再減 $10$：</p>
+      <p>$$h(x)=3\bigl(x-6-(k-4)\bigr)^2+7-10=3\bigl(x-(k+2)\bigr)^2-3$$</p>
+      <p>故 $S=(k+2,\ -3)$，而</p>
+      <p>$$\overrightarrow{RS}=(k+2-(k-4),\ -3-7)=(6,\ -10)$$</p>
+      <p>留意 $\overrightarrow{RS}$ 與 $k$ 無關，方向固定，這點是後面能列出簡單方程的關鍵。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 用「垂心在 $O$」反推 $T$</div>
+      <div class="rule">
+        <span class="rule-name">垂心的性質（三條高交於一點）</span>
+        <span class="rule-math">$OT\perp RS,\quad OR\perp ST,\quad OS\perp RT$</span>
+        <span class="rule-why">$O$ 是垂心，就同時在三條高之上：從 $T$ 出發的高垂直於 $RS$，從 $R$ 出發的高垂直於 $ST$，兩者合起來便足以定出 $T$。</span>
+      </div>
+      <p>由 $OT\perp RS$：設 $T=(p,q)$，則 $6p-10q=0$，即 $3p=5q$。取 $T=(5t,\ 3t)$。</p>
+      <p>再由 $OR\perp ST$，其中 $\overrightarrow{OR}=(k-4,\ 7)$、$\overrightarrow{ST}=(5t-k-2,\ 3t+3)$：</p>
+      <p>$$(k-4)(5t-k-2)+7(3t+3)=0$$</p>
+      <p>$$5t(k-4)-(k-4)(k+2)+21t+21=0$$</p>
+      <p>$$t(5k+1)=(k-4)(k+2)-21=k^2-2k-29$$</p>
+      <p>因 $k>0$，$5k+1\ne0$，故 $t=\dfrac{k^2-2k-29}{5k+1}$，即</p>
+      <p>$$T=\left(\frac{5(k^2-2k-29)}{5k+1},\ \frac{3(k^2-2k-29)}{5k+1}\right)$$</p>
+      <p>驗算第三條高：$\overrightarrow{OS}=(k+2,\ -3)$，而</p>
+      <p>$$\overrightarrow{RT}=\left(\frac{9k-141}{5k+1},\ \frac{3k^2-41k-94}{5k+1}\right)$$</p>
+      <p>點積的分子 $=(k+2)(9k-141)-3(3k^2-41k-94)=9k^2-123k-282-9k^2+123k+282=0$，故 $OS\perp RT$ 自動成立（只需兩條高就足以定出 $T$）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 直角 → 直徑 → 第四點也在圓上</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的圓周角（直徑所對的角為直角）</span>
+        <span class="rule-math">$\angle TVS=90^\circ\Rightarrow ST$ 為直徑 $\Rightarrow\angle TUS=90^\circ$</span>
+        <span class="rule-why">$V$ 在 $RS$ 上且 $TV\perp RS$，故 $\angle TVS=90^\circ$，$ST$ 就是過 $S,T,V$ 的圓的直徑；$U$ 在同一圓上，所以 $\angle TUS$ 也是直角。</span>
+      </div>
+      <p>$$\overrightarrow{US}=(k+7,\ -8),\qquad \overrightarrow{UT}=\left(\frac{5(k+7)(k-4)}{5k+1},\ \frac{3k^2-31k-92}{5k+1}\right)$$</p>
+      <p>由 $\overrightarrow{UT}\cdot\overrightarrow{US}=0$，兩邊乘 $5k+1$：</p>
+      <p>$$5(k+7)^2(k-4)-8(3k^2-31k-92)=0$$</p>
+      <p>$$5k^3+50k^2-35k-980-24k^2+248k+736=0$$</p>
+      <p>$$5k^3+26k^2+213k-244=0$$</p>
+      <p>試 $k=1$：$5+26+213-244=0$ ✓，故可析出因子</p>
+      <p>$$(k-1)(5k^2+31k+244)=0$$</p>
+      <p>二次因子的判別式 $=31^2-4(5)(244)=961-4880<0$，無實根。故唯一解</p>
+      <p>$$k=1$$</p>
+      <p>驗算：$k=1$ 時 $R(-3,7)$、$S(3,-3)$、$T(-25,-15)$。以 $ST$ 為直徑的圓心為 $(-11,-9)$，半徑平方 $=\dfrac{28^2+12^2}{4}=232$；而 $U(-5,5)$ 到圓心距離平方 $=6^2+14^2=232$ ✓，$U$ 確在圓上。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $R=(k-4,\ 7)$　(b)(i) $T=\left(\dfrac{5(k^2-2k-29)}{5k+1},\ \dfrac{3(k^2-2k-29)}{5k+1}\right)$　(b)(ii) $k=1$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=2x^2+(12-4k)x+2k^2-12k+23$，其中 $k>0$，頂點為 $R$。(a) 用配方法以 $k$ 表示 $R$；(b) 把圖像向右平移 $4$ 單位、向下平移 $7$ 單位得頂點 $S$，以 $k$ 表示 $S$；(c) 若 $OR\perp OS$（$O$ 為原點），求 $k$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(x)=2\left[x^2+(6-2k)x\right]+2k^2-12k+23=2\left[(x+3-k)^2-(3-k)^2\right]+2k^2-12k+23$。</div>
+          <div class="p-step"><b>第 2 步.</b> $-2(k^2-6k+9)=-2k^2+12k-18$，與餘項相加得 $5$，故 $f(x)=2(x-(k-3))^2+5$，$R=(k-3,\ 5)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 右移 $4$、下移 $7$：$S=(k+1,\ -2)$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\overrightarrow{OR}\cdot\overrightarrow{OS}=(k-3)(k+1)+5(-2)=k^2-2k-13=0$，得 $k=1+\sqrt{14}$（捨去 $1-\sqrt{14}<0$）。</div>
+          <div class="p-ans">答案：(a) $R=(k-3,\ 5)$；(b) $S=(k+1,\ -2)$；(c) $k=1+\sqrt{14}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

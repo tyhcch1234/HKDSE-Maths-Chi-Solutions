@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第8題 · 全等與相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第8題</span>
+  <h1>先證全等，再用相似比拆解周長</h1>
+  <p class="sub">幾何 · 全等三角形與相似三角形 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在圖中，$ST$ 與 $UV$ 相交於點 $W$。已知 $SU\parallel VT$，且 $W$ 是 $ST$ 的中點。<br>
+      (a) 證明 $\triangle SUW\cong\triangle TVW$。<span class="marks">[2 分]</span><br>
+      (b) 設 $X$ 為 $TW$ 上一點，使 $\triangle SUW\sim\triangle VXW$。若 $SU=57\text{ cm}$、$SW=63\text{ cm}$、$WX=7\text{ cm}$，求 $\triangle TVX$ 的周長。<span class="marks">[3 分]</span>
+      <figure class="fig">
+        <svg viewBox="0 0 320 200" width="100%" style="max-width:420px" role="img" aria-label="ST 與 UV 交於 W，SU 平行 VT">
+          <line x1="60" y1="100" x2="260" y2="100" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="100" y1="40" x2="220" y2="160" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="60" y1="100" x2="100" y2="40" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="260" y1="100" x2="220" y2="160" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="220" y1="160" x2="182" y2="100" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4"/>
+          <line x1="110" y1="100" x2="110" y2="93" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="210" y1="100" x2="210" y2="93" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="160" cy="100" r="2.6" fill="currentColor"/>
+          <circle cx="182" cy="100" r="2.2" fill="currentColor"/>
+          <text x="46" y="105" font-size="14" fill="currentColor">S</text>
+          <text x="266" y="105" font-size="14" fill="currentColor">T</text>
+          <text x="88" y="34" font-size="14" fill="currentColor">U</text>
+          <text x="228" y="174" font-size="14" fill="currentColor">V</text>
+          <text x="143" y="120" font-size="13" fill="currentColor">W</text>
+          <text x="186" y="88" font-size="13" fill="currentColor">X</text>
+        </svg>
+        <figcaption>示意圖，非按比例</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 湊出 ASA 的三組條件</div>
+      <div class="rule">
+        <span class="rule-name">全等判定（ASA）</span>
+        <span class="rule-math">兩角及其夾邊分別相等 $\Rightarrow$ 全等</span>
+        <span class="rule-why">$SW$ 是 $\angle U SW$ 與 $\angle SWU$ 的夾邊，$TW$ 是 $\angle VTW$ 與 $\angle TWV$ 的夾邊，所以用 ASA。</span>
+      </div>
+      <p>在 $\triangle SUW$ 與 $\triangle TVW$ 中：</p>
+      <p>$\angle SWU=\angle TWV$（對頂角）；<br>
+         $SW=TW$（已知 $W$ 是 $ST$ 的中點）；<br>
+         $\angle USW=\angle VTW$（內錯角，$SU\parallel VT$）。</p>
+      <p>$$\therefore\ \triangle SUW\cong\triangle TVW \quad(\text{ASA})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由全等取出第 (b) 部要用的長度</div>
+      <div class="rule">
+        <span class="rule-name">全等三角形的對應邊</span>
+        <span class="rule-math">$\triangle SUW\cong\triangle TVW \Rightarrow SU=TV,\;UW=VW$</span>
+        <span class="rule-why">全等即三組對應邊相等；對應次序是 $S\leftrightarrow T$、$U\leftrightarrow V$、$W\leftrightarrow W$。</span>
+      </div>
+      <p>$$TV=SU=57\text{ cm},\qquad UW=VW,\qquad TW=SW=63\text{ cm}$$</p>
+      <p>$UW=VW$ 是關鍵：它把第 (b) 部的相似比鎖成一條只含 $VW$ 的方程。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 寫出相似比，解出 $VW$ 與 $VX$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的對應邊成比例</span>
+        <span class="rule-math">$\triangle SUW\sim\triangle VXW \Rightarrow \dfrac{SU}{VX}=\dfrac{UW}{XW}=\dfrac{SW}{VW}$</span>
+        <span class="rule-why">對應次序 $S\leftrightarrow V$、$U\leftrightarrow X$、$W\leftrightarrow W$，故 $SW$ 對應 $VW$、$UW$ 對應 $XW$。</span>
+      </div>
+      <p>$$\frac{57}{VX}=\frac{UW}{7}=\frac{63}{VW}$$</p>
+      <p>由後一等式及 $UW=VW$：</p>
+      <p>$$UW\cdot VW=7\times 63=441 \;\Longrightarrow\; VW^2=441 \;\Longrightarrow\; VW=21\text{ cm}$$</p>
+      <p>代回第一、第三之比：$\dfrac{63}{21}=3$，故 $\dfrac{57}{VX}=3$，即 $VX=19\text{ cm}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 求 $TX$ 及周長</div>
+      <div class="rule">
+        <span class="rule-name">線段的和差</span>
+        <span class="rule-math">$TX=TW-WX$</span>
+        <span class="rule-why">$X$ 在 $TW$ 上，所以 $TW$ 被 $X$ 分成 $TX$ 與 $WX$ 兩段。</span>
+      </div>
+      <p>$$TX=63-7=56\text{ cm}$$</p>
+      <p>$$\text{周長}=TV+VX+TX=57+19+56=132\text{ cm}$$</p>
+      <p>驗算：相似比為 $3:1$，$\triangle SUW$ 的周長 $=57+63+21=141$，而 $\triangle VXW$ 的周長 $=19+7+21=47=141\div 3$，比例一致。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 已證（ASA）　(b) $132\text{ cm}$（其中 $VW=21\text{ cm}$、$VX=19\text{ cm}$、$TX=56\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ST$ 與 $UV$ 交於 $W$，$SU\parallel VT$，$W$ 為 $ST$ 的中點。$X$ 在 $TW$ 上使 $\triangle SUW\sim\triangle VXW$。若 $SU=45\text{ cm}$、$SW=50\text{ cm}$、$WX=8\text{ cm}$，求 $\triangle TVX$ 的周長。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由全等，$TV=SU=45$、$TW=SW=50$、$UW=VW$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{UW}{8}=\dfrac{50}{VW}$ 且 $UW=VW$，故 $VW^2=400$，$VW=20$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相似比 $\dfrac{50}{20}=2.5$，故 $VX=\dfrac{45}{2.5}=18$。</div>
+          <div class="p-step"><b>第 4 步.</b> $TX=50-8=42$，周長 $=45+18+42=105\text{ cm}$。</div>
+          <div class="p-ans">答案：$105\text{ cm}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

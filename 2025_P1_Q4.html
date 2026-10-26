@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第4題 · 旋轉與平移</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第4題</span>
+  <h1>先轉 $90^\circ$，再向上推；共線靠斜率</h1>
+  <p class="sub">坐標幾何 · 旋轉、平移與三點共線</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      (a) 點 $A$ 的坐標為 $(4,-2)$。$A$ 繞原點 $O$ 順時針旋轉 $90^\circ$ 至 $B$。寫出 $B$ 的坐標。<br>
+      (b) 設 $B$ 向上平移 $t$ 個單位至點 $C$。若 $A$、$O$ 與 $C$ 共線，求 $t$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 順時針 $90^\circ$：交換並變第二個坐標</div>
+      <div class="rule">
+        <span class="rule-name">繞原點旋轉 $90^\circ$</span>
+        <span class="rule-math">順時針：$(x,y)\to(y,-x)$；逆時針：$(x,y)\to(-y,x)$</span>
+        <span class="rule-why">$A(4,-2)$ 在第四象限，順時針轉 $90^\circ$ 一定落到第三象限，兩坐標皆負，可作快速核對。</span>
+      </div>
+    <p>$$(4,-2)\xrightarrow{\;90^\circ\ \text{順時針}\;}(-2,-4)$$</p>
+    <p>所以 $B=(-2,-4)$。核對：$OA=\sqrt{4^2+(-2)^2}=\sqrt{20}$，$OB=\sqrt{(-2)^2+(-4)^2}=\sqrt{20}$，長度不變。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 向上平移只改 $y$ 坐標</div>
+      <div class="rule">
+        <span class="rule-name">平移</span>
+        <span class="rule-math">向上 $t$ 單位：$(x,y)\to(x,\;y+t)$</span>
+        <span class="rule-why">鉛直平移不改變 $x$，所以 $C$ 的 $x$ 坐標仍是 $-2$，只有 $y$ 由 $-4$ 變成 $-4+t$。</span>
+      </div>
+    <p>$$C=(-2,\,-4+t)$$</p>
+    <p>留意 $t$ 未知，$C$ 的位置隨 $t$ 沿直線 $x=-2$ 上下移動。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 三點共線：斜率相等</div>
+      <div class="rule">
+        <span class="rule-name">共線條件</span>
+        <span class="rule-math">$O$、$A$、$C$ 共線 $\iff \dfrac{y_C-0}{x_C-0}=\dfrac{y_A-0}{x_A-0}$</span>
+        <span class="rule-why">$O$ 是原點，直接用「$y$ 對 $x$ 的比」比較最省事；分母不為零故可交叉相乘。</span>
+      </div>
+    <p>$OA$ 的斜率 $=\dfrac{-2}{4}=-\dfrac{1}{2}$，故</p>
+    <p>$$\frac{-4+t}{-2}=-\frac{1}{2} \quad\Longrightarrow\quad -4+t=1 \quad\Longrightarrow\quad t=5$$</p>
+    <p>驗算：$C=(-2,1)$，而 $1=-\dfrac{1}{2}\times(-2)$，確在直線 $OA$ 上。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $B(-2,-4)$　(b) $t=5$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $P$ 的坐標為 $(2,4)$，繞原點 $O$ 順時針旋轉 $90^\circ$ 至 $Q$；$Q$ 再向上平移 $s$ 個單位至 $R$。若 $O$、$P$、$R$ 共線，求 $s$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(2,4)\to(4,-2)$，故 $Q=(4,-2)$，$R=(4,-2+s)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $OP$ 斜率 $=\dfrac{4}{2}=2$，令 $\dfrac{-2+s}{4}=2$，得 $s=10$。</div>
+
+          <div class="p-ans">答案：$Q(4,-2)$；$s=10$（$R=(4,8)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q5.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

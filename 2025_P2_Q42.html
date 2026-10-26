@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷二 第42題 · 至少一名經理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2025 · 卷二 · 第42題</span>
+    <h1>「至少一名」用補集來數</h1>
+    <p class="sub">組合與概率 · 組合計數與補集原理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某委員會由 2 名經理、4 名主任及 12 名文員組成。若從委員會中選出 7 名成員組成一個工作小組，而該小組須包括至少 1 名經理，問可組成多少個不同的工作小組？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$16016$</li><li><span class="ol">B</span>$20384$</li><li><span class="ol">C</span>$22880$</li><li><span class="ol">D</span>$31824$</li></ol>
+
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清委員會總人數</div>
+      <div class="rule">
+        <span class="rule-name">加法原理</span>
+        各類人數相加，得可選取的總人數。
+      </div>
+      <p>總人數 $=2+4+12=18$ 人。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">先算沒有「至少」限制的選法</div>
+      <div class="rule">
+        <span class="rule-name">組合數 $\binom{n}{r}$</span>
+        從 $n$ 個不同對象中不計次序地選出 $r$ 個，方法數為 $\binom{n}{r}=\dfrac{n!}{r!\,(n-r)!}$。
+      </div>
+      <p>$$\binom{18}{7}=31824$$</p>
+      <p>這正是選項 D，即完全不設限制時的選法數目。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">數出「一個經理也沒有」的情況</div>
+      <div class="rule">
+        <span class="rule-name">補集原理</span>
+        「至少 1 名經理」的對立情況是「0 名經理」，即 7 人全部來自非經理。
+      </div>
+      <p>非經理共 $4+12=16$ 人，故</p>
+      <p>$$\binom{16}{7}=11440$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">由全部選法減去不合法選法</div>
+      <div class="rule">
+        <span class="rule-name">補集計數</span>
+        合法數目 $=$ 全部數目 $-$ 對立情況數目。
+      </div>
+      <p>$$\binom{18}{7}-\binom{16}{7}=31824-11440=20384$$</p>
+      <p>（驗算：分兩類直接數 —— 剛好 1 名經理 $\binom{2}{1}\binom{16}{6}=16016$，2 名經理 $\binom{2}{2}\binom{16}{5}=4368$，合共 $16016+4368=20384$ ✓）</p>
+      <p>答案 <b>B</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$20384$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某小組由 2 名經理、3 名主任及 7 名文員組成。若從中選出 5 人成立工作小組，而小組須包括至少 1 名經理，問可組成多少個不同的工作小組？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$210$</li><li><span class="ol">B</span>$462$</li><li><span class="ol">C</span>$540$</li><li><span class="ol">D</span>$672$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總人數 $=2+3+7=12$，全部選法 $\binom{12}{5}=792$。</div>
+          <div class="p-step"><b>第 2 步.</b> 沒有經理：只在 10 名非經理中選 5 人，$\binom{10}{5}=252$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相減：$792-252=540$。</div>
+          <div class="p-step"><b>驗算.</b> $\binom{2}{1}\binom{10}{4}+\binom{2}{2}\binom{10}{3}=2\times 210+120=540$ ✓</div>
+          <div class="p-ans">答案：<b>C</b>（$540$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

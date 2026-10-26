@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2025 卷一 第11題 · 部分變與判別式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2025 · 卷一 · 第11題</span>
+  <h1>一部分隨 $x$、一部分隨 $x^2$</h1>
+  <p class="sub">變分 · 部分變、聯立方程、二次方程的判別式 · 6 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $p(x)$ 一部分隨 $x$ 而變，一部分隨 $x^2$ 而變。設 $p(7)=56$ 及 $p(9)=216$。<br>
+      (a) 求 $p(x)$。<span class="marks">[3 分]</span><br>
+      (b) 設 $c$ 為實常數。求 $c$ 的取值範圍，使方程 $p(x)=c$ 有兩個相異實根。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先寫出「部分變」的一般式</div>
+      <div class="rule">
+        <span class="rule-name">部分變（partly varies）</span>
+        <span class="rule-math">$p(x)=ax+bx^{2}$</span>
+        <span class="rule-why">「一部分隨 $x$ 而變」即 $ax$，「一部分隨 $x^{2}$ 而變」即 $bx^{2}$；兩部分相加就是部分變的通式，$a$、$b$ 為非零常數。</span>
+      </div>
+    <p>依題意設 $p(x)=ax+bx^{2}$，其中 $a$、$b$ 為常數。</p>
+    <p>注意：部分變不含常數項，所以千萬不要寫成 $p(x)=ax+bx^{2}+k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代入兩組數據解聯立方程</div>
+      <div class="rule">
+        <span class="rule-name">代入法解聯立方程</span>
+        <span class="rule-math">$\begin{cases}7a+49b=56\\ 9a+81b=216\end{cases}$</span>
+        <span class="rule-why">$p(7)=56$ 給第一式，$p(9)=216$ 給第二式；兩條方程、兩個未知數，可解出 $a$、$b$。</span>
+      </div>
+    <p>$$7a+49b=56\quad\cdots(1)\qquad 9a+81b=216\quad\cdots(2)$$</p>
+    <p>把 $(1)$ 除以 $7$：$a+7b=8$，即 $a=8-7b$。代入 $(2)$：</p>
+    <p>$$9(8-7b)+81b=216\;\Longrightarrow\;72+18b=216\;\Longrightarrow\;b=8$$</p>
+    <p>於是 $a=8-7(8)=-48$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 寫出答案並代回驗算</div>
+      <div class="rule">
+        <span class="rule-name">驗算（代回原條件）</span>
+        <span class="rule-math">$p(x)=8x^{2}-48x$</span>
+        <span class="rule-why">求出 $a$、$b$ 後必須代回 $p(7)$、$p(9)$ 檢查，確認兩組數據都同時成立。</span>
+      </div>
+    <p>$$p(x)=8x^{2}-48x$$</p>
+    <p>驗算：$p(7)=8(49)-48(7)=392-336=56$ ✓；$p(9)=8(81)-48(9)=648-432=216$ ✓</p>
+    <p>另一種寫法：$p(x)=8x(x-6)$，之後解方程會更方便。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用判別式處理「兩個相異實根」</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">$\Delta=b^{2}-4ac>0$</span>
+        <span class="rule-why">二次方程有兩個相異實根，若且唯若判別式大於零；等於零是重根，小於零是無實根。</span>
+      </div>
+    <p>方程 $p(x)=c$ 即 $8x^{2}-48x-c=0$，其中 $a=8$、$b=-48$、常數項為 $-c$。</p>
+    <p>$$\Delta=(-48)^{2}-4(8)(-c)=2304+32c$$</p>
+    <p>要有兩個相異實根：$2304+32c>0\;\Longrightarrow\;c>-\dfrac{2304}{32}=-72$。</p>
+    <p>驗算（用配方法）：$8x^{2}-48x=c\Rightarrow x^{2}-6x=\dfrac{c}{8}\Rightarrow(x-3)^{2}=9+\dfrac{c}{8}$，右方為正即 $c>-72$ ✓</p>
+    <p>常見錯誤：把判別式寫成 $b^{2}-4ac$ 時忘了常數項是 $-c$，於是漏掉負號而得 $c>-72$ 以外的錯誤範圍。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $p(x)=8x^{2}-48x$（即 $8x(x-6)$）　(b) $c>-72$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $q(x)$ 一部分隨 $x$ 而變，一部分隨 $x^{2}$ 而變，且 $q(2)=18$、$q(5)=75$。(a) 求 $q(x)$；(b) 求 $c$ 的取值範圍，使 $q(x)=c$ 有兩個相異實根。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $q(x)=ax+bx^{2}$，得 $2a+4b=18$ 及 $5a+25b=75$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由第一式 $a=9-2b$，代入得 $45+15b=75$，故 $b=2$、$a=5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $q(x)=2x^{2}+5x$；驗算 $q(2)=8+10=18$ ✓、$q(5)=50+25=75$ ✓。</div>
+          <div class="p-step"><b>第 4 步.</b> $2x^{2}+5x-c=0$，$\Delta=25+8c>0\Rightarrow c>-\dfrac{25}{8}$。</div>
+          <div class="p-ans">答案：$q(x)=2x^{2}+5x$；$c>-\dfrac{25}{8}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2025_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2025_P1_Q12.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>
