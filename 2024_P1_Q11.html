@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第11題 · 葉幹圖與離差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第11題</span>
+  <h1>平均數定出 $a$、$b$，再挑最極端的組合</h1>
+  <p class="sub">統計 · 葉幹圖 · 分佈域與四分位距 · 7 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的葉幹圖顯示一組研究員在一個月內閱讀期刊所花時數（小時）的分佈。<table class="dtable">
+  <tr><th>幹（十位）</th><th>葉（個位）</th></tr>
+  <tr><td class="rowhead">2</td><td>0&nbsp;&nbsp;0&nbsp;&nbsp;1&nbsp;&nbsp;a&nbsp;&nbsp;a&nbsp;&nbsp;a&nbsp;&nbsp;8&nbsp;&nbsp;8&nbsp;&nbsp;9</td></tr>
+  <tr><td class="rowhead">3</td><td>0&nbsp;&nbsp;0&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;4&nbsp;&nbsp;7&nbsp;&nbsp;9</td></tr>
+  <tr><td class="rowhead">4</td><td>0&nbsp;&nbsp;b</td></tr>
+</table>該分佈的平均數為 $30$。<br>(a) 求 $a$ 及 $b$。<br>(b) 寫出該分佈的最小可能分佈域。<br>(c) 求該分佈的最大可能四分位距。<span class="marks">[7 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清數據並寫出總和</div>
+      <div class="rule">
+        <span class="rule-name">葉幹圖讀法</span>
+        <span class="rule-math">$3\,|\,2$ 代表 $32$ 小時</span>
+        <span class="rule-why">每片葉的值 = 幹 $\times10$ + 葉。</span>
+      </div>
+    <p>共有 $9+8+2=19$ 個數據。以幹 ×10 + 葉計算總和：</p>
+    <p>幹 2：$9\times20+(0+0+1+3a+8+8+9)=180+26+3a=206+3a$</p>
+    <p>幹 3：$8\times30+(0+0+2+3+4+4+7+9)=240+29=269$</p>
+    <p>幹 4：$2\times40+(0+b)=80+b$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用平均數列方程</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">$\dfrac{\text{總和}}{19}=30$</span>
+        <span class="rule-why">平均數乘以數據個數，就是總和。</span>
+      </div>
+    <p>$$(206+3a)+269+(80+b)=30\times19=570$$</p>
+    <p>$$3a+b=15$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 列出所有單數字組合</div>
+    <p>$a$、$b$ 都是 $0$ 至 $9$ 的數字，故</p>
+    <p>$$(a,b)=(2,9),\;(3,6),\;(4,3),\;(5,0)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 最小可能分佈域</div>
+      <div class="rule">
+        <span class="rule-name">分佈域</span>
+        <span class="rule-math">最大值 $-$ 最小值</span>
+        <span class="rule-why">最小值固定為 $20$，只有 $b$ 會影響最大值 $40+b$。</span>
+      </div>
+    <p>$b$ 越小，最大值越接近 $40$。取 $b=0$：</p>
+    <p>$$\text{分佈域}=40-20=20$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 比較四個組合的四分位數</div>
+      <div class="rule">
+        <span class="rule-name">四分位數位置</span>
+        <span class="rule-math">$Q_1$ 為第 5 個、$Q_3$ 為第 15 個數據</span>
+        <span class="rule-why">$19$ 個數據的中位數是第 10 個；上下半各 9 個，取各半的中位（第 5、15 個）。</span>
+      </div>
+    <p>幹 3 與幹 4 的數據不變，故 $Q_3$ 恆為第 15 個數據 $=34$。$Q_1$ 只受 $a$ 影響：</p>
+    <p>$a=2$：$20,20,21,22,22,22,28,28,29\Rightarrow Q_1=22$</p>
+    <p>$a=3$：$Q_1=23$；$a=4$：$Q_1=24$；$a=5$：$Q_1=25$</p>
+    <p>$a$ 越小，$Q_1$ 越小，四分位距越大。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c) 最大四分位距</div>
+    <p>取 $a=2$（此時 $b=9$）：</p>
+    <p>$$\text{四分位距}=Q_3-Q_1=34-22=12$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(a,b)=(2,9),(3,6),(4,3)$ 或 $(5,0)$　(b) $20$　(c) $12$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 以下 19 個數據已由小至大排列：$12,15,18,20,22,25,28,30,32,35,38,40,42,45,48,50,52,55,58$。求四分位距。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $n=19$，第 10 個數據 $=35$。</div>
+          <div class="p-step"><b>第 2 步.</b> $Q_1=22$。</div>
+          <div class="p-step"><b>第 3 步.</b> $Q_3=48$。</div>
+
+          <div class="p-ans">答案：四分位距 $=48-22=26$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q12.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

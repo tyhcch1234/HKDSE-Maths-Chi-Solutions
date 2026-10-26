@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第2題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第2題</span>
+  <h1>把 $x$ 抽出來做單一因式</h1>
+  <p class="sub">公式與數列 · 主項變換 · 3 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      使 $x$ 成為公式 $$\frac{Ax+C}{B}=3x$$ 的主項。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">去分母</div>
+      <div class="rule">
+        <span class="rule-name">等式兩邊同乘</span>
+        <span class="rule-math">$\dfrac{Ax+C}{B}\times B=Ax+C$</span>
+        <span class="rule-why">分式方程先乘以分母，可避免之後再處理分數。</span>
+      </div>
+    <p>兩邊同乘 $B$：</p>
+    <p>$$Ax+C=3Bx$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把所有 $x$ 項移到同一邊</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        <span class="rule-math">跨過等號要變號</span>
+        <span class="rule-why">$x$ 同時出現在兩邊，必須先集中，才能當作公因式抽出。</span>
+      </div>
+    <p>把 $Ax$ 移到右邊：</p>
+    <p>$$C=3Bx-Ax$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">提取公因式 $x$</div>
+      <div class="rule">
+        <span class="rule-name">提取公因式</span>
+        <span class="rule-math">$3Bx-Ax=x(3B-A)$</span>
+        <span class="rule-why">$x$ 是右邊兩項的公因式，抽出後 $x$ 只出現一次。</span>
+      </div>
+    <p>$$C=x(3B-A)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩邊除以 $(3B-A)$</div>
+    <p>$$x=\frac{C}{3B-A}$$</p>
+    <p>分母保持為一個括號 $(3B-A)$，不要拆開寫成 $3B-A$ 分兩項。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$x=\dfrac{C}{3B-A}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 使 $x$ 成為公式 $\dfrac{2x-5}{k}=x+1$ 的主項（其中 $k\neq 2$）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $2x-5=kx+k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $2x-kx=k+5$，即 $x(2-k)=k+5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=\dfrac{k+5}{2-k}$。</div>
+
+          <div class="p-ans">答案：$x=\dfrac{k+5}{2-k}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q3.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

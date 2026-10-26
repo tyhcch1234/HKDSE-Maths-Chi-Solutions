@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第1題 · 代數分式化簡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第1題</span>
+  <h1>通分後分子互相抵消</h1>
+  <p class="sub">多項式 · 代數分式 · 3 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{2}{4h-7}-\dfrac{3}{6h-5}$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出公分母</div>
+      <div class="rule">
+        <span class="rule-name">公分母</span>
+        <span class="rule-math">$(4h-7)(6h-5)$</span>
+        <span class="rule-why">$4h-7$ 與 $6h-5$ 沒有公因式，所以公分母就是兩者的乘積。</span>
+      </div>
+    <p>兩個分母都是 $h$ 的一次式，互質，故公分母為 $(4h-7)(6h-5)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">各自通分</div>
+      <div class="rule">
+        <span class="rule-name">分式的性質</span>
+        <span class="rule-math">$\dfrac{a}{b}=\dfrac{a\times c}{b\times c}$</span>
+        <span class="rule-why">分子分母同乘一個非零式子，分式的值不變。</span>
+      </div>
+    <p>$$\frac{2}{4h-7}\cdot\frac{6h-5}{6h-5}-\frac{3}{6h-5}\cdot\frac{4h-7}{4h-7}=\frac{2(6h-5)}{(4h-7)(6h-5)}-\frac{3(4h-7)}{(4h-7)(6h-5)}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併分子並展開</div>
+      <div class="rule">
+        <span class="rule-name">去括號</span>
+        <span class="rule-math">$-(\;)$ 內每一項都要變號</span>
+        <span class="rule-why">第二個分式前面的減號屬於整個分子，展開時 $3(4h-7)$ 的兩項都要變號。</span>
+      </div>
+    <p>$$=\frac{12h-10-(12h-21)}{(4h-7)(6h-5)}=\frac{12h-10-12h+21}{(4h-7)(6h-5)}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">化簡：$h$ 項抵消</div>
+    <p>$12h$ 與 $-12h$ 互相抵消，只剩常數項：</p>
+    <p>$$=\frac{11}{(4h-7)(6h-5)}$$</p>
+    <p>分子是純數字，不能再約簡（$11$ 與兩個一次式都互質）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{11}{(4h-7)(6h-5)}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{3}{2p+1}+\dfrac{5}{3p-2}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\dfrac{3(3p-2)+5(2p+1)}{(2p+1)(3p-2)}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $9p-6+10p+5=19p-1$。</div>
+
+          <div class="p-ans">答案：$\dfrac{19p-1}{(2p+1)(3p-2)}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2024_P1_Q2.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

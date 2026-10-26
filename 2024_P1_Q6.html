@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第6題 · 標價、折扣與盈利</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第6題</span>
+  <h1>由成本一路推到標價</h1>
+  <p class="sub">百分數 · 盈利與折扣 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某計數機的標價比成本高 $40\%$。該計數機以其標價的 $25\%$ 折扣售出，盈利為 $\$13$。求該計數機的標價。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設成本為 $c$，寫出標價</div>
+      <div class="rule">
+        <span class="rule-name">比成本高 $r\%$</span>
+        <span class="rule-math">標價 $=(1+r\%)\times$ 成本</span>
+        <span class="rule-why">「高 $40\%$」是在成本的基礎上再加 $40\%$，即乘 $1.4$。</span>
+      </div>
+    <p>設成本為 $\$c$，則</p>
+    <p>$$\text{標價}=(1+40\%)c=\$1.4c$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由標價算售價</div>
+      <div class="rule">
+        <span class="rule-name">折扣 $25\%$</span>
+        <span class="rule-math">售價 $=75\%\times$ 標價</span>
+        <span class="rule-why">折扣是在標價上減，顾客實付 $100\%-25\%=75\%$。</span>
+      </div>
+    <p>$$\text{售價}=75\%\times1.4c=1.05c$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用盈利列方程</div>
+      <div class="rule">
+        <span class="rule-name">盈利</span>
+        <span class="rule-math">盈利 $=$ 售價 $-$ 成本</span>
+        <span class="rule-why">題目的 $\$13$ 是盈利，不是售價。</span>
+      </div>
+    <p>$$1.05c-c=13 \quad\Longrightarrow\quad 0.05c=13 \quad\Longrightarrow\quad c=260$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">回答所問：標價</div>
+    <p>$$\text{標價}=1.4\times260=\$364$$</p>
+    <p>驗算：售價 $=0.75\times364=\$273$，盈利 $=273-260=\$13$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>標價為 $\$364$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某書包的標價比成本高 $60\%$。書包以標價六折售出，虧蝕 $\$20$。求成本。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $0.6\times1.6c=0.96c$。</div>
+          <div class="p-step"><b>第 2 步.</b> $c-0.96c=20\Rightarrow0.04c=20\Rightarrow c=500$。</div>
+
+          <div class="p-ans">答案：成本為 $\$500$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q7.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

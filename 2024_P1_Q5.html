@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第5題 · 比的運算</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第5題</span>
+  <h1>統一 $c$ 的值，再代入求值</h1>
+  <p class="sub">比與比例 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a$、$b$、$c$ 為非零數，且 $$5a=6c \quad\text{及}\quad \frac{2b+7c}{b+c}=4$$ 求 $\dfrac{5a+8b}{2b+3c}$。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由第一條條件得 $a:c$</div>
+      <div class="rule">
+        <span class="rule-name">改寫成比</span>
+        <span class="rule-math">$5a=6c\Rightarrow a:c=6:5$</span>
+        <span class="rule-why">把等式寫成分式 $\dfrac{a}{c}=\dfrac{6}{5}$，即可讀出比。</span>
+      </div>
+    <p>$$5a=6c \quad\Longrightarrow\quad \frac{a}{c}=\frac{6}{5} \quad\Longrightarrow\quad a:c=6:5$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由第二條條件得 $b:c$</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        <span class="rule-math">$\dfrac{2b+7c}{b+c}=4\Rightarrow 2b+7c=4(b+c)$</span>
+        <span class="rule-why">分式方程先去分母，再整理同類項。</span>
+      </div>
+    <p>$$2b+7c=4b+4c \quad\Longrightarrow\quad 3c=2b \quad\Longrightarrow\quad b:c=3:2$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把兩個比串成 $a:b:c$</div>
+      <div class="rule">
+        <span class="rule-name">統一中間項</span>
+        <span class="rule-math">取 $c$ 的最小公倍數 $10$</span>
+        <span class="rule-why">$b:c=3:2$ 與 $a:c=6:5$ 中 $c$ 的數字不同，要先把 $c$ 化成相同。</span>
+      </div>
+    <p>$$b:c=3:2=15:10,\qquad a:c=6:5=12:10$$</p>
+    <p>$$\therefore\; a:b:c=12:15:10$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">設 $k$ 並代入</div>
+    <p>令 $a=12k$、$b=15k$、$c=10k$：</p>
+    <p>$$\frac{5a+8b}{2b+3c}=\frac{5(12k)+8(15k)}{2(15k)+3(10k)}=\frac{60k+120k}{30k+30k}=\frac{180k}{60k}=3$$</p>
+    <p>每項都含 $k$，$k$ 必被約去，所以答案是一個常數。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{5a+8b}{2b+3c}=3$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p$、$q$ 為非零數，且 $3p=4q$。求 $\dfrac{p+2q}{2p-q}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $p:q=4:3$，令 $p=4k$、$q=3k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{4k+6k}{8k-3k}=\dfrac{10k}{5k}=2$。</div>
+
+          <div class="p-ans">答案：$2$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q6.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第8題 · 全等三角形與五邊形面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第8題</span>
+  <h1>RHS 全等，再把五邊形切開</h1>
+  <p class="sub">全等與相似 · 面積 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $E$ 為 $AC$ 與 $BD$ 的交點。已知 $\angle ACB=\angle ADB=90^{\circ}$ 及 $BC=AD$。<br>(a) 證明 $\triangle ABC\cong\triangle BAD$。<br>(b) 若 $AD=12\text{ cm}$ 及 $DE=9\text{ cm}$，求五邊形 $ADBCE$ 的面積。<span class="marks">[5 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 420 360" width="400" role="img" aria-label="五邊形 ADBCE，AC 與 BD 交於 E">
+  <polygon points="40,40 40,208 376,208 241.6,308.8 166,208" fill="currentColor" fill-opacity="0.10"
+           stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.1">
+    <path d="M40,196 L52,196 L52,208"/>
+    <path d="M233.2,297.6 L244.4,289.2 L252.8,300.4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="40" cy="40" r="3"/><circle cx="40" cy="208" r="3"/><circle cx="376" cy="208" r="3"/>
+    <circle cx="241.6" cy="308.8" r="3"/><circle cx="166" cy="208" r="3"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+    <text x="32" y="34" text-anchor="end">A</text>
+    <text x="30" y="212" text-anchor="end">D</text>
+    <text x="384" y="212">B</text>
+    <text x="247" y="327">C</text>
+    <text x="166" y="201" text-anchor="middle" font-size="13">E</text>
+  </g>
+  <g fill="currentColor" font-size="11" font-family="system-ui,sans-serif">
+    <text x="26" y="128" text-anchor="middle" transform="rotate(-90 26 128)">12 cm</text>
+    <text x="314" y="268" transform="rotate(-36.9 314 268)">12 cm</text>
+    <text x="103" y="222" text-anchor="middle">9 cm</text>
+  </g>
+</svg>
+      <figcaption>$AC$ 與 $BD$ 交於 $E$；$\angle ACB=\angle ADB=90^{\circ}$，$BC=AD$</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 找出三個全等條件</div>
+      <div class="rule">
+        <span class="rule-name">RHS 全等</span>
+        <span class="rule-math">直角 + 斜邊 + 一股</span>
+        <span class="rule-why">兩個直角三角形只要斜邊及其中一股分別相等，便全等。</span>
+      </div>
+    <p>在 $\triangle ABC$ 與 $\triangle BAD$ 中：</p>
+    <p>$\angle ACB=\angle ADB=90^{\circ}$（已知）</p>
+    <p>$AB=BA$（公共邊，同為斜邊）</p>
+    <p>$BC=AD$（已知）</p>
+    <p>$$\therefore\;\triangle ABC\cong\triangle BAD\quad(\text{RHS})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 全等帶來的有用結論</div>
+      <div class="rule">
+        <span class="rule-name">全等三角形的對應部分</span>
+        <span class="rule-math">$AC=BD$，$\angle ABE=\angle BAE$</span>
+        <span class="rule-why">對應邊相等、對應角相等，是後面計算的關鍵。</span>
+      </div>
+    <p>由全等得 $AC=BD$，且 $\angle ABE=\angle BAE$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 在 $\triangle ADE$ 求 $AE$</div>
+      <div class="rule">
+        <span class="rule-name">勾股定理</span>
+        <span class="rule-math">$AE^{2}=AD^{2}+DE^{2}$</span>
+        <span class="rule-why">$\angle ADE=90^{\circ}$（因 $\angle ADB=90^{\circ}$ 且 $E$ 在 $BD$ 上）。</span>
+      </div>
+    <p>$$AE=\sqrt{12^{2}+9^{2}}=\sqrt{144+81}=15\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 求 $BE$、$BD$、$AC$、$CE$</div>
+      <div class="rule">
+        <span class="rule-name">等角對等邊</span>
+        <span class="rule-math">$\angle ABE=\angle BAE\Rightarrow AE=BE$</span>
+        <span class="rule-why">在同一個三角形中，兩個底角相等，對應的兩邊也相等。</span>
+      </div>
+    <p>$$BE=AE=15\text{ cm}$$</p>
+    <p>$$BD=BE+DE=15+9=24\text{ cm}$$</p>
+    <p>由 $AC=BD$ 得 $AC=24\text{ cm}$，故</p>
+    <p>$$CE=AC-AE=24-15=9\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 把五邊形分成兩個三角形</div>
+      <div class="rule">
+        <span class="rule-name">分割求面積</span>
+        <span class="rule-math">$[ADBCE]=[ADB]+[BCE]$</span>
+        <span class="rule-why">$BD$ 把五邊形分成上方與下方兩個三角形。</span>
+      </div>
+    <p>$$\begin{aligned}\text{面積}&=\tfrac12(AD)(BD)+\tfrac12(BC)(CE)\\&=\tfrac12(12)(24)+\tfrac12(12)(9)\\&=144+54=198\text{ cm}^{2}\end{aligned}$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 見題解（RHS）　(b) $198\text{ cm}^{2}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中，$\angle ACB=90^{\circ}$，$AC=8\text{ cm}$、$BC=15\text{ cm}$。$D$ 為 $AB$ 上的點使 $CD\perp AB$。求 $CD$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AB=\sqrt{8^{2}+15^{2}}=17$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\tfrac12(8)(15)=\tfrac12(17)(CD)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $CD=\dfrac{120}{17}\approx7.06\text{ cm}$。</div>
+
+          <div class="p-ans">答案：$CD=\dfrac{120}{17}\text{ cm}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q9.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

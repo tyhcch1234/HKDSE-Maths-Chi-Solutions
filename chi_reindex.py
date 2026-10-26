@@ -4,9 +4,18 @@ prune dead pager links. Works for every year that has question pages."""
 import re, glob, os
 
 PAPERS = (('P1', '卷一'), ('P2', '卷二'))
-pages = sorted(glob.glob('[0-9][0-9][0-9][0-9]_P*_Q*.html'))
+MIN_PER_YEAR = 15  # 少於此題數的年份視為試作頁，暫不加入目錄
+# 可選：只重建指定年份的頁籤，例如 CHI_YEARS=2012,2013,2024
+ALLOW = [y.strip() for y in os.environ.get('CHI_YEARS', '').split(',') if y.strip()]
+
+all_pages = sorted(glob.glob('[0-9][0-9][0-9][0-9]_P*_Q*.html'))
+counts = {}
+for f in all_pages:
+    counts[f[:4]] = counts.get(f[:4], 0) + 1
+years = sorted({f[:4] for f in all_pages if counts[f[:4]] >= MIN_PER_YEAR
+                and (not ALLOW or f[:4] in ALLOW)}, reverse=True)
+pages = [f for f in all_pages if f[:4] in years]
 total = len(pages)
-years = sorted({f[:4] for f in pages}, reverse=True)
 
 
 def section_for(year):

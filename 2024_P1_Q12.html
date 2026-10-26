@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第12題 · 坐標幾何（正方形）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第12題</span>
+  <h1>先設坐標，斜率自然浮現</h1>
+  <p class="sub">坐標幾何 · 直線與正方形 · 7 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $O$ 為原點。<br>(a) $A$、$B$ 為 $x$ 軸正半軸上的點，且 $A$ 的 $x$ 坐標大於 $B$ 的 $x$ 坐標。過 $B$ 的鉛垂線與直線 $y=mx$ 交於 $C$，使 $AB=BC$，其中 $m$ 為正常數。設 $D$ 為一點使 $ABCD$ 為正方形。以 $m$ 表示 $OD$ 的斜率。<br>(b) 點 $M$、$N$ 的坐標分別為 $(6,5)$ 及 $(10,0)$。設 $P$、$Q$ 分別位於 $OM$ 與 $MN$ 上，$R$、$S$ 位於 $x$ 軸上。若四邊形 $PQRS$ 為正方形，求 $P$ 的 $x$ 坐標。<span class="marks">[7 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 340 250" width="330" role="img" aria-label="正方形 ABCD 與直線 y=mx">
+  <line x1="20" y1="220" x2="320" y2="220" stroke="currentColor" stroke-width="1"/>
+  <line x1="40" y1="240" x2="40" y2="30" stroke="currentColor" stroke-width="1"/>
+  <line x1="40" y1="220" x2="300" y2="60" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="40" y1="220" x2="280" y2="100" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="160" y="100" width="120" height="120" fill="currentColor" fill-opacity="0.08"
+        stroke="currentColor" stroke-width="1.4"/>
+  <g fill="currentColor">
+    <circle cx="40" cy="220" r="3"/><circle cx="160" cy="220" r="3"/>
+    <circle cx="280" cy="220" r="3"/><circle cx="160" cy="100" r="3"/><circle cx="280" cy="100" r="3"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+    <text x="30" y="236" text-anchor="end">O</text>
+    <text x="160" y="240" text-anchor="middle">B</text>
+    <text x="284" y="240">A</text>
+    <text x="150" y="96" text-anchor="end">C</text>
+    <text x="288" y="96">D</text>
+    <text x="300" y="52" font-size="12">y = mx</text>
+  </g>
+</svg>
+      <figcaption>取 $B=(b,0)$：$C=(b,mb)$，$AB=BC=mb$，正方形邊長即 $mb$</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 設 $B$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">點在直線上</span>
+        <span class="rule-math">$C=(b,mb)$</span>
+        <span class="rule-why">過 $B$ 的鉛垂線是 $x=b$，代入 $y=mx$ 得 $C$ 的 $y$ 坐標。</span>
+      </div>
+    <p>設 $B=(b,0)$，則 $C=(b,mb)$，故 $BC=mb$。由 $AB=BC$ 且 $A$ 在 $B$ 的右方，</p>
+    <p>$$A=(b+mb,\,0)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 寫出 $D$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">正方形的性質</span>
+        <span class="rule-math">$\overrightarrow{AD}=\overrightarrow{BC}$</span>
+        <span class="rule-why">$ABCD$ 順序為正方形，$AD$ 與 $BC$ 平行且等長。</span>
+      </div>
+    <p>$$D=A+\overrightarrow{BC}=(b+mb,\;mb)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 求 $OD$ 的斜率</div>
+      <div class="rule">
+        <span class="rule-name">斜率</span>
+        <span class="rule-math">$\dfrac{y_D-y_O}{x_D-x_O}$</span>
+        <span class="rule-why">$O$ 為原點，直接讀 $D$ 的坐標。</span>
+      </div>
+    <p>$$\text{斜率}=\frac{mb-0}{(b+mb)-0}=\frac{mb}{b(1+m)}=\frac{m}{1+m}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用 (a) 的結果找 $OQ$</div>
+      <div class="rule">
+        <span class="rule-name">代入 $m=\dfrac56$</span>
+        <span class="rule-math">$\text{斜率}=\dfrac{m}{1+m}$</span>
+        <span class="rule-why">$Q$ 在 (a) 中扮演「正方形的遠角」，與 $D$ 的角色相同。</span>
+      </div>
+    <p>$OM$ 的斜率 $=\dfrac{5-0}{6-0}=\dfrac56$。由 (a)，</p>
+    <p>$$OQ\text{ 的斜率}=\frac{5/6}{1+5/6}=\frac{5}{11} \quad\Longrightarrow\quad OQ:\; y=\frac{5x}{11}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 求 $MN$ 的方程及 $Q$</div>
+      <div class="rule">
+        <span class="rule-name">兩點式</span>
+        <span class="rule-math">$\dfrac{y-0}{x-10}=\dfrac{5-0}{6-10}$</span>
+        <span class="rule-why">$M(6,5)$、$N(10,0)$ 決定直線 $MN$。</span>
+      </div>
+    <p>$$MN:\; y=-\frac54(x-10)$$</p>
+    <p>解 $\dfrac{5x}{11}=-\dfrac54x+\dfrac{25}{2}$，兩邊乘 $44$：</p>
+    <p>$$20x=-55x+550 \quad\Longrightarrow\quad x=\frac{22}{3},\quad y=\frac{10}{3}$$</p>
+    <p>即 $Q=\left(\dfrac{22}{3},\dfrac{10}{3}\right)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 由 $Q$ 向左量邊長得 $P$</div>
+      <div class="rule">
+        <span class="rule-name">正方形邊長</span>
+        <span class="rule-math">$PQ=RS$ 且 $PQ\parallel RS$</span>
+        <span class="rule-why">$RS$ 在 $x$ 軸上，所以 $PQ$ 是水平線；邊長等於 $Q$ 的 $y$ 坐標（即 $SP$）。</span>
+      </div>
+    <p>邊長 $=y_Q=\dfrac{10}{3}$，$P$ 在 $Q$ 左方同一高度：</p>
+    <p>$$x_P=\frac{22}{3}-\frac{10}{3}=4$$</p>
+    <p>驗算：$P=\left(4,\dfrac{10}{3}\right)$，而 $\dfrac56\times4=\dfrac{10}{3}$，確在 $OM$ 上 ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{m}{1+m}$　(b) $x_P=4$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直線 $L$ 通過 $O(0,0)$ 與 $A(8,6)$。點 $B$ 在 $x$ 軸上，過 $B$ 的鉛垂線交 $L$ 於 $C$，且 $AB=BC$，$ABCD$ 為正方形。求 $D$ 的坐標及 $OD$ 的斜率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $=\dfrac{3/4}{1+3/4}=\dfrac37$。</div>
+          <div class="p-step"><b>第 2 步.</b> $D=\left(\dfrac74b,\dfrac34b\right)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=\dfrac{3}{7}$。</div>
+
+          <div class="p-ans">答案：$OD$ 的斜率為 $\dfrac37$（$D$ 隨 $b$ 變，但斜率固定）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q13.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

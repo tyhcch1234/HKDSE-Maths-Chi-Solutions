@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第13題 · 平截頭體與相似</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第13題</span>
+  <h1>先證相似，再用體積與表面積把關</h1>
+  <p class="sub">求積法 · 相似立體 · 8 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個直立角錐的底面是邊長 $64\text{ cm}$ 的正方形，高為 $24\text{ cm}$。該角錐被一個平行於底面的平面分成平截頭體 $X$ 與角錐 $Y$，已知 $Y$ 的高為 $18\text{ cm}$。<br>(a) 求 $X$ 的體積。<br>(b) 另一個直立角錐的底面是正方形，被平行於底面的平面分成平截頭體 $Z$ 與一個角錐。已知 $Z$ 的高及總表面積分別為 $3\text{ cm}$ 及 $960\text{ cm}^{2}$。$X$ 與 $Z$ 是否相似？試解釋。<span class="marks">[8 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 340 270" width="330" role="img" aria-label="正四角錐被平行於底面的平面切開">
+  <polygon points="100,160 300,160 260,220 60,220" fill="currentColor" fill-opacity="0.05"
+           stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  <polygon points="120,130 270,130 240,175 90,175" fill="currentColor" fill-opacity="0.16"
+           stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <line x1="60" y1="220" x2="90" y2="175"/><line x1="260" y1="220" x2="240" y2="175"/>
+    <line x1="300" y1="160" x2="270" y2="130"/><line x1="100" y1="160" x2="120" y2="130"/>
+    <line x1="90" y1="175" x2="180" y2="40"/><line x1="240" y1="175" x2="180" y2="40"/>
+    <line x1="120" y1="130" x2="180" y2="40"/><line x1="270" y1="130" x2="180" y2="40"/>
+    <line x1="180" y1="40" x2="180" y2="190" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+    <text x="184" y="34">頂點</text>
+    <text x="248" y="196">X（平截頭體）</text>
+    <text x="188" y="118">Y</text>
+  </g>
+  <g fill="currentColor" font-size="11" font-family="system-ui,sans-serif">
+    <text x="176" y="214" text-anchor="end">底邊 64 cm</text>
+    <text x="186" y="130">高 24 cm</text>
+  </g>
+</svg>
+      <figcaption>平行於底面的平面切出與原角錐相似的 $Y$</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">確認 $Y$ 與整個角錐相似</div>
+      <div class="rule">
+        <span class="rule-name">相似比</span>
+        <span class="rule-math">$k=\dfrac{18}{24}=\dfrac34$</span>
+        <span class="rule-why">平行於底面的截面必與底面相似，故 $Y$ 與原角錐相似，所有對應長度比同為 $k$。</span>
+      </div>
+    <p>整個角錐：底 $64\times64$、高 $24$；$Y$ 高 $18$。</p>
+    <p>$$k=\frac{18}{24}=\frac34$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $Y$ 的底邊與 $X$ 的高</div>
+    <p>$$Y\text{ 的底邊}=64\times\frac34=48\text{ cm},\qquad X\text{ 的高}=24-18=6\text{ cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用體積比 $k^{3}$</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的體積比</span>
+        <span class="rule-math">$V_Y=k^{3}V_{\text{總}}$</span>
+        <span class="rule-why">相似立體對應長度比 $k$，體積比為 $k^{3}$。</span>
+      </div>
+    <p>$$V_{\text{總}}=\frac13(64^{2})(24)=32768\text{ cm}^{3}$$</p>
+    <p>$$V_Y=\left(\frac34\right)^{3}(32768)=\frac{27}{64}\times32768=13824\text{ cm}^{3}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a) 相減得 $X$ 的體積</div>
+    <p>$$V_X=V_{\text{總}}-V_Y=32768-13824=18944\text{ cm}^{3}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 求 $X$ 的斜高與側面面積</div>
+      <div class="rule">
+        <span class="rule-name">斜高</span>
+        <span class="rule-math">$l=\sqrt{32^{2}+24^{2}}=40$</span>
+        <span class="rule-why">由底面中心到邊中點的距離 $32$、高 $24$ 組成直角三角形。</span>
+      </div>
+    <p>$$l_{\text{總}}=40\text{ cm},\qquad l_Y=40\times\frac34=30\text{ cm}$$</p>
+    <p>側面（梯形）的高 $=40-30=10\text{ cm}$</p>
+    <p>$$\text{每個側面}=\frac12(64+48)(10)=560\text{ cm}^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 求 $X$ 的總表面積</div>
+    <p>$$S_X=4(560)+48^{2}+64^{2}=2240+2304+4096=8640\text{ cm}^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b) 用面積比檢驗相似</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的表面積比</span>
+        <span class="rule-math">$\dfrac{S_X}{S_Z}=\left(\dfrac{h_X}{h_Z}\right)^{2}$</span>
+        <span class="rule-why">若兩立體相似，總表面積比必須等於對應長度比的平方。</span>
+      </div>
+    <p>$$\frac{h_X}{h_Z}=\frac{6}{3}=2 \quad\Longrightarrow\quad \left(\frac{h_X}{h_Z}\right)^{2}=4$$</p>
+    <p>但 $$\frac{S_X}{S_Z}=\frac{8640}{960}=9\neq4$$</p>
+    <p>故 $X$ 與 $Z$ <b>不相似</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $18944\text{ cm}^{3}$　(b) 不相似（表面積比 $9\neq2^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個直立角錐底為邊長 $20\text{ cm}$ 的正方形、高 $18\text{ cm}$，被平行於底面的平面在高 $12\text{ cm}$ 處（由頂點量起）切開。求上方小角錐的體積及平截頭體的體積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $k=\dfrac{12}{18}=\dfrac23$，上方底邊 $=20\times\dfrac23=\dfrac{40}{3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\left(\dfrac23\right)^{3}\times\dfrac13(20^{2})(18)=\dfrac{8}{27}\times2400=\dfrac{6400}{9}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2400-\dfrac{6400}{9}=\dfrac{15200}{9}\approx1689\text{ cm}^{3}$。</div>
+
+          <div class="p-ans">答案：小角錐 $\dfrac{6400}{9}\text{ cm}^{3}$；平截頭體 $\dfrac{15200}{9}\text{ cm}^{3}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q14.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

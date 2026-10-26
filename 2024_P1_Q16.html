@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第16題 · 組合與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第16題</span>
+  <h1>同時抽出 → 用組合，不用排列</h1>
+  <p class="sub">概率 · 組合 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋中有 $16$ 隻紅色杯及 $4$ 隻白色杯。若從袋中同時隨機抽出 $5$ 隻杯，求<br>(a) 剛好抽出 $1$ 隻白色杯的概率；<br>(b) 最多抽出 $3$ 隻紅色杯的概率。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">建立計數模型</div>
+      <div class="rule">
+        <span class="rule-name">樣本空間</span>
+        <span class="rule-math">$C_5^{20}$</span>
+        <span class="rule-why">「同時抽出」表示不計次序，用組合數。</span>
+      </div>
+    <p>杯的總數 $=16+4=20$，抽出 $5$ 隻的方法數為</p>
+    <p>$$C_5^{20}=15504$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 剛好 1 白：1 白 + 4 紅</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">$C_1^{4}\times C_4^{16}$</span>
+        <span class="rule-why">白色與紅色的選法互相獨立，相乘即可。</span>
+      </div>
+    <p>$$C_1^{4}\times C_4^{16}=4\times1820=7280$$</p>
+    <p>$$P=\frac{7280}{15504}=\frac{455}{969}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用「餘事件」最快</div>
+      <div class="rule">
+        <span class="rule-name">餘概率</span>
+        <span class="rule-math">$P(\text{最多 3 紅})=1-P(4\text{ 或 }5\text{ 紅})$</span>
+        <span class="rule-why">「最多 3 紅」的反面只有「4 紅」與「5 紅」兩種情況。</span>
+      </div>
+    <p>$$P(5\text{ 紅})=\frac{C_5^{16}}{15504}=\frac{4368}{15504},\qquad P(4\text{ 紅})=\frac{C_4^{16}C_1^{4}}{15504}=\frac{7280}{15504}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 計算答案</div>
+    <p>$$P=1-\frac{4368+7280}{15504}=\frac{3856}{15504}=\frac{241}{969}$$</p>
+    <p>亦可直接數：$C_2^{4}C_3^{16}+C_3^{4}C_2^{16}+C_4^{4}C_1^{16}=3360+480+16=3856$ ✓</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{455}{969}$　(b) $\dfrac{241}{969}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋中有 $5$ 隻紅球及 $3$ 隻藍球，同時抽出 $4$ 隻。求 (a) 剛好 $2$ 隻藍球的概率；(b) 至少 $1$ 隻藍球的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $C_4^{8}=70$。</div>
+          <div class="p-step"><b>第 2 步.</b> $C_2^{3}C_2^{5}=3\times10=30$，$P=\dfrac{30}{70}=\dfrac37$。</div>
+          <div class="p-step"><b>第 3 步.</b> $C_4^{5}=5$，$P=1-\dfrac{5}{70}=\dfrac{13}{14}$。</div>
+
+          <div class="p-ans">答案：(a) $\dfrac37$　(b) $\dfrac{13}{14}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+</body>
+</html>

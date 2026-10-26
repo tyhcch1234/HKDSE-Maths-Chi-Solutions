@@ -40,3 +40,15 @@
   margin-top:10px;padding:8px 12px;background:#eff6ff;border-radius:8px;
   font-weight:700;color:#1e3a8a;
 }
+
+/* 資料表（統計題用） */
+table.dtable{
+  width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;
+  background:#fff;color:#1e293b;
+}
+table.dtable th,table.dtable td{
+  border:1px solid #cbd5e1;padding:7px 10px;text-align:center;
+}
+table.dtable th{background:#eff6ff;font-weight:700;color:#1e3a8a}
+table.dtable td.rowhead{background:#f8fafc;font-weight:600;text-align:left}
+.fig svg{max-width:100%;height:auto}

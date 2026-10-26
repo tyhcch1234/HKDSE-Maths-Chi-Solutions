@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第7題 · 極坐標與三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第7題</span>
+  <h1>三點繞原點排成直角</h1>
+  <p class="sub">極坐標 · 距離與周界 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      在極坐標系中，$O$ 為極點。點 $P$、$Q$、$R$ 的極坐標分別為 $(11,59^{\circ})$、$(60,149^{\circ})$ 及 $(144,239^{\circ})$。<br>(a) 求 $\angle POQ$。<br>(b) $P$、$O$、$R$ 三點是否共線？試解釋你的答案。<br>(c) 求 $\triangle PQR$ 的周界。<span class="marks">[4 分]</span>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 420 380" width="400" role="img" aria-label="極坐標系中 P、Q、R 三點">
+  <g fill="none" stroke="currentColor" stroke-width="1.1">
+    <line x1="200" y1="190" x2="392" y2="190"/>
+    <line x1="200" y1="190" x2="230.9" y2="138.6"/>
+    <line x1="200" y1="190" x2="105.7" y2="133.3"/>
+    <line x1="200" y1="190" x2="122.8" y2="318.6"/>
+    <path d="M200,190 m 42,0 a 42,42 0 0 0 -21.6,-36" stroke-opacity=".45"/>
+    <path d="M200,190 m -40,0 a 40,40 0 0 0 19,-35.5" stroke-opacity=".0"/>
+  </g>
+  <polygon points="230.9,138.6 105.7,133.3 122.8,318.6" fill="currentColor" fill-opacity="0.06"
+           stroke="currentColor" stroke-width="1.1" stroke-dasharray="5 4" stroke-opacity=".6"/>
+  <g fill="currentColor">
+    <circle cx="200" cy="190" r="3"/>
+    <circle cx="230.9" cy="138.6" r="3.4"/>
+    <circle cx="105.7" cy="133.3" r="3.4"/>
+    <circle cx="122.8" cy="318.6" r="3.4"/>
+  </g>
+  <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+    <text x="192" y="208" text-anchor="end">O</text>
+    <text x="238" y="132">P</text>
+    <text x="96" y="126" text-anchor="end">Q</text>
+    <text x="114" y="334" text-anchor="end">R</text>
+    <text x="392" y="184" text-anchor="end" font-style="normal" font-size="11">極軸</text>
+  </g>
+  <g fill="currentColor" font-size="11" font-family="system-ui,sans-serif">
+    <text x="243" y="167">11</text>
+    <text x="143" y="170">60</text>
+    <text x="168" y="262">144</text>
+    <text x="221" y="176">59°</text>
+    <text x="141" y="183">149°</text>
+    <text x="169" y="230">239°</text>
+  </g>
+</svg>
+      <figcaption>極坐標系（示意圖，非按比例）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 同一極點，角度直接相減</div>
+      <div class="rule">
+        <span class="rule-name">極角</span>
+        <span class="rule-math">$\angle POQ=\theta_Q-\theta_P$</span>
+        <span class="rule-why">兩射線由同一極軸量起，夾角就是極角之差。</span>
+      </div>
+    <p>$$\angle POQ=149^{\circ}-59^{\circ}=90^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 相差 $180^{\circ}$ 即反向共線</div>
+      <div class="rule">
+        <span class="rule-name">共線條件</span>
+        <span class="rule-math">$\theta_R-\theta_P=180^{\circ}$</span>
+        <span class="rule-why">由同一點出發、方向相反的兩條射線，合起來就是一條直線。</span>
+      </div>
+    <p>$$239^{\circ}-59^{\circ}=180^{\circ}$$</p>
+    <p>所以 $OP$ 與 $OR$ 是同一條直線上的相反射線，且 $O$ 位於 $P$ 與 $R$ 之間，故 $P$、$O$、$R$ 共線。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c) 求 $PQ$</div>
+      <div class="rule">
+        <span class="rule-name">勾股定理</span>
+        <span class="rule-math">$PQ=\sqrt{OP^{2}+OQ^{2}}$</span>
+        <span class="rule-why">已知 $\angle POQ=90^{\circ}$，$\triangle POQ$ 是直角三角形。</span>
+      </div>
+    <p>$$PQ=\sqrt{11^{2}+60^{2}}=\sqrt{121+3600}=\sqrt{3721}=61$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 求 $QR$</div>
+    <p>同理 $\angle QOR=239^{\circ}-149^{\circ}=90^{\circ}$，故</p>
+    <p>$$QR=\sqrt{60^{2}+144^{2}}=\sqrt{3600+20736}=\sqrt{24336}=156$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 求 $PR$ 與周界</div>
+      <div class="rule">
+        <span class="rule-name">共線三點</span>
+        <span class="rule-math">$PR=OP+OR$</span>
+        <span class="rule-why">由 (b) 知 $O$ 在 $P$、$R$ 之間，兩段可直接相加。</span>
+      </div>
+    <p>$$PR=11+144=155$$</p>
+    <p>$$\text{周界}=61+156+155=372$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $90^{\circ}$　(b) 共線（$239^{\circ}-59^{\circ}=180^{\circ}$）　(c) $372$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在極坐標系中，$A$、$B$ 的極坐標分別為 $(5,40^{\circ})$ 及 $(5,130^{\circ})$。求 $\angle AOB$ 及 $AB$ 的長度。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $130^{\circ}-40^{\circ}=90^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AB=\sqrt{5^{2}+5^{2}}=\sqrt{50}=5\sqrt{2}$。</div>
+
+          <div class="p-ans">答案：$\angle AOB=90^{\circ}$，$AB=5\sqrt{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q8.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>

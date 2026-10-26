@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2024 卷一 第9題 · 統計與概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2024 · 卷一 · 第9題</span>
+  <h1>由概率反求 $k$，再讀平均數、眾數、中位數</h1>
+  <p class="sub">統計 · 概率 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示一組家庭主婦擁有鎖匙數目的分佈。<table class="dtable">
+  <tr><th>鎖匙數目</th><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+  <tr><th>家庭主婦人數</th><td>10</td><td>9</td><td>4</td><td>3</td><td>4</td><td>$k$</td></tr>
+</table>若從該組中隨機選出一名家庭主婦，則她擁有超過 6 條鎖匙的概率為 $\dfrac{5}{18}$。<br>(a) 求 $k$。<br>(b) 寫出該分佈的平均數、眾數及中位數。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清有利情況與總數</div>
+      <div class="rule">
+        <span class="rule-name">概率</span>
+        <span class="rule-math">$P=\dfrac{\text{有利情況數目}}{\text{總數}}$</span>
+        <span class="rule-why">「超過 6 條」即 7 條或 8 條。</span>
+      </div>
+    <p>擁有超過 6 條鎖匙的人數為 $4+k$，總人數為 $10+9+4+3+4+k=30+k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 解方程求 $k$</div>
+      <div class="rule">
+        <span class="rule-name">交叉相乘</span>
+        <span class="rule-math">$\dfrac{4+k}{30+k}=\dfrac{5}{18}$</span>
+        <span class="rule-why">分式方程先去分母，再整理同類項。</span>
+      </div>
+    <p>$$18(4+k)=5(30+k)$$</p>
+    <p>$$72+18k=150+5k \quad\Longrightarrow\quad 13k=78 \quad\Longrightarrow\quad k=6$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 平均數</div>
+      <div class="rule">
+        <span class="rule-name">加權平均</span>
+        <span class="rule-math">$\bar x=\dfrac{\sum fx}{\sum f}$</span>
+        <span class="rule-why">每個數據值乘以其次數，再除以總人數。</span>
+      </div>
+    <p>總鎖匙數 $=3(10)+4(9)+5(4)+6(3)+7(4)+8(6)=30+36+20+18+28+48=180$</p>
+    <p>總人數 $=30+6=36$</p>
+    <p>$$\text{平均數}=\frac{180}{36}=5$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 眾數</div>
+      <div class="rule">
+        <span class="rule-name">眾數</span>
+        <span class="rule-math">次數最大的數據值</span>
+        <span class="rule-why">比較各次數 $10,9,4,3,4,6$。</span>
+      </div>
+    <p>最大次數為 $10$，對應 $3$ 條鎖匙，故眾數為 $3$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 中位數</div>
+      <div class="rule">
+        <span class="rule-name">累積頻數</span>
+        <span class="rule-math">第 $\dfrac{n}{2}$ 與 $\dfrac{n}{2}+1$ 個數據的平均</span>
+        <span class="rule-why">$n=36$ 為偶數，中位數取第 18、19 個數據的平均。</span>
+      </div>
+    <p>累積頻數：$10,\;19,\;23,\;26,\;30,\;36$。第 18 及第 19 個數據都落在「4 條」一組（$10<18,19\le19$）。</p>
+    <p>$$\text{中位數}=4$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $k=6$　(b) 平均數 $=5$，眾數 $=3$，中位數 $=4$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據 $1,2,3,4$ 的次數分別為 $5,8,k,4$。若平均數為 $2.5$，求 $k$ 及眾數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $5+16+3k+16=37+3k$；總數 $=17+k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $37+3k=2.5(17+k)\Rightarrow 0.5k=5.5\Rightarrow k=11$。</div>
+          <div class="p-step"><b>第 3 步.</b> 次數最大為 $11$，對應數據值 $3$。</div>
+
+          <div class="p-ans">答案：$k=11$，眾數 $=3$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2024_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2024_P1_Q10.html">下一題 ›</a></nav>
+</div>
+</body>
+</html>
