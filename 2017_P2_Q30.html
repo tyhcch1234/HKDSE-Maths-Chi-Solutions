@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第30題 · 眾數、中位數與全距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第30題</span>
+    <h1>用平均數收窄 $m$、$n$ 的可能值</h1>
+    <p class="sub">統計 · 平均數 · 眾數 · 全距</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下正整數：$2,\ 3,\ 4,\ 6,\ 7,\ 9,\ 10,\ m,\ n$。
+設 $a$、$b$、$c$ 分別為上述正整數的眾數、中位數及全距。若上述正整數的平均數為 $5$，下列何者必定正確？
+<br>I. $a=2$
+<br>II. $b=4$
+<br>III. $c=8$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由平均數求 $m+n$</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">$\dfrac{2+3+4+6+7+9+10+m+n}{9}=5$</span>
+        <span class="rule-why">九個數的平均數為 $5$，總和就是 $45$。</span>
+      </div>
+      \[2+3+4+6+7+9+10+m+n=45
+\ \Longrightarrow\ 41+m+n=45
+\ \Longrightarrow\ m+n=4.\]
+$m$、$n$ 是正整數，故只有 $(1,3)$、$(2,2)$、$(3,1)$ 三個可能。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐一檢查中位數</div>
+      <div class="rule">
+        <span class="rule-name">中位數</span>
+        <span class="rule-math">九個數的中位數是第 5 個</span>
+        <span class="rule-why">把 $m$、$n$ 插入後排序，看第 5 個數。</span>
+      </div>
+      <b>$(m,n)=(1,3)$</b>：數列 $1,2,3,3,4,6,7,9,10$，中位數（第 5 個）$=4$。<br>
+<b>$(2,2)$</b>：$2,2,2,3,4,6,7,9,10$，中位數 $=4$。<br>
+<b>$(3,1)$</b>：$1,2,3,3,4,6,7,9,10$，中位數 $=4$。<br>
+三種情況的中位數都是 $4$，所以 <b>II 必正確</b>。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查眾數與全距</div>
+      <div class="rule">
+        <span class="rule-name">眾數、全距</span>
+        <span class="rule-math">$(1,3)$ 與 $(3,1)$ 的眾數都是 $3$</span>
+        <span class="rule-why">眾數可能有兩個值，所以「$a=2$」不是必然。</span>
+      </div>
+      $(1,3)$ 與 $(3,1)$：眾數 $a=3$、全距 $c=10-1=9$。<br>
+$(2,2)$：眾數 $a=2$、全距 $c=10-2=8$。<br>
+所以 I（$a=2$）與 III（$c=8$）都只是「有時正確」，只有 II 必然正確。<br>
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮正整數 $2,\ 3,\ 4,\ 6,\ 7,\ 9,\ 10,\ m,\ n$。若上述正整數的平均數為 $5$，且 $m=n$，則 $m=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總和 $=9\times5=45$。</div>
+          <div class="p-step"><b>第 2 步.</b> 已知部分之和 $=2+3+4+6+7+9+10=41$，故 $2m=45-41=4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m=2$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q29.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

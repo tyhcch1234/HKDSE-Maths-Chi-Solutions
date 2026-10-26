@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第27題 · 軌跡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第27題</span>
+    <h1>$AP=BP$ 的軌跡是 $AB$ 的垂直平分線</h1>
+    <p class="sub">坐標幾何 · 軌跡 · 圓的圓心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $A$、$B$ 為圓 $x^{2}+y^{2}-6x-4y-87=0$ 上兩個相異的點。設 $P$ 為直角坐標平面上的一個動點，使 $AP=BP$。$P$ 的軌跡方程為 $x+2y+k=0$，其中 $k$ 為常數。求 $k$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-8$</li><li><span class="ol">B</span>$-7$</li><li><span class="ol">C</span>$7$</li><li><span class="ol">D</span>$8$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出軌跡是垂直平分線</div>
+      <div class="rule">
+        <span class="rule-name">軌跡</span>
+        <span class="rule-math">$AP=BP\Rightarrow P$ 在 $AB$ 的垂直平分線上</span>
+        <span class="rule-why">到兩定點等距的點的軌跡，就是該兩點連線的垂直平分線。</span>
+      </div>
+      因為 $AP=BP$，$P$ 的軌跡是線段 $AB$ 的垂直平分線。
+而 $AB$ 是圓的一條弦，弦的垂直平分線必定通過圓心。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求圓心</div>
+      <div class="rule">
+        <span class="rule-name">圓心</span>
+        <span class="rule-math">$x^{2}+y^{2}-6x-4y-87=0\Rightarrow G=\left(3,2\right)$</span>
+        <span class="rule-why">圓心坐標為 $\left(-\dfrac{D}{2},-\dfrac{E}{2}\right)$。</span>
+      </div>
+      \[G=\left(-\frac{-6}{2},-\frac{-4}{2}\right)=(3,2).\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把圓心代入軌跡方程</div>
+      <div class="rule">
+        <span class="rule-name">點在直線上</span>
+        <span class="rule-math">$(3,2)$ 滿足 $x+2y+k=0$</span>
+        <span class="rule-why">圓心在垂直平分線上，所以它必須滿足該方程。</span>
+      </div>
+      \[(3)+2(2)+k=0
+\ \Longrightarrow\ 3+4+k=0
+\ \Longrightarrow\ k=-7.\]
+答案為 <b>B</b>。<br>
+不必求出 $A$、$B$ 的坐標：只要知道垂直平分線必過圓心，一步即可定出 $k$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$-7$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $A$、$B$ 為圓 $x^{2}+y^{2}+4x-10y-20=0$ 上兩個相異的點。$P$ 為動點且 $AP=BP$，其軌跡為 $2x+y+k=0$。求 $k$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$-1$</li><li><span class="ol">D</span>$-3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓心 $G=\left(-2,5\right)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 軌跡是 $AB$ 的垂直平分線，必過 $G$。</div>
+          <div class="p-step"><b>第 3 步.</b> $2(-2)+5+k=0\Rightarrow k=-1$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$-1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q26.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q28.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

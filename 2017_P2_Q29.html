@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第29題 · 箱形圖</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第29題</span>
+    <h1>認清五個數字的位置</h1>
+    <p class="sub">統計 · 箱形圖 · 四分位數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下圖顯示某班學生在一星期內上網時數的分佈。求該分佈的下四分位數。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5$</li><li><span class="ol">B</span>$15$</li><li><span class="ol">C</span>$25$</li><li><span class="ol">D</span>$40$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認清箱形圖的五個數字</div>
+      <div class="rule">
+        <span class="rule-name">箱形圖</span>
+        <span class="rule-math">左鬚端 $=Q_0$，箱左邊 $=Q_1$，箱內線 $=Q_2$，箱右邊 $=Q_3$，右鬚端 $=Q_4$</span>
+        <span class="rule-why">下四分位數 $Q_1$ 就是箱的左邊界。</span>
+      </div>
+      箱形圖由左至右依次顯示：最小值、下四分位數 $Q_1$、中位數 $Q_2$、上四分位數 $Q_3$、最大值。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">對準刻度讀出 $Q_1$</div>
+      <div class="rule">
+        <span class="rule-name">讀圖</span>
+        <span class="rule-math">$Q_1=15$</span>
+        <span class="rule-why">箱的左邊界對應刻度 $15$（每格 $10$ 小時，虛線每 $5$ 小時一格）。</span>
+      </div>
+      圖中左鬚端在 $5$，箱的左邊界在 $15$，箱內的中位線在 $25$，箱的右邊界在 $40$，右鬚端在 $55$。所以
+\[Q_1=15.\]
+答案為 <b>B</b>。<br>
+選項 A（$5$）是最小值、C（$25$）是中位數、D（$40$）是上四分位數，都是「讀錯位置」的陷阱。    <figure class="fig">
+      <svg viewBox="0 0 400 150" width="400" height="150" role="img" aria-label="箱形圖：網上時數的分佈">
+        <line x1="30" y1="90" x2="380" y2="90" stroke="currentColor" stroke-width="1.2"/>
+        <g stroke="currentColor" stroke-width="1.2">
+          <line x1="57.5" y1="90" x2="57.5" y2="60"/>
+          <line x1="115" y1="90" x2="115" y2="45"/>
+          <line x1="172.5" y1="90" x2="172.5" y2="45"/>
+          <line x1="230" y1="90" x2="230" y2="45"/>
+          <line x1="345" y1="90" x2="345" y2="60"/>
+          <line x1="57.5" y1="60" x2="115" y2="60"/>
+          <line x1="230" y1="60" x2="345" y2="60"/>
+          <rect x="115" y="45" width="115" height="30" fill="none"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11" text-anchor="middle">
+          <text x="30" y="108">0</text>
+          <text x="80" y="108">10</text>
+          <text x="130" y="108">20</text>
+          <text x="180" y="108">30</text>
+          <text x="230" y="108">40</text>
+          <text x="280" y="108">50</text>
+          <text x="330" y="108">60</text>
+          <text x="380" y="108">時數</text>
+        </g>
+        <g stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 3" stroke-opacity="0.6">
+          <line x1="57.5" y1="30" x2="57.5" y2="90"/>
+          <line x1="115" y1="30" x2="115" y2="90"/>
+          <line x1="172.5" y1="30" x2="172.5" y2="90"/>
+          <line x1="230" y1="30" x2="230" y2="90"/>
+          <line x1="345" y1="30" x2="345" y2="90"/>
+        </g>
+      </svg>
+      <figcaption>最小值 5、下四分位數 15、中位數 25、上四分位數 40、最大值 55。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$15$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某分佈的箱形圖顯示：最小值 $8$、下四分位數 $16$、中位數 $24$、上四分位數 $36$、最大值 $48$。求該分佈的四分位數間距。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$8$</li><li><span class="ol">B</span>$12$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$40$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 四分位數間距 $=Q_3-Q_1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $=36-16$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=20$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q28.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q30.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

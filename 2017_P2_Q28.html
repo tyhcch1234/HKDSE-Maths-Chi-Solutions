@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第28題 · 由棒形圖求概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第28題</span>
+    <h1>先讀總人數，再數符合條件的人</h1>
+    <p class="sub">概率 · 統計圖表</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下圖顯示一組兒童在遊戲中獲得代幣數目的分佈。若從該組中隨機選出一名兒童，求選中的兒童在遊戲中獲得少於 5 枚代幣的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{2}{3}$</li><li><span class="ol">B</span>$\dfrac{2}{5}$</li><li><span class="ol">C</span>$\dfrac{5}{12}$</li><li><span class="ol">D</span>$\dfrac{7}{25}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">從棒形圖讀出各組人數</div>
+      <div class="rule">
+        <span class="rule-name">讀圖</span>
+        <span class="rule-math">$5,\ 20,\ 15,\ 10,\ 10$</span>
+        <span class="rule-why">每枝棒的高度就是該代幣數目的人數。</span>
+      </div>
+      \[3\text{ 枚}:5\text{ 人},\quad 4\text{ 枚}:20\text{ 人},\quad 5\text{ 枚}:15\text{ 人},\]
+\[6\text{ 枚}:10\text{ 人},\quad 7\text{ 枚}:10\text{ 人}.\]
+總人數
+\[5+20+15+10+10=60.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">數出「少於 5 枚」的人數</div>
+      <div class="rule">
+        <span class="rule-name">少於 5 枚</span>
+        <span class="rule-math">$3$ 枚或 $4$ 枚</span>
+        <span class="rule-why">「少於 5」不包括 5 本身，這是最常見的失分位。</span>
+      </div>
+      符合條件的只有 $3$ 枚與 $4$ 枚兩組：
+\[5+20=25\text{ 人}.\]
+若把「$5$ 枚」也算進去，會多計 $15$ 人，變成 $\dfrac{40}{60}=\dfrac{2}{3}$，正是選項 A 的陷阱。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫成概率</div>
+      <div class="rule">
+        <span class="rule-name">概率</span>
+        <span class="rule-math">$P=\dfrac{\text{符合條件的人數}}{\text{總人數}}$</span>
+        <span class="rule-why">隨機選一人，每個人的機會均等。</span>
+      </div>
+      \[P=\frac{25}{60}=\frac{5}{12}.\]
+答案為 <b>C</b>。    <figure class="fig">
+      <svg viewBox="0 0 380 240" width="380" height="240" role="img" aria-label="棒形圖：獲得代幣數目的兒童人數">
+        <g stroke="currentColor" stroke-width="1">
+          <line x1="55" y1="200" x2="350" y2="200"/>
+          <line x1="55" y1="200" x2="55" y2="30"/>
+          <g stroke-dasharray="3 3" stroke-opacity="0.5">
+            <line x1="55" y1="30" x2="350" y2="30"/>
+            <line x1="55" y1="72.5" x2="350" y2="72.5"/>
+            <line x1="55" y1="115" x2="350" y2="115"/>
+            <line x1="55" y1="157.5" x2="350" y2="157.5"/>
+          </g>
+        </g>
+        <g fill="#93c5fd" stroke="#1d4ed8" stroke-width="1">
+          <rect x="70" y="157.5" width="34" height="42.5"/>
+          <rect x="128" y="30" width="34" height="170"/>
+          <rect x="186" y="72.5" width="34" height="127.5"/>
+          <rect x="244" y="115" width="34" height="85"/>
+          <rect x="302" y="115" width="34" height="85"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11">
+          <text x="47" y="203" text-anchor="end">0</text>
+          <text x="47" y="161" text-anchor="end">5</text>
+          <text x="47" y="119" text-anchor="end">10</text>
+          <text x="47" y="76" text-anchor="end">15</text>
+          <text x="47" y="34" text-anchor="end">20</text>
+          <text x="87" y="216" text-anchor="middle">3</text>
+          <text x="145" y="216" text-anchor="middle">4</text>
+          <text x="203" y="216" text-anchor="middle">5</text>
+          <text x="261" y="216" text-anchor="middle">6</text>
+          <text x="319" y="216" text-anchor="middle">7</text>
+          <text x="200" y="236" text-anchor="middle" font-size="12">獲得代幣數目</text>
+        </g>
+        <text x="18" y="120" font-size="11" font-family="Georgia,serif" fill="currentColor"
+              transform="rotate(-90 18 120)" text-anchor="middle">兒童人數</text>
+      </svg>
+      <figcaption>各組人數：3 枚 5 人、4 枚 20 人、5 枚 15 人、6 枚 10 人、7 枚 10 人。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{5}{12}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組學生擁有的貼紙數目分佈如下：2 張 4 人、3 張 6 人、4 張 12 人、5 張 8 人。若隨機選出一名學生，求他擁有少於 4 張貼紙的概率。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{1}{3}$</li><li><span class="ol">B</span>$\dfrac{2}{5}$</li><li><span class="ol">C</span>$\dfrac{1}{2}$</li><li><span class="ol">D</span>$\dfrac{3}{5}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總人數 $=4+6+12+8=30$。</div>
+          <div class="p-step"><b>第 2 步.</b> 少於 4 張：2 張與 3 張，共 $4+6=10$ 人。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{10}{30}=\dfrac{1}{3}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{1}{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q27.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q29.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
