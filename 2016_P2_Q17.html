@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第17題 · 平行四邊形與等腰三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第17題</span>
+    <h1>平行四邊形 + 等腰三角形 = 角度追蹤</h1>
+    <p class="sub">幾何 · 平行四邊形、等腰三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 是一個平行四邊形。$E$ 為 $CD$ 上的一點，使得 $BE=CE$。若 $\angle ADC=114^{\circ}$，則 $\angle ABE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$48^{\circ}$</li><li><span class="ol">B</span>$57^{\circ}$</li><li><span class="ol">C</span>$62^{\circ}$</li><li><span class="ol">D</span>$66^{\circ}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 190" width="300" height="190" role="img" aria-label="平行四邊形 ABCD，E 在 CD 上，BE=CE">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <polygon points="96.5,88.9 224.5,88.9 257,162 129,162"/>
+          <line x1="224.5" y1="88.9" x2="158.7" y2="162" stroke-dasharray="0"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="15">
+          <text x="92" y="80" text-anchor="middle">A</text>
+          <text x="229" y="80" text-anchor="middle">B</text>
+          <text x="264" y="167">C</text>
+          <text x="122" y="167" text-anchor="middle">D</text>
+          <text x="158" y="180" text-anchor="middle">E</text>
+        </g>
+        <circle cx="158.7" cy="162" r="2.6" fill="currentColor"/>
+      </svg>
+      <figcaption>圖（按角度比例繪畫，$114^{\circ}$ 在 $D$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平行四邊形的性質求 $\angle BCD$</div>
+      <div class="rule">
+        <span class="rule-name">同旁內角互補</span>
+        $AD\parallel BC$，故 $\angle ADC+\angle BCD=180^{\circ}$。
+      </div>
+      <p>$$\angle BCD=180^{\circ}-114^{\circ}=66^{\circ}$$</p>
+      <p>又平行四邊形對角相等：$\angle ABC=\angle ADC=114^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle BCE$ 用 $BE=CE$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        $BE=CE$ 表示等邊對 $B$、$C$ 的角相等；而 $E$ 在 $CD$ 上，故 $\angle BCE=\angle BCD=66^{\circ}$。
+      </div>
+      <p>$$\angle EBC=\angle BCE=66^{\circ}$$</p>
+      <p>（順帶：$\angle BEC=180^{\circ}-2(66^{\circ})=48^{\circ}$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $\angle ABC$ 減去 $\angle EBC$</div>
+      <div class="rule">
+        <span class="rule-name">角的和差</span>
+        $E$ 在 $CD$ 上，射線 $BE$ 位於 $BA$ 與 $BC$ 之間，故 $\angle ABE=\angle ABC-\angle EBC$。
+      </div>
+      <p>$$\angle ABE=114^{\circ}-66^{\circ}=48^{\circ}$$</p>
+      <p>答案為 <b>A</b>。</p>
+      <p>易錯：把 $\angle EBC$ 誤當成 $180^{\circ}-66^{\circ}=114^{\circ}$（那是 $\angle ABC$ 本身）；或忘了 $BE=CE$ 給的是底角 $\angle EBC=\angle BCE$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$48^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 是平行四邊形，$E$ 在 $CD$ 上且 $BE=CE$。若 $\angle ADC=124^{\circ}$，求 $\angle ABE$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$34^{\circ}$</li><li><span class="ol">B</span>$40^{\circ}$</li><li><span class="ol">C</span>$56^{\circ}$</li><li><span class="ol">D</span>$68^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BCD=180^{\circ}-124^{\circ}=56^{\circ}$，且 $\angle ABC=124^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $BE=CE$ 且 $E$ 在 $CD$ 上 $\Rightarrow \angle EBC=\angle BCE=56^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABE=124^{\circ}-56^{\circ}=68^{\circ}$。</div>
+          <div class="p-ans">答案：<b>D</b>（$68^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

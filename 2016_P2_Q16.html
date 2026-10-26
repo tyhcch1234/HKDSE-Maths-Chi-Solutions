@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第16題 · 畢氏定理的逆定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第16題</span>
+    <h1>$24$、$32$、$40$：先認出直角</h1>
+    <p class="sub">幾何 · 畢氏定理的逆定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABC$ 是一條直線。若 $AB=24\text{ cm}$、$AD=40\text{ cm}$、$BD=32\text{ cm}$ 及 $CD=68\text{ cm}$，則 $BC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$43\text{ cm}$</li><li><span class="ol">B</span>$54\text{ cm}$</li><li><span class="ol">C</span>$55\text{ cm}$</li><li><span class="ol">D</span>$60\text{ cm}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 300 260" width="300" height="260" role="img" aria-label="A、B、C 在同一直線上，D 在 B 的正上方">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <line x1="24" y1="220" x2="252" y2="220"/>
+          <line x1="30" y1="220" x2="90" y2="140"/>
+          <line x1="90" y1="140" x2="90" y2="220"/>
+          <line x1="90" y1="140" x2="240" y2="220"/>
+          <path d="M90,208 L102,208 L102,220" stroke-width="1.2"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="15">
+          <text x="22" y="240" text-anchor="middle">A</text>
+          <text x="90" y="240" text-anchor="middle">B</text>
+          <text x="248" y="240" text-anchor="middle">C</text>
+          <text x="90" y="130" text-anchor="middle">D</text>
+        </g>
+        <g fill="currentColor" font-size="12" opacity="0.85">
+          <text x="42" y="186" text-anchor="end">24</text>
+          <text x="98" y="186">32</text>
+          <text x="176" y="172">68</text>
+        </g>
+      </svg>
+      <figcaption>圖（示意圖，$D$ 在 $B$ 的正上方時 $AB\perp BD$）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">檢查 $\triangle ABD$ 是否直角三角形</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        若最長邊的平方等於另兩邊平方之和，則該三角形是直角三角形，且直角在對着最長邊的頂點。
+      </div>
+      <p>三邊為 $24$、$32$、$40$，最長邊是 $AD=40$。</p>
+      <p>$$24^{2}+32^{2}=576+1024=1600=40^{2}$$</p>
+      <p>故 $\angle ABD=90^{\circ}$（$24:32:40=3:4:5$，是常見的直角三角形比例）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把直角帶到 $\triangle BCD$</div>
+      <div class="rule">
+        <span class="rule-name">直線上的鄰角</span>
+        $A$、$B$、$C$ 共線，故 $\angle DBC=180^{\circ}-90^{\circ}=90^{\circ}$。
+      </div>
+      <p>所以在 $\triangle BCD$ 中，$CD$ 是斜邊：</p>
+      <p>$$BC^{2}+BD^{2}=CD^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入求 $BC$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        $c^{2}=a^{2}+b^{2}$，注意斜邊是 $CD=68$。
+      </div>
+      <p>$$BC^{2}+32^{2}=68^{2}$$</p>
+      <p>$$BC^{2}=4624-1024=3600$$</p>
+      <p>$$BC=60\text{ cm}$$</p>
+      <p>驗算：$60^{2}+32^{2}=3600+1024=4624=68^{2}$ ✓，答案為 <b>D</b>。</p>
+      <p>若誤把 $BC$ 當斜邊（$BC=\sqrt{68^{2}+32^{2}}$）會得到不合理的巨大數值；若忘記 $BCD$ 也有直角，就無從計算。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$60\text{ cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $A$、$B$、$C$ 共線，$AB=9\text{ cm}$、$AD=15\text{ cm}$、$BD=12\text{ cm}$、$CD=20\text{ cm}$，求 $BC$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12\text{ cm}$</li><li><span class="ol">B</span>$14\text{ cm}$</li><li><span class="ol">C</span>$16\text{ cm}$</li><li><span class="ol">D</span>$18\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9^{2}+12^{2}=81+144=225=15^{2}$，故 $\angle ABD=90^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $A$、$B$、$C$ 共線，故 $\angle DBC=90^{\circ}$，$CD$ 為斜邊。</div>
+          <div class="p-step"><b>第 3 步.</b> $BC^{2}=20^{2}-12^{2}=400-144=256$，$BC=16\text{ cm}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$16\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

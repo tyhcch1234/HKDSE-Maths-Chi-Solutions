@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第18題 · 柱體體積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第18題</span>
+    <h1>先補回梯形下底，再乘柱長</h1>
+    <p class="sub">求積法 · 柱體體積</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為一個直角柱（right prism），其橫截面為梯形：上底 $4\text{ cm}$、高 $5\text{ cm}$、斜邊 $13\text{ cm}$，柱長 $6\text{ cm}$。求該柱體的體積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$216\text{ cm}^{3}$</li><li><span class="ol">B</span>$240\text{ cm}^{3}$</li><li><span class="ol">C</span>$300\text{ cm}^{3}$</li><li><span class="ol">D</span>$328\text{ cm}^{3}$</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 260 220" width="300" height="250" role="img" aria-label="梯形橫截面：上底 4cm、高 5cm、斜邊 13cm、下底 x">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+          <polygon points="50,190 210,190 90,140 50,140"/>
+          <path d="M50,178 L62,178 L62,190" stroke-width="1.1"/>
+          <line x1="150" y1="140" x2="150" y2="190" stroke-dasharray="5 4" stroke-width="1.1"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-style="italic" font-size="14">
+          <text x="70" y="134" text-anchor="middle">4 cm</text>
+          <text x="44" y="168" text-anchor="end">5</text>
+          <text x="44" y="176" text-anchor="end">cm</text>
+          <text x="165" y="158" text-anchor="start">13 cm</text>
+          <text x="128" y="208" text-anchor="middle">x</text>
+          <text x="150" y="134" text-anchor="middle">?</text>
+        </g>
+        <circle cx="90" cy="140" r="2.4" fill="currentColor"/>
+      </svg>
+      <figcaption>圖（橫截面；虛線為下底比上底多出的部分，柱長 $6\text{ cm}$ 垂直於此面）</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用畢氏定理求「水平多出的長度」</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        斜邊 $13$、高 $5$，另一條直角邊為 $13^{2}-5^{2}=169-25=144$，即 $12$。
+      </div>
+      <p>$$\text{水平差}=12\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求下底，再算橫截面面積</div>
+      <div class="rule">
+        <span class="rule-name">梯形面積</span>
+        $A=\dfrac{(a+b)h}{2}$。下底 $=4+12=16\text{ cm}$。
+      </div>
+      <p>$$A=\frac{(4+16)}{2}\times5=50\text{ cm}^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">乘柱長得體積</div>
+      <div class="rule">
+        <span class="rule-name">柱體體積</span>
+        $V=(\text{橫截面面積})\times(\text{柱長})$。
+      </div>
+      <p>$$V=50\times6=300\text{ cm}^{3}$$</p>
+      <p>答案為 <b>C</b>。</p>
+      <p>易錯：把 $13$ 當成高（面積會變成 $\dfrac{20}{2}\times13=130$）；或忘記乘柱長只算出 $50$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$300\text{ cm}^{3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個直角柱的橫截面為梯形，上底 $3\text{ cm}$、高 $4\text{ cm}$、斜邊 $5\text{ cm}$，柱長 $10\text{ cm}$。求體積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$120\text{ cm}^{3}$</li><li><span class="ol">B</span>$150\text{ cm}^{3}$</li><li><span class="ol">C</span>$180\text{ cm}^{3}$</li><li><span class="ol">D</span>$210\text{ cm}^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 水平差 $=\sqrt{5^{2}-4^{2}}=\sqrt{25-16}=3\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 下底 $=3+3=6\text{ cm}$，面積 $=\dfrac{(3+6)}{2}\times4=18\text{ cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V=18\times10=180\text{ cm}^{3}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$180\text{ cm}^{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
