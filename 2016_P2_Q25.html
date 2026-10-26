@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第25題 · 直線的斜率與截距</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第25題</span>
+    <h1>先定斜率，再用 $x$ 截距</h1>
+    <p class="sub">坐標幾何 · 直線 · 垂直條件</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若直線 $hx+ky+15=0$ 與 $4x+3y-5=0$ 互相垂直，且相交於 $x$ 軸上的一點，則 $k=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-12$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$16$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用「$x$ 截距相同」求 $h$</div>
+      <div class="rule">
+        <span class="rule-name">$x$ 截距</span>
+        <span class="rule-math">令 $y=0$：$-\dfrac{15}{h}=-\dfrac{5}{4}$</span>
+        <span class="rule-why">兩線交於 $x$ 軸，交點的 $y$ 坐標為 0。</span>
+      </div>
+      $4x+3y-5=0$ 的 $x$ 截距：$x=\dfrac54$。<br>
+$hx+ky+15=0$ 的 $x$ 截距：$x=-\dfrac{15}{h}$。<br>
+兩者相等：
+\[-\frac{15}{h}=\frac54\ \Longrightarrow\ h=-12.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出兩條直線的斜率</div>
+      <div class="rule">
+        <span class="rule-name">斜率公式</span>
+        <span class="rule-math">$m=-\dfrac{A}{B}$</span>
+        <span class="rule-why">由 $Ax+By+C=0$ 得斜率 $-\dfrac{A}{B}$。</span>
+      </div>
+      $L_{1}:\ hx+ky+15=0$，斜率
+\[m_{1}=-\frac{h}{k}=-\frac{-12}{k}=\frac{12}{k}.\]
+$L_{2}:\ 4x+3y-5=0$，斜率
+\[m_{2}=-\frac43.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用垂直條件解 $k$</div>
+      <div class="rule">
+        <span class="rule-name">互相垂直</span>
+        <span class="rule-math">$m_{1}m_{2}=-1$</span>
+        <span class="rule-why">兩線垂直，斜率的乘積為 $-1$。</span>
+      </div>
+      \[\frac{12}{k}\times\left(-\frac43\right)=-1
+\ \Longrightarrow\ -\frac{16}{k}=-1
+\ \Longrightarrow\ k=16.\]
+答案為 <b>D</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$16$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若直線 $hx+ky+15=0$ 與 $4x+3y-5=0$ 互相垂直，且相交於 $x$ 軸上的一點，則 $h=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-12$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$12$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x$ 截距相等：$-\dfrac{15}{h}=\dfrac54$。</div>
+          <div class="p-step"><b>第 2 步.</b> 交叉相乘：$-60=5h$。</div>
+          <div class="p-step"><b>第 3 步.</b> $h=-12$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$-12$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q24.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2016_P2_Q26.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

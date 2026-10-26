@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第30題 · 平均數與眾數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第30題</span>
+    <h1>先補回三個未知數，再排序</h1>
+    <p class="sub">統計 · 平均數 · 眾數 · 中位數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下數據：
+\[32,\ 68,\ 79,\ 86,\ 88,\ 98,\ 98,\ a,\ b,\ c\]
+若上述數據的平均數及眾數分別為 $77$ 及 $68$，則上述數據的中位數為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$76$</li><li><span class="ol">B</span>$82$</li><li><span class="ol">C</span>$85$</li><li><span class="ol">D</span>$93$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用平均數求 $a+b+c$</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">$\dfrac{549+a+b+c}{10}=77$</span>
+        <span class="rule-why">先把已知的 7 個數相加：$32+68+79+86+88+98+98=549$。</span>
+      </div>
+      \[32+68+79+86+88+98+98=549,\]
+\[\frac{549+a+b+c}{10}=77\ \Longrightarrow\ a+b+c=221.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用眾數定出 $a,b,c$</div>
+      <div class="rule">
+        <span class="rule-name">眾數</span>
+        <span class="rule-math">眾數是 68，而 98 已出現 2 次</span>
+        <span class="rule-why">要令 68 成為眾數，68 必須至少出現 3 次，即 $a,b,c$ 中最少兩個是 68。</span>
+      </div>
+      $98$ 已出現兩次，要使 $68$ 成為眾數，$a,b,c$ 中至少有兩個是 $68$。
+設兩個為 $68$，則第三個
+\[221-68-68=85.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">排序後取中位數</div>
+      <div class="rule">
+        <span class="rule-name">中位數</span>
+        <span class="rule-math">$\dfrac{79+85}{2}=82$</span>
+        <span class="rule-why">共有 10 個數據，中位數是第 5、6 個的平均。</span>
+      </div>
+      十個數據由小至大排列：
+\[32,\ 68,\ 68,\ 68,\ 79,\ 85,\ 86,\ 88,\ 98,\ 98.\]
+第 5、6 個是 $79$ 與 $85$：
+\[\text{中位數}=\frac{79+85}{2}=82.\]
+答案為 <b>B</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$82$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮數據 $4,\ 6,\ 7,\ 9,\ 9,\ a,\ b$。若平均數為 $8$、眾數為 $9$，則中位數為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$7$</li><li><span class="ol">B</span>$8$</li><li><span class="ol">C</span>$9$</li><li><span class="ol">D</span>$10$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $4+6+7+9+9=35$，故 $a+b=56-35=21$。</div>
+          <div class="p-step"><b>第 2 步.</b> 眾數為 9，故 $a,b$ 中至少一個是 9；取 $a=9,\ b=12$。</div>
+          <div class="p-step"><b>第 3 步.</b> 排序 $4,6,7,9,9,9,12$，中位數是第 4 個 $=9$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$9$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q29.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2016_P2_Q31.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

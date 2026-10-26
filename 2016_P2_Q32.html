@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第32題 · 對數圖象</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第32題</span>
+    <h1>取對數後，斜率就是 $\log_{9}b$</h1>
+    <p class="sub">對數 · 指數函數 · 圖象</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中所示為 $x$ 與 $\log_{9}y$ 之間的線性關係。若 $y=ab^{x}$，則 $b=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-2$</li><li><span class="ol">B</span>$\dfrac1{81}$</li><li><span class="ol">C</span>$\dfrac12$</li><li><span class="ol">D</span>$3$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">對 $y=ab^{x}$ 取對數</div>
+      <div class="rule">
+        <span class="rule-name">對數律</span>
+        <span class="rule-math">$\log_{9}y=\log_{9}a+x\log_{9}b$</span>
+        <span class="rule-why">$\log(mn)=\log m+\log n$，$\log m^{k}=k\log m$。</span>
+      </div>
+      \[\log_{9}y=\log_{9}a+x\log_{9}b.\]
+這是一條以 $x$ 為自變量、$\log_{9}y$ 為因變量的直線：
+斜率 $=\log_{9}b$，截距 $=\log_{9}a$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由圖讀出斜率</div>
+      <div class="rule">
+        <span class="rule-name">斜率</span>
+        <span class="rule-math">$\dfrac{0-(-2)}{4-0}=\dfrac12$</span>
+        <span class="rule-why">直線通過 $(0,-2)$ 與 $(4,0)$。</span>
+      </div>
+      \[m=\frac{0-(-2)}{4-0}=\frac{2}{4}=\frac12.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $b$</div>
+      <div class="rule">
+        <span class="rule-name">對數定義</span>
+        <span class="rule-math">$\log_{9}b=\dfrac12\Rightarrow b=9^{1/2}$</span>
+        <span class="rule-why">$\log_{9}b=\frac12$ 即 $b=9^{1/2}$。</span>
+      </div>
+      \[\log_{9}b=\frac12\ \Longrightarrow\ b=9^{1/2}=3.\]
+答案為 <b>D</b>。<br>
+截距 $\log_{9}a=-2$ 給出 $a=9^{-2}=\frac1{81}$，正是選項 B 的數值——但它問的是 $b$。    <figure class="fig">
+      <svg viewBox="0 0 360 260" width="360" height="260" role="img" aria-label="x 與 log9 y 的線性關係圖">
+        <line x1="30" y1="130" x2="330" y2="130" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="150" y1="240" x2="150" y2="30" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="50" y1="240" x2="310" y2="40" stroke="#1d4ed8" stroke-width="1.8"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11">
+          <text x="138" y="146">O</text>
+          <text x="318" y="126" font-style="italic">x</text>
+          <text x="156" y="36" font-style="italic">log₉ y</text>
+          <text x="118" y="166">−2</text>
+          <text x="230" y="124">4</text>
+          <text x="226" y="120">|</text>
+        </g>
+        <circle cx="150" cy="168" r="2.5" fill="currentColor"/>
+        <circle cx="235" cy="130" r="2.5" fill="currentColor"/>
+      </svg>
+      <figcaption>直線通過 $(0,-2)$ 與 $(4,0)$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$3$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中所示為 $x$ 與 $\log_{2}y$ 之間的線性關係，直線通過 $(0,1)$ 及 $(3,7)$。若 $y=ab^{x}$，則 $b=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2$</li><li><span class="ol">B</span>$4$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$8$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 斜率 $=\dfrac{7-1}{3-0}=2$，即 $\log_{2}b=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $b=2^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $b=4$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q31.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

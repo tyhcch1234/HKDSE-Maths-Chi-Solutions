@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第26題 · 垂直平分線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第26題</span>
+    <h1>把「$AC=BC$」變成垂直平分線</h1>
+    <p class="sub">坐標幾何 · 軌跡 · 兩點距離</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $A$、$B$ 的坐標分別為 $(9,-2)$ 及 $(-1,8)$。若 $C$ 為直線 $x-2y=0$ 上的一點，使 $AC=BC$，則 $C$ 的 $x$ 坐標為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設 $C$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">代入直線</span>
+        <span class="rule-math">$C=(2c,c)$</span>
+        <span class="rule-why">$x-2y=0$ 即 $x=2y$，所以 $y$-坐標設為 $c$ 時，$x$-坐標是 $2c$。</span>
+      </div>
+      由 $x=2y$，設 $C=(2c,c)$，其中 $c$ 為實數。
+條件 $AC=BC$ 等價於 $AC^{2}=BC^{2}$（避免開方）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開兩邊距離平方</div>
+      <div class="rule">
+        <span class="rule-name">距離公式</span>
+        <span class="rule-math">$AC^{2}=(2c-9)^{2}+(c+2)^{2}$</span>
+        <span class="rule-why">$A=(9,-2)$，故 $y$ 方向差是 $c-(-2)=c+2$。</span>
+      </div>
+      \[AC^{2}=(2c-9)^{2}+\left[c-(-2)\right]^{2}
+=(4c^{2}-36c+81)+(c^{2}+4c+4).\]
+\[BC^{2}=\left[2c-(-1)\right]^{2}+(c-8)^{2}
+=(4c^{2}+4c+1)+(c^{2}-16c+64).\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">令兩式相等</div>
+      <div class="rule">
+        <span class="rule-name">解方程</span>
+        <span class="rule-math">$5c^{2}-32c+85=5c^{2}-12c+65$</span>
+        <span class="rule-why">兩邊的 $c^{2}$ 項互相抵消，剩下一條一次方程。</span>
+      </div>
+      \[-32c+85=-12c+65
+\ \Longrightarrow\ -20c=-20
+\ \Longrightarrow\ c=1.\]
+所以 $C=(2,1)$，$x$ 坐標為 $2$，答案為 <b>B</b>。<br>
+捷徑：$AC=BC$ 表示 $C$ 在 $AB$ 的垂直平分線上；$AB$ 中點 $(4,3)$、斜率 $\dfrac{8-(-2)}{-1-9}=-1$，
+故垂直平分線為 $y-3=x-4$，即 $y=x+1$，與 $x=2y$ 解得 $C=(2,1)$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$2$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 點 $A$、$B$ 的坐標分別為 $(9,-2)$ 及 $(-1,8)$。若 $C$ 為直線 $x-2y=0$ 上的一點，使 $AC=BC$，則 $C$ 的 $y$ 坐標為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$1$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同上得 $C=(2,1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $y$ 坐標是 $1$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q25.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2016_P2_Q27.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

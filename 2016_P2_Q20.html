@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第20題 · 相似三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第20題</span>
+    <h1>三個正方形排成一行，先找相似比</h1>
+    <p class="sub">幾何 · 相似三角形 · 面積比</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$、$CDEF$ 及 $EFGH$ 均為正方形。$AG$ 分別與 $CD$、$EF$ 相交於 $P$、$Q$。求四邊形 $DEQP$ 的面積與四邊形 $ABCP$ 的面積之比。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1:2$</li><li><span class="ol">B</span>$2:3$</li><li><span class="ol">C</span>$3:5$</li><li><span class="ol">D</span>$4:9$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">三個正方形邊長相同</div>
+      <div class="rule">
+        <span class="rule-name">設定</span>
+        <span class="rule-math">$AB=BC=CF=FG$</span>
+        <span class="rule-why">三個正方形相鄰排列，所以底邊 $BG$ 被分成三等份。</span>
+      </div>
+      設每個正方形邊長為 $1$，則
+\[AB=1,\quad BC=1,\quad CF=1,\quad FG=1,\quad BG=3.\]
+因為 $AB\parallel PC\parallel QF$，三個三角形 $\triangle ABG$、$\triangle PCG$、$\triangle QFG$ 相似。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由相似比得各邊長</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形</span>
+        <span class="rule-math">$AB:PC:QF=BG:CG:FG=3:2:1$</span>
+        <span class="rule-why">對應邊成比例；$CG=2$、$FG=1$ 是直接由正方形邊長得知。</span>
+      </div>
+      \[\triangle ABG\sim\triangle PCG\sim\triangle QFG,\]
+\[AB:PC:QF=BG:CG:FG=3:2:1.\]
+由於 $AB=3$（＝三個邊長），得
+\[PC=2,\qquad QF=1.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用面積差求兩個四邊形</div>
+      <div class="rule">
+        <span class="rule-name">面積差</span>
+        <span class="rule-math">$FCPQ=PCG-QFG$，$ABCP=ABG-PCG$</span>
+        <span class="rule-why">四邊形的面積等於「大三角形減小三角形」。</span>
+      </div>
+      三個三角形面積（直角邊互相垂直）：
+\[[ABG]=\tfrac12(3)(3)=4.5,\quad[PCG]=\tfrac12(2)(2)=2,\quad[QFG]=\tfrac12(1)(1)=0.5.\]
+\[[FCPQ]=2-0.5=1.5,\qquad[ABCP]=4.5-2=2.5.\]
+又 $FCPQ$ 與 $DEQP$ 全等（向左平移一個正方形），故
+\[[DEQP]:[ABCP]=1.5:2.5=3:5.\]
+答案為 <b>C</b>。    <figure class="fig">
+      <svg viewBox="0 0 340 280" width="340" height="280" role="img" aria-label="三個相鄰正方形 ABCD、CDEF、EFGH，AG 交 CD 於 P、交 EF 於 Q">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="40" y="50" width="80" height="160"/>
+          <rect x="120" y="50" width="80" height="160"/>
+          <rect x="200" y="50" width="80" height="160"/>
+          <line x1="40" y1="50" x2="280" y2="210"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="30" y="44">A</text>
+          <text x="112" y="44">D</text>
+          <text x="192" y="44">E</text>
+          <text x="286" y="44">H</text>
+          <text x="28" y="226">B</text>
+          <text x="112" y="226">C</text>
+          <text x="192" y="226">F</text>
+          <text x="286" y="226">G</text>
+          <text x="126" y="112">P</text>
+          <text x="206" y="172">Q</text>
+        </g>
+      </svg>
+      <figcaption>三個正方形邊長相同，$AG$ 交 $CD$ 於 $P$、交 $EF$ 於 $Q$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$3:5$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABCD$、$CDEF$、$EFGH$ 為三個相鄰的正方形，$AG$ 交 $CD$ 於 $P$。則 $PC:AB=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1:2$</li><li><span class="ol">B</span>$2:3$</li><li><span class="ol">C</span>$3:4$</li><li><span class="ol">D</span>$3:5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\triangle ABG\sim\triangle PCG$，對應邊比 $=BG:CG=3:2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 故 $AB:PC=3:2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 即 $PC:AB=2:3$，答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$2:3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q19.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2016_P2_Q21.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

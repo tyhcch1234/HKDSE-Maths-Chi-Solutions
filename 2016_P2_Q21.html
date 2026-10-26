@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第21題 · 三角學應用</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第21題</span>
+    <h1>作兩條垂線，把 $AD$ 拆成兩段</h1>
+    <p class="sub">三角學 · 解直角三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$AD=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$AB\cos a+BC\cos c$</li><li><span class="ol">B</span>$AB\cos a+BC\sin c$</li><li><span class="ol">C</span>$AB\sin a+BC\cos c$</li><li><span class="ol">D</span>$AB\sin a+BC\sin c$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">作垂線</div>
+      <div class="rule">
+        <span class="rule-name">輔助線</span>
+        <span class="rule-math">由 $B$ 向 $AD$、$CD$ 作垂線，垂足為 $E$、$F$</span>
+        <span class="rule-why">把不規則的四邊形拆成兩個直角三角形與一個長方形。</span>
+      </div>
+      設 $E$、$F$ 分別為 $B$ 到 $AD$、$CD$ 的垂足。
+因為 $\angle EDF=\angle DEB=\angle DFB=90^{\circ}$，所以 $BEDF$ 是長方形，$ED=BF$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ABE$ 求 $AE$</div>
+      <div class="rule">
+        <span class="rule-name">餘弦</span>
+        <span class="rule-math">$AE=AB\cos a$</span>
+        <span class="rule-why">$\angle BAE=a$，$AB$ 是斜邊，$AE$ 是鄰邊。</span>
+      </div>
+      \[AE=AB\cos a.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle BCF$ 求 $BF$，再相加</div>
+      <div class="rule">
+        <span class="rule-name">正弦</span>
+        <span class="rule-math">$BF=BC\sin c$</span>
+        <span class="rule-why">$\angle BCF=c$，$BC$ 是斜邊，$BF$ 是 $c$ 的對邊。</span>
+      </div>
+      \[BF=BC\sin c.\]
+\[AD=AE+ED=AE+BF=AB\cos a+BC\sin c.\]
+答案為 <b>B</b>。<br>
+關鍵在於：$a$ 的對邊是「水平」方向，所以用 $\cos$ 取「垂直」分量；
+$c$ 的對邊才是「垂直」方向，所以用 $\sin$。    <figure class="fig">
+      <svg viewBox="0 0 340 270" width="340" height="270" role="img" aria-label="四邊形 ABCD，D 為直角，A 處角 a，C 處角 c">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M60 60 L240 130 L300 220 L60 220 Z"/>
+          <path d="M60 200 L80 200 L80 220" stroke-width="1.2"/>
+        </g>
+        <path d="M60 84 A24 24 0 0 1 74 76" fill="none" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M276 220 A24 24 0 0 1 288 202" fill="none" stroke="currentColor" stroke-width="1.1"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="50" y="52">A</text>
+          <text x="244" y="126">B</text>
+          <text x="306" y="234">C</text>
+          <text x="44" y="236">D</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="78" y="96">a</text>
+          <text x="262" y="212">c</text>
+        </g>
+      </svg>
+      <figcaption>$ngle D=90^{\circ}$，$ngle BAD=a$，$ngle BCD=c$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$AB\cos a+BC\sin c$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 同上圖，則 $CD=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$AB\sin a+BC\cos c$</li><li><span class="ol">B</span>$AB\cos a+BC\cos c$</li><li><span class="ol">C</span>$AB\sin a+BC\sin c$</li><li><span class="ol">D</span>$AB\cos a+BC\sin c$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $CD=CF+FD$，而 $FD=BE$。</div>
+          <div class="p-step"><b>第 2 步.</b> $BE=AB\sin a$，$CF=BC\cos c$。</div>
+          <div class="p-step"><b>第 3 步.</b> $CD=AB\sin a+BC\cos c$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$AB\sin a+BC\cos c$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2016_P2_Q20.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2016_P2_Q22.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
