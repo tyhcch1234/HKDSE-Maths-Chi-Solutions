@@ -25,7 +25,7 @@
     <div class="question">
       已知 $x$ 為實數。若把 $x$ 下捨入（rounded down）至 3 位有效數字，結果為 $345$，求 $x$ 的取值範圍。
     </div>
-    <ol class="opts"><li><span class="ol">A</span>$344<x\le 345$</li><li><span class="ol">B</span>$345\le x<346$</li><li><span class="ol">C</span>$345<x\le 345.5$</li><li><span class="ol">D</span>$344.5\le x<345.5$</li></ol>
+    <ol class="opts"><li><span class="ol">A</span>$344&lt;x\le 345$</li><li><span class="ol">B</span>$345\le x&lt;346$</li><li><span class="ol">C</span>$345&lt;x\le 345.5$</li><li><span class="ol">D</span>$344.5\le x&lt;345.5$</li></ol>
   </div>
 
   <div class="card">
@@ -59,7 +59,7 @@
         一旦到達 $346$，前三位有效數字已變成 $3$、$4$、$6$，不符合要求。
       </div>
       <p>所以 $x$ 必須<b>小於</b> $346$，但可以任意接近 $346$（例如 $345.999$）。</p>
-      <p>$$345\le x<346$$</p>
+      <p>$$345\le x&lt;346$$</p>
       <p>答案為 <b>B</b>。</p>
     </div>
 
@@ -70,25 +70,25 @@
         <span class="rule-name">兩者分別</span>
         四捨五入要考慮下一位數字；下捨入只看要保留的部分。
       </div>
-      <p>若是四捨五入至 3 位有效數字得 $345$，範圍會是 $344.5\le x<345.5$（選項 D）。題目寫明「下捨入」，所以 D 不正確。</p>
+      <p>若是四捨五入至 3 位有效數字得 $345$，範圍會是 $344.5\le x&lt;345.5$（選項 D）。題目寫明「下捨入」，所以 D 不正確。</p>
       <p>易錯：一見到「3 位有效數字」就直覺用 $\pm 0.5$ 的區間，忽略「down」這個字。</p>
     </div>
 
-    <div class="ans"><span class="lbl">答案</span><b>B</b>（$345\le x<346$）</div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$345\le x&lt;346$）</div>
   </div>
 
   <div class="practice">
     <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
     <div class="p-body">
       <div class="p-q"><b>題目.</b> 若把 $y$ 下捨入至 4 位有效數字，結果為 $3.142$，求 $y$ 的取值範圍。</div>
-      <ol class="opts p-opts"><li><span class="ol">A</span>$3.1415\le y<3.1425$</li><li><span class="ol">B</span>$3.142\le y<3.143$</li><li><span class="ol">C</span>$3.142<y\le 3.143$</li><li><span class="ol">D</span>$3.1415<y\le 3.1425$</li></ol>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3.1415\le y&lt;3.1425$</li><li><span class="ol">B</span>$3.142\le y&lt;3.143$</li><li><span class="ol">C</span>$3.142&lt;y\le 3.143$</li><li><span class="ol">D</span>$3.1415&lt;y\le 3.1425$</li></ol>
       <details>
         <summary>顯示題解</summary>
         <div class="p-sol">
           <div class="p-step"><b>第 1 步.</b> 下捨入至 4 位有效數字得 $3.142$，前三／四位有效數字須為 $3,1,4,2$。</div>
           <div class="p-step"><b>第 2 步.</b> 下界包括 $3.142$；上界為 $3.143$（不包括）。</div>
-          <div class="p-step"><b>第 3 步.</b> 故 $3.142\le y<3.143$。</div>
-          <div class="p-ans">答案：<b>B</b>（$3.142\le y<3.143$）</div>
+          <div class="p-step"><b>第 3 步.</b> 故 $3.142\le y&lt;3.143$。</div>
+          <div class="p-ans">答案：<b>B</b>（$3.142\le y&lt;3.143$）</div>
         </div>
       </details>
     </div>
