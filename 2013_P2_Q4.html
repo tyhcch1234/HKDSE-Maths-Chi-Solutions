@@ -52,7 +52,7 @@ $0.0504545=\ ?$
       <div class="step-title">先檢查 A、B：下一位是 4，要捨去</div>
       <div class="rule">
         <span class="rule-name">四捨五入的判斷</span>
-        <span class="rule-math">\(d<5\Rightarrow\text{round down},\qquad d\geq 5\Rightarrow\text{round up}\)</span>
+        <span class="rule-math">\(d&lt;5\Rightarrow\text{round down},\qquad d\geq 5\Rightarrow\text{round up}\)</span>
         <span class="rule-why">判斷進位只看「保留部分的下一位」，與再後面的數字無關。</span>
       </div>
       A 聲稱 2 個有效數字：保留 $5,0$，下一位是 $4$，<br>故結果為 $0.050$，不是 $0.051$，A 錯。<br>
@@ -86,7 +86,7 @@ D 聲稱 5 個小數位：保留 $0.05045$，第 6 位小數是 $4$（不是 $5$
         <div class="p-sol">
           <div class="p-step"><b>第 1 步.</b> 第一個非零數字是 $6$（小數點後第 2 位），首三個有效數字為 $6,2,4$。</div>
           <div class="p-step"><b>第 2 步.</b> 下一位是 $8\geq 5$，要進位，故 (a) $=0.0625$。</div>
-          <div class="p-step"><b>第 3 步.</b> 2 個小數位保留 $0.06$，第 3 位小數是 $2<5$，<br>故 (b) $=0.06$，答案 <b>A</b>。</div>
+          <div class="p-step"><b>第 3 步.</b> 2 個小數位保留 $0.06$，第 3 位小數是 $2&lt;5$，<br>故 (b) $=0.06$，答案 <b>A</b>。</div>
           <div class="p-ans">答案：<b>A</b>（(a) $0.0625$；<br>(b) $0.06$）</div>
         </div>
       </details>

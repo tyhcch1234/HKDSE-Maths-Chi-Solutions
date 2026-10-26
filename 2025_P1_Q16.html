@@ -21,7 +21,7 @@
   <div class="card">
     <h2>題目</h2>
     <div class="question">
-      已知 $\log_3 x+\log_3 y=9$ 及 $\log_x 81-\log_y 9=1$，其中 $0<x<y$。<br>
+      已知 $\log_3 x+\log_3 y=9$ 及 $\log_x 81-\log_y 9=1$，其中 $0&lt;x&lt;y$。<br>
       (a) 設 $u=\log_3 y$，證明 $u^2-3u-18=0$。<span class="marks">[2 分]</span><br>
       (b) 求 $x$。<span class="marks">[2 分]</span>
     </div>
@@ -70,16 +70,16 @@
 
     <div class="step">
       <span class="step-tag">第 4 步</span>
-      <div class="step-title">(b) 用 $0<x<y$ 篩走 $u=-3$，再取冪</div>
+      <div class="step-title">(b) 用 $0&lt;x&lt;y$ 篩走 $u=-3$，再取冪</div>
       <div class="rule">
         <span class="rule-name">對數函數的單調性</span>
-        <span class="rule-math">$0<x<y\ \Rightarrow\ \log_3 x<\log_3 y$</span>
-        <span class="rule-why">底 $3>1$，$\log_3$ 是嚴格遞增函數，故 $x<y$ 等價於 $\log_3 x<\log_3 y$，即 $9-u<u$。</span>
+        <span class="rule-math">$0&lt;x&lt;y\ \Rightarrow\ \log_3 x&lt;\log_3 y$</span>
+        <span class="rule-why">底 $3>1$，$\log_3$ 是嚴格遞增函數，故 $x&lt;y$ 等價於 $\log_3 x&lt;\log_3 y$，即 $9-u&lt;u$。</span>
       </div>
-      <p>由 $9-u<u$ 得 $u>4.5$，所以 $u=-3$ 不合，只能取 $u=6$。</p>
+      <p>由 $9-u&lt;u$ 得 $u>4.5$，所以 $u=-3$ 不合，只能取 $u=6$。</p>
       <p>$$u=6:\ \log_3 y=6\Rightarrow y=3^6=729;\qquad \log_3 x=9-6=3\Rightarrow x=3^3=27$$</p>
-      <p>驗算：$\log_{27}81=\dfrac{4}{3}$，$\log_{729}9=\dfrac{2}{6}=\dfrac{1}{3}$，相減得 $1$ ✓；且 $27<729$ ✓。</p>
-      <p>常見錯誤：只寫 $u=6$ 或 $-3$ 而不說明為何捨去負值；或把 $u=-3$ 代回得 $y=3^{-3}=\dfrac{1}{27}$，卻忘了此時 $x=3^{12}>y$，違反 $0<x<y$。</p>
+      <p>驗算：$\log_{27}81=\dfrac{4}{3}$，$\log_{729}9=\dfrac{2}{6}=\dfrac{1}{3}$，相減得 $1$ ✓；且 $27&lt;729$ ✓。</p>
+      <p>常見錯誤：只寫 $u=6$ 或 $-3$ 而不說明為何捨去負值；或把 $u=-3$ 代回得 $y=3^{-3}=\dfrac{1}{27}$，卻忘了此時 $x=3^{12}>y$，違反 $0&lt;x&lt;y$。</p>
     </div>
     <div class="ans"><span class="lbl">答案</span>(a) 已證 $u^2-3u-18=0$（$(u-6)(u+3)=0$）　(b) $x=27$（此時 $y=729$）</div>
   </div>
@@ -87,13 +87,13 @@
   <div class="practice">
     <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
     <div class="p-body">
-      <div class="p-q"><b>題目.</b> 已知 $\log_2 x+\log_2 y=12$ 及 $\log_x 32-\log_y 4=1$，其中 $0<x<y$。(a) 設 $u=\log_2 y$，證明 $u^2-5u-24=0$；(b) 求 $x$。</div>
+      <div class="p-q"><b>題目.</b> 已知 $\log_2 x+\log_2 y=12$ 及 $\log_x 32-\log_y 4=1$，其中 $0&lt;x&lt;y$。(a) 設 $u=\log_2 y$，證明 $u^2-5u-24=0$；(b) 求 $x$。</div>
       <details>
         <summary>顯示題解</summary>
         <div class="p-sol">
           <div class="p-step"><b>第 1 步.</b> $\log_2 x=12-u$，故 $\log_x 32=\dfrac{5}{12-u}$、$\log_y 4=\dfrac{2}{u}$。</div>
           <div class="p-step"><b>第 2 步.</b> $\dfrac{5}{12-u}-\dfrac{2}{u}=1\Rightarrow 5u-2(12-u)=u(12-u)\Rightarrow u^2-5u-24=0$。</div>
-          <div class="p-step"><b>第 3 步.</b> $(u-8)(u+3)=0$，$u=8$ 或 $-3$；由 $0<x<y$ 得 $u>6$，故 $u=8$。</div>
+          <div class="p-step"><b>第 3 步.</b> $(u-8)(u+3)=0$，$u=8$ 或 $-3$；由 $0&lt;x&lt;y$ 得 $u>6$，故 $u=8$。</div>
           <div class="p-step"><b>第 4 步.</b> $\log_2 y=8\Rightarrow y=256$，$\log_2 x=4\Rightarrow x=16$；驗算 $\dfrac{5}{4}-\dfrac{2}{8}=1$ ✓。</div>
           <div class="p-ans">答案：(a) 已證；(b) $x=16$（$y=256$）</div>
         </div>

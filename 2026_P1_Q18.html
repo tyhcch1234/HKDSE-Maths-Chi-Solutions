@@ -27,7 +27,7 @@
       <br>(a) 求 $G(1)$。
       <br>(b) 對所有正整數 $n$，定義 $T(n)=\log_2 G(n)$。求
       <br>　(i) $T(n+1)-T(n)$；
-      <br>　(ii) 使 $T(1)+T(2)+\cdots+T(k)<10^6$ 的最大 $k$ 值。
+      <br>　(ii) 使 $T(1)+T(2)+\cdots+T(k)&lt;10^6$ 的最大 $k$ 值。
       <span class="marks">（7 分）</span>
     </div>
   </div>
@@ -73,12 +73,12 @@
 
     <div class="step">
       <span class="step-tag">第 4 步</span>
-      <div class="step-title">(b)(ii) 解 $S(k)<10^6$</div>
+      <div class="step-title">(b)(ii) 解 $S(k)&lt;10^6$</div>
       <p>取 $\log_2 3\approx1.58496$：</p>
-      <p>$$k^2+0.58496\,k<10^6$$</p>
+      <p>$$k^2+0.58496\,k&lt;10^6$$</p>
       <p>左邊隨 $k$ 遞增，在 $k\approx1000$ 附近測試：</p>
       <p>$$k=1000:\ 10^6+584.96=1000584.96>10^6\ \text{（不合）}$$</p>
-      <p>$$k=999:\ 999^2+0.58496\times999=998001+584.38=998585.38<10^6\ \text{（合）}$$</p>
+      <p>$$k=999:\ 999^2+0.58496\times999=998001+584.38=998585.38&lt;10^6\ \text{（合）}$$</p>
       <p>$$\therefore\ k_{\max}=999$$</p>
     </div>
 
@@ -95,7 +95,7 @@
           <div class="p-step"><b>第 1 步.</b> $r^{3}=\dfrac{162}{6}=27$，故 $r=3$。</div>
           <div class="p-step"><b>第 2 步.</b> $G(1)=\dfrac{6}{3}=2$，故 $G(n)=2\cdot3^{\,n-1}$。</div>
           <div class="p-step"><b>第 3 步.</b> $T(n)=\log_{3}2+(n-1)$，故 $T(n+1)-T(n)=1$，為公差 $1$ 的等差數列。</div>
-          <div class="p-step"><b>第 4 步.</b> $S(k)=k\log_{3}2+\dfrac{k(k-1)}{2}$；$k=14$ 時 $S\approx99.8<100$，$k=15$ 時 $S\approx114.5>100$。</div>
+          <div class="p-step"><b>第 4 步.</b> $S(k)=k\log_{3}2+\dfrac{k(k-1)}{2}$；$k=14$ 時 $S\approx99.8&lt;100$，$k=15$ 時 $S\approx114.5>100$。</div>
           <div class="p-step"><b>第 5 步.</b> 故最小 $k=15$。</div>
           <div class="p-ans">答案：(a) $G(1)=2$　(b) 公差 $1$　(c) $k=15$</div>
         </div>
