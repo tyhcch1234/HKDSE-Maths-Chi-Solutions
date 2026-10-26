@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第7題 · 「或」的複合不等式：取兩段的聯集</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第7題</span>
+    <h1>「或」的複合不等式：取兩段的聯集</h1>
+    <p class="sub">不等式 · 複合不等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+滿足複合不等式 $-2(x-5)+5<21$ 或 $\dfrac{3x-5}{7}>1$ 的最小整數是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-3$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$5$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先解第一條不等式</div>
+<p>$$-2(x-5)+5<21\quad\Longrightarrow\quad -2x+10+5<21$$</p>
+<p>$$-2x<6\quad\Longrightarrow\quad x>-3$$</p>
+<p>除以負數時不等號要反轉。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">再解第二條不等式</div>
+<p>$$\frac{3x-5}{7}>1\quad\Longrightarrow\quad 3x-5>7\quad\Longrightarrow\quad x>4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">「或」代表取聯集</div>
+      <div class="rule"><span class="rule-name">聯集</span>$x>-3$ 或 $x>4$：只要符合其中一條即可，$x>4$ 的整數已包含在 $x>-3$ 之內。</div>
+<p>兩段合起來仍是 $x>-3$（因為 $x>4$ 是 $x>-3$ 的一部分）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">找最小整數</div>
+      <div class="rule"><span class="rule-name">小心邊界</span>$-3$ 本身不符合 $x>-3$（嚴格不等），下一個整數才是答案。</div>
+<p>大於 $-3$ 的最小整數是 $-2$。</p>
+<p>易錯：把 $-3$ 當成答案，忘了不等號是「$>$」而不是「$\ge$」。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$-2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 滿足複合不等式 $-3(x-1)+4<19$ 或 $\dfrac{2x-1}{5}>3$ 的最小整數是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-3$</li><li><span class="ol">B</span>$-4$</li><li><span class="ol">C</span>$8$</li><li><span class="ol">D</span>$9$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條：$-3x+3+4<19\Rightarrow-3x<12\Rightarrow x>-4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$2x-1>15\Rightarrow x>8$。</div>
+          <div class="p-step"><b>第 3 步.</b> 「或」取聯集：$x>-4$。最小整數為 $-3$。</div>
+          <div class="p-ans">答案：<b>A</b>（$-3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

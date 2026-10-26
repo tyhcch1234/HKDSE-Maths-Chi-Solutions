@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第30題 · 統計</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第30題</span>
+    <h1>先數清總人數，再逐個位置對號入座</h1>
+    <p class="sub">統計 · 頻數分佈表、中位數與四分位數</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      <p>下表顯示某年部分學生獲得優點數目的分佈。</p>
+      <table class="dtable" style="margin:10px auto;">
+        <tr><th>獲得的優點數目</th><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><th>學生人數</th><td>32</td><td>36</td><td>28</td><td>18</td><td>2</td></tr>
+      </table>
+      <p>下列何者正確？</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>該分佈的眾數是 36。</li><li><span class="ol">B</span>該分佈的中位數是 8。</li><li><span class="ol">C</span>該分佈的下四分位數是 6。</li><li><span class="ol">D</span>該分佈的上四分位數是 10。</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">加起所有頻數，求總人數</div>
+      <p>$$N=32+36+28+18+2=\mathbf{116}$$</p>
+      <p>同時寫出累積頻數，之後找中位數與四分位數的位置就靠它。</p>
+      <table class="dtable" style="margin:10px auto;">
+        <tr><th>優點數目</th><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><th>累積人數</th><td>32</td><td>68</td><td>96</td><td>114</td><td>116</td></tr>
+      </table>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 A：眾數是數據值，不是頻數</div>
+      <div class="rule">
+        <span class="rule-name">眾數</span>
+        <span class="rule-math">\(\text{眾數}=\text{頻數最大的那個數據值}\)</span>
+        <span class="rule-why">頻數只負責指出「哪一個數據值最多人」，眾數本身是數據值 $7$，不是 $36$。</span>
+      </div>
+      <p>最大頻數是 $36$，對應的優點數目是 $7$，所以眾數是 $7$。選項 A 錯。</p>
+      <p>易錯：把 $36$（人數）直接當成眾數，是這一題最常見的失分位。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用累積頻數定中位數的位置</div>
+      <div class="rule">
+        <span class="rule-name">偶數個數據的中位數</span>
+        <span class="rule-math">\(N=116\ \Longrightarrow\ \text{中位數}=\dfrac{x_{58}+x_{59}}{2}\)</span>
+        <span class="rule-why">$N$ 是偶數，中位數是第 $58$ 與第 $59$ 個數據的平均；用累積頻數看這兩個位置落在哪一組。</span>
+      </div>
+      <p>首 $32$ 人得 $6$ 個優點（第 $1$ 至 $32$ 位），接下來 $36$ 人得 $7$ 個（第 $33$ 至 $68$ 位）。</p>
+      <p>第 $58$ 與第 $59$ 位都落在「$7$ 個優點」這一組，所以</p>
+      <p>$$\text{中位數}=\frac{7+7}{2}=\mathbf{7}$$</p>
+      <p>選項 B（中位數是 $8$）錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查 C：下四分位數在第 $\tfrac{N}{4}$ 個位置</div>
+      <div class="rule">
+        <span class="rule-name">四分位數的位置</span>
+        <span class="rule-math">\(Q_{1}:\ \dfrac{N}{4}=29,\ 30\qquad Q_{3}:\ \dfrac{3N}{4}=87,\ 88\)</span>
+        <span class="rule-why">下四分位數取第 $29$ 與第 $30$ 個數據的平均，上四分位數取第 $87$ 與第 $88$ 個數據的平均。</span>
+      </div>
+      <p>第 $29$ 與第 $30$ 位都在首 $32$ 位之內，兩者都是 $6$，所以</p>
+      <p>$$Q_{1}=\frac{6+6}{2}=\mathbf{6}$$</p>
+      <p>選項 C 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">檢查 D：上四分位數的位置</div>
+      <p>累積至 $7$ 個優點有 $68$ 人，累積至 $8$ 個有 $96$ 人，所以第 $87$ 與第 $88$ 位都落在「$8$ 個優點」這一組。</p>
+      <p>$$Q_{3}=\frac{8+8}{2}=\mathbf{8}$$</p>
+      <p>選項 D（上四分位數是 $10$）錯；$10$ 只是最大值。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">對照選項</div>
+      <p>眾數 $7$、中位數 $7$、$Q_{1}=6$、$Q_{3}=8$，只有 C 正確。</p>
+      <p>易錯：計四分位數時忘記「取兩個位置的平均」，直接把第 $29$ 位或第 $87$ 位當答案；由於同一組內的數據值相同，這一題剛好不影響結果，但換一組數據就會出錯。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（下四分位數是 6）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下表顯示 $100$ 名學生獲得優點數目的分佈。
+        <table class="dtable" style="margin:8px auto;">
+          <tr><th>優點數目</th><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+          <tr><th>學生人數</th><td>24</td><td>30</td><td>26</td><td>14</td><td>6</td></tr>
+        </table>
+        下列何者正確？<br>A. 該分佈的眾數是 30。<br>B. 該分佈的中位數是 6。<br>C. 該分佈的下四分位數是 5。<br>D. 該分佈的上四分位數是 8。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 累積人數：$24,\ 54,\ 80,\ 94,\ 100$，總人數 $N=100$。</div>
+          <div class="p-step"><b>第 2 步.</b> A：最大頻數 $30$ 對應 $6$ 個優點，眾數是 $6$，不是 $30$，A 錯。</div>
+          <div class="p-step"><b>第 3 步.</b> B：中位數取第 $50$、$51$ 位；累積至 $5$ 個只有 $24$ 人，至 $6$ 個有 $54$ 人，兩位都是 $6$，中位數 $=6$，B 對。</div>
+          <div class="p-step"><b>第 4 步.</b> C：$\tfrac{100}{4}=25$，第 $25$、$26$ 位都是 $6$，故 $Q_{1}=6$，C 錯。</div>
+          <div class="p-step"><b>第 5 步.</b> D：$\tfrac{3\times100}{4}=75$，第 $75$、$76$ 位落在「$7$ 個優點」（第 $55$ 至 $80$ 位），故 $Q_{3}=7$，D 錯。</div>
+          <div class="p-ans">答案：B（中位數是 6）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q29.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q31.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

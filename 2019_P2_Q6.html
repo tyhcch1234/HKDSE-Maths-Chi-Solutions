@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第6題 · 看清「幾位小數」與「幾位有效數字」</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第6題</span>
+    <h1>看清「幾位小數」與「幾位有效數字」</h1>
+    <p class="sub">數值與誤差 · 有效數字</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $0.06557<x<0.06564$，下列哪項正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x=0.065$（準確至 2 位小數）</li><li><span class="ol">B</span>$x=0.065$（準確至 2 位有效數字）</li><li><span class="ol">C</span>$x=0.0656$（準確至 3 位小數）</li><li><span class="ol">D</span>$x=0.0656$（準確至 3 位有效數字）</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數清楚 $x$ 的範圍在哪一位</div>
+<p>$$0.06557<x<0.06564$$</p>
+<p>小數點後第 4 位是 $5$ 或 $6$，即 $x$ 大約是 $0.0656$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分辨「小數位」與「有效數字」</div>
+      <div class="rule"><span class="rule-name">有效數字</span>由第一個非零數字開始數。$0.0656$ 的前導兩個 $0$ 不算，有效數字是 $6,\,5,\,6$ 共 3 位。</div>
+<p>$0.0656$ 的第一個非零數字是百分位（小數點後第 2 位）的 $6$，之後 $5$、$6$ 依次是第 2、3 位有效數字。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 A、B：2 位小數／2 位有效數字</div>
+<p>2 位小數：看第 3 位小數 $5$，要進位，得 $0.07$，不是 $0.065$。</p>
+<p>2 位有效數字：$0.066$，也不是 $0.065$。所以 A、B 都錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查 C：3 位小數</div>
+<p>3 位小數：看第 4 位小數（$5$ 或 $6$），要進位，得 $0.066$，不是 $0.0656$。C 錯。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">確認 D</div>
+<p>$x$ 在 $0.06557$ 與 $0.06564$ 之間，取 3 位有效數字均為 $0.0656$，所以 D 正確。</p>
+<p>易錯：把「3 位小數」與「3 位有效數字」混為一談。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$x=0.0656$，準確至 3 位有效數字）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $0.0034517<x<0.0034592$，下列哪項正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x=0.0035$（準確至 2 位有效數字）</li><li><span class="ol">B</span>$x=0.003$（準確至 2 位有效數字）</li><li><span class="ol">C</span>$x=0.00346$（準確至 3 位小數）</li><li><span class="ol">D</span>$x=0.0035$（準確至 3 位小數）</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x\approx0.00345$ 至 $0.00346$，第一個非零數字在小數點後第 3 位（$3$）。</div>
+          <div class="p-step"><b>第 2 步.</b> 2 位有效數字：$0.0035$（第 3 位是 $4$，後面是 $5$，進位），故 A 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 3 位小數會得 $0.003$，C、D 都不符。</div>
+          <div class="p-ans">答案：<b>A</b>（$x=0.0035$，準確至 2 位有效數字）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

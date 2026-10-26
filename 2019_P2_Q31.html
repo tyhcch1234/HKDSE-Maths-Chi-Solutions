@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第31題 · 留意縱軸是 $\log_{9}y$，不是 $\log_{3}y$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第31題</span>
+    <h1>留意縱軸是 $\log_{9}y$，不是 $\log_{3}y$</h1>
+    <p class="sub">對數 · 對數圖像與對數律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $\log_{9}y$ 是 $\log_{3}x$ 的線性函數。該線性函數圖像的縱軸截距及橫軸截距分別為 $7$ 及 $8$。下列哪項必定正確？
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$x^{4}y^{7}=3^{56}$</li><li><span class="ol">B</span>$x^{7}y^{4}=3^{56}$</li><li><span class="ol">C</span>$x^{7}y^{8}=3^{56}$</li><li><span class="ol">D</span>$x^{8}y^{7}=3^{56}$</li></ol>
+    <figure class="fig"><svg viewBox="0 0 300 240" width="300" height="240" role="img" aria-label="log9 y 對 log3 x 的直線圖像，縱軸截距 7、橫軸截距 8">
+        <g fill="none" stroke="currentColor" stroke-width="1.3">
+          <line x1="45" y1="200" x2="275" y2="200"/>
+          <line x1="45" y1="200" x2="45" y2="35"/>
+          <line x1="45" y1="75" x2="225" y2="200"/>
+        </g>
+        <g fill="currentColor" font-size="12" font-family="Georgia,serif">
+          <text x="40" y="60" text-anchor="end">7</text>
+          <text x="225" y="216" text-anchor="middle">8</text>
+          <text x="270" y="216" text-anchor="middle">log₃x</text>
+          <text x="52" y="32">log₉y</text>
+          <text x="80" y="120" font-style="italic">斜率 = −7/8</text>
+        </g>
+        <circle cx="45" cy="75" r="2.6" fill="currentColor"/>
+        <circle cx="225" cy="200" r="2.6" fill="currentColor"/>
+      </svg><figcaption>圖：直線過 $(0,\,7)$ 與 $(8,\,0)$；橫軸 $\log_{3}x$、縱軸 $\log_{9}y$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出直線方程</div>
+      <div class="rule"><span class="rule-name">兩點式</span>縱軸截距 $7$ 即點 $(0,7)$；橫軸截距 $8$ 即點 $(8,0)$。</div>
+<p>設 $X=\log_{3}x$、$Y=\log_{9}y$，則</p>
+<p>$$Y=-\frac{7}{8}X+7$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 $Y$ 換成以 3 為底</div>
+      <div class="rule"><span class="rule-name">換底</span>$\log_{9}y=\dfrac{\log_{3}y}{\log_{3}9}=\dfrac{\log_{3}y}{2}$。</div>
+<p>$$\frac{\log_{3}y}{2}=-\frac{7}{8}\log_{3}x+7$$</p>
+<p>易錯：題目的縱軸是 $\log_{9}y$，若當成 $\log_{3}y$，最後會多出一個 $y$ 的次方（誤選 C）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">乘 2 清分母，再把含對數的項排好</div>
+<p>$$\log_{3}y=-\frac{7}{4}\log_{3}x+14$$</p>
+<p>乘 4 並移項：</p>
+<p>$$7\log_{3}x+4\log_{3}y=56$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用對數律合併、還原成指數式</div>
+      <div class="rule"><span class="rule-name">對數律</span>$k\log_{3}a=\log_{3}a^{k}$，$\log_{3}A+\log_{3}B=\log_{3}(AB)$，$\log_{3}A=k\iff A=3^{k}$。</div>
+<p>$$\log_{3}x^{7}+\log_{3}y^{4}=56\;\Longrightarrow\;\log_{3}(x^{7}y^{4})=56$$</p>
+<p>$$x^{7}y^{4}=3^{56}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">對照選項</div>
+<p>即選項 B。$x$ 的次方是 $7$（縱軸截距）、$y$ 的次方是 $4$（由除以 2 換底而來），與直覺相反。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$x^{7}y^{4}=3^{56}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $\log_{4}y$ 是 $\log_{2}x$ 的線性函數，其縱軸截距及橫軸截距分別為 $6$ 及 $4$。下列哪項必定正確？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$x^{3}y=2^{12}$</li><li><span class="ol">B</span>$x^{6}y^{4}=2^{12}$</li><li><span class="ol">C</span>$x^{3}y^{2}=2^{12}$</li><li><span class="ol">D</span>$x^{2}y^{3}=2^{12}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $X=\log_{2}x$、$Y=\log_{4}y$：$Y=-\dfrac{6}{4}X+6=-\dfrac{3}{2}X+6$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\log_{4}y=\dfrac{\log_{2}y}{2}$，故 $\log_{2}y=-3\log_{2}x+12$。</div>
+          <div class="p-step"><b>第 3 步.</b> $3\log_{2}x+\log_{2}y=12\Rightarrow x^{3}y=2^{12}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$x^{3}y=2^{12}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q30.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q32.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

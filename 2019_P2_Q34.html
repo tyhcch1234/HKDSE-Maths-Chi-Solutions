@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第34題 · 先化 $i$ 的次方，再做分母實數化</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第34題</span>
+    <h1>先化 $i$ 的次方，再做分母實數化</h1>
+    <p class="sub">複數 · 實部與共軛</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $a$ 為實數，則 $\dfrac{4+i^{5}}{a+i}-i^{6}$ 的實部是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{4a+1}{a^{2}-1}$</li><li><span class="ol">B</span>$\dfrac{4a+1}{a^{2}+1}$</li><li><span class="ol">C</span>$\dfrac{a^{2}+4a+2}{a^{2}-1}$</li><li><span class="ol">D</span>$\dfrac{a^{2}+4a+2}{a^{2}+1}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">化簡 $i$ 的次方</div>
+      <div class="rule"><span class="rule-name">$i$ 的週期</span>$i^{2}=-1$，故 $i^{4}=1$，$i^{5}=i$，$i^{6}=-1$。</div>
+<p>$$\frac{4+i^{5}}{a+i}-i^{6}=\frac{4+i}{a+i}+1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分子分母同乘分母的共軛</div>
+      <div class="rule"><span class="rule-name">實數化</span>$\dfrac{1}{a+i}=\dfrac{a-i}{(a+i)(a-i)}=\dfrac{a-i}{a^{2}+1}$。</div>
+<p>$$\frac{(4+i)(a-i)}{(a+i)(a-i)}=\frac{4a-4i+ai-i^{2}}{a^{2}+1}=\frac{4a+1+(a-4)i}{a^{2}+1}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $+1$ 也寫成分母 $a^{2}+1$</div>
+<p>$$1=\frac{a^{2}+1}{a^{2}+1}$$</p>
+<p>$$\frac{4a+1+(a-4)i+a^{2}+1}{a^{2}+1}=\frac{a^{2}+4a+2+(a-4)i}{a^{2}+1}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">只取實部</div>
+<p>實部 $=\dfrac{a^{2}+4a+2}{a^{2}+1}$，即選項 D。</p>
+<p>易錯：$-\,i^{6}$ 等於 $+1$，不是 $-1$；若把它當成 $-1$，分子會少了 $a^{2}+1$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{a^{2}+4a+2}{a^{2}+1}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $a$ 為實數，則 $\dfrac{3+i^{7}}{a+i}-i^{4}$ 的實部是</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{3a-1}{a^{2}+1}$</li><li><span class="ol">B</span>$\dfrac{-a^{2}+3a-2}{a^{2}+1}$</li><li><span class="ol">C</span>$\dfrac{a^{2}+3a-2}{a^{2}+1}$</li><li><span class="ol">D</span>$\dfrac{3a-1}{a^{2}-1}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $i^{7}=-i$，$i^{4}=1$，故原式 $=\dfrac{3-i}{a+i}-1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{(3-i)(a-i)}{a^{2}+1}=\dfrac{3a-1-(3+a)i}{a^{2}+1}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 減 $1=\dfrac{a^{2}+1}{a^{2}+1}$：實部 $=\dfrac{3a-1-a^{2}-1}{a^{2}+1}=\dfrac{-a^{2}+3a-2}{a^{2}+1}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$\dfrac{-a^{2}+3a-2}{a^{2}+1}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第3題 · 兩邊都等於 40，先寫成相等再消 $x$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第3題</span>
+    <h1>兩邊都等於 40，先寫成相等再消 $x$</h1>
+    <p class="sub">方程 · 聯立方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $6x-7y=40=2x+11y$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-4$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$9$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把連等式拆成兩條方程</div>
+<p>$6x-7y=40$ 與 $2x+11y=40$ 同時成立。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩式相減，消去常數項</div>
+      <div class="rule"><span class="rule-name">加減消元</span>兩式左邊相減、右邊 $40-40=0$，可先消去 $x$ 或 $y$。</div>
+<p>$$(6x-7y)-(2x+11y)=0$$</p>
+<p>$$4x-18y=0\quad\Longrightarrow\quad x=\frac{9}{2}y$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代回其中一條方程</div>
+<p>代入 $2x+11y=40$：</p>
+<p>$$2\left(\frac{9}{2}y\right)+11y=40\quad\Longrightarrow\quad 9y+11y=40$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解出 $y$ 並核對</div>
+<p>$$20y=40\quad\Longrightarrow\quad y=2$$</p>
+<p>此時 $x=9$，代回 $6(9)-7(2)=54-14=40$，吻合。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$y=2$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $5x-2y=26=3x+4y$，則 $y=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $5x-2y=3x+4y$ 得 $2x=6y$，即 $x=3y$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代回 $3x+4y=26$：$9y+4y=26$。</div>
+          <div class="p-step"><b>第 3 步.</b> $13y=26$，故 $y=2$（此時 $x=6$）。</div>
+          <div class="p-ans">答案：<b>B</b>（$y=2$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第39題 · 圓形幾何</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第39題</span>
+    <h1>切線弦角把 $38^{\circ}$ 搬到 $B$，再與 $22^{\circ}$ 拼成 $\angle ABD$</h1>
+    <p class="sub">圓形性質 · 切線與圓內接四邊形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$TA$ 是圓 $ABCDE$ 於點 $A$ 的切線。若 $\angle BAD=64^{\circ}$、$\angle EAT=38^{\circ}$ 及 $\angle DCE=22^{\circ}$，則 $\angle ADB=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>\(52^{\circ}\)</li><li><span class="ol">B</span>\(56^{\circ}\)</li><li><span class="ol">C</span>\(60^{\circ}\)</li><li><span class="ol">D</span>\(68^{\circ}\)</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 360 290" width="360" height="290" role="img" aria-label="圓 ABCDE，A 點的切線 AT，弦 AB、AD、AE、BE、BD、DE、DC">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="180" cy="150" r="95"/>
+          <line x1="70" y1="211" x2="160" y2="243"/>
+          <line x1="147" y1="239" x2="255" y2="209"/>
+          <line x1="147" y1="239" x2="180" y2="55"/>
+          <line x1="147" y1="239" x2="107" y2="89"/>
+          <line x1="255" y1="209" x2="107" y2="89"/>
+          <line x1="255" y1="209" x2="180" y2="55"/>
+          <line x1="180" y1="55" x2="107" y2="89"/>
+          <line x1="180" y1="55" x2="269" y2="118"/>
+          <line x1="107" y1="89" x2="269" y2="118"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="180" cy="150" r="2.5"/>
+          <circle cx="147" cy="239" r="3"/>
+          <circle cx="255" cy="209" r="3"/>
+          <circle cx="269" cy="118" r="3"/>
+          <circle cx="180" cy="55" r="3"/>
+          <circle cx="107" cy="89" r="3"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="14">
+          <text x="136" y="259">A</text>
+          <text x="262" y="221">B</text>
+          <text x="280" y="112">C</text>
+          <text x="176" y="42">D</text>
+          <text x="90" y="80">E</text>
+          <text x="72" y="203">T</text>
+          <text x="184" y="166">O</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,'Times New Roman',serif" font-size="12">
+          <text x="108" y="205">38°</text>
+          <text x="170" y="215">64°</text>
+          <text x="230" y="102">22°</text>
+        </g>
+      </svg>
+      <figcaption>圖（示意，未按比例）：$TA$ 為切線，$E$ 在 $\angle ABD$ 之內</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用切線弦角，把 $38^{\circ}$ 搬到 $\angle ABE$</div>
+      <div class="rule">
+        <span class="rule-name">切線弦角（內錯弓形角）</span>
+        <span class="rule-math">\(\angle(\text{切線},\text{弦})=\text{該弦另一弓形內的圓周角}\)</span>
+        <span class="rule-why">$TA$ 在 $A$ 點切圓，$AB$ 是弦，兩者的夾角等於弦 $AB$ 在另一弓形所對的圓周角，即 $\angle ABE$。</span>
+      </div>
+      <p>$$\angle ABE=\angle EAT=38^{\circ}\quad(\text{切線弦角})$$</p>
+      <p>易錯：切線弦角所對的是「$A$ 對面的那一邊」的圓周角，所以配的是 $\angle ABE$ 而不是 $\angle ADE$ 或 $\angle ABD$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用同弓形內的圓周角，得 $\angle DBE$</div>
+      <div class="rule">
+        <span class="rule-name">同弓形內的圓周角</span>
+        <span class="rule-math">\(\angle DBE=\angle DCE\)</span>
+        <span class="rule-why">兩個角同以弦 $DE$ 為底，並且在 $DE$ 的同一側，所以相等。</span>
+      </div>
+      <p>$$\angle DBE=\angle DCE=22^{\circ}\quad(\text{同弓形內的圓周角})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把 $\angle ABD$ 拆成兩份相加</div>
+      <p>已知 $E$ 在 $\angle ABD$ 之內，即射線 $BE$ 夾在 $BA$ 與 $BD$ 之間，所以</p>
+      <p>$$\angle ABD=\angle ABE+\angle DBE=38^{\circ}+22^{\circ}=60^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在 $\triangle ABD$ 用內角和求 $\angle ADB$</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        <span class="rule-math">\(\angle A+\angle B+\angle C=180^{\circ}\)</span>
+        <span class="rule-why">$\triangle ABD$ 中 $\angle BAD=64^{\circ}$、$\angle ABD=60^{\circ}$ 已齊，第三隻角直接由 $180^{\circ}$ 減出。</span>
+      </div>
+      <p>$$\angle ADB=180^{\circ}-64^{\circ}-60^{\circ}=56^{\circ}$$</p>
+      <p>即選項 <b>B</b>。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">核對選項，排除常見誤答</div>
+      <p>$64^{\circ}+60^{\circ}=124^{\circ}$，所以 $\angle ADB=56^{\circ}$，與 B 相同。</p>
+      <p>易錯：選項 C 的 $60^{\circ}$ 其實是 $\angle ABD$；選項 D 的 $68^{\circ}$ 來自把 $38^{\circ}$ 與 $22^{\circ}$ 都當作與 $A$ 相加再誤減，運算次序出錯。題目求的是 $\angle ADB$，不是 $\angle ABD$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（\(\angle ADB=56^{\circ}\)）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $TA$ 是圓於 $A$ 點的切線，$B$、$C$、$D$、$E$ 均在圓上，且 $E$ 在 $\angle ABD$ 之內。已知 $\angle EAT=41^{\circ}$、$\angle DCE=19^{\circ}$ 及 $\angle BAD=72^{\circ}$，求 $\angle ADB$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 切線弦角：$\angle ABE=\angle EAT=41^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同弓形內的圓周角：$\angle DBE=\angle DCE=19^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABD=41^{\circ}+19^{\circ}=60^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\triangle ABD$ 內角和：$\angle ADB=180^{\circ}-72^{\circ}-60^{\circ}=48^{\circ}$。</div>
+          <div class="p-ans">答案：$\angle ADB=48^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q38.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q40.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

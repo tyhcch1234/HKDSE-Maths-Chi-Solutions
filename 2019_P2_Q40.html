@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第40題 · 立體三角學</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第40題</span>
+    <h1>把 $PQ$ 當共同高度，兩次餘弦定理夾出 $\angle RPS$</h1>
+    <p class="sub">三角學 · 立體圖形中的餘弦定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示四面體 $PQRS$，其底面 $QRS$ 位於水平地面上。已知 $Q$ 在 $P$ 的正下方。若 $\angle PRQ=47^{\circ}$、$\angle PSQ=53^{\circ}$ 及 $\angle RQS=120^{\circ}$，求 $\angle RPS$，準確至最接近的度。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>\(52^{\circ}\)</li><li><span class="ol">B</span>\(60^{\circ}\)</li><li><span class="ol">C</span>\(68^{\circ}\)</li><li><span class="ol">D</span>\(76^{\circ}\)</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q40.png" alt="四面體 PQRS，底面 QRS 水平，Q 在 P 正下方"><figcaption>圖：四面體 $PQRS$，$PQ$ 垂直於底面 $QRS$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">確認 $PQ$ 垂直底面，造出兩個直角</div>
+      <div class="rule">
+        <span class="rule-name">直線垂直平面</span>
+        <span class="rule-math">\(PQ\perp\text{平面 }QRS\ \Longrightarrow\ PQ\perp QR\ \text{及}\ PQ\perp QS\)</span>
+        <span class="rule-why">「$Q$ 在 $P$ 正下方」加上底面水平，即 $PQ$ 是鉛垂線；鉛垂線垂直於底面上任何一條經過 $Q$ 的直線。</span>
+      </div>
+      <p>$PQ\perp$ 平面 $QRS$，所以 $PQ\perp QR$、$PQ\perp QS$，得</p>
+      <p>$$\angle PQR=\angle PQS=90^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在兩個直角三角形寫出 $PR$、$PS$ 與 $PQ$ 的關係</div>
+      <p>在 $\triangle PQR$（直角在 $Q$）中，$\angle PRQ=47^{\circ}$ 的鄰邊是 $PQ$、斜邊是 $PR$：</p>
+      <p>$$\frac{PQ}{PR}=\cos 47^{\circ}\ \Longrightarrow\ PR=\frac{PQ}{\cos 47^{\circ}}$$</p>
+      <p>同理，在 $\triangle PQS$ 中 $\angle PSQ=53^{\circ}$：</p>
+      <p>$$\frac{PQ}{PS}=\cos 53^{\circ}\ \Longrightarrow\ PS=\frac{PQ}{\cos 53^{\circ}}$$</p>
+      <p>另外兩條底邊用正弦比表示：$\dfrac{QR}{PR}=\sin 47^{\circ}$、$\dfrac{QS}{PS}=\sin 53^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle PRS$ 寫餘弦定理</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        <span class="rule-math">\(c^{2}=a^{2}+b^{2}-2ab\cos C\)</span>
+        <span class="rule-why">$\triangle PRS$ 已知兩邊 $PR$、$PS$（都用 $PQ$ 表示），未知的正是夾角 $\angle RPS$。</span>
+      </div>
+      <p>設 $\theta=\angle RPS$，則</p>
+      <p>$$RS^{2}=PR^{2}+PS^{2}-2(PR)(PS)\cos\theta\tag{1}$$</p>
+      <p>兩邊除以 $PR\cdot PS$ 並整理：</p>
+      <p>$$\cos\theta=\frac{PR}{PS}+\frac{PS}{PR}-\frac{RS^{2}}{PR\cdot PS}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在底面 $\triangle QRS$ 再用一次餘弦定理</div>
+      <div class="rule">
+        <span class="rule-name">正弦比（直角三角形）</span>
+        <span class="rule-math">\(\sin\angle PRQ=\dfrac{QR}{PR}\)，\(\sin\angle PSQ=\dfrac{QS}{PS}\)</span>
+        <span class="rule-why">底面的邊 $QR$、$QS$ 沒有直接給出，用這兩個正弦比把它們換成已知角。</span>
+      </div>
+      <p>底面 $\triangle QRS$ 中 $\angle RQS=120^{\circ}$：</p>
+      <p>$$RS^{2}=QR^{2}+QS^{2}-2(QR)(QS)\cos 120^{\circ}$$</p>
+      <p>整條除以 $PR\cdot PS$，並代入 $\dfrac{QR}{PR}=\sin 47^{\circ}$、$\dfrac{QS}{PS}=\sin 53^{\circ}$：</p>
+      <p>$$\frac{RS^{2}}{PR\cdot PS}=\frac{QR}{PR}\cdot\frac{QR}{PS}+\frac{QS}{PR}\cdot\frac{QS}{PS}-2\cdot\frac{QR}{PR}\cdot\frac{QS}{PS}\cos 120^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">代入化簡，$PQ$ 與正弦平方項對消</div>
+      <p>由第 2 步，$\dfrac{PR}{PS}=\dfrac{\cos 53^{\circ}}{\cos 47^{\circ}}$、$\dfrac{PS}{PR}=\dfrac{\cos 47^{\circ}}{\cos 53^{\circ}}$，而 $\dfrac{QR}{PS}=\sin 47^{\circ}\cdot\dfrac{PR}{PS}$、$\dfrac{QS}{PR}=\sin 53^{\circ}\cdot\dfrac{PS}{PR}$。整理後得</p>
+      <p>$$\cos\theta=\cos\angle PRQ\cos\angle PSQ\cos\angle RQS+\sin\angle PRQ\sin\angle PSQ$$</p>
+      <p>未知的 $PQ$ 在整個過程中完全對消，所以答案與四面體的高矮無關。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">代入數值，取最接近的度</div>
+      <p>$$\cos\theta=\cos 47^{\circ}\cos 53^{\circ}\cos 120^{\circ}+\sin 47^{\circ}\sin 53^{\circ}$$</p>
+      <p>$$\approx(0.681998)(0.601815)(-0.5)+(0.731354)(0.798636)$$</p>
+      <p>$$\approx-0.205208+0.584093=0.378885$$</p>
+      <p>$$\theta=\cos^{-1}(0.378885)\approx 67.7365^{\circ}$$</p>
+      <p>準確至最接近的度，$\angle RPS\approx 68^{\circ}$，即選項 <b>C</b>。</p>
+      <p>易錯：$\angle RQS=120^{\circ}$ 是鈍角，$\cos 120^{\circ}=-0.5$ 必須帶負號；漏了負號會得 $\cos\theta\approx 0.79$，誤答 $38^{\circ}$ 一類的數值。另外 $47^{\circ}$、$53^{\circ}$ 是豎面內的角，不可直接與 $120^{\circ}$ 相加減。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（\(\angle RPS\approx 68^{\circ}\)）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 四面體 $PQRS$ 中，底面 $QRS$ 水平，$Q$ 在 $P$ 正下方。已知 $\angle PRQ=35^{\circ}$、$\angle PSQ=48^{\circ}$ 及 $\angle RQS=115^{\circ}$，求 $\angle RPS$，準確至最接近的度。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $PQ\perp$ 平面 $QRS$，故 $\angle PQR=\angle PQS=90^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩個豎面直角三角形給出 $\dfrac{PQ}{PR}=\cos 35^{\circ}$、$\dfrac{PQ}{PS}=\cos 48^{\circ}$，以及 $\dfrac{QR}{PR}=\sin 35^{\circ}$、$\dfrac{QS}{PS}=\sin 48^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 合併 $\triangle PRS$ 與 $\triangle QRS$ 的餘弦定理：$\cos\angle RPS=\cos 35^{\circ}\cos 48^{\circ}\cos 115^{\circ}+\sin 35^{\circ}\sin 48^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\cos\angle RPS\approx(0.8192)(0.6691)(-0.4226)+(0.5736)(0.7431)\approx-0.2316+0.4263=0.1947$。</div>
+          <div class="p-step"><b>第 5 步.</b> $\angle RPS\approx 78.8^{\circ}\approx 79^{\circ}$。</div>
+          <div class="p-ans">答案：$\angle RPS\approx 79^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q41.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

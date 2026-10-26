@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第41題 · 三角形的四心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第41題</span>
+    <h1>三個心逐個查：垂心在直角頂點，形心內心恆在內</h1>
+    <p class="sub">坐標與幾何 · 直角三角形的四心</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\triangle ABC$ 是直角三角形，且 $\angle ABC=90^{\circ}$，下列何者正確？
+      <br>I. $\triangle ABC$ 的垂心在 $AC$ 上。
+      <br>II. $\triangle ABC$ 的形心在 $\triangle ABC$ 之內。
+      <br>III. $\triangle ABC$ 的內心在 $\triangle ABC$ 之外。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">檢查 I：找垂心</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形的垂心</span>
+        <span class="rule-math">\(\angle ABC=90^{\circ}\ \Longrightarrow\ \text{垂心}=B\)</span>
+        <span class="rule-why">垂心是三條高（垂線）的交點；直角三角形的兩條直角邊本身就是高，交點就是直角頂點。</span>
+      </div>
+      <p>因為 $AB\perp BC$，由 $A$ 出發垂直於 $BC$ 的高就是 $AB$；由 $C$ 出發垂直於 $AB$ 的高就是 $CB$。兩條高在直角頂點 $B$ 相交，所以垂心是 $B$，而不是在斜邊 $AC$ 上。I 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 II：形心的位置</div>
+      <div class="rule">
+        <span class="rule-name">形心（三中線交點）</span>
+        <span class="rule-math">\(G=\left(\dfrac{x_{A}+x_{B}+x_{C}}{3},\ \dfrac{y_{A}+y_{B}+y_{C}}{3}\right)\)</span>
+        <span class="rule-why">形心是三個頂點的「平均位置」，而三角形是凸集，三點的平均必落在圖形之內。</span>
+      </div>
+      <p>任何三角形（銳角、直角、鈍角）的形心都在三角形之內，並把每條中線按 $2:1$ 分成兩段。所以 II 正確。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 III：內心的位置</div>
+      <div class="rule">
+        <span class="rule-name">內心（內切圓圓心）</span>
+        <span class="rule-math">\(d(\text{內心},\ \text{任一邊})=r\)</span>
+        <span class="rule-why">內心是三條內角平分線的交點，也是內切圓的圓心；圓要貼住三邊，圓心必須在三邊圍成的區域之內。</span>
+      </div>
+      <p>對任何三角形，內心都位於三角形之內（與三角形形狀無關）。所以 III 錯誤。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">總結三個命題，對照選項</div>
+      <p>I 假、II 真、III 假，只有 II 正確，即選項 <b>B</b>。</p>
+      <p>易錯：把「垂心」與「外心」混淆。直角三角形中，<b>外心</b>才是斜邊 $AC$ 的中點；垂心固定在直角頂點 $B$。另外要記住：只有鈍角三角形的垂心與外心會走出三角形之外，形心與內心永遠在內。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\triangle ABC$ 為直角三角形，$\angle ABC=90^{\circ}$。判斷下列各命題：I. $\triangle ABC$ 的外心在 $AC$ 的中點；II. $\triangle ABC$ 的垂心在 $B$；III. $\triangle ABC$ 的內心在 $\triangle ABC$ 之外。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 命題 I：直角三角形的外心是斜邊中點（斜邊中點到三頂點等距），故 I 正確。</div>
+          <div class="p-step"><b>第 2 步.</b> 命題 II：$AB$ 與 $BC$ 本身就是兩條高，交於直角頂點 $B$，垂心為 $B$，故 II 正確。</div>
+          <div class="p-step"><b>第 3 步.</b> 命題 III：內心是內切圓圓心，必在三角形之內，故 III 錯誤。</div>
+          <div class="p-step"><b>第 4 步.</b> 只有 I 及 II 正確。</div>
+          <div class="p-ans">答案：只有 I 及 II</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q40.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q42.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

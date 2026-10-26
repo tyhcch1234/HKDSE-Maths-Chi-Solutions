@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第42題 · 概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第42題</span>
+    <h1>反面入手：只計「六隻全部不是藍色」</h1>
+    <p class="sub">概率 · 對立事件與組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋中有 $2$ 隻綠杯、$8$ 隻藍杯及 $9$ 隻紅杯。若隨機從袋中同時抽出 $6$ 隻杯，求抽出至少 $1$ 隻藍杯的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{31}{57}$</li><li><span class="ol">B</span>$\dfrac{44}{323}$</li><li><span class="ol">C</span>$\dfrac{635}{646}$</li><li><span class="ol">D</span>$\dfrac{968}{969}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清「藍」與「非藍」兩類杯</div>
+      <p>杯的總數：$2+8+9=19$。不是藍色的杯（綠或紅）：$2+9=11$。</p>
+      <p>題目只問「有沒有藍杯」，所以把杯分成「藍」與「非藍」兩類就夠，不必理會綠與紅各自的數量。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">改用對立事件</div>
+      <div class="rule">
+        <span class="rule-name">對立事件</span>
+        <span class="rule-math">\(P(A^{\prime})=1-P(A)\)</span>
+        <span class="rule-why">「至少 $1$ 隻藍杯」要分 $1$ 至 $6$ 隻藍杯六種情況，太麻煩；它的對立事件「$0$ 隻藍杯」只有一種情況。</span>
+      </div>
+      <p>$$P(\text{至少 1 隻藍})=1-P(\text{0 隻藍})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用組合數算全部抽法</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">\(C^{n}_{r}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">「同時抽出」不計先後次序，所以用組合而不用排列。</span>
+      </div>
+      <p>由 $19$ 隻中抽 $6$ 隻，全部抽法共</p>
+      <p>$$C^{19}_{6}=27132$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">數「$0$ 隻藍杯」的抽法</div>
+      <p>$0$ 隻藍杯即 $6$ 隻全部來自 $11$ 隻非藍杯：</p>
+      <p>$$C^{11}_{6}=462$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">寫出 $P(\text{0 隻藍})$ 並約簡</div>
+      <div class="rule">
+        <span class="rule-name">概率的定義</span>
+        <span class="rule-math">\(P(E)=\dfrac{n(E)}{n(S)}\)</span>
+        <span class="rule-why">每個抽法出現的機會均等，所以概率就是「有利抽法數」除以「全部抽法數」。</span>
+      </div>
+      <p>$$P(\text{0 隻藍})=\frac{C^{11}_{6}}{C^{19}_{6}}=\frac{462}{27132}=\frac{11}{646}$$</p>
+      <p>（分子分母同除以 $42$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">由 $1$ 減出答案</div>
+      <p>$$P(\text{至少 1 隻藍})=1-\frac{11}{646}=\frac{646-11}{646}=\frac{635}{646}$$</p>
+      <p>即選項 <b>C</b>。</p>
+      <p>易錯：$\dfrac{11}{646}$ 只是「完全沒有藍杯」的概率，忘記用 $1$ 去減就會誤答；亦不可用「藍杯佔 $\dfrac{8}{19}$」直接乘 $6$，因為「同時抽出」不是逐隻有放回的重複試驗。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{635}{646}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋中有 $4$ 隻綠杯、$5$ 隻藍杯及 $7$ 隻紅杯。若隨機從袋中同時抽出 $3$ 隻杯，求抽出至少 $1$ 隻藍杯的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 $=4+5+7=16$，非藍杯 $=4+7=11$。</div>
+          <div class="p-step"><b>第 2 步.</b> $P(\text{至少 1 隻藍})=1-P(\text{0 隻藍})$。</div>
+          <div class="p-step"><b>第 3 步.</b> 全部抽法 $C^{16}_{3}=560$；$0$ 隻藍杯的抽法 $C^{11}_{3}=165$。</div>
+          <div class="p-step"><b>第 4 步.</b> $P(\text{0 隻藍})=\dfrac{165}{560}=\dfrac{33}{112}$。</div>
+          <div class="p-step"><b>第 5 步.</b> 所求概率 $=1-\dfrac{33}{112}=\dfrac{79}{112}$。</div>
+          <div class="p-ans">答案：$\dfrac{79}{112}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q41.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q43.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

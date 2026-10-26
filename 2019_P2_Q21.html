@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第21題 · 等弦截等弧，扣去公共弧再分半</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第21題</span>
+    <h1>等弦截等弧，扣去公共弧再分半</h1>
+    <p class="sub">圓形性質 · 等弦、圓周角</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖中 $O$ 為半圓 $ABCD$ 的圓心。若 $AC=BD$ 且 $\angle COD=48^{\circ}$，則 $\angle ABD=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$31^{\circ}$</li><li><span class="ol">B</span>$33^{\circ}$</li><li><span class="ol">C</span>$42^{\circ}$</li><li><span class="ol">D</span>$48^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q21.png" alt="半圓 ABCD，圓心 O，A、B 為直徑兩端"><figcaption>圖：$AB$ 為直徑，$D$、$C$ 依次在半圓上，$AC=BD$，$\angle COD=48^{\circ}$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀圖：認清次序與半圓</div>
+<p>$AOB$ 成一直線，$AB$ 是直徑；沿半圓由 $A$ 到 $B$ 的次序是 $A\to D\to C\to B$。</p>
+<p>整個半圓的圓心角是 $180^{\circ}$，即弧 $AD+$ 弧 $DC+$ 弧 $CB=180^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">等弦截等弧，扣去公共弧</div>
+      <div class="rule"><span class="rule-name">等弦對等弧</span>同圓中 $AC=BD\Rightarrow$ 弧 $AC=$ 弧 $BD$。</div>
+<p>弧 $AC=$ 弧 $AD+$ 弧 $DC$，弧 $BD=$ 弧 $BC+$ 弧 $CD$。兩者相等而弧 $DC$ 是公共部分，故</p>
+<p>$$\text{弧 }AD=\text{弧 }BC$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用半圓的 $180^{\circ}$ 求弧 $AD$</div>
+      <div class="rule"><span class="rule-name">圓心角與弧</span>弧 $DC$ 對 $\angle COD=48^{\circ}$，即弧 $DC=48^{\circ}$。</div>
+<p>設弧 $AD=$ 弧 $BC=y$：</p>
+<p>$$y+48^{\circ}+y=180^{\circ}\quad\Longrightarrow\quad y=66^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">弧化為圓周角</div>
+      <div class="rule"><span class="rule-name">圓周角是圓心角的一半</span>$\angle ABD$ 的頂點在圓周，兩邊截出弧 $AD$。</div>
+<p>$$\angle ABD=\frac{66^{\circ}}{2}=33^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">用等腰三角形 $OBD$ 覆核</div>
+      <div class="rule"><span class="rule-name">半徑相等</span>$OB=OD$，$\triangle OBD$ 為等腰。</div>
+<p>弧 $BD=66^{\circ}+48^{\circ}=114^{\circ}$，故 $\angle BOD=114^{\circ}$，</p>
+<p>$$\angle OBD=\frac{180^{\circ}-114^{\circ}}{2}=33^{\circ}$$</p>
+<p>與第 4 步一致。易錯：直接把 $48^{\circ}$ 減半得 $24^{\circ}$——$48^{\circ}$ 對的是弧 $CD$，不是弧 $AD$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$33^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $O$ 為半圓 $ABCD$ 的圓心。若 $AC=BD$ 且 $\angle COD=60^{\circ}$，則 $\angle ABD=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24^{\circ}$</li><li><span class="ol">B</span>$30^{\circ}$</li><li><span class="ol">C</span>$48^{\circ}$</li><li><span class="ol">D</span>$60^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC=BD\Rightarrow$ 弧 $AD=$ 弧 $BC$（扣去公共弧 $CD$）。</div>
+          <div class="p-step"><b>第 2 步.</b> $2y+60^{\circ}=180^{\circ}\Rightarrow y=60^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABD=\dfrac{60^{\circ}}{2}=30^{\circ}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$30^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

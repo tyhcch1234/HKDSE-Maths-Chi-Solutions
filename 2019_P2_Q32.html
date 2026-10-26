@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第32題 · 對數方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第32題</span>
+    <h1>令 $u=\log x$ 解二次方程，最後記得取負</h1>
+    <p class="sub">對數 · 對數方程與代入法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\dfrac{3}{3\log x-2}+7=\dfrac{2}{2\log x+1}$，則 $\log\dfrac{1}{x}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-3$ 或 $2$</li><li><span class="ol">B</span>$-2$ 或 $3$</li><li><span class="ol">C</span>$-\dfrac{1}{3}$ 或 $\dfrac{1}{2}$</li><li><span class="ol">D</span>$-\dfrac{1}{2}$ 或 $\dfrac{1}{3}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $\log x$ 整體換成 $u$</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        <span class="rule-math">\(u=\log x\)</span>
+        <span class="rule-why">方程中 $\log x$ 一律以同一種樣子出現，換成 $u$ 之後就變成單一未知數的分式方程，可以清分母解二次方程。</span>
+      </div>
+      <p>令 $u=\log x$，方程變成</p>
+      <p>$$\frac{3}{3u-2}+7=\frac{2}{2u+1}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩邊乘 $(3u-2)(2u+1)$ 清分母</div>
+      <div class="rule">
+        <span class="rule-name">清分母</span>
+        <span class="rule-math">\(\dfrac{A}{B}=C\iff A=BC\quad (B\neq 0)\)</span>
+        <span class="rule-why">一次乘上兩個分母的乘積，就能把三項全部變成多項式，避免逐項通分的計算錯誤。</span>
+      </div>
+      <p>$$3(2u+1)+7(3u-2)(2u+1)=2(3u-2)$$</p>
+      <p>同時要記下限制：$u\neq\dfrac{2}{3}$ 及 $u\neq-\dfrac{1}{2}$，否則分母為零。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">展開並合併同類項</div>
+      <p>先算 $(3u-2)(2u+1)=6u^{2}-u-2$：</p>
+      <p>$$3(2u+1)+7(6u^{2}-u-2)=2(3u-2)$$</p>
+      <p>$$6u+3+42u^{2}-7u-14=6u-4$$</p>
+      <p>$$42u^{2}-7u-7=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">因式分解求 $u$</div>
+      <p>$$42u^{2}-7u-7=0\;\Longrightarrow\;7\bigl(6u^{2}-u-1\bigr)=0\;\Longrightarrow\;7(2u-1)(3u+1)=0$$</p>
+      <p>所以 $u=\dfrac{1}{2}$ 或 $u=-\dfrac{1}{3}$，兩個值都不違反上面的限制。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">換回題目要的 $\log\dfrac{1}{x}$</div>
+      <div class="rule">
+        <span class="rule-name">倒數的對數</span>
+        <span class="rule-math">\(\log\dfrac{1}{x}=\log x^{-1}=-\log x=-u\)</span>
+        <span class="rule-why">題目問的不是 $\log x$ 而是 $\log\dfrac{1}{x}$，兩者相差一個負號，這一步決定最後答案。</span>
+      </div>
+      <p>$$\log\frac{1}{x}=-\frac{1}{2}\quad\text{或}\quad\frac{1}{3}$$</p>
+      <p>對應選項 <b>D</b>。</p>
+      <p>易錯：解出 $u=\dfrac{1}{2}$、$-\dfrac{1}{3}$ 就直接選 C，忘記取負號；C 正是「未變號」的陷阱選項。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$-\dfrac{1}{2}$ 或 $\dfrac{1}{3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{2}{\log x-1}+\dfrac{3}{\log x+2}=2$，則 $\log\dfrac{1}{x}=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 令 $u=\log x$，方程成為 $\dfrac{2}{u-1}+\dfrac{3}{u+2}=2$，且 $u\neq 1,\,-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩邊乘 $(u-1)(u+2)$：$2(u+2)+3(u-1)=2(u-1)(u+2)$，即 $5u+1=2u^{2}+2u-4$。</div>
+          <div class="p-step"><b>第 3 步.</b> 整理得 $2u^{2}-3u-5=0$，因式分解 $(2u-5)(u+1)=0$，所以 $u=\dfrac{5}{2}$ 或 $u=-1$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\log\dfrac{1}{x}=-u$，故答案為 $-\dfrac{5}{2}$ 或 $1$。</div>
+          <div class="p-step"><b>第 5 步.</b> 驗算 $u=\dfrac{5}{2}$：$\dfrac{2}{1.5}+\dfrac{3}{4.5}=\dfrac{4}{3}+\dfrac{2}{3}=2$ ✓；$u=-1$：$\dfrac{2}{-2}+\dfrac{3}{1}=2$ ✓。</div>
+          <div class="p-ans">答案：$-\dfrac{5}{2}$ 或 $1$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

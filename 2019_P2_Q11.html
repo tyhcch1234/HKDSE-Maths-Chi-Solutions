@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第11題 · 複利息</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第11題</span>
+    <h1>按季複利：先拆每季利率，再數滿 32 期</h1>
+    <p class="sub">百分法 · 複利息與本利和</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      把 $\$65\,000$ 存入銀行，年利率 $7\%$，為期 $8$ 年，每季複利計算。求本利和，準確至最接近的元。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\$101\,400$</li><li><span class="ol">B</span>$\$111\,682$</li><li><span class="ol">C</span>$\$113\,244$</li><li><span class="ol">D</span>$\$113\,609$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">抄下四個已知量</div>
+      <p>本金 $P=65\,000$，年利率 $r=7\%=0.07$，每年複利次數 $m=4$（每季一次），年期 $t=8$。</p>
+      <p>「每季複利」即一年計息四次，利息每次都併入本金再生息。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把年利率與年期換成「每期」</div>
+      <div class="rule">
+        <span class="rule-name">複利息公式</span>
+        <span class="rule-math">\(A=P\left(1+\dfrac{r}{m}\right)^{mt}\)</span>
+        <span class="rule-why">利率與期數必須用同一單位：年利率要除以每年次數，年期要乘以每年次數。</span>
+      </div>
+      <p>每季利率 $=\dfrac{7\%}{4}=1.75\%=0.0175$，總期數 $=8\times 4=32$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入公式，一次過按出冪次</div>
+      <p>$$\text{本利和}=65\,000\left(1+\frac{7\%}{4}\right)^{8\times 4}=65\,000(1.0175)^{32}$$</p>
+      <p>$$=113\,243.8770\ldots$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">取整，再核對選項</div>
+      <p>準確至最接近的元：本利和 $\approx \$113\,244$，與選項 <b>C</b> 相同。</p>
+      <p>易錯：若把 $7\%$ 當作單利，得 $65\,000(1+0.07\times 8)=\$101\,400$，正是選項 A；若只計 $8$ 期（誤把「每季」當「每年」四次方中的年數），又會偏細。年利率一定要先除以 $4$，年期一定要乘 $4$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\$113\,244$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 $\$48\,000$ 存入銀行，年利率 $6\%$，為期 $5$ 年，每半年複利計算。求本利和，準確至最接近的元。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 每半年利率 $=\dfrac{6\%}{2}=3\%$，總期數 $=5\times 2=10$。</div>
+          <div class="p-step"><b>第 2 步.</b> 本利和 $=48\,000\left(1+\dfrac{6\%}{2}\right)^{5\times 2}=48\,000(1.03)^{10}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $48\,000(1.03)^{10}=64\,507.99\ldots$</div>
+          <div class="p-step"><b>第 4 步.</b> 準確至最接近的元，本利和為 $\$64\,508$。</div>
+          <div class="p-ans">答案：$\$64\,508$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第29題 · 統計</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第29題</span>
+    <h1>箱線圖只給你五個數，標準差讀不出來</h1>
+    <p class="sub">統計 · 箱線圖與離差量度</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列各項，哪一項可以從<b>任何</b>一幅箱線圖中得到？
+      <p>I. 分佈域<br>II. 標準差<br>III. 四分位數間距</p>
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+    <figure class="fig">
+      <svg viewBox="0 0 440 158" width="100%" role="img" aria-label="箱線圖的五個位置">
+        <line x1="40" y1="92" x2="410" y2="92" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="70" y1="92" x2="130" y2="92" stroke="currentColor" stroke-width="2"/>
+        <line x1="250" y1="92" x2="340" y2="92" stroke="currentColor" stroke-width="2"/>
+        <line x1="70" y1="78" x2="70" y2="106" stroke="currentColor" stroke-width="2"/>
+        <line x1="340" y1="78" x2="340" y2="106" stroke="currentColor" stroke-width="2"/>
+        <rect x="130" y="70" width="120" height="44" fill="none" stroke="currentColor" stroke-width="2"/>
+        <line x1="190" y1="70" x2="190" y2="114" stroke="currentColor" stroke-width="2.6"/>
+        <g fill="currentColor" font-size="12" text-anchor="middle">
+          <text x="70" y="128">最小值</text>
+          <text x="130" y="128">Q₁</text>
+          <text x="190" y="128">中位數</text>
+          <text x="250" y="128">Q₃</text>
+          <text x="340" y="128">最大值</text>
+          <text x="70" y="146">2</text>
+          <text x="130" y="146">5</text>
+          <text x="190" y="146">7</text>
+          <text x="250" y="146">9</text>
+          <text x="340" y="146">12</text>
+        </g>
+      </svg>
+      <figcaption>圖：箱線圖上的四條界線與兩個末端，只代表五個數</figcaption>
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先確認箱線圖記錄了甚麼</div>
+      <div class="rule">
+        <span class="rule-name">五數摘要</span>
+        <span class="rule-math">\(\text{最小值},\ Q_{1},\ \text{中位數},\ Q_{3},\ \text{最大值}\)</span>
+        <span class="rule-why">箱線圖的每一條線都由這五個數畫成，圖上再沒有其他資料，所以只能讀出由這五個數算出來的量。</span>
+      </div>
+      <p>左鬚末端 $=$ 最小值；盒的左邊 $=Q_{1}$；盒內直線 $=$ 中位數；盒的右邊 $=Q_{3}$；右鬚末端 $=$ 最大值。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢查 I：分佈域讀得到</div>
+      <div class="rule">
+        <span class="rule-name">分佈域</span>
+        <span class="rule-math">\(\text{分佈域}=\text{最大值}-\text{最小值}\)</span>
+        <span class="rule-why">兩條鬚的末端正好是最小值與最大值，所以整幅圖的總長度就是分佈域，任何箱線圖都讀得到。</span>
+      </div>
+      <p>$$\text{分佈域}=\text{max}-\text{min}\quad\checkmark$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢查 III：四分位數間距讀得到</div>
+      <div class="rule">
+        <span class="rule-name">四分位數間距</span>
+        <span class="rule-math">\(\text{IQR}=Q_{3}-Q_{1}\)</span>
+        <span class="rule-why">盒的左右兩邊就是 $Q_{1}$ 與 $Q_{3}$，所以盒的長度直接就是四分位數間距。</span>
+      </div>
+      <p>$$\text{IQR}=Q_{3}-Q_{1}\quad\checkmark$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查 II：用反例證明標準差讀不到</div>
+      <div class="rule">
+        <span class="rule-name">標準差</span>
+        <span class="rule-math">\(\sigma=\sqrt{\dfrac{\sum (x-\bar{x})^{2}}{N}}\)</span>
+        <span class="rule-why">標準差要用到每一個數據值，而箱線圖只保留五個數，所以同一幅圖可以對應標準差不同的數據組。</span>
+      </div>
+      <p>考慮數據組 $\{-3,\,-3,\,-3,\,-3a,\,0,\,3a,\,3,\,3,\,3\}$，其中 $0\le a\le 1$。</p>
+      <p>它的五數摘要固定為 $-3,\,-3,\,0,\,3,\,3$（最小值、$Q_{1}$、中位數、$Q_{3}$、最大值），與 $a$ 無關，所以箱線圖完全不變。</p>
+      <p>但平均數 $\bar{x}=0$，而</p>
+      <p>$$\sigma=\sqrt{\frac{54+18a^{2}}{9}}=\sqrt{2(a^{2}+3)}$$</p>
+      <p>當 $a$ 由 $0$ 增至 $1$，$\sigma$ 由 $\sqrt{6}$ 增至 $\sqrt{8}$。兩組不同的數據共用一幅箱線圖，卻有不同標準差，所以 II 讀不到。 $\times$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">對照選項</div>
+      <p>只有 I 及 III 可以從任何箱線圖中得到，對應選項 <b>B</b>。</p>
+      <p>易錯：以為「盒的長度與鬚的長度有比例」就可以推出數據的分散程度，甚至估出標準差；其實盒與鬚只固定了五個位置，盒內的數據怎樣分佈完全不顯示。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組數據的箱線圖顯示：最小值 $12$、下四分位數 $18$、中位數 $25$、上四分位數 $31$、最大值 $46$。下列何者正確？<br>A. 該組數據的分佈域是 $30$<br>B. 該組數據的四分位數間距是 $13$<br>C. 該組數據的平均數是 $25$<br>D. 該組數據的標準差是 $13$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分佈域 $=46-12=34$，不是 $30$，所以 A 錯。</div>
+          <div class="p-step"><b>第 2 步.</b> 四分位數間距 $=31-18=13$，所以 B 對。</div>
+          <div class="p-step"><b>第 3 步.</b> 平均數要用全部數據，箱線圖只給五個數，無法確定，所以 C 錯（中位數是 $25$，不是平均數）。</div>
+          <div class="p-step"><b>第 4 步.</b> 標準差同樣要用全部數據，$13$ 只是四分位數間距，所以 D 錯。</div>
+          <div class="p-ans">答案：B（四分位數間距是 $13$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2019_P2_Q30.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

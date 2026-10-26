@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第8題 · 代入 $c$ 與 $-c$，三次項自然對消</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第8題</span>
+    <h1>代入 $c$ 與 $-c$，三次項自然對消</h1>
+    <p class="sub">函數 · 多項式的函數值</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $c$ 為常數。若 $f(x)=x^{3}+cx^{2}+c$，則 $f(c)+f(-c)=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$2c$</li><li><span class="ol">C</span>$2c^{3}+2c$</li><li><span class="ol">D</span>$-2c^{3}+2c$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算 $f(c)$</div>
+<p>$$f(c)=c^{3}+c\cdot c^{2}+c=c^{3}+c^{3}+c=2c^{3}+c$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">再算 $f(-c)$</div>
+      <div class="rule"><span class="rule-name">奇偶次項</span>$(-c)^{3}=-c^{3}$，但 $(-c)^{2}=c^{2}$，符號處理是關鍵。</div>
+<p>$$f(-c)=(-c)^{3}+c(-c)^{2}+c=-c^{3}+c^{3}+c=c$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩者相加</div>
+<p>$$f(c)+f(-c)=(2c^{3}+c)+c=2c^{3}+2c$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">對照選項</div>
+<p>三次項相加成 $2c^{3}$、常數項相加成 $2c$，故選 C。</p>
+<p>易錯：誤把 $f(-c)$ 的 $c(-c)^{2}$ 寫成 $-c^{3}$，就會多出 $-2c^{3}$（誤選 D）。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$2c^{3}+2c$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $c$ 為常數。若 $f(x)=x^{3}-cx^{2}+c$，則 $f(c)+f(-c)=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2c$</li><li><span class="ol">B</span>$-2c^{3}+2c$</li><li><span class="ol">C</span>$2c^{3}+2c$</li><li><span class="ol">D</span>$0$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(c)=c^{3}-c^{3}+c=c$。</div>
+          <div class="p-step"><b>第 2 步.</b> $f(-c)=-c^{3}-c^{3}+c=-2c^{3}+c$。</div>
+          <div class="p-step"><b>第 3 步.</b> 相加：$c+(-2c^{3}+c)=-2c^{3}+2c$。</div>
+          <div class="p-ans">答案：<b>B</b>（$-2c^{3}+2c$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

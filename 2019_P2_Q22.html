@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第22題 · 三角比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第22題</span>
+    <h1>兩個直角三角形共用 $AB=CD$，長度自然對消</h1>
+    <p class="sub">三角比 · 直角三角形中的餘弦</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為長方形，$E$ 為 $AD$ 上的一點。求 $\dfrac{CE}{AC}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{\sin\alpha}{\sin\beta}$</li><li><span class="ol">B</span>$\dfrac{\cos\alpha}{\cos\beta}$</li><li><span class="ol">C</span>$\sin\alpha\sin\beta$</li><li><span class="ol">D</span>$\cos\alpha\cos\beta$</li></ol>
+    <figure class="fig"><img src="figures/2019_P2_Q22.png" alt="長方形 ABCD，對角線 AC，E 在 AD 上，標示角 alpha 與 beta"><figcaption>圖：長方形 $ABCD$，對角線 $AC$ 與 $AB$ 成 $\alpha$，$CE$ 與 $CD$ 成 $\beta$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出圖中兩個直角三角形</div>
+      <p>長方形的角都是直角：$\angle ABC=90^{\circ}$，而 $CD\perp AD$ 使 $\angle CDE=90^{\circ}$。</p>
+      <p>於是 $\triangle ABC$ 在 $B$ 為直角，$\triangle CDE$ 在 $D$ 為直角，兩個都是直角三角形，可以用三角比。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ABC$ 用 $\alpha$ 表示 $AC$</div>
+      <div class="rule">
+        <span class="rule-name">直角三角形中的餘弦</span>
+        <span class="rule-math">$\cos\theta=\dfrac{\text{鄰邊}}{\text{斜邊}}$</span>
+        <span class="rule-why">$\alpha$ 的鄰邊是 $AB$、斜邊是 $AC$，所以用 $\cos$ 可以把 $AC$ 寫成 $AB$ 的倍數。</span>
+      </div>
+      <p>$$\cos\alpha=\frac{AB}{AC}\quad\Rightarrow\quad AC=\frac{AB}{\cos\alpha}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle CDE$ 用 $\beta$ 表示 $CE$</div>
+      <p>直角在 $D$，$\beta$ 在 $C$，其鄰邊是 $CD$，斜邊是 $CE$：</p>
+      <p>$$\cos\beta=\frac{CD}{CE}\quad\Rightarrow\quad CE=\frac{CD}{\cos\beta}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">相除，並用長方形對邊相等消去長度</div>
+      <div class="rule">
+        <span class="rule-name">長方形對邊相等</span>
+        <span class="rule-math">$AB=CD$</span>
+        <span class="rule-why">兩條式子各含一條長邊，而長方形的對邊相等，所以相除時 $AB$ 與 $CD$ 會完全抵消，只剩下角的三角比。</span>
+      </div>
+      <p>$$\frac{CE}{AC}=\frac{CD/\cos\beta}{AB/\cos\alpha}=\frac{CD}{AB}\cdot\frac{\cos\alpha}{\cos\beta}$$</p>
+      <p>因 $CD=AB$，即 $\dfrac{CD}{AB}=1$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">化簡並對照選項</div>
+      <p>$$\frac{CE}{AC}=1\cdot\frac{\cos\alpha}{\cos\beta}=\frac{\cos\alpha}{\cos\beta}$$</p>
+      <p>與選項 <b>B</b> 相同。</p>
+      <p>易錯：$\alpha$ 的鄰邊是 $AB$ 而不是 $BC$；若誤用 $\sin\alpha=\dfrac{BC}{AC}$，便會多出一條 $BC$ 而消不掉。判斷鄰邊時，先認清直角在哪個頂點，再看 $\alpha$ 夾在哪兩條邊之間。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\dfrac{\cos\alpha}{\cos\beta}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $ABCD$ 為長方形，$E$ 在 $AD$ 上，對角線 $AC$ 與 $AB$ 成 $\alpha$，$CE$ 與 $CD$ 成 $\beta$。已知 $AB=12$、$\cos\alpha=0.6$、$\cos\beta=0.4$，求 $\dfrac{CE}{AC}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 在直角三角形 $ABC$：$\cos\alpha=\dfrac{AB}{AC}$，故 $AC=\dfrac{12}{0.6}=20$。</div>
+          <div class="p-step"><b>第 2 步.</b> 在直角三角形 $CDE$：$\cos\beta=\dfrac{CD}{CE}$，故 $CE=\dfrac{CD}{0.4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 長方形對邊相等，$CD=AB=12$，故 $CE=\dfrac{12}{0.4}=30$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\dfrac{CE}{AC}=\dfrac{30}{20}=1.5$，而 $\dfrac{\cos\alpha}{\cos\beta}=\dfrac{0.6}{0.4}=1.5$，兩者相符。</div>
+          <div class="p-ans">答案：$\dfrac{CE}{AC}=1.5$（即 $\dfrac{\cos\alpha}{\cos\beta}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

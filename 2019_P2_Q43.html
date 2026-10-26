@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第43題 · 概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第43題</span>
+    <h1>反面入手：只計「三題全對」那一枝</h1>
+    <p class="sub">概率 · 獨立事件與對立事件</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      數學比賽共有三條題目。Susan 答對第一題、第二題及第三題的概率分別為 $\dfrac{1}{3}$、$\dfrac{1}{5}$ 及 $\dfrac{1}{7}$。則 Susan 在比賽中最多答對 $2$ 題的概率是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{1}{105}$</li><li><span class="ol">B</span>$\dfrac{13}{105}$</li><li><span class="ol">C</span>$\dfrac{92}{105}$</li><li><span class="ol">D</span>$\dfrac{104}{105}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫下三個事件及其概率</div>
+      <p>設 $C_1$、$C_2$、$C_3$ 分別為「答對第一題」、「答對第二題」、「答對第三題」的事件，則</p>
+      <p>$$P(C_1)=\frac{1}{3},\qquad P(C_2)=\frac{1}{5},\qquad P(C_3)=\frac{1}{7}$$</p>
+      <p>題目給的是「三題各自」的概率，並隱含三次作答互不影響（獨立）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出「最多 $2$ 題」的對立事件</div>
+      <div class="rule">
+        <span class="rule-name">對立事件</span>
+        <span class="rule-math">\(P(A^{\prime})=1-P(A)\)</span>
+        <span class="rule-why">「最多答對 $2$ 題」要加起「對 $2$ 題、對 $1$ 題、對 $0$ 題」三類情況；它的對立事件只有一種：三題全對。</span>
+      </div>
+      <p>$$P(\text{最多 2 題})=1-P(\text{三題全對})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用乘法法則求「三題全對」</div>
+      <div class="rule">
+        <span class="rule-name">獨立事件乘法法則</span>
+        <span class="rule-math">\(P(A\cap B\cap C)=P(A)P(B)P(C)\)</span>
+        <span class="rule-why">三次作答獨立，所以「全對」這條路徑的概率就是三段概率相乘（樹形圖上沿分支相乘）。</span>
+      </div>
+      <p>$$P(\text{三題全對})=\frac{1}{3}\times\frac{1}{5}\times\frac{1}{7}=\frac{1}{105}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">由 $1$ 減，得所求概率</div>
+      <p>$$P(\text{最多 2 題})=1-\frac{1}{105}=\frac{105-1}{105}=\frac{104}{105}$$</p>
+      <p>即選項 <b>D</b>。</p>
+      <p>易錯：$\dfrac{1}{105}$ 是「三題全對」的概率（選項 A），與題目所問剛好相反；另外 $\dfrac{92}{105}$ 來自漏掉「對 $1$ 題」或「對 $0$ 題」其中一類，直接逐類相加時很容易漏項，這正是用對立事件的好處。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$\dfrac{104}{105}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 問答比賽共有三條題目，Susan 答對第一、第二及第三題的概率分別為 $\dfrac{1}{4}$、$\dfrac{1}{5}$ 及 $\dfrac{1}{6}$。求她最多答對 $2$ 題的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $C_1,C_2,C_3$ 為答對各題的事件，三者獨立。</div>
+          <div class="p-step"><b>第 2 步.</b> $P(\text{最多 2 題})=1-P(\text{三題全對})$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P(\text{三題全對})=\dfrac{1}{4}\times\dfrac{1}{5}\times\dfrac{1}{6}=\dfrac{1}{120}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 所求概率 $=1-\dfrac{1}{120}=\dfrac{119}{120}$。</div>
+          <div class="p-ans">答案：$\dfrac{119}{120}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2019_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第2題 · 分子分母各自算清，再同底相除</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第2題</span>
+    <h1>分子分母各自算清，再同底相除</h1>
+    <p class="sub">指數與對數 · 指數律</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+$\dfrac{(6x^{7})^{2}}{4x^{5}}=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3x^{4}$</li><li><span class="ol">B</span>$9x^{4}$</li><li><span class="ol">C</span>$3x^{9}$</li><li><span class="ol">D</span>$9x^{9}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先展開分子的括號</div>
+      <div class="rule"><span class="rule-name">冪的冪</span>$(ab)^{n}=a^{n}b^{n}$，$(x^{m})^{n}=x^{mn}$。係數與字母要一併平方。</div>
+<p>$$(6x^{7})^{2}=6^{2}\cdot(x^{7})^{2}=36x^{14}$$</p>
+<p>易錯：只把 $x$ 平方而漏了 $6^{2}$，會誤得 $6x^{14}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫成分數，先處理係數</div>
+<p>$$\frac{36x^{14}}{4x^{5}}=\frac{36}{4}\cdot\frac{x^{14}}{x^{5}}=9x^{14-5}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同底相除，指數相減</div>
+      <div class="rule"><span class="rule-name">除法律</span>$\dfrac{x^{m}}{x^{n}}=x^{m-n}$。</div>
+<p>$$9x^{14-5}=9x^{9}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">核對選項</div>
+<p>係數 $9$、指數 $9$，即 D。A 與 C 的係數 $3$ 是忘了平方 $6$；B 的指數 $4$ 是誤把 $14\div5$ 之類算錯。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$9x^{9}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{(4x^{3})^{2}}{8x^{4}}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2x^{2}$</li><li><span class="ol">B</span>$2x^{5}$</li><li><span class="ol">C</span>$8x^{2}$</li><li><span class="ol">D</span>$x^{2}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(4x^{3})^{2}=16x^{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{16x^{6}}{8x^{4}}=2x^{6-4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=2x^{2}$。</div>
+          <div class="p-ans">答案：<b>A</b>（$2x^{2}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

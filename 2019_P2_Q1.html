@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第1題 · 逐項分配，讓 $a^{2}b$ 自動對消</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第1題</span>
+    <h1>逐項分配，讓 $a^{2}b$ 自動對消</h1>
+    <p class="sub">多項式 · 展開與同類項</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $(a-b)(a^{2}+ab-b^{2})$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(a-b)^{3}$</li><li><span class="ol">B</span>$a^{3}-b^{3}$</li><li><span class="ol">C</span>$a^{3}-2ab^{2}+b^{3}$</li><li><span class="ol">D</span>$a^{3}-2a^{2}b+2ab^{2}+b^{3}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把第二個括號整體看成一份</div>
+      <div class="rule"><span class="rule-name">分配律</span>$a(b+c)=ab+ac$。括號外有兩項 $a$ 與 $-b$，要分別乘進整個括號。</div>
+<p>$$(a-b)(a^{2}+ab-b^{2})=a(a^{2}+ab-b^{2})-b(a^{2}+ab-b^{2})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項相乘，先保留括號看符號</div>
+<p>$$=a^{3}+a^{2}b-ab^{2}-a^{2}b-ab^{2}+b^{3}$$</p>
+<p>留意 $-b\times(-b^{2})=+b^{3}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併同類項</div>
+      <div class="rule"><span class="rule-name">同類項</span>只有字母部分完全相同的項才可合併；$a^{2}b$ 與 $ab^{2}$ 不是同類項。</div>
+<p>$$a^{3}+\bigl(a^{2}b-a^{2}b\bigr)+\bigl(-ab^{2}-ab^{2}\bigr)+b^{3}=a^{3}-2ab^{2}+b^{3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">對照選項</div>
+<p>結果與 C 相同。D 保留了 $-2a^{2}b$ 與 $+2ab^{2}$，等於沒有對消 $a^{2}b$；B 是 $(a-b)(a^{2}+ab+b^{2})$ 的結果。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$a^{3}-2ab^{2}+b^{3}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $(2a-b)(a^{2}+2ab+b^{2})$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2a^{3}-b^{3}$</li><li><span class="ol">B</span>$2a^{3}+3a^{2}b-b^{3}$</li><li><span class="ol">C</span>$2a^{3}+3a^{2}b+b^{3}$</li><li><span class="ol">D</span>$2a^{3}-3a^{2}b-b^{3}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 用 $2a$ 乘整個括號：$2a^{3}+4a^{2}b+2ab^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 用 $-b$ 乘整個括號：$-a^{2}b-2ab^{2}-b^{3}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 合併：$2a^{3}+(4-1)a^{2}b+(2-2)ab^{2}-b^{3}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $=2a^{3}+3a^{2}b-b^{3}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$2a^{3}+3a^{2}b-b^{3}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2019_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

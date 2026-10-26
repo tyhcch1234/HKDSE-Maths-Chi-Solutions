@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第5題 · 先把含 $k$ 的分式孤立，再取倒數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第5題</span>
+    <h1>先把含 $k$ 的分式孤立，再取倒數</h1>
+    <p class="sub">代數 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $h=3-\dfrac{5}{k+4}$，則 $k=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{4h-7}{3-h}$</li><li><span class="ol">B</span>$\dfrac{4h-17}{3-h}$</li><li><span class="ol">C</span>$\dfrac{4h-7}{3+h}$</li><li><span class="ol">D</span>$\dfrac{4h-17}{3+h}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把常數 $3$ 移去左邊</div>
+<p>$$h-3=-\frac{5}{k+4}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩邊取倒數</div>
+      <div class="rule"><span class="rule-name">倒數</span>$\dfrac{1}{a/b}=\dfrac{b}{a}$。取倒數時左右兩邊都要取，符號跟著分數走。</div>
+<p>$$\frac{1}{h-3}=-\frac{k+4}{5}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">兩邊乘 $-5$</div>
+<p>$$k+4=-\frac{5}{h-3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把 $4$ 移去右邊，通分整理</div>
+<p>$$k=-\frac{5}{h-3}-4=\frac{-5-4(h-3)}{h-3}=\frac{7-4h}{h-3}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">分子分母同乘 $-1$，對照選項</div>
+      <div class="rule"><span class="rule-name">等值變形</span>分子、分母同時變號，分數值不變：$\dfrac{7-4h}{h-3}=\dfrac{4h-7}{3-h}$。</div>
+<p>$$k=\frac{4h-7}{3-h}$$</p>
+<p>易錯：只把分母寫成 $3-h$ 卻忘了分子也要變號，就會誤選 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$k=\dfrac{4h-7}{3-h}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $m=2-\dfrac{7}{n+3}$，則 $n=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{3m+1}{2-m}$</li><li><span class="ol">B</span>$\dfrac{3m-1}{2-m}$</li><li><span class="ol">C</span>$\dfrac{3m+1}{2+m}$</li><li><span class="ol">D</span>$\dfrac{1-3m}{2-m}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 移項：$m-2=-\dfrac{7}{n+3}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 取倒數：$n+3=-\dfrac{7}{m-2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $n=-\dfrac{7}{m-2}-3=\dfrac{-7-3(m-2)}{m-2}=\dfrac{1-3m}{m-2}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 分子分母同乘 $-1$：$n=\dfrac{3m-1}{2-m}$。</div>
+          <div class="p-ans">答案：<b>B</b>（$n=\dfrac{3m-1}{2-m}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

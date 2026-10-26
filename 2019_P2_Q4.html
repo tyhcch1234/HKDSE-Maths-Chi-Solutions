@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷二 第4題 · 比較係數，先求 $lpha$ 再求 $eta$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷二 · 第4題</span>
+    <h1>比較係數，先求 $lpha$ 再求 $eta$</h1>
+    <p class="sub">多項式 · 恆等式</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $\alpha$、$\beta$ 為常數，且 $(x-8)(x+\alpha)-6\equiv(x-9)^{2}+\beta$，則 $\beta=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-26$</li><li><span class="ol">B</span>$-10$</li><li><span class="ol">C</span>$-7$</li><li><span class="ol">D</span>$-6$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">兩邊展開成多項式</div>
+      <div class="rule"><span class="rule-name">恆等式</span>恆等式對所有 $x$ 成立，故同次項的係數必須相等。</div>
+<p>左邊：$x^{2}+(\alpha-8)x-8\alpha-6$</p>
+<p>右邊：$x^{2}-18x+81+\beta$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">比較 $x$ 的係數求 $lpha$</div>
+<p>$$\alpha-8=-18\quad\Longrightarrow\quad \alpha=-10$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較常數項求 $eta$</div>
+      <div class="rule"><span class="rule-name">比較常數項</span>常數項＝不含 $x$ 的部分：左邊 $-8\alpha-6$，右邊 $81+\beta$。</div>
+<p>$$-8\alpha-6=81+\beta$$</p>
+<p>代入 $\alpha=-10$：$80-6=81+\beta$，即 $74=81+\beta$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解出 $eta$</div>
+<p>$$\beta=-7$$</p>
+<p>亦可令 $x=8$ 快速覆核：左邊 $=-6$，右邊 $=1+\beta$，同樣得 $\beta=-7$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\beta=-7$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\alpha$、$\beta$ 為常數，且 $(x-4)(x+\alpha)+3\equiv(x-6)^{2}+\beta$，則 $\beta=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$-1$</li><li><span class="ol">B</span>$1$</li><li><span class="ol">C</span>$5$</li><li><span class="ol">D</span>$9$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 比較 $x$ 的係數：$\alpha-4=-12$，故 $\alpha=-8$。</div>
+          <div class="p-step"><b>第 2 步.</b> 比較常數項：$-4\alpha+3=36+\beta$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $\alpha=-8$：$32+3=36+\beta$，故 $\beta=-1$。</div>
+          <div class="p-ans">答案：<b>A</b>（$\beta=-1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
