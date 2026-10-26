@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第8題 · 圓內接四邊形與等腰三角形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷一 · 第8題</span>
+  <h1>同弧所對的圓周角</h1>
+  <p class="sub">圓的性質 · 等腰三角形</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為圓，$E$ 為 $AC$ 上的一點使 $BC=CE$。已知 $AB=AD$、$\angle ADB=58^\circ$ 及 $\angle CBD=25^\circ$。<br>
+      (a) 求 $\angle BDC$。<br>
+      (b) 求 $\angle ABE$。
+    </div>
+    <p class="note">註：原卷附圖在題庫中缺失，本題已按文字描述作答。</p>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用「同弧上的圓周角相等」</div>
+      <div class="rule">
+        <span class="rule-name">同弧圓周角</span>
+        <span class="rule-math">\(\angle BDC=\angle BAC\)（同對弧 $BC$）</span>
+        <span class="rule-why">兩個角都對着同一段弧 $BC$，故相等；問題變成求 $\angle BAC$。</span>
+      </div>
+      由 $AB=AD$ 得等腰三角形 $ABD$：
+      \[\angle ABD=\angle ADB=58^\circ
+      \;\Longrightarrow\;\angle BAD=180^\circ-2(58^\circ)=64^\circ.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">在 $\triangle ABC$ 內補齊角度</div>
+      <div class="rule">
+        <span class="rule-name">同弧圓周角</span>
+        <span class="rule-math">\(\angle BCA=\angle BDA\)（同對弧 $AB$）</span>
+        <span class="rule-why">先求 $\angle BCA$，再用三角形內角和求 $\angle BAC$。</span>
+      </div>
+      \[\angle ABC=\angle ABD+\angle DBC=58^\circ+25^\circ=83^\circ,\]
+      \[\angle BCA=\angle BDA=58^\circ,\]
+      \[\angle BAC=180^\circ-83^\circ-58^\circ=39^\circ.\]
+      故 $\angle BDC=\angle BAC=39^\circ$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用等腰 $\triangle BCE$ 求 $\angle CBE$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角相等</span>
+        <span class="rule-math">\(BC=CE\Rightarrow\angle CBE=\angle CEB\)</span>
+        <span class="rule-why">$B$、$E$ 在圓上？不必；只需 $BC=CE$ 便有等腰關係，頂角是 $\angle BCE=\angle BCA$。</span>
+      </div>
+      \[\angle BCE=58^\circ
+      \;\Longrightarrow\;\angle CBE=\frac{180^\circ-58^\circ}{2}=61^\circ.\]
+      最後
+      \[\angle ABE=\angle ABC-\angle CBE=83^\circ-61^\circ=22^\circ.\]
+      答案：(a) $39^\circ$　(b) $22^\circ$。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\angle BDC=39^\circ$　(b) $\angle ABE=22^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓上四點 $A,B,C,D$ 順序排列，$AB=AD$，$\angle ADB=70^\circ$，$\angle CBD=20^\circ$。求 (a) $\angle BDC$，(b) $\angle ABC$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AB=AD\Rightarrow\angle ABD=\angle ADB=70^\circ$，$\angle BAD=180^\circ-140^\circ=40^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle BCA=\angle BDA=70^\circ$；$\angle ABC=70^\circ+20^\circ=90^\circ$；$\angle BAC=180^\circ-90^\circ-70^\circ=20^\circ$，故 $\angle BDC=\angle BAC=20^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABC=90^\circ$。</div>
+          <div class="p-ans">答案：(a) $20^\circ$　(b) $90^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P1_Q6.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P1_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

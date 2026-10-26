@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第6題 · 百分數：售價與標價</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷一 · 第6題</span>
+  <h1>由成本、盈利百分數與折扣反推標價</h1>
+  <p class="sub">百分數 · 盈利與折扣</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一本書的成本為 $\$250$。該書現已售出，盈利百分數為 $20\%$。<br>
+      (a) 求該書的售價。<br>
+      (b) 若該書以標價的 $25\%$ 折扣售出，求其標價。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 盈利以成本為基數</div>
+      <div class="rule">
+        <span class="rule-name">盈利百分數</span>
+        <span class="rule-math">\(\text{盈利}\%=\dfrac{\text{售價}-\text{成本}}{\text{成本}}\times 100\%\)</span>
+        <span class="rule-why">盈利百分數的基數是成本，不是售價。</span>
+      </div>
+      \[\text{售價}=250\times(1+20\%)=\$300.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 折扣是「標價的百分數」</div>
+      <div class="rule">
+        <span class="rule-name">折扣</span>
+        <span class="rule-math">\(\text{售價}=\text{標價}\times(1-\text{折扣率})\)</span>
+        <span class="rule-why">折扣以標價為基數，所以除的是 $0.75$ 而不是乘以 $1.25$。</span>
+      </div>
+      \[300=\text{標價}\times0.75.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出標價並驗算</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        <span class="rule-math">\(400\times75\%=300\)</span>
+        <span class="rule-why">用售價回頭檢查折扣是否正確，可即時發現乘除方向錯誤。</span>
+      </div>
+      \[\text{標價}=\frac{300}{0.75}=\$400.\]
+      答案：(a) $\$300$　(b) $\$400$。<br>
+      常見失分：把 (b) 算成 $300\times1.25=\$375$，混淆了「盈利 25%」與「折扣 25%」。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\$300$　(b) $\$400$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某貨品成本 $\$480$，以 $15\%$ 盈利售出；若售價是標價的八折，求標價。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 售價 $=480\times1.15=\$552$。</div>
+          <div class="p-step"><b>第 2 步.</b> $552=\text{標價}\times0.8$。</div>
+          <div class="p-step"><b>第 3 步.</b> 標價 $=\dfrac{552}{0.8}=\$690$；驗算 $690\times0.8=552$ ✓。</div>
+          <div class="p-ans">答案：$\$690$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2015_P1_Q4.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2015_P1_Q9.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
