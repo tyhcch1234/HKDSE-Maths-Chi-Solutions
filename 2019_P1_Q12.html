@@ -1,0 +1,114 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第12題 · 先數清 $n$，再定四分位位置；平均數用來鎖定 $a+b$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第12題</span>
+    <h1>先數清 $n$，再定四分位位置；平均數用來鎖定 $a+b$</h1>
+    <p class="sub">統計 · 莖葉圖、四分位數與標準差</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下面的莖葉圖顯示一些男生在 $400\text{ m}$ 賽跑中的成績（以秒為單位）。已知該分佈的四分位數間距為 $8$ 秒。<br>
+(a) 求 $c$。<br>
+(b) 已知該分佈的分佈域超過 $34$ 秒，且平均數為 $69$ 秒。求<br>
+(i) $a$ 及 $b$；<br>(ii) 該分佈的最小可能標準差。<span class="marks">[8 分]</span>
+    </div>
+    <figure class="fig"><table class="data-table">
+        <thead><tr><th>莖（十位）</th><th>葉（個位）</th></tr></thead>
+        <tbody>
+          <tr><td>5</td><td>$a$</td></tr>
+          <tr><td>6</td><td>$0\quad0\quad3\quad c\quad c\quad8\quad9\quad9\quad9$</td></tr>
+          <tr><td>7</td><td>$0\quad1\quad1\quad1\quad2\quad2\quad5\quad6\quad9$</td></tr>
+          <tr><td>8</td><td>$b$</td></tr>
+        </tbody>
+      </table><figcaption>圖：莖葉圖（共 $20$ 個數據）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數數據個數</div>
+<p>莖 5：$1$ 個；莖 6：$9$ 個；莖 7：$9$ 個；莖 8：$1$ 個。</p>
+<p>$$n=20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 定位四分位數</div>
+      <div class="rule"><span class="rule-name">四分位數位置</span>$n=20$ 時，下四分位數取第 $5$、$6$ 個值的平均，上四分位數取第 $15$、$16$ 個值的平均。</div>
+<p>排序後：莖 6 的九個值佔第 $2$ 至 $10$ 位，其中第 $5$、$6$ 位都是 $60+c$；第 $15$、$16$ 位都是 $72$。</p>
+<p>$$Q_{1}=60+c,\qquad Q_{3}=72$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 用四分位數間距求 $c$</div>
+      <div class="rule"><span class="rule-name">四分位數間距</span>$\text{IQR}=Q_{3}-Q_{1}$。</div>
+<p>$$72-(60+c)=8\quad\Longrightarrow\quad c=4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 由分佈域寫出第一個條件</div>
+      <div class="rule"><span class="rule-name">分佈域</span>分佈域 $=$ 最大值 $-$ 最小值。</div>
+<p>$$(80+b)-(50+a)>34\quad\Longrightarrow\quad b-a>4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(i) 由平均數寫出第二個條件</div>
+      <div class="rule"><span class="rule-name">平均數</span>$\sum x=n\bar{x}=20\times69=1380$。</div>
+<p>莖 6 之和 $=586$，莖 7 之和 $=657$，故</p>
+<p>$$(50+a)+586+657+(80+b)=1380\quad\Longrightarrow\quad a+b=7$$</p>
+<p>配合 $b-a>4$，得 $(a,b)=(0,7)$ 或 $(1,6)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(ii) 比較兩個情況的標準差</div>
+      <div class="rule"><span class="rule-name">標準差</span>$\sigma=\sqrt{\dfrac{\sum(x-\bar{x})^{2}}{n}}$（整組數據）。</div>
+<p>情況一 $(a,b)=(0,7)$：$\sigma\approx7.58$ 秒。</p>
+<p>情況二 $(a,b)=(1,6)$：$\sigma\approx7.34$ 秒。</p>
+<p>最小可能標準差為 $7.34$ 秒（即 $a=1$、$b=6$）。</p>
+<p>直觀解釋：$(a,b)=(1,6)$ 令兩端數據更靠近平均數 $69$，離差平方和較小。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $c=4$；(b)(i) $(a,b)=(0,7)$ 或 $(1,6)$；(ii) $7.34$ 秒</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組 $12$ 個數據排序後為 $3,5,7,8,9,11,12,14,15,16,18,20$。求其四分位數間距。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$6$</li><li><span class="ol">B</span>$7$</li><li><span class="ol">C</span>$8$</li><li><span class="ol">D</span>$9$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $n=12$：$Q_{1}$ 取第 $3$、$4$ 個值的平均 $=(7+8)/2=7.5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $Q_{3}$ 取第 $9$、$10$ 個值的平均 $=(15+16)/2=15.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\text{IQR}=15.5-7.5=8$。</div>
+          <div class="p-ans">答案：<b>C</b>（$8$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第10題 · 「部分常數、部分隨 $x$ 變」即 $h(x)=a+bx$</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第10題</span>
+    <h1>「部分常數、部分隨 $x$ 變」即 $h(x)=a+bx$</h1>
+    <p class="sub">變分 · 部分變</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+已知 $h(x)$ 部分為常數、部分隨 $x$ 而變。設 $h(-2)=-96$ 及 $h(5)=72$。<br>
+(a) 求 $h(x)$。<br>(b) 解方程 $h(x)=3x^{2}$。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出部分變的模型</div>
+      <div class="rule"><span class="rule-name">部分變</span>「部分常數、部分隨 $x$ 正變」：$h(x)=a+bx$。</div>
+<p>$$h(x)=a+bx$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代入兩個條件</div>
+<p>$$\begin{cases}a-2b=-96\\ a+5b=72\end{cases}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 解聯立方程</div>
+<p>兩式相減：$7b=168\Rightarrow b=24$；代回 $a=72-120=-48$。</p>
+<p>$$h(x)=24x-48$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 建立方程並整理</div>
+<p>$$24x-48=3x^{2}\quad\Longrightarrow\quad 3x^{2}-24x+48=0$$</p>
+<p>全式除以 $3$：</p>
+<p>$$x^{2}-8x+16=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 因式分解</div>
+      <div class="rule"><span class="rule-name">完全平方</span>$x^{2}-8x+16=(x-4)^{2}$，判別式為 $0$，只有一個重根。</div>
+<p>$$(x-4)^{2}=0\quad\Longrightarrow\quad x=4$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $h(x)=24x-48$；(b) $x=4$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知 $h(x)$ 部分為常數、部分隨 $x$ 而變，且 $h(1)=10$、$h(3)=22$。求 $h(x)$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$h(x)=6x+4$</li><li><span class="ol">B</span>$h(x)=4x+6$</li><li><span class="ol">C</span>$h(x)=12x-2$</li><li><span class="ol">D</span>$h(x)=6x-4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $h(x)=a+bx$。</div>
+          <div class="p-step"><b>第 2 步.</b> $a+b=10$、$a+3b=22\Rightarrow 2b=12\Rightarrow b=6$。</div>
+          <div class="p-step"><b>第 3 步.</b> $a=4$，故 $h(x)=6x+4$。</div>
+          <div class="p-ans">答案：<b>A</b>（$h(x)=6x+4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

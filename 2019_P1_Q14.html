@@ -1,0 +1,116 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第14題 · 先證全等與相似，再把 $\ell$ 與 $\sqrt{2}\ell$ 放上同一條對角線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第14題</span>
+    <h1>先證全等與相似，再把 $\ell$ 與 $\sqrt{2}\ell$ 放上同一條對角線</h1>
+    <p class="sub">幾何 · 全等、相似與正方形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 2 中，$ABCD$ 為正方形。已知 $E$ 為 $AD$ 上的一點。$BD$ 與 $CE$ 相交於點 $F$。設 $G$ 為一點使 $BG\parallel EC$ 及 $CG\parallel DB$。<br>
+(a) 證明 (i) $\triangle BCG\cong\triangle CBF$；(ii) $\triangle BCF\sim\triangle DEF$。<br>
+(b) 設 $\angle BCF=\angle BGC$。<br>
+(i) 設 $BC=\ell$，以 $\ell$ 表示 $DF$。<br>
+(ii) 有人聲稱 $AE>DF$。你是否同意？試解釋。<span class="marks">[8 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 300 210" width="300" height="210" role="img" aria-label="正方形 ABCD，E 在 AD 上，BD 與 CE 交於 F，G 使 BG 平行 EC、CG 平行 DB">
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <rect x="45" y="30" width="150" height="150"/>
+          <path d="M45 30 L195 180"/>
+          <path d="M45 105 L195 180"/>
+          <path d="M195 30 L245 95 L195 180"/>
+        </g>
+        <g fill="currentColor" font-size="13" font-family="Georgia,serif">
+          <text x="36" y="26">A</text><text x="197" y="24">B</text>
+          <text x="36" y="196">D</text><text x="197" y="196">C</text>
+          <text x="30" y="108">E</text><text x="96" y="112" font-size="11">F</text>
+          <text x="249" y="99">G</text>
+        </g>
+      </svg><figcaption>圖 2：$ABCD$ 為正方形，$BG\parallel EC$，$CG\parallel DB$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 列出三組相等條件</div>
+      <div class="rule"><span class="rule-name">A.S.A. 全等</span>兩角及其夾邊分別相等。</div>
+<p>$BC=BC$（公共邊）；</p>
+<p>$\angle BCG=\angle CBF$（內錯角，$CG\parallel DB$）；</p>
+<p>$\angle CBG=\angle BCF$（內錯角，$BG\parallel EC$）。</p>
+<p>$$\therefore\ \triangle BCG\cong\triangle CBF\quad(\text{A.S.A.})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(ii) 用平行線找三組等角</div>
+      <div class="rule"><span class="rule-name">A.A.A. 相似</span>三個角分別相等即相似。</div>
+<p>$\angle CBF=\angle EDF$（內錯角，$BC\parallel ED$）；</p>
+<p>$\angle BFC=\angle DFE$（對頂角）；</p>
+<p>$\angle BCF=\angle DEF$（三角形內角和）。</p>
+<p>$$\therefore\ \triangle BCF\sim\triangle DEF\quad(\text{A.A.A.})$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 由全等與題設得等腰</div>
+      <div class="rule"><span class="rule-name">等腰三角形判定</span>兩底角相等 $\Rightarrow$ 對邊相等。</div>
+<p>由 (a)(i) 得 $\angle BGC=\angle BFC$；題設 $\angle BCF=\angle BGC$，故 $\angle BCF=\angle BFC$。</p>
+<p>$$\therefore\ BF=BC=\ell$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 用正方形對角線求 $DF$</div>
+      <div class="rule"><span class="rule-name">正方形對角線</span>邊長 $\ell$ 的正方形，對角線 $=\sqrt{2}\ell$。</div>
+<p>$$BD=\sqrt{2}\,\ell$$</p>
+<p>$$DF=BD-BF=\sqrt{2}\,\ell-\ell=(\sqrt{2}-1)\ell$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 比較 $AE$ 與 $DF$</div>
+<p>由 (a)(ii) 相似及 (b)(i) 的等腰關係，$DE=DF=(\sqrt{2}-1)\ell$。</p>
+<p>$$AE=AD-DE=\ell-(\sqrt{2}-1)\ell=(2-\sqrt{2})\ell$$</p>
+<p>比較係數：$2-\sqrt{2}\approx0.586$，$\sqrt{2}-1\approx0.414$，故 $AE>DF$。</p>
+<p>∴ 同意該聲稱。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(b)(i) $DF=(\sqrt{2}-1)\ell$；(b)(ii) 同意，因 $2-\sqrt{2}>\sqrt{2}-1$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 正方形 $ABCD$ 的邊長為 $8\text{ cm}$，對角線 $BD$ 上有一點 $P$ 使 $BP=8\text{ cm}$。求 $DP$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$8(\sqrt{2}-1)\text{ cm}$</li><li><span class="ol">B</span>$8\sqrt{2}\text{ cm}$</li><li><span class="ol">C</span>$8\text{ cm}$</li><li><span class="ol">D</span>$4\sqrt{2}\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 對角線 $BD=8\sqrt{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $DP=8\sqrt{2}-8=8(\sqrt{2}-1)$。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第19題 · 配方法找頂點，再用「直徑所對圓周角」處理圓面積最小</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第19題</span>
+    <h1>配方法找頂點，再用「直徑所對圓周角」處理圓面積最小</h1>
+    <p class="sub">函數與圖像 · 配方法與共圓</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $f(x)=\dfrac{1}{1+k}\bigl(x^{2}+(6k-2)x+(9k+25)\bigr)$，其中 $k$ 為正常數。記點 $(4,33)$ 為 $F$。<br>
+(a) 證明 $y=f(x)$ 的圖像通過 $F$。<br>
+(b) $y=g(x)$ 的圖像由 $y=f(x)$ 的圖像沿 $y$ 軸反射，再把所得圖像向上平移 $4$ 單位而得。設 $U$ 為 $y=g(x)$ 的圖像的頂點，$O$ 為原點。<br>
+(i) 用配方法，以 $k$ 表示 $U$ 的坐標。<br>
+(ii) 求 $k$，使通過 $F$、$O$ 及 $U$ 的圓的面積最小。<br>
+(iii) 對任意正常數 $k$，$y=g(x)$ 的圖像都通過同一點 $G$。設 $V$ 為使通過 $F$、$O$、$V$ 的圓面積最小的頂點。$F$、$G$、$O$、$V$ 是否共圓？試解釋。<span class="marks">[12 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 代入 $x=4$</div>
+<p>$$f(4)=\frac{16+4(6k-2)+(9k+25)}{1+k}=\frac{16+24k-8+9k+25}{1+k}=\frac{33+33k}{1+k}=33$$</p>
+<p>∴ 圖像通過 $F(4,33)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b)(i) 先寫出 $g(x)$</div>
+      <div class="rule"><span class="rule-name">反射與平移</span>沿 $y$ 軸反射：$x\to-x$；向上平移 $4$：$+4$。</div>
+<p>$$g(x)=f(-x)+4=\frac{x^{2}-(6k-2)x+(9k+25)}{1+k}+4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 配方</div>
+      <div class="rule"><span class="rule-name">配方法</span>$x^{2}+bx=\left(x+\dfrac{b}{2}\right)^{2}-\dfrac{b^{2}}{4}$。</div>
+<p>$$x^{2}-(6k-2)x=\bigl(x-(3k-1)\bigr)^{2}-(3k-1)^{2}$$</p>
+<p>經整理（分子加上 $4(1+k)$）：</p>
+<p>$$g(x)=\frac{1}{1+k}\bigl(x-(3k-1)\bigr)^{2}+(28-9k)$$</p>
+<p>$$\therefore\ U\bigl(3k-1,\ 28-9k\bigr)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 面積最小的條件</div>
+      <div class="rule"><span class="rule-name">圓的直徑</span>過兩定點的圓中，以該兩點連線為直徑時面積最小。</div>
+<p>圓通過 $F$、$O$，面積最小時 $FO$ 為直徑，此時圓周角 $\angle FUO=90^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 用斜率乘積等於 $-1$</div>
+      <div class="rule"><span class="rule-name">垂直條件</span>$m_{1}m_{2}=-1$。</div>
+<p>$$\frac{28-9k}{3k-1}\times\frac{33-(28-9k)}{4-(3k-1)}=-1$$</p>
+<p>$$\frac{(28-9k)(5+9k)}{(3k-1)(5-3k)}=-1$$</p>
+<p>化簡得 $2k^{2}-5k-3=0$，即 $k=3$ 或 $k=-\dfrac{1}{2}$（捨去，$k>0$）。</p>
+<p>$$\therefore\ k=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(iii) 找出 $G$ 與檢驗共圓</div>
+      <div class="rule"><span class="rule-name">定點</span>若對所有 $k$ 都通過 $G$，可比較係數得 $G(-4,37)$。</div>
+<p>取 $k=3$ 時 $V=U=(8,1)$。檢驗直角：</p>
+<p>$$m_{VF}\times m_{VO}=\frac{1-33}{8-4}\times\frac{1-0}{8-0}=(-8)\times\frac{1}{8}=-1$$</p>
+<p>∴ $\angle FVO=90^{\circ}$，即 $FO$ 是圓的直徑。</p>
+<p>再看 $G$：</p>
+<p>$$m_{FG}\times m_{GO}=\frac{37-33}{-4-4}\times\frac{37-0}{-4-0}=\left(-\frac{1}{2}\right)\left(-\frac{37}{4}\right)=\frac{37}{8}\neq-1$$</p>
+<p>∴ $\angle FGO\neq90^{\circ}$。若四點共圓，因 $FO$ 為直徑，$\angle FGO$ 也必須是 $90^{\circ}$；矛盾。</p>
+<p>∴ $F$、$G$、$O$、$V$ 不共圓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(b)(i) $U(3k-1,\,28-9k)$；(ii) $k=3$；(iii) 不共圓</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $g(x)=x^{2}-4kx+3$。求 $y=g(x)$ 的頂點坐標。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(2k,\,3-4k^{2})$</li><li><span class="ol">B</span>$(2k,\,3+4k^{2})$</li><li><span class="ol">C</span>$(4k,\,3-4k^{2})$</li><li><span class="ol">D</span>$(2k,\,3-2k^{2})$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(x)=(x-2k)^{2}+3-4k^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 頂點 $(2k,\,3-4k^{2})$。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第1題 · 把含 $h$ 的項集中一邊，係數一分為二</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第1題</span>
+    <h1>把含 $h$ 的項集中一邊，係數一分為二</h1>
+    <p class="sub">代數 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+把 $h$ 變成公式 $9(h+6k)=7h+8$ 的主項。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">展開左邊的括號</div>
+      <div class="rule"><span class="rule-name">分配律</span>$a(b+c)=ab+ac$。</div>
+<p>$$9h+54k=7h+8$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把含 $h$ 的項搬到同一邊</div>
+<p>兩邊減 $7h$：</p>
+<p>$$9h-7h=8-54k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併同類項</div>
+<p>$$2h=8-54k$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩邊除以 $h$ 的係數</div>
+<p>$$h=\frac{8-54k}{2}=4-27k$$</p>
+<p>易錯：只把 $8$ 除以 $2$，忘了 $-54k$ 也要除以 $2$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$h=4-27k$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 把 $y$ 變成公式 $5(y-3x)=2y+12$ 的主項。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$y=5x+4$</li><li><span class="ol">B</span>$y=5x-4$</li><li><span class="ol">C</span>$y=15x+12$</li><li><span class="ol">D</span>$y=\dfrac{15x+12}{7}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 展開：$5y-15x=2y+12$。</div>
+          <div class="p-step"><b>第 2 步.</b> $3y=15x+12$。</div>
+          <div class="p-step"><b>第 3 步.</b> $y=5x+4$。</div>
+          <div class="p-ans">答案：<b>A</b>（$y=5x+4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2019_P1_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

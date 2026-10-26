@@ -1,0 +1,100 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第11題 · 設商為 $ax+b$，用餘式定理反求係數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第11題</span>
+    <h1>設商為 $ax+b$，用餘式定理反求係數</h1>
+    <p class="sub">多項式 · 餘式定理與除法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $p(x)$ 為三次多項式。當 $p(x)$ 除以 $x-1$ 時，餘數為 $50$；當 $p(x)$ 除以 $x+2$ 時，餘數為 $-52$。已知 $p(x)$ 可被 $2x^{2}+9x+14$ 整除。<br>
+(a) 求 $p(x)$ 除以 $2x^{2}+9x+14$ 時的商。<br>
+(b) 方程 $p(x)=0$ 有多少個有理根？試解釋。<span class="marks">[6 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 設商並寫出除法關係</div>
+      <div class="rule"><span class="rule-name">除法算式</span>三次 ÷ 二次 ⇒ 商為一次式 $ax+b$：$p(x)=(ax+b)(2x^{2}+9x+14)$。</div>
+<p>$$p(x)=(ax+b)(2x^{2}+9x+14)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用餘式定理代入 $x=1$、$x=-2$</div>
+      <div class="rule"><span class="rule-name">餘式定理</span>$p(x)$ 除以 $x-c$ 的餘數為 $p(c)$。</div>
+<p>$$p(1)=(a+b)(25)=50\quad\Longrightarrow\quad a+b=2$$</p>
+<p>$$p(-2)=(-2a+b)(8-18+14)=(-2a+b)(4)=-52\quad\Longrightarrow\quad -2a+b=-13$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 解聯立方程</div>
+<p>兩式相減：$3a=15\Rightarrow a=5$，代回得 $b=-3$。</p>
+<p>所求商為 $5x-3$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 把 $p(x)=0$ 拆成兩個因式</div>
+<p>$$(5x-3)(2x^{2}+9x+14)=0$$</p>
+<p>故 $5x-3=0$ 或 $2x^{2}+9x+14=0$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 用判別式檢查二次因式</div>
+      <div class="rule"><span class="rule-name">判別式</span>$\Delta=b^{2}-4ac$；$\Delta&lt;0$ 表示沒有實根。</div>
+<p>$$\Delta=9^{2}-4(2)(14)=81-112=-31&lt;0$$</p>
+<p>所以 $2x^{2}+9x+14=0$ 沒有實根（更不可能是有理根）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 數有理根</div>
+<p>只剩 $x=\dfrac{3}{5}$，是有理數。</p>
+<p>∴ $p(x)=0$ 有 $1$ 個有理根。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $5x-3$；(b) $1$ 個有理根</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p(x)$ 為三次多項式，$p(1)=30$、$p(-1)=6$，且 $p(x)$ 可被 $x^{2}+x+3$ 整除。求 $p(x)$ 除以 $x^{2}+x+3$ 的商。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2x+4$</li><li><span class="ol">B</span>$4x+2$</li><li><span class="ol">C</span>$6x$</li><li><span class="ol">D</span>$3x+3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $p(x)=(ax+b)(x^{2}+x+3)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $p(1)=5(a+b)=30\Rightarrow a+b=6$；$p(-1)=3(b-a)=6\Rightarrow b-a=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 解得 $a=2,b=4$，商為 $2x+4$。</div>
+          <div class="p-ans">答案：<b>A</b>（$2x+4$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

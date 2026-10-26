@@ -1,0 +1,115 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第17題 · 內切圓半徑把三角形面積拆成三份；角平分線就是軌跡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第17題</span>
+    <h1>內切圓半徑把三角形面積拆成三份；角平分線就是軌跡</h1>
+    <p class="sub">坐標幾何 · 內切圓與軌跡</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<br>(a) 設 $a$ 及 $p$ 分別為 $\triangle CDE$ 的面積及周界，並以 $r$ 表示 $\triangle CDE$ 的內切圓半徑。證明 $pr=2a$。<br>
+(b) 點 $H$ 及 $K$ 的坐標分別為 $(9,12)$ 及 $(14,0)$。設 $P$ 為直角坐標平面上的一個動點，使 $P$ 到 $OH$ 的垂直距離等於 $P$ 到 $HK$ 的垂直距離，其中 $O$ 為原點。記 $P$ 的軌跡為 $\Gamma$。<br>
+(i) 描述 $\Gamma$ 與 $\angle OHK$ 的幾何關係。<br>
+(ii) 利用 (a)，求 $\Gamma$ 的方程。<span class="marks">[7 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 260 210" width="260" height="210" role="img" aria-label="三角形 OHK，O 為原點，H(9,12)，K(14,0)，內切圓圓心 (8,4)">
+        <g stroke="currentColor" stroke-width="1" opacity="0.55" fill="none">
+          <line x1="20" y1="190" x2="245" y2="190"/><line x1="30" y1="200" x2="30" y2="25"/>
+        </g>
+        <g fill="currentColor" font-size="11" font-family="Georgia,serif">
+          <text x="236" y="203">x</text><text x="36" y="30">y</text><text x="16" y="203">O</text>
+        </g>
+        <g stroke="currentColor" stroke-width="1.5" fill="none">
+          <path d="M30 190 L156 46 L226 190 Z"/>
+          <path d="M156 46 L142 142" stroke-dasharray="4 3"/>
+        </g>
+        <circle cx="142" cy="142" r="6" fill="currentColor"/>
+        <g fill="currentColor" font-size="12" font-family="Georgia,serif">
+          <text x="152" y="40">H(9,12)</text><text x="214" y="205">K(14,0)</text>
+          <text x="148" y="158" font-size="11">I(8,4)</text>
+        </g>
+      </svg><figcaption>圖：$\triangle OHK$ 與其內切圓圓心 $I(8,4)$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 把三角形分成三個小三角形</div>
+      <div class="rule"><span class="rule-name">內切圓</span>圓心到三邊的距離都等於 $r$。</div>
+<p>設內心為 $I$，連 $IC$、$ID$、$IE$，得三個高均為 $r$ 的三角形：</p>
+<p>$$a=\frac{1}{2}r\cdot CD+\frac{1}{2}r\cdot DE+\frac{1}{2}r\cdot CE=\frac{r}{2}(CD+DE+CE)=\frac{pr}{2}$$</p>
+<p>$$\therefore\ pr=2a$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b)(i) 認出「到兩邊等距」的軌跡</div>
+      <div class="rule"><span class="rule-name">角平分線</span>到一個角的兩邊距離相等的點，必在該角的角平分線上。</div>
+<p>$\Gamma$ 是 $\angle OHK$ 的角平分線（$\angle OHK$ 的內角平分線）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(ii) 先算三邊與面積</div>
+      <div class="rule"><span class="rule-name">距離公式、三角形面積</span>$d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$；$A=\dfrac{1}{2}\times\text{底}\times\text{高}$。</div>
+<p>$$OH=\sqrt{9^{2}+12^{2}}=15,\qquad HK=\sqrt{(14-9)^{2}+(0-12)^{2}}=13,\qquad OK=14$$</p>
+<p>以 $OK$ 為底，高為 $H$ 的 $y$ 坐標 $12$：</p>
+<p>$$a=\frac{1}{2}\times14\times12=84,\qquad p=15+13+14=42$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 用 (a) 求內切圓半徑</div>
+<p>$$42r=2(84)\quad\Longrightarrow\quad r=4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 定位內心，再寫出直線</div>
+      <div class="rule"><span class="rule-name">內心的坐標</span>內心到 $OK$（$x$ 軸）的距離為 $r$，故 $y$ 坐標 $=4$。</div>
+<p>設內心為 $(h,4)$。由 $OH=15$、$OK=14$、$HK=13$ 的切線長關係：</p>
+<p>$$(15-h)+(14-h)=13\quad\Longrightarrow\quad h=8$$</p>
+<p>所以內心為 $I(8,4)$，而 $\Gamma$ 就是直線 $HI$：</p>
+<p>$$\text{斜率}=\frac{12-4}{9-8}=8$$</p>
+<p>$$y-4=8(x-8)\quad\Longrightarrow\quad 8x-y-60=0$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(b)(i) $\angle OHK$ 的角平分線；(b)(ii) $8x-y-60=0$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $\triangle PQR$ 的周界為 $30$，內切圓半徑為 $3$。求其面積。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$30$</li><li><span class="ol">B</span>$45$</li><li><span class="ol">C</span>$60$</li><li><span class="ol">D</span>$90$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $pr=2a$。</div>
+          <div class="p-step"><b>第 2 步.</b> $30\times3=2a\Rightarrow a=45$。</div>
+          <div class="p-ans">答案：<b>B</b>（$45$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

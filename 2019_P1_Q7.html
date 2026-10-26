@@ -1,0 +1,88 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第7題 · 把比寫成 $13k:6k$，一次方程搞定</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第7題</span>
+    <h1>把比寫成 $13k:6k$，一次方程搞定</h1>
+    <p class="sub">比與比例 · 應用題</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在某遊樂場，成人與兒童人數的比為 $13:6$。若有 $9$ 名成人及 $24$ 名兒童進入遊樂場，則成人與兒童人數的比變為 $8:7$。求遊樂場原本的成人數目。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用一個未知數表示原本人數</div>
+      <div class="rule"><span class="rule-name">比的表示</span>$a:b=13:6$ 可寫成 $a=13k,\ b=6k$。</div>
+<p>設原有成人 $13k$ 人、兒童 $6k$ 人。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出變化後的比</div>
+<p>$$\frac{13k+9}{6k+24}=\frac{8}{7}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">交叉相乘</div>
+      <div class="rule"><span class="rule-name">交叉相乘</span>$\dfrac{A}{B}=\dfrac{C}{D}\iff AD=BC$（$B,D\neq0$）。</div>
+<p>$$7(13k+9)=8(6k+24)$$</p>
+<p>$$91k+63=48k+192$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解出 $k$</div>
+<p>$$43k=129\quad\Longrightarrow\quad k=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">回答題目所問</div>
+<p>成人原有 $13\times3=39$ 人。</p>
+<p>覆核：$\dfrac{48}{42}=\dfrac{8}{7}$ ✓。易錯：算出 $k=3$ 就當作答，忘了題目要成人數目。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$39$ 人</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班男生與女生人數比為 $5:4$。若轉走 $3$ 名男生並加入 $6$ 名女生，比變為 $1:1$。求原本男生人數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$45$</li><li><span class="ol">B</span>$40$</li><li><span class="ol">C</span>$36$</li><li><span class="ol">D</span>$30$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設男 $5k$、女 $4k$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{5k-3}{4k+6}=1\Rightarrow 5k-3=4k+6\Rightarrow k=9$。</div>
+          <div class="p-step"><b>第 3 步.</b> 男生 $=5\times9=45$（覆核：$42:42=1:1$ ✓）。</div>
+          <div class="p-ans">答案：<b>A</b>（$45$ 人）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

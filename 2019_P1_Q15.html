@@ -1,0 +1,82 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第15題 · 「至少一名男生」用總數減去全女生的情況</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第15題</span>
+    <h1>「至少一名男生」用總數減去全女生的情況</h1>
+    <p class="sub">組合 · 補集思想</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+某班有 $21$ 名男生及 $11$ 名女生。若從班中選出 $5$ 名學生組成委員會，且委員會須有至少 $1$ 名男生，問可組成多少個不同的委員會？<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先算不加限制的總數</div>
+      <div class="rule"><span class="rule-name">組合</span>從 $n$ 個選 $r$ 個：$C_{r}^{n}=\dfrac{n!}{r!(n-r)!}$。</div>
+<p>全班共 $32$ 人：</p>
+<p>$$C_{5}^{32}=201\,376$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">再算「不符合」的情況</div>
+<p>不符合即全為女生（$11$ 人選 $5$ 人）：</p>
+<p>$$C_{5}^{11}=462$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">相減</div>
+      <div class="rule"><span class="rule-name">補集</span>$P(\text{至少一個})=P(\text{全部})-P(\text{一個都無})$。</div>
+<p>$$201\,376-462=200\,914$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢查合理性</div>
+<p>答案應略小於 $C_{5}^{32}$，且為整數，符合。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$200\,914$ 個</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某組有 $15$ 名男生及 $9$ 名女生。從中選出 $4$ 人，且須有至少 $1$ 名女生，問有多少種選法？</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$9\,261$</li><li><span class="ol">B</span>$10\,626$</li><li><span class="ol">C</span>$1\,365$</li><li><span class="ol">D</span>$9\,000$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總數 $C_{4}^{24}=10\,626$。</div>
+          <div class="p-step"><b>第 2 步.</b> 全為男生 $C_{4}^{15}=1\,365$。</div>
+          <div class="p-step"><b>第 3 步.</b> $10\,626-1\,365=9\,261$。</div>
+          <div class="p-ans">答案：<b>A</b>（$9\,261$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

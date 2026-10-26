@@ -1,0 +1,90 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第6題 · 兩條不等式各自解，再取交集數整數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第6題</span>
+    <h1>兩條不等式各自解，再取交集數整數</h1>
+    <p class="sub">不等式 · 整數解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<br>(a) 解不等式 $\dfrac{7x+26}{4}\le 2(3x-1)$。<br>
+(b) 求同時滿足 $\dfrac{7x+26}{4}\le 2(3x-1)$ 及 $45-5x\ge 0$ 的整數的數目。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 先去分母</div>
+      <div class="rule"><span class="rule-name">不等式乘法</span>兩邊乘正數 $4$，不等號方向不變。</div>
+<p>$$7x+26\le 8(3x-1)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 展開並移項</div>
+<p>$$7x+26\le 24x-8$$</p>
+<p>$$34\le 17x$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 除以 $x$ 的係數</div>
+      <div class="rule"><span class="rule-name">不等式除法</span>兩邊除以正數 $17$，方向不變。</div>
+<p>$$x\ge 2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 解第二條不等式</div>
+<p>$$45-5x\ge 0\quad\Longrightarrow\quad x\le 9$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 取交集並數整數</div>
+<p>$$2\le x\le 9$$</p>
+<p>整數為 $2,3,4,5,6,7,8,9$，共 $8$ 個。</p>
+<p>易錯：把 $2$ 或 $9$ 漏掉——「$\le$」表示兩端都包括。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x\ge 2$；(b) $8$ 個</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> (a) 解 $\dfrac{5x-3}{2}&lt;3(x+1)$。(b) 求同時滿足該不等式及 $x\le 7$ 的正整數數目。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$4$</li><li><span class="ol">B</span>$5$</li><li><span class="ol">C</span>$6$</li><li><span class="ol">D</span>$7$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $5x-3&lt;6x+6\Rightarrow -x&lt;9\Rightarrow x>-9$。</div>
+          <div class="p-step"><b>第 2 步.</b> 配合 $x\le 7$：$-9&lt;x\le 7$。</div>
+          <div class="p-step"><b>第 3 步.</b> 正整數 $1$ 至 $7$，共 $7$ 個。</div>
+          <div class="p-ans">答案：<b>D</b>（$7$ 個）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

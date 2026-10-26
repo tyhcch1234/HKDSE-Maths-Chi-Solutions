@@ -1,0 +1,116 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第13題 · 圓內接四邊形補角，直徑所對圓周角是直角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第13題</span>
+    <h1>圓內接四邊形補角，直徑所對圓周角是直角</h1>
+    <p class="sub">圓形幾何 · 圓內接四邊形與扇形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 1 中，$O$ 為圓 $ABCDE$ 的圓心。$AC$ 為該圓的一條直徑。$BD$ 與 $OC$ 相交於點 $F$。已知 $\angle AED=115^{\circ}$。<br>
+(a) 求 $\angle CBF$。<br>
+(b) 設 $BC\parallel OD$ 且 $OB=18\text{ cm}$。扇形 $OBC$ 的周界是否小於 $60\text{ cm}$？試解釋。<span class="marks">[8 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 280 250" width="280" height="250" role="img" aria-label="圓 ABCDE，AC 為直徑，BD 與 OC 交於 F">
+        <circle cx="140" cy="130" r="95" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <g stroke="currentColor" stroke-width="1.2" fill="none">
+          <line x1="45" y1="130" x2="235" y2="130"/>
+          <path d="M112 51 L206 159"/>
+          <path d="M112 51 L45 130"/>
+          <path d="M112 51 L235 130"/>
+          <path d="M206 159 L45 130"/>
+          <path d="M140 130 L206 159"/>
+          <path d="M140 130 L112 51"/>
+          <path d="M140 130 L168 43"/>
+          <path d="M168 43 L45 130"/>
+        </g>
+        <g fill="currentColor" font-size="13" font-family="Georgia,serif">
+          <text x="136" y="146" font-size="11">O</text>
+          <text x="34" y="126">C</text>
+          <text x="238" y="126">A</text>
+          <text x="104" y="44">D</text>
+          <text x="170" y="36">E</text>
+          <text x="211" y="176">B</text>
+          <text x="128" y="150" font-size="11">F</text>
+        </g>
+      </svg><figcaption>圖 1：$O$ 為圓心，$AC$ 為直徑，$BD$ 與 $OC$ 交於 $F$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 認出圓內接四邊形 $ABED$</div>
+      <div class="rule"><span class="rule-name">圓內接四邊形</span>圓內接四邊形的對角互補：$\angle ABF+\angle AED=180^{\circ}$。</div>
+<p>$$\angle ABF=180^{\circ}-115^{\circ}=65^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用直徑所對的圓周角</div>
+      <div class="rule"><span class="rule-name">半圓上的圓周角</span>$AC$ 為直徑 $\Rightarrow\angle ABC=90^{\circ}$。</div>
+<p>$$\angle CBF=90^{\circ}-65^{\circ}=25^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 由平行線與等腰三角形找角</div>
+      <div class="rule"><span class="rule-name">內錯角、等腰三角形</span>$BC\parallel OD\Rightarrow\angle ODF=\angle CBF$；$OB=OD$（半徑）$\Rightarrow\angle OBF=\angle ODF$。</div>
+<p>$$\angle ODF=\angle OBF=25^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 求圓心角 $ngle BOC$</div>
+      <div class="rule"><span class="rule-name">圓心角是圓周角的兩倍</span>同弧所對的圓心角 $=2\times$ 圓周角。</div>
+<p>$$\angle DOF=2\angle CBF=50^{\circ}$$</p>
+<p>在 $\triangle OBF$ 中：$\angle BOF=180^{\circ}-25^{\circ}-25^{\circ}=130^{\circ}$，故</p>
+<p>$$\angle BOC=130^{\circ}-50^{\circ}=80^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 計算扇形周界</div>
+      <div class="rule"><span class="rule-name">扇形周界</span>周界 $=\dfrac{\theta}{360^{\circ}}(2\pi r)+2r$。</div>
+<p>$$\frac{80}{360}(2\pi\times18)+2(18)=8\pi+36\approx61.13\text{ cm}$$</p>
+<p>$61.13>60$，所以扇形 $OBC$ 的周界**不**小於 $60\text{ cm}$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $25^{\circ}$；(b) 否，周界約 $61.1\text{ cm}>60\text{ cm}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓內接四邊形 $PQRS$ 中 $\angle PQR=105^{\circ}$。求 $\angle PSR$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$55^{\circ}$</li><li><span class="ol">B</span>$65^{\circ}$</li><li><span class="ol">C</span>$75^{\circ}$</li><li><span class="ol">D</span>$105^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 圓內接四邊形對角互補。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle PSR=180^{\circ}-105^{\circ}=75^{\circ}$。</div>
+          <div class="p-ans">答案：<b>C</b>（$75^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q12.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q14.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

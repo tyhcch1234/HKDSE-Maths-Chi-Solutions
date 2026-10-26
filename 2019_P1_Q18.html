@@ -1,0 +1,122 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第18題 · 先解 $	riangle ABD$，再在 $	riangle ACP$ 用餘弦公式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第18題</span>
+    <h1>先解 $	riangle ABD$，再在 $	riangle ACP$ 用餘弦公式</h1>
+    <p class="sub">三角學 · 立體圖形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+圖 3 顯示一個四面體 $ABCD$。設 $P$ 為 $AD$ 上的一點，使 $BP$ 垂直於 $AD$。工匠量得 $AC=AD=CD=13\text{ cm}$、$BC=8\text{ cm}$、$BD=12\text{ cm}$ 及 $\angle ABD=72^{\circ}$。<br>
+(a) 求 (i) $\angle BAD$；(ii) $CP$。<br>
+(b) 工匠聲稱 $\angle BPC$ 是面 $ABD$ 與面 $ACD$ 之間的夾角。該聲稱是否正確？試解釋。<span class="marks">[7 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 280 220" width="280" height="220" role="img" aria-label="四面體 ABCD，P 在 AD 上，BP 垂直 AD">
+        <g stroke="currentColor" stroke-width="1.4" fill="none">
+          <path d="M40 180 L200 180 L150 40 Z"/>
+          <path d="M150 40 L120 150"/>
+          <path d="M120 150 L40 180" stroke-dasharray="4 3"/>
+          <path d="M120 150 L200 180" stroke-dasharray="4 3"/>
+          <path d="M120 150 L150 40"/>
+          <path d="M120 150 L200 180"/>
+        </g>
+        <g fill="currentColor" font-size="13" font-family="Georgia,serif">
+          <text x="28" y="196">B</text><text x="206" y="196">C</text>
+          <text x="146" y="32">A</text><text x="112" y="166">D</text>
+          <text x="126" y="142" font-size="11">P</text>
+        </g>
+      </svg><figcaption>圖 3：四面體 $ABCD$，$P$ 在 $AD$ 上且 $BP\perp AD$</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a)(i) 在 $	riangle ABD$ 用正弦公式</div>
+      <div class="rule"><span class="rule-name">正弦公式</span>$\dfrac{\sin A}{a}=\dfrac{\sin B}{b}$，邊與對角要配對。</div>
+<p>$$\frac{\sin\angle BAD}{BD}=\frac{\sin\angle ABD}{AD}$$</p>
+<p>$$\frac{\sin\angle BAD}{12}=\frac{\sin72^{\circ}}{13}\quad\Longrightarrow\quad\sin\angle BAD\approx0.8778$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a)(i) 判斷取哪一個解</div>
+      <div class="rule"><span class="rule-name">三角形內角和</span>三角之和為 $180^{\circ}$，故不可能有兩個大角。</div>
+<p>$$\angle BAD\approx61.39^{\circ}\ \text{或}\ 118.61^{\circ}$$</p>
+<p>$118.61^{\circ}+72^{\circ}>180^{\circ}$，捨去。</p>
+<p>$$\angle BAD=61.4^{\circ}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a)(ii) 在直角三角形 $BPD$ 求 $AP$</div>
+      <div class="rule"><span class="rule-name">餘弦</span>$\cos\theta=\dfrac{\text{鄰邊}}{\text{斜邊}}$。</div>
+<p>$$\angle ADB=180^{\circ}-72^{\circ}-61.39^{\circ}=46.61^{\circ}$$</p>
+<p>$BP\perp AD$，故在 $\triangle BPD$ 中：</p>
+<p>$$DP=BD\cos46.61^{\circ}\approx8.24\text{ cm}$$</p>
+<p>$$AP=13-8.24=4.76\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a)(ii) 在 $	riangle ACP$ 用餘弦公式</div>
+      <div class="rule"><span class="rule-name">餘弦公式</span>$c^{2}=a^{2}+b^{2}-2ab\cos C$。</div>
+<p>$$\angle CAP=60^{\circ}\ (\triangle ACD\ \text{為等邊三角形})$$</p>
+<p>$$CP^{2}=13^{2}+4.76^{2}-2(13)(4.76)\cos60^{\circ}\approx129.8$$</p>
+<p>$$CP\approx11.4\text{ cm}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 檢查 $CP$ 是否垂直於 $AD$</div>
+      <div class="rule"><span class="rule-name">畢氏定理逆定理</span>若 $\angle APC=90^{\circ}$，則 $AP^{2}+CP^{2}=AC^{2}$。</div>
+<p>$$AP^{2}+CP^{2}\approx22.6+129.8=152.4\neq169=AC^{2}$$</p>
+<p>所以 $\angle APC\neq90^{\circ}$，即 $CP$ **不**垂直於 $AD$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 下結論</div>
+<p>兩面夾角須由兩條同時垂直於交線 $AD$ 的直線量度。此處 $BP\perp AD$ 成立，但 $CP$ 不垂直於 $AD$，故 $\angle BPC$ 不是該夾角。</p>
+<p>∴ 聲稱不正確。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a)(i) $61.4^{\circ}$；(ii) $11.4\text{ cm}$；(b) 不正確</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在 $\triangle ABC$ 中 $AB=10$、$\angle ABC=40^{\circ}$、$\angle ACB=80^{\circ}$。求 $AC$（準確至 $0.1$）。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$6.5$</li><li><span class="ol">B</span>$7.8$</li><li><span class="ol">C</span>$8.9$</li><li><span class="ol">D</span>$9.6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BAC=60^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{AC}{\sin40^{\circ}}=\dfrac{10}{\sin80^{\circ}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $AC=\dfrac{10\sin40^{\circ}}{\sin80^{\circ}}\approx6.5$。</div>
+          <div class="p-ans">答案：<b>A</b>（$6.5$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

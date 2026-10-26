@@ -1,0 +1,92 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第16題 · 先解二次聯立，再把對數化為同底等差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第16題</span>
+    <h1>先解二次聯立，再把對數化為同底等差</h1>
+    <p class="sub">數列與對數 · 等差數列求和</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $\alpha$ 及 $\beta$ 為實數，使 $\beta=5\alpha-18$ 及 $\beta=\alpha^{2}-13\alpha+63$。<br>
+(a) 求 $\alpha$ 及 $\beta$。<br>
+(b) 設 $T(n)$ 為一等差數列的第 $n$ 項，其中 $T(1)=\log\alpha$、$T(2)=\log\beta$。求使 $T(1)+T(2)+\cdots+T(n)>888$ 的最小 $n$ 值。<span class="marks">[6 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 兩式相等，解二次方程</div>
+<p>$$5\alpha-18=\alpha^{2}-13\alpha+63$$</p>
+<p>$$\alpha^{2}-18\alpha+81=0\quad\Longrightarrow\quad(\alpha-9)^{2}=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 求 $eta$</div>
+<p>$$\alpha=9,\qquad \beta=5(9)-18=27$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 寫出首兩項與公差</div>
+      <div class="rule"><span class="rule-name">對數律</span>$\log 9=2\log 3$，$\log 27=3\log 3$。</div>
+<p>$$T(1)=2\log 3,\qquad T(2)=3\log 3$$</p>
+<p>$$d=\log 3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用等差求和公式</div>
+      <div class="rule"><span class="rule-name">等差數列求和</span>$S_{n}=\dfrac{n}{2}\bigl[2a+(n-1)d\bigr]$。</div>
+<p>$$S_{n}=\frac{n}{2}\bigl[4\log3+(n-1)\log3\bigr]=\frac{n(n+3)}{2}\log3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 解不等式</div>
+<p>$$\frac{n(n+3)}{2}\log3>888\quad\Longrightarrow\quad n^{2}+3n>\frac{1776}{\log3}\approx3722.3$$</p>
+<p>解得 $n>59.53$，故最小整數 $n=60$。</p>
+<p>覆核：$S_{59}=\dfrac{59\times62}{2}\log3\approx872.7&lt;888$，$S_{60}=\dfrac{60\times63}{2}\log3\approx901.8>888$ ✓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\alpha=9,\ \beta=27$；(b) $60$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 等差數列中 $T(1)=\log 4$、$T(2)=\log 8$。求使 $T(1)+\cdots+T(n)>200$ 的最小 $n$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$24$</li><li><span class="ol">B</span>$25$</li><li><span class="ol">C</span>$26$</li><li><span class="ol">D</span>$27$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $T(1)=2\log2$，$T(2)=3\log2$，$d=\log2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $S_{n}=\dfrac{n(n+3)}{2}\log2>200\Rightarrow n^{2}+3n>664.4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $n=24$：$648$；$n=25$：$700>664.4$，故最小 $n=25$。</div>
+          <div class="p-ans">答案：<b>B</b>（$25$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

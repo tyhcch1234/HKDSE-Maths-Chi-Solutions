@@ -1,0 +1,100 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第3題 · 對角線就是斜邊，二次方程解完要驗</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第3題</span>
+    <h1>對角線就是斜邊，二次方程解完要驗</h1>
+    <p class="sub">方程 · 二次方程與幾何應用</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+一個長方形的長及闊分別為 $24\text{ cm}$ 及 $(13+r)\text{ cm}$。若該長方形的對角線長為 $(17-3r)\text{ cm}$，求 $r$。<span class="marks">[3 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 260 150" width="260" height="150" role="img" aria-label="長方形 24 厘米乘 (13+r) 厘米，對角線 (17-3r) 厘米">
+        <rect x="25" y="25" width="200" height="100" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="25" y1="125" x2="225" y2="25" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <g fill="currentColor" font-size="12" font-family="Georgia,serif">
+          <text x="125" y="142" text-anchor="middle">24 cm</text>
+          <text x="232" y="80">13 + r</text>
+          <text x="96" y="70" transform="rotate(-24 96 70)">17 − 3r</text>
+        </g>
+      </svg><figcaption>圖：長方形的對角線與兩邊構成直角三角形</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把對角線看成直角三角形的斜邊</div>
+      <div class="rule"><span class="rule-name">畢氏定理</span>$a^{2}+b^{2}=c^{2}$，其中 $c$ 為斜邊。</div>
+<p>$$24^{2}+(13+r)^{2}=(17-3r)^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩邊展開</div>
+      <div class="rule"><span class="rule-name">完全平方</span>$(a\pm b)^{2}=a^{2}\pm2ab+b^{2}$。</div>
+<p>$$576+169+26r+r^{2}=289-102r+9r^{2}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">整理成標準式</div>
+<p>把所有項搬到右邊：</p>
+<p>$$8r^{2}-128r-456=0$$</p>
+<p>全式除以 $8$：</p>
+<p>$$r^{2}-16r-57=0$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">因式分解求解</div>
+<p>$$(r-19)(r+3)=0\quad\Longrightarrow\quad r=19\ \text{或}\ -3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗證並剔除不合理的值</div>
+<p>若 $r=19$，對角線 $=17-57=-40\text{ cm}$，長度不可能為負，故捨去。</p>
+<p>$$r=-3$$</p>
+<p>此時闊 $=10\text{ cm}$、對角線 $=26\text{ cm}$，且 $24^{2}+10^{2}=26^{2}$ ✓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>$r=-3$</b></div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個長方形的長及闊分別為 $20\text{ cm}$ 及 $(12+r)\text{ cm}$，對角線長為 $29\text{ cm}$。求 $r$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$9$</li><li><span class="ol">B</span>$-33$</li><li><span class="ol">C</span>$7$</li><li><span class="ol">D</span>$11$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $20^{2}+(12+r)^{2}=29^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $(12+r)^{2}=841-400=441$。</div>
+          <div class="p-step"><b>第 3 步.</b> $12+r=21$ 或 $12+r=-21$（長度為正，捨去），故 $r=9$。</div>
+          <div class="p-ans">答案：<b>A</b>（$r=9$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

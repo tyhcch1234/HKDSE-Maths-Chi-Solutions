@@ -1,0 +1,103 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第8題 · 圓餅圖的角度就是頻數的比例</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第8題</span>
+    <h1>圓餅圖的角度就是頻數的比例</h1>
+    <p class="sub">統計 · 圓餅圖</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+下面的圓餅圖顯示某組女孩擁有戒指數目的分佈。<br>
+(a) 寫出該分佈的眾數。<br>
+(b) 求該分佈的平均數。<br>
+(c) 若從該組隨機選出一名女孩，求選中女孩擁有超過 $3$ 隻戒指的概率。<span class="marks">[5 分]</span>
+    </div>
+    <figure class="fig"><svg viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="圓餅圖：2 隻 144 度、3 隻 54 度、5 隻 90 度、7 隻 72 度">
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M110 110 L110.0 25.0 A85 85 0 0 1 190.8 83.7 Z"/>
+          <path d="M110 110 L190.8 83.7 A85 85 0 0 1 136.3 190.8 Z"/>
+          <path d="M110 110 L136.3 190.8 A85 85 0 0 1 60.0 178.8 Z"/>
+          <path d="M110 110 L60.0 178.8 A85 85 0 0 1 110.0 25.0 Z"/>
+          <path d="M110 110 L110 92 A18 18 0 0 1 128 110 Z" stroke-dasharray="3 2"/>
+        </g>
+        <g fill="currentColor" font-size="14" font-family="Georgia,serif" text-anchor="middle">
+          <text x="160" y="46">7</text>
+          <text x="186" y="153">5</text>
+          <text x="97" y="199">3</text>
+          <text x="29" y="88">2</text>
+        </g>
+        <g fill="currentColor" font-size="11" font-family="Georgia,serif">
+          <text x="72" y="118">144°</text><text x="118" y="140">54°</text>
+        </g>
+      </svg><figcaption>圖：各扇形的圓心角分別為 $144^{\circ}$（2 隻）、$54^{\circ}$（3 隻）、$90^{\circ}$（5 隻）、$72^{\circ}$（7 隻）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 眾數＝扇形最大的那一組</div>
+      <div class="rule"><span class="rule-name">眾數</span>圓餅圖中扇形越大，該組的頻數越高。</div>
+<p>$144^{\circ}$ 的扇形最大，對應「$2$ 隻」。眾數 $=2$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 把角度當頻數計加權平均</div>
+      <div class="rule"><span class="rule-name">加權平均</span>$\bar{x}=\dfrac{\sum fx}{\sum f}$，此處以角度代替頻數。</div>
+<p>$$2\times144+3\times54+5\times90+7\times72=288+162+450+504=1404$$</p>
+<p>$$\text{平均數}=\frac{1404}{360}=3.9$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(c) 找出「超過 3 隻」的扇形</div>
+<p>超過 $3$ 隻即 $5$ 隻與 $7$ 隻，角度共 $90^{\circ}+72^{\circ}=162^{\circ}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 以角度比求概率</div>
+      <div class="rule"><span class="rule-name">古典概率</span>$P=\dfrac{\text{有利角度}}{360^{\circ}}$。</div>
+<p>$$P=\frac{162}{360}=\frac{9}{20}$$</p>
+<p>易錯：把「超過 3 隻」誤作「3 隻或以上」，會把 $54^{\circ}$ 也算進去。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $2$；(b) $3.9$；(c) $\dfrac{9}{20}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某圓餅圖顯示四組數據，圓心角分別為 $120^{\circ}$（值 1）、$60^{\circ}$（值 2）、$120^{\circ}$（值 4）、$60^{\circ}$（值 6）。求該分佈的平均數。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$2.75$</li><li><span class="ol">B</span>$3$</li><li><span class="ol">C</span>$3.25$</li><li><span class="ol">D</span>$3.5$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $1(120)+2(60)+4(120)+6(60)=120+120+480+360=1080$。</div>
+          <div class="p-step"><b>第 2 步.</b> $1080\div360=3$。</div>
+          <div class="p-ans">答案：<b>B</b>（$3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+&lt;!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2019 卷一 第4題 · 先做平方差，再抽公因式，最後整體提出公因式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2019 · 卷一 · 第4題</span>
+    <h1>先做平方差，再抽公因式，最後整體提出公因式</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+因式分解<br>
+(a) $4m^{2}-9$<br>
+(b) $2m^{2}n+7mn-15n$<br>
+(c) $4m^{2}-9-2m^{2}n-7mn+15n$<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 認出平方差</div>
+      <div class="rule"><span class="rule-name">平方差</span>$a^{2}-b^{2}=(a+b)(a-b)$，此處 $a=2m$、$b=3$。</div>
+<p>$$4m^{2}-9=(2m)^{2}-3^{2}=(2m+3)(2m-3)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 先抽公因式 $n$</div>
+<p>$$2m^{2}n+7mn-15n=n(2m^{2}+7m-15)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 再把括號十字相乘</div>
+      <div class="rule"><span class="rule-name">十字相乘</span>$2m^{2}+7m-15=(2m-3)(m+5)$，因 $2\times5+(-3)\times1=7$。</div>
+<p>$$n(2m-3)(m+5)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 把 (a) 與 (b) 的結果相減</div>
+<p>$$4m^{2}-9-2m^{2}n-7mn+15n=(2m+3)(2m-3)-n(2m-3)(m+5)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c) 提出共同因式 $(2m-3)$</div>
+<p>$$(2m-3)\bigl[(2m+3)-n(m+5)\bigr]=(2m-3)(2m+3-mn-5n)$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $(2m+3)(2m-3)$；(b) $n(2m-3)(m+5)$；(c) $(2m-3)(2m+3-mn-5n)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $9p^{2}-16-3p^{2}q+4pq$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(3p-4)(3p+4-pq)$</li><li><span class="ol">B</span>$(3p-4)(3p+4+pq)$</li><li><span class="ol">C</span>$(3p+4)(3p-4-pq)$</li><li><span class="ol">D</span>$(3p-4)(3p+4-4q)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9p^{2}-16=(3p+4)(3p-4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $-3p^{2}q+4pq=-pq(3p-4)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出 $(3p-4)$：$(3p-4)(3p+4-pq)$。</div>
+          <div class="p-ans">答案：<b>A</b></div>
+        </div>
+      </details>
+    </div>
+  </div>
+  <nav class="pager"><a href="2019_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2019_P1_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
