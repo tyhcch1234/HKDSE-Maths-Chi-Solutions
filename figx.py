@@ -24,6 +24,10 @@ VIOLET = "#7c3aed"
 FONT = "Noto Serif CJK TC, Georgia, serif"
 
 
+def _esc(t):
+    return str(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 def _n(x):
     return ("%.1f" % x).rstrip("0").rstrip(".")
 
@@ -175,7 +179,7 @@ class Canvas:
                 a = T(p)
                 o.append('<text x="%s" y="%s" font-size="%s" fill="%s" text-anchor="%s" '
                          'font-family="%s">%s</text>'
-                         % (_n(a[0] + dx), _n(a[1] + dy), size, col, anchor, FONT, tx))
+                         % (_n(a[0] + dx), _n(a[1] + dy), size, col, anchor, FONT, _esc(tx)))
             elif k == "ang":
                 _, a, v, b, tx, r, col, w, lr = it
                 a0 = math.degrees(math.atan2(a[1] - v[1], a[0] - v[0]))
@@ -196,7 +200,7 @@ class Canvas:
                     o.append('<text x="%s" y="%s" font-size="10.5" fill="%s" text-anchor="middle" '
                              'font-family="%s">%s</text>'
                              % (_n(ctr[0] + rr * lr * math.cos(mid)),
-                                _n(ctr[1] - rr * lr * math.sin(mid) + 3.5), col, FONT, tx))
+                                _n(ctr[1] - rr * lr * math.sin(mid) + 3.5), col, FONT, _esc(tx)))
             elif k == "right":
                 _, v, a, b, sz, col = it
                 ua = _unit(v, a)
