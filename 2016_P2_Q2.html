@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第2題 · 主項變換</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第2題</span>
+    <h1>$x$ 在分母：先隔離，再通分，後取倒數</h1>
+    <p class="sub">公式與數列 · 主項變換</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $\dfrac{a}{x}+\dfrac{b}{y}=3$，則 $x=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{ay}{3y-b}$</li><li><span class="ol">B</span>$\dfrac{ay}{b-3y}$</li><li><span class="ol">C</span>$\dfrac{by}{3y-a}$</li><li><span class="ol">D</span>$\dfrac{by}{a-3y}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先把含 $x$ 的項單獨留在左邊</div>
+      <div class="rule">
+        <span class="rule-name">移項</span>
+        目標是 $x$，而 $x$ 在分母，故先把 $\dfrac{a}{x}$ 隔離出來。
+      </div>
+      <p>$$\frac{a}{x}=3-\frac{b}{y}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">右邊通分為單一分數</div>
+      <div class="rule">
+        <span class="rule-name">通分</span>
+        $3=\dfrac{3y}{y}$，故 $3-\dfrac{b}{y}=\dfrac{3y-b}{y}$。
+      </div>
+      <p>$$\frac{a}{x}=\frac{3y-b}{y}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取倒數，令 $x$ 變成分子</div>
+      <div class="rule">
+        <span class="rule-name">取倒數</span>
+        若 $\dfrac{a}{x}=\dfrac{p}{q}$，則 $\dfrac{x}{a}=\dfrac{q}{p}$，即 $x=\dfrac{aq}{p}$。
+      </div>
+      <p>$$\frac{x}{a}=\frac{y}{3y-b}\quad\Longrightarrow\quad x=\frac{ay}{3y-b}$$</p>
+      <p>（其中 $y\neq0$、$3y-b\neq0$。）</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">對照選項</div>
+      <div class="rule">
+        <span class="rule-name">選項分析</span>
+        B 的分母符號相反（等於把答案乘 $-1$）；C、D 把 $a$ 與 $b$ 對調，但分子的 $a$ 來自左邊的 $\dfrac{a}{x}$，不會換成 $b$。
+      </div>
+      <p>驗算：取 $a=2$、$b=1$、$y=2$，則 $\dfrac{2}{x}=3-\dfrac{1}{2}=\dfrac{5}{2}$，得 $x=\dfrac{4}{5}$。</p>
+      <p>代入答案：$\dfrac{ay}{3y-b}=\dfrac{(2)(2)}{6-1}=\dfrac{4}{5}$ ✓</p>
+      <p>故答案為 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{ay}{3y-b}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{p}{x}-\dfrac{q}{y}=2$，則 $x=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$\dfrac{py}{2y+q}$</li><li><span class="ol">B</span>$\dfrac{py}{2y-q}$</li><li><span class="ol">C</span>$\dfrac{qy}{2y+p}$</li><li><span class="ol">D</span>$\dfrac{qy}{p-2y}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 隔離：$\dfrac{p}{x}=2+\dfrac{q}{y}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 通分：$2+\dfrac{q}{y}=\dfrac{2y+q}{y}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取倒數：$x=\dfrac{py}{2y+q}$，即 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$\dfrac{py}{2y+q}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

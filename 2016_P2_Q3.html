@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第3題 · 平方差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第3題</span>
+    <h1>平方差：$a^{2}-b^{2}=(a+b)(a-b)$</h1>
+    <p class="sub">多項式 · 因式分解</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      因式分解：
+      $$16-(2x-3y)^{2}=$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(4-2x-3y)(4+2x+3y)$</li><li><span class="ol">B</span>$(4-2x-3y)(4+2x-3y)$</li><li><span class="ol">C</span>$(4-2x+3y)(4+2x+3y)$</li><li><span class="ol">D</span>$(4-2x+3y)(4+2x-3y)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">認出「平方減平方」</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        $a^{2}-b^{2}=(a+b)(a-b)$。此處 $a^{2}=16$、$b^{2}=(2x-3y)^{2}$，故 $a=4$、$b=2x-3y$。
+      </div>
+      <p>$$16-(2x-3y)^{2}=4^{2}-(2x-3y)^{2}$$</p>
+      <p>$$=\big[4+(2x-3y)\big]\big[4-(2x-3y)\big]$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">小心拆括號時的負號</div>
+      <div class="rule">
+        <span class="rule-name">去括號變號</span>
+        $4-(2x-3y)=4-2x+3y$。括號前是減號，括號內每一項都要變號。
+      </div>
+      <p>$$=\left(4+2x-3y\right)\left(4-2x+3y\right)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對照選項，找出錯在哪裡</div>
+      <div class="rule">
+        <span class="rule-name">選項分析</span>
+        A 只在第一個括號變號，第二個括號漏了 $3y$ 的變號；B 把第二個括號寫成 $4+2x-3y$，等於用了 $(a+b)(a+b)$；C 把第一個括號的 $2x$ 漏了變號。
+      </div>
+      <p>驗算：取 $x=1$、$y=1$，左邊 $=16-(2-3)^{2}=16-1=15$；</p>
+      <p>右邊（D）$=(4-2+3)(4+2-3)=(5)(3)=15$ ✓</p>
+      <p>故答案為 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$(4-2x+3y)(4+2x-3y)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $9-(x-2y)^{2}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$(3-x+2y)(3+x-2y)$</li><li><span class="ol">B</span>$(3-x-2y)(3+x+2y)$</li><li><span class="ol">C</span>$(3-x+2y)(3+x+2y)$</li><li><span class="ol">D</span>$(3-x-2y)(3+x-2y)$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 平方差：$9-(x-2y)^{2}=3^{2}-(x-2y)^{2}=\big[3+(x-2y)\big]\big[3-(x-2y)\big]$。</div>
+          <div class="p-step"><b>第 2 步.</b> 化簡：$(3+x-2y)(3-x+2y)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 對照選項為 <b>A</b>（兩個括號次序可交換）。</div>
+          <div class="p-ans">答案：<b>A</b>（$(3-x+2y)(3+x-2y)$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

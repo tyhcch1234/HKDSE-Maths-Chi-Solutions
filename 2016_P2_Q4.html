@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第4題 · 有效數字與小數位</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第4題</span>
+    <h1>四個選項，四種取捨方式</h1>
+    <p class="sub">估算、近似與誤差 · 有效數字、小數位</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $$0.0765403=$$
+    </div>
+    <ol class="opts">
+      <li><span class="ol">A</span>$0.076$（準確至 2 位有效數字）</li>
+      <li><span class="ol">B</span>$0.0765$（準確至 3 個小數位）</li>
+      <li><span class="ol">C</span>$0.07654$（準確至 4 位有效數字）</li>
+      <li><span class="ol">D</span>$0.076540$（準確至 5 個小數位）</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先標出第一個有效數字</div>
+      <div class="rule">
+        <span class="rule-name">有效數字</span>
+        由第一個非零數字開始數。$0.0765403$ 中的 $0$、$0$、$7$ 之前的零只是定位，第一個有效數字是 $7$。
+      </div>
+      <p>各位數字依次為 $0,\ 7,\ 6,\ 5,\ 4,\ 0,\ 3$，其中 $7$ 是第 1 位有效數字（位於第 2 個小數位）。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">逐項檢查</div>
+      <div class="rule">
+        <span class="rule-name">四捨五入</span>
+        保留位的下一位 $\ge 5$ 便進一，否則不變。
+      </div>
+      <p><b>A</b>：2 位有效數字 → 取 $7,6$，下一位是 $5$，進一得 $0.077$ $\ne 0.076$ ✗</p>
+      <p><b>B</b>：3 個小數位 → 取 $0.076$，下一位是 $5$，進一得 $0.077$ $\ne 0.0765$ ✗</p>
+      <p><b>C</b>：4 位有效數字 → 取 $7,6,5,4$，下一位是 $0$，不變得 $0.07654$ ✓</p>
+      <p><b>D</b>：5 個小數位 → 取 $0.07654$（第 6 個小數位是 $0$），選項寫成 $0.076540$ 已是 6 個小數位 ✗</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">結論</div>
+      <div class="rule">
+        <span class="rule-name">易錯點</span>
+        「有效數字」由第一個非零數字起數，而「小數位」由小數點後第一位起數，兩者起點不同。
+      </div>
+      <p>只有 C 與原數相等，故答案為 <b>C</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$0.07654$，準確至 4 位有效數字）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 將 $0.0045062$ 準確至 4 位有效數字。</div>
+      <ol class="opts p-opts">
+        <li><span class="ol">A</span>$0.0045$</li>
+        <li><span class="ol">B</span>$0.00451$</li>
+        <li><span class="ol">C</span>$0.004506$</li>
+        <li><span class="ol">D</span>$0.004507$</li>
+      </ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 前三個零只作定位，第一個有效數字是 $4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $4$ 起取 4 位：$4,\ 5,\ 0,\ 6$，即 $0.004506$。</div>
+          <div class="p-step"><b>第 3 步.</b> 下一位是 $2$，小於 $5$，不需進一，故結果為 $0.004506$，即 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$0.004506$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2016_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

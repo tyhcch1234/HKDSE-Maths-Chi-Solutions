@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第5題 · 聯立方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第5題</span>
+    <h1>只需 $\beta$：直接消去 $\alpha$</h1>
+    <p class="sub">方程 · 二元一次聯立方程（消去法）</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若
+      $$\begin{cases}4\alpha+\beta=5\quad\ldots(1)\\[4pt] 7\alpha+3\beta=5\quad\ldots(2)\end{cases}$$
+      則 $\beta=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-3$</li><li><span class="ol">B</span>$-2$</li><li><span class="ol">C</span>$2$</li><li><span class="ol">D</span>$3$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">決定消去哪一個未知數</div>
+      <div class="rule">
+        <span class="rule-name">消去法</span>
+        只要兩個方程中某個未知數的係數相同，兩式相減便可把它消去；本題先把 $\beta$ 的係數湊成相同，消去 $\beta$ 後先求出 $\alpha$。
+      </div>
+      <p>若直接消去 $\alpha$，要把 $(1)$ 乘 $7$、$(2)$ 乘 $4$（因 $\alpha$ 的係數 $4$ 與 $7$ 的最小公倍數是 $28$），數字較大。</p>
+      <p>改用另一條路：$(1)$ 的 $\beta$ 係數是 $1$，把 $(1)$ 乘 $3$ 便與 $(2)$ 的 $3\beta$ 相同，兩式相減先求得 $\alpha$，再代回求 $\beta$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">$(1)\times3$ 後與 $(2)$ 相減</div>
+      <div class="rule">
+        <span class="rule-name">同係數相減</span>
+        兩式 $\beta$ 的係數同為 $3$，直接相減便可消去 $\beta$，只剩 $\alpha$。
+      </div>
+      <p>$(1)\times3$：$12\alpha+3\beta=15\quad\ldots(3)$</p>
+      <p>$(3)-(2)$：$(12\alpha+3\beta)-(7\alpha+3\beta)=15-5$</p>
+      <p>$$5\alpha=10\quad\Longrightarrow\quad \alpha=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代回求 $\beta$</div>
+      <div class="rule">
+        <span class="rule-name">代入</span>
+        把 $\alpha=2$ 代入較簡單的 $(1)$。
+      </div>
+      <p>$$4(2)+\beta=5\quad\Longrightarrow\quad 8+\beta=5\quad\Longrightarrow\quad \beta=-3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">驗算並對照選項</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        代入 $(2)$：$7(2)+3(-3)=14-9=5$ ✓，兩式同時成立。
+      </div>
+      <p>故 $\beta=-3$，答案為 <b>A</b>。</p>
+      <p>常見錯誤：把 $\alpha=2$ 當成答案（那是選項 C）；或代入時符號出錯得 $\beta=3$（選項 D）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\beta=-3$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $2p+3q=13$ 及 $4p-q=5$，則 $q=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$1$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$3$</li><li><span class="ol">D</span>$4$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $(2)$ 得 $q=4p-5$（這是最快的一步，因為 $q$ 的係數是 $-1$）。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入 $(1)$：$2p+3(4p-5)=13$，即 $14p-15=13$，$14p=28$，$p=2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代回：$q=4(2)-5=3$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算 $(1)$：$2(2)+3(3)=4+9=13$ ✓。</div>
+          <div class="p-ans">答案：<b>C</b>（$q=3$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2016_P2_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

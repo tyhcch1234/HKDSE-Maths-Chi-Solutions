@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2016 卷二 第1題 · 指數律</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2016 · 卷二 · 第1題</span>
+    <h1>把 $8$ 換成 $2^{3}$，再合成 $10$ 的冪</h1>
+    <p class="sub">指數定律 · 冪的冪、積的冪</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡下列各數。
+      $$8^{222}\cdot 5^{666}=$$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$10^{666}$</li><li><span class="ol">B</span>$10^{888}$</li><li><span class="ol">C</span>$40^{666}$</li><li><span class="ol">D</span>$40^{888}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $8$ 寫成 $2^{3}$</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        $\left(a^{m}\right)^{n}=a^{mn}$。$8=2^{3}$，故 $8^{222}=\left(2^{3}\right)^{222}=2^{666}$。
+      </div>
+      <p>兩個底數 $8$ 與 $5$ 沒有公共底數，但 $8=2^{3}$，所以先統一成質因數的底。</p>
+      <p>$$8^{222}\cdot 5^{666}=\left(2^{3}\right)^{222}\cdot 5^{666}=2^{666}\cdot 5^{666}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用積的冪合成 $10$ 的冪</div>
+      <div class="rule">
+        <span class="rule-name">積的冪</span>
+        $a^{n}\cdot b^{n}=(ab)^{n}$（指數相同時，底數可以相乘）。
+      </div>
+      <p>現在兩個指數都是 $666$：</p>
+      <p>$$2^{666}\cdot 5^{666}=(2\times 5)^{666}=10^{666}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對照選項，檢查三個常見錯誤</div>
+      <div class="rule">
+        <span class="rule-name">選項分析</span>
+        B 把指數 $222+666=888$ 直接相加（指數相加只適用於同底數相乘）；C 把 $8\times5=40$ 當成底數（底數不同，指數相同也不能這樣合）；D 同時犯上兩個錯誤。
+      </div>
+      <p>驗算（縮小規模）：$8^{2}\cdot5^{6}=64\times15625=1\,000\,000=10^{6}=10^{3\times2}$，符合規律。</p>
+      <p>故答案為 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$10^{666}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $2^{400}\cdot 5^{400}$。</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$10^{400}$</li><li><span class="ol">B</span>$10^{800}$</li><li><span class="ol">C</span>$7^{400}$</li><li><span class="ol">D</span>$10^{1600}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 指數同為 $400$，用積的冪：$2^{400}\cdot5^{400}=(2\times5)^{400}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $2\times5=10$，故結果為 $10^{400}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 選項 B 把指數相加成 $800$；選項 C 把底數相加成 $7$；選項 D 把指數相乘。答案為 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$10^{400}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2016_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
