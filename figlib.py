@@ -114,7 +114,7 @@ class Fig:
             elif kind == "label":
                 _, p, text, dx, dy, color, size, anchor = it
                 o = T(p)
-                out.append(f'<text x="{o[0]+dx:.1f}" y="{o[1]+dy:.1f}" font-size="{size}" fill="{color}" text-anchor="{anchor}" font-family="ui-sans-serif,system-ui,sans-serif">{text}</text>')
+                out.append(f'<text x="{o[0]+dx:.1f}" y="{o[1]+dy:.1f}" font-size="{size}" fill="{color}" text-anchor="{anchor}" font-family="Noto Serif CJK TC, Georgia, serif">{text}</text>')
         out.append('<defs><marker id="ah" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">'
                    '<path d="M0,0 L6,3 L0,6 z" fill="currentColor"/></marker></defs>')
         out.append("</svg>")
