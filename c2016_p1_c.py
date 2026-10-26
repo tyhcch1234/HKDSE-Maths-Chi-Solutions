@@ -136,7 +136,7 @@ QUESTIONS = [
  'q': r'''圖 2 顯示一個四面體形式的幾何模型 $ABCD$。已知 $\angle BAD=86^{\circ}$、$\angle CBD=43^{\circ}$、$AB=10\ \text{cm}$、$AC=6\ \text{cm}$、$BC=8\ \text{cm}$ 及 $BD=15\ \text{cm}$。
 (a) 求 $\angle ABD$ 及 $CD$。
 (b) 有工匠聲稱 $AB$ 與面 $BCD$ 之間的角是 $\angle ABC$。你是否同意？試解釋。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q19.png" alt="2016 卷一第 19 題：四面體 ABCD"><figcaption>圖 2：四面體 $ABCD$（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q19.png" alt="2016 卷一 Q19：四面體 ABCD"><figcaption>圖 2：四面體 $ABCD$（原卷附圖）</figcaption></figure>
 ''',
  'steps': [
    (r'(a) 在 $\triangle ABD$ 用正弦定理', ('正弦定理', r'$\dfrac{AB}{\sin\angle ADB}=\dfrac{BD}{\sin\angle BAD}$。'),

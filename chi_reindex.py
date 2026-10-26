@@ -25,7 +25,7 @@ def section_for(year):
         nums = sorted(int(re.search(r'Q(\d+)\.html', f).group(1)) for f in files)
         if not nums:
             continue
-        chips = ''.join('<a class="chip" href="%s_%s_Q%d.html">第%d題</a>'
+        chips = ''.join('<a class="chip" href="%s_%s_Q%d.html">Q%d</a>'
                         % (year, paper, n, n) for n in nums)
         blocks.append('<h3 class="paper-label">%s <span class="cnt">%d 題</span></h3>'
                       '<div class="group">%s</div>' % (label, len(nums), chips))

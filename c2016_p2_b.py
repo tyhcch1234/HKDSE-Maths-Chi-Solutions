@@ -6,7 +6,7 @@ QUESTIONS = [
  'h1': '$x=0$ 時 $y$ 為負，$a$ 必為負；最高點決定 $b$',
  'sub': '三角學 · 三角函數的圖像',
  'q': r'''設 $a$、$b$ 為常數。若下圖為 $y=a\cos 2x^{\circ}$ 的圖像，則''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q37.png" alt="2016 卷二第 37 題：y = a cos 2x 度的圖像，最高點在 x = b"><figcaption>圖：圖像的最高點為 $(b,2)$（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q37.png" alt="2016 卷二 Q37：y = a cos 2x 度的圖像，最高點在 x = b"><figcaption>圖：圖像的最高點為 $(b,2)$（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$a=-2$ 且 $b=90$', r'$a=-2$ 且 $b=360$', r'$a=2$ 且 $b=90$', r'$a=2$ 且 $b=360$'],
  'steps': [
@@ -72,7 +72,7 @@ QUESTIONS = [
  'h1': r'放入坐標系，用叉積一次算出 $\sin\angle PFQ$',
  'sub': '三角學 · 立體圖形中的角',
  'q': r'''圖中 $ABCDEFGH$ 為一個長方體。$AC$ 與 $BD$ 相交於 $P$。$Q$ 為 $CH$ 上的一點，使得 $CQ=9\ \text{cm}$ 及 $QH=15\ \text{cm}$。求 $\sin\angle PFQ$。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q39.png" alt="2016 卷二第 39 題：長方體 ABCDEFGH，P 為底面中心，Q 在 CH 上"><figcaption>圖：$AB=16\ \text{cm}$、$BC=12\ \text{cm}$、$CH=24\ \text{cm}$（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q39.png" alt="2016 卷二 Q39：長方體 ABCDEFGH，P 為底面中心，Q 在 CH 上"><figcaption>圖：$AB=16\ \text{cm}$、$BC=12\ \text{cm}$、$CH=24\ \text{cm}$（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$\dfrac{33}{65}$', r'$\dfrac{56}{65}$', r'$\dfrac{13}{5\sqrt{181}}$', r'$\dfrac{58}{13\sqrt{181}}$'],
  'steps': [
@@ -111,7 +111,7 @@ QUESTIONS = [
  'h1': '切線夾角定出圓心角，再用圓周角與三角形內角和',
  'sub': '幾何 · 圓與切線',
  'q': r'''圖中 $AC$ 為圓 $ABCD$ 的直徑。$PB$ 及 $PD$ 為該圓的切線。$AD$ 延長與 $BC$ 延長相交於 $Q$。若 $\angle BPD=68^{\circ}$，則 $\angle AQB=$''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q40.png" alt="2016 卷二第 40 題：圓 ABCD，AC 為直徑，PB、PD 為切線，AD 與 BC 延長交於 Q"><figcaption>圖：$PB$、$PD$ 為切線，$AD$ 與 $BC$ 延長後交於 $Q$（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q40.png" alt="2016 卷二 Q40：圓 ABCD，AC 為直徑，PB、PD 為切線，AD 與 BC 延長交於 Q"><figcaption>圖：$PB$、$PD$ 為切線，$AD$ 與 $BC$ 延長後交於 $Q$（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$22^{\circ}$', r'$28^{\circ}$', r'$32^{\circ}$', r'$34^{\circ}$'],
  'steps': [
@@ -244,7 +244,7 @@ QUESTIONS = [
 I. 該分佈的上四分位數是 $55$ 分。
 II. Ada 在該測驗的標準分低於 $2$。
 III. 該分佈的標準差大於 $12$ 分。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q44.png" alt="2016 卷二第 44 題：成績的莖葉圖"><figcaption>圖：莖（十位）與葉（個位）（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q44.png" alt="2016 卷二 Q44：成績的莖葉圖"><figcaption>圖：莖（十位）與葉（個位）（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'只有 I', r'只有 II', r'只有 I 及 III', r'只有 II 及 III'],
  'steps': [

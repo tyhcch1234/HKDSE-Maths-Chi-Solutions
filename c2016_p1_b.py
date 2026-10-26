@@ -42,7 +42,7 @@ QUESTIONS = [
  'q': r'''下表顯示花園內植物高度的頻數分佈及累積頻數分佈。
 (a) 求 $x$、$y$ 及 $z$。
 (b) 若從花園隨機選出一株植物，求所選植物高度小於 $1.25$ m 但不小於 $0.65$ m 的概率。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q9.png" alt="2016 卷一第 9 題的頻數及累積頻數分佈表"><figcaption>圖：頻數分佈表（左）與累積頻數分佈表（右）（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q9.png" alt="2016 卷一 Q9的頻數及累積頻數分佈表"><figcaption>圖：頻數分佈表（左）與累積頻數分佈表（右）（原卷附圖）</figcaption></figure>
 ''',
  'steps': [
    ('先由「小於 0.35」讀出第一組', ('累積頻數', r'「小於 $0.35$」只覆蓋 $0.1$–$0.3$ 這一組，所以它的累積頻數就是該組的頻數。'),
@@ -154,7 +154,7 @@ QUESTIONS = [
 (b) 現有四位兒童加入這組，他們的年齡各不相同，而這組兒童年齡的範圍維持不變。求
 (i) 這組兒童年齡的可能最大中位數，
 (ii) 這組兒童年齡的可能最小平均數。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q12.png" alt="2016 卷一第 12 題的棒形圖：6 至 10 歲的兒童人數"><figcaption>圖：各年齡的兒童人數（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q12.png" alt="2016 卷一 Q12的棒形圖：6 至 10 歲的兒童人數"><figcaption>圖：各年齡的兒童人數（原卷附圖）</figcaption></figure>
 ''',
  'steps': [
    ('(a) 由中位數鎖定中間位置', ('中位數', r'數據個數為偶數時，中位數是第 $\frac{N}{2}$ 與第 $\frac{N}{2}+1$ 個數據的平均。'),
@@ -198,7 +198,7 @@ QUESTIONS = [
 (b) 設 $AD=15\ \text{cm}$、$BD=7\ \text{cm}$ 及 $DE=18\ \text{cm}$。
 (i) 求 $AM$。
 (ii) $\triangle ABE$ 是否直角三角形？試解釋。''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q13.png" alt="2016 卷一第 13 題：三角形 ABC，D、M、E 在 BC 上"><figcaption>圖 1：$D$、$M$、$E$ 依次位於 $BC$ 上（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q13.png" alt="2016 卷一 Q13：三角形 ABC，D、M、E 在 BC 上"><figcaption>圖 1：$D$、$M$、$E$ 依次位於 $BC$ 上（原卷附圖）</figcaption></figure>
 ''',
  'steps': [
    ('(a) 先證 $AD=AE$', ('等角對等邊', r'在 $\triangle ADE$ 中，$D$、$E$ 在 $BC$ 上且 $D$ 在 $E$ 左邊，故 $\angle ADE=\angle ADC$，而 $\angle AED=180^{\circ}-\angle AEB$。'),

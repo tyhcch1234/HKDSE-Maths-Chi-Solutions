@@ -9,7 +9,7 @@ QUESTIONS = [
 I. $a+c=180^{\circ}$
 II. $a+b-c=180^{\circ}$
 III. $b+c=360^{\circ}$''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q15.png" alt="2016 卷二第 15 題：兩平行線之間的折線，標示角 a、b、c"><figcaption>圖：上下兩條直線平行（箭頭標記），折線在 $b$ 的頂點轉向（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q15.png" alt="2016 卷二 Q15：兩平行線之間的折線，標示角 a、b、c"><figcaption>圖：上下兩條直線平行（箭頭標記），折線在 $b$ 的頂點轉向（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'只有 I', r'只有 II', r'只有 I 及 III', r'只有 II 及 III'],
  'steps': [
@@ -48,7 +48,7 @@ III. $b+c=360^{\circ}$''',
  'h1': r'菱形給平行，圓心給等半徑，兩邊夾出 $87^{\circ}$',
  'sub': '幾何 · 菱形與圓',
  'q': r'''圖中 $ABCD$ 為菱形。$C$ 為圓 $BDE$ 的圓心，而 $ADE$ 是一條直線。$BE$ 與 $CD$ 相交於 $F$。若 $\angle ADC=118^{\circ}$，則 $\angle DFE=$''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q22.png" alt="2016 卷二第 22 題：菱形 ABCD 與以 C 為圓心的圓，BE 與 CD 交於 F"><figcaption>圖：$C$ 為圓心，$B$、$D$、$E$ 在圓上（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q22.png" alt="2016 卷二 Q22：菱形 ABCD 與以 C 為圓心的圓，BE 與 CD 交於 F"><figcaption>圖：$C$ 為圓心，$B$、$D$、$E$ 在圓上（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$59^{\circ}$', r'$62^{\circ}$', r'$78^{\circ}$', r'$87^{\circ}$'],
  'steps': [
@@ -85,7 +85,7 @@ III. $b+c=360^{\circ}$''',
  'h1': '對稱軸要整塊圖形對摺重合，不是旋轉重合',
  'sub': '幾何 · 對稱',
  'q': r'''下圖由八個相同的正六邊形組成。該圖形的反射對稱軸數目是''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q23.png" alt="2016 卷二第 23 題：八個正六邊形組成的圖形"><figcaption>圖：八個相同的正六邊形（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q23.png" alt="2016 卷二 Q23：八個正六邊形組成的圖形"><figcaption>圖：八個相同的正六邊形（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$2$', r'$4$', r'$6$', r'$8$'],
  'steps': [
@@ -227,7 +227,7 @@ III. $uv$ 是整數。''',
  'h1': '線性函數的極值一定在頂點出現，逐點代入即可',
  'sub': '不等式與線性規劃 · 極值',
  'q': r'''圖中 $PQ$ 與 $SR$ 均平行於 $x$ 軸。若 $(x,y)$ 為陰影區域 $PQRS$（包括邊界）內的一點，則 $7y-5x+3$ 在哪一點取得最大值？''',
- 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q35.png" alt="2016 卷二第 35 題：陰影區域 PQRS 與兩條直線"><figcaption>圖：$P$、$Q$ 在 $y=6$ 上，$S$、$R$ 在 $y=12$ 上（原卷附圖）</figcaption></figure>
+ 'fig': r'''    <figure class="fig"><img src="figures/2016_P2_Q35.png" alt="2016 卷二 Q35：陰影區域 PQRS 與兩條直線"><figcaption>圖：$P$、$Q$ 在 $y=6$ 上，$S$、$R$ 在 $y=12$ 上（原卷附圖）</figcaption></figure>
 ''',
  'opts': [r'$P$', r'$Q$', r'$R$', r'$S$'],
  'steps': [
