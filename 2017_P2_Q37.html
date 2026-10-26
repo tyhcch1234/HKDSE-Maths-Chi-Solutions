@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第37題 · 線性規劃</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第37題</span>
+    <h1>先找可行區域的三個頂點</h1>
+    <p class="sub">不等式 · 線性規劃 · 最大值</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下不等式組：
+\[\begin{cases} y \le 9\\ x-y-9 \le 0\\ x+y-9 \ge 0\end{cases}\]
+設 $R$ 為代表上述不等式組解的區域。若 $(x,y)$ 為 $R$ 內的一點，則 $x-2y+43$ 的最大值為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$25$</li><li><span class="ol">B</span>$43$</li><li><span class="ol">C</span>$52$</li><li><span class="ol">D</span>$61$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三條邊界線寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">邊界</span>
+        <span class="rule-math">$y=9$，$x-y=9$，$x+y=9$</span>
+        <span class="rule-why">把不等號換成等號，就是圍出區域的三條直線。</span>
+      </div>
+      三條邊界線分別是
+\[y=9,\qquad x-y=9,\qquad x+y=9.\]
+$R$ 是她們圍成的三角形（包含邊界）。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求三個頂點</div>
+      <div class="rule">
+        <span class="rule-name">兩線相交</span>
+        <span class="rule-math">$(18,9)$、$(9,0)$、$(0,9)$</span>
+        <span class="rule-why">每兩條邊界線解一次聯立方程，就得到一個頂點。</span>
+      </div>
+      \[y=9\ \text{與}\ x-y=9:\ x=18\ \Rightarrow (18,9);\]
+\[x-y=9\ \text{與}\ x+y=9:\ x=9,\ y=0\ \Rightarrow (9,0);\]
+\[x+y=9\ \text{與}\ y=9:\ x=0\ \Rightarrow (0,9).\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">逐個頂點代入目標函數</div>
+      <div class="rule">
+        <span class="rule-name">最大值必在頂點</span>
+        <span class="rule-math">$x-2y+43$</span>
+        <span class="rule-why">線性函數在凸多邊形區域上的最大值、最小值一定在頂點達到。</span>
+      </div>
+      \[(18,9):\ 18-18+43=43;\]
+\[(9,0):\ 9-0+43=52;\]
+\[(0,9):\ 0-18+43=25.\]
+最大值為 $52$，答案為 <b>C</b>。<br>
+選項 B（$43$）正是 $(18,9)$ 的值；只要漏掉一個頂點，就會選錯。    <figure class="fig">
+      <svg viewBox="0 0 400 270" width="400" height="270" role="img" aria-label="不等式組的可行區域 R">
+        <line x1="40" y1="220" x2="370" y2="220" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="60" y1="255" x2="60" y2="30" stroke="currentColor" stroke-width="1.2"/>
+        <polygon points="60,85 195,220 330,85" fill="#93c5fd" fill-opacity="0.45" stroke="#1d4ed8" stroke-width="1.6"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11">
+          <text x="52" y="238">O</text>
+          <text x="356" y="238" font-style="italic">x</text>
+          <text x="66" y="40" font-style="italic">y</text>
+          <text x="36" y="88">9</text>
+          <text x="195" y="238" text-anchor="middle">9</text>
+          <text x="330" y="238" text-anchor="middle">18</text>
+          <text x="150" y="150" fill="#1d4ed8">R</text>
+        </g>
+      </svg>
+      <figcaption>三條邊界線圍出三角形 $R$，頂點為 $(0,9)$、$(9,0)$、$(18,9)$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$52$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮不等式組 $y\le4$、$x-y\le4$、$x+y\ge4$。若 $(x,y)$ 在可行區域內，則 $x+3y$ 的最大值為</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$12$</li><li><span class="ol">B</span>$16$</li><li><span class="ol">C</span>$20$</li><li><span class="ol">D</span>$24$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 頂點：$y=4$ 與 $x-y=4$ 交於 $(8,4)$；$x-y=4$ 與 $x+y=4$ 交於 $(4,0)$；$x+y=4$ 與 $y=4$ 交於 $(0,4)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代入：$(8,4)\to20$；$(4,0)\to4$；$(0,4)\to12$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大值 $20$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$20$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q36.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q38.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

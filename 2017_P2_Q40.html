@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第40題 · 圓與切線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第40題</span>
+    <h1>切線垂直半徑，半徑兩兩相等</h1>
+    <p class="sub">圓的性質 · 切線 · 等腰三角形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$O$ 為圓 $ABC$ 的圓心，$DE$ 為圓於 $A$ 的切線。若 $\angle BAD=68^{\circ}$、$\angle BCO=26^{\circ}$，則 $\angle ABC=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$42^{\circ}$</li><li><span class="ol">B</span>$48^{\circ}$</li><li><span class="ol">C</span>$54^{\circ}$</li><li><span class="ol">D</span>$64^{\circ}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">切線垂直半徑</div>
+      <div class="rule">
+        <span class="rule-name">切線性質</span>
+        <span class="rule-math">$\angle DAO=90^{\circ}$</span>
+        <span class="rule-why">切線與接觸點的半徑互相垂直。</span>
+      </div>
+      \[\angle DAO=90^{\circ}\ \Longrightarrow\ \angle BAO=90^{\circ}-68^{\circ}=22^{\circ}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用 $OA=OB$ 與 $OB=OC$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形</span>
+        <span class="rule-math">$OA=OB\Rightarrow\angle ABO=\angle BAO$；$OB=OC\Rightarrow\angle OBC=\angle BCO$</span>
+        <span class="rule-why">同圓的半徑相等，所以兩個三角形都是等腰三角形。</span>
+      </div>
+      在 $\triangle ABO$ 中 $OA=OB$，故 $\angle ABO=22^{\circ}$。<br>
+在 $\triangle BCO$ 中 $OB=OC$，故 $\angle OBC=\angle BCO=26^{\circ}$。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把兩個角相加</div>
+      <div class="rule">
+        <span class="rule-name">角相加</span>
+        <span class="rule-math">$\angle ABC=\angle ABO+\angle OBC$</span>
+        <span class="rule-why">$OB$ 在 $\angle ABC$ 的內部，把它分成兩個角。</span>
+      </div>
+      \[\angle ABC=22^{\circ}+26^{\circ}=48^{\circ}.\]
+答案為 <b>B</b>。<br>
+驗算：$\angle AOB=136^{\circ}$、$\angle BOC=128^{\circ}$，故 $\angle AOC=96^{\circ}$；
+$OA=OC$ 給出 $\angle OAC=42^{\circ}$，與圖中位置一致。    <figure class="fig">
+      <svg viewBox="0 0 400 310" width="400" height="310" role="img" aria-label="圓 ABC，DE 為切線，切點為 A">
+        <circle cx="190" cy="150" r="105" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="40" y1="255" x2="340" y2="255" stroke="currentColor" stroke-width="1.4"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="190" y1="255" x2="190" y2="150"/>
+          <line x1="190" y1="150" x2="115" y2="74"/>
+          <line x1="190" y1="150" x2="291" y2="133"/>
+          <line x1="190" y1="255" x2="115" y2="74"/>
+          <line x1="115" y1="74" x2="291" y2="133"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="12">
+          <text x="196" y="158" font-style="italic">O</text>
+          <text x="100" y="64" font-style="italic">B</text>
+          <text x="296" y="130" font-style="italic">C</text>
+          <text x="186" y="278" font-style="italic">A</text>
+          <text x="30" y="272" font-style="italic">D</text>
+          <text x="342" y="272" font-style="italic">E</text>
+          <text x="222" y="236">68°</text>
+          <text x="252" y="176">26°</text>
+        </g>
+      </svg>
+      <figcaption>$DE$ 為圓於 $A$ 的切線，$O$ 為圓心；$ngle BAD=68^{\circ}$、$ngle BCO=26^{\circ}$。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$48^{\circ}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $O$ 為圓 $ABC$ 的圓心，$DE$ 為圓於 $A$ 的切線。若 $\angle BAD=72^{\circ}$、$\angle BCO=31^{\circ}$，則 $\angle ABC=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$41^{\circ}$</li><li><span class="ol">B</span>$45^{\circ}$</li><li><span class="ol">C</span>$49^{\circ}$</li><li><span class="ol">D</span>$53^{\circ}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle BAO=90^{\circ}-72^{\circ}=18^{\circ}$，$OA=OB\Rightarrow\angle ABO=18^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $OB=OC\Rightarrow\angle OBC=31^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle ABC=18^{\circ}+31^{\circ}=49^{\circ}$，答案 <b>C</b>。</div>
+          <div class="p-ans">答案：<b>C</b>（$49^{\circ}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q39.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q41.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

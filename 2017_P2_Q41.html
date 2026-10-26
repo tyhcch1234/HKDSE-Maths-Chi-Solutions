@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第41題 · 內切圓與坐標</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第41題</span>
+    <h1>內切圓圓心在 $(r,r)$</h1>
+    <p class="sub">坐標幾何 · 內切圓 · 畢氏定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $O$ 為原點，點 $P$、$Q$ 的坐標分別為 $(p,0)$、$(0,q)$，其中 $p$、$q$ 為正數。若 $\triangle OPQ$ 的內切圓圓心在直線 $3x+4y=3p$ 上，則 $p:q=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$2:3$</li><li><span class="ol">B</span>$4:3$</li><li><span class="ol">C</span>$4:9$</li><li><span class="ol">D</span>$7:24$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">內切圓圓心的坐標</div>
+      <div class="rule">
+        <span class="rule-name">到兩軸等距</span>
+        <span class="rule-math">$I=(r,r)$</span>
+        <span class="rule-why">圓與 $x$ 軸、$y$ 軸都相切，圓心到兩軸的距離都等於半徑 $r$。</span>
+      </div>
+      圓與 $x$ 軸、$y$ 軸相切，所以圓心 $I$ 到兩軸的距離都是 $r$，即
+\[I=(r,r).\]
+把它代入 $3x+4y=3p$：
+\[3r+4r=3p\ \Longrightarrow\ r=\frac{3p}{7}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用「切線長相等」表示 $PQ$</div>
+      <div class="rule">
+        <span class="rule-name">切線長</span>
+        <span class="rule-math">$PQ=(p-r)+(q-r)$</span>
+        <span class="rule-why">由 $P$ 引出的兩條切線等長，$Q$ 亦然，故 $PQ=p+q-2r$。</span>
+      </div>
+      由 $P$、$Q$ 引出的切線分別等長：
+\[PQ=(p-r)+(q-r)=p+q-2r=p+q-\frac{6p}{7}=\frac{p}{7}+q.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用畢氏定理求 $p:q$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">$p^{2}+q^{2}=PQ^{2}$</span>
+        <span class="rule-why">$\triangle OPQ$ 在 $O$ 處是直角。</span>
+      </div>
+      \[p^{2}+q^{2}=\left(\frac{p}{7}+q\right)^{2}
+=\frac{p^{2}}{49}+\frac{2pq}{7}+q^{2}.\]
+兩邊減去 $q^{2}$：
+\[p^{2}-\frac{p^{2}}{49}=\frac{2pq}{7}
+\ \Longrightarrow\ \frac{48p^{2}}{49}=\frac{2pq}{7}
+\ \Longrightarrow\ \frac{p}{q}=\frac{2}{7}\times\frac{49}{48}=\frac{7}{24}.\]
+答案為 <b>D</b>。<br>
+選項 A（$2:3$）是把 $r=\dfrac{3p}{7}$ 誤當成 $r=\dfrac{3p}{5}$ 的結果。    <figure class="fig">
+      <svg viewBox="0 0 340 300" width="340" height="300" role="img" aria-label="直角三角形 OPQ 及其內切圓">
+        <polygon points="60,260 172,260 60,68" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="84" cy="236" r="24" fill="none" stroke="#1d4ed8" stroke-width="1.6"/>
+        <line x1="20" y1="260" x2="300" y2="260" stroke="currentColor" stroke-width="1"/>
+        <line x1="60" y1="290" x2="60" y2="30" stroke="currentColor" stroke-width="1"/>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="46" y="276">O</text>
+          <text x="176" y="276">P</text>
+          <text x="46" y="62">Q</text>
+          <text x="90" y="232">I</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11">
+          <text x="112" y="276">(p, 0)</text>
+          <text x="6" y="52">(0, q)</text>
+        </g>
+      </svg>
+      <figcaption>$	riangle OPQ$ 的內切圓圓心 $I$ 在直線 $3x+4y=3p$ 上。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$7:24$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $O$ 為原點，$P(p,0)$、$Q(0,q)$，$p$、$q$ 為正數。若 $\triangle OPQ$ 的內切圓圓心在 $3x+4y=3p$ 上，則 $q:p=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$7:24$</li><li><span class="ol">B</span>$24:7$</li><li><span class="ol">C</span>$3:4$</li><li><span class="ol">D</span>$4:3$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 同上得 $\dfrac{p}{q}=\dfrac{7}{24}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 取倒數：$\dfrac{q}{p}=\dfrac{24}{7}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（$24:7$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q40.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q42.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

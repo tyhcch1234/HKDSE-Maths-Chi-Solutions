@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第38題 · 餘弦定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第38題</span>
+    <h1>先求對角線，再用餘弦定理</h1>
+    <p class="sub">三角學 · 餘弦定理 · 長方形</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中，$ABCD$ 為長方形。若 $E$ 為 $AC$ 上的一點，使 $AE=30\text{ cm}$，則 $DE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$3\sqrt{65}\text{ cm}$</li><li><span class="ol">B</span>$5\sqrt{29}\text{ cm}$</li><li><span class="ol">C</span>$\sqrt{641}\text{ cm}$</li><li><span class="ol">D</span>$25\text{ cm}$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用畢氏定理求對角線 $AC$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">$AC=\sqrt{28^{2}+21^{2}}$</span>
+        <span class="rule-why">長方形的對角線把直角分成兩個直角三角形。</span>
+      </div>
+      \[AC=\sqrt{28^{2}+21^{2}}=\sqrt{784+441}=\sqrt{1225}=35\text{ cm}.\]
+留意 $21,28,35$ 是 $3,4,5$ 的 $7$ 倍。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $\angle CAD$ 的餘弦</div>
+      <div class="rule">
+        <span class="rule-name">餘弦</span>
+        <span class="rule-math">$\cos\angle CAD=\dfrac{AD}{AC}$</span>
+        <span class="rule-why">在直角三角形 $ACD$ 中，$\angle CAD$ 的鄰邊是 $AD$、斜邊是 $AC$。</span>
+      </div>
+      \[\cos\angle CAD=\frac{AD}{AC}=\frac{21}{35}=\frac{3}{5}.\]
+$E$ 在 $AC$ 上，所以 $\angle DAE=\angle DAC$，餘弦值相同。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">在 $\triangle ADE$ 用餘弦定理</div>
+      <div class="rule">
+        <span class="rule-name">餘弦定理</span>
+        <span class="rule-math">$DE^{2}=AD^{2}+AE^{2}-2\cdot AD\cdot AE\cos\angle DAE$</span>
+        <span class="rule-why">已知兩邊 $AD=21$、$AE=30$ 及其夾角，正是餘弦定理的標準情況。</span>
+      </div>
+      \[DE^{2}=21^{2}+30^{2}-2(21)(30)\left(\frac{3}{5}\right)
+=441+900-756=585.\]
+\[DE=\sqrt{585}=\sqrt{9\times65}=3\sqrt{65}\text{ cm}.\]
+答案為 <b>A</b>。<br>
+選項 B（$5\sqrt{29}$）來自把 $AE$ 誤當成 $EC=5$ 來計算，方向完全相反。    <figure class="fig">
+      <svg viewBox="0 0 380 290" width="380" height="290" role="img" aria-label="長方形 ABCD，E 在對角線 AC 上">
+        <rect x="60" y="80" width="240" height="140" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="60" y1="220" x2="300" y2="80"/>
+          <line x1="60" y1="80" x2="266" y2="100"/>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">
+          <text x="50" y="240">A</text>
+          <text x="306" y="240">B</text>
+          <text x="306" y="76">C</text>
+          <text x="50" y="76">D</text>
+          <text x="268" y="112">E</text>
+        </g>
+        <g fill="currentColor" font-family="Georgia,serif" font-size="11">
+          <text x="176" y="240" text-anchor="middle">28 cm</text>
+          <text x="312" y="158">21 cm</text>
+        </g>
+      </svg>
+      <figcaption>長方形 $ABCD$ 中 $AB=28$ cm、$AD=21$ cm，$E$ 在對角線 $AC$ 上且 $AE=30$ cm。</figcaption>
+    </figure>
+
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$3\sqrt{65}\text{ cm}$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中，$ABCD$ 為長方形，$AB=16\text{ cm}$、$AD=12\text{ cm}$。$E$ 為 $AC$ 上的一點，使 $AE=15\text{ cm}$。則 $DE=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$3\sqrt{17}\text{ cm}$</li><li><span class="ol">B</span>$5\sqrt{13}\text{ cm}$</li><li><span class="ol">C</span>$2\sqrt{38}\text{ cm}$</li><li><span class="ol">D</span>$12\text{ cm}$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC=\sqrt{256+144}=20$，$\cos\angle CAD=\dfrac{12}{20}=\dfrac35$。</div>
+          <div class="p-step"><b>第 2 步.</b> $DE^{2}=144+225-2(12)(15)\left(\dfrac35\right)=369-216=153$。</div>
+          <div class="p-step"><b>第 3 步.</b> $DE=3\sqrt{17}$，答案 <b>A</b>。</div>
+          <div class="p-ans">答案：<b>A</b>（$3\sqrt{17}\text{ cm}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q37.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q39.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

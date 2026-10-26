@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第36題 · 等差數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第36題</span>
+    <h1>只比較相鄰項之差</h1>
+    <p class="sub">數列 · 等差數列</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下列何者為等差數列？
+<br>I. $\pi^{30},\ \pi^{45},\ \pi^{60}$
+<br>II. $30\pi,\ 45\pi,\ 60\pi$
+<br>III. $\pi-30,\ \pi-45,\ \pi-60$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">等差數列的定義</div>
+      <div class="rule">
+        <span class="rule-name">公差</span>
+        <span class="rule-math">$a_{2}-a_{1}=a_{3}-a_{2}$</span>
+        <span class="rule-why">相鄰兩項之差必須相等，而不是「數字越長越有規律」。</span>
+      </div>
+      一個數列是等差數列，若且唯若存在常數 $d$ 使
+\[a_{2}-a_{1}=a_{3}-a_{2}=d.\]
+所以只需逐個選項計算兩次相減。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">檢驗 I：指數形式</div>
+      <div class="rule">
+        <span class="rule-name">相減</span>
+        <span class="rule-math">$\pi^{45}-\pi^{30}=\pi^{30}(\pi^{15}-1)$</span>
+        <span class="rule-why">指數相同才可以合併；這裡提出 $\pi^{30}$ 之後，差仍然含 $\pi^{15}$。</span>
+      </div>
+      \[\pi^{45}-\pi^{30}=\pi^{30}\left(\pi^{15}-1\right),\qquad
+\pi^{60}-\pi^{45}=\pi^{45}\left(\pi^{15}-1\right).\]
+兩者不相等（相差 $\pi^{15}$ 倍），所以 I <b>不是</b>等差數列。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 II 與 III</div>
+      <div class="rule">
+        <span class="rule-name">相減</span>
+        <span class="rule-math">$45\pi-30\pi=15\pi$，$60\pi-45\pi=15\pi$</span>
+        <span class="rule-why">II 的公差是 $15\pi$；III 每項都是「$\pi$ 減去一個數」，公差是 $-15$。</span>
+      </div>
+      II：
+\[45\pi-30\pi=15\pi,\qquad 60\pi-45\pi=15\pi,\] 公差相同，<b>是</b>等差數列。<br>
+III：
+\[(\pi-45)-(\pi-30)=-15,\qquad (\pi-60)-(\pi-45)=-15,\] 公差相同，<b>是</b>等差數列。
+
+所以只有 II 及 III，答案為 <b>C</b>。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 II 及 III）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下列何者為等差數列？
+<br>I. $5,\ 10,\ 15$
+<br>II. $1,\ 4,\ 9$
+<br>III. $2\pi,\ 4\pi,\ 6\pi$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> I：$10-5=5$、$15-10=5$，公差相同，是等差。</div>
+          <div class="p-step"><b>第 2 步.</b> II：$4-1=3$、$9-4=5$，不相同，不是等差。</div>
+          <div class="p-step"><b>第 3 步.</b> III：$2\pi$ 為公差，是等差。答案 <b>B</b>。</div>
+          <div class="p-ans">答案：<b>B</b>（只有 I 及 III）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q35.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><a href="2017_P2_Q37.html">下一題 ›</a></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
