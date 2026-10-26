@@ -54,14 +54,14 @@ III. $b+c=360^{\circ}$''',
  'steps': [
    ('把「圓心」翻譯成等長', ('圓的半徑', r'圓上任何一點到圓心的距離都等於半徑。'),
     r'''<p>$B$、$D$、$E$ 都在圓上，故 $CB=CD=CE$。又 $ABCD$ 是菱形，$CB=CD=AB=AD$，所以 $CB=CD=CE$。</p>'''),
-   ('求 $\triangle CDE$ 的角', ('等腰三角形', r'$CD=CE$，故底角相等：$\angle CDE=\angle CED$。'),
+   (r'求 $\triangle CDE$ 的角', ('等腰三角形', r'$CD=CE$，故底角相等：$\angle CDE=\angle CED$。'),
     r'''<p>因為 $ADE$ 是直線，$\angle CDE=180^{\circ}-\angle ADC=180^{\circ}-118^{\circ}=62^{\circ}$。</p>
 <p>故 $\angle CED=62^{\circ}$，而</p>
 <p>$$\angle DCE=180^{\circ}-62^{\circ}-62^{\circ}=56^{\circ}$$</p>'''),
-   ('求 $\triangle BCE$ 的頂角', ('菱形對邊平行', r'$AD\parallel BC$，故同旁內角互補：$\angle BCD=180^{\circ}-\angle ADC=62^{\circ}$。'),
+   (r'求 $\triangle BCE$ 的頂角', ('菱形對邊平行', r'$AD\parallel BC$，故同旁內角互補：$\angle BCD=180^{\circ}-\angle ADC=62^{\circ}$。'),
     r'''<p>$$\angle BCE=\angle BCD+\angle DCE=62^{\circ}+56^{\circ}=118^{\circ}$$</p>
 <p>$CB=CE$，故 $\angle CEB=\angle CBE=\dfrac{180^{\circ}-118^{\circ}}{2}=31^{\circ}$。</p>'''),
-   ('在 $\triangle CEF$ 求 $\angle CFE$，再取補角', ('對頂角與補角', r'$D$、$F$、$C$ 共線，故 $\angle DFE$ 與 $\angle CFE$ 互補。'),
+   (r'在 $\triangle CEF$ 求 $\angle CFE$，再取補角', ('對頂角與補角', r'$D$、$F$、$C$ 共線，故 $\angle DFE$ 與 $\angle CFE$ 互補。'),
     r'''<p>在 $\triangle CEF$ 中：$\angle CEF=31^{\circ}$（$E$、$F$、$B$ 共線）、$\angle ECF=\angle ECD=56^{\circ}$，故</p>
 <p>$$\angle CFE=180^{\circ}-31^{\circ}-56^{\circ}=93^{\circ}$$</p>
 <p>$$\therefore\ \angle DFE=180^{\circ}-93^{\circ}=87^{\circ}$$</p>

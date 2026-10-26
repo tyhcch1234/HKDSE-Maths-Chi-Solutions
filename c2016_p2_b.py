@@ -44,10 +44,10 @@ QUESTIONS = [
    ('把方程看成 $u$ 的二次式', ('代入法', r'令 $u=\sin\theta$，方程變成 $5u^{2}+u-4=0$。'),
     r'''<p>$$5u^{2}+u-4=0\ \Rightarrow\ (5u-4)(u+1)=0$$</p>
 <p>$$u=\frac{4}{5}\quad\text{或}\quad u=-1$$</p>'''),
-   ('解 $\sin\theta=\dfrac{4}{5}$', ('三角方程', r'正弦值為正，角在第一或第二象限；參考角 $\approx53.13^{\circ}$。'),
+   (r'解 $\sin\theta=\dfrac{4}{5}$', ('三角方程', r'正弦值為正，角在第一或第二象限；參考角 $\approx53.13^{\circ}$。'),
     r'''<p>$$\theta\approx53.13^{\circ}\quad\text{或}\quad \theta\approx180^{\circ}-53.13^{\circ}=126.87^{\circ}$$</p>
 <p>兩個解都在 $0^{\circ}$ 至 $360^{\circ}$ 之內。</p>'''),
-   ('解 $\sin\theta=-1$', None,
+   (r'解 $\sin\theta=-1$', None,
     r'''<p>$$\theta=270^{\circ}$$</p>
 <p>只有一個解（在 $0^{\circ}$ 至 $360^{\circ}$ 內，正弦值為 $-1$ 的角只有 $270^{\circ}$）。</p>'''),
    ('合計根的分數', None,
@@ -85,7 +85,7 @@ QUESTIONS = [
    ('寫出兩個向量', None,
     r'''<p>$$\overrightarrow{FP}=(8,6,-24),\qquad \overrightarrow{FQ}=(16,12,-15)$$</p>
 <p>$$|\overrightarrow{FP}|=\sqrt{64+36+576}=26,\qquad |\overrightarrow{FQ}|=\sqrt{256+144+225}=25$$</p>'''),
-   ('用叉積求 $\sin$', ('叉積', r'$|\mathbf{u}\times\mathbf{v}|=|\mathbf{u}||\mathbf{v}|\sin\theta$。'),
+   (r'用叉積求 $\sin$', ('叉積', r'$|\mathbf{u}\times\mathbf{v}|=|\mathbf{u}||\mathbf{v}|\sin\theta$。'),
     r'''<p>$$\overrightarrow{FP}\times\overrightarrow{FQ}=
     \begin{vmatrix}\mathbf{i}&\mathbf{j}&\mathbf{k}\\ 8&6&-24\\ 16&12&-15\end{vmatrix}
     =(198,\,-264,\,0)$$</p>
@@ -123,7 +123,7 @@ QUESTIONS = [
    ('用直徑所對的圓周角', ('半圓上的圓周角', r'$AC$ 為直徑，故 $\angle ABC=90^{\circ}$。'),
     r'''<p>$$\angle ABC=90^{\circ}$$</p>
 <p>因為 $Q$ 在 $BC$ 的延長線上，$\angle ABQ=\angle ABC=90^{\circ}$。</p>'''),
-   ('在 $\triangle ABQ$ 用內角和', None,
+   (r'在 $\triangle ABQ$ 用內角和', None,
     r'''<p>$$\angle AQB=180^{\circ}-\angle QAB-\angle ABQ=180^{\circ}-56^{\circ}-90^{\circ}=34^{\circ}$$</p>
 <p>其中 $\angle QAB=\angle DAB=56^{\circ}$（$Q$ 在 $AD$ 的延長線上）。答案為 <b>D</b>。</p>'''),
  ],

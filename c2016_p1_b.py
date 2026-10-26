@@ -210,7 +210,7 @@ QUESTIONS = [
 <p>因為 $BD=CE$，所以 $DC=BE$。</p>
 <p>在 $\triangle ACD$ 與 $\triangle ABE$ 中：$AD=AE$（已證）、$\angle ADC=\angle AEB$（已知）、$DC=BE$（已證）。</p>
 <p>$$\therefore\ \triangle ACD\cong\triangle ABE\quad(\text{SAS})$$</p>'''),
-   ('(b)(i) 認出 $AM\perp DE$', ('等腰三角形的性質', r'$AD=AE$ 且 $M$ 為 $DE$ 的中點（$DM=EM$），所以 $AM$ 是底邊上的中線，也是高。'),
+   (r'(b)(i) 認出 $AM\perp DE$', ('等腰三角形的性質', r'$AD=AE$ 且 $M$ 為 $DE$ 的中點（$DM=EM$），所以 $AM$ 是底邊上的中線，也是高。'),
     r'''<p>$DE=18$，故 $DM=ME=9$。在直角三角形 $AMD$ 中</p>
 <p>$$AM=\sqrt{AD^{2}-DM^{2}}=\sqrt{15^{2}-9^{2}}=\sqrt{144}=12\ \text{cm}$$</p>'''),
    ('(b)(ii) 求 $AB$ 與 $BE$', ('畢氏定理', r'$AM\perp BC$，故 $\triangle AMB$ 是直角三角形。'),

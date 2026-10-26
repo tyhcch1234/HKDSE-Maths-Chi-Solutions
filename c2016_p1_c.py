@@ -139,13 +139,13 @@ QUESTIONS = [
  'fig': r'''    <figure class="fig"><img src="figures/2016_P1_Q19.png" alt="2016 卷一第 19 題：四面體 ABCD"><figcaption>圖 2：四面體 $ABCD$（原卷附圖）</figcaption></figure>
 ''',
  'steps': [
-   ('(a) 在 $\triangle ABD$ 用正弦定理', ('正弦定理', r'$\dfrac{AB}{\sin\angle ADB}=\dfrac{BD}{\sin\angle BAD}$。'),
+   (r'(a) 在 $\triangle ABD$ 用正弦定理', ('正弦定理', r'$\dfrac{AB}{\sin\angle ADB}=\dfrac{BD}{\sin\angle BAD}$。'),
     r'''<p>$$\frac{10}{\sin\angle ADB}=\frac{15}{\sin 86^{\circ}}$$</p>
 <p>$$\sin\angle ADB=\frac{10\sin86^{\circ}}{15}=0.6652\ldots$$</p>
 <p>$$\angle ADB\approx41.69^{\circ}\quad(\text{或 }138.31^{\circ}\text{，因 }86^{\circ}+138.31^{\circ} \gt 180^{\circ}\text{ 而捨去})$$</p>'''),
-   ('(a) 用三角形內角和求 $\angle ABD$', None,
+   (r'(a) 用三角形內角和求 $\angle ABD$', None,
     r'''<p>$$\angle ABD=180^{\circ}-86^{\circ}-41.69^{\circ}\approx52.3^{\circ}$$</p>'''),
-   ('(a) 在 $\triangle BCD$ 用餘弦定理', ('餘弦定理', r'$CD^{2}=BC^{2}+BD^{2}-2(BC)(BD)\cos\angle CBD$。'),
+   (r'(a) 在 $\triangle BCD$ 用餘弦定理', ('餘弦定理', r'$CD^{2}=BC^{2}+BD^{2}-2(BC)(BD)\cos\angle CBD$。'),
     r'''<p>$$CD^{2}=8^{2}+15^{2}-2(8)(15)\cos43^{\circ}\approx113.47$$</p>
 <p>$$CD\approx10.7\ \text{cm}$$</p>'''),
    ('(b) 檢驗 $AC$ 是否垂直於面 $BCD$', ('直線與平面的夾角', r'$AB$ 與面 $BCD$ 的夾角，是 $AB$ 與它在該平面上的投影之間的角。若 $AC\perp$ 面 $BCD$，投影便是 $CB$，夾角才會是 $\angle ABC$。'),
