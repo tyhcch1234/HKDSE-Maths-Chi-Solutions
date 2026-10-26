@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第22題 · 圓形性質</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第22題</span>
+  <h1>同弓形內的角相等</h1>
+  <p class="sub">圓形 · 半圓上的角與同弓形內的角</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $A$、$B$、$C$、$D$、$E$ 共圓。若 $AB=10\ \text{cm}$、$BC=5\ \text{cm}$、$\angle ABC=90^{\circ}$ 及 $\angle CED=40^{\circ}$，求 $CD$（準確至最接近的 cm）。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$5\ \text{cm}$</li><li><span class="ol">B</span>$6\ \text{cm}$</li><li><span class="ol">C</span>$7\ \text{cm}$</li><li><span class="ol">D</span>$8\ \text{cm}$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q22.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在直角三角形 $ABC$ 求 $AC$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(AC^{2}=AB^{2}+BC^{2}\)</span>
+        <span class="rule-why">$AC=\sqrt{10^{2}+5^{2}}=\sqrt{125}$。</span>
+      </div>
+      <p>$$AC=\sqrt{10^{2}+5^{2}}=\sqrt{125}\approx11.18\ \text{cm}$$</p>
+      <p>因 $\angle ABC=90^{\circ}$，$AC$ 就是圓的直徑。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">半圓上的角是直角</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的角</span>
+        <span class="rule-math">\(\angle\text{in semicircle}=90^{\circ}\)</span>
+        <span class="rule-why">$AC$ 為直徑，故 $D$ 處的圓周角也是直角。</span>
+      </div>
+      <p>$$\angle ADC=90^{\circ}$$</p>
+      <p>（亦可用圓內接四邊形對角互補：$\angle ADC=180^{\circ}-90^{\circ}=90^{\circ}$。）</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">同弓形內的角相等</div>
+      <div class="rule">
+        <span class="rule-name">同弓形內的角</span>
+        <span class="rule-math">\(\angle CAD=\angle CED\)</span>
+        <span class="rule-why">兩角同立於弦 $CD$ 上。</span>
+      </div>
+      <p>$$\angle CAD=\angle CED=40^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">在直角三角形 $ACD$ 用正弦求 $CD$</div>
+      <div class="rule">
+        <span class="rule-name">正弦比</span>
+        <span class="rule-math">\(\sin\theta=\dfrac{\text{對邊}}{\text{斜邊}}\)</span>
+        <span class="rule-why">$CD=\sqrt{125}\sin40^{\circ}\approx7.19$。</span>
+      </div>
+      <p>$$CD=AC\sin40^{\circ}=\sqrt{125}\times0.6428\approx7.19\ \text{cm}$$</p>
+      <p>準確至最接近的 cm，$CD\approx7\ \text{cm}$，答案 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$7\ \text{cm}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $A$、$B$、$C$、$D$、$E$ 共圓，$AB=8\ \text{cm}$、$BC=6\ \text{cm}$、$\angle ABC=90^{\circ}$，且 $\angle CED=35^{\circ}$。求 $CD$（準確至最接近的 cm）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $AC=\sqrt{8^{2}+6^{2}}=10\ \text{cm}$，且 $AC$ 為直徑。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle ADC=90^{\circ}$（半圓上的角）。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle CAD=\angle CED=35^{\circ}$（同弓形內的角）。</div>
+          <div class="p-step"><b>第 4 步.</b> $CD=10\sin35^{\circ}\approx5.74\approx6\ \text{cm}$。</div>
+          <div class="p-ans">答案：$6\ \text{cm}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q21.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q23.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

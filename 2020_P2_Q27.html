@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第27題 · 圓方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第27題</span>
+  <h1>圓心、半徑與相交條件</h1>
+  <p class="sub">坐標幾何 · 圓的方程</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C_{1}$ 及 $C_{2}$ 的方程分別為 $2x^{2}+2y^{2}+4x+8y-149=0$ 及 $x^{2}+y^{2}-8x-20y-53=0$。下列何者正確？<br>
+      I. $C_{1}$ 的圓心在 $C_{2}$ 上。<br>
+      II. $C_{1}$ 與 $C_{2}$ 的半徑相等。<br>
+      III. $C_{1}$ 與 $C_{2}$ 相交於兩個相異點。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把 $C_{1}$ 化為標準形式</div>
+      <div class="rule">
+        <span class="rule-name">圓的標準式</span>
+        <span class="rule-math">\(x^{2}+y^{2}+Dx+Ey+F=0\)</span>
+        <span class="rule-why">圓心 $\left(-\dfrac{D}{2},-\dfrac{E}{2}\right)$、半徑 $r=\sqrt{\left(\dfrac{D}{2}\right)^{2}+\left(\dfrac{E}{2}\right)^{2}-F}$。</span>
+      </div>
+      <p>全式除以 $2$：$$x^{2}+y^{2}+2x+4y-74.5=0$$</p>
+      <p>$$O_{1}=(-1,-2),\qquad r_{1}=\sqrt{1+4+74.5}=\sqrt{79.5}\approx8.92$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $C_{2}$ 的圓心與半徑</div>
+      <p>$$O_{2}=(4,10),\qquad r_{2}=\sqrt{16+100+53}=\sqrt{169}=13$$</p>
+      <p>$r_{2}=13$，而不是 $\sqrt{82}$——代入時要同時計入 $\left(\dfrac{D}{2}\right)^{2}$ 與 $\left(\dfrac{E}{2}\right)^{2}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">檢驗 I：$O_{1}$ 是否在 $C_{2}$ 上</div>
+      <div class="rule">
+        <span class="rule-name">點在圓上</span>
+        <span class="rule-math">代入圓方程得 $0$</span>
+        <span class="rule-why">$(-1)^{2}+(-2)^{2}-8(-1)-20(-2)-53=0$。</span>
+      </div>
+      <p>$$1+4+8+40-53=0$$</p>
+      <p>故 $O_{1}$ 在 $C_{2}$ 上，陳述 I 正確。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">檢驗 II 及 III</div>
+      <div class="rule">
+        <span class="rule-name">兩圓相交條件</span>
+        <span class="rule-math">\(|r_{1}-r_{2}|<d<r_{1}+r_{2}\)</span>
+        <span class="rule-why">$d=13$、$r_{1}+r_{2}\approx21.92$、$|r_{1}-r_{2}|\approx4.08$。</span>
+      </div>
+      <p>II：$r_{1}=\sqrt{79.5}\approx8.92\ne13=r_{2}$，故 II 不正確。</p>
+      <p>III：$$d=O_{1}O_{2}=\sqrt{(4+1)^{2}+(10+2)^{2}}=\sqrt{25+144}=13$$</p>
+      <p>$4.08<13<21.92$，即 $|r_{1}-r_{2}|<d<r_{1}+r_{2}$，故兩圓相交於兩點，III 正確。</p>
+      <p>只有 I 及 III 成立，答案 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（只有 I 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $C_{1}:x^{2}+y^{2}-4x-6y+9=0$、$C_{2}:x^{2}+y^{2}-12x-10y+36=0$。求兩圓圓心的距離及相交點的數目。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $C_{1}$：圓心 $(2,3)$，$r_{1}=\sqrt{4+9-9}=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $C_{2}$：圓心 $(6,5)$，$r_{2}=\sqrt{36+25-36}=5$。</div>
+          <div class="p-step"><b>第 3 步.</b> $d=\sqrt{16+4}=2\sqrt{5}\approx4.47$。</div>
+          <div class="p-step"><b>第 4 步.</b> $3<4.47<7$，即 $|r_{2}-r_{1}|<d<r_{1}+r_{2}$，相交於兩點。</div>
+          <div class="p-ans">答案：$d=2\sqrt{5}\approx4.47$，相交於兩點</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q26.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q28.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

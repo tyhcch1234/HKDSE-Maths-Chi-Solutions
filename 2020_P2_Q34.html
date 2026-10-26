@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第34題 · 線性關係</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第34題</span>
+  <h1>$x^{3}$ 與 $\sqrt{y}$ 的直線</h1>
+  <p class="sub">坐標幾何 · 線性關係的圖像</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中顯示 $x^{3}$ 與 $\sqrt{y}$ 之間的線性關係。若 $x=2$，則 $y=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>3</li><li><span class="ol">B</span>8</li><li><span class="ol">C</span>9</li><li><span class="ol">D</span>33</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q34.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出直線的兩個截距</div>
+      <p>直線與橫軸（$x^{3}$）交於 $-4$，與縱軸（$\sqrt{y}$）交於 $1$，即通過</p>
+      <p>$$(-4,0)\quad\text{及}\quad(0,1)$$</p>
+      <p>橫軸代表 $x^{3}$、縱軸代表 $\sqrt{y}$，不是 $x$ 與 $y$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求直線方程</div>
+      <div class="rule">
+        <span class="rule-name">斜率與截距</span>
+        <span class="rule-math">\(\sqrt{y}=mx^{3}+c\)</span>
+        <span class="rule-why">$m=\dfrac{1-0}{0-(-4)}=\dfrac{1}{4}$，$c=1$。</span>
+      </div>
+      <p>$$\sqrt{y}=\frac{1}{4}x^{3}+1$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">代入 $x=2$，再平方</div>
+      <div class="rule">
+        <span class="rule-name">去平方根</span>
+        <span class="rule-math">\(\left(\sqrt{y}\right)^{2}=y\)</span>
+        <span class="rule-why">$\sqrt{y}=3$ 時 $y=9$。</span>
+      </div>
+      <p>$$\sqrt{y}=\frac{1}{4}(8)+1=3$$</p>
+      <p>$$y=3^{2}=9$$</p>
+      <p>答案 C。選項 A 是忘記平方，只取 $\sqrt{y}$ 的值。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$9$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中顯示 $x^{3}$ 與 $\sqrt{y}$ 的線性關係，直線與橫軸交於 $x^{3}=-9$、與縱軸交於 $\sqrt{y}=3$。若 $x=3$，求 $y$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩點為 $(-9,0)$ 及 $(0,3)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜率 $m=\dfrac{3}{9}=\dfrac{1}{3}$，故 $\sqrt{y}=\dfrac{1}{3}x^{3}+3$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=3$：$\sqrt{y}=\dfrac{27}{3}+3=12$。</div>
+          <div class="p-step"><b>第 4 步.</b> $y=12^{2}=144$。</div>
+          <div class="p-ans">答案：$144$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q33.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q35.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

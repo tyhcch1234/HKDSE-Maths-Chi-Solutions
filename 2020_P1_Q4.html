@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第4題 · 比與比例</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第4題</span>
+  <h1>把 $b$、$c$ 都用 $a$ 表示</h1>
+  <p class="sub">率、比與變分 · 3 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $a$、$b$、$c$ 為非零數，且 $\dfrac{a}{b}=\dfrac{6}{7}$、$3a=4c$。求 $\dfrac{b+2c}{a+2b}$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把三數寫成同一個比</div>
+      <div class="rule">
+        <span class="rule-name">合併比</span>
+        <span class="rule-math">\(a:b\) 與 \(a:c\Rightarrow a:b:c\)</span>
+        <span class="rule-why">先把 $a$ 的值統一（取 $6$ 與 $4$ 的最小公倍數 $12$）。</span>
+      </div>
+      <p>由 $\dfrac{a}{b}=\dfrac{6}{7}$ 得 $a:b=6:7=12:14$；</p>
+      <p>由 $3a=4c$ 得 $a:c=4:3=12:9$。</p>
+      <p>$$\therefore\ a:b:c=12:14:9$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">引入常數 $k$ 代入</div>
+      <div class="rule">
+        <span class="rule-name">比與倍數</span>
+        <span class="rule-math">\(a:b:c=\lambda:\mu:\nu\Rightarrow(a,b,c)=(k\lambda,k\mu,k\nu)\)</span>
+        <span class="rule-why">設 $a=12k$、$b=14k$、$c=9k$，$k$ 最後會約去。</span>
+      </div>
+      <p>$$\frac{b+2c}{a+2b}=\frac{14k+2(9k)}{12k+2(14k)}=\frac{32k}{40k}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">約去 $k$ 並化簡</div>
+      <p>$$\frac{32k}{40k}=\frac{32}{40}=\frac{4}{5}$$</p>
+      <p>若 $k$ 未能約去，代表前面某個比寫錯了——這是很好的自我檢查。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{4}{5}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a$、$b$、$c$ 為非零數，$\dfrac{a}{b}=\dfrac{4}{5}$ 且 $2a=3c$。求 $\dfrac{b+3c}{a+2b}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $a:b=4:5=12:15$；$a:c=3:2=12:8$，故 $a:b:c=12:15:8$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{b+3c}{a+2b}=\dfrac{15k+24k}{12k+30k}=\dfrac{39k}{42k}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{39}{42}=\dfrac{13}{14}$。</div>
+          <div class="p-ans">答案：$\dfrac{13}{14}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

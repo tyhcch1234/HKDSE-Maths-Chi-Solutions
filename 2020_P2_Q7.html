@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第7題 · 恆等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第7題</span>
+  <h1>代入 $x=-6$ 消去 $h$</h1>
+  <p class="sub">多項式 · 恆等式與比較係數</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $h$、$k$ 為常數，且 $(x+h)(x+6)\equiv(x+4)^{2}+k$，則 $k=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-28$</li><li><span class="ol">B</span>$-16$</li><li><span class="ol">C</span>$-4$</li><li><span class="ol">D</span>$2$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">理解「$\equiv$」：對所有 $x$ 都成立</div>
+      <div class="rule">
+        <span class="rule-name">恆等式</span>
+        <span class="rule-math">\((x+h)(x+6)\equiv(x+4)^{2}+k\)</span>
+        <span class="rule-why">既然是恆等式，可以代入任何方便的 $x$ 值。</span>
+      </div>
+      <p>恆等式代表兩邊對所有 $x$ 的值都相等，所以我們有兩種做法：代入特殊值，或比較係數。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">方法一：代入 $x=-6$ 使左邊變 $0$</div>
+      <div class="rule">
+        <span class="rule-name">代入法</span>
+        <span class="rule-math">\(x=-6\Rightarrow 0=(-2)^{2}+k\)</span>
+        <span class="rule-why">$x=-6$ 令 $(x+6)=0$，未知的 $h$ 立即消失。</span>
+      </div>
+      <p>$$\big[(-6)+h\big]\big[(-6)+6\big]=\big[(-6)+4\big]^{2}+k$$</p>
+      <p>$$0=4+k\quad\Rightarrow\quad k=-4$$</p>
+      <p>這個做法最快，因為一次就把 $h$ 消掉。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">方法二：比較係數（可作驗算）</div>
+      <div class="rule">
+        <span class="rule-name">比較係數</span>
+        <span class="rule-math">\(Ax^{2}+Bx+C\equiv ax^{2}+bx+c\Rightarrow A=a,\ B=b,\ C=c\)</span>
+        <span class="rule-why">$x$ 的係數得 $h+6=8$；常數項得 $6h=k+16$。</span>
+      </div>
+      <p>左邊：$(x+h)(x+6)=x^{2}+(h+6)x+6h$；右邊：$(x+4)^{2}+k=x^{2}+8x+(k+16)$。</p>
+      <p>$$h+6=8\Rightarrow h=2;\qquad 6h=k+16\Rightarrow 12=k+16\Rightarrow k=-4$$</p>
+      <p>兩種方法結果一致，故 $k=-4$，答案為 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$k=-4$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $(x+m)(x+9)\equiv(x+6)^{2}+n$，求 $m$ 與 $n$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 代入 $x=-9$：$0=(-3)^{2}+n$，得 $n=-9$。</div>
+          <div class="p-step"><b>第 2 步.</b> 比較 $x$ 的係數：$m+9=12$，得 $m=3$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算常數項：$9m=27$，$36+n=36-9=27$，相符。</div>
+          <div class="p-ans">答案：$m=3$，$n=-9$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

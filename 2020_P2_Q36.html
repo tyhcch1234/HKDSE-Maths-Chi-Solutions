@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第36題 · 線性規劃</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第36題</span>
+  <h1>在頂點取極值</h1>
+  <p class="sub">不等式與線性規劃 · 目標函數</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮以下不等式組：$0\le x\le2$、$2x+y+3\ge0$、$x+y+1\le0$。設 $D$ 為代表上述不等式組解的區域。求常數 $k$，使 $4x+3y+k$ 的最小值為 $24$，其中 $(x,y)$ 為 $D$ 內的一點。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>25</li><li><span class="ol">B</span>27</li><li><span class="ol">C</span>37</li><li><span class="ol">D</span>53</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找區域 $D$ 的四個頂點</div>
+      <div class="rule">
+        <span class="rule-name">頂點是兩條邊界線的交點</span>
+        <span class="rule-math">\(\text{頂點}=\text{兩邊界線的交點}\)</span>
+        <span class="rule-why">逐對解聯立方程。</span>
+      </div>
+      <p>$x=0$ 與 $y=-x-1$：$(0,-1)$；</p>
+      <p>$x=2$ 與 $y=-x-1$：$(2,-3)$；</p>
+      <p>$x=2$ 與 $y=-2x-3$：$(2,-7)$；</p>
+      <p>$x=0$ 與 $y=-2x-3$：$(0,-3)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把四個頂點代入目標函數</div>
+      <div class="rule">
+        <span class="rule-name">線性規劃的頂點定理</span>
+        <span class="rule-math">\(f(x,y)=ax+by+k\) 的極值必在頂點取得</span>
+        <span class="rule-why">只需比較四個頂點的值。</span>
+      </div>
+      <p>$$(0,-1):\ -3+k;\quad(2,-3):\ -1+k$$</p>
+      <p>$$(2,-7):\ -13+k;\quad(0,-3):\ -9+k$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取最小值並解 $k$</div>
+      <p>四個值中最小的是 $-13+k$（在 $(2,-7)$ 取得）：</p>
+      <p>$$-13+k=24\quad\Rightarrow\quad k=37$$</p>
+      <p>答案 C。選項 B 是誤把 $-3+k$ 當作最小值的結果。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$k=37$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 區域 $D$ 由 $0\le x\le3$、$3x+y+4\ge0$、$x+y+2\le0$ 界定。若 $5x+2y+k$ 在 $D$ 上的最小值為 $18$，求 $k$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 邊界為 $x=0$、$x=3$、$y=-3x-4$、$y=-x-2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 頂點：$(0,-2)$、$(3,-5)$、$(3,-13)$、$(0,-4)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 目標值依次為 $-4+k$、$5+k$、$-11+k$、$-8+k$。</div>
+          <div class="p-step"><b>第 4 步.</b> 最小為 $-11+k=18$，故 $k=29$。</div>
+          <div class="p-ans">答案：$k=29$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q35.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q37.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

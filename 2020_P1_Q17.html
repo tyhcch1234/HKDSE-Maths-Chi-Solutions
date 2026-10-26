@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第17題 · 二次函數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第17題</span>
+  <h1>配方法與外心</h1>
+  <p class="sub">函數與圖像 · 配方法 · 6 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $g(x)=x^{2}-2kx+2k^{2}+4$，其中 $k$ 為實常數。<br>
+      (a) 用配方法，以 $k$ 表示 $y=g(x)$ 的圖像的頂點坐標。<br>
+      (b) 在同一坐標系上，設 $D$ 及 $E$ 分別為 $y=g(x)$ 及 $y=-g(x-2)$ 的圖像的頂點。是否存在坐標系上的一點 $F$，使 $\triangle DFE$ 的外心坐標為 $(0,3)$？試解釋。<span class="marks">[6 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">\(x^{2}+bx=\left(x+\dfrac{b}{2}\right)^{2}-\dfrac{b^{2}}{4}\)</span>
+        <span class="rule-why">$x^{2}-2kx=(x-k)^{2}-k^{2}$。</span>
+      </div>
+      <p>$$g(x)=x^{2}-2kx+k^{2}+k^{2}+4=(x-k)^{2}+k^{2}+4$$</p>
+      <p>故頂點為 $D\left(k,\ k^{2}+4\right)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 求 $E$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">圖像變換</span>
+        <span class="rule-math">\(y=-g(x-2)\)：右移 $2$ 後關於 \(x\) 軸反射</span>
+        <span class="rule-why">頂點 $(k,\,k^{2}+4)\mapsto(k+2,\,-(k^{2}+4))$。</span>
+      </div>
+      <p>$$E=\left(k+2,\ -(k^{2}+4)\right)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 外心必須與 $D$、$E$ 等距</div>
+      <p>設 $C(0,3)$。若 $C$ 為外心，必須 $CD=CE$。用平方避免根號：</p>
+      <p>$$CD^{2}=k^{2}+\left[\left(k^{2}+4\right)-3\right]^{2}=k^{2}+\left(k^{2}+1\right)^{2}=k^{4}+3k^{2}+1$$</p>
+      <p>$$CE^{2}=(k+2)^{2}+\left[-\left(k^{2}+4\right)-3\right]^{2}=(k+2)^{2}+\left(k^{2}+7\right)^{2}=k^{4}+15k^{2}+4k+53$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 令兩者相等並檢驗判別式</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">\(\Delta=b^{2}-4ac\)</span>
+        <span class="rule-why">化簡後得 $3k^{2}+k+13=0$。</span>
+      </div>
+      <p>$$k^{4}+3k^{2}+1=k^{4}+15k^{2}+4k+53\quad\Rightarrow\quad12k^{2}+4k+52=0$$</p>
+      <p>即 $$3k^{2}+k+13=0$$</p>
+      <p>$$\Delta=1^{2}-4(3)(13)=1-156=-155<0$$</p>
+      <p>方程沒有實根，即對任何實數 $k$ 都有 $CD\ne CE$。既然 $C$ 無法與 $D$、$E$ 等距，它不可能成為外心——無論 $F$ 怎樣選都不行。</p>
+      <p>故<b>不存在</b>這樣的點 $F$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\left(k,\ k^{2}+4\right)$　　(b) 不存在；因 $CD=CE$ 導致 $3k^{2}+k+13=0$，判別式 $-155<0$，無實根。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $g(x)=x^{2}-2px+2p^{2}+1$，$p$ 為實常數。(a) 用配方法求 $y=g(x)$ 的頂點坐標；(b) 有學生聲稱對某些 $p$ 而言 $g(x)=0$ 有實根，你是否同意？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(x)=(x-p)^{2}+p^{2}+1$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) 頂點 $(p,\ p^{2}+1)$，且 $p^{2}+1>0$ 恆成立。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) $\Delta=(-2p)^{2}-4(2p^{2}+1)=4p^{2}-8p^{2}-4=-4p^{2}-4<0$。</div>
+          <div class="p-step"><b>第 4 步.</b> 判別式恆為負，故無實根，不同意。</div>
+          <div class="p-ans">答案：(a) $(p,\ p^{2}+1)$　(b) 不同意，$\Delta=-4p^{2}-4<0$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

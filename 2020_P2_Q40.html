@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第40題 · 內心</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第40題</span>
+  <h1>對稱軸通過內心</h1>
+  <p class="sub">坐標幾何 · 三角形的內心</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      三角形的三條邊的方程為 $4x+3y=24$、$4x-3y=24$、$x=a$，其中 $a$ 為常數。若該三角形的內心的 $x$ 坐標為 $31$，則 $a=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>15</li><li><span class="ol">B</span>31</li><li><span class="ol">C</span>45</li><li><span class="ol">D</span>51</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求兩條斜邊的交點</div>
+      <div class="rule">
+        <span class="rule-name">加減消元</span>
+        <span class="rule-math">\((4x+3y)+(4x-3y)=48\)</span>
+        <span class="rule-why">相加消去 $y$，得 $8x=48$。</span>
+      </div>
+      <p>$$8x=48\Rightarrow x=6,\qquad y=0$$</p>
+      <p>故兩斜邊與 $x$ 軸交於 $C(6,0)$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">利用對稱：內心在 $x$ 軸上</div>
+      <p>兩斜邊的斜率為 $-\dfrac{4}{3}$ 與 $\dfrac{4}{3}$，互為相反數，故圖形關於 $x$ 軸對稱，$x$ 軸平分 $\angle ACB$。</p>
+      <p>內心 $I$ 在 $x$ 軸上，由 $x$ 坐標 $31$ 得 $I=(31,0)$，且 $IC=31-6=25$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用直角三角形求內半徑</div>
+      <div class="rule">
+        <span class="rule-name">正弦比</span>
+        <span class="rule-math">\(\sin\angle PCI=\dfrac{IP}{IC}\)</span>
+        <span class="rule-why">斜率 $\dfrac{4}{3}$ 對應 $\sin=\dfrac{4}{5}$。</span>
+      </div>
+      <p>內半徑 $r$ 等於 $I$ 到 $x=a$ 的距離，即 $r=a-31$。</p>
+      <p>$$\frac{a-31}{25}=\frac{4}{5}\quad\Rightarrow\quad a-31=20\quad\Rightarrow\quad a=51$$</p>
+      <p>答案 D。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$a=51$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 三角形三邊為 $3x+4y=24$、$3x-4y=24$、$x=a$。若內心的 $x$ 坐標為 $28$，求 $a$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 相加：$6x=48\Rightarrow x=8$、$y=0$，即 $C(8,0)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 斜率 $\pm\dfrac{3}{4}$，圖形關於 $x$ 軸對稱，內心 $I(28,0)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 內半徑 $r=a-28$，且 $\sin\angle PCI=\dfrac{3}{5}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\dfrac{a-28}{28-8}=\dfrac{3}{5}\Rightarrow a-28=12\Rightarrow a=40$。</div>
+          <div class="p-ans">答案：$a=40$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q39.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q41.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

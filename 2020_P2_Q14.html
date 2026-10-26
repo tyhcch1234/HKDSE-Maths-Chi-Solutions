@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第14題 · 誤差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第14題</span>
+  <h1>五邊形面積的範圍</h1>
+  <p class="sub">估算與誤差 · 面積的上限與下限</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $PQRST$ 為五邊形，所有量度均準確至最接近的 cm。設 $A\ \text{cm}^{2}$ 為該五邊形的實際面積，求 $A$ 的取值範圍。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$27.83\le A<31.83$</li><li><span class="ol">B</span>$44.75\le A<60.75$</li><li><span class="ol">C</span>$46.75\le A<63.25$</li><li><span class="ol">D</span>$48.25\le A<64.75$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q14.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">讀出各邊並寫出最大絕對誤差</div>
+      <div class="rule">
+        <span class="rule-name">最大絕對誤差</span>
+        <span class="rule-math">\(\text{最大絕對誤差}=\tfrac{1}{2}\times\text{最小刻度}\)</span>
+        <span class="rule-why">準確至最接近的 cm，每邊 $m$ 的實際長度滿足 $m-0.5<\text{實際}<m+0.5$。</span>
+      </div>
+      <p>由圖：$PQ=6$、$QR=10$、$RS=3$、$PT=5$（cm），且 $\angle P$、$\angle Q$、$\angle R$ 均為直角。</p>
+      <p>所以 $PQ\perp PT$、$PQ\perp QR$、$QR\perp RS$，整個五邊形就是 $10\times6$ 的長方形切去右上角的直角三角形。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用長方形減去切角表示面積</div>
+      <div class="rule">
+        <span class="rule-name">面積公式</span>
+        <span class="rule-math">\(A=QR\cdot PQ-\tfrac12(QR-PT)(PQ-RS)\)</span>
+        <span class="rule-why">切走的直角三角形兩股為 $QR-PT$ 與 $PQ-RS$。</span>
+      </div>
+      <p>$$A=10\times6-\frac{1}{2}(10-5)(6-3)=60-7.5=52.5$$</p>
+      <p>即名義面積為 $52.5\ \text{cm}^{2}$，正好落在四個選項的中間，故不能靠「大約」判斷，必須算上下限。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">下限：取各邊最小可能值</div>
+      <div class="rule">
+        <span class="rule-name">乘積的下限</span>
+        <span class="rule-math">\(a_{\min}b_{\min}\le ab\le a_{\max}b_{\max}\quad(a,b>0)\)</span>
+        <span class="rule-why">下限用 $PQ=5.5$、$QR=9.5$、$PT=4.5$、$RS=2.5$。</span>
+      </div>
+      <p>$$A_{\min}=9.5\times5.5-\frac{1}{2}(9.5-4.5)(5.5-2.5)=52.25-7.5=44.75$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">上限：取各邊最大可能值</div>
+      <p>$$A_{\max}=10.5\times6.5-\frac{1}{2}(10.5-5.5)(6.5-3.5)=68.25-7.5=60.75$$</p>
+      <p>實際面積恆在兩者之間，且上限不可取等號：</p>
+      <p>$$44.75\le A<60.75$$</p>
+      <p>故答案為 B。選項 A 是把 $10$ 與 $5$ 誤作斜邊長度來計算。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$44.75\le A<60.75$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個長方形的長與闊分別為 $12\ \text{cm}$ 及 $8\ \text{cm}$，均準確至最接近的 cm。求其實際面積 $A$ 的取值範圍。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 實際長闊滿足 $11.5\le l<12.5$、$7.5\le w<8.5$。</div>
+          <div class="p-step"><b>第 2 步.</b> 下限：$11.5\times7.5=86.25$。</div>
+          <div class="p-step"><b>第 3 步.</b> 上限：$12.5\times8.5=106.25$，故 $86.25\le A<106.25$。</div>
+          <div class="p-ans">答案：$86.25\le A<106.25\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q15.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

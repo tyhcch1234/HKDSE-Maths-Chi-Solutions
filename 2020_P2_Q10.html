@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第10題 · 比例尺</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第10題</span>
+  <h1>面積比是比例尺的平方</h1>
+  <p class="sub">率、比與變分 · 地圖比例尺</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某高爾夫球場的實際面積為 $0.75\ \text{km}^{2}$。若該球場在地圖上的面積為 $300\ \text{cm}^{2}$，則地圖的比例尺是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$1:250$</li><li><span class="ol">B</span>$1:5\,000$</li><li><span class="ol">C</span>$1:62\,500$</li><li><span class="ol">D</span>$1:25\,000\,000$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出地圖面積與實際面積之比</div>
+      <p>設比例尺為 $1:n$，即地圖上 $1\ \text{cm}$ 代表實際 $n\ \text{cm}$。</p>
+      <p>$$\frac{\text{地圖面積}}{\text{實際面積}}=\frac{300\ \text{cm}^{2}}{0.75\ \text{km}^{2}}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把實際面積化為 $\text{cm}^{2}$</div>
+      <div class="rule">
+        <span class="rule-name">面積單位換算</span>
+        <span class="rule-math">\(1\ \text{km}=10^{5}\ \text{cm}\Rightarrow1\ \text{km}^{2}=10^{10}\ \text{cm}^{2}\)</span>
+        <span class="rule-why">長度換算要平方，才是面積的換算。</span>
+      </div>
+      <p>$$0.75\ \text{km}^{2}=0.75\times\left(10^{5}\right)^{2}=0.75\times10^{10}\ \text{cm}^{2}$$</p>
+      <p>$$\frac{300}{0.75\times10^{10}}=\frac{1}{2.5\times10^{7}}=\frac{1}{25\,000\,000}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">開平方得比例尺</div>
+      <div class="rule">
+        <span class="rule-name">相似圖形的面積比</span>
+        <span class="rule-math">\(A_{1}:A_{2}=1:n^{2}\)</span>
+        <span class="rule-why">$n=\sqrt{25\,000\,000}=5\,000$。</span>
+      </div>
+      <p>面積比為 $1:n^{2}$，故</p>
+      <p>$$n=\sqrt{25\,000\,000}=5\,000$$</p>
+      <p>比例尺為 $1:5\,000$。選項 D 是面積比本身（未開方），選項 A 則錯誤地把 $300$ 當成邊長。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$1:5\,000$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 地圖上一個湖的面積為 $200\ \text{cm}^{2}$，實際面積為 $0.32\ \text{km}^{2}$。求該地圖的比例尺。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $0.32\ \text{km}^{2}=0.32\times10^{10}=3.2\times10^{9}\ \text{cm}^{2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 面積比 $=\dfrac{200}{3.2\times10^{9}}=\dfrac{1}{16\,000\,000}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $n=\sqrt{16\,000\,000}=4\,000$，比例尺為 $1:4\,000$。</div>
+          <div class="p-ans">答案：$1:4\,000$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

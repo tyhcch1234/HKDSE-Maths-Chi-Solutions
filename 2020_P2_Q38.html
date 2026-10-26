@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第38題 · 立體幾何</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第38題</span>
+  <h1>三角柱中的三角形面積</h1>
+  <p class="sub">求積法 · 直立三角柱與希羅公式</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCDEF$ 為直立三角柱，$P$ 為 $AE$ 上的一點。若 $AB=AC=12\ \text{cm}$、$AP=9\ \text{cm}$、$EP=5\ \text{cm}$ 及 $BD=2k\ \text{cm}$，求 $\triangle BDP$ 的面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\sqrt{(k^{2}-1)(196-k^{2})}$</li><li><span class="ol">B</span>$\sqrt{(k^{2}-1)(196+k^{2})}$</li><li><span class="ol">C</span>$\sqrt{(k^{2}+1)(196-k^{2})}$</li><li><span class="ol">D</span>$\sqrt{(k^{2}+1)(196+k^{2})}$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q38.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求 $BP$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(c^{2}=a^{2}+b^{2}\)</span>
+        <span class="rule-why">直立柱的側棱垂直底面，故 $\angle BAP=90^{\circ}$。</span>
+      </div>
+      <p>$$BP=\sqrt{12^{2}+9^{2}}=\sqrt{225}=15\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $DP$</div>
+      <p>同理 $\angle DEP=90^{\circ}$，且 $DE=AB=12$、$EP=5$：</p>
+      <p>$$DP=\sqrt{12^{2}+5^{2}}=\sqrt{169}=13\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $\triangle BDP$ 的半周長</div>
+      <div class="rule">
+        <span class="rule-name">半周長</span>
+        <span class="rule-math">\(s=\dfrac{a+b+c}{2}\)</span>
+        <span class="rule-why">三邊為 $2k$、$15$、$13$，故 $s=k+14$。</span>
+      </div>
+      <p>$$s=\frac{2k+15+13}{2}=k+14$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用希羅公式</div>
+      <div class="rule">
+        <span class="rule-name">希羅公式</span>
+        <span class="rule-math">\(A=\sqrt{s(s-a)(s-b)(s-c)}\)</span>
+        <span class="rule-why">$s-2k=14-k$、$s-15=k-1$、$s-13=k+1$。</span>
+      </div>
+      <p>$$A=\sqrt{(k+14)(14-k)(k-1)(k+1)}=\sqrt{(196-k^{2})(k^{2}-1)}$$</p>
+      <p>答案 A。選項 C、D 的 $k^{2}+1$ 是誤把 $(k-1)$ 與 $(k+1)$ 當成 $k^{2}+1$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\sqrt{(k^{2}-1)(196-k^{2})}\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直立三角柱 $ABCDEFG$ 中 $AB=AC=24\ \text{cm}$、$AP=18\ \text{cm}$、$EP=10\ \text{cm}$，$BD=2k\ \text{cm}$。求 $\triangle BDP$ 的面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $BP=\sqrt{24^{2}+18^{2}}=30\ \text{cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $DP=\sqrt{24^{2}+10^{2}}=26\ \text{cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $s=\dfrac{2k+56}{2}=k+28$。</div>
+          <div class="p-step"><b>第 4 步.</b> $A=\sqrt{(k+28)(28-k)(k-2)(k+2)}=\sqrt{(784-k^{2})(k^{2}-4)}$。</div>
+          <div class="p-ans">答案：$\sqrt{(k^{2}-4)(784-k^{2})}\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q37.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q39.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

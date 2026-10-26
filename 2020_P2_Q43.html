@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第43題 · 概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第43題</span>
+  <h1>用補集避開四個情況</h1>
+  <p class="sub">概率 · 組合與補集</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      箱內有 $8$ 本中文書及 $7$ 本英文書。若從箱中同時隨機抽出 $5$ 本書，求抽出至多 $3$ 本中文書的概率。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{2}{11}$</li><li><span class="ol">B</span>$\dfrac{9}{11}$</li><li><span class="ol">C</span>$\dfrac{61}{143}$</li><li><span class="ol">D</span>$\dfrac{82}{143}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數出全部選法</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">{}^{n}C_{r}=\dfrac{n!}{r!\,(n-r)!}</span>
+        <span class="rule-why">從 $15$ 本中選 $5$ 本，共 ${}^{15}C_{5}$ 種。</span>
+      </div>
+      <p>$${}^{15}C_{5}=\frac{15!}{5!\,10!}=3003$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用補集：只排除「$4$ 本中文」與「$5$ 本中文」</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        <span class="rule-math">\(P(A^{\prime})=1-P(A)\)</span>
+        <span class="rule-why">「至多 $3$ 本」的相反是「$4$ 本或 $5$ 本中文」。</span>
+      </div>
+      <p>$$P(\le3\text{ 中})=1-P(4\text{ 中})-P(5\text{ 中})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分別計算兩種情況</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">\(\text{選法}={}^{n_{1}}C_{r_{1}}\times{}^{n_{2}}C_{r_{2}}\)</span>
+        <span class="rule-why">選 $4$ 中 $1$ 英：${}^{8}C_{4}\times{}^{7}C_{1}$。</span>
+      </div>
+      <p>$$P(4\text{ 中})=\frac{{}^{8}C_{4}\times{}^{7}C_{1}}{3003}=\frac{70\times7}{3003}=\frac{490}{3003}$$</p>
+      <p>$$P(5\text{ 中})=\frac{{}^{8}C_{5}}{3003}=\frac{56}{3003}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">由 $1$ 減去</div>
+      <p>$$P=1-\frac{490+56}{3003}=1-\frac{546}{3003}=\frac{2457}{3003}=\frac{9}{11}$$</p>
+      <p>（分子分母同除以 $273$。）答案 B。選項 C、D 是直接相加 $0$–$3$ 本時算漏或多算組合的結果。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\dfrac{9}{11}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 箱內有 $6$ 本中文書及 $4$ 本英文書。若同時隨機抽出 $3$ 本，求至多 $1$ 本中文書的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部選法：${}^{10}C_{3}=120$。</div>
+          <div class="p-step"><b>第 2 步.</b> 用補集：$P(\le1\text{ 中})=1-P(2\text{ 中})-P(3\text{ 中})$。</div>
+          <div class="p-step"><b>第 3 步.</b> $P(2\text{ 中})=\dfrac{{}^{6}C_{2}\times{}^{4}C_{1}}{120}=\dfrac{60}{120}$、$P(3\text{ 中})=\dfrac{{}^{6}C_{3}}{120}=\dfrac{20}{120}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $P=1-\dfrac{60}{120}-\dfrac{20}{120}=\dfrac{40}{120}=\dfrac{1}{3}$。</div>
+          <div class="p-ans">答案：$\dfrac{1}{3}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q42.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q44.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第15題 · 扇形</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第15題</span>
+  <h1>弧長不變，角與半徑互相補償</h1>
+  <p class="sub">弧度與扇形 · 百分變化</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某扇形的角減少 $60\%$，但半徑增加 $k\%$。若該扇形的弧長保持不變，求 $k$ 的值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>40</li><li><span class="ol">B</span>60</li><li><span class="ol">C</span>67</li><li><span class="ol">D</span>150</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">寫出弧長公式</div>
+      <div class="rule">
+        <span class="rule-name">弧長</span>
+        <span class="rule-math">\(l=2\pi r\times\dfrac{\theta^{\circ}}{360^{\circ}}\)</span>
+        <span class="rule-why">弧長是圓周的 $\dfrac{\theta}{360}$。</span>
+      </div>
+      <p>$$l=2\pi r\cdot\frac{\theta}{360}=\frac{\pi r\theta}{180}$$</p>
+      <p>由於 $\dfrac{\pi}{180}$ 是常數，<b>弧長不變</b>就等價於乘積 $r\theta$ 不變。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">寫出新的角與半徑</div>
+      <div class="rule">
+        <span class="rule-name">百分變化</span>
+        <span class="rule-math">\(\text{新值}=\left(1\pm\dfrac{p}{100}\right)\times\text{舊值}\)</span>
+        <span class="rule-why">角變為 $0.4\theta$，半徑變為 $\left(1+\dfrac{k}{100}\right)r$。</span>
+      </div>
+      <p>角減少 $60\%$：新角 $=0.4\theta$。</p>
+      <p>半徑增加 $k\%$：新半徑 $=\left(1+\dfrac{k}{100}\right)r$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">令新舊乘積相等，解出 $k$</div>
+      <p>$$r\theta=\left(1+\frac{k}{100}\right)r\times0.4\theta$$</p>
+      <p>兩邊同除以 $r\theta$（$r,\theta\ne0$）：</p>
+      <p>$$1=0.4\left(1+\frac{k}{100}\right)\quad\Rightarrow\quad1+\frac{k}{100}=2.5\quad\Rightarrow\quad k=150$$</p>
+      <p>驗算：半徑變 $2.5r$、角變 $0.4\theta$，乘積仍為 $r\theta$ ✓。</p>
+      <p>選項 A、B 是誤把「角減少 $60\%$」當成「半徑只需增加 $60\%$」；選項 C 則是 $100\times\dfrac{1}{1.5}$ 的倒數錯誤。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$k=150$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某扇形的角增加 $25\%$，但半徑減少 $k\%$。若弧長保持不變，求 $k$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 弧長不變 $\Rightarrow$ 乘積 $r\theta$ 不變。</div>
+          <div class="p-step"><b>第 2 步.</b> $1.25\left(1-\dfrac{k}{100}\right)r\theta=r\theta$，故 $1-\dfrac{k}{100}=0.8$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\dfrac{k}{100}=0.2$，即 $k=20$。</div>
+          <div class="p-ans">答案：$k=20$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

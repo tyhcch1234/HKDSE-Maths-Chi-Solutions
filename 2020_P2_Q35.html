@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第35題 · 等差數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第35題</span>
+  <h1>檢驗三組數列</h1>
+  <p class="sub">數列 · 等差數列的判定</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若 $a>0$，下列何者為等差數列？<br>
+      I. $\log a^{-3},\ \log a,\ \log a^{5}$<br>
+      II. $8-4a,\ 9-5a,\ 10-6a$<br>
+      III. $\cos(90-a)^{\circ},\ \cos 90^{\circ},\ \cos(90+a)^{\circ}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I 及 II</li><li><span class="ol">B</span>只有 I 及 III</li><li><span class="ol">C</span>只有 II 及 III</li><li><span class="ol">D</span>I、II 及 III</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">檢驗等差的方法</div>
+      <div class="rule">
+        <span class="rule-name">等差數列的檢驗</span>
+        <span class="rule-math">\(T_{2}-T_{1}=T_{3}-T_{2}\)</span>
+        <span class="rule-why">相鄰兩項之差必須相等。</span>
+      </div>
+      <p>三項 $T_{1},T_{2},T_{3}$ 成等差，當且僅當後項減前項的差相等。以下逐組檢驗。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">I：用對數的冪的性質</div>
+      <div class="rule">
+        <span class="rule-name">對數的冪</span>
+        <span class="rule-math">\(\log a^{k}=k\log a\)</span>
+        <span class="rule-why">三項化為 $-3\log a$、$\log a$、$5\log a$。</span>
+      </div>
+      <p>$$T_{2}-T_{1}=\log a-(-3\log a)=4\log a,\qquad T_{3}-T_{2}=5\log a-\log a=4\log a$$</p>
+      <p>差相等，I 為等差數列 ✓。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">II：直接相減</div>
+      <p>$$T_{2}-T_{1}=(9-5a)-(8-4a)=1-a$$</p>
+      <p>$$T_{3}-T_{2}=(10-6a)-(9-5a)=1-a$$</p>
+      <p>差相等，II 為等差數列 ✓。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">III：用餘角關係</div>
+      <div class="rule">
+        <span class="rule-name">餘角關係</span>
+        <span class="rule-math">\(\cos(90^{\circ}-\theta)=\sin\theta,\ \cos(90^{\circ}+\theta)=-\sin\theta\)</span>
+        <span class="rule-why">三項化為 $\sin a^{\circ}$、$0$、$-\sin a^{\circ}$。</span>
+      </div>
+      <p>$$T_{2}-T_{1}=-\sin a^{\circ},\qquad T_{3}-T_{2}=-\sin a^{\circ}$$</p>
+      <p>差相等（公差為 $-\sin a^{\circ}$），III 為等差數列 ✓。</p>
+      <p>三組都是等差數列，答案 D。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（I、II 及 III）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $a>0$，下列何者為等差數列？I. $\log a^{-2},\ \log a^{2},\ \log a^{6}$　II. $5-3a,\ 7-5a,\ 9-7a$　III. $\sin(90-a)^{\circ},\ \sin 90^{\circ},\ \sin(90+a)^{\circ}$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> I：三項為 $-2\log a,\ 2\log a,\ 6\log a$，差同為 $4\log a$ ✓。</div>
+          <div class="p-step"><b>第 2 步.</b> II：差同為 $2-2a$ ✓。</div>
+          <div class="p-step"><b>第 3 步.</b> III：三項為 $\cos a^{\circ},\ 1,\ \cos a^{\circ}$，兩差分別為 $1-\cos a^{\circ}$ 與 $\cos a^{\circ}-1$，一般不等 ✗。</div>
+          <div class="p-ans">答案：只有 I 及 II</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q34.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q36.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

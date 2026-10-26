@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第6題 · 複合不等式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第6題</span>
+  <h1>取並集，再找最大負整數</h1>
+  <p class="sub">不等式 · 4 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      考慮複合不等式
+      $$3-x>\frac{7-x}{2}\quad\text{或}\quad5+x>4\qquad\cdots(*)$$
+      (a) 解 $(*)$。<br>
+      (b) 寫出滿足 $(*)$ 的最大負整數。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">理解「或」的意思</div>
+      <p>「或」代表取兩個解集的<b>並集</b>：只要滿足其中一個不等式即可。所以先分別解，再合併。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第一個不等式</div>
+      <div class="rule">
+        <span class="rule-name">不等式乘以正數</span>
+        <span class="rule-math">\(a<b\Rightarrow ac<bc\quad(c>0)\)</span>
+        <span class="rule-why">乘以 $2$ 清去分母，不等號不變。</span>
+      </div>
+      <p>$$3-x>\frac{7-x}{2}\quad\Rightarrow\quad2(3-x)>7-x$$</p>
+      <p>$$6-2x>7-x\quad\Rightarrow\quad-x>1\quad\Rightarrow\quad x<-1$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解第二個不等式</div>
+      <p>$$5+x>4\quad\Rightarrow\quad x>-1$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">合併兩個解集（(a) 的答案）</div>
+      <div class="rule">
+        <span class="rule-name">解集的並集</span>
+        <span class="rule-math">\(x<a$ 或 $x>a\Leftrightarrow x\ne a\)</span>
+        <span class="rule-why">兩段合起來覆蓋除 $x=a$ 以外的所有實數。</span>
+      </div>
+      <p>$$x<-1\ \text{或}\ x>-1\quad\Rightarrow\quad x\ne-1$$</p>
+      <p>唯一不滿足的是 $-1$ 本身（兩邊都不含等號）。故 (a) 的答案為 $x<-1$ 或 $x>-1$，即 $x\ne-1$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 找最大負整數</div>
+      <p>負整數為 $-1,-2,-3,\dots$；其中 $-1$ 已被排除，下一個最大的是 $-2$。</p>
+      <p>驗算：取 $x=-2$，$3-(-2)=5>\dfrac{7+2}{2}=4.5$ ✓。</p>
+      <p>故最大負整數為 $-2$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $x<-1$ 或 $x>-1$（即 $x\ne-1$）　　(b) $-2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 解不等式 $4-x>\dfrac{6-x}{2}$ 或 $3+x>5$，並由此求滿足該不等式的最大負整數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一個乘以 $2$：$8-2x>6-x$。</div>
+          <div class="p-step"><b>第 2 步.</b> 整理：$2>x$，即 $x<2$。</div>
+          <div class="p-step"><b>第 3 步.</b> 第二個：$x>2$。</div>
+          <div class="p-step"><b>第 4 步.</b> 並集為 $x<2$ 或 $x>2$，即 $x\ne2$。</div>
+          <div class="p-step"><b>第 5 步.</b> $-1$ 滿足條件，故最大負整數為 $-1$。</div>
+          <div class="p-ans">答案：$x\ne2$；最大負整數為 $-1$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q7.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

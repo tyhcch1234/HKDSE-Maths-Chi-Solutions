@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第21題 · 面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第21題</span>
+  <h1>長方形是三角形的兩倍</h1>
+  <p class="sub">幾何 · 畢氏定理的逆定理</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為長方形。$E$ 為 $AD$ 上的一點，使 $BE=8\ \text{cm}$、$CE=15\ \text{cm}$。若 $BC=17\ \text{cm}$，求長方形 $ABCD$ 的面積。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$60\ \text{cm}^{2}$</li><li><span class="ol">B</span>$68\ \text{cm}^{2}$</li><li><span class="ol">C</span>$120\ \text{cm}^{2}$</li><li><span class="ol">D</span>$136\ \text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q21.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">檢查 $\triangle BCE$ 的三邊</div>
+      <p>$BE=8$、$CE=15$、$BC=17$，先測試畢氏關係：</p>
+      <p>$$8^{2}+15^{2}=64+225=289=17^{2}$$</p>
+      <p>三邊符合 $a^{2}+b^{2}=c^{2}$，所以 $BC$ 是斜邊。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由畢氏定理的逆定理得 $\angle BEC=90^{\circ}$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        <span class="rule-math">\(a^{2}+b^{2}=c^{2}\Rightarrow\angle C=90^{\circ}\)</span>
+        <span class="rule-why">$BC$ 所對的角為直角，故 $\angle BEC=90^{\circ}$。</span>
+      </div>
+      <p>$$\angle BEC=90^{\circ}$$</p>
+      <p>因此 $BE$、$CE$ 是直角三角形的兩股。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求 $\triangle BCE$ 的面積</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">\(A=\tfrac{1}{2}ab\)</span>
+        <span class="rule-why">兩股 $8$ 與 $15$ 夾直角，可直接相乘。</span>
+      </div>
+      <p>$$[\triangle BCE]=\frac{1}{2}(8)(15)=60\ \text{cm}^{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">長方形面積是三角形的兩倍</div>
+      <div class="rule">
+        <span class="rule-name">同底同高</span>
+        <span class="rule-math">\([ABCD]=BC\times AB=2[\triangle BCE]\)</span>
+        <span class="rule-why">$\triangle BCE$ 以 $BC$ 為底，高就是長方形的闊 $AB$。</span>
+      </div>
+      <p>$$[ABCD]=2\times60=120\ \text{cm}^{2}$$</p>
+      <p>亦可用 $BC\times AB$：由面積 $60=\tfrac12(17)(AB)$ 得 $AB=\dfrac{120}{17}$，故面積為 $17\times\dfrac{120}{17}=120$。答案 C。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$120\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABCD$ 為長方形，$E$ 在 $AD$ 上使 $BE=9\ \text{cm}$、$CE=12\ \text{cm}$、$BC=15\ \text{cm}$。求長方形 $ABCD$ 的面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $9^{2}+12^{2}=225=15^{2}$，故 $\angle BEC=90^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $[\triangle BCE]=\tfrac12(9)(12)=54\ \text{cm}^{2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 長方形面積 $=2\times54=108\ \text{cm}^{2}$。</div>
+          <div class="p-ans">答案：$108\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q20.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q22.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

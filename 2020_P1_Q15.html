@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第15題 · 概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第15題</span>
+  <h1>同色與不同色的組合</h1>
+  <p class="sub">概率 · 組合 · 5 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      箱內有 $3$ 隻藍色碟、$7$ 隻綠色碟及 $9$ 隻紫色碟。若從箱中同時隨機抽出 $4$ 隻碟，求<br>
+      (a) 抽出 $4$ 隻同色碟的概率；<br>
+      (b) 抽出至少 $2$ 種不同顏色碟的概率。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數出總數與全部結果</div>
+      <div class="rule">
+        <span class="rule-name">組合</span>
+        <span class="rule-math">\(C^{n}_{r}=\dfrac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">從 $19$ 隻中選 $4$ 隻，共 $C^{19}_{4}$。</span>
+      </div>
+      <p>$$3+7+9=19$$</p>
+      <p>$$n(\text{全部})=C^{19}_{4}=\frac{19\cdot18\cdot17\cdot16}{4\cdot3\cdot2\cdot1}=3876$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 數出有利結果</div>
+      <div class="rule">
+        <span class="rule-name">組合數為零的情況</span>
+        <span class="rule-math">\(r>n\Rightarrow C^{n}_{r}=0\)</span>
+        <span class="rule-why">只有 $3$ 隻藍碟，故 $C^{3}_{4}=0$。</span>
+      </div>
+      <p>同色可以是 $4$ 藍、$4$ 綠或 $4$ 紫，但藍碟只有 $3$ 隻：</p>
+      <p>$$C^{3}_{4}=0,\qquad C^{7}_{4}=35,\qquad C^{9}_{4}=126$$</p>
+      <p>有利結果 $=0+35+126=161$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 求概率</div>
+      <p>$$P(\text{同色})=\frac{161}{3876}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 用補集</div>
+      <div class="rule">
+        <span class="rule-name">補集</span>
+        <span class="rule-math">\(P(A)=1-P(A^{\prime})\)</span>
+        <span class="rule-why">「至少 $2$ 種顏色」的相反就是「$4$ 隻同色」。</span>
+      </div>
+      <p>$$P(\text{至少 2 色})=1-\frac{161}{3876}=\frac{3715}{3876}$$</p>
+      <p>「至少 $2$ 種顏色」等價於「不是全部同色」，所以用補集最快。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{161}{3876}$　　(b) $\dfrac{3715}{3876}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 箱內有 $4$ 張紅色卡、$6$ 張藍色卡及 $5$ 張綠色卡。同時隨機抽出 $3$ 張，求 (a) 三張同色的概率；(b) 至少 $2$ 種不同顏色的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 全部結果 $=C^{15}_{3}=455$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同色：$C^{4}_{3}+C^{6}_{3}+C^{5}_{3}=4+20+10=34$。</div>
+          <div class="p-step"><b>第 3 步.</b> (a) $P=\dfrac{34}{455}$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) $P=1-\dfrac{34}{455}=\dfrac{421}{455}$。</div>
+          <div class="p-ans">答案：(a) $\dfrac{34}{455}$　(b) $\dfrac{421}{455}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q16.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

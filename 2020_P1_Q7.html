@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第7題 · 二次方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第7題</span>
+  <h1>等根條件與 $x$ 截距</h1>
+  <p class="sub">方程 · 判別式 · 5 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $p(x)=4x^{2}+12x+c$，其中 $c$ 為常數。方程 $p(x)=0$ 有等根。求<br>
+      (a) $c$；<br>
+      (b) $y=p(x)-169$ 的圖像的 $x$ 截距。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 等根 $\Rightarrow$ 判別式為零</div>
+      <div class="rule">
+        <span class="rule-name">判別式</span>
+        <span class="rule-math">\(\text{等根}\Leftrightarrow\Delta=b^{2}-4ac=0\)</span>
+        <span class="rule-why">$a=4$、$b=12$，故 $12^{2}-4(4)c=0$。</span>
+      </div>
+      <p>$$144-16c=0\quad\Rightarrow\quad c=9$$</p>
+      <p>此時 $p(x)=4x^{2}+12x+9=(2x+3)^{2}$，確為完全平方，符合等根。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 寫出新的函數</div>
+      <p>$$y=p(x)-169=4x^{2}+12x+9-169=4x^{2}+12x-160$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 因式分解</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘</span>
+        <span class="rule-math">\(x^{2}+(p+q)x+pq=(x+p)(x+q)\)</span>
+        <span class="rule-why">$x^{2}+3x-40$ 的兩數為 $8$ 與 $-5$。</span>
+      </div>
+      <p>$$y=4\left(x^{2}+3x-40\right)=4(x+8)(x-5)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 令 $y=0$ 求 $x$ 截距</div>
+      <p>$$4(x+8)(x-5)=0\quad\Rightarrow\quad x=-8\ \text{或}\ x=5$$</p>
+      <p>$x$ 截距出現在 $y=0$ 之處，故為 $-8$ 及 $5$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $c=9$　　(b) $x=-8$ 及 $x=5$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $p(x)=3x^{2}+18x+c$ 且方程 $p(x)=0$ 有等根。(a) 求 $c$；(b) 求 $y=p(x)-75$ 的圖像的 $x$ 截距。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $\Delta=0$：$18^{2}-4(3)c=0$，即 $324-12c=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $c=27$，故 $p(x)=3x^{2}+18x+27$。</div>
+          <div class="p-step"><b>第 3 步.</b> (b) $y=3x^{2}+18x+27-75=3\left(x^{2}+6x-16\right)=3(x+8)(x-2)$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) $x$ 截距為 $x=-8$ 及 $x=2$。</div>
+          <div class="p-ans">答案：(a) $c=27$　(b) $x=-8$ 及 $x=2$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

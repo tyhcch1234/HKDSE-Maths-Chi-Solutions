@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第32題 · 對數方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第32題</span>
+  <h1>換元成二次方程</h1>
+  <p class="sub">指數與對數 · 對數方程的根</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      若方程 $(\log_{\pi}x)^{2}-10\log_{\pi}x+24=\log_{\pi}x$ 的根為 $\alpha$ 及 $\beta$，則 $\alpha\beta=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\pi^{10}$</li><li><span class="ol">B</span>$\pi^{11}$</li><li><span class="ol">C</span>$\log_{\pi}10$</li><li><span class="ol">D</span>$\log_{\pi}11$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把所有 $\log_{\pi}x$ 移到同一邊</div>
+      <p>$$(\log_{\pi}x)^{2}-10\log_{\pi}x-\log_{\pi}x+24=0$$</p>
+      <p>$$(\log_{\pi}x)^{2}-11\log_{\pi}x+24=0$$</p>
+      <p>$-10\log_{\pi}x-\log_{\pi}x=-11\log_{\pi}x$，中間項係數是 $-11$ 而非 $-10$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">換元 $u=\log_{\pi}x$，用根與係數的關係</div>
+      <div class="rule">
+        <span class="rule-name">兩根之和與積</span>
+        <span class="rule-math">\(u_{1}+u_{2}=-\dfrac{b}{a},\quad u_{1}u_{2}=\dfrac{c}{a}\)</span>
+        <span class="rule-why">$u^{2}-11u+24=0$ 的兩根之和為 $11$。</span>
+      </div>
+      <p>$$u_{1}+u_{2}=11$$</p>
+      <p>即 $$\log_{\pi}\alpha+\log_{\pi}\beta=11$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用對數的積的性質合併</div>
+      <div class="rule">
+        <span class="rule-name">對數的積</span>
+        <span class="rule-math">\(\log_{a}M+\log_{a}N=\log_{a}(MN)\)</span>
+        <span class="rule-why">$\log_{\pi}(\alpha\beta)=11$，故 $\alpha\beta=\pi^{11}$。</span>
+      </div>
+      <p>$$\log_{\pi}(\alpha\beta)=11\quad\Rightarrow\quad\alpha\beta=\pi^{11}$$</p>
+      <p>驗算：$u$ 的兩根為 $3$ 與 $8$（$3+8=11$、$3\times8=24$），故 $\alpha=\pi^{3}$、$\beta=\pi^{8}$，乘積為 $\pi^{11}$ ✓。答案 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$\pi^{11}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $(\log_{3}x)^{2}-7\log_{3}x+12=\log_{3}x$ 的根為 $\alpha$ 及 $\beta$，求 $\alpha\beta$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 移項：$(\log_{3}x)^{2}-8\log_{3}x+12=0$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $u=\log_{3}x$：$u^{2}-8u+12=0$，得 $u=2$ 或 $6$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\log_{3}\alpha+\log_{3}\beta=8$，故 $\log_{3}(\alpha\beta)=8$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\alpha\beta=3^{8}=6561$。</div>
+          <div class="p-ans">答案：$6561$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q31.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q33.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第45題 · 方差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第45題</span>
+  <h1>整體平移不改變方差</h1>
+  <p class="sub">統計 · 方差</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      六個數 $20a+3$、$20a+5$、$20a+9$、$20a+11$、$20a+15$、$20a+17$ 的方差是
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>5</li><li><span class="ol">B</span>10</li><li><span class="ol">C</span>25</li><li><span class="ol">D</span>$20a+25$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">整體減去同一常數，方差不变</div>
+      <div class="rule">
+        <span class="rule-name">方差的平移性質</span>
+        <span class="rule-math">\(\operatorname{Var}(X+c)=\operatorname{Var}(X)\)</span>
+        <span class="rule-why">六個數同時減 $20a+10$，只改變平均數，不改變離散程度。</span>
+      </div>
+      <p>把每個數減去 $20a+10$：</p>
+      <p>$$-7,\ -5,\ -1,\ 1,\ 5,\ 7$$</p>
+      <p>方差與原本六個數相同。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求新數據的平均數</div>
+      <p>$$-7-5-1+1+5+7=0\quad\Rightarrow\quad\bar{x}=0$$</p>
+      <p>數據關於 $0$ 對稱，平均數自然是 $0$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求方差</div>
+      <div class="rule">
+        <span class="rule-name">方差</span>
+        <span class="rule-math">\(\sigma^{2}=\dfrac{1}{n}\sum(x_{i}-\bar{x})^{2}\)</span>
+        <span class="rule-why">平均數為 $0$，故方差就是平方的平均。</span>
+      </div>
+      <p>$$\sigma^{2}=\frac{49+25+1+1+25+49}{6}=\frac{150}{6}=25$$</p>
+      <p>答案 C。選項 D 含 $a$，但平移後的方差不可能仍含 $a$。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$25$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若六個數 $9a+3$、$9a+5$、$9a+6$、$9a+8$、$9a+9$、$9a+11$ 的方差為 $V$，求 $V$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 減去 $9a+7$：得 $-4,-2,-1,1,2,4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 對稱於 $0$，平均數為 $0$。</div>
+          <div class="p-step"><b>第 3 步.</b> $V=\dfrac{16+4+1+1+4+16}{6}=\dfrac{42}{6}=7$。</div>
+          <div class="p-ans">答案：$V=7$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q44.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

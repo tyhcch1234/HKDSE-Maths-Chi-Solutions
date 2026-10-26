@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第25題 · 軌跡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第25題</span>
+  <h1>與定點保持固定距離</h1>
+  <p class="sub">坐標幾何 · 軌跡</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $A$ 為直線 $9x+4y-7=0$ 與 $9x-4y+7=0$ 的交點。若 $P$ 為直角坐標平面上的一動點，且 $P$ 與 $A$ 的距離為 $8$，則 $P$ 的軌跡是一
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>圓</li><li><span class="ol">B</span>三角形</li><li><span class="ol">C</span>四邊形</li><li><span class="ol">D</span>正六邊形</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">求交點 $A$</div>
+      <div class="rule">
+        <span class="rule-name">加減消元法</span>
+        <span class="rule-math">\((9x+4y-7)+(9x-4y+7)=0\)</span>
+        <span class="rule-why">兩式相加消去 $y$，得 $18x=0$。</span>
+      </div>
+      <p>$$18x=0\Rightarrow x=0$$</p>
+      <p>代回第一式：$4y-7=0$，得 $y=\dfrac{7}{4}$。故</p>
+      <p>$$A=\left(0,\frac{7}{4}\right)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">理解「固定距離」的軌跡</div>
+      <div class="rule">
+        <span class="rule-name">與定點保持定距的軌跡</span>
+        <span class="rule-math">\(AP=k\ (k>0)\Rightarrow\text{軌跡為圓}\)</span>
+        <span class="rule-why">所有與 $A$ 相距 $8$ 的點形成以 $A$ 為圓心、半徑 $8$ 的圓。</span>
+      </div>
+      <p>條件 $AP=8$ 表示 $P$ 與定點 $A$ 的距離恆為 $8$，正是圓的定義。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫出軌跡方程並排除其他選項</div>
+      <div class="rule">
+        <span class="rule-name">距離公式</span>
+        <span class="rule-math">\(AP=\sqrt{(x-x_{1})^{2}+(y-y_{1})^{2}}\)</span>
+        <span class="rule-why">平方後得圓的方程。</span>
+      </div>
+      <p>$$x^{2}+\left(y-\frac{7}{4}\right)^{2}=64$$</p>
+      <p>這是以 $A$ 為圓心、半徑 $8$ 的圓。三角形、四邊形、正六邊形都有直邊或角，與「處處等距」不符。答案 A。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（圓）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $A$ 為 $x+2y-6=0$ 與 $x-2y+2=0$ 的交點，$P$ 移動使 $AP=5$。描述 $P$ 的軌跡並寫出其方程。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩式相加：$2x-4=0\Rightarrow x=2$。</div>
+          <div class="p-step"><b>第 2 步.</b> 代回：$2+2y-6=0\Rightarrow y=2$，故 $A=(2,2)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 軌跡為以 $A$ 為圓心、半徑 $5$ 的圓：$(x-2)^{2}+(y-2)^{2}=25$。</div>
+          <div class="p-ans">答案：圓，$(x-2)^{2}+(y-2)^{2}=25$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q24.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q26.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

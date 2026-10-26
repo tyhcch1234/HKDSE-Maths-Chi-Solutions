@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第9題 · 統計</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第9題</span>
+  <h1>平均數、中位數與標準差</h1>
+  <p class="sub">統計 · 分組數據 · 5 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示某班學生所修科目數目的分佈。
+      <table style="border-collapse:collapse;margin:10px 0;font-size:.95rem">
+        <tr><th style="border:1px solid #cbd5e1;padding:6px 12px">所修科目數目</th><th style="border:1px solid #cbd5e1;padding:6px 12px">4</th><th style="border:1px solid #cbd5e1;padding:6px 12px">5</th><th style="border:1px solid #cbd5e1;padding:6px 12px">6</th><th style="border:1px solid #cbd5e1;padding:6px 12px">7</th></tr>
+        <tr><td style="border:1px solid #cbd5e1;padding:6px 12px">學生人數</td><td style="border:1px solid #cbd5e1;padding:6px 12px">8</td><td style="border:1px solid #cbd5e1;padding:6px 12px">12</td><td style="border:1px solid #cbd5e1;padding:6px 12px">16</td><td style="border:1px solid #cbd5e1;padding:6px 12px">4</td></tr>
+      </table>
+      (a) 寫出上述分佈的平均數、中位數及標準差。<br>
+      (b) 現有一名新學生加入，他所修科目數目為 $5$。求因這名學生加入而使中位數的改變。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先數出總人數</div>
+      <p>$$N=8+12+16+4=40$$</p>
+      <p>平均數的分母是總人數 $40$，不是 $8+12+16+4$ 以外的數。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 平均數</div>
+      <div class="rule">
+        <span class="rule-name">分組數據的平均數</span>
+        <span class="rule-math">\(\bar{x}=\dfrac{\sum fx}{\sum f}\)</span>
+        <span class="rule-why">以人數作權重。</span>
+      </div>
+      <p>$$\bar{x}=\frac{4(8)+5(12)+6(16)+7(4)}{40}=\frac{32+60+96+28}{40}=\frac{216}{40}=5.4$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 中位數</div>
+      <div class="rule">
+        <span class="rule-name">中位數的位置</span>
+        <span class="rule-math">\(N$ 為偶數時取第 $\dfrac{N}{2}$ 與 $\dfrac{N}{2}+1\) 個的平均</span>
+        <span class="rule-why">累積頻數：$4\to8$、$5\to20$、$6\to36$。</span>
+      </div>
+      <p>第 $20$ 個數據是 $5$，第 $21$ 個是 $6$：</p>
+      <p>$$\text{中位數}=\frac{5+6}{2}=5.5$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(a) 標準差</div>
+      <div class="rule">
+        <span class="rule-name">分組數據的標準差</span>
+        <span class="rule-math">\(\sigma=\sqrt{\dfrac{\sum fx^{2}}{\sum f}-\bar{x}^{2}}\)</span>
+        <span class="rule-why">$\sum fx^{2}=1200$。</span>
+      </div>
+      <p>$$\sum fx^{2}=16(8)+25(12)+36(16)+49(4)=128+300+576+196=1200$$</p>
+      <p>$$\sigma=\sqrt{\frac{1200}{40}-5.4^{2}}=\sqrt{30-29.16}=\sqrt{0.84}\approx0.917$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 新學生加入後的改變</div>
+      <p>新數據共 $41$ 個（奇數），中位數為第 $21$ 個。加入一個 $5$ 後，累積頻數變為 $4\to8$、$5\to21$，故第 $21$ 個是 $5$。</p>
+      <p>新中位數 $=5$，改變 $=5.5-5=0.5$，即<b>減少 $0.5$</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) 平均數 $=5.4$、中位數 $=5.5$、標準差 $\approx0.917$　　(b) 中位數減少 $0.5$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 下表顯示 $34$ 名學生所修科目數目：$4$ 科 $5$ 人、$5$ 科 $11$ 人、$6$ 科 $13$ 人、$7$ 科 $5$ 人。(a) 求平均數、中位數及標準差；(b) 若多一名修 $5$ 科的學生加入，寫出中位數的改變。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $N=34$，$\sum fx=20+55+78+35=188$。</div>
+          <div class="p-step"><b>第 2 步.</b> 平均數 $=\dfrac{188}{34}\approx5.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 累積頻數 $5,16,29,34$，第 $17$、$18$ 個都是 $6$，中位數 $=6$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\sum fx^{2}=80+275+468+245=1068$，$\sigma=\sqrt{\dfrac{1068}{34}-\left(\dfrac{188}{34}\right)^{2}}\approx0.915$。</div>
+          <div class="p-step"><b>第 5 步.</b> (b) $35$ 個數據的中位數為第 $18$ 個，仍是 $6$，即不變。</div>
+          <div class="p-ans">答案：(a) 平均數 $\approx5.5$、中位數 $=6$、標準差 $\approx0.915$　(b) 不變</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

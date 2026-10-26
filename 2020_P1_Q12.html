@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第12題 · 求積法</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第12題</span>
+  <h1>圓錐被平行底面切開</h1>
+  <p class="sub">求積法 · 相似立體 · 6 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      一個直立圓錐的高及底半徑分別為 $36\ \text{cm}$ 及 $15\ \text{cm}$。該圓錐被兩個平行於底面的平面分成三部分，而三部分的高相等。以 $\pi$ 表示<br>
+      (a) 該圓錐中間部分的體積；<br>
+      (b) 該圓錐中間部分的曲面面積。<span class="marks">[6 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用相似圓錐找出半徑</div>
+      <div class="rule">
+        <span class="rule-name">相似立體</span>
+        <span class="rule-math">\(r_{1}:r_{2}:r_{3}=12:24:36=1:2:3\)</span>
+        <span class="rule-why">由頂點起，三個相似圓錐的高為 $12$、$24$、$36$，半徑按比例。</span>
+      </div>
+      <p>兩個切面把高 $36$ 分成三段，每段 $12$。由頂點起計：</p>
+      <p>$$r_{1}=15\times\frac{1}{3}=5,\quad r_{2}=15\times\frac{2}{3}=10,\quad r_{3}=15$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 中間部分＝大圓錐減小圓錐</div>
+      <div class="rule">
+        <span class="rule-name">圓錐體積</span>
+        <span class="rule-math">\(V=\dfrac{1}{3}\pi r^{2}h\)</span>
+        <span class="rule-why">中間部分是 $h=24$ 與 $h=12$ 兩個同頂點圓錐之差。</span>
+      </div>
+      <p>$$V=\frac{1}{3}\pi(10)^{2}(24)-\frac{1}{3}\pi(5)^{2}(12)$$</p>
+      <p>$$=800\pi-100\pi=700\pi\ \text{cm}^{3}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 求斜高</div>
+      <p>整個圓錐的斜高：</p>
+      <p>$$l=\sqrt{15^{2}+36^{2}}=\sqrt{1521}=39\ \text{cm}$$</p>
+      <p>由相似，$l_{1}=39\times\dfrac{1}{3}=13$、$l_{2}=39\times\dfrac{2}{3}=26$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 曲面面積相減</div>
+      <div class="rule">
+        <span class="rule-name">圓錐曲面面積</span>
+        <span class="rule-math">\(\text{CSA}=\pi r l\)</span>
+        <span class="rule-why">$\pi(10)(26)-\pi(5)(13)=260\pi-65\pi$。</span>
+      </div>
+      <p>$$A=\pi(10)(26)-\pi(5)(13)=260\pi-65\pi=195\pi\ \text{cm}^{2}$$</p>
+      <p>切面平行底面會產生相似圓錐，所以長度按線性比、面積按線性比的平方變化。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $700\pi\ \text{cm}^{3}$　　(b) $195\pi\ \text{cm}^{2}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 直立圓錐的高及底半徑分別為 $12\ \text{cm}$ 及 $9\ \text{cm}$，被兩個平行於底面的平面分成高相等的三部分。以 $\pi$ 表示 (a) 中間部分的體積；(b) 中間部分的曲面面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 三段各高 $4$，由頂點起半徑比 $1:2:3$，即 $3,6,9$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $\dfrac{1}{3}\pi(6)^{2}(8)-\dfrac{1}{3}\pi(3)^{2}(4)=96\pi-12\pi=84\pi$。</div>
+          <div class="p-step"><b>第 3 步.</b> 斜高 $l=\sqrt{9^{2}+12^{2}}=15$，故 $l_{1}=5$、$l_{2}=10$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) $\pi(6)(10)-\pi(3)(5)=60\pi-15\pi=45\pi$。</div>
+          <div class="p-ans">答案：(a) $84\pi\ \text{cm}^{3}$　(b) $45\pi\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

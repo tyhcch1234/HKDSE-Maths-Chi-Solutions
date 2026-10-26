@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第20題 · 圓形性質</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第20題</span>
+  <h1>四點共圓，圓心角是圓周角的兩倍</h1>
+  <p class="sub">幾何 · 等邊三角形與圓形性質</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABC$ 為等邊三角形，$CDE$ 為等腰三角形且 $CD=CE$。若 $\angle DCE=78^{\circ}$ 及 $\angle ADC=\angle CAD=40^{\circ}$，則 $\angle CBE=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$14^{\circ}$</li><li><span class="ol">B</span>$19^{\circ}$</li><li><span class="ol">C</span>$24^{\circ}$</li><li><span class="ol">D</span>$29^{\circ}$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q20.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle ACD$ 求 $\angle ACD$，並得 $AC=CD$</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形底角</span>
+        <span class="rule-math">\(\angle ADC=\angle CAD\Rightarrow AC=CD\)</span>
+        <span class="rule-why">等角對等邊。</span>
+      </div>
+      <p>$$\angle ACD=180^{\circ}-40^{\circ}-40^{\circ}=100^{\circ}$$</p>
+      <p>因 $\angle ADC=\angle CAD$，故 $AC=CD$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">證明 $A$、$B$、$D$、$E$ 共圓（圓心 $C$）</div>
+      <p>$ABC$ 為等邊三角形，故 $AC=BC$；又 $CD=CE$（已知）。配合 $AC=CD$：</p>
+      <p>$$CA=CB=CD=CE$$</p>
+      <p>四點與 $C$ 等距，故 $A$、$B$、$D$、$E$ 都在以 $C$ 為圓心的圓上。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求弧 $AE$ 所對的圓心角</div>
+      <p>$\angle ACD=100^{\circ}$、$\angle DCE=78^{\circ}$，故</p>
+      <p>$$\angle ACE=100^{\circ}+78^{\circ}=178^{\circ}\ \text{（反角）}$$</p>
+      <p>對應的圓心角（反角）為 $178^{\circ}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用圓心角是圓周角兩倍求 $\angle CBE$</div>
+      <div class="rule">
+        <span class="rule-name">圓心角與圓周角</span>
+        <span class="rule-math">\(\angle\text{圓心角}=2\times\angle\text{圓周角}\)</span>
+        <span class="rule-why">$2\angle ABE=178^{\circ}$，故 $\angle ABE=89^{\circ}$。</span>
+      </div>
+      <p>$$2\angle ABE=178^{\circ}\quad\Rightarrow\quad\angle ABE=89^{\circ}$$</p>
+      <p>而 $\angle ABE=\angle ABC+\angle CBE=60^{\circ}+\angle CBE$：</p>
+      <p>$$\angle CBE=89^{\circ}-60^{\circ}=29^{\circ}$$</p>
+      <p>答案 D。選項 C 是把 $178^{\circ}$ 誤作 $168^{\circ}$ 左右的計算結果。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>D</b>（$29^{\circ}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $ABC$ 為等邊三角形，$CDE$ 為等腰三角形且 $CD=CE$。若 $\angle DCE=40^{\circ}$ 及 $\angle ADC=\angle CAD=30^{\circ}$，求 $\angle CBE$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle ACD=180^{\circ}-30^{\circ}-30^{\circ}=120^{\circ}$，且 $AC=CD$。</div>
+          <div class="p-step"><b>第 2 步.</b> $AC=BC=CD=CE$，故 $A$、$B$、$D$、$E$ 共圓（圓心 $C$）。</div>
+          <div class="p-step"><b>第 3 步.</b> 反角 $\angle ACE=120^{\circ}+40^{\circ}=160^{\circ}$，故 $\angle ABE=80^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> $\angle CBE=80^{\circ}-60^{\circ}=20^{\circ}$。</div>
+          <div class="p-ans">答案：$20^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q19.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q21.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

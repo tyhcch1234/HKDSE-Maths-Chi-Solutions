@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第18題 · 面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第18題</span>
+  <h1>平行四邊形中的相似三角形</h1>
+  <p class="sub">幾何 · 平行四邊形與相似三角形</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖中 $ABCD$ 為平行四邊形。$E$ 在 $AD$ 上使 $AE:ED=2:5$。延長 $CB$ 至 $F$ 使 $BF=DE$。設 $AB$ 與 $EF$ 交於 $G$，且 $BD$ 與 $CG$ 交於 $H$。若 $\triangle AEG$ 的面積為 $48\ \text{cm}^{2}$，則 $\triangle CDH$ 的面積為
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$98\ \text{cm}^{2}$</li><li><span class="ol">B</span>$343\ \text{cm}^{2}$</li><li><span class="ol">C</span>$420\ \text{cm}^{2}$</li><li><span class="ol">D</span>$588\ \text{cm}^{2}$</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q18.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設定長度比例</div>
+      <div class="rule">
+        <span class="rule-name">平行四邊形性質</span>
+        <span class="rule-math">\(AB=CD,\ AD=BC\)</span>
+        <span class="rule-why">設 $AE=2k$、$ED=5k$，則 $AD=7k$、$BF=5k$。</span>
+      </div>
+      <p>設 $AE=2k$、$ED=5k$，則 $AD=7k$；又 $BF=DE=5k$。</p>
+      <p>平行四邊形對邊相等：$AB=CD$、$AD=BC=7k$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由 $\triangle AEG\sim\triangle BFG$ 求 $AG:GB$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形</span>
+        <span class="rule-math">\(\dfrac{AG}{BG}=\dfrac{AE}{BF}\)</span>
+        <span class="rule-why">$AE\parallel BF$，得 $AG:BG=2:5$。</span>
+      </div>
+      <p>$AE\parallel BF$（$AD\parallel BC$），故 $\triangle AEG\sim\triangle BFG$：</p>
+      <p>$$\frac{AG}{BG}=\frac{AE}{BF}=\frac{2k}{5k}=\frac{2}{5}\quad\Rightarrow\quad AG:GB=2:5$$</p>
+      <p>所以 $AB:GB=(2+5):5=7:5$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由 $\triangle CDH\sim\triangle GBH$ 求 $DH:BD$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形</span>
+        <span class="rule-math">\(\dfrac{DH}{BH}=\dfrac{CD}{GB}\)</span>
+        <span class="rule-why">$CD\parallel GB$，且 $CD=AB$，故 $DH:BH=7:5$。</span>
+      </div>
+      <p>$$\frac{DH}{BH}=\frac{CD}{GB}=\frac{AB}{GB}=\frac{7}{5}\quad\Rightarrow\quad DH=\frac{7}{12}BD$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用同高三角形逐步換算面積</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形面積比</span>
+        <span class="rule-math">\(\dfrac{[\,ADG\,]}{[\,AEG\,]}=\dfrac{AD}{AE}=\dfrac{7}{2}\)</span>
+        <span class="rule-why">底在同一條直線上，高相同，面積比等於底之比。</span>
+      </div>
+      <p>① $\triangle ADG$ 與 $\triangle AEG$ 同高（底在 $AD$）：$[ADG]=48\times\dfrac{7}{2}=168$。</p>
+      <p>② $\triangle ABD$ 與 $\triangle ADG$ 同高（底在 $AB$）：$[ABD]=168\times\dfrac{7}{2}=588$。</p>
+      <p>③ 對角線平分平行四邊形：$[CBD]=[ABD]=588$。</p>
+      <p>④ $\triangle CDH$ 與 $\triangle CBD$ 同高（底在 $BD$）：$[CDH]=588\times\dfrac{7}{12}=343$。</p>
+      <p>故 $\triangle CDH$ 的面積為 $343\ \text{cm}^{2}$，答案 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（$343\ \text{cm}^{2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在平行四邊形 $ABCD$ 中，$E$ 在 $AD$ 上使 $AE:ED=1:2$；延長 $CB$ 至 $F$ 使 $BF=DE$，$AB$ 與 $EF$ 交於 $G$，$BD$ 與 $CG$ 交於 $H$。若 $[\triangle AEG]=20\ \text{cm}^{2}$，求 $[\triangle CDH]$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設 $AE=k$、$ED=2k$，則 $AD=3k$、$BF=2k$；$\triangle AEG\sim\triangle BFG$ 給出 $AG:BG=1:2$，故 $AB:GB=3:2$。</div>
+          <div class="p-step"><b>第 2 步.</b> $[ADG]=20\times3=60$；$[ABD]=60\times3=180$。</div>
+          <div class="p-step"><b>第 3 步.</b> $[CBD]=180$；$DH:BH=3:2\Rightarrow DH=\dfrac{3}{5}BD$。</div>
+          <div class="p-step"><b>第 4 步.</b> $[CDH]=180\times\dfrac{3}{5}=108$。</div>
+          <div class="p-ans">答案：$108\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q17.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q19.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

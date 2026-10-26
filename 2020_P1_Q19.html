@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第19題 · 三角學</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第19題</span>
+  <h1>紙卡與水平地面的夾角</h1>
+  <p class="sub">三角學 · 正弦與餘弦公式 · 12 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $PQRS$ 為一四邊形紙卡，其中 $PQ=60\ \text{cm}$、$PS=40\ \text{cm}$、$\angle PQR=30^{\circ}$、$\angle PRQ=55^{\circ}$ 及 $\angle QPS=120^{\circ}$。紙卡被固定，使 $QR$ 平放在水平地面上（見圖 3）。<br>
+      (a) 求 $RS$ 的長度。<br>
+      (b) 求紙卡的面積。<br>
+      (c) 已知紙卡與水平地面的夾角為 $32^{\circ}$。<br>
+      　(i) 求 $P$ 到水平地面的最短距離。<br>
+      　(ii) 有學生聲稱 $RS$ 與水平地面的夾角至多為 $20^{\circ}$。該聲稱是否正確？試解釋。<span class="marks">[12 分]</span>
+    </div>
+    <figure class="fig"><img src="figures/2020_P1_19.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $\triangle PQR$ 求 $PR$</div>
+      <div class="rule">
+        <span class="rule-name">正弦公式</span>
+        <span class="rule-math">\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}\)</span>
+        <span class="rule-why">$\dfrac{PR}{\sin30^{\circ}}=\dfrac{60}{\sin55^{\circ}}$。</span>
+      </div>
+      <p>$$\angle QPR=180^{\circ}-30^{\circ}-55^{\circ}=95^{\circ}$$</p>
+      <p>$$PR=\frac{60\sin30^{\circ}}{\sin55^{\circ}}\approx36.623\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 在 $\triangle PRS$ 用餘弦公式</div>
+      <div class="rule">
+        <span class="rule-name">餘弦公式</span>
+        <span class="rule-math">\(c^{2}=a^{2}+b^{2}-2ab\cos C\)</span>
+        <span class="rule-why">$\angle RPS=120^{\circ}-95^{\circ}=25^{\circ}$。</span>
+      </div>
+      <p>$$RS^{2}=40^{2}+36.623^{2}-2(40)(36.623)\cos25^{\circ}$$</p>
+      <p>$$RS^{2}\approx1600+1341.3-2655.4=285.9$$</p>
+      <p>$$RS\approx16.9\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用對角線 $PR$ 分成兩個三角形</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">\(\text{面積}=\dfrac{1}{2}ab\sin C\)</span>
+        <span class="rule-why">兩部分分別用 $95^{\circ}$ 及 $25^{\circ}$。</span>
+      </div>
+      <p>$$\text{面積}=\tfrac{1}{2}(60)(36.623)\sin95^{\circ}+\tfrac{1}{2}(36.623)(40)\sin25^{\circ}$$</p>
+      <p>$$\approx1094.7+309.4\approx1404\ \text{cm}^{2}\ (\text{即約 }1.40\times10^{3}\ \text{cm}^{2})$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c)(i) 先求 $P$ 到 $QR$ 的距離</div>
+      <p>在紙卡平面內，$P$ 到 $QR$ 的垂直距離為</p>
+      <p>$$PH=PQ\sin30^{\circ}=60\times\frac{1}{2}=30\ \text{cm}$$</p>
+      <p>紙卡與地面成 $32^{\circ}$，故 $P$ 到地面的最短距離為</p>
+      <p>$$PG=30\sin32^{\circ}\approx15.9\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(c)(ii) 求 $S$ 到 $QR$ 的距離</div>
+      <p>由 $P$ 到 $S$：$PS=40$ 且與 $QR$ 成 $30^{\circ}$（因 $\angle QPS=120^{\circ}$、$\angle QPR=95^{\circ}$ 的方向關係），故 $S$ 比 $P$ 低</p>
+      <p>$$40\sin30^{\circ}=20\ \text{cm}$$</p>
+      <p>$$\therefore\ S \text{ 到 } QR \text{ 的距離}=30-20=10\ \text{cm}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(c)(ii) 求 $RS$ 與地面的夾角</div>
+      <div class="rule">
+        <span class="rule-name">正弦比</span>
+        <span class="rule-math">\(\sin\theta=\dfrac{\text{豎直高度差}}{\text{斜邊}}\)</span>
+        <span class="rule-why">$R$ 在地面上，$S$ 的高度為 $10\sin32^{\circ}$。</span>
+      </div>
+      <p>$S$ 離地高度 $=10\sin32^{\circ}\approx5.299\ \text{cm}$，而 $R$ 在地面上：</p>
+      <p>$$\sin\theta=\frac{5.299}{16.909}\approx0.3134\quad\Rightarrow\quad\theta\approx18.3^{\circ}$$</p>
+      <p>因 $18.3^{\circ}\le20^{\circ}$，該聲稱<b>正確</b>。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $RS\approx16.9\ \text{cm}$　(b) 面積 $\approx1404\ \text{cm}^{2}$　(c)(i) $\approx15.9\ \text{cm}$　(c)(ii) 正確，$RS$ 與地面的夾角約 $18.3^{\circ}$。</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $PQRS$ 為四邊形紙卡，$PQ=50\ \text{cm}$、$PS=30\ \text{cm}$、$\angle PQR=35^{\circ}$、$\angle PRQ=60^{\circ}$、$\angle QPS=110^{\circ}$。(a) 求 $RS$；(b) 求紙卡面積。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\angle QPR=180^{\circ}-35^{\circ}-60^{\circ}=85^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 正弦公式：$PR=\dfrac{50\sin35^{\circ}}{\sin60^{\circ}}\approx33.115\ \text{cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle RPS=110^{\circ}-85^{\circ}=25^{\circ}$，餘弦公式得 $RS^{2}=30^{2}+33.115^{2}-2(30)(33.115)\cos25^{\circ}\approx195.9$，故 $RS\approx14.0\ \text{cm}$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) 面積 $=\tfrac12(50)(33.115)\sin85^{\circ}+\tfrac12(33.115)(30)\sin25^{\circ}\approx1035\ \text{cm}^{2}$。</div>
+          <div class="p-ans">答案：(a) $\approx14.0\ \text{cm}$　(b) $\approx1035\ \text{cm}^{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

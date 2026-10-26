@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第19題 · 平行線</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第19題</span>
+  <h1>在 $C$ 作輔助平行線</h1>
+  <p class="sub">幾何 · 平行線上的角</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      根據圖中所示，下列何者必定正確？<br>
+      I. $u-v+w=0^{\circ}$　　II. $u+v-w=180^{\circ}$　　III. $u+v+w=450^{\circ}$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>只有 I</li><li><span class="ol">B</span>只有 II</li><li><span class="ol">C</span>只有 I 及 III</li><li><span class="ol">D</span>只有 II 及 III</li></ol>
+    <figure class="fig"><img src="figures/2020_P2_Q19.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">在 $C$ 作 $CF\parallel AB\parallel DE$</div>
+      <div class="rule">
+        <span class="rule-name">同旁內角</span>
+        <span class="rule-math">\(\angle BCF=180^{\circ}-u\)</span>
+        <span class="rule-why">$AB\parallel CF$，$BC$ 為截線，同旁內角互補。</span>
+      </div>
+      <p>過 $C$ 作 $CF\parallel AB\parallel DE$。</p>
+      <p>$AB\parallel CF$，$BC$ 為截線：$\angle BCF=180^{\circ}-u$（同旁內角）。</p>
+      <p>$CF\parallel DE$，$CD$ 為截線：$\angle DCF=w$（內錯角）。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把反角 $v$ 寫成兩部分之和</div>
+      <p>圖中 $v$ 是 $C$ 處的反角，即</p>
+      <p>$$v=\angle BCF+\angle DCF=(180^{\circ}-u)+w$$</p>
+      <p>移項即得 $$u+v-w=180^{\circ}$$</p>
+      <p>所以陳述 II 恆真。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用反例否定 I 及 III</div>
+      <div class="rule">
+        <span class="rule-name">反例法</span>
+        <span class="rule-math">\(u+v+w=450^{\circ}\)</span>
+        <span class="rule-why">只改動其中一個角，等式左邊便會改變，故不可能恆真。</span>
+      </div>
+      <p>I：把 $B$ 沿 $AB$ 移動令 $u$ 改變，$v$ 隨之改變而 $w$ 不變，$u-v+w$ 不再等於 $0^{\circ}$，故 I 不恆真。</p>
+      <p>III：把 $D$ 沿 $DE$ 移動令 $w$ 改變，$u+v+w$ 隨之改變，不等於固定值 $450^{\circ}$，故 III 不恆真。</p>
+      <p>只有 II 恆真，答案 B。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>B</b>（只有 II）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $AB\parallel ED$，折線 $B-C-D$ 連接兩線。$B$ 處的角 $u=40^{\circ}$，$D$ 處的角 $w=25^{\circ}$，$C$ 處的反角為 $v$。求 $v$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 過 $C$ 作 $CF\parallel AB\parallel DE$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\angle BCF=180^{\circ}-40^{\circ}=140^{\circ}$（同旁內角）。</div>
+          <div class="p-step"><b>第 3 步.</b> $\angle DCF=w=25^{\circ}$（內錯角）。</div>
+          <div class="p-step"><b>第 4 步.</b> $v=140^{\circ}+25^{\circ}=165^{\circ}$。</div>
+          <div class="p-ans">答案：$165^{\circ}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q20.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

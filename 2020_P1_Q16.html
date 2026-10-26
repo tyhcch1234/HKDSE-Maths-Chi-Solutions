@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第16題 · 等比數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第16題</span>
+  <h1>求首項及最小的 $n$</h1>
+  <p class="sub">數列 · 等比數列 · 5 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某等比數列的第 $3$ 項及第 $6$ 項分別為 $144$ 及 $486$。<br>
+      (a) 求該數列的首項。<br>
+      (b) 求最小的 $n$，使該數列首 $n$ 項之和大於 $8\times10^{18}$。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設首項 $a$、公比 $r$</div>
+      <p>$$ar^{2}=144\qquad\cdots(1)$$</p>
+      <p>$$ar^{5}=486\qquad\cdots(2)$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求公比</div>
+      <div class="rule">
+        <span class="rule-name">由兩項求公比</span>
+        <span class="rule-math">\(\dfrac{ar^{5}}{ar^{2}}=r^{3}\)</span>
+        <span class="rule-why">$\dfrac{486}{144}=\dfrac{27}{8}$，故 $r=\dfrac{3}{2}$。</span>
+      </div>
+      <p>$$r^{3}=\frac{486}{144}=\frac{27}{8}\quad\Rightarrow\quad r=\frac{3}{2}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 求首項</div>
+      <div class="rule">
+        <span class="rule-name">等比數列的通項</span>
+        <span class="rule-math">\(T_{n}=ar^{\,n-1}\)</span>
+        <span class="rule-why">$ar^{2}=144$，代入 $r$。</span>
+      </div>
+      <p>$$a=\frac{144}{\left(\frac{3}{2}\right)^{2}}=\frac{144}{\frac{9}{4}}=144\times\frac{4}{9}=64$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 寫出首 $n$ 項之和</div>
+      <div class="rule">
+        <span class="rule-name">等比數列求和</span>
+        <span class="rule-math">\(S_{n}=\dfrac{a(r^{n}-1)}{r-1}\)</span>
+        <span class="rule-why">$a=64$、$r-1=\dfrac{1}{2}$。</span>
+      </div>
+      <p>$$S_{n}=\frac{64\left[\left(\frac{3}{2}\right)^{n}-1\right]}{\frac{1}{2}}=128\left[\left(\frac{3}{2}\right)^{n}-1\right]$$</p>
+      <p>要求 $S_{n}>8\times10^{18}$：</p>
+      <p>$$\left(\frac{3}{2}\right)^{n}>6.25\times10^{16}+1$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 用常用對數解 $n$</div>
+      <div class="rule">
+        <span class="rule-name">對數的冪</span>
+        <span class="rule-math">\(\log a^{n}=n\log a\)</span>
+        <span class="rule-why">兩邊取 $\log_{10}$，把指數拉下來。</span>
+      </div>
+      <p>$$n\log_{10}\left(\frac{3}{2}\right)>\log_{10}\left(6.25\times10^{16}+1\right)$$</p>
+      <p>$$n>\frac{16.79588\ldots}{0.17609\ldots}\approx95.38$$</p>
+      <p>因 $n$ 為正整數，最小為 $n=96$。</p>
+      <p>驗算：$S_{95}\approx6.85\times10^{18}<8\times10^{18}$，而 $S_{96}\approx1.03\times10^{19}>8\times10^{18}$ ✓。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $a=64$　　(b) $n=96$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某等比數列的第 $3$ 項為 $100$、第 $5$ 項為 $2500$，且公比為正。(a) 求公比及首項；(b) 求最小的 $n$，使首 $n$ 項之和大於 $10^{6}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\dfrac{T_{5}}{T_{3}}=r^{2}=25$，$r>0$ 故 $r=5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $ar^{2}=25a=100$，故 $a=4$。</div>
+          <div class="p-step"><b>第 3 步.</b> $S_{n}=\dfrac{4(5^{n}-1)}{4}=5^{n}-1$。</div>
+          <div class="p-step"><b>第 4 步.</b> $5^{n}>10^{6}+1$，取對數得 $n>\dfrac{6.0000004}{0.69897}\approx8.58$，故最小 $n=9$。</div>
+          <div class="p-ans">答案：(a) $r=5$、$a=4$　(b) $n=9$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

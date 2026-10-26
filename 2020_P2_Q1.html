@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第1題 · 指數律</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第1題</span>
+  <h1>先處理分母的負指數括號</h1>
+  <p class="sub">指數定律 · 負指數與冪的冪</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{6x}{\left(3x^{-5}\right)^{-2}}$。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$54x^{8}$</li><li><span class="ol">B</span>$\dfrac{2x^{8}}{3}$</li><li><span class="ol">C</span>$\dfrac{54}{x^{9}}$</li><li><span class="ol">D</span>$\dfrac{2}{3x^{9}}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把外層指數 $-2$ 分別乘入括號內每一因式</div>
+      <div class="rule">
+        <span class="rule-name">積的冪</span>
+        <span class="rule-math">\((ab)^{n}=a^{n}b^{n}\)</span>
+        <span class="rule-why">括號內有兩個因式 $3$ 與 $x^{-5}$，外層的 $-2$ 要各自乘上。</span>
+      </div>
+      <p>$$\left(3x^{-5}\right)^{-2}=3^{-2}\cdot\left(x^{-5}\right)^{-2}$$</p>
+      <p>指數相乘：$3$ 的指數是 $1$，得 $1\times(-2)=-2$；$x$ 的指數是 $-5$，得 $-5\times(-2)=+10$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡各因式，得到分母</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪</span>
+        <span class="rule-math">\((x^{m})^{n}=x^{mn}\)</span>
+        <span class="rule-why">$-5\times(-2)=+10$，所以 $\left(x^{-5}\right)^{-2}=x^{10}$。</span>
+      </div>
+      <p>$$3^{-2}=\frac{1}{9},\qquad \left(x^{-5}\right)^{-2}=x^{10}\quad\Rightarrow\quad \left(3x^{-5}\right)^{-2}=\frac{1}{9}x^{10}$$</p>
+      <p>負指數代表倒數，所以 $3^{-2}$ 變成 $\dfrac{1}{9}$。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">取倒數相乘，再用同底數相除</div>
+      <div class="rule">
+        <span class="rule-name">同底數相除</span>
+        <span class="rule-math">\(\dfrac{x^{a}}{x^{b}}=x^{a-b}\)</span>
+        <span class="rule-why">$\dfrac{54x}{x^{10}}=54x^{1-10}=54x^{-9}$。</span>
+      </div>
+      <p>除以 $\dfrac{1}{9}x^{10}$ 等於乘以 $\dfrac{9}{x^{10}}$：</p>
+      <p>$$\frac{6x}{\frac{1}{9}x^{10}}=6x\cdot\frac{9}{x^{10}}=\frac{54x}{x^{10}}=\frac{54}{x^{9}}$$</p>
+      <p>選項 B 只顧 $x$ 的指數而漏掉 $3^{-2}=\dfrac{1}{9}$；選項 D 分子算成 $2$，是把 $6\div9$ 與 $6\times9$ 混淆。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>C</b>（$\dfrac{54}{x^{9}}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{8x}{\left(2x^{-3}\right)^{-2}}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\left(2x^{-3}\right)^{-2}=2^{-2}\left(x^{-3}\right)^{-2}=\dfrac{1}{4}x^{6}$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\dfrac{8x}{\frac{1}{4}x^{6}}=8x\times\dfrac{4}{x^{6}}=\dfrac{32x}{x^{6}}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 同底數相除：$32x^{1-6}=32x^{-5}=\dfrac{32}{x^{5}}$。</div>
+          <div class="p-ans">答案：$\dfrac{32}{x^{5}}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2020_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

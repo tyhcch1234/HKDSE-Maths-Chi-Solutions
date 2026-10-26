@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第4題 · 因式分解</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第4題</span>
+  <h1>看出隱藏的公因式</h1>
+  <p class="sub">多項式 · 提出公因式</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $(3a+2b)(4a-5b)-a(6a+4b)=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$(3a+2b)(2a-5b)$</li><li><span class="ol">B</span>$(3a+2b)(6a-5b)$</li><li><span class="ol">C</span>$(3a-2b)(2a+5b)$</li><li><span class="ol">D</span>$(3a-2b)(6a+5b)$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">拆開第二項，找出隱藏的括號</div>
+      <div class="rule">
+        <span class="rule-name">提出公因式</span>
+        <span class="rule-math">\(a(6a+4b)=2a(3a+2b)\)</span>
+        <span class="rule-why">$6a+4b=2(3a+2b)$，所以第二項其實也含 $(3a+2b)$。</span>
+      </div>
+      <p>不要一開始就全部展開，先看 $6a+4b$：</p>
+      <p>$$a(6a+4b)=a\cdot 2(3a+2b)=2a(3a+2b)$$</p>
+      <p>這樣兩項就共用同一個括號，可以整體提出。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">改寫全式並提出 $(3a+2b)$</div>
+      <p>$$(3a+2b)(4a-5b)-2a(3a+2b)$$</p>
+      <p>$$=(3a+2b)\big[(4a-5b)-2a\big]$$</p>
+      <p>提出後要保留中括號，因為第二項剩下的不只是一項。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">化簡中括號</div>
+      <div class="rule">
+        <span class="rule-name">合併同類項</span>
+        <span class="rule-math">\(4a-2a=2a\)</span>
+        <span class="rule-why">只有 $a$ 項可以合併，$-5b$ 保持不變。</span>
+      </div>
+      <p>$$(4a-5b)-2a=2a-5b$$</p>
+      <p>$$\therefore\ (3a+2b)(4a-5b)-a(6a+4b)=(3a+2b)(2a-5b)$$</p>
+      <p>驗算：展開 $(3a+2b)(2a-5b)=6a^{2}-15ab+4ab-10b^{2}=6a^{2}-11ab-10b^{2}$，與原式展開結果一致。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$(3a+2b)(2a-5b)$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $(5p+3q)(2p-q)-p(10p+6q)=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 看出 $p(10p+6q)=2p(5p+3q)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 原式 $=(5p+3q)(2p-q)-2p(5p+3q)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 提出 $(5p+3q)$：$(5p+3q)\big[(2p-q)-2p\big]=-q(5p+3q)$。</div>
+          <div class="p-ans">答案：$-q(5p+3q)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q5.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

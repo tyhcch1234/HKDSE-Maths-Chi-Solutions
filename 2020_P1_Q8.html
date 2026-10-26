@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷一 第8題 · 三角形內角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷一 · 第8題</span>
+  <h1>平行線與等腰三角形</h1>
+  <p class="sub">幾何 · 平行線與等腰三角形 · 5 分題</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圖 1 中，$B$ 及 $D$ 分別為 $AC$ 及 $AE$ 上的點，$BE$ 與 $CD$ 相交於 $F$。已知 $AB=BE$、$BD\parallel CE$、$\angle CAE=30^{\circ}$ 及 $\angle ADB=42^{\circ}$。<br>
+      (a) 求 $\angle BEC$。<br>
+      (b) 設 $\angle BDC=\theta$，以 $\theta$ 表示 $\angle CFE$。<span class="marks">[5 分]</span>
+    </div>
+    <figure class="fig"><img src="figures/2020_P1_8.png" alt="題目附圖"><figcaption>圖（原卷附圖）</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用 $BD\parallel CE$ 的同位角</div>
+      <div class="rule">
+        <span class="rule-name">平行線的同位角</span>
+        <span class="rule-math">\(BD\parallel CE\Rightarrow\angle AEC=\angle ADB\)</span>
+        <span class="rule-why">截線 $AE$ 同時穿過 $BD$ 與 $CE$。</span>
+      </div>
+      <p>$$\angle AEC=\angle ADB=42^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 用 $AB=BE$ 的等腰三角形</div>
+      <div class="rule">
+        <span class="rule-name">等腰三角形的底角</span>
+        <span class="rule-math">\(AB=BE\Rightarrow\angle BAE=\angle AEB\)</span>
+        <span class="rule-why">$\triangle ABE$ 為等腰，兩底角相等。</span>
+      </div>
+      <p>因 $B$ 在 $AC$ 上，$\angle BAE=\angle CAE=30^{\circ}$，故</p>
+      <p>$$\angle AEB=30^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(a) 在 $E$ 處相減</div>
+      <p>射線 $EB$ 在 $\angle AEC$ 之內：</p>
+      <p>$$\angle BEC=\angle AEC-\angle AEB=42^{\circ}-30^{\circ}=12^{\circ}$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 求 $\angle DCE$</div>
+      <div class="rule">
+        <span class="rule-name">平行線的內錯角</span>
+        <span class="rule-math">\(BD\parallel CE\Rightarrow\angle DCE=\angle BDC\)</span>
+        <span class="rule-why">截線 $DC$ 穿過兩平行線。</span>
+      </div>
+      <p>$$\angle DCE=\angle BDC=\theta$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 在 $\triangle CFE$ 用內角和</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        <span class="rule-math">\(\angle A+\angle B+\angle C=180^{\circ}\)</span>
+        <span class="rule-why">$\angle CFE=180^{\circ}-12^{\circ}-\theta$。</span>
+      </div>
+      <p>$$\angle CFE=180^{\circ}-\angle BEC-\angle DCE=180^{\circ}-12^{\circ}-\theta=168^{\circ}-\theta$$</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span>(a) $\angle BEC=12^{\circ}$　　(b) $\angle CFE=168^{\circ}-\theta$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圖中 $BD\parallel CE$、$AB=BE$、$\angle ADB=48^{\circ}$ 及 $\angle CAE=35^{\circ}$。(a) 求 $\angle BEC$；(b) 若 $\angle DCE=\theta$，以 $\theta$ 表示 $\angle CFE$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> (a) $BD\parallel CE$，同位角：$\angle AEC=\angle ADB=48^{\circ}$。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $AB=BE$，底角相等：$\angle AEB=\angle BAE=35^{\circ}$。</div>
+          <div class="p-step"><b>第 3 步.</b> (a) $\angle BEC=48^{\circ}-35^{\circ}=13^{\circ}$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) $\angle DCE=\angle BDC=\theta$，故 $\angle CFE=180^{\circ}-13^{\circ}-\theta=167^{\circ}-\theta$。</div>
+          <div class="p-ans">答案：(a) $13^{\circ}$　(b) $167^{\circ}-\theta$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P1_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

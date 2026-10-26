@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2020 卷二 第3題 · 代數分式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2020 · 卷二 · 第3題</span>
+  <h1>通分後減去分子</h1>
+  <p class="sub">代數分式 · 平方差</p>
+</div></div>
+<div class="wrap">
+
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      求 $\dfrac{5}{4k+3}-\dfrac{2}{4k-3}$ 的值。
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$\dfrac{12k-21}{16k^{2}-9}$</li><li><span class="ol">B</span>$\dfrac{12k+9}{16k^{2}-9}$</li><li><span class="ol">C</span>$\dfrac{14k-21}{16k^{2}-9}$</li><li><span class="ol">D</span>$\dfrac{14k+9}{16k^{2}-9}$</li></ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找最簡公分母</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">\((a+b)(a-b)=a^{2}-b^{2}\)</span>
+        <span class="rule-why">\((4k+3)(4k-3)=(4k)^{2}-3^{2}=16k^{2}-9\)。</span>
+      </div>
+      <p>$4k+3$ 與 $4k-3$ 沒有公因式，所以最簡公分母就是它們的乘積：</p>
+      <p>$$(4k+3)(4k-3)=16k^{2}-9$$</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把兩個分數各自通分</div>
+      <p>$$\frac{5}{4k+3}=\frac{5(4k-3)}{16k^{2}-9},\qquad \frac{2}{4k-3}=\frac{2(4k+3)}{16k^{2}-9}$$</p>
+      <p>分子與分母要乘同一個因式，分數的值才不變。</p>
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分子相減：減號要分配到括號內每一項</div>
+      <div class="rule">
+        <span class="rule-name">去括號</span>
+        <span class="rule-math">\(-(8k+6)=-8k-6\)</span>
+        <span class="rule-why">這是最常見的陷阱：減號只作用於第一項就會出錯。</span>
+      </div>
+      <p>$$\frac{5(4k-3)-2(4k+3)}{16k^{2}-9}=\frac{(20k-15)-(8k+6)}{16k^{2}-9}$$</p>
+      <p>$$=\frac{20k-15-8k-6}{16k^{2}-9}=\frac{12k-21}{16k^{2}-9}$$</p>
+      <p>選項 B、D 的常數項得 $+9$，正是漏掉減號分配到 $+6$ 的結果。</p>
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$\dfrac{12k-21}{16k^{2}-9}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 求 $\dfrac{3}{2m+5}-\dfrac{4}{2m-5}$ 的值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 最簡公分母 $(2m+5)(2m-5)=4m^{2}-25$。</div>
+          <div class="p-step"><b>第 2 步.</b> 通分：$\dfrac{3(2m-5)-4(2m+5)}{4m^{2}-25}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 分子 $=6m-15-8m-20=-2m-35$，故值為 $\dfrac{-2m-35}{4m^{2}-25}$。</div>
+          <div class="p-ans">答案：$\dfrac{-2m-35}{4m^{2}-25}$（即 $\dfrac{2m+35}{25-4m^{2}}$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2020_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2020_P2_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
