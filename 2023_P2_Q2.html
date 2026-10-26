@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第2題 · 通分後化簡代數分式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第2題</span>
+  <h1>通分後化簡代數分式</h1>
+  <p class="sub">多項式 · 分式的加減 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $\dfrac{2}{5-4x}-\dfrac{1}{5+4x}=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\dfrac{5+4x}{25-16x^{2}}$</li>
+      <li><span class="ol">B.</span> $\dfrac{5-4x}{25-16x^{2}}$</li>
+      <li><span class="ol">C.</span> $\dfrac{5+12x}{25-16x^{2}}$</li>
+      <li><span class="ol">D.</span> $\dfrac{5-12x}{25-16x^{2}}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出公分母（平方差）</div>
+      <div class="rule">
+        <span class="rule-name">平方差</span>
+        <span class="rule-math">\((a-b)(a+b)=a^{2}-b^{2}\)</span>
+      </div>
+兩個分母 $5-4x$ 與 $5+4x$ 互為共軛，故公分母為 \[(5-4x)(5+4x)=5^{2}-(4x)^{2}=25-16x^{2}.\]
+      <div class="hint">先保留因式形式 $(5-4x)(5+4x)$ 通分，最後一步才化開，可減少錯誤。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">通分並把分子寫成一個分數</div>
+      <div class="rule">
+        <span class="rule-name">分式的加減</span>
+        <span class="rule-math">\(\frac{p}{q}\pm\frac{r}{s}=\frac{ps\pm rq}{qs}\)</span>
+      </div>
+第一個分式上下乘 $(5+4x)$，第二個上下乘 $(5-4x)$：\[\frac{2(5+4x)}{(5-4x)(5+4x)}-\frac{1(5-4x)}{(5-4x)(5+4x)}=\frac{2(5+4x)-(5-4x)}{(5-4x)(5+4x)}.\]
+      <div class="hint">減號後面要保留括號 $(5-4x)$，否則只減了 $5$ 而漏減 $-4x$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">展開分子並合併同類項</div>
+      <div class="rule">
+        <span class="rule-name">去括號（負號分配）</span>
+        <span class="rule-math">\(-(p-q)=-p+q\)</span>
+      </div>
+\[2(5+4x)=10+8x,\qquad -(5-4x)=-5+4x.\] 所以分子為 \[(10+8x)+(-5+4x)=5+12x.\]
+      <div class="hint">$-(-4x)=+4x$，這裡出錯就會誤選 D。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">寫出結果並核對選項</div>
+\[\frac{2}{5-4x}-\frac{1}{5+4x}=\frac{5+12x}{25-16x^{2}}.\] 驗算：取 $x=1$，原式 $=\dfrac{2}{1}-\dfrac{1}{9}=\dfrac{17}{9}$；選項 C 給出 $\dfrac{5+12}{25-16}=\dfrac{17}{9}$，相符，故選 C。
+      <div class="hint">A、B 的分子漏了 $x$ 項（只做 $-5$ 或只做 $10-5$），D 則是符號錯。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{5+12x}{25-16x^{2}}$（C）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{3}{x-2}-\dfrac{2}{x+2}=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 公分母為 $(x-2)(x+2)=x^{2}-4$。</div>
+          <div class="p-step"><b>第 2 步.</b> 通分：$\dfrac{3(x+2)-2(x-2)}{x^{2}-4}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 展開分子：$3x+6-2x+4=x+10$。</div>
+          <div class="p-step"><b>第 4 步.</b> 結果：$\dfrac{x+10}{x^{2}-4}$；取 $x=3$ 驗算，原式 $3-\dfrac{2}{5}=\dfrac{13}{5}$，而 $\dfrac{13}{9-4}=\dfrac{13}{5}$，相符。</div>
+          <div class="p-ans">答案：$\dfrac{x+10}{x^{2}-4}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

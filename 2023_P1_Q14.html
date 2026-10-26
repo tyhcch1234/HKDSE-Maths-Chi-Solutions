@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第14題 · 圓錐切割後的體積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第14題</span>
+  <h1>圓錐切割後的體積</h1>
+  <p class="sub">求積法 · 相似圓錐與球體 · 8 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p>一個實心金屬直立圓錐的底半徑及曲面面積分別為 $14\text{ cm}$ 及 $700\pi\text{ cm}^{2}$。</p>
+<p><b>(a)</b> 求該圓錐的高。<span class="marks">[3 分]</span></p>
+<p><b>(b)</b> 該圓錐被一個平行於其底面的平面分成一個直立圓錐 $X$ 及一個圓台 $Y$。$Y$ 的曲面面積是 $X$ 的曲面面積的 15 倍。</p>
+<p><b>(i)</b> 以 $\pi$ 表示 $Y$ 的體積。</p>
+<p><b>(ii)</b> 若 $Y$ 被熔掉並重鑄成 2 個相同的實心球體，求每個球體的直徑。<span class="marks">[5 分]</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由曲面面積求斜高</div>
+      <div class="rule">
+        <span class="rule-name">圓錐的曲面面積</span>
+        <span class="rule-math">\(\text{曲面面積}=\pi r\ell\)</span>
+        <span class="rule-why">$r$ 為底半徑，$\ell$ 為斜高。</span>
+      </div>
+設斜高為 $\ell\text{ cm}$，底半徑 $r=14\text{ cm}$。由
+      \[\pi(14)\ell=700\pi\]
+      得
+      \[\ell=\frac{700\pi}{14\pi}=50.\]
+      即斜高為 $50\text{ cm}$。
+      <div class="hint">曲面面積公式用斜高 $\ell$，不是用高 $h$；用錯會直接得出 $50$ 為高。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用畢氏定理求高</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">\(\ell^{2}=r^{2}+h^{2}\)</span>
+      </div>
+半徑、高與斜高組成直角三角形，斜高為斜邊：
+      \[h=\sqrt{\ell^{2}-r^{2}}=\sqrt{50^{2}-14^{2}}=\sqrt{2500-196}=\sqrt{2304}=48.\]
+      故圓錐的高為 $48\text{ cm}$。
+      <div class="hint">$\sqrt{2304}$ 可用 $48^{2}=2304$ 直接看出；估算 $45^{2}=2025$、$50^{2}=2500$ 也可確認答案合理。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">由曲面面積比求相似比</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的面積比</span>
+        <span class="rule-math">\(\frac{A_{1}}{A_{2}}=k^{2}\)</span>
+        <span class="rule-why">$k$ 為兩個相似立體的線性比（長度比）。</span>
+      </div>
+設 $X$ 的曲面面積為 $S$，則 $Y$ 的為 $15S$，而整個圓錐的曲面面積是兩者之和：
+      \[S+15S=16S.\]
+      圓錐 $X$ 與整個圓錐相似（同頂點、底面平行），故
+      \[k^{2}=\frac{S}{16S}=\frac{1}{16} \;\Rightarrow\; k=\frac{1}{4}.\]
+      即 $X$ 的每個長度都是整個圓錐對應長度的 $\dfrac{1}{4}$：$X$ 的高 $=\dfrac{48}{4}=12\text{ cm}$，底半徑 $=\dfrac{14}{4}=3.5\text{ cm}$。
+      驗算 $X$ 的曲面面積：$\pi(3.5)(12.5)=43.75\pi$，而 $700\pi\div16=43.75\pi$，相符。
+      <div class="hint">「$Y$ 是 $X$ 的 15 倍」不等於「$X$ 是整體的 $\frac{1}{15}$」；整體是 $1+15=16$ 份，這是本題最常見的失分位。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">求圓台 $Y$ 的體積</div>
+      <div class="rule">
+        <span class="rule-name">相似立體的體積比</span>
+        <span class="rule-math">\(\frac{V_{1}}{V_{2}}=k^{3}\)</span>
+      </div>
+整個圓錐的體積
+      \[V=\frac{1}{3}\pi(14)^{2}(48)=\frac{1}{3}\pi(196)(48)=3136\pi.\]
+      $X$ 與整個圓錐的體積比為
+      \[k^{3}=\left(\frac{1}{4}\right)^{3}=\frac{1}{64},\]
+      故 $V_{X}=\dfrac{3136\pi}{64}=49\pi$（也可由 $\frac{1}{3}\pi(3.5)^{2}(12)=49\pi$ 直接算出），於是
+      \[V_{Y}=V-V_{X}=3136\pi-49\pi=3087\pi.\]
+      即 $Y$ 的體積為 $3087\pi\text{ cm}^{3}$。
+      <div class="hint">面積比是 $1:16$，體積比是 $1:64$；把面積比當成體積比會少了一個平方。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">熔鑄成兩個球體，求直徑</div>
+      <div class="rule">
+        <span class="rule-name">球體體積</span>
+        <span class="rule-math">\(V=\frac{4}{3}\pi r^{3}\)</span>
+      </div>
+設每個球體的半徑為 $r\text{ cm}$、直徑為 $d\text{ cm}$。熔鑄前後體積不變：
+      \[2\times\frac{4}{3}\pi r^{3}=3087\pi\]
+      \[\frac{8}{3}r^{3}=3087 \;\Rightarrow\; r^{3}=\frac{3087\times3}{8}=\frac{9261}{8}.\]
+      因 $21^{3}=9261$，故 $r^{3}=\left(\dfrac{21}{2}\right)^{3}$，即 $r=\dfrac{21}{2}=10.5$。
+      於是 $d=2r=21$，每個球體的直徑為 $21\text{ cm}$。
+      驗算：$10.5^{3}=1157.625$，而 $2\times\dfrac{4}{3}\pi(1157.625)=3087\pi$，與 $V_{Y}$ 相同。
+      <div class="hint">「2 個相同球體」的體積要除以 2 再開立方；忘記除以 2 會得出 $d=2\sqrt[3]{1157.625}$ 這類錯誤答案。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $48\text{ cm}$　　(b)(i) $3087\pi\text{ cm}^{3}$　　(b)(ii) $21\text{ cm}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 一個實心金屬直立圓錐的底半徑及曲面面積分別為 $9\text{ cm}$ 及 $135\pi\text{ cm}^{2}$。
+(a) 求該圓錐的高。
+(b) 該圓錐被一個平行於底面的平面分成直立圓錐 $X$ 及圓台 $Y$，而 $Y$ 的曲面面積是 $X$ 的 3 倍。
+(i) 以 $\pi$ 表示 $Y$ 的體積。
+(ii) 若 $Y$ 被熔掉並重鑄成 2 個相同的實心球體，求每個球體的直徑（準確至三位有效數字）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 曲面面積 $\pi(9)\ell=135\pi$，得斜高 $\ell=15\text{ cm}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 高 $h=\sqrt{15^{2}-9^{2}}=\sqrt{225-81}=\sqrt{144}=12\text{ cm}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 整體曲面面積 $=X+3X=4X$，故 $k^{2}=\dfrac{1}{4}$，線性比 $k=\dfrac{1}{2}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 整體體積 $=\frac{1}{3}\pi(9)^{2}(12)=324\pi$；$V_{X}=\dfrac{324\pi}{2^{3}}=40.5\pi$，故 $V_{Y}=324\pi-40.5\pi=283.5\pi\text{ cm}^{3}$。</div>
+          <div class="p-step"><b>第 5 步.</b> 設球半徑 $r$：$2\times\frac{4}{3}\pi r^{3}=283.5\pi$，得 $r^{3}=106.3125$，$r=4.7373$，故直徑 $\approx 9.47\text{ cm}$。</div>
+          <div class="p-ans">答案：(a) $12\text{ cm}$　　(b)(i) $283.5\pi\text{ cm}^{3}$　　(b)(ii) $9.47\text{ cm}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q13.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第9題 · 樹葉圖求平均數與眾數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第9題</span>
+  <h1>樹葉圖求平均數與眾數</h1>
+  <p class="sub">統計 · 樹葉圖 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+以下的樹葉圖顯示一組工人在一星期內的工作時數分布。
+      <table class="dtable" style="margin:12px auto;">
+        <tr><th>幹（十位）</th><th>葉（個位）</th></tr>
+        <tr><td>2</td><td style="text-align:left;">$a$　$5$　$5$　$6$　$6$　$8$　$8$</td></tr>
+        <tr><td>3</td><td style="text-align:left;">$3$　$3$　$3$　$4$　$5$　$5$　$9$　$9$</td></tr>
+        <tr><td>4</td><td style="text-align:left;">$0$　$1$　$4$　$4$　$5$　$6$　$7$　$7$　$9$</td></tr>
+      </table>
+      該分布的全距為 $27$。
+      <p>(a) 求該分布的平均數及眾數。</p>
+      <p>(b) 若從該組工人中隨機選出一人，求該名工人該星期的工作時數大於該分布眾數的概率。<span class="marks">[5 分]</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2023_P1_Q9.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用全距求 $a$</div>
+      <div class="rule">
+        <span class="rule-name">全距</span>
+        <span class="rule-math">\(全距 = 最大值 - 最小值\)</span>
+        <span class="rule-why">全距只取決於分布中最大與最小的數據，故可用來反求未知的葉 $a$。</span>
+      </div>
+幹代表十位、葉代表個位，所以幹 $2$ 配葉 $a$ 的數據是 $20+a$；幹 $4$ 最大的葉是 $9$，即最大值 $49$。
+      \[49-(20+a)=27\]
+      \[29-a=27 \;\Rightarrow\; a=2\]
+      驗算：最小值 $=22$，$49-22=27$ ✓。故此幹 $2$ 一行是 $22,25,25,26,26,28,28$。
+      <div class="hint">幹 $2$ 配葉 $a$ 是 $20+a$，不是 $2a$；$a=2$ 即最小值 $22$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">列出全部數據並點算工人數目</div>
+代入 $a=2$ 後，三行數據為：
+      <ul>
+        <li>幹 $2$：$22,25,25,26,26,28,28$ —— $7$ 個</li>
+        <li>幹 $3$：$33,33,33,34,35,35,39,39$ —— $8$ 個</li>
+        <li>幹 $4$：$40,41,44,44,45,46,47,47,49$ —— $9$ 個</li>
+      </ul>
+      \[7+8+9=24\]
+      即該組共有 $24$ 名工人，這個數就是第 (b) 部概率的分母。
+      <div class="hint">逐個葉點算：幹 $3$ 一行是「三個 3、一個 4、兩個 5、兩個 9」，共 $8$ 個葉，不是 $9$ 個。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分行求和再求平均數</div>
+      <div class="rule">
+        <span class="rule-name">平均數</span>
+        <span class="rule-math">\(\bar{x}=\frac{\sum x}{n}\)</span>
+        <span class="rule-why">把 $24$ 個數據全部相加，再除以數據個數。</span>
+      </div>
+先分三行求小計：
+      \[22+25+25+26+26+28+28=180\]
+      \[33\times3+34+35\times2+39\times2=99+34+70+78=281\]
+      \[40+41+44\times2+45+46+47\times2+49=81+88+45+46+94+49=403\]
+      總和：
+      \[\sum x=180+281+403=864\]
+      故
+      \[\bar{x}=\frac{864}{24}=36\]
+      驗算：$36\times24=864$ ✓（平均數必須是整數小時，合理）。
+      <div class="hint">三個小計之和應為 $864$。若得 $897$（即 $\frac{897}{24}\approx37.4$），通常是幹 $3$ 一行多算了一個 $33$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">比較出現次數找眾數</div>
+逐個數據值數出現次數：
+      <ul>
+        <li>$33$ 出現 $3$ 次（幹 $3$ 的三個葉 $3$）</li>
+        <li>$25,26,28,35,39,44,47$ 各出現 $2$ 次</li>
+        <li>其餘（$22,34,40,41,45,46,49$）各出現 $1$ 次</li>
+      </ul>
+      出現次數最多的是 $33$：
+      \[\text{眾數}=33\]
+      驗算：$3$ 次是全部數據值中最高的重複次數，沒有其他數值達到 $3$ 次 ✓。
+      <div class="hint">眾數是「出現最多的數據值」（$33$ 小時），不是「出現的次數」（$3$ 次）。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">數出大於眾數的數據求概率</div>
+      <div class="rule">
+        <span class="rule-name">概率</span>
+        <span class="rule-math">\(P=\frac{\text{有利結果數目}}{\text{結果總數}}\)</span>
+        <span class="rule-why">隨機選一人，每人被選中的機會相同，故可直接用「人數比」計算。</span>
+      </div>
+「工作時數大於眾數」即 $x>33$，只取嚴格大於 $33$ 的數據：
+      <ul>
+        <li>幹 $3$：$34,35,35,39,39$ —— $5$ 個</li>
+        <li>幹 $4$：$40,41,44,44,45,46,47,47,49$ —— $9$ 個</li>
+      </ul>
+      \[5+9=14\]
+      故
+      \[P(x>33)=\frac{14}{24}=\frac{7}{12}\]
+      驗算：不大於 $33$ 的有 $24-14=10$ 個（$7$ 個幹 $2$ 的數據加 $3$ 個 $33$），$14+10=24$ ✓。
+      <div class="hint">三個 $33$ 不算「大於 $33$」，不可計入分子。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) 平均數 $=36$，眾數 $=33$；（b）$\dfrac{7}{12}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 以下的樹葉圖顯示一組學生的零用錢（元）分布，全距為 $25$。
+      <table class="dtable" style="margin:12px auto;">
+        <tr><th>幹（十位）</th><th>葉（個位）</th></tr>
+        <tr><td>1</td><td style="text-align:left;">$b$　$5$　$5$　$8$</td></tr>
+        <tr><td>2</td><td style="text-align:left;">$2$　$2$　$2$　$6$</td></tr>
+        <tr><td>3</td><td style="text-align:left;">$0$　$1$　$6$　$8$</td></tr>
+      </table>
+      (a) 求該分布的平均數及眾數。(b) 若隨機選出一名學生，求其零用錢大於眾數的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由全距求 $b$：最大值 $38$、最小值 $10+b$，$38-(10+b)=25\Rightarrow b=3$。</div>
+          <div class="p-step"><b>第 2 步.</b> 數據為 $13,15,15,18$（$4$ 個）、$22,22,22,26$（$4$ 個）、$30,31,36,38$（$4$ 個），共 $12$ 個。</div>
+          <div class="p-step"><b>第 3 步.</b> 分行小計：$13+15+15+18=61$、$22\times3+26=92$、$30+31+36+38=135$，總和 $=61+92+135=288$，平均數 $=\frac{288}{12}=24$。</div>
+          <div class="p-step"><b>第 4 步.</b> 眾數 $=22$（出現 $3$ 次，其餘最多 $2$ 次）。</div>
+          <div class="p-step"><b>第 5 步.</b> 大於 $22$ 的有 $26,30,31,36,38$ 共 $5$ 個，概率 $=\frac{5}{12}$。</div>
+          <div class="p-ans">答案：(a) 平均數 $=24$，眾數 $=22$；（b）$\dfrac{5}{12}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

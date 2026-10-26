@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第6題 · 連比與代數式求值</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第6題</span>
+  <h1>連比與代數式求值</h1>
+  <p class="sub">比率 · 連比與代數式 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $a$、$b$、$c$ 為非零數，且 $7a=6b$ 及 $\dfrac{4a-3c}{2b-c}=9$。求\n      (a) $a:b:c$，\n      (b) $\dfrac{5a+8b}{7b+3c}$。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由第一式求 $a:b$</div>
+      <div class="rule">
+        <span class="rule-name">比例的基本性質</span>
+        <span class="rule-math">\(\frac{a}{b}=\frac{c}{d}\ \Longleftrightarrow\ a:b=c:d\)</span>
+      </div>
+由 $7a=6b$，兩邊除以 $7b$（因 $b\neq0$）：\[\frac{a}{b}=\frac{6}{7}\quad\Longrightarrow\quad a:b=6:7.\]
+      <div class="hint">係數要「交叉」：$7a=6b$ 得出 $a:b=6:7$，不是 $7:6$。可代 $a=6$、$b=7$ 檢查：$7(6)=42=6(7)$ ✔。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用第二式建立 $b$ 與 $c$ 的關係</div>
+由 $\dfrac{4a-3c}{2b-c}=9$（且 $2b\neq c$），先去分母：\[4a-3c=9(2b-c)=18b-9c.\]把 $c$ 項集中到左邊：\[4a+6c=18b.\]代入 $a=\dfrac{6}{7}b$：\[4\times\frac{6}{7}b+6c=18b\]\[\frac{24}{7}b+6c=18b\]\[6c=\left(18-\frac{24}{7}\right)b=\frac{126-24}{7}b=\frac{102}{7}b\]\[c=\frac{17}{7}b.\]
+      <div class="hint">去分母時右邊要整條乘以 $9$；$18-\dfrac{24}{7}=\dfrac{102}{7}$，再除以 $6$ 便得 $\dfrac{17}{7}$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合併成三項連比</div>
+由 $c=\dfrac{17}{7}b$ 得 $b:c=7:17$；而 $a:b=6:7$。兩個比之中 $b$ 的部分同為 $7$，可直接串連：\[a:b:c=6:7:17.\]
+      <div class="hint">若兩個比的共同項數值不同（例如 $a:b=2:3$、$b:c=4:5$），要先擴分令 $b$ 相同才可合併。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">引入參數 $k$ 代入所求代數式</div>
+      <div class="rule">
+        <span class="rule-name">連比的參數式</span>
+        <span class="rule-math">\(a:b:c=p:q:r\ \Longrightarrow\ a=pk,\ b=qk,\ c=rk\ (k\neq0)\)</span>
+      </div>
+設 $a=6k$、$b=7k$、$c=17k$（$k\neq0$），則\[\frac{5a+8b}{7b+3c}=\frac{5(6k)+8(7k)}{7(7k)+3(17k)}=\frac{30k+56k}{49k+51k}.\]
+      <div class="hint">$k$ 在分子分母同時出現，最後可以約去，所以答案與 $k$ 的取值無關。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">化簡及驗算</div>
+\[=\frac{86k}{100k}=\frac{86}{100}=\frac{43}{50}.\]驗算原條件：取 $k=1$，即 $a=6$、$b=7$、$c=17$，則 $4a-3c=24-51=-27$，$2b-c=14-17=-3$，而 $\dfrac{-27}{-3}=9$ ✔，與題設的 $9$ 相符。
+      <div class="hint">先約去 $k$，再將 $86$ 與 $100$ 同除以 $2$；不要停在 $\dfrac{86}{100}$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $a:b:c=6:7:17$　　(b) $\dfrac{5a+8b}{7b+3c}=\dfrac{43}{50}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a$、$b$、$c$ 為非零數，且 $5a=4b$ 及 $\dfrac{3a-2c}{b+c}=2$。求 (a) $a:b:c$，(b) $\dfrac{2a+3b}{a+2c}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 由 $5a=4b$ 得 $a:b=4:5$，即 $a=\dfrac{4}{5}b$。</div>
+          <div class="p-step"><b>第 2 步.</b> 去分母：$3a-2c=2b+2c$，即 $3a=2b+4c$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $a=\dfrac{4}{5}b$：$\dfrac{12}{5}b=2b+4c$，得 $4c=\dfrac{2}{5}b$，故 $c=\dfrac{1}{10}b$。</div>
+          <div class="p-step"><b>第 4 步.</b> 連比：$a:b:c=4:5:\dfrac{1}{10}=40:50:5=8:10:1$。</div>
+          <div class="p-step"><b>第 5 步.</b> 設 $a=8k$、$b=10k$、$c=k$：$\dfrac{2a+3b}{a+2c}=\dfrac{16k+30k}{8k+2k}=\dfrac{46}{10}=\dfrac{23}{5}$。</div>
+          <div class="p-ans">答案：(a) $a:b:c=8:10:1$　(b) $\dfrac{23}{5}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q5.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

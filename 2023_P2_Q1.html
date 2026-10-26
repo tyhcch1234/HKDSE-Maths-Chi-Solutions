@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第1題 · 把 a 變為主項（分式方程）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第1題</span>
+  <h1>把 a 變為主項（分式方程）</h1>
+  <p class="sub">代數變換 · 主項變換 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+若 $\dfrac{a+5b}{7a+2b}=\dfrac{1}{b+3}$，則 $a=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $\dfrac{4-b}{5b^{2}+13b}$</li>
+      <li><span class="ol">B.</span> $\dfrac{4+b}{5b^{2}+13b}$</li>
+      <li><span class="ol">C.</span> $\dfrac{5b^{2}+13b}{4-b}$</li>
+      <li><span class="ol">D.</span> $\dfrac{5b^{2}+13b}{4+b}$</li>
+    </ol>
+    <figure class="fig"><img src="figures/2023_P2_Q1.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">交叉相乘去掉兩個分母</div>
+      <div class="rule">
+        <span class="rule-name">分式方程（交叉相乘）</span>
+        <span class="rule-math">\(\frac{a}{b}=\frac{c}{d}\;\Longrightarrow\;ad=bc\)</span>
+        <span class="rule-why">兩邊同乘 $(7a+2b)(b+3)$ 便一次清掉兩個分母（其中 $b\neq-3$、$7a+2b\neq0$）。</span>
+      </div>
+\[\frac{a+5b}{7a+2b}=\frac{1}{b+3}\;\Longrightarrow\;(a+5b)(b+3)=1\cdot(7a+2b).\]
+      <div class="hint">左邊兩個因式都要乘，不要只乘 $b+3$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開並把非 $a$ 的項集中</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        <span class="rule-math">\((p+q)(r+s)=pr+ps+qr+qs\)</span>
+      </div>
+展開左邊：\[(a+5b)(b+3)=ab+3a+5b^{2}+15b.\] 全部搬到左邊並合併同類項：\[ab+3a-7a+5b^{2}+15b-2b=0\;\Longrightarrow\;ab-4a+5b^{2}+13b=0.\]
+      <div class="hint">$3a-7a=-4a$、$15b-2b=13b$，符號最容易出錯。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">集中含 $a$ 的項並抽出 $a$</div>
+      <div class="rule">
+        <span class="rule-name">移項與因式分解</span>
+        <span class="rule-math">\(ax+bx=x(a+b)\)</span>
+      </div>
+把不含 $a$ 的項移到右邊：\[5b^{2}+13b=4a-ab.\] 再抽出公因式 $a$：\[5b^{2}+13b=a(4-b).\]
+      <div class="hint">$4a-ab=a(4-b)$，不是 $a(4+b)$，這個差別正是 B 與 C 的分界。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">兩邊除以 $(4-b)$ 並核對選項</div>
+      <div class="rule">
+        <span class="rule-name">兩邊同除</span>
+        <span class="rule-math">\(ax=b\;\Longrightarrow\;x=\frac{b}{a}\;(a\neq0)\)</span>
+      </div>
+\[a=\frac{5b^{2}+13b}{4-b}\quad(b\neq4).\] 驗算：取 $b=1$，得 $a=\dfrac{5+13}{3}=6$；代回原式左邊 $\dfrac{6+5}{42+2}=\dfrac{11}{44}=\dfrac{1}{4}$，右邊 $\dfrac{1}{4}$，兩邊相等。與選項 C 完全一致。
+      <div class="hint">選項中分子分母位置相反（A、B）或符號相反（D）都是干擾項。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$a=\dfrac{5b^{2}+13b}{4-b}$（C）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 若 $\dfrac{m+4n}{6m+n}=\dfrac{1}{n+5}$，則 $m=$（答案以 $n$ 表示）</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 交叉相乘：$(m+4n)(n+5)=6m+n$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開：$mn+5m+4n^{2}+20n=6m+n$，整理得 $mn-m+4n^{2}+19n=0$。</div>
+          <div class="p-step"><b>第 3 步.</b> 集中含 $m$ 的項：$4n^{2}+19n=6m-mn=m(6-n)$ 移項後得 $m(n-1)=-(4n^{2}+19n)$，故 $m=\dfrac{4n^{2}+19n}{1-n}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：取 $n=2$，$m=\dfrac{16+38}{-1}=-54$；左邊 $\dfrac{-54+8}{-324+2}=\dfrac{-46}{-322}=\dfrac{1}{7}$，右邊 $\dfrac{1}{7}$，相符。</div>
+          <div class="p-ans">答案：$m=\dfrac{4n^{2}+19n}{1-n}$（$n\neq1$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><span></span><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第16題 · 圓與直線的交點分比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第16題</span>
+  <h1>圓與直線的交點分比</h1>
+  <p class="sub">坐標幾何 · 圓與直線相交 · 5 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p>(a) 設 $a$ 與 $b$ 為實常數。若方程 $x^{2}+ax+b=0$ 的兩根為 $p$ 與 $5p$，證明 $5a^{2}=36b$。<span class="marks">[2 分]</span></p>
+<p>(b) 記圓 $C$ 為 $x^{2}+y^{2}-6x-12y+20=0$。求常數 $m$，使直線 $y=mx$ 與 $C$ 相交於點 $Q$ 及 $R$，且 $OQ:QR=1:4$，其中 $O$ 為原點。<span class="marks">[3 分]</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出兩根的和與積</div>
+      <div class="rule">
+        <span class="rule-name">根與係數的關係（韋達定理）</span>
+        <span class="rule-math">\(p+q=-a,\quad pq=b \;\text{（方程 } x^{2}+ax+b=0\text{）}\)</span>
+        <span class="rule-why">方程已寫成 $x^{2}+ax+b=0$ 的形式，$x^{2}$ 的係數為 1，可直接套用。</span>
+      </div>
+方程的兩根為 $p$ 與 $5p$，所以
+\[ p+5p=-a \;\Longrightarrow\; 6p=-a \]
+\[ (p)(5p)=b \;\Longrightarrow\; 5p^{2}=b \]
+      <div class="hint">兩根之和等於 $-a$（有負號），兩根之積等於 $b$（無負號），兩者不要調亂。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 消去 p 得出關係式</div>
+      <div class="rule">
+        <span class="rule-name">代入消元</span>
+        <span class="rule-math">\(p=-\frac{a}{6}\;\Longrightarrow\;5\left(-\frac{a}{6}\right)^{2}=b\)</span>
+      </div>
+由 $6p=-a$ 得 $p=-\dfrac{a}{6}$。代入 $5p^{2}=b$：
+\[ 5\left(-\frac{a}{6}\right)^{2}=b \]
+\[ 5\cdot\frac{a^{2}}{36}=b \]
+兩邊乘以 $36$：
+\[ 5a^{2}=36b \]
+證明完畢。
+      <div class="hint">平方後負號消失：$\left(-\dfrac{a}{6}\right)^{2}=\dfrac{a^{2}}{36}$，不是 $-\dfrac{a^{2}}{36}$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 配方求圓心與半徑，並讀出分比</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">\(x^{2}+y^{2}+Dx+Ey+F=0 \;\Longrightarrow\; \left(x+\tfrac{D}{2}\right)^{2}+\left(y+\tfrac{E}{2}\right)^{2}=\tfrac{D^{2}+E^{2}}{4}-F\)</span>
+      </div>
+對圓 $C$ 配方：
+\[ x^{2}-6x+y^{2}-12y+20=0 \]
+\[ (x-3)^{2}-9+(y-6)^{2}-36+20=0 \]
+\[ (x-3)^{2}+(y-6)^{2}=25 \]
+故圓心為 $(3,6)$，半徑為 $5$。
+
+又 $OQ:QR=1:4$，即 $QR=4\,OQ$，故
+\[ OR=OQ+QR=5\,OQ \]
+      <div class="hint">半徑是 $\sqrt{25}=5$，不是 $25$；另外 $OQ:QR$ 是兩段之比，$OR$ 才是整條弦。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 把直線代入圓方程</div>
+      <div class="rule">
+        <span class="rule-name">聯立方程（代入法）</span>
+        <span class="rule-math">\(y=mx \;\Longrightarrow\; x^{2}+(mx)^{2}-6x-12mx+20=0\)</span>
+      </div>
+把 $y=mx$ 代入 $C$：
+\[ x^{2}+m^{2}x^{2}-6x-12mx+20=0 \]
+\[ (1+m^{2})x^{2}-(12m+6)x+20=0 \]
+由於 $O$、$Q$、$R$ 在同一條射線上，$x$ 坐標與由 $O$ 起的距離成正比，故兩根的比亦是 $1:4$。設 $Q$ 的 $x$ 坐標為 $t$，則 $R$ 的為 $5t$。兩邊除以 $(1+m^{2})$：
+\[ x^{2}-\frac{6(2m+1)}{1+m^{2}}x+\frac{20}{1+m^{2}}=0 \]
+即 $a=-\dfrac{6(2m+1)}{1+m^{2}}$、$b=\dfrac{20}{1+m^{2}}$，而兩根為 $t$ 與 $5t$。
+      <div class="hint">$12m+6=6(2m+1)$ 這個因式分解後面會用到；另外 $t\neq0$，否則 $Q$ 與 $O$ 重合。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b) 套用 (a) 的結果解 m</div>
+      <div class="rule">
+        <span class="rule-name">(a) 的結論</span>
+        <span class="rule-math">\(5a^{2}=36b\)</span>
+        <span class="rule-why">新的二次方程兩根之比為 $1:5$，正合乎 (a) 部的假設。</span>
+      </div>
+以 $a=-\dfrac{6(2m+1)}{1+m^{2}}$、$b=\dfrac{20}{1+m^{2}}$ 代入 $5a^{2}=36b$：
+\[ 5\left(\frac{6(2m+1)}{1+m^{2}}\right)^{2}=36\cdot\frac{20}{1+m^{2}} \]
+\[ \frac{180(2m+1)^{2}}{(1+m^{2})^{2}}=\frac{720}{1+m^{2}} \]
+兩邊乘以 $(1+m^{2})^{2}$ 並除以 $180$：
+\[ (2m+1)^{2}=4(1+m^{2}) \]
+\[ 4m^{2}+4m+1=4m^{2}+4 \]
+\[ 4m=3 \;\Longrightarrow\; m=\frac{3}{4} \]
+      <div class="hint">$m^{2}$ 項剛好抵銷，方程才變成一次；若仍見 $m^{2}$，多數是展開 $6(2m+1)$ 時漏了平方。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">代回驗算</div>
+      <div class="rule">
+        <span class="rule-name">驗算（代回原方程）</span>
+        <span class="rule-math">\(Q=(1.6,1.2),\; R=(8,6)\)</span>
+      </div>
+取 $m=\dfrac{3}{4}$，則 $1+m^{2}=\dfrac{25}{16}$，方程為
+\[ \frac{25}{16}x^{2}-15x+20=0 \]
+乘以 $\dfrac{16}{5}$：$5x^{2}-48x+64=0$，即
+\[ (x-1.6)(5x-40)=0 \;\Longrightarrow\; x=1.6 \text{ 或 } 8 \]
+故 $Q=(1.6,\,1.2)$、$R=(8,\,6)$：
+$OQ=\sqrt{1.6^{2}+1.2^{2}}=2$，$QR=\sqrt{6.4^{2}+4.8^{2}}=8=4\times2$，故 $OQ:QR=1:4$。
+又 $(8-3)^{2}+(6-6)^{2}=25$，$R$ 確在圓 $C$ 上。
+      <div class="hint">驗算不必求根公式，把 $5x^{2}-48x+64$ 因式分解更快；兩根之比 $1.6:8=1:5$ 正是 $OQ:OR$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $5a^{2}=36b$（已證明）；(b) $m=\dfrac{3}{4}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $a$、$b$ 為實常數。若方程 $x^{2}+ax+b=0$ 的兩根為 $p$ 與 $4p$，證明 $4a^{2}=25b$。由此求常數 $m$，使直線 $y=mx$ 與圓 $x^{2}+y^{2}-4x-6y+8=0$ 相交於 $Q$、$R$，且 $OQ:QR=1:3$（$O$ 為原點，$m$ 取整數）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 兩根之和 $p+4p=5p=-a$，兩根之積 $4p^{2}=b$；由 $p=-\dfrac{a}{5}$ 得 $\dfrac{4a^{2}}{25}=b$，即 $4a^{2}=25b$。</div>
+          <div class="p-step"><b>第 2 步.</b> 配方：$(x-2)^{2}+(y-3)^{2}=5$，圓心 $(2,3)$、半徑 $\sqrt{5}$；由 $OQ:QR=1:3$ 得 $OR=4\,OQ$，故兩根為 $t$ 與 $4t$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入 $y=mx$ 得 $(1+m^{2})x^{2}-(6m+4)x+8=0$，即 $a=-\dfrac{6m+4}{1+m^{2}}$、$b=\dfrac{8}{1+m^{2}}$。</div>
+          <div class="p-step"><b>第 4 步.</b> 代入 $4a^{2}=25b$：$4(6m+4)^{2}=200(1+m^{2})$，化簡得 $7m^{2}-24m+17=0$，即 $(m-1)(7m-17)=0$，取整數解 $m=1$（此時兩根為 $1$ 與 $4$，$OQ=\sqrt{2}$、$QR=3\sqrt{2}$，符合 $1:3$）。</div>
+          <div class="p-ans">答案：$4a^{2}=25b$；$m=1$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

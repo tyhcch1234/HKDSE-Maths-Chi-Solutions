@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第19題 · 三角形外心垂心內心與面積比</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第19題</span>
+  <h1>三角形外心垂心內心與面積比</h1>
+  <p class="sub">坐標幾何 · 外心、垂心、內心與面積比 · 12 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設點 $P$ 及 $Q$ 的坐標分別為 $(50,\ 0)$ 及 $(32,\ t)$，其中 $t>0$。原點記為 $O$。設 $R$ 為一點使得 $OQ$ 為 $\Delta OPR$ 的一條中線。假設 $G$ 及 $H$ 分別為 $\Delta OPR$ 的外心及垂心。
+(a) 以 $t$ 表示 $G$ 及 $H$ 的坐標。<span class="marks">[5 分]</span>
+(b) 設 $S$ 為 $OP$ 上的一點使得 $QS$ 垂直於 $OP$。已知 $\angle PQS=\angle POQ$。
+(i) 考慮 $\tan\angle PQS$，證明 $t=24$。
+(ii) $O$、$G$ 及 $Q$ 是否共線？解釋你的答案。
+(iii) 設 $I$ 為 $\Delta OPR$ 的內心。求 $\Delta GHR$ 的面積與 $\Delta IPQ$ 的面積之比。<span class="marks">[7 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由中線定出 $R$ 的坐標</div>
+      <div class="rule">
+        <span class="rule-name">中點公式</span>
+        <span class="rule-math">\(Q=\left(\frac{x_P+x_R}{2},\ \frac{y_P+y_R}{2}\right)\)</span>
+        <span class="rule-why">$OQ$ 是由頂點 $O$ 連到對邊 $PR$ 的中線，故 $Q$ 是 $PR$ 的中點。</span>
+      </div>
+由 $Q$ 是 $PR$ 的中點，$R=2Q-P$：
+\[R=(2\times32-50,\ 2t-0)=(14,\ 2t).\]
+      <div class="hint">常用錯方向：把 $P$ 當成中點。正確是「$Q$ 在 $PR$ 上且 $PQ=QR$」，所以 $R=2Q-P$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求外心 $G$（兩條垂直平分線）</div>
+      <div class="rule">
+        <span class="rule-name">外心</span>
+        <span class="rule-math">\(\text{三邊垂直平分線的交點}\)</span>
+        <span class="rule-why">外心到 $O$、$P$、$R$ 等距，故同時在 $OP$ 與 $PR$ 的垂直平分線上。</span>
+      </div>
+$PR$ 的斜率
+\[m_{PR}=\frac{2t-0}{14-50}=-\frac{t}{18},\]
+故 $PR$ 的垂直平分線（過中點 $Q$）的斜率為 $\dfrac{18}{t}$：
+\[y-t=\frac{18}{t}(x-32).\]
+又 $O=(0,0)$、$P=(50,0)$，$OP$ 在 $x$ 軸上，其垂直平分線為 $x=25$。代入 $x=25$：
+\[y=t+\frac{18}{t}(25-32)=t-\frac{126}{t}=\frac{t^{2}-126}{t}.\]
+所以
+\[G=\left(25,\ \frac{t^{2}-126}{t}\right).\]
+      <div class="hint">$OQ$ 不是三角形的邊，不可用它的垂直平分線；要取 $OP$、$PR$ 兩條邊。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">求垂心 $H$（兩條高）</div>
+      <div class="rule">
+        <span class="rule-name">垂心</span>
+        <span class="rule-math">\(\text{三條高的交點}\)</span>
+        <span class="rule-why">垂心是任意兩條高的交點，取「從 $O$」與「從 $R$」兩條最方便。</span>
+      </div>
+$O$ 到 $PR$ 的高垂直於 $PR$，斜率為 $\dfrac{18}{t}$ 且過 $O$：
+\[y=\frac{18}{t}x.\]
+$R$ 到 $OP$ 的高垂直於 $OP$。因 $OP$ 是水平線，這條高是過 $R=(14,2t)$ 的鉛垂線 $x=14$。代入得
+\[y=\frac{18}{t}\times14=\frac{252}{t},\]
+所以
+\[H=\left(14,\ \frac{252}{t}\right).\]
+      <div class="hint">過 $R$ 的高與 $x=14$ 是同一條線，因為 $R$ 的 $x$ 坐標正好是 $14$；這點在 (a) 與 (b)(iii) 都會再用到。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(i) 由 $\tan\angle PQS=\tan\angle POQ$ 求 $t$</div>
+      <div class="rule">
+        <span class="rule-name">正切定義</span>
+        <span class="rule-math">\(\tan\theta=\frac{\text{對邊}}{\text{鄰邊}}\)</span>
+        <span class="rule-why">在直角三角形中，銳角的正切等於對邊除以鄰邊；兩角相等則正切相等。</span>
+      </div>
+$S$ 是 $Q$ 到 $OP$ 的垂足，故 $S=(32,0)$，且
+\[QS=t,\qquad PS=50-32=18.\]
+在直角三角形 $PQS$（直角在 $S$）中，$\angle PQS$ 的對邊是 $PS$、鄰邊是 $QS$：
+\[\tan\angle PQS=\frac{PS}{QS}=\frac{18}{t}.\]
+另一方面，$Q=(32,t)$ 在 $O$ 的右上方，$OP$ 沿正 $x$ 軸，故
+\[\tan\angle POQ=\frac{t}{32}.\]
+由 $\angle PQS=\angle POQ$：
+\[\frac{18}{t}=\frac{t}{32}\;\Longrightarrow\;t^{2}=576\;\Longrightarrow\;t=24\quad(\text{取 }t>0).\]
+      <div class="hint">不要與 $\angle QPS$ 混淆：$\tan\angle QPS=\dfrac{t}{18}$。$\angle PQS$ 的對邊是水平的 $PS$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(b)(ii) 比較 $OG$ 與 $OQ$ 的斜率</div>
+代入 $t=24$：
+\[G=\left(25,\ \frac{576-126}{24}\right)=\left(25,\ \frac{75}{4}\right),\qquad Q=(32,\ 24).\]
+\[m_{OG}=\frac{\frac{75}{4}-0}{25-0}=\frac{3}{4},\qquad m_{OQ}=\frac{24-0}{32-0}=\frac{3}{4}.\]
+兩斜率相等，而且兩條直線都經過 $O$，所以 $O$、$G$、$Q$ 在同一條直線 $y=\dfrac{3}{4}x$ 上。是，$O$、$G$、$Q$ 共線。
+      <div class="hint">只寫「斜率相等」不足夠，要補上「兩線同過 $O$」，才算證明共線。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b)(iii) 求內心 $I$，再算面積比</div>
+      <div class="rule">
+        <span class="rule-name">內切圓半徑</span>
+        <span class="rule-math">\(r=\frac{\text{面積}}{s},\qquad s=\frac{a+b+c}{2}\)</span>
+        <span class="rule-why">面積 $=rs$，$s$ 為半周長；$r$ 又是內心到各邊的距離。</span>
+      </div>
+取 $t=24$：$P=(50,0)$、$Q=(32,24)$、$R=(14,48)$，且
+\[OP=50,\quad OR=\sqrt{14^{2}+48^{2}}=50,\quad PR=\sqrt{36^{2}+48^{2}}=60,\quad OQ=\sqrt{32^{2}+24^{2}}=40.\]
+因 $OP=OR$ 而 $Q$ 是 $PR$ 中點，$OQ$ 平分 $\angle POR$，故內心 $I$ 在 $OQ$（即 $y=\frac34x$）上。求內切圓半徑：
+\[[OPR]=\frac12\times60\times40=1200,\qquad s=\frac{50+50+60}{2}=80,\qquad r=\frac{1200}{80}=15.\]
+$I$ 到 $OP$（$x$ 軸）的距離等於 $r$，故 $y_I=15$；由 $15=\frac34x_I$ 得 $x_I=20$，即
+\[I=(20,\ 15).\]
+又 $H=\left(14,\frac{252}{24}\right)=\left(14,\frac{21}{2}\right)$，而 $G$、$H$、$I$、$Q$ 全在 $y=\frac34x$ 上：
+\[GH=\sqrt{11^{2}+\left(\frac{75}{4}-\frac{21}{2}\right)^{2}}=\sqrt{121+\frac{1089}{16}}=\frac{55}{4},\qquad IQ=\sqrt{12^{2}+9^{2}}=15.\]
+因 $PR\perp OQ$ 且 $Q$ 為 $PR$ 中點，$R$ 與 $P$ 到直線 $OQ$ 的距離相等，記為 $h$。以 $OQ$ 上的 $GH$、$IQ$ 為底：
+\[\frac{[GHR]}{[IPQ]}=\frac{\frac12(GH)h}{\frac12(IQ)h}=\frac{GH}{IQ}=\frac{55/4}{15}=\frac{11}{12}.\]
+      <div class="hint">關鍵是把兩個三角形都看成「底在 $OQ$ 上」，共用同一個高 $h$；若逐個算面積，$\Delta GHR = \frac12\times\frac{75}{2}\times11=\frac{825}{4}$、$\Delta IPQ=225$，比值同樣是 $11:12$，可用來驗算。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $G=\left(25,\ \dfrac{t^{2}-126}{t}\right)$，$H=\left(14,\ \dfrac{252}{t}\right)$；(b)(i) $t=24$；(ii) 是，共線（$m_{OG}=m_{OQ}=\dfrac34$，且同過 $O$）；(iii) $[GHR]:[IPQ]=11:12$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $P=(25,\ 0)$、$Q=(16,\ t)$（$t>0$），$O$ 為原點，$R$ 使 $OQ$ 為 $\Delta OPR$ 的中線，$G$、$H$ 分別為 $\Delta OPR$ 的外心與垂心。(a) 以 $t$ 表示 $G$、$H$；(b) 設 $S=(16,0)$ 而 $\angle PQS=\angle POQ$，求 $t$；並問 $O$、$G$、$Q$ 是否共線；(c) 求 $\Delta GHR$ 與 $\Delta IPQ$ 的面積比，其中 $I$ 為 $\Delta OPR$ 的內心。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $R=2Q-P=(7,\ 24)$；$PR$ 斜率 $=\frac{24}{7-25}=-\frac43$，故垂直平分線過 $Q$ 且斜率 $\frac34$，與 $x=\frac{25}{2}$ 相交得 $G=\left(\frac{25}{2},\ \frac{75}{8}\right)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 過 $O$ 且斜率 $\frac34$ 的高為 $y=\frac34x$，過 $R$ 的高為 $x=7$，故 $H=\left(7,\ \frac{21}{4}\right)$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\tan\angle PQS=\frac{25-16}{t}=\frac9t$，$\tan\angle POQ=\frac{t}{16}$，故 $t^{2}=144$，$t=12$。</div>
+          <div class="p-step"><b>第 4 步.</b> $m_{OG}=\frac{75/8}{25/2}=\frac34=m_{OQ}$，且同過 $O$，故 $O$、$G$、$Q$ 共線。</div>
+          <div class="p-step"><b>第 5 步.</b> $OP=OR=25$、$PR=30$、$OQ=20$，面積 $=300$、$s=40$，故 $r=\frac{15}{2}$；由 $y_I=r$ 及 $y=\frac34x$ 得 $I=\left(10,\ \frac{15}{2}\right)$。$GH=\frac{55}{8}$、$IQ=\frac{15}{2}$，故比值 $=11:12$。</div>
+          <div class="p-ans">答案：$G=\left(\frac{25}{2},\frac{75}{8}\right)$，$H=\left(7,\frac{21}{4}\right)$；$t=12$；是，共線；$[GHR]:[IPQ]=11:12$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q18.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

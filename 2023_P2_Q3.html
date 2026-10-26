@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第3題 · 統一底數後合併指數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第3題</span>
+  <h1>統一底數後合併指數</h1>
+  <p class="sub">指數與對數 · 指數律 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+化簡 $4^{\,n+2}\,3^{\,2n+4}=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $6^{\,2n+4}$</li>
+      <li><span class="ol">B.</span> $6^{\,4n+8}$</li>
+      <li><span class="ol">C.</span> $12^{\,2n+4}$</li>
+      <li><span class="ol">D.</span> $12^{\,3n+6}$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把底數 4 改寫成 2 的冪</div>
+      <div class="rule">
+        <span class="rule-name">冪的定義</span>
+        <span class="rule-math">\(4=2^{2}\)</span>
+      </div>
+\[4^{\,n+2}=(2^{2})^{\,n+2}.\]
+      <div class="hint">底數相同才能合併指數，所以先統一底數。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用冪的冪定律化簡指數</div>
+      <div class="rule">
+        <span class="rule-name">冪的冪定律</span>
+        <span class="rule-math">\((a^{m})^{n}=a^{mn}\)</span>
+      </div>
+\[(2^{2})^{\,n+2}=2^{\,2(n+2)}=2^{\,2n+4}.\]
+      <div class="hint">指數要相乘，不是相加：$2(n+2)=2n+4$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">發現兩項指數相同，合併底數</div>
+      <div class="rule">
+        <span class="rule-name">同指數的積</span>
+        <span class="rule-math">\(a^{k}b^{k}=(ab)^{k}\)</span>
+      </div>
+此時 \[4^{\,n+2}3^{\,2n+4}=2^{\,2n+4}\,3^{\,2n+4}=(2\cdot3)^{\,2n+4}=6^{\,2n+4}.\]
+      <div class="hint">關鍵觀察：兩項的指數都是 $2n+4$，所以可以把 $2$ 與 $3$ 相乘成 $6$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">代入數值驗算並核對選項</div>
+取 $n=0$：左邊 $=4^{2}\cdot3^{4}=16\cdot81=1296$；右邊 $6^{4}=1296$，相符。再比較其他選項：$6^{8}=1679616$、$12^{4}=20736$、$12^{6}$ 更大，全部不符，故答案為 A。
+      <div class="hint">B 把指數加倍，C、D 誤把 $2$ 與 $3$ 併成 $12$（應為相乘 $2\times3=6$）。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$6^{\,2n+4}$（A）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $9^{\,n+1}\,2^{\,2n+2}=$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 統一底數：$9^{\,n+1}=(3^{2})^{\,n+1}=3^{\,2n+2}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 兩項指數同為 $2n+2$，合併底數：$3^{\,2n+2}2^{\,2n+2}=6^{\,2n+2}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 驗算：取 $n=0$，左邊 $9\cdot4=36$，右邊 $6^{2}=36$，相符。</div>
+          <div class="p-ans">答案：$6^{\,2n+2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

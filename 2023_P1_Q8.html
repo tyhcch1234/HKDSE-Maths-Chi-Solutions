@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第8題 · 平行線下的相似三角形與直角檢驗</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第8題</span>
+  <h1>平行線下的相似三角形與直角檢驗</h1>
+  <p class="sub">相似三角形 · 平行線與對應邊 · 8 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p>在圖 2 中，$AB$ 與 $CD$ 相交於點 $E$。已知 $AC\,/\!/\,DB$。</p>
+      <p>(a) 證明 $\triangle ACE\sim\triangle BDE$。<span class="marks">[3 分]</span></p>
+      <p>(b) 設 $AB=20$ cm、$AC=10$ cm、$BD=15$ cm 及 $CE=7$ cm。$\triangle BDE$ 是否一個直角三角形？試解釋你的答案。<span class="marks">[5 分]</span></p>
+    </div>
+    <figure class="fig"><img src="figures/2023_P1_8.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用內錯角得第一對相等的角</div>
+      <div class="rule">
+        <span class="rule-name">內錯角</span>
+        <span class="rule-math">\(AC\parallel DB\;\Longrightarrow\;\angle CAE=\angle DBE\)</span>
+        <span class="rule-why">$AB$ 是截線，$\angle CAE$ 與 $\angle DBE$ 是這對平行線之間的內錯角。</span>
+      </div>
+因為 $AC\,/\!/\,DB$，而 $AB$ 與這兩條線相交，所以
+      \[\angle CAE=\angle DBE\quad(\text{內錯角}).\]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用對頂角得第二對相等的角</div>
+      <div class="rule">
+        <span class="rule-name">對頂角</span>
+        <span class="rule-math">\(\angle AEC=\angle BED\)</span>
+      </div>
+$AB$ 與 $CD$ 相交於 $E$，故 $A,E,B$ 共線、$C,E,D$ 共線，於是
+      \[\angle AEC=\angle BED\quad(\text{對頂角}).\]
+      <div class="hint">對頂角是由同一交點出發、方向相反的兩對射線所成的角。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">證明兩三角形相似（A.A.A.）</div>
+      <div class="rule">
+        <span class="rule-name">三角形內角和</span>
+        <span class="rule-math">\(\angle A+\angle C+\angle E=180^\circ\)</span>
+        <span class="rule-why">已有兩對角相等，第三對角由 $180^\circ$ 減去其餘兩角自動相等，故可用 A.A.A.（或 A.A.）判定相似。</span>
+      </div>
+由前兩步，$\triangle ACE$ 與 $\triangle BDE$ 已有兩對角相等，故第三對角亦相等：
+      \[\angle ACE=\angle BDE.\]
+      因此
+      \[\triangle ACE\sim\triangle BDE\quad(\text{A.A.A.}),\]
+      對應頂點為 $A\leftrightarrow B$、$C\leftrightarrow D$、$E\leftrightarrow E$。
+      <div class="hint">寫相似時頂點要按對應次序排列；若寫成 $\triangle ACE\sim\triangle EDB$ 便對應錯了。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用相似比求 $AE$ 與 $BE$</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的對應邊成比例</span>
+        <span class="rule-math">\(\frac{AE}{BE}=\frac{AC}{BD}=\frac{CE}{DE}\)</span>
+      </div>
+由相似關係，$\dfrac{AE}{BE}=\dfrac{AC}{BD}=\dfrac{10}{15}=\dfrac{2}{3}$。
+      設 $AE=x$ cm，則 $BE=(20-x)$ cm（因 $A,E,B$ 共線且 $AE+BE=AB=20$）：
+      \[\frac{x}{20-x}=\frac{2}{3}\;\Longrightarrow\;3x=40-2x\;\Longrightarrow\;x=8.\]
+      所以 $AE=8$ cm，$BE=20-8=12$ cm。
+      <div class="hint">亦可用 $\dfrac{BE}{BD}=\dfrac{AE}{AC}$：$\dfrac{20-x}{15}=\dfrac{x}{10}$，同樣得 $x=8$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">求 $DE$ 的長度</div>
+      <div class="rule">
+        <span class="rule-name">相似三角形的對應邊成比例</span>
+        <span class="rule-math">\(\frac{CE}{DE}=\frac{2}{3}\)</span>
+      </div>
+由 $\dfrac{CE}{DE}=\dfrac{2}{3}$ 及 $CE=7$ cm：
+      \[DE=7\times\frac{3}{2}=10.5\text{ cm}.\]
+      驗算：相似比為 $\dfrac{BD}{AC}=\dfrac{15}{10}=1.5$，而 $8\times1.5=12=BE$、$7\times1.5=10.5=DE$，兩者一致。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">用畢氏定理的逆定理檢驗 $\triangle BDE$</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理的逆定理</span>
+        <span class="rule-math">\(a^2+b^2=c^2\;\Longleftrightarrow\;\text{直角三角形（}c\text{ 為最長邊）}\)</span>
+        <span class="rule-why">若最長邊的平方等於其餘兩邊平方之和，則該三角形為直角三角形；否則不是。</span>
+      </div>
+$\triangle BDE$ 的三邊為 $BE=12$ cm、$DE=10.5$ cm、$BD=15$ cm，最長邊是 $BD$。
+      \[BE^{2}+DE^{2}=12^{2}+10.5^{2}=144+110.25=254.25,\]
+      \[BD^{2}=15^{2}=225.\]
+      因為 $254.25\neq225$（且大於 $225$，即 $\angle BED$ 為鈍角），所以 $\triangle BDE$ 不是直角三角形。
+      由相似關係，$\triangle ACE$ 亦不是直角三角形（$8^{2}+7^{2}=113\neq100=AC^{2}$），與此結論吻合。
+      <div class="hint">檢驗時要用最長邊作斜邊；若隨意取一對邊相加，會得出錯誤結論。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\triangle ACE\sim\triangle BDE$（A.A.A.）；(b) 不是直角三角形，因 $BE^{2}+DE^{2}=12^{2}+10.5^{2}=254.25\neq225=BD^{2}$（$\angle BED$ 為鈍角）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在圖中，$AB$ 與 $CD$ 相交於 $E$，且 $AC\,/\!/\,DB$。已知 $AB=15$ cm、$AC=10$ cm、$BD=15$ cm 及 $CE=8$ cm。$\triangle BDE$ 是否一個直角三角形？試解釋你的答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 與 (a) 同理（內錯角、對頂角），$\triangle ACE\sim\triangle BDE$，對應頂點為 $A\leftrightarrow B$、$C\leftrightarrow D$、$E\leftrightarrow E$。</div>
+          <div class="p-step"><b>第 2 步.</b> 由 $\dfrac{AE}{BE}=\dfrac{AC}{BD}=\dfrac{10}{15}=\dfrac{2}{3}$，設 $AE=x$、$BE=15-x$，得 $\dfrac{x}{15-x}=\dfrac{2}{3}$，即 $3x=30-2x$，故 $AE=6$ cm、$BE=9$ cm。</div>
+          <div class="p-step"><b>第 3 步.</b> 由 $\dfrac{CE}{DE}=\dfrac{2}{3}$ 及 $CE=8$ cm，得 $DE=12$ cm。</div>
+          <div class="p-step"><b>第 4 步.</b> 檢驗：$BE^{2}+DE^{2}=9^{2}+12^{2}=81+144=225=15^{2}=BD^{2}$。</div>
+          <div class="p-ans">答案：是，$\triangle BDE$ 為直角三角形，$\angle BED=90^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q7.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

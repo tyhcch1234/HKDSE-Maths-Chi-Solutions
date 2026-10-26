@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第4題 · 複合不等式與負整數解</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第4題</span>
+  <h1>複合不等式與負整數解</h1>
+  <p class="sub">不等式 · 複合不等式 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+考慮複合不等式\n      \[3x+2>\frac{4x-5}{2}\quad\text{及}\quad 3x-2<7 \qquad\cdots(*)\]\n      (a) 解 (*)。\n      (b) 有多少個負整數滿足 (*)？<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把複合不等式拆成兩條</div>
+(*) 表示以下兩條不等式同時成立：\[3x+2>\frac{4x-5}{2}\qquad\text{及}\qquad 3x-2<7.\]解 (*) 就是求兩條不等式解集的交集。
+      <div class="hint">「及」代表取交集；若換成「或」則取聯集，兩者處理方法完全不同。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">解第一條：先去分母</div>
+      <div class="rule">
+        <span class="rule-name">不等式兩邊乘正數</span>
+        <span class="rule-math">\(a>b\ \Longrightarrow\ ka>kb\quad(k>0)\)</span>
+        <span class="rule-why">乘 $2$ 是正數，不等號方向不變，可放心去分母。</span>
+      </div>
+兩邊同乘 $2$：\[2(3x+2)>4x-5\]\[6x+4>4x-5.\]
+      <div class="hint">右邊 $\dfrac{4x-5}{2}$ 乘 $2$ 後只剩 $4x-5$，不要再多乘一次 $2$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解第一條：移項並除以係數</div>
+把 $x$ 項搬去左邊、常數搬去右邊：\[6x-4x>-5-4\]\[2x>-9\]兩邊除以 $2$（正數，不等號方向不變）：\[x>-\frac{9}{2}.\]
+      <div class="hint">保留分數 $-\dfrac{9}{2}$ 而不要寫成 $-4.5$，下一步數整數時較清楚。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">解第二條不等式</div>
+\[3x-2<7\]\[3x<9\]\[x<3.\]
+      <div class="hint">先把 $-2$ 移項成 $+2$（即 $3x<7+2$），再除以 $3$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">(a) 取兩條解集的交集</div>
+第一條給出下界 $x>-\dfrac{9}{2}$，第二條給出上界 $x<3$。同時成立即\[-\frac{9}{2}<x<3.\]因為 $-\dfrac{9}{2}=-4.5$，在數線上是 $-4.5$ 與 $3$ 之間的開區間（兩端不包含）。
+      <div class="hint">只寫其中一條（例如只寫 $x<3$）便漏掉另一條限制，必定失分。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">(b) 列出區間內的整數</div>
+在 $-\dfrac{9}{2}<x<3$ 之中的整數為\[-4,\ -3,\ -2,\ -1,\ 0,\ 1,\ 2.\]
+      <div class="hint">$x=-5$ 不合，因為 $-5<-\dfrac{9}{2}$；$x=3$ 亦不合，因為區間不包含 $3$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">(b) 數出負整數並驗算</div>
+上述整數中的負數是\[-4,\ -3,\ -2,\ -1,\]共 $4$ 個（$0$ 既非正亦非負，不計算在內）。驗算：取 $x=-1$，$3(-1)+2=-1$，$\dfrac{4(-1)-5}{2}=-4.5$，有 $-1>-4.5$ ✔，且 $-1<3$ ✔；取 $x=-5$，$3(-5)+2=-13$，$\dfrac{4(-5)-5}{2}=-12.5$，而 $-13>-12.5$ 不成立 ✘，故 $-5$ 確實被排除。
+      <div class="hint">邊界值 $-4.5$ 本身不是整數，所以最接近的合格負整數是 $-4$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $-\dfrac{9}{2}<x<3$　　(b) $4$ 個負整數（即 $-4,-3,-2,-1$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 考慮複合不等式 $2x+1>\dfrac{5x-4}{3}$ 及 $4x-3<11$。(a) 解該複合不等式。(b) 有多少個負整數滿足它？</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 第一條兩邊乘 $3$：$6x+3>5x-4$，即 $x>-7$。</div>
+          <div class="p-step"><b>第 2 步.</b> 第二條：$4x-3<11\Rightarrow 4x<14\Rightarrow x<3.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 取交集：(a) $-7<x<3.5$。</div>
+          <div class="p-step"><b>第 4 步.</b> (b) 區間內的負整數為 $-6,-5,-4,-3,-2,-1$，共 $6$ 個。</div>
+          <div class="p-ans">答案：(a) $-7<x<3.5$　(b) $6$ 個</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

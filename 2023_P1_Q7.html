@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第7題 · 圓內的角與直徑所對的角</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第7題</span>
+  <h1>圓內的角與直徑所對的角</h1>
+  <p class="sub">圓形幾何 · 圓周角與半圓上的角 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p>在圖 1 中，$PR$ 是圓 $PQRS$ 的一條直徑。設 $PR$ 與 $QS$ 的交點為 $T$。若 $\angle PSQ=41^\circ$ 及 $\angle PTQ=68^\circ$，求 $\angle RQS$ 及 $\angle PQS$。</p>
+      <p class="marks">[4 分]</p>
+    </div>
+    <figure class="fig"><img src="figures/2023_P1_7.png" alt="原題附圖"><figcaption>原題附圖</figcaption></figure>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">先用三角形 $PTS$ 的外角定理</div>
+      <div class="rule">
+        <span class="rule-name">三角形的外角定理</span>
+        <span class="rule-math">\(\angle PTQ=\angle TPS+\angle PST\)</span>
+        <span class="rule-why">$T$ 在 $QS$ 上，故 $\angle PTQ$ 與 $\angle PTS$ 互補，即 $\angle PTQ$ 是 $\triangle PTS$ 在頂點 $T$ 的外角，等於兩個內對角之和。</span>
+      </div>
+因為 $T$ 在 $PR$ 上，$\angle TPS=\angle RPS$；又 $T$ 在 $QS$ 上，$\angle PST=\angle PSQ=41^\circ$。由外角定理：
+      \[\angle RPS=\angle PTQ-\angle PSQ=68^\circ-41^\circ=27^\circ.\]
+      <div class="hint">外角是「延長一邊」後與另一邊所成的角；$\angle PTQ$ 與 $\angle PTS$ 相加是 $180^\circ$，所以它正是外角。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">用同弓形內的圓周角求 $\angle RQS$</div>
+      <div class="rule">
+        <span class="rule-name">同弓形內的圓周角</span>
+        <span class="rule-math">\(\angle RPS=\angle RQS\)</span>
+        <span class="rule-why">兩角同立於弦 $RS$ 上，而 $P$、$Q$ 都在弦 $RS$ 的同一側（圓上順序為 $P,Q,R,S$），所以它們在同一個弓形內。</span>
+      </div>
+$\angle RPS$ 與 $\angle RQS$ 都對着弧 $RS$，因此
+      \[\angle RQS=\angle RPS=27^\circ.\]
+      <div class="hint">若兩個角分別在弦的兩側，便會互補而不是相等；要先用圓上各點的次序判斷。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">用半圓上的圓周角得 $\angle PQR=90^\circ$</div>
+      <div class="rule">
+        <span class="rule-name">半圓上的圓周角</span>
+        <span class="rule-math">\(PR\text{ 為直徑}\;\Longrightarrow\;\angle PQR=90^\circ\)</span>
+      </div>
+已知 $PR$ 是圓的直徑，而 $Q$ 在圓周上，故 $\angle PQR$ 是半圓上的圓周角：
+      \[\angle PQR=90^\circ.\]
+      <div class="hint">只有當角的兩邊都通過直徑的兩個端點時，這個角才是 $90^\circ$；$\angle PSR$ 也是 $90^\circ$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">把 $\angle PQR$ 分成兩份，求 $\angle PQS$</div>
+      <div class="rule">
+        <span class="rule-name">角的相加</span>
+        <span class="rule-math">\(\angle PQR=\angle PQS+\angle RQS\)</span>
+      </div>
+由圖 1，弦 $QS$ 在 $\angle PQR$ 之內，所以
+      \[\angle PQS=\angle PQR-\angle RQS=90^\circ-27^\circ=63^\circ.\]
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗算：用另一條路徑核對</div>
+在 $\triangle PQS$ 中，$\angle QPS=180^\circ-63^\circ-41^\circ=76^\circ$，故 $\angle QPR=76^\circ-27^\circ=49^\circ$。
+      於 $\triangle PQR$ 中 $\angle PRQ=180^\circ-90^\circ-49^\circ=41^\circ$；又 $\angle QSR=\angle QPR=49^\circ$（同弓形內的圓周角），所以 $\angle PSR=41^\circ+49^\circ=90^\circ$，與 $PR$ 為直徑相符。
+      <div class="hint">若算出的 $\angle PSR$ 不是 $90^\circ$，即表示前面某一步的角配錯了。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\angle RQS=27^\circ$，$\angle PQS=63^\circ$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在圓 $PQRS$ 中，$PR$ 是直徑，$PR$ 與 $QS$ 交於 $T$。若 $\angle PSQ=35^\circ$ 及 $\angle PTQ=72^\circ$，求 $\angle RQS$ 及 $\angle PQS$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 外角定理：$\angle RPS=\angle PTQ-\angle PSQ=72^\circ-35^\circ=37^\circ$。</div>
+          <div class="p-step"><b>第 2 步.</b> 同弓形內的圓周角：$\angle RQS=\angle RPS=37^\circ$。</div>
+          <div class="p-step"><b>第 3 步.</b> 半圓上的圓周角：$\angle PQR=90^\circ$。</div>
+          <div class="p-step"><b>第 4 步.</b> 分角：$\angle PQS=90^\circ-37^\circ=53^\circ$。</div>
+          <div class="p-step"><b>第 5 步.</b> 驗算：$\angle QPS=180^\circ-35^\circ-53^\circ=92^\circ$，$\angle QPR=92^\circ-37^\circ=55^\circ$，$\angle PRQ=35^\circ$，$\angle QSR=55^\circ$，故 $\angle PSR=90^\circ$，一致。</div>
+          <div class="p-ans">答案：$\angle RQS=37^\circ$，$\angle PQS=53^\circ$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

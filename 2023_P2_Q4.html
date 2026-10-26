@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷二 第4題 · 分組分解法拆解四項式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷二 · 第4題</span>
+  <h1>分組分解法拆解四項式</h1>
+  <p class="sub">多項式 · 因式分解 · 選擇題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+因式分解 $2x^{2}+xy-y^{2}+4x+4y=$
+    </div>
+
+    <ol class="opts">
+      <li><span class="ol">A.</span> $(x+y)(2x+y-4)$</li>
+      <li><span class="ol">B.</span> $(x+y)(2x-y+4)$</li>
+      <li><span class="ol">C.</span> $(x-y)(2x+y-4)$</li>
+      <li><span class="ol">D.</span> $(x-y)(2x-y+4)$</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把四項分成二次部分與一次部分</div>
+原式可分兩組：\[(2x^{2}+xy-y^{2})+(4x+4y).\] 先分別處理每一組，再找共同括號。
+      <div class="hint">分組分解的目標是：兩組各自分解後，出現同一個括號。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">分解二次齊次式 $2x^{2}+xy-y^{2}$</div>
+      <div class="rule">
+        <span class="rule-name">十字相乘法（拆中間項）</span>
+        <span class="rule-math">\(2x^{2}+xy-y^{2}=(2x-y)(x+y)\)</span>
+      </div>
+要把中間項 $+xy$ 拆成兩項：\[2x^{2}+xy-y^{2}=2x^{2}+2xy-xy-y^{2}=2x(x+y)-y(x+y)=(x+y)(2x-y).\]
+      <div class="hint">驗算：$(x+y)(2x-y)=2x^{2}-xy+2xy-y^{2}=2x^{2}+xy-y^{2}$，正確。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分解一次部分並抽出共同括號</div>
+      <div class="rule">
+        <span class="rule-name">抽出公因式</span>
+        <span class="rule-math">\(pq+pr=p(q+r)\)</span>
+      </div>
+\[4x+4y=4(x+y).\] 於是 \[2x^{2}+xy-y^{2}+4x+4y=(x+y)(2x-y)+4(x+y)=(x+y)\big[(2x-y)+4\big].\]
+      <div class="hint">第二個括號是 $+4$，所以是 $2x-y+4$，不是 $2x-y-4$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">化簡括號並展開驗算</div>
+\[=(x+y)(2x-y+4).\] 展開核對：\[(x+y)(2x-y+4)=2x^{2}-xy+4x+2xy-y^{2}+4y=2x^{2}+xy-y^{2}+4x+4y,\] 與原式完全相同，故選 B。
+      <div class="hint">A 錯在中間項符號，C、D 的共同括號應為 $(x+y)$ 而非 $(x-y)$。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$(x+y)(2x-y+4)$（B）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 因式分解 $3x^{2}+xy-2y^{2}+6x+6y$</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 二次部分：$3x^{2}+xy-2y^{2}=3x^{2}+3xy-2xy-2y^{2}=(x+y)(3x-2y)$。</div>
+          <div class="p-step"><b>第 2 步.</b> 一次部分：$6x+6y=6(x+y)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 抽出共同括號：$(x+y)(3x-2y)+6(x+y)=(x+y)(3x-2y+6)$。</div>
+          <div class="p-step"><b>第 4 步.</b> 驗算：展開得 $3x^{2}-2xy+6x+3xy-2y^{2}+6y=3x^{2}+xy-2y^{2}+6x+6y$，相符。</div>
+          <div class="p-ans">答案：$(x+y)(3x-2y+6)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P2_Q3.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

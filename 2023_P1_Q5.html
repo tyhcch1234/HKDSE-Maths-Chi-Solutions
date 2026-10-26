@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第5題 · 渡輪男女乘客數目</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第5題</span>
+  <h1>渡輪男女乘客數目</h1>
+  <p class="sub">百分數 · 百分增加 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+在一艘渡輪上，女乘客的人數比男乘客的人數多 $40\%$。若有 $24$ 名女乘客離開渡輪，則男乘客的人數比女乘客的人數多 $40\%$。求渡輪上男乘客的人數。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">設定未知數</div>
+設 $x$ 為男乘客的人數，$y$ 為女乘客的原有人數。男女各設一個未知數，兩個條件便各變成一條方程。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把第一個條件寫成方程</div>
+      <div class="rule">
+        <span class="rule-name">百分增加</span>
+        <span class="rule-math">\(\text{新值}=(1+r\%)\times\text{原值}\)</span>
+      </div>
+女乘客比男乘客多 $40\%$，即以男乘客為基數增加 $40\%$：\[y=(1+40\%)x=1.4x\qquad\cdots(1)\]
+      <div class="hint">「多 $40\%$」是乘以 $1.4$；只乘以 $0.4$ 是「等於男乘客的 $40\%$」，意思完全不同。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">把第二個條件寫成方程</div>
+有 $24$ 名女乘客離開後，女乘客剩下 $y-24$ 人；此時男乘客比女乘客多 $40\%$，而男乘客的人數 $x$ 全程不變：\[x=(1+40\%)(y-24)=1.4(y-24)\qquad\cdots(2)\]
+      <div class="hint">離開的只有女乘客，所以方程右邊用 $y-24$，左邊仍然是 $x$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用代入法解聯立方程</div>
+      <div class="rule">
+        <span class="rule-name">代入消元法</span>
+        <span class="rule-math">\(y=1.4x\ \text{代入}\ x=1.4(y-24)\)</span>
+      </div>
+把 (1) 代入 (2)：\[x=1.4(1.4x-24)\]\[x=1.96x-33.6\]\[33.6=1.96x-x=0.96x\]\[x=\frac{33.6}{0.96}=35.\]再由 (1)：\[y=1.4\times35=49.\]
+      <div class="hint">$1.4\times1.4=1.96$、$1.4\times24=33.6$，這兩個乘法要算準；最後 $0.96x=33.6$ 兩邊同除以 $0.96$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">驗算並作答</div>
+檢查兩個條件：$1.4\times35=49$ ✔（女乘客比男乘客多 $40\%$）；女乘客離開 $24$ 人後有 $49-24=25$ 人，而 $1.4\times25=35$ ✔（男乘客比女乘客多 $40\%$）。兩個條件都成立，故渡輪上男乘客有 $35$ 人（女乘客原有 $49$ 人）。
+      <div class="hint">題目問男乘客，答案應為 $35$ 而不是 $49$；最後一句要寫清楚單位（人）。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>男乘客有 $35$ 人（女乘客原有 $49$ 人）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某班中女生的人數比男生的人數多 $25\%$。若有 $18$ 名女生離開，則男生的人數比女生的人數多 $25\%$。求男生的人數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 設男生 $m$ 人、女生原有 $f$ 人，則由第一個條件 $f=1.25m$。</div>
+          <div class="p-step"><b>第 2 步.</b> 女生離開 $18$ 人後：$m=1.25(f-18)$。</div>
+          <div class="p-step"><b>第 3 步.</b> 代入：$m=1.25(1.25m-18)=1.5625m-22.5$，即 $0.5625m=22.5$。</div>
+          <div class="p-step"><b>第 4 步.</b> $m=40$，$f=50$。驗算：$1.25\times40=50$ ✔；$1.25\times(50-18)=1.25\times32=40$ ✔。</div>
+          <div class="p-ans">答案：男生有 $40$ 人</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

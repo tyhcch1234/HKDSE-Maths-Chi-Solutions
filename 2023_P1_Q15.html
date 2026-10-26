@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第15題 · 抽球概率與分類討論</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第15題</span>
+  <h1>抽球概率與分類討論</h1>
+  <p class="sub">概率 · 組合與分類相加 · 4 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+<p>在一個盒子中，有 $5$ 個紅球及 $4$ 個黑球。從盒子中隨機同時抽出 $2$ 個球。</p>
+<p><b>(a)</b> 求抽出的 $2$ 個球均為紅球的概率。<span class="marks">[2 分]</span></p>
+<p><b>(b)</b> 在一個袋中有 $8$ 個紅球。把從盒子抽出的 $2$ 個球放入袋中，然後從袋中隨機同時抽出 $3$ 個球。求抽出的 $3$ 個球顏色相同的概率。<span class="marks">[2 分]</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找出樣本空間的總數</div>
+      <div class="rule">
+        <span class="rule-name">組合數</span>
+        <span class="rule-math">\(\binom{n}{r}=\frac{n!}{r!\,(n-r)!}\)</span>
+        <span class="rule-why">「同時抽出」不計次序，故用組合而非排列。</span>
+      </div>
+盒中共有 $5+4=9$ 個球。從中同時抽出 $2$ 個，共有
+      \[\binom{9}{2}=\frac{9\times8}{2}=36\]
+      個等可能的結果；其中 $2$ 個都是紅球的结果有
+      \[\binom{5}{2}=\frac{5\times4}{2}=10\]
+      個。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">計算 (a) 的概率</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        <span class="rule-math">\(P(E)=\frac{\text{有利結果數}}{\text{總結果數}}\)</span>
+      </div>
+\[P(\text{2 個紅球})=\frac{\binom{5}{2}}{\binom{9}{2}}=\frac{10}{36}=\frac{5}{18}.\]
+      驗算：$P(\text{2 個黑球})=\dfrac{\binom{4}{2}}{36}=\dfrac{6}{36}=\dfrac{1}{6}$，$P(\text{1 紅 1 黑})=\dfrac{5\times4}{36}=\dfrac{20}{36}=\dfrac{5}{9}$；三者之和 $\dfrac{10+6+20}{36}=1$，合理。
+      <div class="hint">把三類情况的概率加起來是否等於 $1$，是最快的驗算方法。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">分析袋中的情况（(b) 的準備）</div>
+袋中原有 $8$ 個紅球，放入 $2$ 個球後共有 $10$ 個球，故從袋中抽出 $3$ 個共有
+      \[\binom{10}{3}=\frac{10\times9\times8}{3\times2\times1}=120\]
+      個結果。袋中紅球數目取決於放入的 $2$ 個球的顏色，故需分三類情況討論：
+      (i) 放入 $2$ 紅；(ii) 放入 $1$ 紅 $1$ 黑；(iii) 放入 $2$ 黑。
+      <div class="hint">三類情况的概率之和必須等於 $1$：$\dfrac{5}{18}+\dfrac{5}{9}+\dfrac{1}{6}=1$（見下兩步）。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">情况一：放入 $2$ 個紅球</div>
+此情况的概率為 (a) 的結果 $\dfrac{5}{18}$。此時袋中有 $10$ 個紅球、$0$ 個黑球，任取 $3$ 個必同色：
+      \[\frac{\binom{10}{3}}{\binom{10}{3}}=1.\]
+      貢獻：\[\frac{5}{18}\times1=\frac{5}{18}=\frac{25}{90}.\]
+      <div class="hint">袋中全是紅球時，毋須再分類，「同色」必然成立。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">情况二：放入 $1$ 紅 $1$ 黑</div>
+此情况的概率為
+      \[\frac{\binom{5}{1}\binom{4}{1}}{\binom{9}{2}}=\frac{5\times4}{36}=\frac{20}{36}=\frac{5}{9}.\]
+      此時袋中有 $9$ 紅 $1$ 黑，要 $3$ 個同色只能是 $3$ 紅（黑球只有 $1$ 個）：
+      \[\frac{\binom{9}{3}}{\binom{10}{3}}=\frac{84}{120}=\frac{7}{10}.\]
+      貢獻：\[\frac{5}{9}\times\frac{7}{10}=\frac{35}{90}.\]
+      <div class="hint">只有 $1$ 個黑球，不可能抽出 $3$ 個黑球，所以「3 黑」這一項不存在。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">情况三：放入 $2$ 個黑球</div>
+此情况的概率為
+      \[\frac{\binom{4}{2}}{\binom{9}{2}}=\frac{6}{36}=\frac{1}{6}.\]
+      此時袋中有 $8$ 紅 $2$ 黑，同樣只能抽 $3$ 紅：
+      \[\frac{\binom{8}{3}}{\binom{10}{3}}=\frac{56}{120}=\frac{7}{15}.\]
+      貢獻：\[\frac{1}{6}\times\frac{7}{15}=\frac{7}{90}.\]
+      驗算三類概率之和：$\dfrac{5}{18}+\dfrac{5}{9}+\dfrac{1}{6}=\dfrac{5+10+3}{18}=1$，正確。
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 7 步</span>
+      <div class="step-title">把三類情况相加</div>
+      <div class="rule">
+        <span class="rule-name">互斥事件的概率相加</span>
+        <span class="rule-math">\(P(E_{1}\cup E_{2}\cup E_{3})=P(E_{1})+P(E_{2})+P(E_{3})\)</span>
+        <span class="rule-why">三類情况互斥且窮盡所有可能，故可直接相加。</span>
+      </div>
+\[\frac{5}{18}+\frac{35}{90}+\frac{7}{90}=\frac{25}{90}+\frac{35}{90}+\frac{7}{90}=\frac{67}{90}.\]
+      故抽出的 $3$ 個球顏色相同的概率為 $\dfrac{67}{90}$。
+      <div class="hint">通分時把 $\dfrac{5}{18}$ 化成 $\dfrac{25}{90}$（不是 $\dfrac{5}{90}$），這是最常見的計算錯誤。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\dfrac{5}{18}$　　(b) $\dfrac{67}{90}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 在一個盒子中，有 $6$ 個紅球及 $3$ 個黑球。從盒子中隨機同時抽出 $2$ 個球。
+(a) 求抽出的 $2$ 個球均為紅球的概率。
+(b) 在一個袋中有 $7$ 個紅球。把從盒子抽出的 $2$ 個球放入袋中，然後從袋中隨機同時抽出 $3$ 個球。求抽出的 $3$ 個球顏色相同的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 盒中共 $9$ 個球：$\binom{9}{2}=36$ 個結果；$2$ 紅有 $\binom{6}{2}=15$ 個。</div>
+          <div class="p-step"><b>第 2 步.</b> (a) $P(\text{2 紅})=\dfrac{15}{36}=\dfrac{5}{12}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 放入 $2$ 球後袋中有 $9$ 個球，$\binom{9}{3}=84$。三類情况：$2$ 紅（$\frac{5}{12}$）、$1$ 紅 $1$ 黑（$\frac{6\times3}{36}=\frac{1}{2}$）、$2$ 黑（$\frac{\binom{3}{2}}{36}=\frac{1}{12}$）。</div>
+          <div class="p-step"><b>第 4 步.</b> 各情况下的同色概率：$2$ 紅 $\to$ 袋中 $9$ 紅，概率 $1$；$1$ 紅 $1$ 黑 $\to$ 袋中 $8$ 紅 $1$ 黑，$\frac{\binom{8}{3}}{84}=\frac{56}{84}=\frac{2}{3}$；$2$ 黑 $\to$ 袋中 $7$ 紅 $2$ 黑，$\frac{\binom{7}{3}}{84}=\frac{35}{84}=\frac{5}{12}$。</div>
+          <div class="p-step"><b>第 5 步.</b> 相加：$\dfrac{5}{12}(1)+\dfrac{1}{2}\left(\dfrac{2}{3}\right)+\dfrac{1}{12}\left(\dfrac{5}{12}\right)=\dfrac{60}{144}+\dfrac{48}{144}+\dfrac{5}{144}=\dfrac{113}{144}$。</div>
+          <div class="p-ans">答案：(a) $\dfrac{5}{12}$　　(b) $\dfrac{113}{144}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><a href="2023_P1_Q14.html">‹ 上一題</a><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

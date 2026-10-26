@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2023 卷一 第18題 · 等比數列與對數等差數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2023 · 卷一 · 第18題</span>
+  <h1>等比數列與對數等差數列</h1>
+  <p class="sub">數列與對數 · 等比中項、等差中項 · 8 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+設 $\alpha,\ 7,\ \beta$ 為一等比數列，其中 $1<\alpha<7<\beta$。
+(a) 以 $\log_7\beta$ 表示 $\log_7\alpha$。<span class="marks">[3 分]</span>
+(b) 若 $\log_\beta\alpha,\ \log_7\beta,\ \log_\alpha\beta$ 為一等差數列，求該等差數列的公差。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用等比中項寫出 $\alpha$ 與 $\beta$ 的關係</div>
+      <div class="rule">
+        <span class="rule-name">等比數列 · 等比中項</span>
+        <span class="rule-math">\(b^{2}=ac\)</span>
+        <span class="rule-why">$\alpha,7,\beta$ 依次成等比數列，故中間項 $7$ 是 $\alpha$ 與 $\beta$ 的等比中項。</span>
+      </div>
+\[7^{2}=\alpha\beta\;\Longrightarrow\;\alpha\beta=49\;\Longrightarrow\;\alpha=\frac{49}{\beta}.\]
+      <div class="hint">三數成等比是「中間項平方 = 前後兩項之積」；若誤用等差中項 $2\times7=\alpha+\beta$，全題都會做錯。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">兩邊取 $\log_7$ 得出 (a)</div>
+      <div class="rule">
+        <span class="rule-name">對數律</span>
+        <span class="rule-math">\(\log\frac{A}{B}=\log A-\log B,\qquad \log_7 7^{2}=2\)</span>
+        <span class="rule-why">把 $\alpha=\dfrac{49}{\beta}$ 寫成以 $7$ 為底的對數，便可把除法變成減法。</span>
+      </div>
+\[\log_7\alpha=\log_7\frac{49}{\beta}=\log_7 49-\log_7\beta=2-\log_7\beta.\]
+      <div class="hint">$\log_7 49=2$ 是因為 $7^{2}=49$；不要漏寫底數而寫成 $\log 49$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">設 $t=\log_7\beta$，把三項都化為 $t$</div>
+      <div class="rule">
+        <span class="rule-name">換底公式</span>
+        <span class="rule-math">\(\log_b a=\frac{\log_7 a}{\log_7 b}\)</span>
+        <span class="rule-why">三項的底數不同（$\beta$、$7$、$\alpha$），統一換成以 $7$ 為底才能比較。</span>
+      </div>
+設 $t=\log_7\beta$，由 (a) 得 $\log_7\alpha=2-t$，即 $\beta=7^{t}$、$\alpha=7^{\,2-t}$。
+由 $1<\alpha<7<\beta$ 取 $\log_7$（遞增）得
+\[0<2-t<1<t\;\Longrightarrow\;1<t<2.\]
+（同時 $t\neq0$、$t\neq2$，否則換底時分母為零。）於是三項為
+\[\log_\beta\alpha=\frac{2-t}{t},\qquad \log_7\beta=t,\qquad \log_\alpha\beta=\frac{t}{2-t}.\]
+      <div class="hint">這個範圍 $1<t<2$ 稍後用來篩走不合的根，必須先記下，不可只寫 $t>0$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">用等差中項建立方程並化簡</div>
+      <div class="rule">
+        <span class="rule-name">等差數列 · 等差中項</span>
+        <span class="rule-math">\(2b=a+c\)</span>
+        <span class="rule-why">第二項 $\log_7\beta=t$ 是首項與末項的等差中項。</span>
+      </div>
+\[2t=\frac{2-t}{t}+\frac{t}{2-t}.\]
+兩邊乘 $t(2-t)$：
+\[2t^{2}(2-t)=(2-t)^{2}+t^{2}\]
+\[4t^{2}-2t^{3}=4-4t+2t^{2}\]
+移項並除以 $-2$：
+\[t^{3}-t^{2}-2t+2=0.\]
+      <div class="hint">$(2-t)^{2}=4-4t+t^{2}$，右邊再加 $t^{2}$ 得 $4-4t+2t^{2}$；乘 $t(2-t)$ 時三項都要乘。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 5 步</span>
+      <div class="step-title">解三次方程並用 $1<t<2$ 篩根</div>
+分組分解：
+\[t^{2}(t-1)-2(t-1)=0\;\Longrightarrow\;(t-1)(t^{2}-2)=0,\]
+故 $t=1$ 或 $t=\pm\sqrt{2}$。由 Step 3 的 $1<t<2$：$t=1$ 使 $\alpha=7$（不合 $\alpha<7$），$t=-\sqrt{2}<0$ 使 $\beta=7^{-\sqrt2}<1$（不合 $\beta>7$），兩者均捨去。故
+\[t=\sqrt{2},\qquad \beta=7^{\sqrt{2}},\qquad \alpha=7^{\,2-\sqrt{2}}.\]
+      <div class="hint">三個根要逐一對照 $1<t<2$，不能只憑「$t>0$」就取 $\sqrt2$，否則無法解釋為何排除 $t=1$ 與 $t=-\sqrt2$。</div>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 6 步</span>
+      <div class="step-title">求公差 $d$ 並代回驗算</div>
+      <div class="rule">
+        <span class="rule-name">等差數列公差</span>
+        <span class="rule-math">\(d=\text{第二項}-\text{第一項}\)</span>
+        <span class="rule-why">任取相鄰兩項相減，結果應相同。</span>
+      </div>
+\[d=t-\frac{2-t}{t}=\sqrt{2}-\frac{2-\sqrt{2}}{\sqrt{2}}=\sqrt{2}-(\sqrt{2}-1)=1.\]
+驗算：$\alpha=7^{\,2-\sqrt2}\approx1.97$，$\beta=7^{\sqrt2}\approx15.7$，$\alpha\beta=7^{2}=49$ ✓。三項實際為
+\[\frac{2-\sqrt2}{\sqrt2}=\sqrt2-1,\qquad \sqrt2,\qquad \frac{\sqrt2}{2-\sqrt2}=\sqrt2+1,\]
+相差均為 $1$，且 $1<1.97<7<15.7$ ✓。
+      <div class="hint">$\dfrac{2}{\sqrt2}=\sqrt2$，所以第一項 $=\sqrt2-1$；末項可用分母有理化 $\dfrac{\sqrt2(2+\sqrt2)}{4-2}=\sqrt2+1$ 核對。</div>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\log_7\alpha=2-\log_7\beta$；(b) 公差 $d=1$（其中 $t=\log_7\beta=\sqrt2$，$\alpha=7^{\,2-\sqrt2}$，$\beta=7^{\sqrt2}$）</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\alpha,\ 3,\ \beta$ 為一等比數列，其中 $1<\alpha<3<\beta$。已知 $\log_\beta\alpha,\ \log_3\beta,\ \log_\alpha\beta$ 為一等差數列，求 $\beta$ 及該數列的公差。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 等比中項：$\alpha\beta=3^{2}=9$，取 $\log_3$ 得 $\log_3\alpha=2-\log_3\beta$。</div>
+          <div class="p-step"><b>第 2 步.</b> 設 $t=\log_3\beta$，由 $1<\alpha<3<\beta$ 得 $1<t<2$；三項為 $\dfrac{2-t}{t},\ t,\ \dfrac{t}{2-t}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 等差中項：$2t=\dfrac{2-t}{t}+\dfrac{t}{2-t}$，化簡得 $t^{3}-t^{2}-2t+2=0$，即 $(t-1)(t^{2}-2)=0$。</div>
+          <div class="p-step"><b>第 4 步.</b> 由 $1<t<2$ 取 $t=\sqrt2$，故 $\beta=3^{\sqrt2}$、$\alpha=3^{\,2-\sqrt2}$；公差 $d=\sqrt2-(\sqrt2-1)=1$。</div>
+          <div class="p-ans">答案：$\beta=3^{\sqrt2}$，公差 $d=1$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+<nav class="pager"><span></span><a href="index.html">目錄</a><span></span></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
