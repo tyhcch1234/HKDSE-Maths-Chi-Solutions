@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2017 卷二 第35題 · 聯立方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2017 · 卷二 · 第35題</span>
+    <h1>把四式相加，$p+q+r+s$ 出現兩次</h1>
+    <p class="sub">代數 · 聯立方程 · 對稱組合</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知實數 $p$、$q$、$r$、$s$ 滿足
+\[p+q=k,\qquad q+r=-1,\qquad r+s=3,\qquad p+s=2.\]
+若 $k$、$p$、$q$、$r$、$s$ 均為實數，則 $k=$
+    </div>
+    <ol class="opts"><li><span class="ol">A</span>$-2$</li><li><span class="ol">B</span>$-1$</li><li><span class="ol">C</span>$1$</li><li><span class="ol">D</span>$2$</li></ol>
+  </div>
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把四條方程編號</div>
+      <div class="rule">
+        <span class="rule-name">整理</span>
+        <span class="rule-math">(1)\ p+q=k,\ (2)\ q+r=-1,\ (3)\ r+s=3,\ (4)\ p+s=2</span>
+        <span class="rule-why">四條都是線性方程，目標是消去 $p,q,r,s$ 只留下 $k$。</span>
+      </div>
+      \[\begin{aligned}(1)&\quad p+q=k\\ (2)&\quad q+r=-1\\ (3)&\quad r+s=3\\ (4)&\quad p+s=2\end{aligned}\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 (1)+(3) 與 (2)+(4) 相加</div>
+      <div class="rule">
+        <span class="rule-name">相加</span>
+        <span class="rule-math">$(1)+(3):\ p+q+r+s=k+3$</span>
+        <span class="rule-why">兩組相加後左邊都變成 $p+q+r+s$，右邊就可以直接比較。</span>
+      </div>
+      \[(1)+(3):\quad (p+q)+(r+s)=k+3
+\ \Longrightarrow\ p+q+r+s=k+3.\]
+\[(2)+(4):\quad (q+r)+(p+s)=-1+2
+\ \Longrightarrow\ p+q+r+s=1.\]
+也可以想成「四式全部相加除以 2」，結果一樣。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">比較兩個結果</div>
+      <div class="rule">
+        <span class="rule-name">等式</span>
+        <span class="rule-math">$k+3=1$</span>
+        <span class="rule-why">同一個 $p+q+r+s$ 只能有一個值。</span>
+      </div>
+      \[k+3=1\ \Longrightarrow\ k=-2.\]
+答案為 <b>A</b>。<br>
+驗算：取 $p+q=-2$、$q+r=-1$、$r+s=3$、$p+s=2$，例如 $p=1$、$q=-3$、$r=2$、$s=1$，四式全部成立。
+    </div>
+    <div class="ans"><span class="lbl">答案</span><b>A</b>（$-2$）</div>
+  </div>
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 已知實數 $a$、$b$、$c$、$d$ 滿足 $a+b=m$、$b+c=4$、$c+d=1$、$a+d=3$。則 $m=$</div>
+      <ol class="opts p-opts"><li><span class="ol">A</span>$0$</li><li><span class="ol">B</span>$2$</li><li><span class="ol">C</span>$4$</li><li><span class="ol">D</span>$6$</li></ol>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(a+b)+(c+d)=m+1$，即 $a+b+c+d=m+1$。</div>
+          <div class="p-step"><b>第 2 步.</b> $(b+c)+(a+d)=4+3=7$，即 $a+b+c+d=7$。</div>
+          <div class="p-step"><b>第 3 步.</b> $m+1=7\Rightarrow m=6$，答案 <b>D</b>。</div>
+          <div class="p-ans">答案：<b>D</b>（$6$）</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><a href="2017_P2_Q34.html">‹ 上一題</a><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
