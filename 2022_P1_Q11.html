@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第11題 · 莖葉圖與標準差</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第11題</span>
+  <h1>先數清有幾多個數據，才找中位數位置</h1>
+  <p class="sub">統計學 · 莖葉圖、中位數、四分位數間距與標準差</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      以下的莖葉圖顯示某足球隊球員年齡的分佈（莖＝十位，葉＝個位）：
+      <br>$1\,|\,7\ 8\ 9$
+      <br>$2\,|\,0\ a\ a\ 8\ 8\ 9$
+      <br>$3\,|\,b\ b\ 5\ 5\ 6\ 6\ 6\ 6\ 6\ 7\ 8$
+      <br>$4\,|\,3$
+      <br>已知該分佈的四分位數間距及中位數分別為 $14$ 及 $31$。<br>
+      (a) 求 $a$ 及 $b$。<span class="marks">[3 分]</span><br>
+      (b) 現有一名球員離隊。<br>
+      (i) 眾數是否因該球員離隊而改變？試解釋。<br>
+      (ii) 若該分佈的分佈域減少，求該分佈的最大可能標準差。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 由中位數求 $b$</div>
+      <div class="rule">
+        <span class="rule-name">中位數位置</span>
+        <span class="rule-math">$21$ 個數據，中位數是第 $11$ 個</span>
+        <span class="rule-why">莖葉圖共 $3+6+11+1=21$ 個數據（單數），中位數就是正中間那一個。</span>
+      </div>
+      <p>第 $10$、$11$ 個數據都在莖 $3$ 一列，最小的是 $30+b$：</p>
+      <p>$$30+b=31\quad\Longrightarrow\quad b=1$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 由四分位數間距求 $a$</div>
+      <div class="rule">
+        <span class="rule-name">四分位數</span>
+        <span class="rule-math">$Q_1$ 在第 $5.5$ 個、$Q_3$ 在第 $16.5$ 個</span>
+        <span class="rule-why">$21$ 個數據，$Q_1$ 位置 $=\frac{21+1}{4}=5.5$（取第 $5$、$6$ 個的平均），$Q_3$ 位置 $=16.5$。</span>
+      </div>
+      <p>第 $5$、$6$ 個都是 $20+a$，故 $Q_1=20+a$；第 $16$、$17$ 個都是 $36$，故 $Q_3=36$。</p>
+      <p>$$36-(20+a)=14\quad\Longrightarrow\quad a=2$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 眾數</div>
+      <div class="rule">
+        <span class="rule-name">眾數</span>
+        <span class="rule-math">出現次數最多者為眾數</span>
+        <span class="rule-why">$a=2$、$b=1$ 時，$36$ 出現 $5$ 次，是眾數；少了一名球員後，$36$ 至少仍出現 $4$ 次，仍是眾數。</span>
+      </div>
+      <p>眾數<b>沒有改變</b>，仍為 $36$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 分佈域減少，求最大標準差</div>
+      <div class="rule">
+        <span class="rule-name">標準差</span>
+        <span class="rule-math">$\sigma=\sqrt{\dfrac{\sum(x-\bar{x})^{2}}{N}}$</span>
+        <span class="rule-why">原分佈域 $=43-17=26$；要令分佈域減少，離隊者必是 $17$ 或 $43$。要使標準差最大，應保留較極端的 $43$，即離隊者為 $17$。</span>
+      </div>
+      <p>餘下 $20$ 個數據：$18,19,20,22,22,28,28,29,31,31,35,35,36,36,36,36,36,37,38,43$。</p>
+      <p>$$\bar{x}=\frac{616}{20}=30.8,\qquad \sum x^{2}=19\,976$$</p>
+      <p>$$\sigma=\sqrt{\frac{19\,976}{20}-30.8^{2}}=\sqrt{998.8-948.64}=\sqrt{50.16}\approx 7.08$$</p>
+      <p>（若離隊者為 $43$，標準差約為 $7.11$，比 $7.08$ 大，所以最大值應取 $7.11$。）</p>
+      <p>答案為 $7.11$（準確至三位有效數字）。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $a=2$、$b=1$；(b)(i) 沒有改變（眾數仍為 $36$）；(b)(ii) $7.11$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 五個數據 $4,7,9,12,13$ 中，若刪去一個數據後分佈域減少，求刪去後標準差的最大可能值（三位有效數字）。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 分佈域 $=13-4=9$，刪去 $4$ 或 $13$ 才可使分佈域減少。</div>
+          <div class="p-step"><b>第 2 步.</b> 刪 $4$：數據 $7,9,12,13$，平均 $10.25$，$\sigma\approx 2.49$；刪 $13$：$4,7,9,12$，平均 $8$，$\sigma\approx 2.94$。</div>
+          <div class="p-step"><b>第 3 步.</b> 最大值為 $2.94$。</div>
+          <div class="p-ans">答案：$2.94$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q10.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q12.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

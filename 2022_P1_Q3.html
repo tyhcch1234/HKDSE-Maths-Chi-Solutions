@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第3題 · 代數分式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第3題</span>
+  <h1>通分之後，分子會自己簡化</h1>
+  <p class="sub">多項式 · 代數分式的加法</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{3}{k-9}+\dfrac{2}{5k+6}$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">找公分母</div>
+      <div class="rule">
+        <span class="rule-name">通分</span>
+        <span class="rule-math">$\dfrac{a}{P}+\dfrac{b}{Q}=\dfrac{aQ+bP}{PQ}$</span>
+        <span class="rule-why">$k-9$ 與 $5k+6$ 沒有公因式，最小公倍式就是兩者相乘。</span>
+      </div>
+      <p>$$\frac{3}{k-9}+\frac{2}{5k+6}=\frac{3(5k+6)+2(k-9)}{(k-9)(5k+6)}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開分子</div>
+      <div class="rule">
+        <span class="rule-name">分配律</span>
+        <span class="rule-math">$3(5k+6)=15k+18$；$2(k-9)=2k-18$</span>
+        <span class="rule-why">第二項要整條 $k-9$ 乘 $2$，包括負號。</span>
+      </div>
+      <p>$$3(5k+6)+2(k-9)=15k+18+2k-18=17k$$</p>
+      <p>常數項剛好抵消，只剩 $17k$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">寫成最簡分式</div>
+      <div class="rule">
+        <span class="rule-name">檢查可否再約</span>
+        <span class="rule-math">$\dfrac{17k}{(k-9)(5k+6)}$</span>
+        <span class="rule-why">分子 $17k$ 與兩個分母因式都沒有共同因式（$k=9$ 及 $k=-\frac{6}{5}$ 都不是分子的根），不能再約。</span>
+      </div>
+      <p>$$\frac{17k}{(k-9)(5k+6)}$$</p>
+      <p>答案為 $\dfrac{17k}{(k-9)(5k+6)}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{17k}{(k-9)(5k+6)}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{2}{k-5}+\dfrac{3}{4k+1}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 通分：$\dfrac{2(4k+1)+3(k-5)}{(k-5)(4k+1)}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 分子 $=8k+2+3k-15=11k-13$。</div>
+          <div class="p-ans">答案：$\dfrac{11k-13}{(k-5)(4k+1)}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q2.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q4.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

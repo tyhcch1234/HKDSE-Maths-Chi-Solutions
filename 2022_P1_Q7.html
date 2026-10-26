@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第7題 · 旋轉與反射</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第7題</span>
+  <h1>旋轉換坐標，反射換符號</h1>
+  <p class="sub">解析幾何 · 旋轉、反射與斜率</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      點 $S$ 及 $T$ 的坐標分別為 $(12,-5)$ 及 $(-3,-7)$。把 $S$ 繞原點 $O$ 按逆時針方向旋轉 $90^{\circ}$ 至 $S'$。$T'$ 是 $T$ 關於 $x$ 軸的反射影像。<br>
+      (a) 寫出 $S'$ 及 $T'$ 的坐標。<br>
+      (b) 求 $S'T'$ 的斜率。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">逆時針 $90^{\circ}$ 的坐標變換</div>
+      <div class="rule">
+        <span class="rule-name">繞原點旋轉</span>
+        <span class="rule-math">逆時針 $90^{\circ}$：$(x,y)\to(-y,x)$</span>
+        <span class="rule-why">$(12,-5)\to(5,12)$：新 $x$ 取舊 $y$ 的相反數，新 $y$ 取舊 $x$。</span>
+      </div>
+      <p>$$S(12,-5)\ \longrightarrow\ S'(5,12)$$</p>
+      <p>檢驗：$OS=\sqrt{144+25}=13$，$OS'=\sqrt{25+144}=13$，距離不變。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">關於 $x$ 軸反射</div>
+      <div class="rule">
+        <span class="rule-name">反射</span>
+        <span class="rule-math">關於 $x$ 軸：$(x,y)\to(x,-y)$</span>
+        <span class="rule-why">$x$ 坐標不變，$y$ 坐標變號。</span>
+      </div>
+      <p>$$T(-3,-7)\ \longrightarrow\ T'(-3,7)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用斜率公式</div>
+      <div class="rule">
+        <span class="rule-name">斜率</span>
+        <span class="rule-math">$m=\dfrac{y_2-y_1}{x_2-x_1}$</span>
+        <span class="rule-why">兩點次序可以互換，只要上下一致；負負得正。</span>
+      </div>
+      <p>$$m_{S'T'}=\frac{7-12}{-3-5}=\frac{-5}{-8}=\frac{5}{8}$$</p>
+      <p>答案為 $\dfrac{5}{8}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $S'(5,12)$、$T'(-3,7)$；(b) $\dfrac{5}{8}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> $S(8,-6)$ 繞原點逆時針旋轉 $90^{\circ}$ 至 $S'$；$T(-2,-9)$ 關於 $x$ 軸反射至 $T'$。求 $S'T'$ 的斜率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $S'=(6,8)$；$T'=(-2,9)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $m=\dfrac{9-8}{-2-6}=-\dfrac{1}{8}$。</div>
+          <div class="p-ans">答案：$-\dfrac{1}{8}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q6.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

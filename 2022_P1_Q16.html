@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第16題 · 配方法與頂點</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第16題</span>
+  <h1>頂點、再變換，最後按面積比分點</h1>
+  <p class="sub">函數及其圖像 · 配方法與線段分點</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $g(x)=3x^{2}+12kx+16k^{2}+8$，其中 $k$ 為非零實常數。<br>
+      (a) 以配方法，以 $k$ 表示 $y=g(x)$ 的圖像的頂點坐標。<span class="marks">[2 分]</span><br>
+      (b) 在同一坐標系中，設 $y=g(x)$ 的圖像的頂點及 $y=2g(-x)$ 的圖像的頂點分別為 $A$ 及 $B$。設 $M$ 為 $AB$ 上的一點，使 $\triangle OBM$ 的面積是 $\triangle OAM$ 的面積的三倍，其中 $O$ 為原點。以 $k$ 表示 $M$ 的坐標。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 配方</div>
+      <div class="rule">
+        <span class="rule-name">配方法</span>
+        <span class="rule-math">$ax^{2}+bx=a\left(x+\dfrac{b}{2a}\right)^{2}-\dfrac{b^{2}}{4a}$</span>
+        <span class="rule-why">先把前兩項的係數 $3$ 提出，再把 $4k$ 的一半平方加減。</span>
+      </div>
+      <p>$$g(x)=3(x^{2}+4kx)+16k^{2}+8=3\big[(x+2k)^{2}-4k^{2}\big]+16k^{2}+8$$</p>
+      <p>$$=3(x+2k)^{2}-12k^{2}+16k^{2}+8=3(x+2k)^{2}+4k^{2}+8$$</p>
+      <p>故頂點 $A(-2k,\;4k^{2}+8)$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 求 $y=2g(-x)$ 的頂點</div>
+      <div class="rule">
+        <span class="rule-name">圖像變換</span>
+        <span class="rule-math">$g(-x)$ 左右反射；再乘 $2$ 縱向拉伸</span>
+        <span class="rule-why">$g(-x)=3(x-2k)^{2}+4k^{2}+8$，頂點 $(2k,4k^{2}+8)$；乘 $2$ 後 $y$ 坐標變 $8k^{2}+16$。</span>
+      </div>
+      <p>$$B\big(2k,\;8k^{2}+16\big)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用面積比定分點</div>
+      <div class="rule">
+        <span class="rule-name">同高三角形</span>
+        <span class="rule-math">$\dfrac{S_{\triangle OBM}}{S_{\triangle OAM}}=\dfrac{BM}{AM}$</span>
+        <span class="rule-why">兩個三角形以 $O$ 為公共頂點、底在直線 $AB$ 上，高相同，面積比等於底之比。</span>
+      </div>
+      <p>已知 $S_{\triangle OBM}=3S_{\triangle OAM}$，故 $BM:AM=3:1$，即 $AM:MB=1:3$，$M$ 把 $AB$ 內分成 $1:3$。</p>
+      <p>$$M=A+\frac{1}{4}(B-A)$$</p>
+      <p>$$B-A=(4k,\;4k^{2}+8)$$</p>
+      <p>$$M=\left(-2k+k,\;4k^{2}+8+k^{2}+2\right)=\left(-k,\;5k^{2}+10\right)$$</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $A(-2k,\;4k^{2}+8)$；(b) $M(-k,\;5k^{2}+10)$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $g(x)=2x^{2}+8kx+9k^{2}+1$，求 $y=g(x)$ 的頂點，以及 $y=3g(-x)$ 的頂點。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(x)=2(x+2k)^{2}+k^{2}+1$，頂點 $(-2k,\;k^{2}+1)$。</div>
+          <div class="p-step"><b>第 2 步.</b> $g(-x)=2(x-2k)^{2}+k^{2}+1$，乘 $3$ 後頂點為 $(2k,\;3k^{2}+3)$。</div>
+          <div class="p-ans">答案：$(-2k,\;k^{2}+1)$ 及 $(2k,\;3k^{2}+3)$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q15.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q17.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

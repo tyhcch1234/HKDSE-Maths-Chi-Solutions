@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第12題 · 圓與三角形最大面積</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第12題</span>
+  <h1>底固定，高最大時面積最大</h1>
+  <p class="sub">解析幾何 · 圓的方程、點與圓的距離</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      圓 $C$ 的方程為 $x^{2}+y^{2}-154x-128y+224=0$。設 $G$ 為 $C$ 的圓心，點 $H$ 的坐標為 $(65,48)$。<br>
+      (a) 求 $G$ 與 $H$ 之間的距離。<span class="marks">[3 分]</span><br>
+      (b) 設 $P$ 為 $C$ 上的動點。當 $\triangle GHP$ 的面積最大時，
+      (i) 描述 $GH$ 與 $GP$ 的幾何關係；
+      (ii) 求 $\triangle GHP$ 的周界。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由圓方程讀出圓心與半徑</div>
+      <div class="rule">
+        <span class="rule-name">圓的一般式</span>
+        <span class="rule-math">圓心 $\left(-\dfrac{D}{2},-\dfrac{E}{2}\right)$，$r=\sqrt{\left(\dfrac{D}{2}\right)^{2}+\left(\dfrac{E}{2}\right)^{2}-F}$</span>
+        <span class="rule-why">$D=-154$、$E=-128$、$F=224$。</span>
+      </div>
+      <p>$$G(77,64),\qquad r=\sqrt{77^{2}+64^{2}-224}=\sqrt{9801}=99$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 求 $GH$</div>
+      <div class="rule">
+        <span class="rule-name">距離公式</span>
+        <span class="rule-math">$d=\sqrt{(x_2-x_1)^{2}+(y_2-y_1)^{2}}$</span>
+        <span class="rule-why">$G(77,64)$、$H(65,48)$，橫向差 $12$、縱向差 $16$，是 $3$-$4$-$5$ 的倍數。</span>
+      </div>
+      <p>$$GH=\sqrt{(77-65)^{2}+(64-48)^{2}}=\sqrt{144+256}=\sqrt{400}=20$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b)(i) 面積最大時的關係</div>
+      <div class="rule">
+        <span class="rule-name">三角形面積</span>
+        <span class="rule-math">$S=\dfrac{1}{2}\cdot GH\cdot(\text{由 }P\text{ 到 }GH\text{ 的高})$</span>
+        <span class="rule-why">底 $GH$ 固定，高最大＝ $P$ 離直線 $GH$ 最遠，即 $GP$ 垂直於 $GH$（此時高恰好是半徑）。</span>
+      </div>
+      <p>當面積最大時，$GH\perp GP$，最大面積 $=\dfrac{1}{2}(20)(99)=990$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b)(ii) 周界</div>
+      <div class="rule">
+        <span class="rule-name">畢氏定理</span>
+        <span class="rule-math">$GH\perp GP\Rightarrow HP^{2}=GH^{2}+GP^{2}$</span>
+        <span class="rule-why">$GP$ 是半徑 $99$，$GH=20$。</span>
+      </div>
+      <p>$$HP=\sqrt{20^{2}+99^{2}}=\sqrt{400+9801}=101$$</p>
+      <p>$$周界=20+99+101=220$$</p>
+      <p>答案為 $220$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $20$；(b)(i) $GH\perp GP$（$P$ 在過 $G$ 且垂直 $GH$ 的直徑上）；(b)(ii) $220$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 圓 $x^{2}+y^{2}-24x-18y+116=0$ 的圓心為 $G$，$H(5,4)$。求 $GH$ 及 $G$ 到圓的最短距離。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $G(12,9)$，$r=\sqrt{144+81-116}=13$。</div>
+          <div class="p-step"><b>第 2 步.</b> $GH=\sqrt{49+25}=\sqrt{74}\approx 8.60$。</div>
+          <div class="p-step"><b>第 3 步.</b> $H$ 在圓內，$G$ 到圓的距離就是半徑 $13$（由 $G$ 出發的任何方向都一樣）。</div>
+          <div class="p-ans">答案：$GH=\sqrt{74}$；$G$ 到圓的距離 $13$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q11.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q13.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

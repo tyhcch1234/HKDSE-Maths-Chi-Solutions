@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第5題 · 百分數（利潤）</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第5題</span>
+  <h1>先由「利潤率」找回成本</h1>
+  <p class="sub">百分數 · 折扣、成本與百分數利潤</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      某風扇以標價的七折（即 $30\%$ 折扣）售出。售出後所得的利潤為 $\$78$，而百分數利潤為 $26\%$。求該風扇的標價。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">由利潤與利潤率求成本</div>
+      <div class="rule">
+        <span class="rule-name">百分數利潤</span>
+        <span class="rule-math">$\text{百分數利潤}=\dfrac{\text{利潤}}{\text{成本}}\times 100\%$</span>
+        <span class="rule-why">百分數利潤一定以**成本**為分母，不是標價，也不是售價。</span>
+      </div>
+      <p>設成本為 $\$C$：</p>
+      <p>$$0.26C=78\quad\Longrightarrow\quad C=\frac{78}{0.26}=300$$</p>
+      <p>成本為 $\$300$，所以售價 $=300+78=\$378$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">由售價反推標價</div>
+      <div class="rule">
+        <span class="rule-name">折扣</span>
+        <span class="rule-math">$\text{售價}=\text{標價}\times(1-\text{折扣率})$</span>
+        <span class="rule-why">七折即付標價的 $70\%$，折扣率 $30\%$。</span>
+      </div>
+      <p>設標價為 $\$M$：</p>
+      <p>$$0.7M=378\quad\Longrightarrow\quad M=\frac{378}{0.7}=540$$</p>
+      <p>標價為 $\$540$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">驗算</div>
+      <div class="rule">
+        <span class="rule-name">核對</span>
+        <span class="rule-math">$540\times 0.7=378$，$378-300=78$</span>
+        <span class="rule-why">利潤 $78$ 與題目一致，且 $78\div 300=26\%$。</span>
+      </div>
+      <p>三步數字全部對得上，答案為 $\$540$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\$540$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某書包以標價的八折售出，利潤為 $\$60$，百分數利潤為 $20\%$。求標價。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $0.2C=60$，成本 $C=300$，售價 $=360$。</div>
+          <div class="p-step"><b>第 2 步.</b> $0.8M=360$，標價 $M=450$。</div>
+          <div class="p-ans">答案：$\$450$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q4.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q6.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

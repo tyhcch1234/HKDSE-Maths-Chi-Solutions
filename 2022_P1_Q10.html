@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第10題 · 部分變與二次函數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第10題</span>
+  <h1>「部分變」就是兩項相加</h1>
+  <p class="sub">率、比及變分 · 部分變與二次方程的判別式</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      已知 $f(x)$ 部分隨 $x^{2}$ 正變，部分隨 $x$ 正變。設 $f(4)=96$ 及 $f(-5)=15$。<br>
+      (a) 求 $f(x)$。<span class="marks">[3 分]</span><br>
+      (b) 寫出 $y=8f(x)$ 的圖像的 $x$ 截距。<span class="marks">[1 分]</span><br>
+      (c) 設 $k$ 為實常數。求使方程 $f(x)=k$ 有兩個相異實根的 $k$ 的取值範圍。<span class="marks">[2 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 寫出部分變的模型</div>
+      <div class="rule">
+        <span class="rule-name">部分變</span>
+        <span class="rule-math">$f(x)=ax^{2}+bx$</span>
+        <span class="rule-why">「部分隨 $x^{2}$ 正變」給出 $ax^{2}$，「部分隨 $x$ 正變」給出 $bx$，兩部分相加。</span>
+      </div>
+      <p>$$f(x)=ax^{2}+bx$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(a) 代入兩個數據點</div>
+      <div class="rule">
+        <span class="rule-name">代入</span>
+        <span class="rule-math">$f(4)=96\Rightarrow 16a+4b=96$；$f(-5)=15\Rightarrow 25a-5b=15$</span>
+        <span class="rule-why">每組 $(x,f(x))$ 給出一條關於 $a$、$b$ 的方程。</span>
+      </div>
+      <p>$$16a+4b=96\quad\Longrightarrow\quad 4a+b=24\qquad(1)$$</p>
+      <p>$$25a-5b=15\quad\Longrightarrow\quad 5a-b=3\qquad(2)$$</p>
+      <p>$(1)+(2)$：$9a=27$，$a=3$；代回 (1)：$b=24-12=12$。</p>
+      <p>$$f(x)=3x^{2}+12x$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) $x$ 截距</div>
+      <div class="rule">
+        <span class="rule-name">乘以常數不改變截距</span>
+        <span class="rule-math">$8f(x)=0\iff f(x)=0$</span>
+        <span class="rule-why">縱向放大不會左右移動圖像。</span>
+      </div>
+      <p>$$3x^{2}+12x=0\quad\Longrightarrow\quad 3x(x+4)=0\quad\Longrightarrow\quad x=0\ \text{或}\ x=-4$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 用判別式</div>
+      <div class="rule">
+        <span class="rule-name">相異實根</span>
+        <span class="rule-math">$\Delta=b^{2}-4ac&gt;0$</span>
+        <span class="rule-why">$f(x)=k$ 即 $3x^{2}+12x-k=0$，此處「$c$」是 $-k$。</span>
+      </div>
+      <p>$$\Delta=12^{2}-4(3)(-k)=144+12k&gt;0\quad\Longrightarrow\quad k&gt;-12$$</p>
+      <p>幾何意義：$y=k$ 要高於頂點的 $y$ 值 $-12$，才會與拋物線交於兩點。</p>
+      <p>答案為 $k&gt;-12$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $f(x)=3x^{2}+12x$；(b) $x=0$、$x=-4$；(c) $k&gt;-12$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)$ 部分隨 $x^{2}$ 正變、部分隨 $x$ 正變，且 $f(2)=20$、$f(-3)=3$。求 $f(x)$，並求 $f(x)=k$ 有兩個相異實根時 $k$ 的範圍。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $4a+2b=20\Rightarrow 2a+b=10$；$9a-3b=3\Rightarrow 3a-b=1$。</div>
+          <div class="p-step"><b>第 2 步.</b> 相加得 $5a=11$，$a=\dfrac{11}{5}$，$b=10-\dfrac{22}{5}=\dfrac{28}{5}$。故 $f(x)=\dfrac{11}{5}x^{2}+\dfrac{28}{5}x$。</div>
+          <div class="p-step"><b>第 3 步.</b> $\Delta=\left(\dfrac{28}{5}\right)^{2}-4\left(\dfrac{11}{5}\right)(-k)&gt;0$，得 $k&gt;-\dfrac{196}{55}$。</div>
+          <div class="p-ans">答案：$f(x)=\dfrac{11}{5}x^{2}+\dfrac{28}{5}x$；$k&gt;-\dfrac{196}{55}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q9.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q11.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

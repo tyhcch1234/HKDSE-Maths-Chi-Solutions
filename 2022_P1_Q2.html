@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第2題 · 聯立方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第2題</span>
+  <h1>每句文字，寫成一條方程</h1>
+  <p class="sub">方程 · 以代入法解聯立一次方程</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $x$、$y$ 為兩個數。$x$ 與 $y$ 的和是 $456$，而 $7$ 與 $x$ 的積是 $y$。求 $x$。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">把兩句文字翻譯成兩條方程</div>
+      <div class="rule">
+        <span class="rule-name">列方程</span>
+        <span class="rule-math">$x+y=456\quad\cdots(1)$；$7x=y\quad\cdots(2)$</span>
+        <span class="rule-why">「和」對應加法，「積」對應乘法；先寫齊兩條，才開始消元。</span>
+      </div>
+      <p>$$x+y=456\qquad(1)$$</p>
+      <p>$$7x=y\qquad(2)$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">把 (2) 代入 (1)</div>
+      <div class="rule">
+        <span class="rule-name">代入消元</span>
+        <span class="rule-math">$y=7x\Rightarrow x+7x=456$</span>
+        <span class="rule-why">(2) 已經把 $y$ 單獨寫成 $7x$，直接代入最快，不必再整理。</span>
+      </div>
+      <p>$$x+7x=456$$</p>
+      <p>$$8x=456$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解出 $x$，並順道核對</div>
+      <div class="rule">
+        <span class="rule-name">驗算</span>
+        <span class="rule-math">$x=57,\ y=7(57)=399$</span>
+        <span class="rule-why">$57+399=456$ 成立，兩條方程都滿足。</span>
+      </div>
+      <p>$$x=\frac{456}{8}=57$$</p>
+      <p>$$y=7\times 57=399$$</p>
+      <p>答案為 $x=57$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$x=57$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $x$、$y$ 為兩個數。$x$ 與 $y$ 的和是 $96$，而 $5$ 與 $x$ 的積是 $y$。求 $x$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $x+y=96$、$y=5x$。</div>
+          <div class="p-step"><b>第 2 步.</b> $x+5x=96$，即 $6x=96$。</div>
+          <div class="p-step"><b>第 3 步.</b> $x=16$（$y=80$，$16+80=96$ ✓）。</div>
+          <div class="p-ans">答案：$x=16$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q1.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q3.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

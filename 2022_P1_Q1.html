@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第1題 · 指數化簡</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第1題</span>
+  <h1>先把括號拆開，再逐個底數相減</h1>
+  <p class="sub">指數定律 · 冪的乘方與負指數</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      化簡 $\dfrac{(a^{3}b^{-2})^{4}}{a^{-5}b^{6}}$，並以正指數表示答案。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">括號外指數要乘入每一個因式</div>
+      <div class="rule">
+        <span class="rule-name">冪的乘方</span>
+        <span class="rule-math">$(x^{m}y^{n})^{k}=x^{mk}y^{nk}$</span>
+        <span class="rule-why">$a^{3}$ 與 $b^{-2}$ 都要乘 $4$；負指數照乘：$-2\times 4=-8$。</span>
+      </div>
+      <p>$$(a^{3}b^{-2})^{4}=a^{3\times 4}b^{-2\times 4}=a^{12}b^{-8}$$</p>
+      <p>所以原式變成 $\dfrac{a^{12}b^{-8}}{a^{-5}b^{6}}$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">同底數相除：指數相減</div>
+      <div class="rule">
+        <span class="rule-name">同底數冪相除</span>
+        <span class="rule-math">$\dfrac{x^{m}}{x^{n}}=x^{m-n}$</span>
+        <span class="rule-why">分子減分母，負指數一併代入：$12-(-5)=17$、$-8-6=-14$。</span>
+      </div>
+      <p>$$\frac{a^{12}b^{-8}}{a^{-5}b^{6}}=a^{12-(-5)}b^{-8-6}=a^{17}b^{-14}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">負指數搬到分母，化成正指數</div>
+      <div class="rule">
+        <span class="rule-name">負指數</span>
+        <span class="rule-math">$x^{-n}=\dfrac{1}{x^{n}}$</span>
+        <span class="rule-why">題目要求「以正指數表示」，$b^{-14}$ 要寫成 $\dfrac{1}{b^{14}}$。</span>
+      </div>
+      <p>$$a^{17}b^{-14}=\frac{a^{17}}{b^{14}}$$</p>
+      <p>答案為 $\dfrac{a^{17}}{b^{14}}$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{a^{17}}{b^{14}}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{(x^{-2}y^{5})^{3}}{x^{4}y^{-2}}$，並以正指數表示答案。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $(x^{-2}y^{5})^{3}=x^{-6}y^{15}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 指數相減：$x^{-6-4}y^{15-(-2)}=x^{-10}y^{17}$。</div>
+          <div class="p-step"><b>第 3 步.</b> 化成正指數：$\dfrac{y^{17}}{x^{10}}$。</div>
+          <div class="p-ans">答案：$\dfrac{y^{17}}{x^{10}}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html">目錄</a><a href="2022_P1_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

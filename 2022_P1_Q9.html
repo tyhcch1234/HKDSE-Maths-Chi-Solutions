@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第9題 · 累積頻數與平均數</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第9題</span>
+  <h1>累積頻數，就是「一路加上去」</h1>
+  <p class="sub">統計學 · 頻數表、累積頻數與平均數</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      下表顯示一組學生完成 3 公里賽跑所需時間的分佈：
+      <br>時間（分鐘）：$10-14$ 頻數 $a$；$15-19$ 頻數 $9$；$20-24$ 頻數 $b$；$25-29$ 頻數 $3$。
+      <br>累積頻數表：少於 $14.5$ 為 $3$；少於 $19.5$ 為 $x$；少於 $24.5$ 為 $y$；少於 $29.5$ 為 $20$。
+      <br>(a) 寫出 $x$ 的值。<br>
+      (b) 求該分佈的平均數。<br>
+      (c) 求隨機抽出一名學生，其完成時間少於 $19.5$ 分鐘的概率。<span class="marks">[5 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 讀出累積頻數</div>
+      <div class="rule">
+        <span class="rule-name">累積頻數</span>
+        <span class="rule-math">少於 $14.5$ 只包括第一組</span>
+        <span class="rule-why">「少於 $14.5$」仍在上限之前，只有 $10-14$ 這一組被計入，故 $x=3$。</span>
+      </div>
+      <p>$$x=3$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 由總數反求 $a$、$b$</div>
+      <div class="rule">
+        <span class="rule-name">總頻數</span>
+        <span class="rule-math">$a+9+b+3=20$，且少於 $19.5$ 為 $a+9$</span>
+        <span class="rule-why">累積頻數每格加上該組頻數；由 $14.5$ 到 $19.5$ 只加了第二組的 $9$。</span>
+      </div>
+      <p>$$x=a+9=3+9=12\quad\Longrightarrow\quad a=3$$</p>
+      <p>$$y=12+b=20-3=17\quad\Longrightarrow\quad b=5$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 用組中點計平均數</div>
+      <div class="rule">
+        <span class="rule-name">分組數據平均數</span>
+        <span class="rule-math">$\bar{x}=\dfrac{\sum f\cdot m}{\sum f}$，$m$ 為組中點</span>
+        <span class="rule-why">組中點依次為 $12$、$17$、$22$、$27$；用組中點代表該組所有數據。</span>
+      </div>
+      <p>$$\bar{x}=\frac{12(3)+17(9)+22(5)+27(3)}{20}=\frac{36+153+110+81}{20}=\frac{380}{20}=19$$</p>
+      <p>平均數為 $19$ 分鐘。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(c) 概率</div>
+      <div class="rule">
+        <span class="rule-name">古典概率</span>
+        <span class="rule-math">$P=\dfrac{\text{少於 }19.5\text{ 的人數}}{\text{總人數}}$</span>
+        <span class="rule-why">少於 $19.5$ 的累積頻數是 $12$，總人數是 $20$。</span>
+      </div>
+      <p>$$P=\frac{12}{20}=0.6$$</p>
+      <p>答案為 $0.6$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $x=3$；(b) $19$ 分鐘；(c) $0.6$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 某分組數據：$0-9$ 頻數 $4$、$10-19$ 頻數 $6$、$20-29$ 頻數 $10$。求平均數，以及數據小於 $19.5$ 的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 組中點 $4.5$、$14.5$、$24.5$，總數 $20$。</div>
+          <div class="p-step"><b>第 2 步.</b> 平均 $=\dfrac{4.5(4)+14.5(6)+24.5(10)}{20}=\dfrac{18+87+245}{20}=17.5$。</div>
+          <div class="p-step"><b>第 3 步.</b> 小於 $19.5$ 有 $4+6=10$ 人，概率 $=\dfrac{10}{20}=0.5$。</div>
+          <div class="p-ans">答案：平均 $17.5$；概率 $0.5$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q8.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q10.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

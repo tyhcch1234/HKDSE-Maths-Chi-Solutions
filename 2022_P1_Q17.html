@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2022 卷一 第17題 · 根與係數、等差數列</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2022 · 卷一 · 第17題</span>
+  <h1>根與係數，接上等差數列</h1>
+  <p class="sub">公式與數列 · 根與係數的關係、等差數列求和</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $c$ 為實常數。方程 $x^{2}+cx-9=0$ 的根為 $\alpha$ 及 $\beta$。<br>
+      (a) 以 $c$ 表示 $\alpha^{2}+\beta^{2}$。<span class="marks">[3 分]</span><br>
+      (b) 某等差數列的第 $1$ 項、第 $2$ 項及第 $3$ 項分別為 $c^{2}$、$\alpha^{2}+\beta^{2}$ 及 $85$。求 $n$ 的最小值，使該數列首 $n$ 項之和大於 $2\times10^{6}$。<span class="marks">[4 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">(a) 用根與係數</div>
+      <div class="rule">
+        <span class="rule-name">根與係數</span>
+        <span class="rule-math">$\alpha+\beta=-c$，$\alpha\beta=-9$</span>
+        <span class="rule-why">$x^{2}+cx-9=0$ 中，和 $=-\frac{c}{1}$，積 $=\frac{-9}{1}$。</span>
+      </div>
+      <p>$$\alpha^{2}+\beta^{2}=(\alpha+\beta)^{2}-2\alpha\beta=c^{2}-2(-9)=c^{2}+18$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">(b) 先確定公差</div>
+      <div class="rule">
+        <span class="rule-name">等差數列</span>
+        <span class="rule-math">$a_2-a_1=a_3-a_2=d$</span>
+        <span class="rule-why">第 $2$ 項減第 $1$ 項 $=18$，與 $c$ 無關，所以公差直接是 $18$。</span>
+      </div>
+      <p>$$(c^{2}+18)-c^{2}=18$$</p>
+      <p>由 $a_3-a_2=18$：$85-(c^{2}+18)=18$，得 $c^{2}=49$，即 $c=\pm 7$。</p>
+      <p>數列為 $49,\;67,\;85,\ldots$，公差 $d=18$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">(b) 建立不等式</div>
+      <div class="rule">
+        <span class="rule-name">等差數列求和</span>
+        <span class="rule-math">$S_n=\dfrac{n}{2}\big[2a+(n-1)d\big]$</span>
+        <span class="rule-why">$a=49$、$d=18$。</span>
+      </div>
+      <p>$$S_n=\frac{n}{2}\big[98+18(n-1)\big]=\frac{n}{2}(18n+80)=9n^{2}+40n$$</p>
+      <p>$$9n^{2}+40n&gt;2\times10^{6}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 4 步</span>
+      <div class="step-title">(b) 解二次不等式</div>
+      <div class="rule">
+        <span class="rule-name">二次不等式</span>
+        <span class="rule-math">$9n^{2}+40n-2\,000\,000=0$ 的正根</span>
+        <span class="rule-why">$n$ 為正整數，取剛好大於正根的最小整數。</span>
+      </div>
+      <p>$$n=\frac{-40+\sqrt{1600+4(9)(2\,000\,000)}}{18}\approx\frac{-40+8485.4}{18}\approx 469.19$$</p>
+      <p>驗算：$S_{469}=9(469)^{2}+40(469)=1\,979\,649+18\,760=1\,998\,409&lt;2\times10^{6}$；$S_{470}=1\,988\,100+18\,800=2\,006\,900&gt;2\times10^{6}$。</p>
+      <p>故 $n$ 的最小值為 $470$。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span>(a) $\alpha^{2}+\beta^{2}=c^{2}+18$；(b) $n=470$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $\alpha$、$\beta$ 為 $x^{2}-3x-5=0$ 的根。求 $\alpha^{2}+\beta^{2}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $\alpha+\beta=3$、$\alpha\beta=-5$。</div>
+          <div class="p-step"><b>第 2 步.</b> $\alpha^{2}+\beta^{2}=9-2(-5)=19$。</div>
+          <div class="p-ans">答案：$19$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2022_P1_Q16.html">‹ 上一題</a><a href="index.html">目錄</a><a href="2022_P1_Q18.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
