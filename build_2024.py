@@ -92,8 +92,10 @@ def render(item, paper='P1', year=2024):
                           for L, v in zip('ABCD', item['opts']))
                 + '</ol>\n')
     mspan = '<span class="marks">[%s]</span>' % marks if marks else ''
+    if item.get('note'):
+        q = item['q'] + '\n      <p class="qnote">%s</p>' % item['note']
     out = HEAD.format(title=item['title'], tag=item['tag'], h1=item['h1'],
-                      sub=item['sub'], q=item['q'], marks=marks,
+                      sub=item['sub'], q=q if item.get('note') else item['q'], marks=marks,
                       fig=fig, opts=opts, mspan=mspan)
     for s in item['steps']:
         rule = ''
