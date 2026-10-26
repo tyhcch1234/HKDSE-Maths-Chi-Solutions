@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第8題 · 餘式定理</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第8題</span>
+    <h1>奇次項會變號，$64h+4k$ 可以整體代入</h1>
+    <p class="sub">多項式 · 餘式定理</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $g(x)=hx^3+2x^2+kx-5$，其中 $h$、$k$ 為常數。若 $g(x)$ 可被 $x-4$ 整除，求 $g(x)$ 除以 $x+4$ 的餘數。
+      <ol class="opts">
+        <li><span class="ol">A</span>$-27$</li>
+        <li><span class="ol">B</span>$-10$</li>
+        <li><span class="ol">C</span>$0$</li>
+        <li><span class="ol">D</span>$54$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">用 $g(4)=0$ 建立關係</div>
+      <div class="rule">
+        <span class="rule-name">因式定理</span>
+        <span class="rule-math">$g(x)$ 可被 $x-4$ 整除 $\Longleftrightarrow g(4)=0$</span>
+        <span class="rule-why">$g(4)=64h+32+4k-5=64h+4k+27=0$。</span>
+      </div>
+      <p>$$g(4)=64h+32+4k-5=64h+4k+27=0$$</p>
+      <p>即 $64h+4k=-27$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">求 $g(-4)$</div>
+      <div class="rule">
+        <span class="rule-name">餘式定理</span>
+        <span class="rule-math">$g(x)$ 除以 $x+4$ 的餘數 $=g(-4)$</span>
+        <span class="rule-why">$g(-4)=-64h-4k+27=-(64h+4k)+27$。</span>
+      </div>
+      <p>$$g(-4)=-64h+32-4k-5=-64h-4k+27$$</p>
+      <p>$$=-\left(64h+4k\right)+27=-(-27)+27=54$$</p>
+      <p>即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　$54$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $g(x)=hx^3+3x^2+kx-4$。若 $g(x)$ 可被 $x-2$ 整除，求 $g(x)$ 除以 $x+2$ 的餘數。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $g(2)=8h+12+2k-4=8h+2k+8=0$，即 $4h+k=-4$。</div>
+          <div class="p-step"><b>第 2 步.</b> $g(-2)=-8h+12-2k-4=-8h-2k+8$。</div>
+          <div class="p-step"><b>第 3 步.</b> $=-2(4h+k)+8=-2(-4)+8=16$。</div>
+          <div class="p-ans">答案：$16$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q7.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q9.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

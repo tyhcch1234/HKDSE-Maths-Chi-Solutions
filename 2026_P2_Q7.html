@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第7題 · 函數值與二次方程</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第7題</span>
+    <h1>代 $x=1+d$，化簡成完全平方</h1>
+    <p class="sub">函數 · 函數值與二次方程</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      設 $f(x)=(x+d)(x-2)+9x$，其中 $d$ 為常數。若 $f(1+d)=0$，則 $d=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$-2$</li>
+        <li><span class="ol">B</span>$-1$</li>
+        <li><span class="ol">C</span>$1$</li>
+        <li><span class="ol">D</span>$2$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">代入 $x=1+d$</div>
+      <div class="rule">
+        <span class="rule-name">函數值</span>
+        <span class="rule-math">$f(1+d)=(2d+1)(d-1)+9(1+d)$</span>
+        <span class="rule-why">因 $(1+d)+d=2d+1$，而 $(1+d)-2=d-1$。</span>
+      </div>
+      <p>$$f(1+d)=\big[(1+d)+d\big]\big[(1+d)-2\big]+9(1+d)$$</p>
+      <p>$$=(2d+1)(d-1)+9+9d$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">展開並化簡</div>
+      <p>$$=2d^2-2d+d-1+9+9d=2d^2+8d+8$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">解 $2d^2+8d+8=0$</div>
+      <p>$$2\left(d^2+4d+4\right)=0\quad\Longrightarrow\quad 2(d+2)^2=0\quad\Longrightarrow\quad d=-2$$</p>
+      <p>即選項 <b>A</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>A</b>　$d=-2$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 設 $f(x)=(x+d)(x-2)+9x$。若 $f(d)=0$，求 $d$ 的所有可能值。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> $f(d)=(2d)(d-2)+9d$。</div>
+          <div class="p-step"><b>第 2 步.</b> 展開：$2d^2-4d+9d=2d^2+5d$。</div>
+          <div class="p-step"><b>第 3 步.</b> $d(2d+5)=0$，故 $d=0$ 或 $d=-\dfrac{5}{2}$。</div>
+          <div class="p-ans">答案：$d=0$ 或 $d=-\dfrac{5}{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><a href="2026_P2_Q6.html">‹ 上一題</a><a href="index.html#y2026">目錄</a><a href="2026_P2_Q8.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>

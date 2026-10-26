@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2026 卷二 第1題 · 代數分式</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">DSE 2026 · 卷二 · 第1題</span>
+    <h1>通分後分子只剩 $8k$</h1>
+    <p class="sub">代數 · 代數分式的加法</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      $\dfrac{1}{k+2}+\dfrac{3}{5k-6}=$
+      <ol class="opts">
+        <li><span class="ol">A</span>$-\dfrac{8k}{(k+2)(5k-6)}$</li>
+        <li><span class="ol">B</span>$-\dfrac{2k}{(k+2)(5k-6)}$</li>
+        <li><span class="ol">C</span>$\dfrac{2k}{(k+2)(5k-6)}$</li>
+        <li><span class="ol">D</span>$\dfrac{8k}{(k+2)(5k-6)}$</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">通分</div>
+      <div class="rule">
+        <span class="rule-name">代數分式相加</span>
+        <span class="rule-math">$\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+bc}{bd}$</span>
+        <span class="rule-why">以 $(k+2)(5k-6)$ 為公分母，得 $\dfrac{(5k-6)+3(k+2)}{(k+2)(5k-6)}$。</span>
+      </div>
+      <p>$$\frac{1}{k+2}+\frac{3}{5k-6}=\frac{(5k-6)+3(k+2)}{(k+2)(5k-6)}$$</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">化簡分子</div>
+      <p>$$(5k-6)+3(k+2)=5k-6+3k+6=8k$$</p>
+      <p>常數項 $-6$ 與 $+6$ 相消，只剩 $8k$。</p>
+    </div>
+
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">對照選項</div>
+      <p>$$\frac{8k}{(k+2)(5k-6)}$$</p>
+      <p>即選項 <b>D</b>。</p>
+    </div>
+
+    <div class="ans"><span class="lbl">答案</span><b>D</b>　$\dfrac{8k}{(k+2)(5k-6)}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 化簡 $\dfrac{1}{m+3}+\dfrac{4}{2m-5}$。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 通分：$\dfrac{(2m-5)+4(m+3)}{(m+3)(2m-5)}$。</div>
+          <div class="p-step"><b>第 2 步.</b> 分子 $=2m-5+4m+12=6m+7$。</div>
+          <div class="p-ans">答案：$\dfrac{6m+7}{(m+3)(2m-5)}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <nav class="pager"><span></span><a href="index.html#y2026">目錄</a><a href="2026_P2_Q2.html">下一題 ›</a></nav>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
