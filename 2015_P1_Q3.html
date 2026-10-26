@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 2015 卷一 第3題 · 兩袋抽卡的概率</title>
+<script>
+  window.MathJax = { tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['\\[','\\]'],['$$','$$']]}, svg:{fontCache:'global'} };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/extra.css">
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="tag">DSE 2015 · 卷一 · 第3題</span>
+  <h1>兩袋各抽一張，和少於 9</h1>
+  <p class="sub">概率 · 系統列舉 · 3 分題</p>
+</div></div>
+<div class="wrap">
+  <div class="card">
+    <h2>題目</h2>
+    <div class="question">
+      袋 $A$ 有 $4$ 張分別寫上 $1$、$3$、$5$、$7$ 的卡，袋 $B$ 有 $5$ 張分別寫上 $2$、$4$、$6$、$8$、$10$ 的卡。若從每袋各隨機抽出一張卡，求兩數之和小於 $9$ 的概率。<span class="marks">[3 分]</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>題解</h2>
+    <div class="step">
+      <span class="step-tag">第 1 步</span>
+      <div class="step-title">數清所有可能的結果</div>
+      <div class="rule">
+        <span class="rule-name">乘法原理</span>
+        <span class="rule-math">\(n(A)\times n(B)\)</span>
+        <span class="rule-why">兩個袋各自獨立抽卡，總組合數是兩者相乘。</span>
+      </div>
+      \[4\times 5=20\ \text{個等可能結果}.\]
+    </div>
+    <div class="step">
+      <span class="step-tag">第 2 步</span>
+      <div class="step-title">固定 $A$ 的卡，逐個數 $B$ 中合條件的卡</div>
+      <div class="rule">
+        <span class="rule-name">系統列舉</span>
+        <span class="rule-math">\(a+b&lt;9\iff b&lt;9-a\)</span>
+        <span class="rule-why">固定 $a$ 之後，條件變成對 $b$ 的簡單上限，可逐一數出。</span>
+      </div>
+      <table class="mini">
+        <tr><th>$a$</th><th>需要 $b&lt;9-a$</th><th>袋 $B$ 合條件的卡</th><th>數目</th></tr>
+        <tr><td>$1$</td><td>$b&lt;8$</td><td>$2,4,6$</td><td>$3$</td></tr>
+        <tr><td>$3$</td><td>$b&lt;6$</td><td>$2,4$</td><td>$2$</td></tr>
+        <tr><td>$5$</td><td>$b&lt;4$</td><td>$2$</td><td>$1$</td></tr>
+        <tr><td>$7$</td><td>$b&lt;2$</td><td>（無）</td><td>$0$</td></tr>
+      </table>
+      合條件的結果共 $3+2+1+0=6$ 個。
+    </div>
+    <div class="step">
+      <span class="step-tag">第 3 步</span>
+      <div class="step-title">合條件數目 ÷ 總數</div>
+      <div class="rule">
+        <span class="rule-name">概率定義</span>
+        <span class="rule-math">\(P=\dfrac{\text{合條件的結果數}}{\text{所有等可能結果數}}\)</span>
+        <span class="rule-why">只有在結果等可能時才可直接用「數目比」。</span>
+      </div>
+      \[P=\frac{6}{20}=\frac{3}{10}.\]
+      答案：$\dfrac{3}{10}$。<br>
+      常見失分：把「小於 $9$」當作「不大於 $9$」，令 $a=1,b=8$ 與 $a=7,b=2$ 多算兩個；本題是嚴格小於，兩者都不計。
+    </div>
+    <div class="ans"><span class="lbl">答案</span>$\dfrac{3}{10}$</div>
+  </div>
+
+  <div class="practice">
+    <div class="p-head">練習 <span class="p-badge">同類新題</span></div>
+    <div class="p-body">
+      <div class="p-q"><b>題目.</b> 袋 $A$ 有卡 $1,2,3$，袋 $B$ 有卡 $4,5,6,7$。從每袋各抽一張，求兩數之和為奇數的概率。</div>
+      <details>
+        <summary>顯示題解</summary>
+        <div class="p-sol">
+          <div class="p-step"><b>第 1 步.</b> 總組合數 $=3\times 4=12$。</div>
+          <div class="p-step"><b>第 2 步.</b> 和為奇數即「一奇一偶」：$A$ 的奇數 $1,3$（2 張）配 $B$ 的偶數 $4,6$（2 張）$=4$ 個；$A$ 的偶數 $2$（1 張）配 $B$ 的奇數 $5,7$（2 張）$=2$ 個，合共 $6$ 個。</div>
+          <div class="p-step"><b>第 3 步.</b> $P=\dfrac{6}{12}=\dfrac{1}{2}$。</div>
+          <div class="p-ans">答案：$\dfrac{1}{2}$</div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="pager"><span></span><span class="mid"><a href="index.html">目錄</a></span><span></span></div>
+</div>
+<footer>香港中學文憑試 數學（必修部分）題解 · 中文版 · 題目取材自香港考試及評核局歷年試題</footer>
+</body>
+</html>
