@@ -1,0 +1,791 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 概率 — 7 種題型 50 題（附詳解）","desc":"由 62 道歷年 HKDSE 概率試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：等可能結果與餘事件、樣本空間與數算、互斥事件與加法法則、獨立事件與乘法法則、樹形圖與條件概率、排列與組合，以及考試程度的多階段綜合題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_probability_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 等可能結果</a><a href="#t2" data-t="t2">類型 2 · 樣本空間與數算</a><a href="#t3" data-t="t3">類型 3 · 加法法則</a><a href="#t4" data-t="t4">類型 4 · 乘法法則</a><a href="#t5" data-t="t5">類型 5 · 樹形圖與條件概率</a><a href="#t6" data-t="t6">類型 6 · 排列與組合</a><a href="#t7" data-t="t7">類型 7 · 多階段綜合題</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 概率</p>
+    <h1 class="hero__title">概率 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 62 道歷年 DSE 概率試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>62</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如「或」用加法法則、「且」用乘法法則，兩者不可對調。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>基本概率、等可能結果與餘事件法則</td><td>數算有利結果與總結果；餘事件法則</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>列出樣本空間與數算結果</td><td>有系統地列舉、列表，以及用乘法原理求總數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>互斥事件與加法法則</td><td>P(A 或 B)：文氏圖中有重疊與無重疊</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>獨立事件與乘法法則</td><td>一事件不影響另一事件時，P(A 且 B) = P(A)P(B)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>樹形圖、兩階段試驗與條件概率</td><td>沿分枝相乘、跨分枝相加、P(B|A)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>排列與組合在數算中的應用</td><td>次序是否重要；限制條件與插空法</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度的多階段問題</td><td>放回與不放回、「至少一個」、期望頻數</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>基本概率、等可能結果與餘事件法則 <span class="count">· 7 題</span></h2>
+    <p>數算有利結果與總結果；餘事件法則</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>當每個結果出現的機會均等時，概率就只是數目的比，\(P(E)=\frac{n(E)}{n(S)}\)。餘事件法則 \(P(E')=1-P(E)\) 把冗長的「不是」或「至少」數算化為一次減法，所以先問自己：\(E\) 與 \(E'\) 哪一個較容易數？</p><p>兩項合理性檢查：概率必須介於 \(0\) 與 \(1\) 之間；一組互斥而完備的情況，其概率之和必須等於 \(1\)。</p><div class="formula"><span>\(P(E)=\frac{n(E)}{n(S)}\)</span><span>\(P(E')=1-P(E)\)</span><span>\(0\le P(E)\le 1\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>袋中有 5 個紅球、3 個藍球和 7 個綠球。隨機抽出一個球。求抽出的球<b>不是</b>紅色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{2}{3}\)</div>
+<ol class="steps">
+<li>球的總數 \(=5+3+7=15\)，每個球被抽出的機會均等。</li><li>\(P(\text{紅})=\frac{5}{15}=\frac{1}{3}\)。</li><li>由餘事件法則，\(P(\text{非紅})=1-\frac{1}{3}=\frac{2}{3}\)。</li><li>直接數算核對：非紅球有 \(3+7=10\) 個，而 \(\frac{10}{15}=\frac{2}{3}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「不是紅色」不等於「藍色」：它包括藍球和綠球，所以有利的球有 10 個，不是 3 個。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>擲一枚均勻骰子一次。求擲得的點數是質數的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{1}{2}\)</div>
+<ol class="steps">
+<li>樣本空間是 \(\{1,2,3,4,5,6\}\)，所以 \(n(S)=6\)。</li><li>樣本空間中的質數是 \(2,3,5\)，共 3 個有利結果。</li><li>\(P(\text{質數})=\frac{3}{6}=\frac{1}{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>1 不是質數。若把 \(1,2,3,5\) 都算進去，得 \(\frac{4}{6}=\frac{2}{3}\)，這是錯的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>從 <b>PROBABILITY</b> 一字的十一個字母中隨機選出一個字母。求選出的字母是 (a) 元音、(b) 輔音 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{4}{11}\)　(b) \(\frac{7}{11}\)</div>
+<ol class="steps">
+<li>字母依次為 \(P,R,O,B,A,B,I,L,I,T,Y\)：共十一個位置，所以 \(n(S)=11\)。</li><li>元音是 \(O,A,I,I\) —— 佔四個位置（I 出現兩次，兩個都計入），所以 \(P(\text{元音})=\frac{4}{11}\)。</li><li>每個字母不是元音就是輔音，所以 \(P(\text{輔音})=1-\frac{4}{11}=\frac{7}{11}\)。</li><li>直接核對：\(P,R,B,B,L,T,Y\) 共七個字母，與 \(\frac{7}{11}\) 相符。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要因為 B 和 I 重複而縮小分母：十一個位置機會均等，所以 \(n(S)=11\)。本題把 Y 視為輔音。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某博物館的訪客調查顯示，35% 是兒童，22% 是長者，其餘訪客都是成人。隨機選出一名訪客，求該訪客是成人的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.43\)</div>
+<ol class="steps">
+<li>寫成概率：\(P(\text{兒童})=0.35\) 及 \(P(\text{長者})=0.22\)。</li><li>這三組互斥，且涵蓋所有訪客，所以三者的概率之和為 \(1\)。</li><li>\(P(\text{成人})=1-(0.35+0.22)=1-0.57=0.43\)，即 43% 的訪客。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只減去其中一組，例如 \(1-0.35=0.65\)，就漏掉了長者。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>下表顯示某班 40 名學生每人最喜歡的運動。</p><table><tr><th>運動</th><th>足球</th><th>籃球</th><th>羽毛球</th><th>游泳</th></tr><tr><td>學生人數</td><td>14</td><td>9</td><td>7</td><td>10</td></tr></table><p>隨機選出一名學生。求該學生最喜歡的運動是 (a) 籃球、(b) 足球或游泳 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{9}{40}\)　(b) \(\frac{3}{5}\)</div>
+<ol class="steps">
+<li>各頻數之和 \(14+9+7+10=40\)，與全班人數相符，所以 40 名學生機會均等。</li><li>(a) 有 9 名學生選籃球：\(P(\text{籃球})=\frac{9}{40}\)。</li><li>(b) 選足球或游泳的有 \(14+10=24\) 人，所以 \(P=\frac{24}{40}=\frac{3}{5}\)。</li><li>用餘事件核對：羽毛球或籃球為 \(\frac{7+9}{40}=\frac{16}{40}=\frac{2}{5}\)，而 \(\frac{3}{5}+\frac{2}{5}=1\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>總數 40 是分母，永遠不會是分子：只有指定的兩項運動才算有利結果。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個正方形內接於半徑 6 cm 的圓，正方形四個頂點都在圓上。在圓內隨機選一點，求該點落在正方形內的概率，並以準確值及準確至 3 位有效數字的近似值表示答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{2}{\pi}\approx 0.637\)</div>
+<ol class="steps">
+<li>圓的面積 \(=\pi r^{2}=\pi(6)^{2}=36\pi\ \text{cm}^{2}\)。</li><li>內接正方形的對角線是一條直徑，所以對角線長 12 cm。設邊長為 \(s\)：\(s^{2}+s^{2}=12^{2}\)，即 \(2s^{2}=144\)，故 \(s^{2}=72\)。</li><li>正方形的面積 \(=s^{2}=72\ \text{cm}^{2}\)。</li><li>該點均勻分佈，所以 \(P=\frac{72}{36\pi}=\frac{2}{\pi}\)。</li><li>\(\frac{2}{\pi}=0.6366\ldots\approx 0.637\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>直徑 12 是正方形的對角線，不是邊長：若把邊長當作 12，面積便是 144，比圓本身還大。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>把 1 至 30（包括首尾）的整數寫在 30 張相同的卡上，每張一個數，隨機抽出一張。求抽出的數是 (a) 6 的倍數、(b) 既不是 6 的倍數也不是 5 的倍數 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{1}{6}\)　(b) \(\frac{2}{3}\)</div>
+<ol class="steps">
+<li>共有 30 張機會均等的卡。</li><li>(a) 6 的倍數是 \(6,12,18,24,30\) —— 共五個，所以 \(P=\frac{5}{30}=\frac{1}{6}\)。</li><li>(b) 5 的倍數是 \(5,10,15,20,25,30\) —— 共六個。同時是 6 和 5 的倍數，即 30 的倍數，只有 30 一個，所以有一個數被重複計算。</li><li>是 6 的倍數<b>或</b> 5 的倍數的卡：\(5+6-1=10\) 張，所以兩者皆非的有 \(30-10=20\) 張。</li><li>\(P(\text{兩者皆非})=\frac{20}{30}=\frac{2}{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>忘記重疊的 30 會把它算兩次：若寫 \(5+6=11\)，便只剩 19 張而並非 20 張。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>列出樣本空間與數算結果 <span class="count">· 7 題</span></h2>
+    <p>有系統地列舉、列表，以及用乘法原理求總數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>計算任何概率之前，先有系統地寫出整個樣本空間 —— 用列表、表格或樹形圖 —— 確保沒有結果被重複計算，也沒有遺漏。樣本空間的大小由乘法原理求得：若第一個選擇有 \(m\) 種方法，接着第二個選擇有 \(n\) 種方法，則這個配對共有 \(mn\) 種方法。</p><p>只有在所有結果機會均等時，才可以用數目相除。「兩粒骰子」永遠指 36 個有序結果，而不是 21 個無序的和。</p><div class="formula"><span>\(n(S)=m\times n\)</span><span>\(P(E)=\frac{n(E)}{n(S)}\)</span><span>\(\text{兩粒骰子}\Rightarrow n(S)=36\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>擲兩枚均勻硬幣。(a) 列出樣本空間。(b) 求恰有一個正面的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\{HH,HT,TH,TT\}\)　(b) \(\frac{1}{2}\)</div>
+<ol class="steps">
+<li>先寫第一枚硬幣的結果，再寫第二枚：\(HH,\ HT,\ TH,\ TT\)，所以 \(n(S)=4\)。</li><li>恰有一個正面出現在 \(HT\) 和 \(TH\)：\(n(E)=2\)。</li><li>\(P(\text{恰有一個正面})=\frac{2}{4}=\frac{1}{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把樣本空間寫成 \(\{HH,HT,TT\}\)，就把 \(HT\) 和 \(TH\) 合併了 —— 它們是兩個不同而機會均等的結果，分母便會錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>擲兩枚均勻骰子。(a) 樣本空間共有多少個結果？(b) 求兩數之和為 5 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 36　(b) \(\frac{1}{9}\)</div>
+<ol class="steps">
+<li>每枚骰子有 6 個結果，由乘法原理，共有 \(n(S)=6\times 6=36\) 個有序數對。</li><li>和為 5 的情況：\((1,4),(2,3),(3,2),(4,1)\) —— 共四個結果。</li><li>\(P(\text{和}=5)=\frac{4}{36}=\frac{1}{9}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \((1,4)\) 與 \((4,1)\) 視為同一結果而取 \(n(S)=21\)：兩枚骰子可以分辨，它們是不同而機會均等的結果。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>擲一枚均勻硬幣三次。(a) 樣本空間共有多少個結果？(b) 求至少得兩個正面的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 8　(b) \(\frac{1}{2}\)</div>
+<ol class="steps">
+<li>三次擲幣共有 \(2\times 2\times 2=8\) 個機會均等的字串：\(HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\)。</li><li>「至少兩個正面」即恰有兩個正面或三個正面：\(HHT,HTH,THH,HHH\) —— 共四個結果。</li><li>\(P=\frac{4}{8}=\frac{1}{2}\)。</li><li>另法：\(P=\frac{\binom{3}{2}+\binom{3}{3}}{2^{3}}=\frac{3+1}{8}=\frac{1}{2}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只數 \(HHT\) 和 \(HHH\)，就忽略了那一個反面出現的位置 —— \(HTH\) 和 \(THH\) 都是獨立的結果。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>三張卡分別標有 \(A\)、\(B\)、\(C\)。先後抽出兩張卡，抽出後不放回。(a) 列出樣本空間。(b) 求第二張抽出的卡是 \(B\) 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\{AB,AC,BA,BC,CA,CB\}\)　(b) \(\frac{1}{3}\)</div>
+<ol class="steps">
+<li>第一張可以是 \(A,B\) 或 \(C\)；第二張則是餘下兩張之一，所以 \(n(S)=3\times 2=6\)。</li><li>有序結果為 \(AB,AC,BA,BC,CA,CB\)。</li><li>第二張是 \(B\) 的情況有 \(AB\) 和 \(CB\)：共兩個結果。</li><li>\(P(\text{第二張是 }B)=\frac{2}{6}=\frac{1}{3}\)。</li><li>合理性檢查：由對稱性，三張卡成為第二張的機會均等，所以答案必定是 \(\frac{1}{3}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(AB\) 和 \(BA\) 當成同一個結果，就丟失了題目所問的次序資料，答案會變成 \(\frac{2}{3}\) 而不是 \(\frac{1}{3}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某餐廳提供三道菜的套餐：一款前菜、一款主菜和一款甜品。共有 4 款前菜（其中一款是湯）、5 款主菜和 3 款甜品。從所有可能組合中隨機選出一份套餐。(a) 共有多少款不同的套餐？(b) 求所選套餐包括湯的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 60　(b) \(\frac{1}{4}\)</div>
+<ol class="steps">
+<li>由乘法原理，套餐數目為 \(4\times 5\times 3=60\)。</li><li>把湯定為前菜：主菜與甜品仍有 \(1\times 5\times 3=15\) 種選法。</li><li>\(P(\text{有湯})=\frac{15}{60}=\frac{1}{4}\)。</li><li>捷徑：4 款前菜中恰有一款是湯，所以無論主菜和甜品怎樣配搭，概率都是 \(\frac{1}{4}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 15 除以 12 或除以 4 而不是除以 60 —— 分母必須是套餐的總數，不是前菜的數目。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P2_Q28.html" target="_blank" rel="noopener">歷年試題 · 2022 卷二 Q28 ↗</a></div>
+<div class="q__body"><p>符號 ⧫ 代表 0 至 9（包括首尾）的一個整數，所以 \(7\text{⧫}5\) 是一個三位數。⧫ 的十個值機會均等。(a) 列出十個可能的數。(b) 求 \(7\text{⧫}5\) 可被 3 整除的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 705, 715, …, 795　(b) \(\frac{2}{5}\)</div>
+<ol class="steps">
+<li>這十個數是 \(705,715,725,735,745,755,765,775,785,795\)，所以 \(n(S)=10\)。</li><li>一個數可被 3 整除，若且唯若其數字和是 3 的倍數。此處數字和為 \(7+x+5=12+x\)，其中 \(x\) 是中間的數字。</li><li>\(12+x\) 是 3 的倍數，若且唯若 \(x\) 是 3 的倍數：\(x=0,3,6,9\)。</li><li>有利的數是 \(705,735,765,795\) —— 共四個，所以 \(P=\frac{4}{10}=\frac{2}{5}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>對十個情況逐一做長除法去檢驗整除性既浪費時間，用數字和法則可即時判斷。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>從 \(1,2,3,4,5\) 中選出兩個不同的數字組成兩位數，數字不得重複。每個這樣的數機會均等。(a) 可組成多少個兩位數？(b) 求該數是偶數的概率。(c) 求該數是偶數且大於 40 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 20　(b) \(\frac{2}{5}\)　(c) \(\frac{3}{20}\)</div>
+<ol class="steps">
+<li>(a) 十位數字有 5 個選擇，個位數字然後有 4 個，所以共 \(5\times 4=20\) 個數。</li><li>(b) 該數是偶數，若且唯若個位數字是 2 或 4。個位為 2：十位是其餘 4 個數字之一，共 4 個數；同樣有 4 個數以 4 結尾。所以 \(P(\text{偶數})=\frac{4+4}{20}=\frac{2}{5}\)。</li><li>(c) 「是偶數且大於 40」需要十位數字為 4 或 5 <b>且</b>個位數字為偶數，但兩個數字必須不同。</li><li>十位為 5：個位可以是 2 或 4，共 2 個數（52、54）。十位為 4：個位只可以是 2，共 1 個數（42）。合共 3 個。</li><li>\(P=\frac{3}{20}=0.15\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 部，「十位 4、個位 4」不可能，因為數字不得重複，所以只有 42 符合 —— 不是 42 和 44。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>互斥事件與加法法則 <span class="count">· 7 題</span></h2>
+    <p>文氏圖中有重疊與無重疊時的 P(A 或 B)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>對任意兩事件，\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)。減去的是重疊部分的結果，否則它們會被計算兩次。當 \(A\) 與 \(B\) <b>互斥</b>時，重疊部分是空集，\(P(A\cap B)=0\)，法則便簡化為 \(P(A\cup B)=P(A)+P(B)\)。</p><p>兩項檢查可判斷事件能否互斥：它們不能同時發生，因此 \(P(A)+P(B)\le 1\)。另外 \(P(A'\cap B')=1-P(A\cup B)\) —— 即兩個圓以外的區域。</p><div class="formula"><span>\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</span><span>\(P(A\cap B)=0\) 若兩者互斥</span><span>\(P(A'\cap B')=1-P(A\cup B)\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>\(A\) 與 \(B\) 是互斥事件，且 \(P(A)=0.35\)、\(P(B)=0.4\)。求 \(P(A\cup B)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.75\)</div>
+<ol class="steps">
+<li>互斥表示 \(A\) 與 \(B\) 不能同時發生，所以 \(P(A\cap B)=0\)。</li><li>\(P(A\cup B)=P(A)+P(B)=0.35+0.4\)。</li><li>\(=0.75\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>減去一個根本不存在的重疊，即寫了 \(0.35+0.4-0=0.75\) 卻又「改正」為 \(0.35\times0.4\)；乘法法則屬於獨立事件，不屬於加法法則。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>\(M\) 與 \(N\) 是兩事件，且 \(P(M)=\frac{1}{3}\)、\(P(N)=\frac{1}{4}\)、\(P(M\cap N)=\frac{1}{6}\)。求 \(P(M\cup N)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{5}{12}\)</div>
+<ol class="steps">
+<li>用加法法則：\(P(M\cup N)=P(M)+P(N)-P(M\cap N)\)。</li><li>以 12 為分母：\(\frac{4}{12}+\frac{3}{12}-\frac{2}{12}\)。</li><li>\(=\frac{5}{12}\)。留意 \(P(M\cap N)\ne 0\)，所以 \(M\) 與 \(N\) <b>不是</b>互斥事件。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>忘記減去 \(-\frac{1}{6}\) 會得 \(\frac{7}{12}\)，把重疊部分重複計算了。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>從 20 張編號 1 至 20 的卡中隨機抽出一張。求卡上的數是偶數或 5 的倍數的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{3}{5}\)</div>
+<ol class="steps">
+<li>偶數：\(2,4,\ldots,20\) —— 共 10 個，所以 \(P(\text{偶數})=\frac{10}{20}\)。</li><li>5 的倍數：\(5,10,15,20\) —— 共四個，所以 \(P(\text{5 的倍數})=\frac{4}{20}\)。</li><li>同時是偶數和 5 的倍數，即 10 的倍數：\(10,20\) —— 共兩張，\(P=\frac{2}{20}\)。</li><li>\(P(\text{偶數或 5 的倍數})=\frac{10+4-2}{20}=\frac{12}{20}=\frac{3}{5}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只加 \(\frac{10}{20}+\frac{4}{20}\) 會把 10 和 20 各算兩次；不減去重疊，答案便是 \(\frac{7}{10}\)，偏大。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某班有 40 名學生，其中 18 人修讀物理，15 人修讀化學，7 人兩科均修讀。隨機選出一名學生。(a) 求該學生修讀物理或化學的概率。(b) 求該學生兩科均沒有修讀的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{13}{20}\)　(b) \(\frac{7}{20}\)</div>
+<ol class="steps">
+<li>設 \(P\) 與 \(C\) 分別為修讀物理與化學的事件。則 \(P(P)=\frac{18}{40}\)、\(P(C)=\frac{15}{40}\)、\(P(P\cap C)=\frac{7}{40}\)。</li><li>(a) \(P(P\cup C)=\frac{18}{40}+\frac{15}{40}-\frac{7}{40}=\frac{26}{40}=\frac{13}{20}\)。</li><li>所以有 \(26\) 名學生修讀這兩科中至少一科。</li><li>(b) \(P(\text{兩科皆無})=1-\frac{26}{40}=\frac{14}{40}=\frac{7}{20}\)，即有 \(14\) 名學生。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 18 與 15 相加得 33 人，在這裏不可能：兩科均修的 7 人會被算兩次，而 33 只會留下 7 人兩科皆無，而不是 14 人。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>設 \(A\)、\(B\) 為兩事件，且 \(P(A)=0.5\)、\(P(B)=0.4\)、\(P(A\cup B)=0.7\)。(a) 求 \(P(A\cap B)\)。(b) \(A\) 與 \(B\) 是否互斥？試解釋。(c) 求 \(P(A'\cap B')\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.2\)　(b) 否，因為 \(P(A\cap B)\ne 0\)　(c) \(0.3\)</div>
+<ol class="steps">
+<li>(a) 由 \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)：\(0.7=0.5+0.4-P(A\cap B)\)，所以 \(P(A\cap B)=0.9-0.7=0.2\)。</li><li>(b) 互斥事件滿足 \(P(A\cap B)=0\)。此處 \(P(A\cap B)=0.2\ne 0\)，所以兩事件可以同時發生，<b>不是</b>互斥。</li><li>(c) \(A'\cap B'\) 是兩個圓以外的區域，所以 \(P(A'\cap B')=1-P(A\cup B)=1-0.7=0.3\)。</li><li>核對：當四個區域分別為 \(A\cap B'=0.3\)、\(A\cap B=0.2\)、\(A'\cap B=0.2\)、兩者皆無 \(=0.3\) 時，\(0.3+0.2+0.2+0.3=1.0\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(P(A'\cap B')\) <b>不是</b> \(P(A')P(B')\)；那個乘法法則需要獨立性。應該用 \(1-P(A\cup B)\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>事件 \(A\)、\(B\)、\(C\) 互斥且完備，且 \(P(A)=0.2\)、\(P(B)=3P(C)\)。(a) 求 \(P(C)\) 與 \(P(B)\)。(b) 求 \(P(A\cup B)\)。(c) 求 \(A\) 與 \(C\) 中恰有一個發生的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(P(C)=0.2\)，\(P(B)=0.6\)　(b) \(0.8\)　(c) \(0.4\)</div>
+<ol class="steps">
+<li>「互斥且完備」表示三個概率之和為 1：\(0.2+3P(C)+P(C)=1\)。</li><li>所以 \(4P(C)=0.8\)，得 \(P(C)=0.2\) 及 \(P(B)=3(0.2)=0.6\)。</li><li>(b) \(P(A\cup B)=P(A)+P(B)=0.2+0.6=0.8\)，因為 \(A\) 與 \(B\) 互斥。</li><li>(c) 由於 \(A\) 與 \(C\) 不能同時發生，「\(A\) 與 \(C\) 中恰有一個發生」就是 \(A\cup C\)，所以 \(P=0.2+0.2=0.4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(P(B)=3P(C)\) 算成 \(P(B)=0.6\) 之後，又加上 \(P(A\cap B)\ne0\)；互斥事件的重疊為零，每一部分都是單純的相加。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>從一副標準 52 張撲克牌（13 張紅心、13 張方塊、13 張黑桃、13 張梅花；四張 K）中隨機抽出一張。(a) 求抽出的牌是紅心或 K 的概率。(b) 求抽出的牌既非紅心亦非 K 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{4}{13}\)　(b) \(\frac{9}{13}\)</div>
+<ol class="steps">
+<li>\(P(\text{紅心})=\frac{13}{52}\)，\(P(\text{K})=\frac{4}{52}\)。</li><li>重疊部分是紅心 K：\(P(\text{紅心且 K})=\frac{1}{52}\)。</li><li>(a) \(P(\text{紅心或 K})=\frac{13}{52}+\frac{4}{52}-\frac{1}{52}=\frac{16}{52}=\frac{4}{13}\)。</li><li>(b) \(P(\text{兩者皆非})=1-\frac{16}{52}=\frac{36}{52}=\frac{9}{13}\)。</li><li>(b) 的直接數算：\(52-13\ \text{紅心}-3\ \text{其他 K}=36\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\frac{13+4}{52}=\frac{17}{52}\) 會把紅心 K 算兩次；正確數目是 16。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>獨立事件與乘法法則 <span class="count">· 7 題</span></h2>
+    <p>當一事件不影響另一事件時，P(A 且 B) = P(A)P(B)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>當一件事的發生對另一件事毫無提示時，兩事件就是<b>獨立</b>的。此時乘法法則成立：\(P(A\cap B)=P(A)P(B)\)。獨立性會遺傳給餘事件，所以 \(P(A'\cap B')=P(A')P(B')\) 同樣成立。</p><p>不要把兩條法則混淆。「或」用加法法則；「且」用乘法法則；「至少一個」幾乎總是用餘事件最快：\(1-P(\text{全部皆無})\)。</p><div class="formula"><span>\(P(A\cap B)=P(A)P(B)\)</span><span>\(P(\text{至少一個})=1-P(\text{全部皆無})\)</span><span>\(P(A'\cap B')=P(A')P(B')\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>兩盞燈獨立運作。第一盞燈能運作的概率是 0.9，第二盞燈能運作的概率是 0.8。求兩盞燈都能運作的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.72\)</div>
+<ol class="steps">
+<li>設 \(W_{1}\)、\(W_{2}\) 為兩盞燈能運作的事件；它們互相獨立。</li><li>\(P(W_{1}\cap W_{2})=P(W_{1})P(W_{2})=0.9\times0.8\)。</li><li>\(=0.72\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用相加而不用相乘會得 \(1.7\)，這根本不是概率 —— 這正提醒我們「兩者皆是」要用乘法。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>擲一枚均勻硬幣並擲一枚均勻骰子。求得正面且得 6 點的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{1}{12}\)</div>
+<ol class="steps">
+<li>兩個結果互相獨立，且共有 \(2\times6=12\) 個機會均等的組合結果。</li><li>\(P(\text{正面且 }6)=P(\text{正面})\times P(6)=\frac{1}{2}\times\frac{1}{6}\)。</li><li>\(=\frac{1}{12}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把數目相加而報 \(\frac{2}{8}=\frac{1}{4}\)；樣本空間有 12 個結果，不是 8 個。</p></div>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>\(A\) 與 \(B\) 是獨立事件，且 \(P(A)=0.6\)、\(P(B)=0.3\)。求 \(P(A\cup B)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.72\)</div>
+<ol class="steps">
+<li>由獨立性，\(P(A\cap B)=P(A)P(B)=0.6\times0.3=0.18\)。</li><li>\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)。</li><li>\(=0.6+0.3-0.18=0.72\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(P(A\cup B)=0.6+0.3=0.9\)，就是把兩事件當作互斥；但概率不為零的獨立事件是可以同時發生的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某工廠中，機器 \(X\) 在某天故障的概率是 0.05，機器 \(Y\) 是 0.08，兩者互相獨立。(a) 求兩部機器都沒有故障的概率。(b) 求至少有一部機器故障的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.874\)　(b) \(0.126\)</div>
+<ol class="steps">
+<li>餘事件同樣獨立：\(P(X'\cap Y')=P(X')P(Y')\)。</li><li>(a) \(P(X')=1-0.05=0.95\)，\(P(Y')=1-0.08=0.92\)，所以 \(P(\text{兩者皆無})=0.95\times0.92=0.874\)。</li><li>(b) \(P(\text{至少一個})=1-P(\text{兩者皆無})=1-0.874=0.126\)。</li><li>用長方法核對：\(0.05(0.92)+0.95(0.08)+0.05(0.08)=0.046+0.076+0.004=0.126\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(1-0.05\times0.08\) 計算「至少一個」：那是減去「兩部都故障」的情況，並不是「至少一個」的餘事件。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q43.html" target="_blank" rel="noopener">歷年試題 · 2019 卷二 Q43 ↗</a></div>
+<div class="q__body"><p>一個測驗有三道題目。Amy 答對第一、二、三題的概率分別是 \(\frac{1}{4}\)、\(\frac{1}{5}\)、\(\frac{1}{6}\)，彼此獨立。求 Amy 最多答對兩題的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{119}{120}\)</div>
+<ol class="steps">
+<li>設 \(C_{1},C_{2},C_{3}\) 為答對第 1、2、3 題的事件；它們互相獨立。</li><li>「最多答對兩題」是「三題全部答對」的餘事件，所以只需樹形圖上的一條分枝。</li><li>\(P(\text{三題全對})=\frac{1}{4}\times\frac{1}{5}\times\frac{1}{6}=\frac{1}{120}\)。</li><li>\(P(\text{最多兩題})=1-\frac{1}{120}=\frac{119}{120}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把「答對兩題」、「答對一題」、「全錯」逐項相加既冗長，又常漏一項；用餘事件只需一個乘積。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(A\) 與 \(B\) 是獨立事件，且 \(P(A)=0.4\)、\(P(A\cap B)=0.12\)。(a) 求 \(P(B)\)。(b) 求 \(P(A'\cap B')\)。(c) 求 \(P(A'\cup B')\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.3\)　(b) \(0.42\)　(c) \(0.88\)</div>
+<ol class="steps">
+<li>(a) 由獨立性：\(0.12=0.4\times P(B)\)，所以 \(P(B)=\frac{0.12}{0.4}=0.3\)。</li><li>於是 \(P(A')=0.6\)，\(P(B')=0.7\)。</li><li>(b) 獨立事件的餘事件仍然獨立，所以 \(P(A'\cap B')=0.6\times0.7=0.42\)。</li><li>(c) \(A'\cup B'\) 是 \(A\cap B\) 的餘事件，所以 \(P(A'\cup B')=1-0.12=0.88\)。</li><li>核對：\(P(A'\cap B')=1-P(A\cup B)\) 同樣成立，而 \(P(A\cup B)=0.4+0.3-0.12=0.58\)，故 \(1-0.58=0.42\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>笛摩根定律很容易弄反：\(A'\cup B'\) 對應「不是兩者同時發生」，而 \(A'\cap B'\) 對應「兩者皆不發生」。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一大批燈泡中有 2% 是次品。獨立地抽出三個燈泡。(a) 求三個都是次品的概率。(b) 求沒有次品的概率。(c) 求至少有一個次品的概率，答案準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.000008\)　(b) \(0.941\)　(c) \(0.0588\)</div>
+<ol class="steps">
+<li>對一個燈泡而言，\(P(\text{次品})=0.02\)，\(P(\text{良品})=0.98\)。</li><li>(a) \(P(\text{三個皆次品})=0.02^{3}=0.000008=8\times10^{-6}\)。</li><li>(b) \(P(\text{沒有次品})=0.98^{3}=0.941192\approx0.941\)（3 位有效數字）。</li><li>(c) \(P(\text{至少一個次品})=1-0.98^{3}=1-0.941192=0.058808\approx0.0588\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 (c) 答成 \(3\times0.02=0.06\)：這只是近似值，而且會把有兩個或三個次品的情況重複計算。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>樹形圖、兩階段試驗與條件概率 <span class="count">· 7 題</span></h2>
+    <p>沿分枝相乘、跨分枝相加、P(B|A)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>在兩階段試驗中，沿着一條分枝相乘，再把符合所求事件的分枝相加。放回時，第二階段的概率保持不變；不放回時，分母減一，而該顏色已取走的球，其分子也減一。</p><p>條件概率把樣本空間縮小到已知事件：\(P(B\mid A)=\frac{P(A\cap B)}{P(A)}\)；在樹形圖上就是「該分枝的值除以所有符合條件的分枝之和」。</p><div class="formula"><span>\(P(A\cap B)=P(A)\,P(B\mid A)\)</span><span>\(P(B\mid A)=\frac{P(A\cap B)}{P(A)}\)</span><span>\(P(\text{同色})=\sum P(\text{兩球同色})\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>袋中有 4 個紅球和 6 個藍球。抽出一個球，記錄顏色後放回袋中。然後再抽出第二個球。求兩個球都是藍色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{9}{25}\)</div>
+<ol class="steps">
+<li>由於球已放回，第二次抽球時袋中內容不變，所以兩次抽球互相獨立。</li><li>每次抽球 \(P(\text{藍})=\frac{6}{10}=\frac{3}{5}\)。</li><li>\(P(\text{兩個皆藍})=\frac{3}{5}\times\frac{3}{5}=\frac{9}{25}=0.36\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第二次抽球把分母改成 9：那是不放回的情況，屬於另一個試驗。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>設 \(A\)、\(B\) 為兩事件，且 \(P(A)=0.5\)、\(P(A\cap B)=0.2\)。求 \(P(B\mid A)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.4\)</div>
+<ol class="steps">
+<li>由定義，\(P(B\mid A)=\frac{P(A\cap B)}{P(A)}\)。</li><li>代入：\(P(B\mid A)=\frac{0.2}{0.5}\)。</li><li>\(=0.4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(P(B\mid A)\) 不等於 \(P(B)\)，也不等於 \(\frac{P(A\cap B)}{P(B)}\) —— 條件事件放在分母。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>袋中有 3 個紅球和 2 個藍球。先後抽出兩個球，抽出後不放回。求第二個抽出的球是紅色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{3}{5}\)</div>
+<ol class="steps">
+<li>第一次抽到紅球：概率 \(\frac{3}{5}\)，此時袋中有 2 紅 2 藍，所以第二次抽到紅球的概率是 \(\frac{2}{4}\)。此分枝的值為 \(\frac{3}{5}\times\frac{2}{4}=\frac{6}{20}\)。</li><li>第一次抽到藍球：概率 \(\frac{2}{5}\)，此時餘下 3 紅 1 藍，所以第二次抽到紅球的概率是 \(\frac{3}{4}\)。此分枝的值為 \(\frac{2}{5}\times\frac{3}{4}=\frac{6}{20}\)。</li><li>把兩條分枝相加：\(\frac{6}{20}+\frac{6}{20}=\frac{12}{20}=\frac{3}{5}\)。</li><li>由對稱性核對：第二個球可以是原本 5 個球中的任何一個，其中 3 個是紅色。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩條分枝都用 \(\frac{3}{4}\)，那是放回情況的答案，忽略了第一個球沒有放回。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>箱 \(A\) 有 4 個白球和 1 個黑球；箱 \(B\) 有 2 個白球和 3 個黑球。擲一枚均勻硬幣以選出一個箱，然後從該箱抽出一個球。(a) 畫一個樹形圖。(b) 求抽出的球是白色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(b) \(\frac{3}{5}\)</div>
+<ol class="steps">
+<li>第一階段：\(P(A)=P(B)=\frac{1}{2}\)。</li><li>第二階段：\(P(W\mid A)=\frac{4}{5}\)，\(P(W\mid B)=\frac{2}{5}\)。</li><li>\(P(W)=P(A)P(W\mid A)+P(B)P(W\mid B)=\frac{1}{2}\cdot\frac{4}{5}+\frac{1}{2}\cdot\frac{2}{5}\)。</li><li>\(=\frac{4}{10}+\frac{2}{10}=\frac{6}{10}=\frac{3}{5}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不乘 \(\frac{1}{2}\) 的權重而直接取 \(\frac{4}{5}\) 與 \(\frac{2}{5}\) 的平均，在這裏只是碰巧相同；若硬幣不勻，未加權的平均便會出錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>箱 \(A\) 有 4 個白球和 1 個黑球；箱 \(B\) 有 2 個白球和 3 個黑球。擲一枚均勻硬幣選出一個箱，並從中抽出一個球。已知抽出的球是白色，求它來自箱 \(A\) 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{2}{3}\)</div>
+<ol class="steps">
+<li>由樹形圖，\(P(A\cap W)=\frac{1}{2}\cdot\frac{4}{5}=\frac{2}{5}\)，\(P(B\cap W)=\frac{1}{2}\cdot\frac{2}{5}=\frac{1}{5}\)。</li><li>所以 \(P(W)=\frac{2}{5}+\frac{1}{5}=\frac{3}{5}\)。</li><li>\(P(A\mid W)=\frac{P(A\cap W)}{P(W)}=\frac{2/5}{3/5}\)。</li><li>\(=\frac{2}{3}\)。</li><li>核對兩個條件概率之和為 1：\(P(B\mid W)=\frac{1/5}{3/5}=\frac{1}{3}\)，而 \(\frac{2}{3}+\frac{1}{3}=1\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為箱 \(A\) 的白球比例較高，很容易答成 \(\frac{4}{5}\)；題目問的是關於「箱」的概率，所以必須計入 \(\frac{1}{2}\) 的先驗概率。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>袋中有 5 個紅球和 3 個白球。隨機抽出兩個球，抽出後不放回。(a) 完成兩次抽球的樹形圖。(b) 求兩個球同色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(b) \(\frac{13}{28}\)</div>
+<ol class="steps">
+<li>第一次抽球：\(P(R)=\frac{5}{8}\)，\(P(W)=\frac{3}{8}\)。</li><li>抽到紅球後第二次抽球：\(P(R\mid R)=\frac{4}{7}\)，\(P(W\mid R)=\frac{3}{7}\)。抽到白球後：\(P(R\mid W)=\frac{5}{7}\)，\(P(W\mid W)=\frac{2}{7}\)。</li><li>同色即 RR 或 WW：\(P(RR)=\frac{5}{8}\cdot\frac{4}{7}=\frac{20}{56}\)，\(P(WW)=\frac{3}{8}\cdot\frac{2}{7}=\frac{6}{56}\)。</li><li>\(P(\text{同色})=\frac{20}{56}+\frac{6}{56}=\frac{26}{56}=\frac{13}{28}\)。</li><li>核對：四條分枝的值 \(\frac{20}{56},\frac{15}{56},\frac{15}{56},\frac{6}{56}\) 之和為 \(\frac{56}{56}=1\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\frac{5}{8}\cdot\frac{5}{8}\) 計算 RR，等於假設放回；不放回時第二個因子必須是 \(\frac{4}{7}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>袋中有 5 個紅球和 3 個白球。隨機抽出兩個球，抽出後不放回。(a) 求兩個球都是紅色的概率。(b) 求兩個球同色的概率。(c) 已知兩個球同色，求兩球都是紅色的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{5}{14}\)　(b) \(\frac{13}{28}\)　(c) \(\frac{10}{13}\)</div>
+<ol class="steps">
+<li>(a) \(P(RR)=\frac{5}{8}\times\frac{4}{7}=\frac{20}{56}=\frac{5}{14}\)。</li><li>(b) \(P(WW)=\frac{3}{8}\times\frac{2}{7}=\frac{6}{56}=\frac{3}{28}\)，所以 \(P(\text{同色})=\frac{20}{56}+\frac{6}{56}=\frac{26}{56}=\frac{13}{28}\)。</li><li>(c) 條件把範圍限制在 56 個之中 26 個有利分枝，而其中 20 個是 RR。</li><li>\(P(RR\mid\text{同色})=\frac{20/56}{26/56}=\frac{20}{26}=\frac{10}{13}\)。</li><li>核對：\(P(WW\mid\text{同色})=\frac{3}{13}\)，而 \(\frac{10}{13}+\frac{3}{13}=1\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(c) 部答成 \(\frac{5}{14}\)：那是 RR 的無條件概率，未用上「同色」這項資料。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>排列與組合在數算中的應用 <span class="count">· 7 題</span></h2>
+    <p>次序是否重要；限制條件與插空法</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>若次序重要（排隊、密碼、電話號碼），就用排列 \(P^{n}_{r}=\frac{n!}{(n-r)!}\)；若次序不重要（委員會、選取），就用組合 \(C^{n}_{r}=\frac{n!}{r!\,(n-r)!}\)。</p><p>遇到限制條件，先處理特別的位置，再填其餘位置。對於「不能相鄰」，先排列其他物件，再把受限制的物件放入它們所造成的空隙。當概率由數算得出時，分子與分母必須用同一種方式數算。</p><div class="formula"><span>\(P^{n}_{r}=\frac{n!}{(n-r)!}\)</span><span>\(C^{n}_{r}=\frac{n!}{r!(n-r)!}\)</span><span>\(\text{空隙}=n+1\) 當 \(n\) 個物件排成一行</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>五本不同的書排成一行放在書架上。共有多少種不同的排列方法？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(120\)</div>
+<ol class="steps">
+<li>五本書各不相同，而五個位置全部用上，所以排列數目是 \(5!\)。</li><li>\(5!=5\times4\times3\times2\times1=120\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(C^{5}_{5}=1\) 等於把書當作無序的集合；一行排列有左右次序，所以要用排列。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>從 8 名學生中選出 3 人組成委員會。共有多少個不同的委員會？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(56\)</div>
+<ol class="steps">
+<li>三名成員沒有不同的職位，所以次序不重要：用組合。</li><li>\(C^{8}_{3}=\frac{8\times7\times6}{3\times2\times1}\)。</li><li>\(=\frac{336}{6}=56\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(P^{8}_{3}=336\) 會把每個委員會數了 \(3!=6\) 次，即三名成員的每一種排列次序都各算一次。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>用 \(A,B,C,D,E,F,G,H\) 八個不同字母組成一個四位字母碼，每個字母最多用一次。共有多少個不同的字母碼？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(1680\)</div>
+<ol class="steps">
+<li>字母碼按次序讀出，所以次序重要：\(P^{8}_{4}\)。</li><li>\(P^{8}_{4}=8\times7\times6\times5\)。</li><li>\(=1680\)。</li><li>等價地 \(=\frac{8!}{4!}=\frac{40320}{24}=1680\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(C^{8}_{4}=70\) 會丟失字母碼內字母的次序，少算了 \(4!=24\) 倍。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>從 6 名男生和 5 名女生中選出 4 人組成委員會。(a) 共有多少個可能的委員會？(b) 其中恰有 2 名女生的有多少個？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 330　(b) 150</div>
+<ol class="steps">
+<li>(a) 從 11 名學生中任選 4 人：\(C^{11}_{4}=\frac{11\times10\times9\times8}{4\times3\times2\times1}=330\)。</li><li>(b) 從 5 名女生中選 2 人，從 6 名男生中選 2 人：\(C^{5}_{2}\times C^{6}_{2}\)。</li><li>\(C^{5}_{2}=10\)，\(C^{6}_{2}=15\)，所以數目是 \(10\times15\)。</li><li>\(=150\)。核對：\(150\lt 330\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>再乘以 \(4!\)，或用 \(P\) 去數兩組：在女生組內和男生組內，選取的次序無關重要。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q43.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q43 ↗</a></div>
+<div class="q__body"><p>5 名男生和 2 名女生排成一隊，七人各不相同。(a) 有多少種排法是沒有兩個女生相鄰？(b) 由此求：在這 7 人的隨機排列中，沒有兩個女生相鄰的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 3600　(b) \(\frac{5}{7}\)</div>
+<ol class="steps">
+<li>先排列 5 名男生：\(5!=120\) 種方法。男生造成 6 個空隙（在他們之前、之間及之後）。</li><li>2 名女生必須佔兩個不同的空隙：選空隙有 \(C^{6}_{2}=15\) 種方法，再排列兩名女生有 \(2!=2\) 種方法。</li><li>(a) 排法數目 \(=120\times15\times2=3600\)。</li><li>(b) 排法的總數是 \(7!=5040\)，全部機會均等。</li><li>\(P=\frac{3600}{5040}=\frac{5}{7}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 5 個空隙而不是 6 個：物件排成一行時有 \(n+1\) 個空隙，兩端也要計算。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P2_Q42.html" target="_blank" rel="noopener">歷年試題 · 2023 卷二 Q42 ↗</a></div>
+<div class="q__body"><p>某組有 15 位教師。選出其中 5 人組成委員會，包括 1 位主席及 4 位普通委員。可組成多少個不同的委員會？試用兩種不同的方法。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(15015\)</div>
+<ol class="steps">
+<li>方法一 —— 先選主席。主席有 15 個選擇，然後從餘下 14 人中選 4 位委員，有 \(C^{14}_{4}\) 種方法。</li><li>\(C^{14}_{4}=\frac{14\times13\times12\times11}{4\times3\times2\times1}=1001\)，所以數目是 \(15\times1001=15015\)。</li><li>方法二 —— 先選出整組 5 人，然後選主席：\(C^{15}_{5}\times5\)。</li><li>\(C^{15}_{5}=3003\)，所以數目是 \(3003\times5=15015\)。</li><li>兩種方法結果相同：共 \(15015\) 個委員會。</li><li>為何 \(P^{15}_{5}=\frac{15!}{10!}=360360\) 是錯的：把可互換的委員席位除以 \(4!=24\)，便得 \(\frac{360360}{24}=15015\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>四位普通委員並非可分辨的職位。按次序數算會多算 \(4!=24\) 倍。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P1_Q15.html" target="_blank" rel="noopener">歷年試題 · 2018 卷一 Q15 ↗</a></div>
+<div class="q__body"><p>把 \(2,3,4,5,6,7,8,9\) 八個數字各用一次，排列成一個八位數。(a) 共有多少個這樣的數？(b) 其中首位和末位都是奇數的有多少個？(c) 從 (a) 部所有數中隨機選出一個。求其首位和末位數字都是奇數的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 40320　(b) 8640　(c) \(\frac{3}{14}\)</div>
+<ol class="steps">
+<li>(a) 八個數字各用一次，所以數目是 \(8!=40320\)。</li><li>可用的奇數是 \(3,5,7,9\) —— 共四個。</li><li>(b) 先填兩端位置：\(4\times3=12\) 種方法（兩個數字必須不同）。其餘 6 個數字填入 6 個中間位置，有 \(6!=720\) 種方法。</li><li>所以數目是 \(12\times720=8640\)。</li><li>(c) \(P=\frac{8640}{40320}=\frac{3}{14}\approx0.214\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(4\times4=16\) 計算兩端，會重複使用同一個數字，但每個數字只可用一次，所以不可能。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度的多階段問題 <span class="count">· 8 題</span></h2>
+    <p>放回與不放回、「至少一個」、期望頻數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>DSE 的長題概率都是由同樣三個動作組成：沿階段相乘、把符合事件的情況相加，以及在題目出現「至少一個」時改用餘事件。開始時先判斷試驗是放回還是不放回，因為這決定了每一個分母。</p><p>期望頻數把概率連繫到數據：在 \(N\) 次獨立試驗中，成功的期望次數是 \(N\times P(\text{成功})\)。分數通常同時給方法（\(C^{n}_{r}\) 的式子、餘事件、分枝的乘積）與最終數值，所以先寫出未化簡的一行。</p><div class="formula"><span>\(P(\text{至少一個})=1-P(\text{全部皆無})\)</span><span>\(\text{期望頻數}=N\,P(E)\)</span><span>\(P=\frac{C^{a}_{r}C^{b}_{s}}{C^{n}_{r+s}}\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>擲一枚均勻骰子 300 次。求出現 6 點的期望次數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(50\)</div>
+<ol class="steps">
+<li>擲一次時，\(P(6)=\frac{1}{6}\)。</li><li>期望頻數 \(=N\times P(6)=300\times\frac{1}{6}\)。</li><li>\(=50\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>答成 300 或 6：期望頻數是 300 次之中的次數，所以必須計 \(300\times\frac{1}{6}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>某遊戲中，勝出一局的概率是 0.2。獨立地玩兩局。求至少勝出一局的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(0.36\)</div>
+<ol class="steps">
+<li>「至少勝出一局」是「兩局皆敗」的餘事件。</li><li>\(P(\text{兩局皆敗})=0.8\times0.8=0.64\)。</li><li>\(P(\text{至少勝出一局})=1-0.64=0.36\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 0.2 加倍得 0.4，會把「兩局皆勝」的情況算兩次；用餘事件便完全避開這個重疊。</p></div>
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P1_Q15.html" target="_blank" rel="noopener">歷年試題 · 2020 卷一 Q15 ↗</a></div>
+<div class="q__body"><p>一個盒內有 3 隻藍碟、7 隻綠碟和 9 隻紫碟。隨機同時抽出 4 隻碟。(a) 求四隻碟同色的概率。(b) 求至少抽出兩隻不同顏色碟的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{161}{3876}\)　(b) \(\frac{3715}{3876}\)</div>
+<ol class="steps">
+<li>共有 \(3+7+9=19\) 隻碟，同時抽出 4 隻，共有 \(C^{19}_{4}=\frac{19\times18\times17\times16}{4\times3\times2\times1}=3876\) 個機會均等的選法。</li><li>(a) 四隻同色即 4 藍、4 綠或 4 紫。藍碟只有 3 隻，所以 \(C^{3}_{4}=0\)。</li><li>\(C^{7}_{4}=35\)，\(C^{9}_{4}=126\)，所以有利的選法數目是 \(0+35+126=161\)。</li><li>\(P(\text{同色})=\frac{161}{3876}\)。</li><li>(b) 「至少兩種顏色」是「四隻全部同色」的餘事件，所以 \(P=1-\frac{161}{3876}=\frac{3876-161}{3876}=\frac{3715}{3876}\approx0.959\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(C^{3}_{4}\) 寫成 1 或索性漏掉：不可能從 3 隻藍碟中抽 4 隻，所以該項是 0，不是 1。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某抽獎售出 20 張獎券，其中 2 張中獎。May 買了 3 張獎券。獎券抽出後不放回。(a) 求 May 沒有中獎的概率。(b) 求她至少中獎一次的概率，答案準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{68}{95}\)　(b) \(0.284\)</div>
+<ol class="steps">
+<li>共有 \(C^{20}_{3}=1140\) 組機會均等的 3 張獎券。</li><li>(a) 有 18 張不會中獎，所以不中獎的三張組合數目是 \(C^{18}_{3}=\frac{18\times17\times16}{3\times2\times1}=816\)。</li><li>\(P(\text{沒有中獎})=\frac{816}{1140}=\frac{68}{95}\)。</li><li>(b) \(P(\text{至少中獎一次})=1-\frac{816}{1140}=\frac{324}{1140}=\frac{27}{95}\approx0.284\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(\frac{2}{20}\times3=\frac{3}{10}\) 當作準確答案：這個近似值忽略了 3 張獎券之間的相依關係。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某工廠有兩部機器。機器 \(A\) 生產 60% 的產品，其中 2% 是次品；機器 \(B\) 生產其餘產品，其中 5% 是次品。從總產品中隨機抽出一件。(a) 求它是次品的概率。(b) 已知它是次品，求它由機器 \(A\) 生產的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.032\)　(b) \(0.375\)</div>
+<ol class="steps">
+<li>由樹形圖：\(P(A)=0.6\)，\(P(B)=0.4\)，\(P(D\mid A)=0.02\)，\(P(D\mid B)=0.05\)。</li><li>(a) \(P(D)=0.6\times0.02+0.4\times0.05=0.012+0.020=0.032\)。</li><li>(b) \(P(A\mid D)=\frac{P(A\cap D)}{P(D)}=\frac{0.012}{0.032}\)。</li><li>\(=\frac{12}{32}=0.375\)。</li><li>核對：\(P(B\mid D)=\frac{0.020}{0.032}=0.625\)，而 \(0.375+0.625=1\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為機器 \(A\) 產量較多，就斷定它是最可能的來源：它的大量產品中只有 2% 是次品，所以大部分次品其實來自 \(B\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>某籃球員每次罰球投中的概率是 0.8，每次投球互相獨立。她投 3 次罰球。(a) 求三球全中的概率。(b) 求恰中兩球的概率。(c) 求至少中兩球的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.512\)　(b) \(0.384\)　(c) \(0.896\)</div>
+<ol class="steps">
+<li>(a) \(P(\text{三球全中})=0.8^{3}=0.512\)。</li><li>(b)「恰中兩球」可按 3 種次序發生：中–中–不中、中–不中–中、不中–中–中。每種的概率是 \(0.8\times0.8\times0.2=0.128\)。</li><li>\(P(\text{恰中兩球})=3\times0.128=0.384\)。</li><li>(c) \(P(\text{至少中兩球})=P(\text{恰中兩球})+P(\text{三球全中})=0.384+0.512=0.896\)。</li><li>用餘事件核對：\(P(\text{中 0 或 1 球})=0.2^{3}+3(0.8)(0.2)^{2}=0.008+0.096=0.104\)，而 \(1-0.104=0.896\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(b) 部漏掉因子 3，就只數了「中–中–不中」這個次序，得 0.128。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>袋中有 7 個紅球和 3 個綠球。隨機抽出三個球，抽出後不放回。(a) 求三個都是紅球的概率。(b) 求恰有一個綠球的概率。(c) 求至少有一個綠球的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{7}{24}\)　(b) \(\frac{21}{40}\)　(c) \(\frac{17}{24}\)</div>
+<ol class="steps">
+<li>選法總數是 \(C^{10}_{3}=120\)。</li><li>(a) 全紅：\(C^{7}_{3}=35\)，所以 \(P=\frac{35}{120}=\frac{7}{24}\)。</li><li>(b) 恰有一個綠球，即從 3 個綠球中取 1 個、從 7 個紅球中取 2 個：\(C^{3}_{1}\times C^{7}_{2}=3\times21=63\)。</li><li>\(P(\text{恰有一個綠球})=\frac{63}{120}=\frac{21}{40}\)。</li><li>(c) \(P(\text{至少一個綠球})=1-P(\text{沒有綠球})=1-\frac{35}{120}=\frac{85}{120}=\frac{17}{24}\)。</li><li>用樹形圖核對：\(\frac{7}{10}\cdot\frac{6}{9}\cdot\frac{5}{8}=\frac{210}{720}=\frac{7}{24}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 部手動相加 \(P(\text{恰一個})+P(\text{恰兩個})+P(\text{恰三個})\)，很容易出現算術錯誤；「沒有綠球」的餘事件只需一次減法。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>某遊戲擲兩枚均勻骰子。若兩數之和為 7 或 11，玩家勝出一局。(a) 求和為 7 的概率。（2 分）(b) 求勝出一局的概率。（2 分）(c) 玩家獨立地玩 3 局。求至少勝出一局的概率，答案準確至 3 位有效數字。（2 分）(d) 玩家玩 180 局。求她勝出的期望局數。（2 分）</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\frac{1}{6}\)　(b) \(\frac{2}{9}\)　(c) \(\frac{386}{729}\approx0.529\)　(d) 40</div>
+<ol class="steps">
+<li>兩枚骰子共有 \(6\times6=36\) 個機會均等的結果。</li><li>(a) 和為 7 的情況是 \((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)：共 6 個結果，所以 \(P(7)=\frac{6}{36}=\frac{1}{6}\)。</li><li>(b) 和為 11 的情況是 \((5,6),(6,5)\)：共 2 個結果。所以 \(P(\text{勝出})=\frac{6+2}{36}=\frac{8}{36}=\frac{2}{9}\)。</li><li>(c) \(P(\text{一局敗})=1-\frac{2}{9}=\frac{7}{9}\)，所以 \(P(\text{三局皆敗})=\left(\frac{7}{9}\right)^{3}=\frac{343}{729}\)。</li><li>\(P(\text{至少勝出一局})=1-\frac{343}{729}=\frac{386}{729}\approx0.529\)（3 位有效數字）。</li><li>(d) 期望局數 \(=180\times\frac{2}{9}=20\times2=40\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 部只列出 \((1,6)\) 和 \((6,1)\)，便得 \(\frac{2}{36}\)；次序是有關係的，所以和為 7 共有六種方法。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 概率 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

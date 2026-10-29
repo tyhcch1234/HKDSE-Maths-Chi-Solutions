@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港中學文憑試 數學（必修）· 統計學 — 7 種題型 50 題（附詳解）</title>
+<meta name="description" content="由 93 道歷年 HKDSE 統計學試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：數據類型與頻數表、平均數中位數眾數、全距四分位數與箱形圖、標準差與方差、分組數據與累積頻數、兩組數據比較與每個值改變的影響，以及考試程度的詮釋題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' },
+  options: { ignoreHtmlClass: 'tex2jax_ignore' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/cn.css">
+</head>
+<body id="top">
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 數據與圖表</a><a href="#t2" data-t="t2">類型 2 · 平均數、中位數、眾數</a><a href="#t3" data-t="t3">類型 3 · 四分位距與箱形圖</a><a href="#t4" data-t="t4">類型 4 · 標準差</a><a href="#t5" data-t="t5">類型 5 · 分組數據</a><a href="#t6" data-t="t6">類型 6 · 改變與比較</a><a href="#t7" data-t="t7">類型 7 · 詮釋</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 統計學</p>
+    <h1 class="hero__title">統計學 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 93 道歷年 DSE 統計學試題（2012–2026）整理而成 · 由讀表到考試程度的詮釋題分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>93</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如求中位數前必須先把數據排序。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>數據類型、頻數表與閱讀圖表</td><td>數值與分類之分，以及從表格和圖表讀取頻數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>從原始數據與頻數表求平均數、中位數及眾數</td><td>以公式、以位置、以頻數加權求平均數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>全距、四分位數、四分位距與箱形圖</td><td>五數概括、以四分位距量度離散程度、辨認離群值</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>標準差與方差：兩條公式及其所量度的是甚麼</td><td>各值與平均數之差的平方的平均，以及它的平方根</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>分組數據：組中點、估算平均數、累積頻數與從曲線求中位數</td><td>以組中點求平均數；以累積頻數及插值求中位數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>比較兩組數據及每個值改變的影響</td><td>加值、刪值和乘大時，平均數、中位數與離散程度如何移動</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度詮釋：該用哪個平均數，為甚麼</td><td>選擇並說明理由；寫出能取分的結論</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>數據類型、頻數表與閱讀圖表 <span class="count">· 7 題</span></h2>
+    <p>數值與分類之分，以及從表格和圖表讀取頻數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>數據可分為<b>分類數據</b>（如血型、等級等標籤）與<b>數值數據</b>；數值數據又分<b>離散</b>（可數：入球數、寵物數目）與<b>連續</b>（量度而得：高度、時間）。只有數值數據才可以求平均數。</p><p>把數據整理成頻數表不會損失任何資料，反而使一切更容易：總頻數就是觀察值的數目；累積頻數是「直至」某個組界為止的頻數；畫直方圖時每條長方形的面積與頻數成正比，所以頻數密度就是頻數除以組寬。</p><div class="formula"><span>\(\text{頻數密度}=\frac{\text{頻數}}{\text{組寬}}\)</span><span>\(\text{總頻數}=n\)</span><span>\(\text{圓形圖圓心角}=\frac{f}{n}\times360^{\circ}\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把下列各項數據分類為分類數據、離散數值數據或連續數值數據：(a) 一個家庭飼養寵物的數目；(b) 跑手完成 100 m 所需的時間；(c) 一名學生的血型；(d) 一份專題研習所得的等級（A、B、C）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 離散數值　(b) 連續數值　(c) 分類　(d) 分類（有序）</div>
+<ol class="steps">
+<li>可以逐個數的整數屬離散數值數據：寵物數目只能是 \(0,1,2,\ldots\)，所以 (a) 是離散數值數據。</li><li>可在某區間內取任何值的量度屬連續數據：100 m 的時間可以是 12.83 s，所以 (b) 是連續數值數據。</li><li>血型是沒有次序、也不能運算的標籤，所以 (c) 是分類數據。</li><li>等級也是標籤，但有自然次序 A、B、C，所以 (d) 是分類數據（有序）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>等級因為可以排名，看起來很「數值化」，但 A + B 既不能相加也不能求平均；單靠排名並不使數據成為數值數據。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>下表顯示上週末一個聯賽中各隊的入球數目。</p><table><tr><th>入球數</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>頻數</td><td>3</td><td>5</td><td>6</td><td>4</td><td>2</td></tr></table><p>(a) 共有多少隊？(b) 有多少隊入多於 2 球？(c) 寫出眾數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 20　(b) 6　(c) 2 球</div>
+<ol class="steps">
+<li>(a) 把頻數相加：\(3+5+6+4+2=20\) 隊。</li><li>(b)「多於 2 球」即 3 球或 4 球：\(4+2=6\) 隊。</li><li>(c) 最大頻數是 6，對應 2 球，所以眾數是 2 球。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「多於 2」不包括 2 本身；若把入 2 球的 6 隊也計入，會得 12。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q8.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q8 ↗</a></div>
+<div class="q__body"><p>一項調查訪問了 40 名學生，他們上學的交通方式為：步行 12 人、巴士 15 人、港鐵 9 人、私家車 4 人。(a) 求乘巴士上學的學生所佔的百分數。(b) 以這些數據畫一個圓形圖，求代表步行學生的扇形圓心角。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 37.5%　(b) \(108^{\circ}\)</div>
+<ol class="steps">
+<li>先核對總數：\(12+15+9+4=40\)。</li><li>(a) \(\frac{15}{40}\times100\%=37.5\%\)。</li><li>(b) 全圓是 \(360^{\circ}\)，所以每名學生佔 \(\frac{360^{\circ}}{40}=9^{\circ}\)。</li><li>步行扇形：\(12\times9^{\circ}=108^{\circ}\)。</li><li>核對四個扇形：\(12,15,9,4\) 分別給出 \(108^{\circ},135^{\circ},81^{\circ},36^{\circ}\)，合共 \(360^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把學生人數當作角度，例如答 \(12^{\circ}\)；角度必須是 \(\frac{12}{40}\times360^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>下表顯示 40 名學生在一次測驗中的得分。</p><table><tr><th>得分</th><th>0 – 20</th><th>20 – 40</th><th>40 – 60</th><th>60 – 80</th><th>80 – 100</th></tr><tr><td>頻數</td><td>4</td><td>9</td><td>15</td><td>10</td><td>2</td></tr></table><p>(a) 寫出累積頻數。(b) 寫出中位數所在的組。(c) 求得分至少 60 分的學生所佔的百分數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 4, 13, 28, 38, 40　(b) 40 – 60　(c) 30%</div>
+<ol class="steps">
+<li>(a) 逐組累加頻數：\(4,\ 4+9=13,\ 13+15=28,\ 28+10=38,\ 38+2=40\)。</li><li>(b) 中位數是第 20 個與第 21 個數值的平均。累積頻數在 40 分時達 13，在 60 分時達 28，所以兩個中間數值都落在 40 – 60 之內。</li><li>(c) 得分至少 60 分的學生：\(10+2=12\) 人。</li><li>百分數 \(=\frac{12}{40}\times100\%=30\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>未核對位置就把中位數所在的組當成頻數最高的組（本例剛好相同）；正確做法是在累積頻數一欄找出第 20 及第 21 個數值的位置。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>下表顯示 40 名跑手完成一場比賽所需的時間。各組的組寬並不相同。</p><table><tr><th>時間 \(t\)（分鐘）</th><th>\(0&lt;t\le10\)</th><th>\(10&lt;t\le20\)</th><th>\(20&lt;t\le40\)</th><th>\(40&lt;t\le50\)</th></tr><tr><td>頻數</td><td>6</td><td>12</td><td>16</td><td>6</td></tr></table><p>(a) 求各組的頻數密度。(b) 在直方圖中，哪一組的長方形最高？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.6,\ 1.2,\ 0.8,\ 0.6\)　(b) \(10&lt;t\le20\)</div>
+<ol class="steps">
+<li>頻數密度是頻數除以組寬。</li><li>(a) \(\frac{6}{10}=0.6\)，\(\frac{12}{10}=1.2\)，\(\frac{16}{20}=0.8\)，\(\frac{6}{10}=0.6\)。</li><li>(b) 直方圖中長方形的高度就是頻數密度，所以最高的一條是密度最大的一組，即 \(10&lt;t\le20\) 的 \(1.2\)。</li><li>核對面積：\(0.6\times10=6\)，\(1.2\times10=12\)，\(0.8\times20=16\)，\(0.6\times10=6\)，合共 40。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>直接比較原始頻數會選中 \(20&lt;t\le40\)（頻數 16），但該組的組寬是其他組的兩倍，所以它的長方形並非最高。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>下面的雙向表顯示 120 名學生在一次測驗中的成績。</p><table><tr><th></th><th>及格</th><th>不及格</th><th>總計</th></tr><tr><td>男生</td><td>56</td><td>14</td><td>70</td></tr><tr><td>女生</td><td>45</td><td>5</td><td>50</td></tr><tr><td>總計</td><td>101</td><td>19</td><td>120</td></tr></table><p>(a) 求男生的及格率和女生的及格率。(b) 求整體及格率。(c) 一位老師說「這次測驗男生表現比女生差」。數據是否支持這說法？試簡略解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 男生 80%，女生 90%　(b) \(84.2\%\)　(c) 支持</div>
+<ol class="steps">
+<li>(a) 男生：\(\frac{56}{70}\times100\%=80\%\)。女生：\(\frac{45}{50}\times100\%=90\%\)。</li><li>(b) 整體：\(\frac{101}{120}\times100\%=84.166\ldots\%\approx84.2\%\)（3 位有效數字）。</li><li>(c) 男生的及格率（80%）低於女生的（90%），所以這說法成立。</li><li>留意整體及格率 84.2% 介乎兩組的及格率之間，這正是合併表格應有的結果。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>比較人數而不是比率：男生有 56 人及格、女生有 45 人，但男生人數本來也較多（70 對 50），單看人數不能證明任何事。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一家公司用棒形圖宣傳其每年營業額。縱軸由 400（千元）開始而不是由 0 開始，2024 年和 2025 年的棒分別達到 420 和 470。一名記者寫道「營業額一年內急升 47%」。(a) 求真正的百分數增幅。(b) 解釋為何該圖誇大了變化。(c) 建議一項改善該圖的方法。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(11.9\%\)　(b) 縱軸被截短，令可見的差距被誇大　(c) 縱軸由 0 開始</div>
+<ol class="steps">
+<li>(a) 真正增幅 \(=470-420=50\)（千元），基數是 420。</li><li>百分數增幅 \(=\frac{50}{420}\times100\%=11.9\%\)（3 位有效數字），不是 47%。</li><li>(b) 圖中可見的棒高只有 \(420-400=20\) 和 \(470-400=70\) 個單位，所以第二條棒看起來約為第一條的 3.5 倍，而營業額其實只升了 11.9%。縱軸由 400 開始，把兩者共有的 400 個單位切掉了。</li><li>(c) 把縱軸由 0 開始（或採用斷軸符號並清楚標示），使棒的高度與數量成正比。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「47%」來自 \(\frac{470-420}{420-400}\)，即除以棒的可見部分，而不是除以 2024 年的實際營業額。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>從原始數據與頻數表求平均數、中位數及眾數 <span class="count">· 7 題</span></h2>
+    <p>以公式、以位置、以頻數加權求平均數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>三種平均數回答的是不同的問題。<b>平均數</b>用到每一個數值，\(\bar{x}=\frac{\sum x}{n}\)（由頻數表則用 \(\frac{\sum fx}{\sum f}\)）；<b>中位數</b>是把數據排好序後位於中間的數值，所以只取決於位置；<b>眾數</b>是出現次數最多的數值，也是唯一可用於分類數據的平均數。</p><p>兩個習慣：求中位數前先把數據排序；小心處理 \(\frac{n+1}{2}\) 及「兩個中間值的平均」這兩種位置。兩組數據合併時要把總和相加 —— 千萬不要把兩個平均數再取平均。</p><div class="formula"><span>\(\bar{x}=\frac{\sum x}{n}\)</span><span>\(\bar{x}=\frac{\sum fx}{\sum f}\)</span><span>\(\text{合併平均數}=\frac{n_{1}\bar{x}_{1}+n_{2}\bar{x}_{2}}{n_{1}+n_{2}}\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對於數據 \(4,\ 7,\ 7,\ 9,\ 13\)，寫出平均數、中位數及眾數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>平均數 \(8\)，中位數 \(7\)，眾數 \(7\)</div>
+<ol class="steps">
+<li>平均數：\(\frac{4+7+7+9+13}{5}=\frac{40}{5}=8\)。</li><li>數據已排好序，且 \(n=5\)，所以中位數是第 3 個數值：\(7\)。</li><li>7 出現兩次，其餘各值只出現一次，所以眾數是 \(7\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把首尾兩值的平均 \(\frac{4+13}{2}\) 當作中位數：中位數是由位置決定的數據值，不是極值的平均。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>五個數的平均數是 14。加入第六個數 26，求新的平均數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(16\)</div>
+<ol class="steps">
+<li>這五個數之和是 \(5\times14=70\)。</li><li>加入 26 後，六個數的總和為 \(70+26=96\)。</li><li>新的平均數 \(=\frac{96}{6}=16\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 14 和 26 取平均得 20，忘記原本的五個數仍然各計一次。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>下表顯示 20 名學生上週做家課所用的時數。</p><table><tr><th>時數</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><td>頻數</td><td>2</td><td>5</td><td>8</td><td>3</td><td>2</td></tr></table><p>求 (a) 平均數，(b) 中位數，(c) 眾數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(2.9\)　(b) \(3\)　(c) \(3\)</div>
+<ol class="steps">
+<li>(a) \(\sum fx=1(2)+2(5)+3(8)+4(3)+5(2)=2+10+24+12+10=58\)，且 \(\sum f=20\)。</li><li>平均數 \(=\frac{58}{20}=2.9\) 小時。</li><li>(b) 累積頻數為 \(2,\ 7,\ 15,\ 18,\ 20\)。第 10 和第 11 個數值都落在 3 小時這一組，所以中位數是 3。</li><li>(c) 最大頻數是 8，對應 3 小時，所以眾數是 3。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\frac{1+2+3+4+5}{5}=3\) 作平均數：這樣忽略了頻數，而頻數正是 3 小時這麼普遍的原因。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>九名兼職補習導師的每週收入（以元計）為 \(11,14,14,16,18,20,23,25,30\)。求平均數、中位數及眾數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>平均數 \(19\)，中位數 \(18\)，眾數 \(14\)</div>
+<ol class="steps">
+<li>總和：\(11+14+14+16+18+20+23+25+30=171\)，所以平均數是 \(\frac{171}{9}=19\)。</li><li>\(n=9\)，中位數是排序後第 5 個數值：\(18\)。</li><li>14 出現兩次，比其他任何數值都多，所以眾數是 \(14\)。</li><li>留意平均數大於中位數，因為較大的數值 30 把它拉高了。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>數對了 \(n=9\)，卻取第 4 個數值作中位數；9 個數值的中間位置是第 5 個。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>甲班有 30 名學生，測驗平均分為 62。乙班有 20 名學生，測驗平均分為 71。(a) 求合共 50 名學生的平均分。(b) 解釋為何答案不是 \(\frac{62+71}{2}=66.5\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(65.6\)　(b) 兩班的學生人數不同</div>
+<ol class="steps">
+<li>甲班的總分：\(30\times62=1860\)。</li><li>乙班的總分：\(20\times71=1420\)。</li><li>(a) 合併平均數 \(=\frac{1860+1420}{50}=\frac{3280}{50}=65.6\)。</li><li>(b) 簡單平均 66.5 會給兩班相同的權重，但甲班多 10 名學生，其較低的平均分理應佔較大比重。事實上 65.6 較接近 62 而不是 71。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把兩個平均數再取平均得 66.5；只有當兩班人數相同時，這樣做才正確。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>八個數的平均數是 15。(a) 求它們的總和。(b) 刪去其中一個數後，餘下七個數的平均數是 14。求被刪去的數。(c) 然後在這七個數中加入一個新數，使這八個數的平均數變成 16。求這個新數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 120　(b) 22　(c) 30</div>
+<ol class="steps">
+<li>(a) 八個數的總和 \(=8\times15=120\)。</li><li>(b) 餘下七個數的總和 \(=7\times14=98\)，所以被刪去的數是 \(120-98=22\)。</li><li>(c) 這七個數的總和仍是 98。若八個數的平均數為 16，總和必須是 \(8\times16=128\)。</li><li>新數 \(=128-98=30\)。</li><li>核對：\(98+30=128\)，且 \(\frac{128}{8}=16\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 用 \(8\times16-120=8\)，這個累計總和仍然包含已被刪去的 22。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>下表顯示 30 件包裹的質量，數據已分組。</p><table><tr><th>質量（kg）</th><th>0 – 10</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th><th>40 – 50</th></tr><tr><td>頻數</td><td>3</td><td>6</td><td>12</td><td>6</td><td>3</td></tr></table><p>(a) 寫出各組的組中點。(b) 估算平均質量。(c) 寫出眾數組及中位數所在的組。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 5, 15, 25, 35, 45　(b) 25 kg　(c) 兩者都是 20 – 30</div>
+<ol class="steps">
+<li>(a) 組中點是中位位置：\(5,\ 15,\ 25,\ 35,\ 45\)。</li><li>(b) \(\sum fx=3(5)+6(15)+12(25)+6(35)+3(45)=15+90+300+210+135=750\)。</li><li>估算平均質量 \(=\frac{750}{30}=25\) kg。</li><li>(c) 最大頻數 12 在 20 – 30 這一組，所以它是眾數組。累積頻數為 \(3,\ 9,\ 21,\ 27,\ 30\)，第 15 和第 16 個數值都落在 20 – 30，所以中位數所在的組也是 20 – 30。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把組限 0、10 等當作數值：分組後個別數值已經失去，組中點是最佳的替代值，所以答案只是一個估算。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>全距、四分位數、四分位距與箱形圖 <span class="count">· 7 題</span></h2>
+    <p>五數概括、以四分位距量度離散程度、辨認離群值</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>全距 \(=\) 最大 \(－\) 最小，計算容易，但只由兩個極值決定。四分位距 \(\text{四分位距}=Q_{3}-Q_{1}\) 用數據中間的一半，所以單一個極端值不能扭曲它 —— 這正是箱形圖要用五數概括（最小、\(Q_{1}\)、中位數、\(Q_{3}\)、最大）來畫的原因。</p><p>四分位數的位置：若 \(n\) 個數值已排序，\(Q_{1}\) 與 \(Q_{3}\) 分別是下半部與上半部的中位數（\(n\) 為奇數時，中位數本身不計入任何一半）。若一個數值大於 \(Q_{3}+1.5\,\text{四分位距}\) 或小於 \(Q_{1}-1.5\,\text{四分位距}\)，便可懷疑它是離群值。</p><div class="formula"><span>\(\text{四分位距}=Q_{3}-Q_{1}\)</span><span>\(\text{全距}=x_{\max}-x_{\min}\)</span><span>\(\text{界線}=Q_{3}+1.5\,\text{四分位距}\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對於數據 \(3,\ 5,\ 8,\ 9,\ 12,\ 15,\ 18\)，寫出全距及中位數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>全距 \(15\)，中位數 \(9\)</div>
+<ol class="steps">
+<li>最大是 18，最小是 3，所以全距是 \(18-3=15\)。</li><li>共有 7 個數值，所以中位數是第 4 個：\(9\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把全距當作區間的數目（6），或當作中間兩個數值之差；全距是最大減最小。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對於數據 \(2,\ 4,\ 5,\ 7,\ 9,\ 10,\ 12,\ 15\)，求中位數、下四分位數及上四分位數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>中位數 \(8\)，\(Q_{1}=4.5\)，\(Q_{3}=11\)</div>
+<ol class="steps">
+<li>共有 \(n=8\) 個數值，所以中位數是第 4 與第 5 個的平均：\(\frac{7+9}{2}=8\)。</li><li>下半部是 \(2,4,5,7\)，其中位數為 \(\frac{4+5}{2}=4.5\)，所以 \(Q_{1}=4.5\)。</li><li>上半部是 \(9,10,12,15\)，其中位數為 \(\frac{10+12}{2}=11\)，所以 \(Q_{3}=11\)。</li><li>因此 \(\text{四分位距}=11-4.5=6.5\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>取 \(Q_{1}=4\)（第 2 個數值）或 \(Q_{3}=12\)：當 \(n\) 為偶數，每個四分位數都是該半部兩個中間值的平均。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>11 名顧客的等候時間（以分鐘計）為 \(4,\ 7,\ 9,\ 11,\ 13,\ 15,\ 16,\ 18,\ 20,\ 22,\ 25\)。求 (a) 中位數，(b) 四分位距，(c) 全距。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(15\)　(b) \(11\)　(c) \(21\)</div>
+<ol class="steps">
+<li>(a) \(n=11\)，中位數是第 6 個數值：\(15\)。</li><li>(b) 不計中位數，下半部是 \(4,7,9,11,13\)，其中位數 \(9=Q_{1}\)；上半部是 \(16,18,20,22,25\)，其中位數 \(20=Q_{3}\)。</li><li>\(\text{四分位距}=20-9=11\) 分鐘。</li><li>(c) 全距 \(=25-4=21\) 分鐘。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把中位數 15 同時計入兩半，然後把 13 和 16 取平均而錯得 \(Q_{1}\)、\(Q_{3}\)；\(n\) 為奇數時，中位數不計入任何一半。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一家商店每日營業額（以元計）的五數概括為：最小 12，\(Q_{1}=18\)，中位數 24，\(Q_{3}=31\)，最大 45。(a) 求四分位距。(b) 求全距。(c) 用 \(1.5\times\text{四分位距}\) 的法則檢驗 45 是否離群值。(d) 描述這個分佈的形狀。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 13　(b) 33　(c) 不是離群值（界線 50.5）　(d) 向右偏</div>
+<ol class="steps">
+<li>(a) \(\text{四分位距}=31-18=13\)。</li><li>(b) 全距 \(=45-12=33\)。</li><li>(c) 上界線 \(=Q_{3}+1.5\,\text{四分位距}=31+1.5(13)=31+19.5=50.5\)。因 \(45&lt;50.5\)，所以 45 <b>不是</b>離群值。</li><li>(d) 五個數值之間的距離為 \(6,\ 6,\ 7,\ 14\)，右邊的鬚明顯最長，所以分佈向右偏。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只因 45 遠高於其餘數值就判定它是離群值：\(1.5\,\text{四分位距}\) 的法則給出一條數值界線，而 45 仍在界線之內。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩部機器生產桿件。機器 \(A\) 的十支桿件長度（cm）為 \(5,\ 8,\ 10,\ 12,\ 15,\ 18,\ 25\)，機器 \(B\) 的七支為 \(9,\ 10,\ 11,\ 12,\ 13,\ 14,\ 15\)。(a) 求兩組數據的四分位距。(b) 哪一部機器較穩定？試說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(A\)：10，\(B\)：4　(b) 機器 \(B\)</div>
+<ol class="steps">
+<li>\(A\) 組 \(n=7\)，中位數 \(12\)；下半部 \(5,8,10\) 給出 \(Q_{1}=8\)，上半部 \(15,18,25\) 給出 \(Q_{3}=18\)。</li><li>\(\text{四分位距}_{A}=18-8=10\) cm。</li><li>\(B\) 組 \(n=7\)，中位數 \(12\)；\(Q_{1}=10\)、\(Q_{3}=14\)，所以 \(\text{四分位距}_{B}=14-10=4\) cm。</li><li>(b) 機器 \(B\) 的四分位距較小（4 對 10），全距也較小（6 對 20），所以它的長度較集中在中位數附近。機器 \(B\) 較穩定。</li><li>兩組的中位數同為 12，所以這個比較純粹是離散程度之別。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只比較平均數或中位數不能回答「較穩定」；穩定與否是離散程度的問題，應引用四分位距或標準差。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P2_Q29.html" target="_blank" rel="noopener">歷年試題 · 2013 卷二 Q29 ↗</a></div>
+<div class="q__body"><p>12 名工人的時薪（以元計）為 \(3,\ 5,\ 6,\ 7,\ 8,\ 9,\ 10,\ 11,\ 12,\ 14,\ 16,\ 40\)。(a) 求中位數、\(Q_{1}\) 及 \(Q_{3}\)。(b) 求四分位距及全距。(c) 用 \(1.5\times\text{四分位距}\) 的法則，判斷 40 是否離群值。(d) 用文字描述箱形圖的形狀。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(9.5,\ 6.5,\ 13\)　(b) 四分位距 \(6.5\)，全距 \(37\)　(c) 是離群值　(d) 右邊的鬚很長</div>
+<ol class="steps">
+<li>(a) \(n=12\)，中位數是第 6 與第 7 個數值的平均：\(\frac{9+10}{2}=9.5\)。</li><li>下半部 \(3,5,6,7,8,9\)：\(Q_{1}=\frac{6+7}{2}=6.5\)；上半部 \(10,11,12,14,16,40\)：\(Q_{3}=\frac{12+14}{2}=13\)。</li><li>(b) \(\text{四分位距}=13-6.5=6.5\)，全距 \(=40-3=37\)。</li><li>(c) 上界線 \(=13+1.5(6.5)=13+9.75=22.75\)。因 \(40&gt;22.75\)，所以 40 是離群值。</li><li>(d) 箱的左半部很緊密（3 至 9.5），而右邊的鬚由 13 伸延至 40，所以圖形明顯向右偏。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>全距大本身不會造成離群值；判斷靠由四分位距定出的界線，而本例的四分位距正因為數據緊密而偏小。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>200 名考生在一次測驗中的得分，其箱形圖顯示最小值 30、\(Q_{1}=52\)、中位數 61、\(Q_{3}=70\)、最大值 95。(a) 求四分位距及全距。(b) 大約有多少名考生得分高於 70？(c) 一名考生得 90 分，這個分數是否極端？用 \(1.5\times\text{四分位距}\) 的法則判斷。(d) 評論這個分佈的形狀。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="18 12 502 152" width="502" height="152" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:502px">
+<line x1="44.0" y1="76" x2="494.0" y2="76" stroke="#1e293b" stroke-width="1.4"/>
+<line x1="74.0" y1="76" x2="74.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="74.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">30</text>
+<line x1="134.0" y1="76" x2="134.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="134.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">40</text>
+<line x1="194.0" y1="76" x2="194.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="194.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">50</text>
+<line x1="254.0" y1="76" x2="254.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="254.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">60</text>
+<line x1="314.0" y1="76" x2="314.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="314.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">70</text>
+<line x1="374.0" y1="76" x2="374.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="374.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">80</text>
+<line x1="434.0" y1="76" x2="434.0" y2="82" stroke="#1e293b" stroke-width="1.2"/>
+<text x="434.0" y="112" font-family="Georgia,serif" font-size="11.5" fill="#475569" text-anchor="middle">90</text>
+<line x1="74.0" y1="76" x2="206.0" y2="76" stroke="#1e293b" stroke-width="1.7"/>
+<line x1="314.0" y1="76" x2="464.0" y2="76" stroke="#1e293b" stroke-width="1.7"/>
+<line x1="74.0" y1="62" x2="74.0" y2="90" stroke="#1e293b" stroke-width="1.7"/>
+<line x1="464.0" y1="62" x2="464.0" y2="90" stroke="#1e293b" stroke-width="1.7"/>
+<rect x="206.0" y="54" width="108.0" height="44" fill="#dbeafe" stroke="#1e293b" stroke-width="1.7"/>
+<line x1="260.0" y1="54" x2="260.0" y2="98" stroke="#1e293b" stroke-width="2.2"/>
+<text x="74.0" y="46" font-family="Georgia,serif" font-size="11.5" fill="#1e293b" text-anchor="middle">30</text>
+<text x="206.0" y="38" font-family="Georgia,serif" font-size="11.5" fill="#1e293b" text-anchor="middle">52</text>
+<text x="260.0" y="38" font-family="Georgia,serif" font-size="11.5" fill="#1e293b" text-anchor="middle">61</text>
+<text x="314.0" y="38" font-family="Georgia,serif" font-size="11.5" fill="#1e293b" text-anchor="middle">70</text>
+<text x="464.0" y="46" font-family="Georgia,serif" font-size="11.5" fill="#1e293b" text-anchor="middle">95</text>
+<text x="206.0" y="132" font-family="Georgia,serif" font-size="11.5" font-style="italic" fill="#475569" text-anchor="middle">marks</text>
+</svg>
+<figcaption>Q21 的箱形圖</figcaption>
+</figure>
+</div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 四分位距 18，全距 65　(b) 約 50 人　(c) 不是離群值，界線是 97　(d) 輕微向右偏</div>
+<ol class="steps">
+<li>(a) \(\text{四分位距}=70-52=18\)，全距 \(=95-30=65\)。</li><li>(b) 約有 25% 考生得分高於 \(Q_{3}\)，所以人數約為 \(0.25\times200=50\)。</li><li>(c) 上界線 \(=70+1.5(18)=70+27=97\)。因 \(90&lt;97\)，所以 90 分雖然偏高，仍未算離群值。</li><li>(d) 右邊的鬚由 70 伸延至 95（25 分），左邊的鬚由 30 伸延至 52（22 分），而中位數較接近 \(Q_{1}\)；分佈只是輕微向右偏。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(b) 部：\(Q_{3}\) 不是按名次排列後第 75 名考生的分數；它是這樣一個值：有 75% 的數據低於它，所以 200 名考生中有四分之一在其之上。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>標準差與方差：兩條公式及其所量度的是甚麼 <span class="count">· 7 題</span></h2>
+    <p>各值與平均數之差的平方的平均，以及它的平方根</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>方差是各值與平均數之差的平方的平均，\(\sigma^{2}=\frac{\sum (x-\bar{x})^{2}}{n}\)；標準差是它的平方根 \(\sigma\)。兩者都量度<b>離散程度</b>：典型的一個數值距離平均數多遠。\(\sigma\) 小表示數據緊貼平均數；\(\sigma=0\) 表示所有數值完全相同。</p><p>計算時，等價形式 \(\sigma^{2}=\frac{\sum fx^{2}}{\sum f}-\bar{x}^{2}\) 通常更快，而對頻數表來說更是唯一可行的途徑。標準差與數據本身的單位相同，所以可以直接與平均數比較。</p><div class="formula"><span>\(\sigma^{2}=\frac{\sum (x-\bar{x})^{2}}{n}\)</span><span>\(\sigma^{2}=\frac{\sum fx^{2}}{\sum f}-\bar{x}^{2}\)</span><span>\(\sigma=\sqrt{\sigma^{2}}\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求數據 \(2,\ 4,\ 6,\ 8,\ 10\) 的平均數及標準差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>平均數 \(6\)，\(\sigma=2.83\)（3 位有效數字）</div>
+<ol class="steps">
+<li>平均數：\(\bar{x}=\frac{2+4+6+8+10}{5}=\frac{30}{5}=6\)。</li><li>各偏差為 \(-4,-2,0,2,4\)，平方為 \(16,4,0,4,16\)，合共 \(40\)。</li><li>\(\sigma^{2}=\frac{40}{5}=8\)，所以 \(\sigma=\sqrt{8}=2.828\ldots\approx2.83\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以 4（扣除第一個之後的偏差數目）而不是除以 \(n=5\)；方差是偏差平方的<i>平均</i>。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求數據 \(3,\ 5,\ 7\) 的標準差，答案準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(1.63\)</div>
+<ol class="steps">
+<li>平均數 \(=\frac{3+5+7}{3}=5\)。</li><li>偏差 \(-2,0,2\)，平方 \(4,0,4\)，合共 \(8\)。</li><li>\(\sigma^{2}=\frac{8}{3}=2.667\)，且 \(\sigma=\sqrt{2.666\ldots}=1.632\ldots\approx1.63\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>忘記開平方根而答成方差 2.67；題目問的是標準差，它的單位與數據相同。</p></div>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>六件包裹的質量（以 kg 計）為 \(4,\ 6,\ 8,\ 10,\ 12,\ 14\)。求方差及標準差，標準差準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\sigma^{2}=11.7\)，\(\sigma=3.42\)</div>
+<ol class="steps">
+<li>平均數 \(=\frac{54}{6}=9\)。</li><li>偏差 \(-5,-3,-1,1,3,5\)；平方 \(25,9,1,1,9,25\)，合共 \(70\)。</li><li>\(\sigma^{2}=\frac{70}{6}=\frac{35}{3}=11.67\approx11.7\)。</li><li>\(\sigma=\sqrt{11.666\ldots}=3.415\ldots\approx3.42\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把方差捨入成 11.7 再開平方根，在此碰巧仍得 3.42；若太早捨入，例如 \(\sigma^{2}\approx12\)，便會得 3.46 而損失準確度。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>數據為 \(2,\ 3,\ 5,\ 6,\ 9\)。用 \(\sigma^{2}=\frac{\sum x^{2}}{n}-\bar{x}^{2}\) 求方差及標準差（3 位有效數字）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\sigma^{2}=6\)，\(\sigma=2.45\)</div>
+<ol class="steps">
+<li>\(\sum x=2+3+5+6+9=25\)，所以 \(\bar{x}=\frac{25}{5}=5\)。</li><li>\(\sum x^{2}=4+9+25+36+81=155\)。</li><li>\(\sigma^{2}=\frac{155}{5}-5^{2}=31-25=6\)。</li><li>\(\sigma=\sqrt{6}=2.449\ldots\approx2.45\)（3 位有效數字）。</li><li>用偏差核對：\(-3,-2,0,1,4\)，平方 \(9,4,0,1,16\)，合共 \(30\)，而 \(\frac{30}{5}=6\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(\bar{x}^{2}\) 寫成 \(2\bar{x}\)，或忘記把平均數平方；第二項是平均數的平方，不是平均數的兩倍。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一組數據的平均數是 25，標準差是 4.2。現在用兩種不同方式改變每一個數值。(a) 每個數值加 10，寫出新的平均數及新的標準差。(b) 改為每個數值乘以 1.5，寫出新的平均數、新的方差及新的標準差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 35，標準差 4.2　(b) 平均數 37.5，方差 39.69，標準差 6.3</div>
+<ol class="steps">
+<li>(a) 每個數值加同一個常數，整組數據只是平移，數值之間的差距完全不變，所以離散程度不變：平均數 \(=25+10=35\)，標準差 \(=4.2\)。</li><li>(b) 乘以 1.5 會把每個偏差放大 1.5 倍：平均數 \(=25\times1.5=37.5\)，標準差 \(=4.2\times1.5=6.3\)。</li><li>方差是標準差的平方，所以會乘以 \(1.5^{2}=2.25\)：新方差 \(=4.2^{2}\times2.25=17.64\times2.25=39.69\)，而 \(\sqrt{39.69}=6.3\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 10 也加到標準差上：平移後每個偏差 \((x-\bar{x})\) 都不變，所以 \(\sigma\) 不會移動。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>兩班學生參加同一測驗。甲班得分為 \(10,\ 12,\ 14,\ 16,\ 18\)，乙班得分為 \(4,\ 9,\ 14,\ 19,\ 24\)。(a) 證明兩班的平均數相同。(b) 求兩班的標準差。(c) 評論兩者之別。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 兩班都是 14　(b) \(\sigma_{A}=2.83\)，\(\sigma_{B}=7.07\)　(c) 乙班分散得多</div>
+<ol class="steps">
+<li>(a) 甲班：\(\frac{70}{5}=14\)。乙班：\(\frac{70}{5}=14\)。兩班平均數相同。</li><li>(b) 甲班與 14 的偏差：\(-4,-2,0,2,4\)，平方和為 \(40\)，所以 \(\sigma_{A}^{2}=8\)，\(\sigma_{A}=2.83\)（3 位有效數字）。</li><li>乙班與 14 的偏差：\(-10,-5,0,5,10\)，平方 \(100,25,0,25,100\) 之和為 \(250\)，所以 \(\sigma_{B}^{2}=50\)，\(\sigma_{B}=7.07\)（3 位有效數字）。</li><li>(c) 兩班平均數相等，即整體表現水平相同；乙班的標準差較大，分數分佈懸殊得多，表現較不穩定。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為乙班有些分數較高就結論乙班較好；兩班平均數都是 14，平均而言沒有誰較好，只是穩定程度不同。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>下表顯示 20 支球隊的入球數目。</p><table><tr><th>入球數 \(x\)</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><td>頻數 \(f\)</td><td>3</td><td>5</td><td>8</td><td>3</td><td>1</td></tr></table><p>(a) 求 \(\sum fx\) 及平均數。(b) 證明 \(\sum fx^{2}=168\)。(c) 求標準差，準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 54，平均數 \(2.7\)　(c) \(\sigma=1.05\)</div>
+<ol class="steps">
+<li>(a) \(\sum fx=1(3)+2(5)+3(8)+4(3)+5(1)=3+10+24+12+5=54\)，所以 \(\bar{x}=\frac{54}{20}=2.7\)。</li><li>(b) \(\sum fx^{2}=1^{2}(3)+2^{2}(5)+3^{2}(8)+4^{2}(3)+5^{2}(1)=3+20+72+48+25=168\)。</li><li>(c) \(\sigma^{2}=\frac{168}{20}-2.7^{2}=8.4-7.29=1.11\)。</li><li>\(\sigma=\sqrt{1.11}=1.0536\ldots\approx1.05\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(\bar{x}^{2}\) 算成 2.7 而不是 7.29，或在 \(\sum fx^{2}\) 一欄忘記把數值平方 —— 把頻數平方而不是把數值平方，是最常見的失手。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>分組數據：組中點、估算平均數、累積頻數與從曲線求中位數 <span class="count">· 7 題</span></h2>
+    <p>用組中點求平均數；用累積頻數與插值求中位數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>數據一經分組，個別數值便已失去，所以只能用<b>組中點</b>（該組的中間值）假設每項都落在該處來估算平均數：\(\bar{x}\approx\frac{\sum fx}{\sum f}\)。答案是一個估算，作答時應說明這一點。</p><p>中位數由累積頻數求得：先定位 \(\frac{n}{2}\)，找出累積頻數越過此位置的那一組，再在該組內插值 —— \(L+\frac{\text{位置}-cf_{\text{之前}}}{f}\times w\)。在累積頻數曲線（累積頻數多邊形）上讀取中位數，做的其實也是同一個線性插值。</p><div class="formula"><span>\(\text{組中點}=\frac{\text{下限}+\text{上限}}{2}\)</span><span>\(\bar{x}\approx\frac{\sum fx}{\sum f}\)</span><span>\(\text{中位數}=L+\frac{\frac{n}{2}-cf}{f}w\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>寫出 (a) 組 \(20-30\)、(b) 組 \(45-55\) 的組中點及組寬。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 組中點 25，組寬 10　(b) 組中點 50，組寬 10</div>
+<ol class="steps">
+<li>組中點 \(=\frac{\text{下限}+\text{上限}}{2}\)。</li><li>(a) \(\frac{20+30}{2}=25\)，組寬 \(=30-20=10\)。</li><li>(b) \(\frac{45+55}{2}=50\)，組寬 \(=55-45=10\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把下限（20）當作該組的代表值；組中點才是中間值，因為各項數據是散佈在整個組內的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>下表顯示 50 家商店的每日營業額（以元計）。</p><table><tr><th>營業額</th><th>0 – 10</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th></tr><tr><td>頻數</td><td>5</td><td>15</td><td>20</td><td>10</td></tr></table><p>估算每日營業額的平均值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$22</div>
+<ol class="steps">
+<li>組中點：\(5,\ 15,\ 25,\ 35\)。</li><li>\(\sum fx=5(5)+15(15)+20(25)+10(35)=25+225+500+350=1100\)。</li><li>\(\sum f=50\)，所以估算平均數為 \(\frac{1100}{50}=22\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把四個組中點取平均 \(\frac{5+15+25+35}{4}=20\)，忽略了各組差別很大的頻數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P1_Q9.html" target="_blank" rel="noopener">歷年試題 · 2016 卷一 Q9 ↗</a></div>
+<div class="q__body"><p>下表顯示 50 株植物的高度。</p><table><tr><th>高度（cm）</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th><th>40 – 50</th><th>50 – 60</th></tr><tr><td>頻數</td><td>6</td><td>14</td><td>18</td><td>10</td><td>2</td></tr></table><p>(a) 寫出累積頻數。(b) 寫出中位數所在的組。(c) 隨機選出一株植物，求其高度至少 40 cm 的概率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 6, 20, 38, 48, 50　(b) 30 – 40　(c) \(\frac{6}{25}\)</div>
+<ol class="steps">
+<li>(a) \(6,\ 6+14=20,\ 20+18=38,\ 38+10=48,\ 48+2=50\)。</li><li>(b) \(\frac{n}{2}=25\)，而累積頻數在 30 – 40 這一組內越過 25（由 20 升至 38）。</li><li>(c) 高度至少 40 cm 的植物：\(10+2=12\) 株。</li><li>\(P=\frac{12}{50}=\frac{6}{25}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把「至少 40」只讀成 40 – 50 這一組；50 – 60 這一組也符合條件，所以數目是 12 而不是 10。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>50 名學生的成績，其累積頻數曲線通過點 \((20,6)\)、\((30,20)\)、\((40,38)\)、\((50,48)\) 及 \((60,50)\)，其中第一個坐標是分數，第二個是累積頻數。用該曲線估算中位數分數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(32.8\)</div>
+<ol class="steps">
+<li>中位數對應的累積頻數是 \(\frac{50}{2}=25\)。</li><li>25 介乎讀數 20（分數 30）與 38（分數 40）之間，所以中位數在 30 – 40 這一組。</li><li>在該組內，累積頻數在 10 分的寬度內上升 \(38-20=18\)，而我們需要比 20 多 5。</li><li>中位數 \(\approx30+\frac{25-20}{18}\times10=30+2.78=32.8\) 分。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把中位數當作中位數所在組的中間值 35；插值把它放在 32.8，因為第 25 個數值較接近該組的起點。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>下表顯示一個會所 40 名會員的年齡。</p><table><tr><th>年齡</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th><th>40 – 50</th><th>50 – 60</th></tr><tr><td>頻數</td><td>6</td><td>10</td><td>14</td><td>8</td><td>2</td></tr></table><p>(a) 估算平均年齡。(b) 用插值法估算中位數年齡。(c) 哪一個較大？為甚麼？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 32.5　(b) 32.9　(c) 中位數</div>
+<ol class="steps">
+<li>(a) 組中點 \(15,25,35,45,55\)：\(\sum fx=6(15)+10(25)+14(35)+8(45)+2(55)=90+250+490+360+110=1300\)。</li><li>估算平均年齡 \(=\frac{1300}{40}=32.5\) 歲。</li><li>(b) 中位數位置 \(\frac{40}{2}=20\)。累積頻數為 \(6,16,30,38,40\)，所以中位數在 30 – 40 這一組。</li><li>中位數 \(\approx30+\frac{20-16}{14}\times10=30+2.86=32.9\) 歲。</li><li>(c) 中位數（32.9）略大於平均數（32.5），因為分佈的上尾（40 – 50 及 50 – 60 兩組）比下尾長。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把中位數當作該組的中間值 35；中位數位置 20 只進入這一組 4 項（該組共 14 項），所以它遠在中點之前。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>下表顯示一間診所 40 名病人的等候時間（以分鐘計）。</p><table><tr><th>時間</th><th>0 – 10</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th><th>40 – 50</th></tr><tr><td>頻數</td><td>4</td><td>10</td><td>16</td><td>8</td><td>2</td></tr></table><p>(a) 估算平均等候時間。(b) 證明 \(\sum fx^{2}=26200\)。(c) 估算標準差，準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(23.5\) 分鐘　(c) \(10.1\)</div>
+<ol class="steps">
+<li>(a) 組中點 \(5,15,25,35,45\)：\(\sum fx=4(5)+10(15)+16(25)+8(35)+2(45)=20+150+400+280+90=940\)。</li><li>平均數 \(=\frac{940}{40}=23.5\) 分鐘。</li><li>(b) \(\sum fx^{2}=4(25)+10(225)+16(625)+8(1225)+2(2025)=100+2250+10000+9800+4050=26200\)。</li><li>(c) \(\sigma^{2}=\frac{26200}{40}-23.5^{2}=655-552.25=102.75\)。</li><li>\(\sigma=\sqrt{102.75}=10.136\ldots\approx10.1\) 分鐘（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 部減去 \(23.5\) 而不是 \(23.5^{2}=552.25\)；也要記住答案只是估算，因為組中點取代了真實數值。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>下表顯示 40 名學生完成一項任務所需的時間（以分鐘計）。</p><table><tr><th>時間</th><th>0 – 5</th><th>5 – 10</th><th>10 – 15</th><th>15 – 20</th><th>20 – 25</th></tr><tr><td>頻數</td><td>2</td><td>9</td><td>15</td><td>10</td><td>4</td></tr></table><p>(a) 估算平均時間。(b) 寫出眾數組。(c) 用插值法估算中位數時間。(d) 評論平均數與中位數之間的差別。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(13.125\)　(b) \(10-15\)　(c) \(13\)　(d) 幾乎相等，所以分佈近乎對稱</div>
+<ol class="steps">
+<li>(a) 組中點 \(2.5,7.5,12.5,17.5,22.5\)：\(\sum fx=2(2.5)+9(7.5)+15(12.5)+10(17.5)+4(22.5)\)。</li><li>\(=5+67.5+187.5+175+90=525\)，所以估算平均數為 \(\frac{525}{40}=13.125\) 分鐘。</li><li>(b) 最大頻數是 15，在 10 – 15 這一組。</li><li>(c) 中位數位置 \(\frac{40}{2}=20\)；累積頻數為 \(2,11,26,36,40\)，所以中位數在 10 – 15 這一組：\(10+\frac{20-11}{15}\times5=10+3=13\) 分鐘。</li><li>(d) 估算平均數 13.125 與中位數 13 幾乎相等，顯示分佈接近對稱，兩邊的尾部都沒有明顯拉扯。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 部用組寬 10：這裏每組寬 5 分鐘，所以分數要乘以 5。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>比較兩組數據及每個值改變的影響 <span class="count">· 7 題</span></h2>
+    <p>加值、刪值與乘大時，平均數、中位數及離散程度如何移動</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>每個數值加同一個常數 \(k\)，平均數與中位數都會加 \(k\)，但全距、四分位距與標準差<b>不變</b>，因為每個差距都沒有改變。每個數值乘以 \(c&gt;0\)，平均數、中位數、全距、四分位距與標準差都乘以 \(c\)，而方差則乘以 \(c^{2}\)。</p><p>要好好比較兩組數據，必須同時引用一個平均數<b>和</b>一個離散程度的量度：平均數說明哪一組較高，離散程度說明哪一組較穩定。標準分 \(z=\frac{x-\bar{x}}{\sigma}\) 則可讓兩個不同的分佈作公平比較。</p><div class="formula"><span>\(x\to x+k:\ \bar{x}\to\bar{x}+k,\ \sigma \text{不變}\)</span><span>\(x\to cx:\ \bar{x}\to c\bar{x},\ \sigma\to c\sigma\)</span><span>\(z=\frac{x-\bar{x}}{\sigma}\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一組數據的平均數是 12，標準差是 5。每個數值乘以 3，寫出新的平均數、新的方差及新的標準差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>平均數 36，方差 225，標準差 15</div>
+<ol class="steps">
+<li>每個數值乘以 3，平均數也乘以 3：新平均數 \(=12\times3=36\)。</li><li>每個偏差同樣乘以 3，所以標準差變成 \(5\times3=15\)。</li><li>方差是標準差的平方：\(15^{2}=225\)（亦可用 \(5^{2}\times3^{2}=25\times9=225\)）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把方差乘以 3 而不是 9；方差是按倍數的平方改變的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一組數據的平均數是 20，標準差是 3.4。每個數值加 5，寫出新的平均數及新的標準差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>平均數 25，標準差 3.4</div>
+<ol class="steps">
+<li>每個數值加 5，平均數也加 5：\(20+5=25\)。</li><li>每個偏差 \(x-\bar{x}\) 都不變，因為 \(x\) 與 \(\bar{x}\) 同時增加 5，所以標準差仍是 3.4。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 5 也加到標準差上；平移只把整組數據搬移，並沒有把它拉開。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>數據為 \(2,\ 4,\ 6,\ 8,\ 10\)。(a) 求平均數及標準差。(b) 刪去等於平均數的數值 6，求新的平均數及新的標準差。(c) 解釋離散程度有甚麼變化。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 6，\(\sigma=2.83\)　(b) 平均數 6，\(\sigma=3.16\)　(c) 離散程度上升</div>
+<ol class="steps">
+<li>(a) 平均數 \(=\frac{30}{5}=6\)；偏差 \(-4,-2,0,2,4\) 給出 \(\sigma^{2}=\frac{40}{5}=8\)，所以 \(\sigma=2.83\)（3 位有效數字）。</li><li>(b) 刪去 6 後餘下 \(2,4,8,10\)，總和 24，所以新平均數為 \(\frac{24}{4}=6\) —— 沒有改變。</li><li>新的偏差（相對於 6）：\(-4,-2,2,4\)，平方和為 \(16+4+4+16=40\)，所以 \(\sigma^{2}=\frac{40}{4}=10\)，\(\sigma=3.16\)（3 位有效數字）。</li><li>(c) 被刪去的數值剛好位於平均數，對離散程度毫無貢獻，所以平均平方偏差上升：平均數雖然相同，但數據相對上更為分散。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>以為平均數不變就代表標準差不變；\(\sigma\) 既取決於各偏差，也取決於 \(n\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>甲店的每日平均營業額為 \$50\,000，標準差為 \$4000。乙店的每日平均營業額為 \$80\,000，標準差為 \$6000。(a) 把每個標準差表示為其平均數的百分數。(b) 哪一間店的營業額相對較穩定？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 甲：8%，乙：7.5%　(b) 乙店</div>
+<ol class="steps">
+<li>(a) 甲店：\(\frac{4000}{50000}\times100\%=8\%\)。乙店：\(\frac{6000}{80000}\times100\%=7.5\%\)。</li><li>(b) 乙店的標準差以金額計較大，但相對於它大得多的平均數，變動只有 7.5%，而甲店是 8%。</li><li>所以乙店的營業額相對較穩定，雖然表面上的離散幅度較大。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為 4000 &lt; 6000 就選甲店：標準差必須相對於它所屬的平均數大小來判斷。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>10 名學生的每週收入（以元計）為 \(28,\ 34,\ 38,\ 40,\ 43,\ 47,\ 50,\ 54,\ 56,\ 60\)。(a) 求平均數及標準差。(b) 發現 60 是記錄錯誤，改為 82。求新的平均數及新的標準差。(c) 試評論。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 45，\(\sigma=9.72\)　(b) 平均數 47.2，\(\sigma=14.3\)　(c) 平均數上升，離散程度大幅上升</div>
+<ol class="steps">
+<li>(a) \(\sum x=450\)，所以平均數為 \(\frac{450}{10}=45\)。與 45 的偏差：\(-17,-11,-7,-5,-2,2,5,9,11,15\)。</li><li>平方和為 \(289+121+49+25+4+4+25+81+121+225=944\)，所以 \(\sigma^{2}=\frac{944}{10}=94.4\)，\(\sigma=9.716\ldots\approx9.72\)。</li><li>(b) 總和變為 \(450-60+82=472\)，所以新平均數為 \(\frac{472}{10}=47.2\)。</li><li>更正後的數值與新平均數的距離，比原本 60 與 45 的距離大得多，所以新方差為 \(\frac{5099}{25}=203.96\)，\(\sigma=\sqrt{203.96}=14.28\ldots\approx14.3\)。</li><li>(c) 一個較大的數值把平均數拉高（由 45 升至 47.2），並使標準差膨脹約 47%；中位數的變動會小得多。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只重算平均數，卻假設標準差幾乎不變：一個遠離平均數的數值有很大的平方偏差，會主導 \(\sigma\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q44.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q44 ↗</a></div>
+<div class="q__body"><p>在一次數學考試中，分數 \(x\) 的標準分為 \(z=\frac{x-\mu}{\sigma}\)，其中 \(\mu\) 是平均數，\(\sigma\) 是標準差。健得 62 分，標準分為 \(-1.5\)；美得 92 分，標準分為 \(1.5\)。(a) 寫出兩個關於 \(\mu\) 與 \(\sigma\) 的方程。(b) 求 \(\mu\) 及 \(\sigma\)。(c) 另一名學生得 85 分，求她的標準分。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\mu-1.5\sigma=62\)，\(\mu+1.5\sigma=92\)　(b) \(\mu=77\)，\(\sigma=10\)　(c) \(0.8\)</div>
+<ol class="steps">
+<li>(a) 健：\(-1.5=\frac{62-\mu}{\sigma}\)，所以 \(62-\mu=-1.5\sigma\)，即 \(\mu-1.5\sigma=62\)。美：\(1.5=\frac{92-\mu}{\sigma}\)，所以 \(\mu+1.5\sigma=92\)。</li><li>(b) 兩式相加：\(2\mu=62+92=154\)，所以 \(\mu=77\)。</li><li>兩式相減：\(3\sigma=92-62=30\)，所以 \(\sigma=10\)。</li><li>(c) 對於 85 分：\(z=\frac{85-77}{10}=\frac{8}{10}=0.8\)。</li><li>核對健：\(\frac{62-77}{10}=-1.5\) ✓；美：\(\frac{92-77}{10}=1.5\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把公式寫成 \(z=\frac{\mu-x}{\sigma}\)，符號便會全部倒轉，健會變成在平均數之上；高於平均數的分數，標準分應為正數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一班 40 名學生的平均身高為 150 cm，標準差 8 cm，中位數 149 cm。每名學生的身高按規則 \(y=2x+3\) 轉換，其中 \(x\) 以 cm 計。(a) 求 \(y\) 值的平均數、中位數及標準差。(b) 求 \(y\) 值的方差。(c) 另一班的平均身高為 152 cm，標準差 4 cm。哪一班的身高較均勻？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 303，中位數 301，標準差 16　(b) 256　(c) 第二班</div>
+<ol class="steps">
+<li>(a) 平均數：\(2(150)+3=303\)。中位數：\(2(149)+3=301\)。</li><li>標準差：\(+3\) 不改變離散程度，\(\times2\) 則把它放大一倍，所以 \(\sigma_{y}=2(8)=16\) cm。</li><li>(b) 方差 \(=16^{2}=256\)（亦可用 \(2^{2}\times8^{2}=4\times64=256\)）。</li><li>(c) 第二班的標準差較小（4 cm 對 8 cm），而平均數相若，所以它的身高較接近平均數，因此較均勻。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只寫中位數為 \(2(149)\)，忘記 \(+3\)：線性變換對中位數的作用，與對每一個數值的作用完全相同。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度詮釋：該用哪個平均數，為甚麼 <span class="count">· 8 題</span></h2>
+    <p>選擇並說明理由；寫出能取分的結論</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>在考試中，單寫一個數字很少能得滿分 —— 理由必須指出所用的性質。當數據有離群值或呈偏態時，應引用<b>中位數</b>，因為平均數會被尾部拉扯；分類數據或最典型的「大小」（鞋碼、門票編號）應引用<b>眾數</b>；當每個數值都應被計算在內，例如求總量或平均分擔，則引用<b>平均數</b>。</p><p>比較題的答案須有三部分：先引用一個平均數說明水平，再引用一個離散程度的量度（四分位距或標準差）說明穩定性，最後結合題目的情境寫出結論。</p><div class="formula"><span>\(\text{有離群值}\Rightarrow\) 用中位數</span><span>\(\text{分類標籤}\Rightarrow\) 用眾數</span><span>\(z=\frac{x-\bar{x}}{\sigma}\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一間鞋店記錄了上週售出的尺碼：36、37、37、38、38、38、39、40、41。該店應採用哪一個平均數來決定哪個尺碼要大量入貨？試說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>眾數，即 38</div>
+<ol class="steps">
+<li>鞋店需要的是銷量最多的尺碼，而這正是眾數所量度的。</li><li>38 出現三次，比任何其他尺碼都多，所以眾數是 38。</li><li>平均數（約 38.2）與中位數（38）也接近 38，但它們不能指出出現最頻繁的尺碼；在此眾數直接回答入貨的問題。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把平均數 38.2 當作鞋碼作答：尺碼必須是真實存在的，而店方需要的是最暢銷的那一個。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一間小公司的月薪為 \$12\,000、\$12\,000、\$13\,000、\$14\,000、\$15\,000 及 \$180\,000（老闆）。哪一個平均數最能描述一般員工的薪金？試說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>中位數，即 \$13\,500</div>
+<ol class="steps">
+<li>六個薪金由小到大為 \(12000,12000,13000,14000,15000,180000\)。</li><li>中位數 \(=\frac{13000+14000}{2}=13500\)。</li><li>平均數是 \(\frac{246000}{6}=41000\)，高於六個薪金中的五個，因為老闆的 \$180\,000 把它拉高了。中位數不受那一個薪金有多高影響，所以更能描述一般員工。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>引用平均數 \$41\,000：除了老闆之外，沒有員工的收入接近這個數，正好說明平均數已被離群值扭曲。</p></div>
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一名資料輸入員記錄了十個每日營業額：\(8,\ 9,\ 9,\ 10,\ 10,\ 10,\ 11,\ 12,\ 13,\ 48\)。(a) 求平均數、中位數及眾數。(b) 數值 48 是輸入錯誤。應引用哪一個平均數作為典型值？為甚麼？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 14，中位數 10，眾數 10　(b) 中位數（或眾數）</div>
+<ol class="steps">
+<li>(a) \(\sum x=8+9+9+10+10+10+11+12+13+48=140\)，所以平均數為 \(\frac{140}{10}=14\)。</li><li>\(n=10\)，中位數為 \(\frac{10+10}{2}=10\)；而 10 出現三次，所以眾數是 10。</li><li>(b) 十個數值中有九個介乎 8 至 13，所以平均數 14 高於幾乎所有數據：單一個 48 把它拉了上去。</li><li>中位數（10）與眾數（10）都不受該錯誤數值的大小影響，所以兩者都能合理描述典型的一天；有離群值時，中位數是標準選擇。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>明知有一個明顯的離群值，仍不加說明就報上平均數；題目問的是「有代表性的」平均數，不只是算術平均數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩間商店記錄了顧客的等候時間。甲店：平均 12.0 分鐘，標準差 1.5 分鐘。乙店：平均 12.0 分鐘，標準差 4.0 分鐘。(a) 比較這兩間商店。(b) 一位顧客說「兩間店的平均數相同，所以一樣好」。試評論。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均相同，乙店變動大得多　(b) 這說法忽略了穩定性</div>
+<ol class="steps">
+<li>(a) 兩店的平均數相同，所以平均而言顧客在任一店等候的時間一樣。</li><li>標準差不同：甲店 1.5 分鐘，乙店 4.0 分鐘，所以乙店的等候時間變動大得多。</li><li>(b) 顧客無法預測在乙店要等多久：有些時候遠短於 12 分鐘，有些時候遠長於 12 分鐘；而在甲店，等候時間幾乎總是在 12 分鐘附近。</li><li>所以平均數相等，並不代表體驗相同；公平的比較必須同時引用離散程度的量度。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只比較平均數就結論兩店相同；相等的平均數可以掩蓋差別極大的離散程度。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q30.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q30 ↗</a></div>
+<div class="q__body"><p>九個正整數 \(2,\ 3,\ 4,\ 6,\ 7,\ 9,\ 10,\ m,\ n\) 的平均數是 5。(a) 求 \(m+n\)。(b) 證明這九個數的中位數必定是 4。(c) 眾數是否必定是 2？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(m+n=4\)　(b) 已證明　(c) 不是</div>
+<ol class="steps">
+<li>(a) 總和必須是 \(9\times5=45\)。七個已知的數之和為 \(2+3+4+6+7+9+10=41\)，所以 \(m+n=4\)。</li><li>(b) 因 \(m,n\) 是正整數，可能的情況只有 \((1,3),(2,2),(3,1)\)。</li><li>每一種情況下，排序後的名單都是 \(1,2,3,3,4,6,7,9,10\) 或 \(2,2,2,3,4,6,7,9,10\)，九個數中的第 5 個每次都是 4。所以中位數必定是 4。</li><li>(c) 不是。當 \((m,n)=(1,3)\) 時，3 出現兩次而 2 只出現一次，所以眾數是 3。因此眾數不一定是 2。</li><li>只有中位數被已知條件鎖定 —— 這提醒我們，「必定成立」是指在每一個可能情況中都成立。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只試一組如 \((2,2)\) 就結論眾數是 2；「必定成立」的敘述必須在每一個符合數據的情況中都成立。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>下表顯示 30 名學生在一次測驗中的得分。</p><table><tr><th>得分</th><th>0 – 10</th><th>10 – 20</th><th>20 – 30</th><th>30 – 40</th><th>40 – 50</th></tr><tr><td>頻數</td><td>3</td><td>7</td><td>12</td><td>6</td><td>2</td></tr></table><p>(a) 估算平均分。(b) 用插值法估算中位數分數。(c) 估算標準差。(d) 老師說「這班表現尚算不錯」。試用你的答案評論這說法。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 24　(b) 24.6　(c) 10.4　(d) 表現尚可但差異很大</div>
+<ol class="steps">
+<li>(a) 組中點 \(5,15,25,35,45\)：\(\sum fx=3(5)+7(15)+12(25)+6(35)+2(45)=15+105+300+210+90=720\)，所以平均數為 \(\frac{720}{30}=24\)。</li><li>(b) 中位數位置 \(\frac{30}{2}=15\)；累積頻數為 \(3,10,22,28,30\)，所以中位數在 20 – 30 這一組：\(20+\frac{15-10}{12}\times10=20+4.17=24.6\)。</li><li>(c) \(\sum fx^{2}=3(25)+7(225)+12(625)+6(1225)+2(2025)=75+1575+7500+7350+4050=20550\)。</li><li>\(\sigma^{2}=\frac{20550}{30}-24^{2}=685-576=109\)，所以 \(\sigma=\sqrt{109}=10.44\ldots\approx10.4\)。</li><li>(d) 平均數與中位數都在 24 分左右，滿分 50 分而言只屬中等（不足一半分數），不算很好。標準差約 10 分相對於這個平均數相當大，所以班內差異懸殊：10 名學生低於 20 分，另有 8 名學生達 30 分或以上。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>看到平均數接近分數範圍的中間就說這一班很平均；標準差顯示分數分散在全部五個組之中。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2012_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2012 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>20 名學生的每週溫習時數為 \(45,\ 48,\ 50,\ 52,\ 55,\ 57,\ 58,\ 59,\ 60,\ 61,\ 61,\ 62,\ 64,\ 65,\ 66,\ 68,\ 70,\ 72,\ 75,\ 80\)。(a) 求平均數及中位數。(b) 再有一名學生（溫習 20 小時）加入，求新的平均數並寫出新的中位數。(c) 求原本 20 名學生及新的 21 人組別的標準差。(d) 現在應為這一組引用哪一個平均數？為甚麼？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(61.4\)，\(61\)　(b) 平均數 \(59.4\)，中位數仍是 \(61\)　(c) \(8.80\) 及 \(12.3\)　(d) 中位數</div>
+<ol class="steps">
+<li>(a) \(\sum x=1228\)，所以平均數為 \(\frac{1228}{20}=61.4\)。\(n=20\)，中位數為 \(\frac{61+61}{2}=61\)。</li><li>(b) 加入 20 後，21 名學生的總和為 1248：新平均數 \(=\frac{1248}{21}=59.43\ldots\approx59.4\)。</li><li>新的數值 20 是最小的一個，所以它成為第 1 個數值，而原本的第 11 個數值移到第 12 位；\(n=21\) 時中位數是第 11 個數值，仍然是 61。</li><li>(c) 原本一組：偏差平方和為 1548.8，所以 \(\sigma^{2}=\frac{1548.8}{20}=77.44\)，\(\sigma=8.80\)。新組別：\(\sigma^{2}=\frac{22268}{147}=151.48\)，所以 \(\sigma=12.3\)（3 位有效數字）。</li><li>(d) 平均數下跌了 2 小時，標準差上升約 40%，兩者都是由那一個極低的數值造成。中位數完全沒有移動，所以中位數現在更能總結一般學生的溫習時數。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>以為加入一個數值後中位數必定改變：中位數取決於位置，加入一個新的最小值只會移動位置，在此並沒有改變中間的數值。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>兩組學生參加同一測驗。甲組 13 人的得分為 \(48,\ 52,\ 56,\ 60,\ 64,\ 68,\ 70,\ 72,\ 76,\ 80,\ 84,\ 88,\ 92\)。乙組的平均數為 70，標準差為 5。(a) 求甲組的平均數及中位數。（2 分）(b) 證明甲組的標準差為 13.3，準確至 3 位有效數字。（3 分）(c) 比較這兩組。（1 分）(d) 甲組一名學生得 92 分。求她的標準分，以及乙組中與她標準分相同的分數。（2 分）</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 平均數 70，中位數 70　(b) 13.3　(c) 水平相同，甲組分散得多　(d) \(1.66\) 及約 \(78.3\)</div>
+<ol class="steps">
+<li>(a) 13 個數值的總和為 \(\sum x=910\)，所以平均數為 \(\frac{910}{13}=70\)。中位數是第 7 個數值，即 \(70\)。</li><li>(b) 與 70 的偏差：\(-22,-18,-14,-10,-6,-2,0,2,6,10,14,18,22\)。</li><li>平方和為 \(484+324+196+100+36+4+0+4+36+100+196+324+484=2288\)。</li><li>\(\sigma^{2}=\frac{2288}{13}=176\)，所以 \(\sigma=\sqrt{176}=13.266\ldots\approx13.3\)（3 位有效數字）。</li><li>(c) 兩組平均同為 70，但甲組的標準差（13.3）是乙組（5）的兩倍以上：甲組的表現水平相同，但差異大得多。</li><li>(d) 甲組 92 分的標準分：\(z=\frac{92-70}{13.266}=1.658\ldots\approx1.66\)。</li><li>乙組中對應的分數：\(x=70+1.658(5)=78.29\approx78.3\)。</li><li>所以甲組的 92 分，與乙組約 78 分同樣突出 —— 這與乙組組內差異較小相符。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(d) 部：只把 92 與 70 以原始分數比較就說它更出色，沒有除以標準差；同樣的差距在乙組只是 \(78.3-70=8.3\) 分，即 1.66 個標準差。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 統計學 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>
+<script src="assets/cn.js"></script>
+</body>
+</html>

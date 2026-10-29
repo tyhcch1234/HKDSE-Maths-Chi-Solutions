@@ -1,0 +1,805 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 解析幾何 — 7 種題型 50 題（附詳解）","desc":"由 117 道歷年 HKDSE 解析幾何試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：兩點間的距離、中點與斜率，直線方程，平行與垂直，交點與面積，圓的方程，切線、點到直線距離與軌跡，以及考試程度的圓與直線綜合題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_coordinate-geometry_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 兩點間的距離、中點與斜率</a><a href="#t2" data-t="t2">類型 2 · 直線方程</a><a href="#t3" data-t="t3">類型 3 · 平行與垂直</a><a href="#t4" data-t="t4">類型 4 · 交點與面積</a><a href="#t5" data-t="t5">類型 5 · 圓的方程</a><a href="#t6" data-t="t6">類型 6 · 切線、距離與軌跡</a><a href="#t7" data-t="t7">類型 7 · 考試程度綜合題</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 解析幾何</p>
+    <h1 class="hero__title">解析幾何 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 117 道歷年 DSE 解析幾何試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>117</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如垂直平分線要用斜率的負倒數，不是原來的斜率。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>兩點間的距離、中點與斜率</td><td>讀取一對坐標，代入三條基本公式</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>直線方程</td><td>點斜式、兩點式與一般式；截距</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>平行與垂直</td><td>平行則斜率相等，垂直則斜率之積為 \(-1\)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>直線的交點與由頂點求面積</td><td>先解聯立方程，再用頂點面積公式</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>圓的方程：圓心、半徑與配方法</td><td>標準式、一般式與配方法</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>圓的切線、點到直線的距離與軌跡</td><td>一條公式串連相切、垂距與軌跡</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度多部分題：圓與直線</td><td>完整卷一風格，混合直線與圓</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>兩點間的距離、中點與斜率 <span class="count">· 7 題</span></h2>
+    <p>讀取一對坐標，代入三條基本公式</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>三條公式就足以應付整個題型。距離公式就是把水平差距與垂直差距代入畢氏定理；中點公式分別取兩個 \(x\) 與兩個 \(y\) 的平均值；斜率公式就是「垂直變化除以水平變化」。之後所有課題 —— 直線方程、垂直關係、圓、軌跡 —— 都由這三條公式建立。</p>
+    <p>留意相減的次序：\((x_{1},y_{1})\) 與 \((x_{2},y_{2})\) 誰先誰後都可以，但分子與分母必須用同一個次序。</p>
+    <div class="formula"><span>\(d=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}\)</span><span>\(M=\left(\dfrac{x_{1}+x_{2}}{2},\ \dfrac{y_{1}+y_{2}}{2}\right)\)</span><span>\(m=\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q24.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q24 ↗</a></div>
+<div class="q__body"><p>在直角坐標平面上，\(A(1,2)\) 與 \(B(7,10)\) 為兩點，求 \(AB\) 的長度。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(AB=10\)</div>
+<ol class="steps">
+<li>\(AB=\sqrt{(7-1)^{2}+(10-2)^{2}}\)</li><li>\(=\sqrt{6^{2}+8^{2}}=\sqrt{36+64}\)</li><li>\(=\sqrt{100}=10\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩行用了不同的相減次序，例如上邊用 \((7-1)\) 而下邊用 \((2-10)\)。因為兩個差距都會平方，這題答案仍會正確，但這個習慣到斜率公式就會出錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>設 \(P(-3,5)\)、\(Q(7,-1)\)。求 (a) \(PQ\) 的中點 \(M\) 的坐標；(b) \(PQ\) 的斜率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(M(2,2)\)　(b) 斜率 \(=-\dfrac{3}{5}\)</div>
+<ol class="steps">
+<li>(a) \(x\) 坐標：\(\dfrac{-3+7}{2}=\dfrac{4}{2}=2\)；\(y\) 坐標：\(\dfrac{5+(-1)}{2}=\dfrac{4}{2}=2\)。所以 \(M(2,2)\)。</li><li>(b) \(m=\dfrac{-1-5}{7-(-3)}=\dfrac{-6}{10}=-\dfrac{3}{5}\)。</li><li>這條直線由左向右下降，所以斜率為負是合理的。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(M(5,-1)\) 是連接 \(A(2,3)\) 與 \(B\) 的線段的中點。求 (a) \(B\) 的坐標；(b) \(AB\) 的長度。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(B(8,-5)\)　(b) \(AB=10\)</div>
+<ol class="steps">
+<li>(a) 設 \(B=(x,y)\)。則 \(\dfrac{2+x}{2}=5\)，所以 \(x=10-2=8\)；又 \(\dfrac{3+y}{2}=-1\)，所以 \(y=-2-3=-5\)。故 \(B(8,-5)\)。</li><li>(b) \(AB=\sqrt{(8-2)^{2}+(-5-3)^{2}}=\sqrt{36+64}\)。</li><li>\(AB=\sqrt{100}=10\)。</li><li>驗算：\(M\) 應在正中間，而 \(AM=\sqrt{9+16}=5=\tfrac{1}{2}(10)\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(M\) 的坐標除以 2 來求 \(B\)。中點是平均數，所以應有 \(B=2M-A\)，而不是 \(M/2\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>三角形的頂點為 \(A(1,1)\)、\(B(5,3)\) 與 \(C(3,7)\)。(a) 證明 \(\angle ABC=90^{\circ}\) 且 \(AB=BC\)。(b) 由此求 \(\triangle ABC\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 斜率之積 \(=-1\) 且 \(AB=BC=2\sqrt{5}\)　(b) 面積 \(=10\) 平方單位</div>
+<ol class="steps">
+<li>(a) \(AB\) 的斜率 \(=\dfrac{3-1}{5-1}=\dfrac{1}{2}\)；\(BC\) 的斜率 \(=\dfrac{7-3}{3-5}=\dfrac{4}{-2}=-2\)。</li><li>\(\dfrac{1}{2}\times(-2)=-1\)，所以 \(AB\perp BC\)，即 \(\angle ABC=90^{\circ}\)。</li><li>\(AB=\sqrt{4^{2}+2^{2}}=\sqrt{20}=2\sqrt{5}\)；\(BC=\sqrt{(-2)^{2}+4^{2}}=\sqrt{20}=2\sqrt{5}\)。所以 \(AB=BC\)。</li><li>(b) 兩條互相垂直的邊就是底和高：面積 \(=\tfrac{1}{2}(2\sqrt{5})(2\sqrt{5})=\tfrac{1}{2}(20)=10\) 平方單位。</li><li>用鞋帶公式驗算：\(\tfrac{1}{2}\left|1(3-7)+5(7-1)+3(1-3)\right|=\tfrac{1}{2}\left|-4+30-6\right|=10\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>三點為 \(A(2,-1)\)、\(B(5,5)\) 與 \(C(9,13)\)。證明 \(A\)、\(B\)、\(C\) 三點共線。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>斜率 \(AB=\) 斜率 \(BC=2\)，且 \(B\) 為公共點，所以三點在同一條直線上</div>
+<ol class="steps">
+<li>\(AB\) 的斜率 \(=\dfrac{5-(-1)}{5-2}=\dfrac{6}{3}=2\)。</li><li>\(BC\) 的斜率 \(=\dfrac{13-5}{9-5}=\dfrac{8}{4}=2\)。</li><li>兩條線段共用點 \(B\)，而且斜率相同，所以 \(A\)、\(B\)、\(C\) 同在一條直線上。</li><li>額外驗算：該直線方程為 \(y=2x-5\)，而 \(2(9)-5=13\)，正是 \(C\) 的 \(y\) 坐標。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用近似值去證明 \(AB+BC=AC\)。斜率是準確值，應改用斜率判別（或證明三點同時滿足同一條直線方程）。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q24.html" target="_blank" rel="noopener">歷年試題 · 2019 卷二 Q24 ↗</a></div>
+<div class="q__body"><p>設 \(P(2,5)\)、\(Q(8,1)\)。點 \(R\) 在 \(x\) 軸上，且與 \(P\)、\(Q\) 等距。(a) 求 \(R\) 的坐標。(b) 由此求共同的距離 \(RP=RQ\)，答案以根式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(R(3,0)\)　(b) \(RP=RQ=\sqrt{26}\)</div>
+<ol class="steps">
+<li>(a) \(x\) 軸上的點可設為 \(R(x,0)\)。距離相等即 \(RP^{2}=RQ^{2}\)。</li><li>\((x-2)^{2}+(0-5)^{2}=(x-8)^{2}+(0-1)^{2}\)</li><li>\(x^{2}-4x+4+25=x^{2}-16x+64+1\)</li><li>\(-4x+29=-16x+65\)，所以 \(12x=36\)，\(x=3\)。故 \(R(3,0)\)。</li><li>(b) \(RP=\sqrt{(3-2)^{2}+(0-5)^{2}}=\sqrt{1+25}=\sqrt{26}\)。</li><li>驗算：\(RQ=\sqrt{(3-8)^{2}+(0-1)^{2}}=\sqrt{25+1}=\sqrt{26}\)。✔（\(\sqrt{26}\approx 5.10\)）</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>設 \(A(-2,3)\)、\(B(10,-3)\)。(a) 求 \(AB\) 的中點 \(M\) 的坐標。(b) \(P\) 是 \(y\) 軸上的一點，且 \(PA=PB\)，求 \(P\) 的坐標。(c) 寫出所有與 \(A\)、\(B\) 等距的點的軌跡，並以方程表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(M(4,0)\)　(b) \(P(0,-8)\)　(c) \(y=2x-8\)，即 \(2x-y-8=0\)</div>
+<ol class="steps">
+<li>(a) \(M=\left(\dfrac{-2+10}{2},\dfrac{3+(-3)}{2}\right)=\left(\dfrac{8}{2},\dfrac{0}{2}\right)=M(4,0)\)。</li><li>(b) \(AB\) 的斜率 \(=\dfrac{-3-3}{10-(-2)}=\dfrac{-6}{12}=-\dfrac{1}{2}\)，所以垂直平分線的斜率為 \(2\)。</li><li>過 \(M(4,0)\)：\(y-0=2(x-4)\)，即 \(y=2x-8\)。</li><li>\(P\) 在 \(y\) 軸上，代入 \(x=0\)：\(y=-8\)，得 \(P(0,-8)\)。</li><li>驗算：\(PA=\sqrt{2^{2}+11^{2}}=\sqrt{125}\)，而 \(PB=\sqrt{10^{2}+5^{2}}=\sqrt{125}\)。✔</li><li>(c) 與 \(A\)、\(B\) 等距的點的軌跡，正是上面求得的垂直平分線：\(y=2x-8\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把垂直平分線的斜率寫成 \(-\tfrac{1}{2}\)。垂直平分線要用負倒數，即 \(+2\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>直線方程 <span class="count">· 7 題</span></h2>
+    <p>點斜式、兩點式與一般式；截距</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>一點加一個斜率就確定一條直線。先寫 \(y-y_{1}=m(x-x_{1})\)，然後整理成一般式 \(Ax+By+C=0\)，並盡量使係數為整數。若已知兩點，先求斜率，再用其中任何一點都可以 —— 答案相同。</p>
+    <p>兩個值得記住的捷徑：直線在兩軸上的截距分別為 \((a,0)\) 與 \((0,b)\) 時，可用截距式 \(\frac{x}{a}+\frac{y}{b}=1\)；而由 \(Ax+By+C=0\) 可直接「讀出」斜率 \(m=-\frac{A}{B}\)。</p>
+    <div class="formula"><span>\(y-y_{1}=m(x-x_{1})\)</span><span>\(\dfrac{x}{a}+\dfrac{y}{b}=1\)</span><span>\(Ax+By+C=0,\ m=-\dfrac{A}{B}\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求通過 \((2,3)\) 且斜率為 \(4\) 的直線方程，答案以 \(Ax+By+C=0\) 的形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4x-y-5=0\)</div>
+<ol class="steps">
+<li>點斜式：\(y-3=4(x-2)\)。</li><li>\(y-3=4x-8\)，所以 \(y=4x-5\)。</li><li>整理得：\(4x-y-5=0\)。</li><li>驗算：代入 \(x=2\)，得 \(4(2)-5=3\)，正是題目給的 \(y\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(y+3=4(x+2)\)。公式是減去該點的坐標，所以 \((2,3)\) 應得 \(y-3\) 與 \(x-2\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求通過 \(A(-1,4)\) 與 \(B(3,-4)\) 的直線方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x+y-2=0\)（即 \(y=-2x+2\)）</div>
+<ol class="steps">
+<li>斜率 \(m=\dfrac{-4-4}{3-(-1)}=\dfrac{-8}{4}=-2\)。</li><li>用 \(A(-1,4)\)：\(y-4=-2(x+1)\)。</li><li>\(y-4=-2x-2\)，所以 \(y=-2x+2\)，即 \(2x+y-2=0\)。</li><li>用 \(B(3,-4)\) 驗算：\(2(3)+(-4)-2=0\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q25.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q25 ↗</a></div>
+<div class="q__body"><p>直線 \(L\) 的方程為 \(3x+4y-12=0\)。(a) 求 \(L\) 的 \(x\) 截距與 \(y\) 截距。(b) 求 \(L\) 的斜率。(c) 由此求 \(L\) 在第一象限截出的三角形面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x\) 截距 \(4\)，\(y\) 截距 \(3\)　(b) \(-\dfrac{3}{4}\)　(c) \(6\) 平方單位</div>
+<ol class="steps">
+<li>(a) 代入 \(y=0\)：\(3x=12\)，所以 \(x=4\)，\(x\) 截距為 \(4\)。代入 \(x=0\)：\(4y=12\)，所以 \(y=3\)，\(y\) 截距為 \(3\)。</li><li>(b) 把 \(y\) 變為主項：\(4y=-3x+12\)，所以 \(y=-\dfrac{3}{4}x+3\)，斜率為 \(-\dfrac{3}{4}\)。</li><li>(c) 兩個截距構成一個直角三角形，兩直角邊為 \(4\) 與 \(3\)：面積 \(=\tfrac{1}{2}(4)(3)=6\) 平方單位。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(x\) 截距說成 \(-4\)。本題代入 \(y=0\) 得正的 \(x\)；要實際計算，不要只看常數項。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一條直線的 \(x\) 截距為 \(6\)，\(y\) 截距為 \(-4\)。求其方程，以 \(Ax+By+C=0\) 的形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x-3y-12=0\)</div>
+<ol class="steps">
+<li>截距式：\(\dfrac{x}{6}+\dfrac{y}{-4}=1\)。</li><li>全式乘以 \(12\)：\(2x-3y=12\)。</li><li>所以 \(2x-3y-12=0\)。</li><li>驗算：\(x=6,\ y=0 \Rightarrow 12-0-12=0\) ✔；\(x=0,\ y=-4 \Rightarrow 0+12-12=0\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>直線 \(L_{1}\) 的方程為 \(2x+5y=10\)。直線 \(L_{2}\) 通過點 \(P(4,-1)\)，且與 \(L_{1}\) 有相同的 \(x\) 截距。求 \(L_{2}\) 的方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(x-y-5=0\)（即 \(y=x-5\)）</div>
+<ol class="steps">
+<li>\(L_{1}\) 的 \(x\) 截距：代入 \(y=0\)，得 \(2x=10\)，\(x=5\)。所以該點為 \((5,0)\)。</li><li>\(L_{2}\) 通過 \((5,0)\) 與 \(P(4,-1)\)，斜率 \(m=\dfrac{0-(-1)}{5-4}=1\)。</li><li>點斜式：\(y-0=1(x-5)\)，所以 \(y=x-5\)。</li><li>整理得：\(x-y-5=0\)。</li><li>用 \(P(4,-1)\) 驗算：\(4-(-1)-5=0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(2x+5y=10\) 的 \(x\) 截距當作 \(10\)。要除以 \(x\) 的係數：\(x=5\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P2_Q26.html" target="_blank" rel="noopener">歷年試題 · 2021 卷二 Q26 ↗</a></div>
+<div class="q__body"><p>已知直線 \(L: y=mx+c\) 通過 \(A(1,7)\) 與 \(B(4,1)\)。(a) 求 \(m\) 與 \(c\)。(b) 判斷點 \(C(7,-5)\) 是否在 \(L\) 上。(c) 求 \(L\) 的 \(x\) 截距。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(m=-2,\ c=9\)　(b) 是，\(C\) 在 \(L\) 上　(c) \(\dfrac{9}{2}\)</div>
+<ol class="steps">
+<li>(a) \(m=\dfrac{1-7}{4-1}=\dfrac{-6}{3}=-2\)。用 \(A(1,7)\)：\(7=-2(1)+c\)，所以 \(c=9\)。故 \(y=-2x+9\)。</li><li>(b) 代入 \(x=7\)：\(y=-14+9=-5\)，正是 \(C\) 的 \(y\) 坐標。所以 \(C(7,-5)\) 在 \(L\) 上。</li><li>(c) 代入 \(y=0\)：\(0=-2x+9\)，所以 \(x=\dfrac{9}{2}=4.5\)，\(x\) 截距為 \(\dfrac{9}{2}\)。</li><li>驗算：\(m=-2\) 為負，而兩點都滿足 \(y=-2x+9\) \(\Rightarrow\) 一致。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>設 \(A(2,5)\)、\(B(6,-1)\)，並設 \(O\) 為原點。\(M\) 是 \(AB\) 的中點。(a) 求 \(AB\) 的方程，以 \(Ax+By+C=0\) 的形式表示。(b) 求直線 \(OM\) 的方程。(c) 求 \(\triangle OAB\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(3x+2y-16=0\)　(b) \(x-2y=0\)　(c) \(16\) 平方單位</div>
+<ol class="steps">
+<li>(a) \(AB\) 的斜率 \(=\dfrac{-1-5}{6-2}=\dfrac{-6}{4}=-\dfrac{3}{2}\)。用 \(A(2,5)\)：\(y-5=-\dfrac{3}{2}(x-2)\)。</li><li>全式乘以 \(2\)：\(2y-10=-3x+6\)，所以 \(3x+2y-16=0\)。</li><li>(b) \(M=\left(\dfrac{2+6}{2},\dfrac{5+(-1)}{2}\right)=(4,2)\)。直線 \(OM\) 通過 \((0,0)\) 與 \((4,2)\)，所以斜率為 \(\dfrac{2}{4}=\dfrac{1}{2}\)。</li><li>因此 \(y=\dfrac{1}{2}x\)，即 \(x-2y=0\)。</li><li>(c) 面積 \(=\tfrac{1}{2}\left|x_{A}y_{B}-x_{B}y_{A}\right|=\tfrac{1}{2}\left|2(-1)-6(5)\right|=\tfrac{1}{2}\left|-32\right|=16\) 平方單位。</li><li>用鞋帶公式對 \((0,0),(2,5),(6,-1)\) 驗算：\(\tfrac{1}{2}\left|0(5)+2(-1)+6(0)-0(2)-5(6)-(-1)(0)\right|=\tfrac{1}{2}\left|-32\right|=16\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\frac{1}{2}\,AB\cdot OM\) 當作面積。\(OM\) 是中線，不是高 —— 應改用鞋帶公式，或作一條垂線。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>平行與垂直 <span class="count">· 7 題</span></h2>
+    <p>平行則斜率相等，垂直則斜率之積為 \(-1\)</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>平行線有<i>相同</i>的斜率；垂直線的斜率之積為 \(-1\)，即 \(m_{1}m_{2}=-1\)。所以斜率為 \(\frac{a}{b}\) 的直線，其垂直線的斜率為 \(-\frac{b}{a}\) —— 上下倒轉再改符號。</p>
+    <p>鉛垂線是例外：直線 \(x=k\) 的斜率為未定義，並與任何水平線 \(y=c\) 垂直。若題目涉及鉛垂的邊，應以「鉛垂 \(\perp\) 水平」推理，而不是用斜率。</p>
+    <div class="formula"><span>\(m_{1}=m_{2}\ \Leftrightarrow\ L_{1}\parallel L_{2}\)</span><span>\(m_{1}m_{2}=-1\ \Leftrightarrow\ L_{1}\perp L_{2}\)</span><span>\(m_{\perp}=-\dfrac{1}{m}\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求一條與直線 \(y=3x+1\) 垂直的直線的斜率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(-\dfrac{1}{3}\)</div>
+<ol class="steps">
+<li>已知直線的斜率為 \(3\)。</li><li>垂直線滿足 \(m_{1}m_{2}=-1\)，所以所求斜率為 \(-\dfrac{1}{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>答成 \(\dfrac{1}{3}\) 或 \(-3\)。垂直是取負<i>倒數</i>：倒轉再改符號。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求通過 \((2,-3)\) 且與直線 \(y=2x+5\) 平行的直線方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=2x-7\)（即 \(2x-y-7=0\)）</div>
+<ol class="steps">
+<li>平行線斜率相同，所以所求斜率為 \(2\)。</li><li>點斜式：\(y-(-3)=2(x-2)\)。</li><li>\(y+3=2x-4\)，所以 \(y=2x-7\)。</li><li>驗算：\(x=2 \Rightarrow y=-3\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P2_Q26.html" target="_blank" rel="noopener">歷年試題 · 2016 卷二 Q26 ↗</a></div>
+<div class="q__body"><p>求通過 \((4,1)\) 且與直線 \(2x+3y-6=0\) 垂直的直線方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3x-2y-10=0\)</div>
+<ol class="steps">
+<li>改寫已知直線：\(3y=-2x+6\)，所以 \(y=-\dfrac{2}{3}x+2\)，其斜率為 \(-\dfrac{2}{3}\)。</li><li>所求斜率 \(=-\dfrac{1}{-2/3}=\dfrac{3}{2}\)。</li><li>點斜式：\(y-1=\dfrac{3}{2}(x-4)\)。</li><li>全式乘以 \(2\)：\(2y-2=3x-12\)，所以 \(3x-2y-10=0\)。</li><li>驗算：\(3(4)-2(1)-10=0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(2x+3y-6=0\) 的斜率當作 \(2\)。先令 \(y\) 成為主項；斜率是 \(-\frac{A}{B}=-\frac{2}{3}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>已知直線 \(L_{1}: 4x-6y+5=0\) 與 \(L_{2}: 3x+2y-1=0\)。證明 \(L_{1}\perp L_{2}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>斜率分別為 \(\dfrac{2}{3}\) 與 \(-\dfrac{3}{2}\)，而 \(\dfrac{2}{3}\times\left(-\dfrac{3}{2}\right)=-1\)，所以 \(L_{1}\perp L_{2}\)</div>
+<ol class="steps">
+<li>對 \(L_{1}\)：\(6y=4x+5\)，所以 \(y=\dfrac{2}{3}x+\dfrac{5}{6}\)，斜率 \(=\dfrac{2}{3}\)。</li><li>對 \(L_{2}\)：\(2y=-3x+1\)，所以 \(y=-\dfrac{3}{2}x+\dfrac{1}{2}\)，斜率 \(=-\dfrac{3}{2}\)。</li><li>\(\dfrac{2}{3}\times\left(-\dfrac{3}{2}\right)=-1\)，因此 \(L_{1}\perp L_{2}\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(\triangle ABC\) 的頂點為 \(A(-2,-1)\)、\(B(3,1)\) 與 \(C(1,6)\)。(a) 證明 \(\angle ABC=90^{\circ}\)。(b) 由此求 \(\triangle ABC\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(AB\) 的斜率 \(=\dfrac{2}{5}\)，\(BC\) 的斜率 \(=-\dfrac{5}{2}\)，乘積 \(=-1\)　(b) 面積 \(=14.5\) 平方單位</div>
+<ol class="steps">
+<li>(a) \(AB\) 的斜率 \(=\dfrac{1-(-1)}{3-(-2)}=\dfrac{2}{5}\)。</li><li>\(BC\) 的斜率 \(=\dfrac{6-1}{1-3}=\dfrac{5}{-2}=-\dfrac{5}{2}\)。</li><li>\(\dfrac{2}{5}\times\left(-\dfrac{5}{2}\right)=-1\)，所以 \(AB\perp BC\)，即 \(\angle ABC=90^{\circ}\)。</li><li>(b) \(AB=\sqrt{5^{2}+2^{2}}=\sqrt{29}\)，\(BC=\sqrt{(-2)^{2}+5^{2}}=\sqrt{29}\)。</li><li>面積 \(=\tfrac{1}{2}(\sqrt{29})(\sqrt{29})=\dfrac{29}{2}=14.5\) 平方單位。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(AB\) 乘 \(AC\) 當作面積。只有兩條互相垂直的邊 \(AB\) 與 \(BC\) 才是底和高。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>直線 \(L\) 的方程為 \(3x+4y-24=0\)。(a) 求 \(L\) 的斜率。(b) 求通過原點 \(O\) 且垂直於 \(L\) 的直線方程。(c) 設 \(N\) 為由 \(O\) 到 \(L\) 的垂足，求 \(N\) 的坐標。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(-\dfrac{3}{4}\)　(b) \(4x-3y=0\)　(c) \(N\left(\dfrac{72}{25},\dfrac{96}{25}\right)=\left(2.88,3.84\right)\)</div>
+<ol class="steps">
+<li>(a) \(4y=-3x+24\)，所以 \(y=-\dfrac{3}{4}x+6\)，斜率 \(=-\dfrac{3}{4}\)。</li><li>(b) 所求斜率 \(=\dfrac{4}{3}\)；過 \((0,0)\)：\(y=\dfrac{4}{3}x\)，即 \(4x-3y=0\)。</li><li>(c) 解 \(3x+4y=24\) 與 \(4x-3y=0\)。由第二式得 \(y=\dfrac{4}{3}x\)。</li><li>代入：\(3x+4\left(\dfrac{4}{3}x\right)=24 \Rightarrow 3x+\dfrac{16}{3}x=24 \Rightarrow \dfrac{25}{3}x=24\)，所以 \(x=\dfrac{72}{25}\)，而 \(y=\dfrac{4}{3}\cdot\dfrac{72}{25}=\dfrac{96}{25}\)。</li><li>故 \(N\left(\dfrac{72}{25},\dfrac{96}{25}\right)\approx(2.88,3.84)\)。</li><li>驗算：\(ON=\sqrt{2.88^{2}+3.84^{2}}=\sqrt{8.2944+14.7456}=\sqrt{23.04}=4.8=\dfrac{24}{5}\)，正是 \(O\) 到 \(L\) 的垂直距離。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P1_Q14.html" target="_blank" rel="noopener">歷年試題 · 2013 卷一 Q14 ↗</a></div>
+<div class="q__body"><p>\(A(2,1)\) 與 \(B(6,5)\) 為兩點。直線 \(L_{1}\) 通過 \(A\) 與 \(B\)。(a) 求 \(L_{1}\) 的方程。(b) 直線 \(L_{2}\) 通過 \(B\) 且垂直於 \(L_{1}\)，求 \(L_{2}\) 的方程。(c) \(L_{2}\) 與 \(x\) 軸相交於 \(C\)。求 \(C\) 的坐標及 \(\triangle ABC\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x-y-1=0\)　(b) \(x+y-11=0\)　(c) \(C(11,0)\)，面積 \(=20\) 平方單位</div>
+<ol class="steps">
+<li>(a) 斜率 \(=\dfrac{5-1}{6-2}=1\)。過 \(A(2,1)\)：\(y-1=x-2\)，所以 \(y=x-1\)，即 \(x-y-1=0\)。</li><li>(b) 垂直的斜率 \(=-1\)。過 \(B(6,5)\)：\(y-5=-(x-6)\)，所以 \(y=-x+11\)，即 \(x+y-11=0\)。</li><li>(c) 在 \(x+y-11=0\) 中代入 \(y=0\)：\(x=11\)，所以 \(C(11,0)\)。</li><li>\(\triangle ABC\) 的面積，頂點為 \(A(2,1),B(6,5),C(11,0)\)：</li><li>\(=\tfrac{1}{2}\left|2(5-0)+6(0-1)+11(1-5)\right|=\tfrac{1}{2}\left|10-6-44\right|=\tfrac{1}{2}(40)=20\) 平方單位。</li><li>驗算：\(AB=\sqrt{16+16}=4\sqrt{2}\)，\(BC=\sqrt{25+25}=5\sqrt{2}\)；因 \(\angle ABC=90^{\circ}\)，面積 \(=\tfrac{1}{2}(4\sqrt{2})(5\sqrt{2})=20\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>以 \(AC\) 為底，用 \(B\) 的 \(y\) 坐標作高。本題 \(AC\) 不是水平線 —— 直角在 \(B\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>直線的交點與由頂點求面積 <span class="count">· 7 題</span></h2>
+    <p>先解聯立方程，再用頂點面積公式</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>兩條直線相交於同時滿足兩個方程的唯一一點 —— 解聯立方程即可。這一點往往是三角形的頂點，所以交點題與面積題通常一對出現：先找出三個頂點，再套用面積公式。</p>
+    <p>對 \(A(x_{1},y_{1})\)、\(B(x_{2},y_{2})\)、\(C(x_{3},y_{3})\)，下面的有向「鞋帶」和等於面積的兩倍，取絕對值即可。若其中一邊是水平或鉛垂，用 \(\tfrac{1}{2}\times\)底\(\times\)高 會更快。</p>
+    <div class="formula"><span>\(\text{面積}=\tfrac{1}{2}\left|x_{1}(y_{2}-y_{3})+x_{2}(y_{3}-y_{1})+x_{3}(y_{1}-y_{2})\right|\)</span><span>\(\text{面積}=\tfrac{1}{2}\left|x_{1}y_{2}-x_{2}y_{1}\right|\)</span><span>\(\text{面積}=\tfrac{1}{2}bh\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求直線 \(y=2x+1\) 與 \(y=-x+7\) 的交點坐標。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((2,5)\)</div>
+<ol class="steps">
+<li>在交點處兩個 \(y\) 值相等：\(2x+1=-x+7\)。</li><li>\(3x=6\)，所以 \(x=2\)。</li><li>於是 \(y=2(2)+1=5\)。交點為 \((2,5)\)。</li><li>用第二條直線驗算：\(-2+7=5\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只把 \(x=2\) 代入其中一條方程。解必須同時滿足<i>兩條</i>方程 —— 一定要用你沒有用過的那條驗算。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q24.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q24 ↗</a></div>
+<div class="q__body"><p>解聯立方程 \(3x+2y=16\) 與 \(x-y=2\)，求兩條直線的交點。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((4,2)\)</div>
+<ol class="steps">
+<li>由 \(x-y=2\) 得 \(x=y+2\)。</li><li>代入 \(3x+2y=16\)：\(3(y+2)+2y=16\)。</li><li>\(3y+6+2y=16 \Rightarrow 5y=10 \Rightarrow y=2\)。</li><li>於是 \(x=2+2=4\)。交點為 \((4,2)\)。</li><li>驗算：\(3(4)+2(2)=16\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>求頂點為 \(O(0,0)\)、\(A(5,1)\) 與 \(B(2,6)\) 的三角形面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(14\) 平方單位</div>
+<ol class="steps">
+<li>其中一個頂點在原點，公式可簡化為 \(\tfrac{1}{2}\left|x_{A}y_{B}-x_{B}y_{A}\right|\)。</li><li>面積 \(=\tfrac{1}{2}\left|5(6)-2(1)\right|=\tfrac{1}{2}\left|30-2\right|\)。</li><li>\(=\tfrac{1}{2}(28)=14\) 平方單位。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>忘記取絕對值而答 \(-14\)。面積必為正數；鞋帶和的正負取決於頂點的排列次序。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>求頂點為 \(A(1,2)\)、\(B(7,4)\) 與 \(C(3,10)\) 的三角形面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(22\) 平方單位</div>
+<ol class="steps">
+<li>面積 \(=\tfrac{1}{2}\left|x_{A}(y_{B}-y_{C})+x_{B}(y_{C}-y_{A})+x_{C}(y_{A}-y_{B})\right|\)。</li><li>\(=\tfrac{1}{2}\left|1(4-10)+7(10-2)+3(2-4)\right|\)</li><li>\(=\tfrac{1}{2}\left|-6+56-6\right|=\tfrac{1}{2}(44)=22\) 平方單位。</li><li>結果為正數，所以 \(A\)、\(B\)、\(C\) 不共線。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>四邊形的頂點依次為 \(A(0,1)\)、\(B(4,0)\)、\(C(6,4)\) 與 \(D(2,6)\)。求其面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(21\) 平方單位</div>
+<ol class="steps">
+<li>沿對角線 \(AC\) 把四邊形分成 \(\triangle ABC\) 與 \(\triangle ACD\)。</li><li>\(\triangle ABC\) 的面積 \(=\tfrac{1}{2}\left|0(0-4)+4(4-1)+6(1-0)\right|=\tfrac{1}{2}\left|0+12+6\right|=9\)。</li><li>\(\triangle ACD\) 的面積 \(=\tfrac{1}{2}\left|0(4-6)+6(6-1)+2(1-4)\right|=\tfrac{1}{2}\left|0+30-6\right|=12\)。</li><li>總面積 \(=9+12=21\) 平方單位。</li><li>用鞋帶和驗算：\(\tfrac{1}{2}\left|(0+16+36+2)-(4+0+8+0)\right|=\tfrac{1}{2}(54-12)=21\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把頂點次序弄亂，例如 \(A,B,D,C\)。鞋帶公式要求頂點依邊界次序排列，否則計出的是自我交叉的圖形。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>\(A(-2,1)\)、\(B(4,5)\) 與 \(C(6,-3)\) 為三角形的頂點。(a) 求 \(\triangle ABC\) 的面積。(b) 由此求 \(B\) 到直線 \(AC\) 的垂直距離，準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(28\) 平方單位　(b) \(6.26\)（準確值為 \(\dfrac{14\sqrt{5}}{5}\)）</div>
+<ol class="steps">
+<li>(a) 面積 \(=\tfrac{1}{2}\left|-2(5-(-3))+4(-3-1)+6(1-5)\right|\)</li><li>\(=\tfrac{1}{2}\left|-16-16-24\right|=\tfrac{1}{2}(56)=28\) 平方單位。</li><li>(b) \(AC=\sqrt{(6-(-2))^{2}+(-3-1)^{2}}=\sqrt{64+16}=\sqrt{80}=4\sqrt{5}\)。</li><li>\(\tfrac{1}{2}\cdot AC\cdot h=28 \Rightarrow \tfrac{1}{2}(4\sqrt{5})h=28 \Rightarrow 2\sqrt{5}\,h=28\)。</li><li>\(h=\dfrac{28}{2\sqrt{5}}=\dfrac{14}{\sqrt{5}}=\dfrac{14\sqrt{5}}{5}\approx 6.26\)（3 位有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q12.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q12 ↗</a></div>
+<div class="q__body"><p>直線 \(L_{1}: 2x-y+4=0\) 與直線 \(L_{2}: x+y-7=0\) 相交於 \(A\)。\(L_{1}\) 與 \(x\) 軸相交於 \(B\)，\(L_{2}\) 與 \(x\) 軸相交於 \(C\)。(a) 求 \(A\)、\(B\)、\(C\) 的坐標。(b) 求 \(\triangle ABC\) 的面積。(c) 求 \(AB\) 的長度，準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(A(1,6)\)、\(B(-2,0)\)、\(C(7,0)\)　(b) \(27\) 平方單位　(c) \(AB\approx 6.71\)</div>
+<ol class="steps">
+<li>(a) 解 \(2x-y=-4\) 與 \(x+y=7\)。相加：\(3x=3\)，所以 \(x=1\)，再得 \(y=6\)。故 \(A(1,6)\)。</li><li>在 \(x\) 軸上 \(y=0\)：\(2x+4=0\) 得 \(x=-2\)，所以 \(B(-2,0)\)；\(x-7=0\) 得 \(x=7\)，所以 \(C(7,0)\)。</li><li>(b) \(BC\) 在 \(x\) 軸上，長度為 \(7-(-2)=9\)；\(A\) 到 \(BC\) 的高就是它的 \(y\) 坐標 \(6\)。</li><li>面積 \(=\tfrac{1}{2}(9)(6)=27\) 平方單位。</li><li>(c) \(AB=\sqrt{(1-(-2))^{2}+(6-0)^{2}}=\sqrt{9+36}=\sqrt{45}=3\sqrt{5}\approx 6.71\)（3 位有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 \(2x-y+4=0\) 中代入 \(y=0\) 卻得 \(x=2\)。除得要正確：\(2x=-4\) 得 \(x=-2\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>圓的方程：圓心、半徑與配方法 <span class="count">· 7 題</span></h2>
+    <p>標準式、一般式與配方法</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>圓就是與固定圓心 \((h,k)\) 相距固定距離 \(r\) 的所有點，這就是標準式。把它展開便得一般式 \(x^{2}+y^{2}+Dx+Ey+F=0\)，其中 \(x^{2}\) 與 \(y^{2}\) 的係數相等（同除以某數後都是 \(1\)），而且沒有 \(xy\) 項。</p>
+    <p>要反過來求圓心與半徑，就連續用兩次配方法：圓心 \(=\left(-\frac{D}{2},-\frac{E}{2}\right)\)，而 \(r=\sqrt{\frac{D^{2}}{4}+\frac{E^{2}}{4}-F}\)。只有當根號內的值為正數，圓才存在。</p>
+    <div class="formula"><span>\((x-h)^{2}+(y-k)^{2}=r^{2}\)</span><span>\(x^{2}+y^{2}+Dx+Ey+F=0\)</span><span>\(\text{圓心}\left(-\tfrac{D}{2},-\tfrac{E}{2}\right),\ r=\sqrt{\tfrac{D^{2}+E^{2}}{4}-F}\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>寫出圓 \((x-3)^{2}+(y+2)^{2}=25\) 的圓心與半徑。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>圓心 \((3,-2)\)，半徑 \(5\)</div>
+<ol class="steps">
+<li>與 \((x-h)^{2}+(y-k)^{2}=r^{2}\) 比較：此處 \(h=3\)，而 \(y-k=y+2=y-(-2)\)，所以 \(k=-2\)。</li><li>\(r^{2}=25\)，所以 \(r=5\)（半徑取正數）。</li><li>圓心 \((3,-2)\)，半徑 \(5\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把圓心讀成 \((3,2)\)。括號 \((y+2)\) 表示 \(k=-2\)：符號要反過來。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求圓心為 \((2,-5)\)、半徑為 \(4\) 的圓的方程，先寫標準式，再寫成一般式 \(x^{2}+y^{2}+Dx+Ey+F=0\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((x-2)^{2}+(y+5)^{2}=16\)，即 \(x^{2}+y^{2}-4x+10y+13=0\)</div>
+<ol class="steps">
+<li>標準式：\((x-2)^{2}+(y-(-5))^{2}=4^{2}\)，即 \((x-2)^{2}+(y+5)^{2}=16\)。</li><li>展開：\(x^{2}-4x+4+y^{2}+10y+25=16\)。</li><li>\(x^{2}+y^{2}-4x+10y+13=0\)（因為 \(4+25-16=13\)）。</li><li>用圓心公式驗算：\(-\dfrac{D}{2}=-\dfrac{-4}{2}=2\)，\(-\dfrac{E}{2}=-\dfrac{10}{2}=-5\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q25.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q25 ↗</a></div>
+<div class="q__body"><p>求圓 \(x^{2}+y^{2}-6x+8y-11=0\) 的圓心與半徑。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>圓心 \((3,-4)\)，半徑 \(6\)</div>
+<ol class="steps">
+<li>分組：\((x^{2}-6x)+(y^{2}+8y)=11\)。</li><li>配方法：\((x-3)^{2}-9+(y+4)^{2}-16=11\)。</li><li>\((x-3)^{2}+(y+4)^{2}=11+9+16=36\)。</li><li>圓心 \((3,-4)\)，半徑 \(\sqrt{36}=6\)。</li><li>用公式驗算：\(r=\sqrt{\dfrac{36+64}{4}+11}=\sqrt{25+11}=6\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(-11\) 移項到右邊時仍然寫成 \(-11\)。常數項本來就在左邊，移過去要變號為 \(+11\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>求圓 \(x^{2}+y^{2}+4x-10y+13=0\) 的圓心與半徑。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>圓心 \((-2,5)\)，半徑 \(4\)</div>
+<ol class="steps">
+<li>\((x^{2}+4x)+(y^{2}-10y)=-13\)。</li><li>\((x+2)^{2}-4+(y-5)^{2}-25=-13\)。</li><li>\((x+2)^{2}+(y-5)^{2}=-13+4+25=16\)。</li><li>圓心 \((-2,5)\)，半徑 \(\sqrt{16}=4\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q26.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q26 ↗</a></div>
+<div class="q__body"><p>\(A(1,2)\) 與 \(B(7,10)\) 是一個圓 \(C\) 的一條直徑的兩端。(a) 求 \(C\) 的圓心與半徑。(b) 求 \(C\) 的方程，以一般式 \(x^{2}+y^{2}+Dx+Ey+F=0\) 表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 圓心 \((4,6)\)，半徑 \(5\)　(b) \(x^{2}+y^{2}-8x-12y+27=0\)</div>
+<ol class="steps">
+<li>(a) 圓心是直徑的中點：\(\left(\dfrac{1+7}{2},\dfrac{2+10}{2}\right)=(4,6)\)。</li><li>半徑是直徑的一半：\(AB=\sqrt{6^{2}+8^{2}}=10\)，所以 \(r=5\)。</li><li>(b) \((x-4)^{2}+(y-6)^{2}=25\)。</li><li>展開：\(x^{2}-8x+16+y^{2}-12y+36=25\)。</li><li>\(x^{2}+y^{2}-8x-12y+27=0\)（因為 \(16+36-25=27\)）。</li><li>驗算：代入 \(A(1,2)\) 得 \(1+4-8-24+27=0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(AB\) 本身當作半徑。直徑的兩端都在圓<i>上</i>，所以 \(r=\tfrac{1}{2}AB\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}-8x+6y-24=0\)。(a) 求 \(C\) 的圓心與半徑。(b) 證明點 \(P(11,-3)\) 在 \(C\) 上。(c) 求 \(C\) 在 \(P\) 點的切線方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 圓心 \((4,-3)\)，半徑 \(7\)　(b) \(CP=7=r\)，所以 \(P\) 在 \(C\) 上　(c) \(x=11\)</div>
+<ol class="steps">
+<li>(a) \((x-4)^{2}-16+(y+3)^{2}-9=24 \Rightarrow (x-4)^{2}+(y+3)^{2}=49\)。圓心 \((4,-3)\)，半徑 \(7\)。</li><li>(b) \(CP=\sqrt{(11-4)^{2}+(-3+3)^{2}}=\sqrt{49+0}=7\)，等於半徑，所以 \(P\) 在 \(C\) 上。</li><li>(c) 半徑 \(CP\) 是水平的（兩點的 \(y\) 坐標都是 \(-3\)），所以 \(P\) 點的切線是鉛垂線。</li><li>通過 \(P(11,-3)\) 的鉛垂線為 \(x=11\)。</li><li>驗算：\(x=11\) 與圓只有一個交點 \(P\)，因為 \((11-4)^{2}+(y+3)^{2}=49\) 迫使 \((y+3)^{2}=0\)，即 \(y=-3\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一個圓通過 \(P(1,0)\)、\(Q(7,0)\) 與 \(R(0,7)\)。(a) 把三點代入 \(x^{2}+y^{2}+Dx+Ey+F=0\)，求 \(D\)、\(E\)、\(F\)。(b) 由此寫出該圓的圓心與半徑。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(D=-8,\ E=-8,\ F=7\)，所以圓為 \(x^{2}+y^{2}-8x-8y+7=0\)　(b) 圓心 \((4,4)\)，半徑 \(5\)</div>
+<ol class="steps">
+<li>(a) 代入 \(P(1,0)\)：\(1+0+D+F=0 \Rightarrow D+F=-1\ \ldots(1)\)。</li><li>代入 \(Q(7,0)\)：\(49+7D+F=0 \Rightarrow 7D+F=-49\ \ldots(2)\)。</li><li>\((2)-(1)\)：\(6D=-48\)，所以 \(D=-8\)；於是 \(F=-1-(-8)=7\)。</li><li>代入 \(R(0,7)\)：\(49+7E+F=0 \Rightarrow 49+7E+7=0 \Rightarrow 7E=-56 \Rightarrow E=-8\)。</li><li>所以該圓為 \(x^{2}+y^{2}-8x-8y+7=0\)。</li><li>(b) \((x-4)^{2}+(y-4)^{2}=16+16-7=25\)。圓心 \((4,4)\)，半徑 \(5\)。</li><li>驗算：\(P(1,0)\)：\(1-8+7=0\) ✔；\(R(0,7)\)：\(49-56+7=0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只解三條方程中的兩條。三個未知係數需要三個條件 —— 在本題就是那三個點。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>圓的切線、點到直線的距離與軌跡 <span class="count">· 7 題</span></h2>
+    <p>一條公式串連相切、垂直距離與軌跡</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>點到直線的垂直距離，量度一點與一條直線相距多遠，而所有相切問題都靠它解決。一條直線是圓的<i>切線</i>，若且唯若圓心到該直線的垂直距離等於半徑；距離較小則是弦，距離較大則與圓不相交。</p>
+    <p>軌跡題其實只是用方程寫出一個描述：「與兩點等距」得出垂直平分線，「與一點保持固定距離」得出圓，而 \(PA^{2}+PB^{2}=k\) 配方之後同樣是一個圓。</p>
+    <div class="formula"><span>\(d=\dfrac{|Ax_{0}+By_{0}+C|}{\sqrt{A^{2}+B^{2}}}\)</span><span>\(d=r\ \Leftrightarrow\ \text{切線}\)</span><span>\(\text{切線}\perp\text{切點上的半徑}\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求由原點 \(O(0,0)\) 到直線 \(3x+4y-20=0\) 的垂直距離。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4\)</div>
+<ol class="steps">
+<li>\(d=\dfrac{|3(0)+4(0)-20|}{\sqrt{3^{2}+4^{2}}}\)</li><li>\(=\dfrac{20}{5}=4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以 \(\sqrt{3^{2}+4^{2}}\) 是對的，但停在 \(d=\frac{20}{25}\) 就錯了：\(3^{2}+4^{2}=25\)，平方根是 \(5\)，不是 \(25\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2012_P2_Q25.html" target="_blank" rel="noopener">歷年試題 · 2012 卷二 Q25 ↗</a></div>
+<div class="q__body"><p>求由點 \((2,7)\) 到直線 \(3x-4y+5=0\) 的垂直距離。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\dfrac{17}{5}=3.4\)</div>
+<ol class="steps">
+<li>代入該點：\(3(2)-4(7)+5=6-28+5=-17\)。</li><li>分母：\(\sqrt{3^{2}+(-4)^{2}}=\sqrt{25}=5\)。</li><li>\(d=\dfrac{|-17|}{5}=\dfrac{17}{5}=3.4\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>直線 \(4x-3y+k=0\) 是圓 \(x^{2}+y^{2}=25\) 的切線。求 \(k\) 的兩個可能值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(k=25\) 或 \(k=-25\)</div>
+<ol class="steps">
+<li>圓的圓心為 \((0,0)\)，半徑為 \(5\)。</li><li>由 \((0,0)\) 到該直線的距離為 \(\dfrac{|4(0)-3(0)+k|}{\sqrt{4^{2}+(-3)^{2}}}=\dfrac{|k|}{5}\)。</li><li>相切要求 \(\dfrac{|k|}{5}=5\)，所以 \(|k|=25\)。</li><li>故 \(k=25\) 或 \(k=-25\)：兩條平行切線，分別在圓的兩側。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把直線在圓心處的值直接等於 \(5\)，而沒有除以 \(\sqrt{4^{2}+3^{2}}\)。距離公式一定要除以 \(\sqrt{A^{2}+B^{2}}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>描述並求動點 \(P(x,y)\) 的軌跡方程，該點與 \(A(2,3)\) 及 \(B(6,-1)\) 等距。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(AB\) 的垂直平分線：\(x-y-3=0\)</div>
+<ol class="steps">
+<li>與 \(A\)、\(B\) 等距的點的軌跡，就是 \(AB\) 的垂直平分線。</li><li>\(AB\) 的中點 \(=\left(\dfrac{2+6}{2},\dfrac{3-1}{2}\right)=(4,1)\)。</li><li>\(AB\) 的斜率 \(=\dfrac{-1-3}{6-2}=-1\)，所以垂直的斜率為 \(1\)。</li><li>\(y-1=1(x-4) \Rightarrow y=x-3\)，即 \(x-y-3=0\)。</li><li>用 \(A\) 驗算：\(AP^{2}=(x-2)^{2}+(y-3)^{2}\)，\(BP^{2}=(x-6)^{2}+(y+1)^{2}\)；令兩式相等並化簡，得 \(8x-8y-24=0\)，即 \(x-y-3=0\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>點 \(P(x,y)\) 移動時滿足 \(PA^{2}+PB^{2}=50\)，其中 \(A(0,0)\)、\(B(6,0)\)。(a) 求 \(P\) 的軌跡方程。(b) 以幾何方法描述該軌跡。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x^{2}+y^{2}-6x-7=0\)　(b) 一個圓心為 \((3,0)\)、半徑為 \(4\) 的圓</div>
+<ol class="steps">
+<li>(a) \(PA^{2}=x^{2}+y^{2}\)，\(PB^{2}=(x-6)^{2}+y^{2}\)。</li><li>所以 \(x^{2}+y^{2}+(x-6)^{2}+y^{2}=50\)。</li><li>\(2x^{2}-12x+36+2y^{2}=50 \Rightarrow x^{2}+y^{2}-6x-7=0\)。</li><li>(b) 配方：\((x-3)^{2}-9+y^{2}=7 \Rightarrow (x-3)^{2}+y^{2}=16\)。</li><li>軌跡是一個圓心為 \((3,0)\)、半徑為 \(4\) 的圓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>合併得 \(2x^{2}\) 與 \(2y^{2}\) 之後忘記除以 2。圓的一般式要求兩個平方項的係數都是 \(1\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}-4x+6y-12=0\)。(a) 求 \(C\) 的圓心與半徑。(b) 證明直線 \(L: 4x-3y+8=0\) 是 \(C\) 的切線。(c) 求切點的坐標。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 圓心 \((2,-3)\)，半徑 \(5\)　(b) 距離 \(=5=\) 半徑　(c) \((-2,0)\)</div>
+<ol class="steps">
+<li>(a) \((x-2)^{2}+(y+3)^{2}=4+9+12=25\)，所以圓心為 \((2,-3)\)，\(r=5\)。</li><li>(b) \(d=\dfrac{|4(2)-3(-3)+8|}{\sqrt{16+9}}=\dfrac{|8+9+8|}{5}=\dfrac{25}{5}=5\)。</li><li>因為 \(d=r\)，\(L\) 與 \(C\) 只交於一點：\(L\) 是切線。</li><li>(c) 切點在 \(L\) 上，位於由圓心所作的垂線上。法線方向為 \((4,-3)\)，其長度為 \(5\)。</li><li>由圓心沿法線的反方向移動 \(5\) 個單位：\((2,-3)-\dfrac{5}{5}(4,-3)=(2-4,-3+3)=(-2,0)\)。</li><li>驗算：\(4(-2)-3(0)+8=0\) ✔，且 \((-2)^{2}+0-4(-2)+0-12=4+8-12=0\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P1_Q17.html" target="_blank" rel="noopener">歷年試題 · 2024 卷一 Q17 ↗</a></div>
+<div class="q__body"><p>圓 \(C\) 的圓心為 \(A(1,2)\)，並與直線 \(L: 3x+4y-5=0\) 相切。(a) 求 \(C\) 的半徑。(b) 求 \(C\) 的方程。(c) 判斷點 \(P(2,3)\) 在 \(C\) 內、在 \(C\) 上還是在 \(C\) 外，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\dfrac{6}{5}=1.2\)　(b) \((x-1)^{2}+(y-2)^{2}=\dfrac{36}{25}\)　(c) 在圓外，因為 \(AP=\sqrt{2}\approx 1.41&gt;1.2\)</div>
+<ol class="steps">
+<li>(a)「相切」即該直線是切線，所以半徑等於 \(A\) 到 \(L\) 的垂直距離。</li><li>\(r=\dfrac{|3(1)+4(2)-5|}{\sqrt{3^{2}+4^{2}}}=\dfrac{|3+8-5|}{5}=\dfrac{6}{5}=1.2\)。</li><li>(b) \((x-1)^{2}+(y-2)^{2}=\left(\dfrac{6}{5}\right)^{2}=\dfrac{36}{25}\)。</li><li>(c) \(AP=\sqrt{(2-1)^{2}+(3-2)^{2}}=\sqrt{1+1}=\sqrt{2}\approx 1.414\)。</li><li>因為 \(AP&gt;r\)，點 \(P\) 在 \(C\) 外。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(P\) 代入展開後的方程並與 \(0\) 比較，卻不知判斷規則。應把 \(AP\) 與 \(r\) 比較 —— 在圓內即 \(AP&lt;r\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度多部分題：圓與直線 <span class="count">· 8 題</span></h2>
+    <p>完整卷一風格，混合直線與圓</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>長題從不只考一條公式 —— 它把公式串連起來。常見的骨架是：(a) 求或讀出圓心與半徑；(b) 把第二個條件（圓上的一點、一條切線、一條垂直平分線）寫成方程；(c) 用 \(d=r\)、垂直距離公式或面積公式收尾。(a) 部分通常是最容易取分的地方，所以千萬不要留空。</p>
+    <p>在最後一行之前都要保持準確值（\(\sqrt{65}\)、\(\frac{7}{5}\)），到最後才取 3 位有效數字。「證明」部分即使證不出來，之後的部分仍可直接引用其結果。</p>
+    <div class="formula"><span>\(d=r\ \Rightarrow\ \text{切線}\)</span><span>\(\text{切線長}^{2}=d^{2}-r^{2}\)</span><span>\(\text{面積}=\tfrac{1}{2}\left|x_{1}(y_{2}-y_{3})+x_{2}(y_{3}-y_{1})+x_{3}(y_{1}-y_{2})\right|\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(A(1,-2)\) 與 \(B(5,6)\) 為兩點。(a) 求 \(AB\) 的斜率。(b) 求直線 \(AB\) 的方程，以 \(Ax+By+C=0\) 的形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(2\)　(b) \(2x-y-4=0\)</div>
+<ol class="steps">
+<li>(a) 斜率 \(=\dfrac{6-(-2)}{5-1}=\dfrac{8}{4}=2\)。</li><li>(b) \(y-(-2)=2(x-1) \Rightarrow y+2=2x-2\)。</li><li>\(2x-y-4=0\)。</li><li>驗算：\(B(5,6)\)：\(10-6-4=0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(-(-2)\) 讀成 \(-2\)。斜率與方程都需要 \(y+2\)，即 \(y-(-2)\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q24.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q24 ↗</a></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}+2x-8y+8=0\)。(a) 求 \(C\) 的圓心。(b) 求 \(C\) 的半徑。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((-1,4)\)　(b) \(3\)</div>
+<ol class="steps">
+<li>(a) \((x+1)^{2}-1+(y-4)^{2}-16+8=0\)，所以 \((x+1)^{2}+(y-4)^{2}=9\)。</li><li>圓心為 \((-1,4)\)。</li><li>(b) \(r^{2}=9\)，所以 \(r=3\)。</li><li>公式驗算：\(r=\sqrt{\dfrac{2^{2}+(-8)^{2}}{4}-8}=\sqrt{17-8}=3\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>\(A(-3,2)\) 與 \(B(5,6)\) 是一個圓 \(C\) 的一條直徑的兩端。(a) 求 \(C\) 的方程。(b) 證明點 \(C_{1}(5,2)\) 在 \(C\) 上。(c) 由此證明 \(\angle AC_{1}B=90^{\circ}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((x-1)^{2}+(y-4)^{2}=20\)，即 \(x^{2}+y^{2}-2x-8y-3=0\)　(b) 代入後得 \(0\)　(c) \(AC_{1}\) 是水平線，而 \(C_{1}B\) 是鉛垂線</div>
+<ol class="steps">
+<li>(a) 圓心 \(=\) \(AB\) 的中點 \(=\left(\dfrac{-3+5}{2},\dfrac{2+6}{2}\right)=(1,4)\)。</li><li>\(AB=\sqrt{8^{2}+4^{2}}=\sqrt{80}=4\sqrt{5}\)，所以 \(r=2\sqrt{5}\)，\(r^{2}=20\)。</li><li>\((x-1)^{2}+(y-4)^{2}=20\)，即 \(x^{2}+y^{2}-2x-8y-3=0\)。</li><li>(b) 代入 \(x=5,\ y=2\)：\(25+4-10-16-3=0\)。✔ 所以 \(C_{1}\) 在 \(C\) 上。</li><li>(c) \(AC_{1}\) 的斜率 \(=\dfrac{2-2}{5-(-3)}=0\)（水平）；\(C_{1}B\) 連接 \((5,2)\) 與 \((5,6)\)，是一條鉛垂線。</li><li>水平線與鉛垂線互相垂直，所以 \(\angle AC_{1}B=90^{\circ}\) —— 半圓上的圓周角。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>想用除法求 \(C_{1}B\) 的斜率而除以零。鉛垂線的斜率是<i>未定義</i>；應寫「鉛垂」，並用「水平 \(\perp\) 鉛垂」推理。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>直線 \(L_{1}: 2x+y-8=0\) 與 \(L_{2}: x-2y+1=0\) 相交於 \(P\)。(a) 求 \(P\) 的坐標。(b) 證明 \(L_{1}\perp L_{2}\)。(c) \(L_{1}\) 與 \(L_{2}\) 分別與 \(y\) 軸相交於 \(A\) 和 \(B\)。求 \(\triangle PAB\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(P(3,2)\)　(b) 斜率 \(-2\) 與 \(\dfrac{1}{2}\) 之積為 \(-1\)　(c) \(11.25\) 平方單位</div>
+<ol class="steps">
+<li>(a) 由 \(L_{1}\)：\(y=8-2x\)。代入 \(L_{2}\)：\(x-2(8-2x)+1=0\)。</li><li>\(x-16+4x+1=0 \Rightarrow 5x=15 \Rightarrow x=3\)，而 \(y=8-6=2\)。所以 \(P(3,2)\)。</li><li>(b) \(L_{1}: y=-2x+8\)，斜率 \(-2\)；\(L_{2}: y=\dfrac{1}{2}x+\dfrac{1}{2}\)，斜率 \(\dfrac{1}{2}\)。乘積 \(=-1\)，所以 \(L_{1}\perp L_{2}\)。</li><li>(c) 在 \(y\) 軸上（\(x=0\)）：\(A(0,8)\) 與 \(B\left(0,\dfrac{1}{2}\right)\)，所以 \(AB=8-\dfrac{1}{2}=\dfrac{15}{2}\)。</li><li>由 \(P\) 到 \(y\) 軸的垂直距離就是 \(P\) 的 \(x\) 坐標，即 \(3\)。</li><li>面積 \(=\tfrac{1}{2}\cdot\dfrac{15}{2}\cdot 3=\dfrac{45}{4}=11.25\) 平方單位。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q17.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q17 ↗</a></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}-6x+2y-15=0\)。(a) 求 \(C\) 的圓心與半徑。(b) 證明點 \(A(7,2)\) 在 \(C\) 上。(c) 求 \(C\) 在 \(A\) 點的切線方程，以 \(Ax+By+C=0\) 的形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 圓心 \((3,-1)\)，半徑 \(5\)　(b) \(7^{2}+2^{2}-42+4-15=0\)　(c) \(4x+3y-34=0\)</div>
+<ol class="steps">
+<li>(a) \((x-3)^{2}+(y+1)^{2}=9+1+15=25\)。圓心 \((3,-1)\)，半徑 \(5\)。</li><li>(b) \(x^{2}+y^{2}-6x+2y-15=49+4-42+4-15=0\)。✔ 所以 \(A\) 在 \(C\) 上。</li><li>(c) 半徑 \(CA\) 的斜率 \(=\dfrac{2-(-1)}{7-3}=\dfrac{3}{4}\)，所以切線的斜率為 \(-\dfrac{4}{3}\)。</li><li>\(y-2=-\dfrac{4}{3}(x-7)\)</li><li>全式乘以 \(3\)：\(3y-6=-4x+28 \Rightarrow 4x+3y-34=0\)。</li><li>驗證相切：\(d=\dfrac{|4(3)+3(-1)-34|}{5}=\dfrac{|-25|}{5}=5=r\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把半徑的斜率 \(\frac{3}{4}\) 當作切線的斜率。切線與切點上的半徑垂直。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>\(A(-2,1)\)、\(B(6,5)\) 與 \(C(5,-3)\) 為三點。(a) 求 \(\triangle ABC\) 的面積。(b) 求 \(AB\) 的垂直平分線方程。(c) 證明 \(C\) 在這條垂直平分線上，並由此指出 \(CA\) 與 \(CB\) 有甚麼關係。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(30\) 平方單位　(b) \(2x+y-7=0\)　(c) \(C\) 滿足該方程，所以 \(CA=CB=\sqrt{65}\)</div>
+<ol class="steps">
+<li>(a) 面積 \(=\tfrac{1}{2}\left|-2(5-(-3))+6(-3-1)+5(1-5)\right|=\tfrac{1}{2}\left|-16-24-20\right|=30\) 平方單位。</li><li>(b) \(AB\) 的中點 \(=\left(\dfrac{-2+6}{2},\dfrac{1+5}{2}\right)=(2,3)\)。</li><li>\(AB\) 的斜率 \(=\dfrac{5-1}{6-(-2)}=\dfrac{4}{8}=\dfrac{1}{2}\)，所以垂直的斜率為 \(-2\)。</li><li>\(y-3=-2(x-2) \Rightarrow y=-2x+7\)，即 \(2x+y-7=0\)。</li><li>(c) 代入 \(C(5,-3)\)：\(2(5)+(-3)-7=10-3-7=0\)。✔ 所以 \(C\) 在垂直平分線上。</li><li>垂直平分線上的每一點都與兩端等距，所以 \(CA=CB\)。</li><li>驗算：\(CA=\sqrt{7^{2}+4^{2}}=\sqrt{65}\)，\(CB=\sqrt{1^{2}+8^{2}}=\sqrt{65}\)。✔ \(\triangle ABC\) 是等腰三角形。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>以 \(AB\) 為底，用 \(C\) 的 \(y\) 坐標作高。\(AB\) 不是水平線；應改用頂點公式，或把三角形分割。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}=25\)，直線 \(L\) 的方程為 \(3x+4y=15\)。(a) 證明 \(L\) 與 \(C\) 交於兩點，並求這兩個交點的坐標。(b) 求 \(L\) 在 \(C\) 上截出的弦長。(c) 求原點 \(O\) 與兩個交點所構成的三角形面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((5,0)\) 與 \(\left(-\dfrac{7}{5},\dfrac{24}{5}\right)\)　(b) \(8\)　(c) \(12\) 平方單位</div>
+<ol class="steps">
+<li>由 \(O(0,0)\) 到 \(L\) 的距離：\(d=\dfrac{|3(0)+4(0)-15|}{5}=3\)。因為 \(d=3&lt;5=r\)，\(L\) 與 \(C\) 相交於兩點。</li><li>(a) \(y=\dfrac{15-3x}{4}\)。代入 \(x^{2}+y^{2}=25\)：\(x^{2}+\dfrac{(15-3x)^{2}}{16}=25\)。</li><li>\(16x^{2}+225-90x+9x^{2}=400 \Rightarrow 25x^{2}-90x-175=0 \Rightarrow 5x^{2}-18x-35=0\)。</li><li>因式分解：\((x-5)(5x+7)=0\)，所以 \(x=5\) 或 \(x=-\dfrac{7}{5}\)。</li><li>於是 \(y=\dfrac{15-15}{4}=0\)，或 \(y=\dfrac{15+\frac{21}{5}}{4}=\dfrac{96}{20}=\dfrac{24}{5}\)。交點為 \((5,0)\) 與 \(\left(-\dfrac{7}{5},\dfrac{24}{5}\right)\)。</li><li>(b) 半弦 \(=\sqrt{r^{2}-d^{2}}=\sqrt{25-9}=4\)，所以弦長為 \(2\times 4=8\) 單位。</li><li>用坐標驗算：\(\sqrt{\left(5+\tfrac{7}{5}\right)^{2}+\left(0-\tfrac{24}{5}\right)^{2}}=\sqrt{\tfrac{1024}{25}+\tfrac{576}{25}}=\sqrt{64}=8\)。✔</li><li>(c) 三角形的底為 \(8\)（弦），高為 \(d=3\)，所以面積 \(=\tfrac{1}{2}(8)(3)=12\) 平方單位。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>圓 \(C\) 的方程為 \(x^{2}+y^{2}=25\)，而 \(P(13,0)\) 是 \(C\) 外的一點。(a) 證明 \(P\) 在 \(C\) 外。(b) 求由 \(P\) 到 \(C\) 的一條切線的長度。(c) 求由 \(P\) 到 \(C\) 的兩條切線的方程。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(OP=13&gt;5\)　(b) \(12\)　(c) \(5x-12y-65=0\) 與 \(5x+12y-65=0\)</div>
+<ol class="steps">
+<li>(a) \(OP=13\)，半徑為 \(5\)。因為 \(13&gt;5\)，\(P\) 在 \(C\) 外。</li><li>(b) 設 \(T\) 為切點，則 \(\angle OTP=90^{\circ}\)，所以 \(PT^{2}=OP^{2}-r^{2}=169-25=144\)，\(PT=12\)。</li><li>(c) 設一條切線為 \(y=m(x-13)\)，即 \(mx-y-13m=0\)。</li><li>相切：\(\dfrac{|m(0)-0-13m|}{\sqrt{m^{2}+1}}=5 \Rightarrow \dfrac{169m^{2}}{m^{2}+1}=25\)。</li><li>\(169m^{2}=25m^{2}+25 \Rightarrow 144m^{2}=25 \Rightarrow m=\pm\dfrac{5}{12}\)。</li><li>取 \(m=\dfrac{5}{12}\)：\(y=\dfrac{5}{12}(x-13) \Rightarrow 12y=5x-65 \Rightarrow 5x-12y-65=0\)。</li><li>取 \(m=-\dfrac{5}{12}\)：\(y=-\dfrac{5}{12}(x-13) \Rightarrow 12y=-5x+65 \Rightarrow 5x+12y-65=0\)。</li><li>驗算：由 \(O\) 到 \(5x-12y-65=0\) 的距離為 \(\dfrac{65}{13}=5=r\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>假設切線不可能是鉛垂線，或漏掉一個正負號。通過圓外一點的每條切線在本題都有斜率，但平方後的方程必須把兩個根都取。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 解析幾何 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

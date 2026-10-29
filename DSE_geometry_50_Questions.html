@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港中學文憑試 數學（必修）· 幾何 — 7 種題型 50 題（附詳解）</title>
+<meta name="description" content="由 106 道歷年 HKDSE 幾何試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：角與平行線、全等與等腰三角形、多邊形的內角外角、相似三角形、圓的性質、切線與圓內接四邊形，以及考試程度的多步證明。每題附答案、逐步詳解（每一步寫明理由）與常犯錯誤提示，適合中四至中六溫習及應試。">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' },
+  options: { ignoreHtmlClass: 'tex2jax_ignore' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/cn.css">
+</head>
+<body id="top">
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 角與平行線</a><a href="#t2" data-t="t2">類型 2 · 全等與等腰</a><a href="#t3" data-t="t3">類型 3 · 多邊形</a><a href="#t4" data-t="t4">類型 4 · 相似三角形</a><a href="#t5" data-t="t5">類型 5 · 圓的性質</a><a href="#t6" data-t="t6">類型 6 · 切線與圓內接四邊形</a><a href="#t7" data-t="t7">類型 7 · 考試程度幾何</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 幾何</p>
+    <h1 class="hero__title">幾何 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 106 道歷年 DSE 幾何試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解，每一步都寫明理由</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>106</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 幾何題的分數，往往就敗在沒有寫出理由。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>角、平行線、三角形內角和與外角</td><td>同位角、內錯角、同旁內角，並寫出理由</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>全等三角形與等腰三角形的性質</td><td>S.S.S.、S.A.S.、A.S.A.、R.H.S. 與底角</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>多邊形：內角、外角與邊數</td><td>\((n-2)180^{\circ}\) 與固定的外角和</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>相似三角形：邊長比、周界與面積</td><td>A.A.A. 判定、對應邊、面積用 \(k\) 的平方</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>圓的性質：弦、圓心角與圓周角</td><td>圓心至弦的垂線、半圓、同弓形</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>切線、圓內接四邊形與共圓點</td><td>切線垂直半徑、對角、交錯弓形</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度的多步計算與證明</td><td>連鎖理由、逆定理與完整證明</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>角、平行線、三角形內角和與外角 <span class="count">· 7 題</span></h2>
+    <p>同位角、內錯角、同旁內角，並寫出理由</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>兩條平行線被一條截線所截時，同位角相等、內錯角相等，而同旁內角（連續內角）之和為 \(180^{\circ}\)。任何三角形的三個內角之和為 \(180^{\circ}\)；把一條邊延長，所得的外角等於兩個內對角之和。每一步都必須寫明理由 —— 分數就在這裡。</p><div class="formula"><span>\(a+b=180^{\circ}\)</span><span>\(A+B+C=180^{\circ}\)</span><span>\(\text{外角}=A+B\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>如圖，\(AB\parallel CD\)。一條直線與 \(AB\) 相交於 \(P\)，與 \(CD\) 相交於 \(Q\)，其中 \(B\) 在 \(AB\) 上位於 \(P\) 的右方，\(D\) 在 \(CD\) 上位於 \(Q\) 的左方。已知 \(\angle BPQ=65^{\circ}\)。求 (a) \(\angle PQD\)，(b) \(\angle PQC\)。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-106 -135 288 161" width="288" height="161" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:288px">
+<line x1="-70.0" y1="0.0" x2="115.0" y2="0.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="-24.3" y1="-108.8" x2="145.7" y2="-108.8" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="0.0" y1="0.0" x2="50.7" y2="-108.8" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 30.0 0.0 A 30 30 0 0 0 12.7 -27.2" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="40.5" y="-25.8" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">65°</text>
+<path d="M 38.0 -81.6 A 30 30 0 0 1 20.7 -108.8" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="-80.0" y="0.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="125.0" y="0.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="155.7" y="-108.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="-34.3" y="-108.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="0.0" y="-12.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">P</text>
+<text x="62.7" y="-98.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">Q</text>
+</svg>
+<figcaption>Q1 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(65^{\circ}\)　(b) \(115^{\circ}\)</div>
+<ol class="steps">
+<li>\(\angle BPQ\) 與 \(\angle PQD\) 位於截線的兩側，並且在平行線 \(AB\) 與 \(CD\) 之間，所以它們是內錯角。</li><li>因此 \(\angle PQD=\angle BPQ=65^{\circ}\)（內錯角，\(AB\parallel CD\)）。</li><li>\(\angle PQD\) 與 \(\angle PQC\) 是直線 \(CD\) 上的鄰角，所以相加等於 \(180^{\circ}\)。</li><li>\(\angle PQC=180^{\circ}-65^{\circ}=115^{\circ}\)（直線上的鄰角）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(\angle A=x\)，\(\angle B=2x\)，\(\angle C=3x\)。(a) 求 \(x\)。(b) 指出 \(ABC\) 是哪一種三角形，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x=30^{\circ}\)　(b) 直角三角形（三個角為 \(30^{\circ},60^{\circ},90^{\circ}\)）</div>
+<ol class="steps">
+<li>三角形內角和：\(x+2x+3x=180^{\circ}\)。</li><li>\(6x=180^{\circ}\)，所以 \(x=30^{\circ}\)。</li><li>三個角分別是 \(30^{\circ}\)、\(60^{\circ}\) 和 \(90^{\circ}\)。</li><li>因為 \(\angle C=3x=90^{\circ}\)，所以三角形 \(ABC\) 在 \(C\) 處為直角（三角形內角和）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(x+2x+3x=6x\) —— 不要寫成 \(6x=360^{\circ}\)；\(360^{\circ}\) 是同頂角之和，不是三角形內角和。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(\angle BAC=48^{\circ}\)，\(\angle ABC=67^{\circ}\)。邊 \(BC\) 延長至 \(D\)。求 (a) \(\angle ACB\)，(b) \(\angle ACD\)，並為每個答案說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(65^{\circ}\)　(b) \(115^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ABC\) 中：\(\angle ACB=180^{\circ}-48^{\circ}-67^{\circ}=65^{\circ}\)（三角形內角和）。</li><li>(b) \(\angle ACB\) 與 \(\angle ACD\) 是直線 \(BCD\) 上的鄰角。</li><li>\(\angle ACD=180^{\circ}-65^{\circ}=115^{\circ}\)（直線上的鄰角）。</li><li>用外角驗算：\(\angle ACD=\angle BAC+\angle ABC=48^{\circ}+67^{\circ}=115^{\circ}\)（三角形外角）。✓</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>如圖，\(AB\parallel CD\)，\(BC\) 是一條截線。已知 \(\angle ABC=3x\)，\(\angle BCD=5x\)，而這兩個角位於 \(BC\) 的同一側。(a) 求 \(x\)。(b) 求這兩個角的大小。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-24 -144 210 170" width="210" height="170" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:210px">
+<line x1="12.0" y1="0.0" x2="150.0" y2="0.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="101.0" y1="-118.3" x2="15.0" y2="-118.3" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="150.0" y1="0.0" x2="101.0" y2="-118.3" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 120.0 0.0 A 30 30 0 0 1 138.5 -27.7" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="110.1" y="-26.7" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">3x</text>
+<path d="M 113.3 -88.7 A 32 32 0 0 1 69.0 -118.3" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="73.2" y="-76.7" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">5x</text>
+<text x="2.0" y="0.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="160.0" y="0.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="97.0" y="-104.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="5.0" y="-118.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+</svg>
+<figcaption>Q4 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x=22.5^{\circ}\)　(b) \(67.5^{\circ}\) 與 \(112.5^{\circ}\)</div>
+<ol class="steps">
+<li>\(\angle ABC\) 與 \(\angle BCD\) 是平行線 \(AB\) 與 \(CD\) 之間的同旁內角。</li><li>同旁內角互補：\(3x+5x=180^{\circ}\)（同旁內角，\(AB\parallel CD\)）。</li><li>\(8x=180^{\circ}\)，所以 \(x=22.5^{\circ}\)。</li><li>\(\angle ABC=3(22.5^{\circ})=67.5^{\circ}\)，\(\angle BCD=5(22.5^{\circ})=112.5^{\circ}\)。驗算：\(67.5+112.5=180\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>同旁內角之和是 \(180^{\circ}\)，它們並不相等。若寫成 \(3x=5x\)，只會得出 \(x=0\)，錯誤立即浮現。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(AB=AC\)。邊 \(BC\) 延長至 \(D\)，使 \(\angle ACD=124^{\circ}\)。求 (a) \(\angle ACB\)，(b) \(\angle ABC\)，(c) \(\angle BAC\)，並為每一步說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(56^{\circ}\)　(b) \(56^{\circ}\)　(c) \(68^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle ACB\) 與 \(\angle ACD\) 是直線 \(BCD\) 上的鄰角：\(\angle ACB=180^{\circ}-124^{\circ}=56^{\circ}\)（直線上的鄰角）。</li><li>(b) \(AB=AC\)，所以 \(B\) 和 \(C\) 處的底角相等：\(\angle ABC=\angle ACB=56^{\circ}\)（等腰三角形底角）。</li><li>(c) 在 \(\triangle ABC\) 中：\(\angle BAC=180^{\circ}-56^{\circ}-56^{\circ}=68^{\circ}\)（三角形內角和）。</li><li>用外角驗算：\(\angle ACD=\angle BAC+\angle ABC=68^{\circ}+56^{\circ}=124^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(AB=AC\) 表示相等的是 \(\angle ABC\) 與 \(\angle ACB\)（底角），不是 \(\angle BAC\)。把等邊配錯一對角，就是最常見的失誤。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(\angle ABC=64^{\circ}\)，\(\angle ACB=52^{\circ}\)。\(\angle ABC\) 的角平分線與 \(\angle ACB\) 的角平分線在三角形內的點 \(X\) 相交。求 (a) \(\angle BAC\)，(b) \(\angle XBC\)，(c) \(\angle BXC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(64^{\circ}\)　(b) \(32^{\circ}\)　(c) \(122^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle BAC=180^{\circ}-64^{\circ}-52^{\circ}=64^{\circ}\)（三角形內角和）。</li><li>(b) \(BX\) 平分 \(\angle ABC\)，所以 \(\angle XBC=\frac{1}{2}\times 64^{\circ}=32^{\circ}\)。</li><li>同樣，\(CX\) 平分 \(\angle ACB\)，所以 \(\angle XCB=\frac{1}{2}\times 52^{\circ}=26^{\circ}\)。</li><li>(c) 在 \(\triangle BXC\) 中：\(\angle BXC=180^{\circ}-32^{\circ}-26^{\circ}=122^{\circ}\)（三角形內角和）。</li><li>用半角公式驗算：\(\angle BXC=90^{\circ}+\frac{1}{2}\angle BAC=90^{\circ}+32^{\circ}=122^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要在 \(\triangle BXC\) 內直接用 \(B\)、\(C\) 處的完整角 \(64^{\circ}\) 和 \(52^{\circ}\) —— 角平分線先把它們各自減半。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q17.html" target="_blank" rel="noopener">歷年試題 · 2019 卷二 Q17 ↗</a></div>
+<div class="q__body"><p>如圖，\(A\)、\(B\)、\(C\) 依次在同一條直線上，而 \(A\)、\(D\)、\(E\) 依次在同一條直線上，其中 \(D\) 在 \(A\) 與 \(E\) 之間。已知 \(AB=BD\)，\(BC=CD\)，\(\angle CDE=72^{\circ}\)。設 \(\angle ACD=x\)。(a) 以 \(x\) 表示 \(\angle CAD\)。(b) 以 \(x\) 表示 \(\angle CDB\)。(c) 由此求 \(x\)。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-19 38 278 169" width="278" height="169" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:278px">
+<line x1="18.0" y1="168.0" x2="222.2" y2="168.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="18.0" y1="168.0" x2="144.2" y2="76.3" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="96.0" y1="168.0" x2="120.1" y2="93.8" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="222.2" y1="168.0" x2="120.1" y2="93.8" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="57.0" y1="174.0" x2="57.0" y2="162.0" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="113.8" y1="132.8" x2="102.3" y2="129.1" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="157.1" y1="174.0" x2="157.1" y2="162.0" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="161.1" y1="174.0" x2="161.1" y2="162.0" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="176.3" y1="127.2" x2="169.2" y2="136.9" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="173.1" y1="124.9" x2="166.0" y2="134.6" stroke="#475569" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M 139.5 107.9 A 24 24 0 0 0 139.5 79.7" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="162.1" y="93.8" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">72°</text>
+<text x="7.0" y="168.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="96.0" y="181.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="233.2" y="168.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="108.1" y="89.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="148.2" y="64.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+</svg>
+<figcaption>Q7 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(72^{\circ}-x\)　(b) \(144^{\circ}-2x\)　(c) \(x=36^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ACD\) 中，\(\angle CDE\) 是 \(D\) 處的外角：\(\angle CDE=\angle CAD+\angle ACD\)（三角形外角）。</li><li>所以 \(72^{\circ}=\angle CAD+x\)，得 \(\angle CAD=72^{\circ}-x\)。</li><li>(b) 在 \(\triangle ABD\) 中，\(AB=BD\)，所以 \(\angle BDA=\angle BAD=72^{\circ}-x\)（等腰三角形底角）。</li><li>\(\triangle ABD\) 在 \(B\) 處的外角：\(\angle CBD=\angle BAD+\angle BDA=(72^{\circ}-x)+(72^{\circ}-x)=144^{\circ}-2x\)（三角形外角）。</li><li>在 \(\triangle BCD\) 中，\(BC=CD\)，所以 \(\angle CDB=\angle CBD=144^{\circ}-2x\)（等腰三角形底角）。</li><li>(c) \(A\)、\(D\)、\(E\) 共線，所以 \(\angle BDA+\angle CDB+\angle CDE=180^{\circ}\)（直線上的鄰角）。</li><li>\((72^{\circ}-x)+(144^{\circ}-2x)+72^{\circ}=180^{\circ}\)，即 \(288^{\circ}-3x=180^{\circ}\)。</li><li>\(3x=108^{\circ}\)，所以 \(x=36^{\circ}\)。</li><li>驗算：\(\angle BDA=36^{\circ}\)，\(\angle CDB=72^{\circ}\)，而 \(36^{\circ}+72^{\circ}+72^{\circ}=180^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中，\(D\) 處的三個角必須沿直線 \(ADE\) 相加；漏掉 \(\angle CDE=72^{\circ}\) 就會得出錯誤的方程。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>全等三角形與等腰三角形的性質 <span class="count">· 7 題</span></h2>
+    <p>S.S.S.、S.A.S.、A.S.A.、R.H.S. 與底角</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>只要符合 S.S.S.、S.A.S.、A.S.A.、A.A.S. 或 R.H.S. 其中一個條件，兩個三角形就全等，屆時<i>所有</i>對應邊和對應角都相等。等腰三角形有兩個相等的底角；反過來，兩個相等的角也代表兩條相等的邊。每個證明都要寫出三句陳述加三個理由，然後寫出結論並指明所用的判定。</p><div class="formula"><span>\(\text{AB}=\text{AC}\Rightarrow\angle B=\angle C\)</span><span>\(\text{S.A.S.}\Rightarrow\cong\)</span><span>\(\text{全等三角形對應角}\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(\triangle ABC\cong\triangle PQR\)，其中 \(AB=7\) cm，\(BC=9\) cm，\(CA=6\) cm。寫出 (a) \(PQ\)，(b) \(QR\)，(c) \(\triangle PQR\) 中與 \(\angle BCA\) 相等的角。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(7\) cm　(b) \(9\) cm　(c) \(\angle QRP\)</div>
+<ol class="steps">
+<li>在全等關係 \(\triangle ABC\cong\triangle PQR\) 中，字母的次序就是對應的頂點：\(A\leftrightarrow P\)，\(B\leftrightarrow Q\)，\(C\leftrightarrow R\)。</li><li>所以 \(PQ\) 對應 \(AB=7\) cm，\(QR\) 對應 \(BC=9\) cm（全等三角形的對應邊）。</li><li>\(\angle BCA\) 的頂點在 \(C\)，所以它對應 \(R\) 處的角，即 \(\angle QRP\)（全等三角形的對應角）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(QR\) 對應的是 \(BC\)，不是 \(AC\)：要看全等式中字母的次序，不要看圖中的位置。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(AB=AC\)，\(\angle ABC=3x\)，\(\angle BAC=4x\)。(a) 求 \(x\)。(b) 求這個三角形每個角的大小。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x=18^{\circ}\)　(b) \(54^{\circ},54^{\circ},72^{\circ}\)</div>
+<ol class="steps">
+<li>\(AB=AC\)，所以 \(\angle ACB=\angle ABC=3x\)（等腰三角形底角）。</li><li>\(\triangle ABC\) 的內角和：\(3x+3x+4x=180^{\circ}\)。</li><li>\(10x=180^{\circ}\)，所以 \(x=18^{\circ}\)。</li><li>\(\angle ABC=\angle ACB=54^{\circ}\)，\(\angle BAC=4(18^{\circ})=72^{\circ}\)。驗算：\(54+54+72=180\)。✓</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在四邊形 \(ABCD\) 中，\(AB=AD\)，\(CB=CD\)。(a) 證明 \(\triangle ABC\cong\triangle ADC\)。(b) 由此證明 \(\angle ABC=\angle ADC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\triangle ABC\cong\triangle ADC\)（S.S.S.）　(b) \(\angle ABC=\angle ADC\)（全等三角形的對應角）</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ABC\) 與 \(\triangle ADC\) 中：</li><li>\(AB=AD\)（已知），</li><li>\(CB=CD\)（已知），</li><li>\(AC=AC\)（公共邊）。</li><li>\(\therefore\triangle ABC\cong\triangle ADC\)（S.S.S.）。</li><li>(b) 全等三角形的對應角相等，其中 \(B\leftrightarrow D\)，所以 \(\angle ABC=\angle ADC\)（全等三角形的對應角）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>必須列出公共邊 \(AC\) —— 少了第三對邊，就不能說 S.S.S.。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(AB=AC\)，\(D\) 是 \(BC\) 的中點。(a) 證明 \(\triangle ABD\cong\triangle ACD\)。(b) 由此證明 \(\angle ADB=90^{\circ}\)，即 \(AD\perp BC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\triangle ABD\cong\triangle ACD\)（S.S.S.）　(b) \(\angle ADB=\angle ADC=90^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(AB=AC\)（已知），\(BD=DC\)（\(D\) 是 \(BC\) 的中點），\(AD=AD\)（公共邊）。</li><li>\(\therefore\triangle ABD\cong\triangle ACD\)（S.S.S.）。</li><li>(b) 由此 \(\angle ADB=\angle ADC\)（全等三角形的對應角）。</li><li>\(B\)、\(D\)、\(C\) 共線，所以 \(\angle ADB+\angle ADC=180^{\circ}\)（直線上的鄰角）。</li><li>因此每個角都是 \(\frac{180^{\circ}}{2}=90^{\circ}\)，即 \(AD\perp BC\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中，兩個相等的角 \(\angle ADB\) 與 \(\angle ADC\) 因為 \(BDC\) 是直線而同時互補；兩個條件都要用上，才可得出 \(90^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(AB=AC\)。\(D\) 是 \(AB\) 上的一點，\(E\) 是 \(AC\) 上的一點，使 \(BD=CE\)。(a) 證明 \(\triangle BCD\cong\triangle CBE\)。(b) 由此證明 \(CD=BE\)。(c) 若 \(CD\) 與 \(BE\) 相交於 \(O\)，證明 \(\triangle BOC\) 是等腰三角形。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\triangle BCD\cong\triangle CBE\)（S.A.S.）　(b) \(CD=BE\)　(c) \(\angle OBC=\angle OCB\)，所以 \(OB=OC\)</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle BCD\) 與 \(\triangle CBE\) 中：</li><li>\(BD=CE\)（已知），</li><li>\(\angle DBC=\angle ECB\)（等腰三角形底角，\(AB=AC\)），</li><li>\(BC=CB\)（公共邊）。</li><li>\(\therefore\triangle BCD\cong\triangle CBE\)（S.A.S.）。</li><li>(b) 由此 \(CD=BE\)（全等三角形的對應邊）。</li><li>(c) 同時 \(\angle BCD=\angle CBE\)（全等三角形的對應角），即 \(\angle OCB=\angle OBC\)。</li><li>所以 \(OB=OC\)（等角對等邊），即 \(\triangle BOC\) 是等腰三角形。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>夾角必須位於所列的兩條邊之間：\(\angle DBC\) 夾在 \(BD\) 與 \(BC\) 之間，\(\angle ECB\) 夾在 \(CE\) 與 \(CB\) 之間 —— 這兩個正是因 \(AB=AC\) 而相等的底角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(AB=AC\)。\(D\) 在 \(AB\) 上，\(E\) 在 \(AC\) 上，使 \(AD=AE\)。直線 \(BE\) 與直線 \(CD\) 相交於 \(P\)。(a) 證明 \(\triangle ABE\cong\triangle ACD\)。(b) 由此證明 \(BE=CD\) 及 \(\angle ABE=\angle ACD\)。(c) 證明 \(PB=PC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\triangle ABE\cong\triangle ACD\)（S.A.S.）　(b) \(BE=CD\)，\(\angle ABE=\angle ACD\)　(c) \(PB=PC\)</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ABE\) 與 \(\triangle ACD\) 中：</li><li>\(AB=AC\)（已知），</li><li>\(\angle BAE=\angle CAD\)（公共角 \(A\)），</li><li>\(AE=AD\)（已知）。</li><li>\(\therefore\triangle ABE\cong\triangle ACD\)（S.A.S.）。</li><li>(b) 由此 \(BE=CD\)（對應邊），\(\angle ABE=\angle ACD\)（對應角）（全等三角形的對應邊及對應角）。</li><li>(c) 因為 \(AB=AC\) 且 \(AE=AD\)，所以 \(AB-AD=AC-AE\)，即 \(BD=CE\)。</li><li>\(\angle ABC=\angle ACB\)（等腰三角形底角）。減去 (b) 中相等的角：\(\angle PBC=\angle ABC-\angle ABE=\angle ACB-\angle ACD=\angle PCB\)。</li><li>因此 \(PB=PC\)（等角對等邊）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中不要憑圖假設 \(P\) 是中點或 \(PB=PC\)：結論來自 \(\angle PBC=\angle PCB\)，而這需要把兩個相等的角相減。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P2_Q18.html" target="_blank" rel="noopener">歷年試題 · 2018 卷二 Q18 ↗</a></div>
+<div class="q__body"><p>如圖，\(ABCD\) 是一個菱形，\(\angle BAD=120^{\circ}\)。\(E\) 和 \(F\) 分別是 \(AB\) 和 \(AD\) 上的點，使 \(AE=AF\)，且 \(\angle ECF=40^{\circ}\)。(a) 證明 \(\angle CAE=\angle CAF=60^{\circ}\)。(b) 證明 \(\triangle ACE\cong\triangle ACF\)，並由此求 \(\angle ACE\)。(c) 求 \(\angle BEC\)。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-9 23 275 194" width="275" height="194" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:275px">
+<polygon points="96.0,176.0 228.0,176.0 162.0,61.7 30.0,61.7" fill="none" stroke="#1e293b" stroke-width="1.7" stroke-linejoin="round"/>
+<line x1="162.0" y1="61.7" x2="141.8" y2="176.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="162.0" y1="61.7" x2="73.1" y2="136.3" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 156.8 91.2 A 30 30 0 0 1 139.0 81.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="138.0" y="103.3" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">40°</text>
+<text x="84.0" y="182.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="240.0" y="182.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="162.0" y="48.7" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="17.0" y="59.7" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="141.8" y="191.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+<text x="62.1" y="130.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">F</text>
+</svg>
+<figcaption>Q14 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 各為 \(60^{\circ}\)　(b) S.A.S.，\(\angle ACE=20^{\circ}\)　(c) \(\angle BEC=80^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 菱形的對角線 \(AC\) 平分 \(\angle BAD\)（菱形的性質），所以 \(\angle CAE=\angle CAF=\frac{120^{\circ}}{2}=60^{\circ}\)。</li><li>(b) 在 \(\triangle ACE\) 與 \(\triangle ACF\) 中：\(AC=AC\)（公共邊），\(\angle CAE=\angle CAF=60^{\circ}\)（由 (a)），\(AE=AF\)（已知）。</li><li>\(\therefore\triangle ACE\cong\triangle ACF\)（S.A.S.）。</li><li>由此 \(\angle ACE=\angle ACF\)（全等三角形的對應角），所以 \(\angle ACE=\frac{40^{\circ}}{2}=20^{\circ}\)。</li><li>(c) \(E\) 在 \(AB\) 上，把 \(AE\) 延長至 \(B\)，使 \(\angle BEC\) 成為 \(\triangle ACE\) 的外角。</li><li>\(\angle BEC=\angle ACE+\angle CAE=20^{\circ}+60^{\circ}=80^{\circ}\)（三角形外角）。</li><li>驗算：\(\angle AEC=180^{\circ}-80^{\circ}=100^{\circ}\)，而在 \(\triangle ACE\) 中，\(100^{\circ}+20^{\circ}+60^{\circ}=180^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中，外角所用的是兩個<i>內對角</i> \(\angle ACE\) 與 \(\angle CAE\)，不是 \(\angle AEC\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>多邊形：內角、外角與邊數 <span class="count">· 7 題</span></h2>
+    <p>\((n-2)180^{\circ}\) 與固定的外角和</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>有 \(n\) 條邊的多邊形，內角和為 \((n-2)\times 180^{\circ}\)。若多邊形是<i>正</i>多邊形，每個外角為 \(\frac{360^{\circ}}{n}\)，每個內角為 \(180^{\circ}-\frac{360^{\circ}}{n}\)。任何凸多邊形的外角和恒為 \(360^{\circ}\)，這是求 \(n\) 最快的途徑。</p><div class="formula"><span>\(\text{和}=(n-2)180^{\circ}\)</span><span>\(\text{外角}=\frac{360^{\circ}}{n}\)</span><span>\(\text{內角}+\text{外角}=180^{\circ}\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求一個有 10 條邊的多邊形的內角和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(1440^{\circ}\)</div>
+<ol class="steps">
+<li>有 \(n\) 條邊的多邊形，內角和為 \((n-2)\times 180^{\circ}\)。</li><li>代入 \(n=10\)：\((10-2)\times 180^{\circ}=8\times 180^{\circ}=1440^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(n\times 180^{\circ}=1800^{\circ}\) 就忘記了減去多邊形並不存在的那兩個三角形：答案是 \((n-2)180^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個正多邊形的每個內角為 \(156^{\circ}\)。求該多邊形的邊數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(15\) 條邊</div>
+<ol class="steps">
+<li>頂點處的內角與外角是直線上的鄰角：外角 \(=180^{\circ}-156^{\circ}=24^{\circ}\)。</li><li>對正多邊形而言，外角 \(=\frac{360^{\circ}}{n}\)。</li><li>\(n=\frac{360^{\circ}}{24^{\circ}}=15\)，所以該多邊形有 15 條邊。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用內角 \(156^{\circ}\) 去除 \(360^{\circ}\) 只會得 2.3 —— 一定要先化成外角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個正多邊形有 20 條邊。求 (a) 每個外角的大小，(b) 每個內角的大小，(c) 內角和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(18^{\circ}\)　(b) \(162^{\circ}\)　(c) \(3240^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 外角 \(=\frac{360^{\circ}}{20}=18^{\circ}\)。</li><li>(b) 內角 \(=180^{\circ}-18^{\circ}=162^{\circ}\)。</li><li>(c) 內角和 \(=(20-2)\times 180^{\circ}=18\times 180^{\circ}=3240^{\circ}\)。</li><li>驗算：\(20\times 162^{\circ}=3240^{\circ}\)。✓</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在一個正多邊形中，每個內角是每個外角的 3 倍。(a) 求每個外角。(b) 求該多邊形的邊數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(45^{\circ}\)　(b) \(8\) 條邊</div>
+<ol class="steps">
+<li>設外角為 \(e\)，則內角為 \(3e\)。</li><li>內角與外角互補：\(3e+e=180^{\circ}\)。</li><li>\(4e=180^{\circ}\)，所以 \(e=45^{\circ}\)。</li><li>\(n=\frac{360^{\circ}}{45^{\circ}}=8\)，所以該多邊形是正八邊形。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(3e=360^{\circ}\) 就把內角與外角和混淆了；\(360^{\circ}\) 是全部外角之和，不是某一個內角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個多邊形有 9 條邊。其中五個內角各為 \(130^{\circ}\)，其餘四個內角都相等。求其餘四個角各角的大小。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>各 \(152.5^{\circ}\)</div>
+<ol class="steps">
+<li>內角和 \(=(9-2)\times 180^{\circ}=7\times 180^{\circ}=1260^{\circ}\)。</li><li>五個已知角之和 \(=5\times 130^{\circ}=650^{\circ}\)。</li><li>四個相等的角之和 \(=1260^{\circ}-650^{\circ}=610^{\circ}\)。</li><li>每個角 \(=610^{\circ}\div 4=152.5^{\circ}\)。</li><li>驗算：\(650^{\circ}+4(152.5^{\circ})=650^{\circ}+610^{\circ}=1260^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>這個多邊形不是正多邊形，所以 \(\frac{360^{\circ}}{9}\) 在此無關 —— 只用內角和。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>如圖，\(ABCDEF\) 是正六邊形。(a) 求 \(\angle ABC\)，並說明理由。(b) 證明 \(\angle BCA=30^{\circ}\)。(c) 由此求 \(\angle ACD\)，並指出這說明 \(AC\) 與 \(CD\) 有甚麼關係。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="45 31 280 239" width="280" height="239" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:280px">
+<polygon points="135.0,63.4 235.0,63.4 285.0,150.0 235.0,236.6 135.0,236.6 85.0,150.0" fill="none" stroke="#1e293b" stroke-width="1.7" stroke-linejoin="round"/>
+<line x1="135.0" y1="63.4" x2="285.0" y2="150.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="235.0" y1="63.4" x2="285.0" y2="150.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="285.0" y1="150.0" x2="235.0" y2="236.6" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 209.0 63.4 A 26 26 0 0 0 248.0 85.9" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="219.0" y="91.4" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">120°</text>
+<text x="123.0" y="57.4" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="247.0" y="57.4" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="299.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="247.0" y="244.6" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="123.0" y="244.6" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+<text x="71.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">F</text>
+</svg>
+<figcaption>Q20 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(120^{\circ}\)　(b) \(30^{\circ}\)　(c) \(\angle ACD=90^{\circ}\)，所以 \(AC\perp CD\)</div>
+<ol class="steps">
+<li>(a) 正六邊形的外角 \(=\frac{360^{\circ}}{6}=60^{\circ}\)，所以每個內角 \(=180^{\circ}-60^{\circ}=120^{\circ}\)；因此 \(\angle ABC=120^{\circ}\)（正多邊形的內角）。</li><li>(b) 在 \(\triangle ABC\) 中，\(AB=BC\)（正六邊形的邊），所以它是等腰三角形，底邊為 \(AC\)。</li><li>\(\angle BCA=\angle BAC=\frac{180^{\circ}-120^{\circ}}{2}=30^{\circ}\)（等腰三角形底角）。</li><li>(c) \(C\) 處的整個內角是 \(\angle BCD=120^{\circ}\)，而 \(\angle BCA=30^{\circ}\) 位於其中。</li><li>\(\angle ACD=120^{\circ}-30^{\circ}=90^{\circ}\)，所以 \(AC\perp CD\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(\angle BCA\) 不是 \(120^{\circ}\) 的一半，而是 \(180^{\circ}-120^{\circ}\) 的一半，因為 \(120^{\circ}\) 是等腰三角形 \(ABC\) 的頂角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>在一個正多邊形中，每個內角是每個外角的 5 倍。(a) 求邊數 \(n\)。(b) 求內角和。(c) 已知每條邊長 3.5 cm，求該多邊形的周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(n=12\)　(b) \(1800^{\circ}\)　(c) \(42\) cm</div>
+<ol class="steps">
+<li>(a) 設外角為 \(e\)，則內角為 \(5e\)。</li><li>\(5e+e=180^{\circ}\)（直線上的鄰角），得 \(6e=180^{\circ}\)，\(e=30^{\circ}\)。</li><li>\(n=\frac{360^{\circ}}{e}=\frac{360^{\circ}}{30^{\circ}}=12\)。</li><li>(b) 內角和 \(=(12-2)\times 180^{\circ}=10\times 180^{\circ}=1800^{\circ}\)。</li><li>(c) 正十二邊形有 12 條相等的邊：周界 \(=12\times 3.5=42\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中不要直接用 \(12\times 150^{\circ}\)，除非先求出內角：\(180^{\circ}-30^{\circ}=150^{\circ}\)，而 \(12\times 150^{\circ}=1800^{\circ}\)，與 \((n-2)180^{\circ}\) 一致。✓</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>相似三角形：邊長比、周界與面積 <span class="count">· 7 題</span></h2>
+    <p>A.A.A. 判定、對應邊、面積用 \(k\) 的平方</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>兩對相等的角已經足夠（A.A.A.）。兩個三角形相似之後，對應邊成比例 —— 要按正確的次序配對頂點。周界跟隨線性比 \(k\)，但面積跟隨 \(k^{2}\)。三角形內的平行線是相似三角形的常見來源，因為它造出相等的同位角。</p><div class="formula"><span>\(\frac{AB}{DE}=\frac{BC}{EF}\)</span><span>\(\frac{A_{1}}{A_{2}}=k^{2}\)</span><span>\(\frac{P_{1}}{P_{2}}=k\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(\triangle ABC\sim\triangle DEF\)，其中 \(AB=6\) cm，\(DE=9\) cm，\(BC=8\) cm。求 \(EF\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(EF=12\) cm</div>
+<ol class="steps">
+<li>相似三角形的對應邊成比例：\(\frac{AB}{DE}=\frac{BC}{EF}\)。</li><li>\(\frac{6}{9}=\frac{8}{EF}\)，所以 \(6\,EF=72\)。</li><li>\(EF=12\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由 \(\triangle ABC\sim\triangle DEF\)，邊 \(BC\) 對應 \(EF\)（不是 \(DE\)）。把字母 A-B-C 依次對應 D-E-F。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>兩個相似三角形的面積比為 \(9:16\)。較小三角形的周界是 24 cm。求 (a) 兩者周界之比，(b) 較大三角形的周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(3:4\)　(b) \(32\) cm</div>
+<ol class="steps">
+<li>相似圖形的面積比為 \(k^{2}\)，其中 \(k\) 是對應長度之比。</li><li>\(k^{2}=\frac{9}{16}\)，所以 \(k=\frac{3}{4}\)，即周界比為 \(3:4\)。</li><li>\(\frac{24}{P}=\frac{3}{4}\)，所以 \(3P=96\)，\(P=32\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>周界是長度，所以跟隨 \(k\) 而不是 \(k^{2}\)：周界比是 \(3:4\)，不是 \(9:16\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(D\) 在 \(AB\) 上，\(E\) 在 \(AC\) 上，使 \(DE\parallel BC\)。已知 \(AD=4\) cm，\(DB=6\) cm，\(AE=5\) cm。(a) 解釋為甚麼 \(\triangle ADE\sim\triangle ABC\)。(b) 求 \(EC\)，並由此求 \(AC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) A.A.A.（同位角相等）　(b) \(EC=7.5\) cm，\(AC=12.5\) cm</div>
+<ol class="steps">
+<li>(a) \(\angle ADE=\angle ABC\)（同位角，\(DE\parallel BC\)），\(\angle AED=\angle ACB\)（同位角，\(DE\parallel BC\)）。</li><li>\(\therefore\triangle ADE\sim\triangle ABC\)（A.A.A.）。</li><li>(b) 由兩三角形的對應邊得 \(\frac{AD}{AB}=\frac{AE}{AC}\)，這與 \(\frac{AD}{DB}=\frac{AE}{EC}\) 是同一個意思。</li><li>\(\frac{4}{6}=\frac{5}{EC}\)，所以 \(4\,EC=30\)，\(EC=7.5\) cm。</li><li>\(AC=AE+EC=5+7.5=12.5\) cm。驗算：\(\frac{AD}{AB}=\frac{4}{10}=0.4\)，\(\frac{AE}{AC}=\frac{5}{12.5}=0.4\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要把 \(AD\) 配 \(AB\)，之後又把 \(AE\) 配 \(EC\)：對應邊必須來自相對應的三角形，所以用 \(\frac{AD}{AB}=\frac{AE}{AC}\) 或 \(\frac{AD}{DB}=\frac{AE}{EC}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(D\) 在 \(AB\) 上，\(E\) 在 \(AC\) 上，\(DE\parallel BC\)，且 \(AD:DB=2:3\)。\(\triangle ABC\) 的面積是 100 cm\(^{2}\)。求 (a) \(\triangle ADE\) 的面積，(b) 梯形 \(DBCE\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(16\text{ cm}^{2}\)　(b) \(84\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>\(AD:DB=2:3\)，所以 \(AD:AB=2:5\)；\(\triangle ADE\) 對 \(\triangle ABC\) 的線性比為 \(2:5\)。</li><li>面積比 \(=2^{2}:5^{2}=4:25\)。</li><li>(a) \([ADE]=\frac{4}{25}\times 100=16\text{ cm}^{2}\)。</li><li>(b) \([DBCE]=[ABC]-[ADE]=100-16=84\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>梯形面積是兩個三角形面積之差；它不是 \(\frac{3}{5}\times 100\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一根 1.8 m 高的垂直杆在水平地面上投影長 2.4 m。同一時間，一座建築物投影長 32 m。(a) 解釋為甚麼杆與其影子組成的三角形，與建築物與其影子組成的三角形相似。(b) 求建築物的高度。(c) 附近一棵樹投影長 8 m —— 求它的高度。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) A.A. —— 兩者皆為直角三角形，太陽仰角相同　(b) \(24\) m　(c) \(6\) m</div>
+<ol class="steps">
+<li>(a) 每個三角形都是直角三角形（杆和建築物垂直，地面水平），而太陽的仰角在兩者中相同，所以有兩個角相等：以 A.A. 判定相似。</li><li>(b) \(\frac{\text{建築物高度}}{32}=\frac{1.8}{2.4}\)，所以高度 \(=32\times\frac{1.8}{2.4}=32\times 0.75=24\) m。</li><li>(c) \(\frac{h}{8}=0.75\)，所以 \(h=6\) m。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>影子配影子、高度配高度。把其中一個比倒轉，就會得出 21.6 m 而不是 24 m。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(D\) 在 \(AB\) 上，\(E\) 在 \(AC\) 上，使 \(\angle ADE=\angle ACB\)。已知 \(AD=3\) cm，\(DB=5\) cm，\(AE=4\) cm。(a) 證明 \(\triangle ADE\sim\triangle ACB\)（注意字母次序）。(b) 求 \(AC\) 與 \(EC\)。(c) 求 \(\triangle ADE\) 的面積與 \(\triangle ABC\) 的面積之比。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(b) \(AC=6\) cm，\(EC=2\) cm　(c) \(1:4\)</div>
+<ol class="steps">
+<li>(a) \(\angle ADE=\angle ACB\)（已知），\(\angle DAE=\angle CAB\)（公共角）。</li><li>\(\therefore\triangle ADE\sim\triangle ACB\)（A.A.A.），所以 \(A\leftrightarrow A\)，\(D\leftrightarrow C\)，\(E\leftrightarrow B\)。</li><li>(b) 對應邊：\(\frac{AD}{AC}=\frac{AE}{AB}\)。此處 \(AB=AD+DB=3+5=8\) cm，所以 \(\frac{3}{AC}=\frac{4}{8}\)。</li><li>\(4\,AC=24\)，得 \(AC=6\) cm，\(EC=6-4=2\) cm。</li><li>(c) 由 \(\triangle ADE\) 到 \(\triangle ABC\) 的線性比為 \(\frac{AE}{AB}=\frac{4}{8}=\frac{1}{2}\)（等價地 \(\frac{AD}{AC}=\frac{3}{6}=\frac{1}{2}\)）。</li><li>面積比 \(=\left(\frac{1}{2}\right)^{2}=\frac{1}{4}\)，即 \(1:4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>相似關係是 \(\triangle ADE\sim\triangle ACB\)，不是 \(\triangle ABC\)：相等的角迫使 \(D\leftrightarrow C\)。若用 \(AD:AB\) 作線性比，\(k\) 就會錯，面積比也跟著錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q17.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q17 ↗</a></div>
+<div class="q__body"><p>如圖，\(ABC\) 是邊長 18 cm 的等邊三角形。\(D\) 和 \(E\) 分別是 \(AB\) 和 \(BC\) 上的點，使 \(AD=6\) cm，\(\angle CDE=60^{\circ}\)。(a) 證明 \(\angle ACD=\angle BDE\)。(b) 證明 \(\triangle ACD\sim\triangle BDE\)。(c) 由此求 \(CE\)。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-18 -52 310 283" width="310" height="283" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:310px">
+<polygon points="20.0,190.0 254.0,190.0 137.0,-12.6" fill="none" stroke="#1e293b" stroke-width="1.7" stroke-linejoin="round"/>
+<line x1="137.0" y1="-12.6" x2="98.0" y2="190.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="98.0" y1="190.0" x2="228.0" y2="145.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 102.9 164.5 A 26 26 0 0 1 122.6 181.5" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="126.8" y="156.7" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">60°</text>
+<text x="8.0" y="196.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="266.0" y="196.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="137.0" y="-25.6" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="98.0" y="205.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="241.0" y="143.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+</svg>
+<figcaption>Q28 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(c) \(CE=14\) cm</div>
+<ol class="steps">
+<li>(a) \(ABC\) 是等邊三角形，所以 \(\angle CAD=\angle DBE=60^{\circ}\)。設 \(\angle ADC=x\)。</li><li>在 \(\triangle ACD\) 中：\(\angle ACD=180^{\circ}-60^{\circ}-x=120^{\circ}-x\)（三角形內角和）。</li><li>\(A\)、\(D\)、\(B\) 共線，所以 \(\angle BDE=180^{\circ}-\angle CDE-\angle ADC=180^{\circ}-60^{\circ}-x=120^{\circ}-x\)（直線上的鄰角）。</li><li>因此 \(\angle ACD=\angle BDE\)。</li><li>(b) 同時 \(\angle CAD=\angle DBE=60^{\circ}\)，所以 \(\triangle ACD\sim\triangle BDE\)（A.A.A.），其中 \(A\leftrightarrow B\)，\(C\leftrightarrow D\)，\(D\leftrightarrow E\)。</li><li>(c) \(BD=18-6=12\) cm，\(BE=18-CE\)。對應邊：\(\frac{AD}{BE}=\frac{AC}{BD}\)。</li><li>\(\frac{6}{18-CE}=\frac{18}{12}=\frac{3}{2}\)，所以 \(12=3(18-CE)\)，\(18-CE=4\)。</li><li>\(CE=14\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中 \(BE=18-CE\)，不是 \(CE\)；而比例必須是 \(\frac{AD}{BE}=\frac{AC}{BD}\) —— 檢查對應關係 \(A\leftrightarrow B\)、\(D\leftrightarrow E\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>圓的性質：弦、圓心角與圓周角 <span class="count">· 7 題</span></h2>
+    <p>圓心至弦的垂線、半圓、同弓形</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>由圓心向弦作垂線，會平分該弦，於是每一道弦的題目都變成一個以半徑為斜邊的直角三角形。圓心角是同弧上圓周角的兩倍，半圓上的圓周角為 \(90^{\circ}\)，而同弓形內的圓周角相等。</p><div class="formula"><span>\(\angle AOB=2\angle ACB\)</span><span>\(r^{2}=d^{2}+\left(\frac{AB}{2}\right)^{2}\)</span><span>\(\text{半圓上的圓周角}=90^{\circ}\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>在圓心為 \(O\) 的圓中，\(A\) 和 \(B\) 是圓上的點，\(\angle AOB=130^{\circ}\)。\(C\) 是優弧 \(AB\) 上的一點。求 \(\angle ACB\)，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\angle ACB=65^{\circ}\)</div>
+<ol class="steps">
+<li>\(\angle AOB\) 是弧 \(AB\) 所對的圓心角；\(\angle ACB\) 是同一條弧所對的圓周角。</li><li>\(\angle ACB=\frac{1}{2}\angle AOB=\frac{1}{2}\times 130^{\circ}=65^{\circ}\)（圓心角是圓周角的兩倍）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把角加倍而不是減半，是最常見的失誤：圓心角是較大的一個，所以圓周角是 \(\frac{1}{2}\times 130^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>\(AB\) 是圓的一條直徑，\(C\) 是圓上的一點，\(\angle ABC=35^{\circ}\)。求 (a) \(\angle ACB\)，(b) \(\angle BAC\)，並為每個答案說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(90^{\circ}\)　(b) \(55^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle ACB=90^{\circ}\)（半圓上的圓周角），因為 \(AB\) 是直徑。</li><li>(b) 在 \(\triangle ABC\) 中：\(\angle BAC=180^{\circ}-90^{\circ}-35^{\circ}=55^{\circ}\)（三角形內角和）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在半徑 13 cm 的圓中，\(AB\) 是一條弦，由圓心 \(O\) 至 \(AB\) 的垂直距離是 5 cm。(a) 求 \(AB\) 的長度。(b) 求 \(\triangle OAB\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(24\) cm　(b) \(60\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>(a) 設 \(M\) 為由 \(O\) 至 \(AB\) 的垂足。則 \(OM\perp AB\)，所以 \(AM=MB\)（圓心至弦的垂線平分弦）。</li><li>在直角三角形 \(OMA\) 中：\(AM^{2}=OA^{2}-OM^{2}=13^{2}-5^{2}=169-25=144\)。</li><li>\(AM=12\) cm，所以 \(AB=2\times 12=24\) cm。</li><li>(b) \(\triangle OAB\) 的面積 \(=\frac{1}{2}\times AB\times OM=\frac{1}{2}\times 24\times 5=60\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(AM=12\) cm 只是弦的<i>一半</i>；弦長是 \(2\times 12=24\) cm。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在半徑 10 cm 的圓中，弦 \(AB\) 長 16 cm。(a) 求由圓心 \(O\) 至 \(AB\) 的垂直距離。(b) 求 \(\triangle OAB\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6\) cm　(b) \(48\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>弦的一半為 \(AM=8\) cm，其中 \(M\) 是 \(AB\) 的中點，且 \(OM\perp AB\)（圓心至弦的垂線平分弦）。</li><li>(a) 在直角三角形 \(OMA\) 中：\(OM^{2}=OA^{2}-AM^{2}=100-64=36\)，所以 \(OM=6\) cm。</li><li>(b) 面積 \(=\frac{1}{2}\times 16\times 6=48\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用整條弦 16 cm 代入畢氏定理會得 \(OM^{2}=100-256&lt;0\) —— 直角三角形是由半徑、半條弦和這段距離組成。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在一個圓中，\(A\)、\(B\)、\(C\)、\(D\) 是圓上的點，而 \(C\) 和 \(D\) 在弦 \(AB\) 的同一側。已知 \(\angle ACB=42^{\circ}\)。求 (a) \(\angle ADB\)，(b) 弧 \(AB\) 在圓心 \(O\) 所對的角，並為每個答案說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(42^{\circ}\)　(b) \(84^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle ACB\) 與 \(\angle ADB\) 都是同一條弧 \(AB\)（同一弓形）所對的圓周角。</li><li>\(\therefore\angle ADB=\angle ACB=42^{\circ}\)（同弓形內的圓周角）。</li><li>(b) \(\angle AOB=2\angle ACB=2\times 42^{\circ}=84^{\circ}\)（圓心角是圓周角的兩倍）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>同弓形內的圓周角相等，並不互補。只有圓內接四邊形（即兩點分別在兩條弧上）的角才互補。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>在半徑 10 cm 的圓中，弦 \(AB\) 與 \(CD\) 平行，並且都在圓心 \(O\) 的同一側。已知 \(AB=16\) cm，\(CD=12\) cm。(a) 求 \(O\) 至 \(AB\) 的距離。(b) 求 \(O\) 至 \(CD\) 的距離。(c) 由此求兩弦之間的距離。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6\) cm　(b) \(8\) cm　(c) \(2\) cm</div>
+<ol class="steps">
+<li>設 \(M\)、\(N\) 分別為 \(AB\)、\(CD\) 的中點。則 \(OM\perp AB\)，\(ON\perp CD\)（圓心至弦的垂線平分弦），而由於兩弦平行，\(O\)、\(M\)、\(N\) 共線。</li><li>(a) \(AM=8\) cm，所以 \(OM=\sqrt{10^{2}-8^{2}}=\sqrt{100-64}=6\) cm。</li><li>(b) \(CN=6\) cm，所以 \(ON=\sqrt{10^{2}-6^{2}}=\sqrt{100-36}=8\) cm。</li><li>(c) 兩弦都在 \(O\) 的同一側，所以它們之間的距離是 \(ON-OM=8-6=2\) cm。</li><li>若兩弦分別在 \(O\) 的兩側，距離會是 \(8+6=14\) cm —— 「同一側」這幾個字決定了用哪一個。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把兩個距離相加得 14 cm，只有在兩弦位於圓心兩側時才正確。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>\(AB\) 是圓的一條直徑，\(C\) 是圓上的一點，使 \(\angle ABC=28^{\circ}\)。\(D\) 是圓上的一點，位於 \(BC\) 與 \(A\) 相反的一側。(a) 求 \(\angle ACB\)，並說明理由。(b) 求 \(\angle BAC\)。(c) 求 \(\angle BDC\)，並說明理由。(d) 求 \(\angle BOC\)，其中 \(O\) 是圓心。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(90^{\circ}\)　(b) \(62^{\circ}\)　(c) \(118^{\circ}\)　(d) \(124^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(AB\) 是直徑，所以 \(\angle ACB=90^{\circ}\)（半圓上的圓周角）。</li><li>(b) 在 \(\triangle ABC\) 中：\(\angle BAC=180^{\circ}-90^{\circ}-28^{\circ}=62^{\circ}\)（三角形內角和）。</li><li>(c) \(A\)、\(B\)、\(D\)、\(C\) 都在圓上，所以 \(ABDC\) 是圓內接四邊形，\(A\) 與 \(D\) 為對角頂點。</li><li>\(\angle BAC\) 與 \(\angle BDC\) 是該圓內接四邊形的一對對角，所以互補：\(\angle BDC=180^{\circ}-62^{\circ}=118^{\circ}\)（圓內接四邊形對角）。</li><li>理由檢查：\(\angle BDC\) 所對的弧 \(BC\) 包含 \(A\)，而 \(D\) 在另一條弧上，所以兩角互補而不是相等。</li><li>(d) \(\angle BOC=2\angle BAC=2\times 62^{\circ}=124^{\circ}\)（圓心角是圓周角的兩倍，兩者都對弧 \(BC\)）。</li><li>驗算：在 \(\triangle OBC\) 中，\(OB=OC\)（半徑），所以底角為 \(\frac{180^{\circ}-124^{\circ}}{2}=28^{\circ}\)，正好等於 \(\angle ABC\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>圓心角是圓周角的兩倍，所以 \(\angle BOC=2\times 62^{\circ}=124^{\circ}\) —— 不要用 \(\angle ABC\) 去加倍。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>切線、圓內接四邊形與共圓點 <span class="count">· 7 題</span></h2>
+    <p>切線垂直半徑、對角、交錯弓形</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>切線在接觸點垂直於半徑，而由外點引出的兩條切線長度相等。四邊形的對角互補時，它就是圓內接四邊形；此時外角等於內對角。切線與弦之間的角，等於交錯弓形內的圓周角。</p><div class="formula"><span>\(\angle OAT=90^{\circ}\)</span><span>\(\angle A+\angle C=180^{\circ}\)</span><span>\(TA=TB\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>\(TA\) 是圓心為 \(O\) 的圓的切線，於 \(A\) 點與圓相切。\(B\) 是圓上的一點，使 \(\angle OAB=35^{\circ}\)，且 \(B\) 位於 \(\angle OAT\) 之內。求 \(\angle BAT\)，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\angle BAT=55^{\circ}\)</div>
+<ol class="steps">
+<li>\(TA\) 是 \(A\) 處的切線，\(OA\) 是半徑，所以 \(\angle OAT=90^{\circ}\)（切線垂直半徑）。</li><li>\(B\) 位於 \(\angle OAT\) 之內，所以 \(\angle BAT=\angle OAT-\angle OAB\)。</li><li>\(\angle BAT=90^{\circ}-35^{\circ}=55^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>直角在切線與半徑之間，即 \(\angle OAT=90^{\circ}\)，而不是在切線與弦 \(AB\) 之間。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>\(ABCD\) 是圓內接四邊形，\(\angle BAD=3x\)，\(\angle BCD=6x\)。(a) 求 \(x\)。(b) 求 \(\angle BAD\) 與 \(\angle BCD\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x=20^{\circ}\)　(b) \(60^{\circ}\) 與 \(120^{\circ}\)</div>
+<ol class="steps">
+<li>\(A\) 與 \(C\) 是圓內接四邊形 \(ABCD\) 的對角頂點。</li><li>圓內接四邊形的對角互補：\(3x+6x=180^{\circ}\)（圓內接四邊形對角）。</li><li>\(9x=180^{\circ}\)，所以 \(x=20^{\circ}\)。</li><li>\(\angle BAD=60^{\circ}\)，\(\angle BCD=120^{\circ}\)。驗算：\(60^{\circ}+120^{\circ}=180^{\circ}\)。✓</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(ABCD\) 是圓內接四邊形，邊 \(BC\) 延長至 \(E\)，使 \(\angle DCE=75^{\circ}\)。(a) 求 \(\angle BAD\)，並說明理由。(b) 求 \(\angle BCD\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(75^{\circ}\)　(b) \(105^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle DCE\) 是圓內接四邊形 \(ABCD\) 的外角，由延長 \(BC\) 而得。</li><li>圓內接四邊形的外角等於內對角：\(\angle BAD=\angle DCE=75^{\circ}\)（圓內接四邊形外角）。</li><li>(b) \(B\)、\(C\)、\(E\) 共線，所以 \(\angle BCD=180^{\circ}-75^{\circ}=105^{\circ}\)（直線上的鄰角）。</li><li>驗算：\(\angle BAD+\angle BCD=75^{\circ}+105^{\circ}=180^{\circ}\)（圓內接四邊形對角）。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>外角等於<i>對面</i>頂點 \(A\) 處的角，不是旁邊 \(D\) 處的角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(TA\) 和 \(TB\) 是圓心為 \(O\) 的圓的切線，分別於 \(A\) 和 \(B\) 與圓相切。已知 \(\angle TAB=65^{\circ}\)。求 (a) \(\angle TBA\)，(b) \(\angle ATB\)，(c) \(\angle AOB\)，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(65^{\circ}\)　(b) \(50^{\circ}\)　(c) \(130^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(TA=TB\)（外點引出的切線長度相等），所以 \(\triangle TAB\) 是等腰三角形，\(\angle TBA=\angle TAB=65^{\circ}\)（等腰三角形底角）。</li><li>(b) 在 \(\triangle TAB\) 中：\(\angle ATB=180^{\circ}-65^{\circ}-65^{\circ}=50^{\circ}\)（三角形內角和）。</li><li>(c) \(\angle OAT=\angle OBT=90^{\circ}\)（切線垂直半徑）。</li><li>在四邊形 \(OATB\) 中：\(\angle AOB=360^{\circ}-90^{\circ}-90^{\circ}-50^{\circ}=130^{\circ}\)（多邊形內角和）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(\angle ATB\) 不是 \(90^{\circ}\) —— 只有接觸點 \(A\) 和 \(B\) 處的角才是直角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(TA\) 是圓於 \(A\) 的切線，\(AB\) 是一條弦。已知 \(\angle TAB=58^{\circ}\)，而 \(T\) 與圓位於 \(AB\) 的兩側。\(C\) 是優弧 \(AB\) 上的一點，\(D\) 是劣弧 \(AB\) 上的一點。(a) 求 \(\angle ACB\)，並說明理由。(b) 求 \(\angle ADB\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(58^{\circ}\)　(b) \(122^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 切線 \(TA\) 與弦 \(AB\) 之間的角，等於交錯弓形內的圓周角：\(\angle ACB=\angle TAB=58^{\circ}\)（交錯弓形內的圓周角）。</li><li>(b) \(A\)、\(C\)、\(B\)、\(D\) 都在圓上，所以 \(ACBD\) 是圓內接四邊形，\(C\) 與 \(D\) 為對角頂點。</li><li>\(\angle ADB=180^{\circ}-\angle ACB=180^{\circ}-58^{\circ}=122^{\circ}\)（圓內接四邊形對角）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>交錯弓形定理給出的是弦<i>另一側</i>弓形內的角；與切線同側的角則與它互補。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>\(TA\) 和 \(TB\) 是圓心為 \(O\) 的圓的切線，分別於 \(A\) 和 \(B\) 與圓相切，且 \(\angle ATB=70^{\circ}\)。\(C\) 是優弧 \(AB\) 上的一點，\(D\) 是劣弧 \(AB\) 上的一點。(a) 求 \(\angle AOB\)。(b) 求 \(\angle ACB\)。(c) 求 \(\angle ADB\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(110^{\circ}\)　(b) \(55^{\circ}\)　(c) \(125^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle OAT=\angle OBT=90^{\circ}\)（切線垂直半徑）。</li><li>在四邊形 \(OATB\) 中：\(\angle AOB=360^{\circ}-90^{\circ}-90^{\circ}-70^{\circ}=110^{\circ}\)（多邊形內角和）。</li><li>(b) \(\angle ACB=\frac{1}{2}\angle AOB=\frac{1}{2}\times 110^{\circ}=55^{\circ}\)（圓心角是圓周角的兩倍，兩者都在優弧 \(AB\) 上）。</li><li>(c) \(ACBD\) 是圓內接四邊形，所以 \(\angle ADB=180^{\circ}-55^{\circ}=125^{\circ}\)（圓內接四邊形對角）。</li><li>驗算：\(\angle ADB\) 是鈍角，因為 \(D\) 在劣弧上，這正是 \(125^{\circ}\) 所顯示的。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中，\(\angle ACB\) 與 \(\angle ADB\) 對同一條弦 \(AB\)，但分別在兩個弓形上，所以互補而不是相等。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>\(ABCD\) 是圓內接四邊形，\(AB=AD\)。對角線 \(AC\) 與 \(BD\) 相交於 \(E\)。(a) 證明 \(\angle ABD=\angle ADB\)。(b) 證明 \(AC\) 平分 \(\angle BCD\)。(c) 已知 \(\angle BAD=80^{\circ}\)，求 \(\angle BCD\) 與 \(\angle ACD\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(c) \(\angle BCD=100^{\circ}\)，\(\angle ACD=50^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ABD\) 中，\(AB=AD\)，所以底角相等：\(\angle ABD=\angle ADB\)（等腰三角形底角）。</li><li>(b) \(\angle ACD=\angle ABD\)（同弓形內的圓周角，兩者同對弦 \(AD\)）。</li><li>\(\angle ACB=\angle ADB\)（同弓形內的圓周角，兩者同對弦 \(AB\)）。</li><li>由 (a) 得 \(\angle ABD=\angle ADB\)，所以 \(\angle ACD=\angle ACB\)，即 \(AC\) 平分 \(\angle BCD\)。</li><li>(c) \(ABCD\) 是圓內接四邊形，\(A\) 與 \(C\) 為對角頂點，所以 \(\angle BCD=180^{\circ}-\angle BAD=180^{\circ}-80^{\circ}=100^{\circ}\)（圓內接四邊形對角）。</li><li>由 (b)，\(\angle ACD=\frac{1}{2}\angle BCD=\frac{1}{2}\times 100^{\circ}=50^{\circ}\)。</li><li>驗算：\(\angle ABD=\angle ACD=50^{\circ}\)，而在 \(\triangle ABD\) 中，底角為 \(\frac{180^{\circ}-80^{\circ}}{2}=50^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中，要小心選出同弓形定理所用的那一對角：\(\angle ACD\) 配 \(\angle ABD\)（同對弦 \(AD\)），\(\angle ACB\) 配 \(\angle ADB\)（同對弦 \(AB\)）。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度的多步計算與證明 <span class="count">· 8 題</span></h2>
+    <p>連鎖理由、逆定理與完整證明</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>長的幾何題是一條鏈：每一部分都給出下一部分所需的結果。先決定用哪一條定理，寫出陳述<i>和</i>理由，然後才用那個數值。逆定理與定理同樣重要 —— 相等的角可證明共圓，而 \(a^{2}+b^{2}=c^{2}\) 可證明直角。</p><div class="formula"><span>\(\text{畢氏定理的逆定理}\)</span><span>\(\text{共圓}\Leftarrow\text{相等的角}\)</span><span>\(\text{切線}\perp\text{半徑}\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(\angle ABC=70^{\circ}\)，\(\angle ACB=50^{\circ}\)。直線 \(XY\) 經過 \(A\) 且平行於 \(BC\)，\(X\) 與 \(B\) 在 \(A\) 的同一側，\(Y\) 與 \(C\) 在 \(A\) 的同一側。求 (a) \(\angle XAB\)，(b) \(\angle YAC\)，(c) \(\angle BAC\)，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(70^{\circ}\)　(b) \(50^{\circ}\)　(c) \(60^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(XY\parallel BC\)，\(AB\) 是截線，所以 \(\angle XAB=\angle ABC=70^{\circ}\)（內錯角，\(XY\parallel BC\)）。</li><li>(b) 同樣，以 \(AC\) 為截線：\(\angle YAC=\angle ACB=50^{\circ}\)（內錯角，\(XY\parallel BC\)）。</li><li>(c) \(X\)、\(A\)、\(Y\) 共線，所以 \(\angle XAB+\angle BAC+\angle YAC=180^{\circ}\)（直線上的鄰角）。</li><li>\(\angle BAC=180^{\circ}-70^{\circ}-50^{\circ}=60^{\circ}\)，這與 \(\triangle ABC\) 的內角和一致。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>內錯角是 \(\angle XAB\) 配 \(\angle ABC\)、\(\angle YAC\) 配 \(\angle ACB\)：倒過來配，就會變成 \(50^{\circ}\) 和 \(70^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(ABCDE\) 是正五邊形。(a) 求 \(\angle BCD\)。(b) 證明 \(\angle BCA=36^{\circ}\)。(c) 由此求 \(\angle ACD\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(108^{\circ}\)　(b) \(36^{\circ}\)　(c) \(72^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 外角 \(=\frac{360^{\circ}}{5}=72^{\circ}\)，所以每個內角 \(=180^{\circ}-72^{\circ}=108^{\circ}\)；因此 \(\angle BCD=108^{\circ}\)（正多邊形的內角）。</li><li>(b) \(AB=BC\)（正五邊形的邊），所以 \(\triangle ABC\) 是等腰三角形，底邊為 \(AC\)。</li><li>\(\angle BCA=\angle BAC=\frac{180^{\circ}-108^{\circ}}{2}=36^{\circ}\)（等腰三角形底角）。</li><li>(c) \(\angle ACD=\angle BCD-\angle BCA=108^{\circ}-36^{\circ}=72^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>等腰三角形 \(ABC\) 的頂角是內角 \(108^{\circ}\)，所以每個底角是 \(36^{\circ}\)，不是 \(54^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(ABCD\) 是正方形。\(ABE\) 是畫在正方形內的等邊三角形，\(E\) 在 \(ABCD\) 之內。(a) 求 \(\angle EAB\)。(b) 求 \(\angle DAE\)。(c) 證明 \(\angle AED=75^{\circ}\)，並由此求 \(\angle EDC\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(60^{\circ}\)　(b) \(30^{\circ}\)　(c) \(\angle AED=75^{\circ}\)，\(\angle EDC=15^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\triangle ABE\) 是等邊三角形，所以每個角都是 \(60^{\circ}\)；特別是 \(\angle EAB=60^{\circ}\)。</li><li>(b) \(\angle DAB=90^{\circ}\)（正方形的角），所以 \(\angle DAE=90^{\circ}-60^{\circ}=30^{\circ}\)。</li><li>(c) \(AD=AB\)（正方形的邊），\(AE=AB\)（等邊三角形），所以 \(AD=AE\)，\(\triangle ADE\) 是等腰三角形。</li><li>\(\angle ADE=\angle AED=\frac{180^{\circ}-30^{\circ}}{2}=75^{\circ}\)（等腰三角形底角）。</li><li>\(\angle EDC=\angle ADC-\angle ADE=90^{\circ}-75^{\circ}=15^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中，等腰三角形的頂角是 \(\angle DAE=30^{\circ}\)，所以底角是 \(\frac{180^{\circ}-30^{\circ}}{2}=75^{\circ}\)；若把 \(60^{\circ}\) 當作頂角就會答錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在四邊形 \(ABCD\) 中，\(\angle ABC=90^{\circ}\)，\(AB=8\) cm，\(BC=6\) cm，\(CD=24\) cm，\(DA=26\) cm。(a) 求 \(AC\)。(b) 證明 \(\angle ACD=90^{\circ}\)。(c) 求 \(ABCD\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(10\) cm　(b) 畢氏定理的逆定理　(c) \(144\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>(a) \(\triangle ABC\) 在 \(B\) 處為直角，所以 \(AC^{2}=8^{2}+6^{2}=64+36=100\)，\(AC=10\) cm（畢氏定理）。</li><li>(b) 在 \(\triangle ACD\) 中：\(AC^{2}+CD^{2}=10^{2}+24^{2}=100+576=676\)。</li><li>又 \(DA^{2}=26^{2}=676\)。因為 \(AC^{2}+CD^{2}=DA^{2}\)，所以 \(\angle ACD=90^{\circ}\)（畢氏定理的逆定理）。</li><li>(c) 面積 \(=[ABC]+[ACD]=\frac{1}{2}\times 8\times 6+\frac{1}{2}\times 10\times 24\)。</li><li>\(=24+120=144\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用畢氏定理的逆定理時，必須把<i>最長</i>的一邊單獨放一邊：用 \(AC^{2}+CD^{2}\) 與 \(DA^{2}=676\) 比較，不是與 \(CD^{2}\) 比較。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(\angle ACB=90^{\circ}\)。\(D\) 是 \(AB\) 上的一點，使 \(CD\perp AB\)。(a) 證明 \(\triangle ACD\sim\triangle ABC\)。(b) 由此證明 \(AC^{2}=AD\cdot AB\)。(c) 已知 \(AD=4\) cm，\(DB=5\) cm，求 \(AC\) 與 \(CD\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(c) \(AC=6\) cm，\(CD=2\sqrt{5}\approx 4.47\) cm</div>
+<ol class="steps">
+<li>(a) 在 \(\triangle ACD\) 與 \(\triangle ABC\) 中：\(\angle ADC=90^{\circ}=\angle ACB\)（已知），\(\angle CAD=\angle CAB\)（公共角）。</li><li>\(\therefore\triangle ACD\sim\triangle ABC\)（A.A.A.），其中 \(A\leftrightarrow A\)，\(D\leftrightarrow C\)，\(C\leftrightarrow B\)。</li><li>(b) 對應邊：\(\frac{AD}{AC}=\frac{AC}{AB}\)，所以 \(AC^{2}=AD\cdot AB\)。</li><li>(c) \(AB=AD+DB=4+5=9\) cm，所以 \(AC^{2}=4\times 9=36\)，\(AC=6\) cm。</li><li>求 \(CD\)：\(\triangle ACD\sim\triangle CBD\)，所以 \(\frac{CD}{BD}=\frac{AD}{CD}\)，得 \(CD^{2}=AD\cdot DB=4\times 5=20\)。</li><li>\(CD=\sqrt{20}=2\sqrt{5}\approx 4.47\) cm。</li><li>驗算：\(BC^{2}=AB^{2}-AC^{2}=81-36=45\)，所以 \(BC=3\sqrt{5}\)，而 \(AC^{2}+BC^{2}=36+45=81=AB^{2}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中，比例是 \(\frac{AD}{AC}=\frac{AC}{AB}\) —— 邊 \(AC\) 同時出現在兩個三角形中，這正是得出平方 \(AC^{2}\) 的原因。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P1_Q8.html" target="_blank" rel="noopener">歷年試題 · 2023 卷一 Q8 ↗</a></div>
+<div class="q__body"><p>如圖，直線 \(AB\) 與 \(CD\) 相交於點 \(E\)，且 \(AC\parallel DB\)。已知 \(AB=20\) cm，\(AC=10\) cm，\(BD=15\) cm，\(CE=6\) cm。(a) 證明 \(\triangle ACE\sim\triangle BDE\)。(b) 求 \(AE\) 與 \(BE\)。(c) \(\triangle BDE\) 是否直角三角形？試解釋你的答案。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="24 25 296 244" width="296" height="244" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:296px">
+<line x1="62.0" y1="130.0" x2="282.0" y2="130.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="150.0" y1="64.0" x2="150.0" y2="229.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="62.0" y1="130.0" x2="150.0" y2="64.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="282.0" y1="130.0" x2="150.0" y2="229.0" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 150.0 108.0 A 22 22 0 0 0 128.0 130.0" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="50.0" y="130.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="294.0" y="130.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="150.0" y="51.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="150.0" y="243.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="138.0" y="140.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+</svg>
+<figcaption>Q48 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(b) \(AE=8\) cm，\(BE=12\) cm　(c) 是 —— \(\angle BED=90^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(AC\parallel DB\)，以 \(AB\) 為截線：\(\angle CAE=\angle DBE\)（內錯角，\(AC\parallel DB\)）。</li><li>\(\angle AEC=\angle BED\)（對頂角）。</li><li>\(\therefore\triangle ACE\sim\triangle BDE\)（A.A.A.），其中 \(A\leftrightarrow B\)，\(C\leftrightarrow D\)，\(E\leftrightarrow E\)。</li><li>(b) 對應邊：\(\frac{AE}{BE}=\frac{AC}{BD}=\frac{10}{15}=\frac{2}{3}\)。</li><li>設 \(AE=2k\)，\(BE=3k\)。因為 \(AE+BE=AB=20\)：\(5k=20\)，所以 \(k=4\)。</li><li>\(AE=8\) cm，\(BE=12\) cm。</li><li>(c) 在 \(\triangle ACE\) 中：\(AE^{2}+CE^{2}=8^{2}+6^{2}=64+36=100\)，而 \(AC^{2}=10^{2}=100\)。</li><li>因為 \(AE^{2}+CE^{2}=AC^{2}\)，所以 \(\angle AEC=90^{\circ}\)（畢氏定理的逆定理）。</li><li>由 (a) 的相似關係，對應角 \(\angle BED=90^{\circ}\)，所以 \(\triangle BDE\) 是直角三角形。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>對應邊必須配合相似的次序：\(AE\) 配 \(BE\)，\(AC\) 配 \(BD\)。把 \(AE\) 配 \(BD\) 只會得出無意義的結果。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>\(AB\) 是圓心為 \(O\) 的圓的直徑，\(C\) 是圓上的一點。圓於 \(C\) 的切線與 \(AB\) 的延長線相交於 \(T\)，其中 \(B\) 在 \(A\) 與 \(T\) 之間。已知 \(\angle CAB=34^{\circ}\)。(a) 求 \(\angle ABC\) 與 \(\angle ACB\)。(b) 求 \(\angle BCT\)，並說明理由。(c) 求 \(\angle ATC\)。(d) 求 \(\angle OTC\)，並用三角形 \(OTC\) 驗算。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\angle ABC=56^{\circ}\)，\(\angle ACB=90^{\circ}\)　(b) \(34^{\circ}\)　(c) \(22^{\circ}\)　(d) \(22^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(AB\) 是直徑，所以 \(\angle ACB=90^{\circ}\)（半圓上的圓周角）。</li><li>在 \(\triangle ABC\) 中：\(\angle ABC=180^{\circ}-90^{\circ}-34^{\circ}=56^{\circ}\)（三角形內角和）。</li><li>(b) \(TC\) 是 \(C\) 處的切線，\(CB\) 是一條弦，所以兩者之間的角等於交錯弓形內的圓周角：\(\angle BCT=\angle CAB=34^{\circ}\)（交錯弓形內的圓周角）。</li><li>(c) 在 \(\triangle ACT\) 中：\(\angle CAT=34^{\circ}\)，\(\angle ACT=\angle ACB+\angle BCT=90^{\circ}+34^{\circ}=124^{\circ}\)。</li><li>\(\angle ATC=180^{\circ}-34^{\circ}-124^{\circ}=22^{\circ}\)（三角形內角和）。</li><li>(d) \(\angle COB=2\angle CAB=68^{\circ}\)（圓心角是圓周角的兩倍，同對弧 \(CB\)）。</li><li>\(\angle OCT=90^{\circ}\)（切線垂直半徑），所以在直角三角形 \(OCT\) 中：\(\angle OTC=180^{\circ}-90^{\circ}-68^{\circ}=22^{\circ}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中，\(\angle ACT\) 是 \(90^{\circ}+34^{\circ}=124^{\circ}\)，不是 \(90^{\circ}-34^{\circ}\)：切線在三角形之外，所以 \(C\) 處的兩個角相加。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P2_Q18.html" target="_blank" rel="noopener">歷年試題 · 2022 卷二 Q18 ↗</a></div>
+<div class="q__body"><p>如圖，\(ABCD\) 是周界 170 cm 的長方形，\(BC=34\) cm。\(E\) 是長方形外的一點，位於 \(AB\) 與 \(C\) 相反的一側；\(F\) 是長方形外的一點，位於 \(BC\) 與 \(A\) 相反的一側；而 \(E\)、\(B\)、\(F\) 在同一直線上。已知 \(\angle AEB=\angle BFC=90^{\circ}\)，\(AE=24\) cm。(a) 求 \(AB\)。(b) 求 \(BE\)。(c) 證明 \(\triangle ABE\sim\triangle BCF\)。(d) 求 \(EF\)。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-8 -72 363 309" width="363" height="309" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:363px">
+<polygon points="30.0,110.0 254.4,110.0 254.4,-39.6 30.0,-39.6" fill="none" stroke="#1e293b" stroke-width="1.7" stroke-linejoin="round"/>
+<line x1="79.7" y1="203.2" x2="316.5" y2="76.9" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="30.0" y1="110.0" x2="79.7" y2="203.2" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="254.4" y1="-39.6" x2="316.5" y2="76.9" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<polyline points="75.5,195.2 83.4,191.0 87.6,198.9" fill="none" stroke="#475569" stroke-width="1.1" stroke-linejoin="round"/>
+<polyline points="308.6,81.1 304.3,73.2 312.3,68.9" fill="none" stroke="#475569" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="18.0" y="102.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="250.4" y="99.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="266.4" y="-43.6" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="18.0" y="-45.6" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="67.7" y="211.2" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+<text x="328.5" y="82.9" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">F</text>
+</svg>
+<figcaption>Q50 附圖</figcaption>
+</figure></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(51\) cm　(b) \(45\) cm　(c) A.A.A.　(d) \(61\) cm</div>
+<ol class="steps">
+<li>(a) 在長方形中，\(AB=CD\)，\(AD=BC=34\) cm。周界：\(2\,AB+2(34)=170\)。</li><li>\(2\,AB=170-68=102\)，所以 \(AB=51\) cm。</li><li>(b) \(\triangle ABE\) 在 \(E\) 處為直角，所以 \(BE^{2}=AB^{2}-AE^{2}=51^{2}-24^{2}=2601-576=2025\)（畢氏定理）。</li><li>\(BE=45\) cm。</li><li>(c) \(\angle AEB=\angle BFC=90^{\circ}\)（已知）。</li><li>\(\angle ABE=90^{\circ}-\angle BAE\)（\(\triangle ABE\) 的內角和）；又因為 \(E\)、\(B\)、\(F\) 共線且 \(\angle ABC=90^{\circ}\)，所以 \(\angle CBF=90^{\circ}-\angle ABE=\angle BAE\)。</li><li>因此 \(\angle BAE=\angle CBF\)，第三個角也相等：\(\triangle ABE\sim\triangle BCF\)（A.A.A.），其中 \(A\leftrightarrow B\)，\(E\leftrightarrow F\)，\(B\leftrightarrow C\)。</li><li>(d) 對應邊：\(\frac{AE}{BF}=\frac{AB}{BC}\)，所以 \(\frac{24}{BF}=\frac{51}{34}=\frac{3}{2}\)。</li><li>\(3\,BF=48\)，得 \(BF=16\) cm。</li><li>\(E\)、\(B\)、\(F\) 共線，且 \(B\) 在 \(E\) 與 \(F\) 之間，所以 \(EF=BE+BF=45+16=61\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (d) 中，\(B\) 位於 \(E\) 與 \(F\) 之間，所以長度相加；而比例是 \(\frac{AE}{BF}=\frac{AB}{BC}\) —— 把 \(AE\) 配 \(AB\) 就會得出錯誤的 \(BF\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 幾何 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>
+<script src="assets/cn.js"></script>
+</body>
+</html>

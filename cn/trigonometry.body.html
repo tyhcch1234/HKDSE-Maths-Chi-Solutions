@@ -1,0 +1,786 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 三角學 — 7 種題型 50 題（附詳解）","desc":"由 59 道歷年 HKDSE 三角學試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：直角三角形的三角比、特殊角與恆等式、正弦公式與餘弦公式（含不確定情況）、三角形面積與正弦面積關係、立體圖形中直線與平面及兩平面的交角、三角函數圖像的振幅與週期變換，以及方位角、高度與距離等考試程度綜合題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_trigonometry_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 直角三角形的三角比</a><a href="#t2" data-t="t2">類型 2 · 特殊角與恆等式</a><a href="#t3" data-t="t3">類型 3 · 正弦與餘弦公式</a><a href="#t4" data-t="t4">類型 4 · 三角形面積</a><a href="#t5" data-t="t5">類型 5 · 立體三角學</a><a href="#t6" data-t="t6">類型 6 · 圖像與變換</a><a href="#t7" data-t="t7">類型 7 · 方位角與高度</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 三角學</p>
+    <h1 class="hero__title">三角學 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 59 道歷年 DSE 三角學試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>59</b> 道歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol><li><b>先做後看。</b>先在紙上完成每一題，然後按「顯示答案及詳解」，逐行核對 —— 不要先讀詳解。</li><li><b>按題型順序做。</b>7 個題型由淺入深；每個題型最初的幾題是單步計算，最後一兩題是考試程度的多部分題目。</li><li><b>細讀「常犯錯誤」框。</b>那正是考生失分的地方。</li><li><b>對照真實試卷。</b>不少題目改編自歷年試題；每張卡右邊的標籤可開啟原題及其完整詳解。</li></ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>直角三角形的三角比</td><td>SOH-CAH-TOA：求邊或求角</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>特殊角與恆等式 sin²θ + cos²θ = 1</td><td>準確值與兩條平方和恆等式</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>正弦公式與餘弦公式（包括不確定情況）</td><td>用哪一條公式，以及一個角何時有兩個可能值</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>三角形面積與正弦面積關係</td><td>兩邊之積的一半乘以夾角的正弦</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>立體三角學：直線與平面的交角、兩平面的交角</td><td>在立體圖形中找出隱藏的直角三角形</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>正弦、餘弦、正切圖像：振幅、週期、變換</td><td>讀出振幅與週期，再由圖像解方程</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度綜合題：方位角、高度與距離、多個三角形</td><td>卷一風格、涉及兩至三個三角形的題目</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>直角三角形的三角比 <span class="count">· 7 題</span></h2>
+    <p>SOH-CAH-TOA：求一條邊或一個角</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>在直角三角形中，三個比只取決於銳角的大小，與三角形的大小無關。各邊要<i>相對於你正在用的角</i>來命名：斜邊永遠對著直角，對邊向著所選的角，餘下的一邊就是鄰邊。</p><p>求<i>邊</i>時，選出同時包含所涉兩條邊的那個比；求<i>角</i>時，用反三角函數鍵（\(\sin^{-1}\)、\(\cos^{-1}\)、\(\tan^{-1}\)）。代入前先寫明哪個是直角、哪個是已知角。</p><div class="formula"><span>\(\sin\theta=\dfrac{\text{對邊}}{\text{斜邊}}\)</span><span>\(\cos\theta=\dfrac{\text{鄰邊}}{\text{斜邊}}\)</span><span>\(\tan\theta=\dfrac{\text{對邊}}{\text{鄰邊}}\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(\angle C=90^{\circ}\)，\(AB=13\) cm，\(BC=5\) cm，\(AC=12\) cm。求 \(\sin A\)、\(\cos A\) 及 \(\tan A\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\sin A=\dfrac{5}{13},\ \cos A=\dfrac{12}{13},\ \tan A=\dfrac{5}{12}\)</div>
+<ol class="steps">
+<li>直角在 \(C\)，所以 \(AB\)（\(C\) 的對邊）是斜邊：\(\text{斜邊}=13\)。</li><li>對角 \(A\) 而言，對邊是 \(BC=5\)，鄰邊是 \(AC=12\)。</li><li>\(\sin A=\dfrac{5}{13}\)，\(\cos A=\dfrac{12}{13}\)，\(\tan A=\dfrac{5}{12}\)。</li><li>核對：\(5^{2}+12^{2}=25+144=169=13^{2}\)，所以這三角形的確是直角三角形。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為 \(12\) 看起來比 \(13\) 以外任何數都大，就把 \(AC=12\) 當作斜邊。斜邊是對著直角的那條邊。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(\angle B=90^{\circ}\)，\(\angle A=35^{\circ}\)。已知 \(AB=8\) cm，求 \(BC\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(BC\approx 5.60\) cm</div>
+<ol class="steps">
+<li>直角在 \(B\)，所以斜邊是 \(AC\)；相對於角 \(A=35^{\circ}\)，\(BC\) 是對邊，\(AB=8\) 是鄰邊。</li><li>\(\tan 35^{\circ}=\dfrac{BC}{AB}=\dfrac{BC}{8}\)。</li><li>\(BC=8\tan 35^{\circ}=8(0.70021\ldots)\)。</li><li>\(BC\approx 5.60\) cm（3 個有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個直角三角形的斜邊長 \(20\) cm，其中一個銳角是 \(28^{\circ}\)。求兩條直角邊的長度，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(20\sin 28^{\circ}\approx 9.39\) cm 及 \(20\cos 28^{\circ}\approx 17.7\) cm</div>
+<ol class="steps">
+<li>設角 \(\theta=28^{\circ}\) 在 \(A\)，直角在 \(C\)，斜邊 \(AB=20\)。</li><li>對邊：\(BC=20\sin 28^{\circ}=20(0.46947\ldots)\approx 9.39\) cm。</li><li>鄰邊：\(AC=20\cos 28^{\circ}=20(0.88295\ldots)\approx 17.7\) cm。</li><li>核對：\(9.39^{2}+17.66^{2}=88.2+311.9=400.1\approx 20^{2}\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>拿着斜邊去用 \(\tan\)。\(\tan\) 永遠不涉及斜邊 —— 已知 \(\text{斜邊}\) 時，只可以用 \(\sin\) 或 \(\cos\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q19.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q19 ↗</a></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(\angle C=90^{\circ}\)，\(AC=7\) cm，\(BC=24\) cm。(a) 求 \(AB\)。(b) 求 \(\angle A\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(25\) cm　(b) \(\angle A\approx 73.7^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 畢氏定理：\(AB=\sqrt{7^{2}+24^{2}}=\sqrt{49+576}=\sqrt{625}=25\) cm。</li><li>(b) 相對於 \(A\)，對邊是 \(BC=24\)，鄰邊是 \(AC=7\)。</li><li>\(\tan A=\dfrac{24}{7}=3.4286\ldots\)</li><li>\(\angle A=73.7^{\circ}\)（3 個有效數字）。</li><li>核對：\(\sin A=\dfrac{24}{25}=0.96\)，而 \(\sin 73.74^{\circ}\approx 0.960\)。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一把長 \(6.5\) m 的梯子斜靠在一道垂直的牆上。梯腳在水平地面上，梯子與地面成 \(68^{\circ}\) 角。(a) 梯子可到達牆上多高？(b) 梯腳距牆多遠？兩個答案均須準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6.03\) m　(b) \(2.43\) m</div>
+<ol class="steps">
+<li>牆是垂直的，地面是水平的，所以牆、地面與梯子構成一個直角三角形，斜邊是梯子 \(6.5\) m，\(68^{\circ}\) 角在梯腳。</li><li>(a) 到達的高度是 \(68^{\circ}\) 的對邊：\(h=6.5\sin 68^{\circ}=6.5(0.92718\ldots)\approx 6.03\) m。</li><li>(b) 與牆的距離是鄰邊：\(d=6.5\cos 68^{\circ}=6.5(0.37461\ldots)\approx 2.43\) m。</li><li>核對：\(6.03^{2}+2.43^{2}=36.4+5.9=42.3\approx 6.5^{2}=42.25\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(68^{\circ}\) 放在梯子與牆之間。題目給的角是與<i>地面</i>所成的角，所以求高度要用 \(\sin\)，不是 \(\cos\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P2_Q21.html" target="_blank" rel="noopener">歷年試題 · 2016 卷二 Q21 ↗</a></div>
+<div class="q__body"><p>一座垂直的塔立在水平地面上。從地面上距塔腳 \(F\) 為 \(40\) m 的點 \(A\)，測得塔頂 \(T\) 的仰角為 \(32^{\circ}\)。(a) 求塔的高度。(b) 求 \(A\) 至 \(T\) 的距離。兩個答案均須準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(25.0\) m　(b) \(47.2\) m</div>
+<ol class="steps">
+<li>塔是垂直的，地面是水平的，所以 \(\angle TFA=90^{\circ}\)。仰角是 \(A\) 處 \(AF\) 與 \(AT\) 所成的角，所以 \(\angle TAF=32^{\circ}\)。</li><li>(a) \(TF\) 是 \(32^{\circ}\) 的對邊，\(AF=40\) 是鄰邊：\(\tan 32^{\circ}=\dfrac{TF}{40}\)。</li><li>\(TF=40\tan 32^{\circ}=40(0.62487\ldots)\approx 25.0\) m。</li><li>(b) \(AT\) 是斜邊：\(\cos 32^{\circ}=\dfrac{40}{AT}\)，所以 \(AT=\dfrac{40}{\cos 32^{\circ}}=\dfrac{40}{0.84805\ldots}\approx 47.2\) m。</li><li>核對：\(25.0^{2}+40^{2}=625+1600=2225\)，而 \(47.2^{2}=2228\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(TF=40\sin 32^{\circ}\)。\(40\) m 是沿地面量度，是仰角的鄰邊，所以要用 \(\tan\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(\angle ABC=90^{\circ}\)，\(AB=9\) cm，\(\angle BAC=40^{\circ}\)。點 \(D\) 在 \(AC\) 上，使 \(BD\perp AC\)。(a) 求 \(AC\)。(b) 求 \(BD\)。(c) 求 \(AD\)。所有答案須準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(11.7\) cm　(b) \(5.79\) cm　(c) \(6.89\) cm</div>
+<ol class="steps">
+<li>留意兩個直角：大三角形中的 \(\angle ABC=90^{\circ}\)，以及小三角形 \(ABD\) 中的 \(\angle BDA=90^{\circ}\)。</li><li>(a) 在 \(\triangle ABC\) 中，\(AB=9\) 是 \(40^{\circ}\) 角的鄰邊，\(AC\) 是斜邊：\(\cos 40^{\circ}=\dfrac{9}{AC}\)。</li><li>\(AC=\dfrac{9}{\cos 40^{\circ}}=\dfrac{9}{0.76604\ldots}\approx 11.7\) cm。</li><li>(b) 在 \(\triangle ABD\) 中，斜邊是 \(AB=9\)，\(BD\) 是 \(40^{\circ}\) 角的對邊：\(BD=9\sin 40^{\circ}=9(0.64279\ldots)\approx 5.79\) cm。</li><li>(c) \(AD=9\cos 40^{\circ}=9(0.76604\ldots)\approx 6.89\) cm。</li><li>用兩種方法核對面積：\(\tfrac{1}{2}(9)(9\tan 40^{\circ})=\tfrac{1}{2}(9)(7.552)=33.98\)，而 \(\tfrac{1}{2}(11.75)(5.785)=34.0\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(AB=9\) 當作 \(\triangle ABD\) 的斜邊卻配錯了角。在 \(\triangle ABD\) 中，\(A\) 處的角仍然是 \(40^{\circ}\)，而 \(AB\) 在該三角形中確實是斜邊。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>特殊角與恆等式 sin²θ + cos²θ = 1 <span class="count">· 7 題</span></h2>
+    <p>準確值與兩條平方和恆等式</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>本題型的一切都由兩條恆等式引申出來。把 \(\sin^{2}\theta+\cos^{2}\theta=1\) 除以 \(\cos^{2}\theta\)，便得 \(\tan^{2}\theta+1=\sec^{2}\theta\) —— DSE 常用的是 \(1+\tan^{2}\theta=\frac{1}{\cos^{2}\theta}\) 這個寫法。邊長為 \(3,4,5\)（或任何倍數）的直角三角形，可以即時把一個比轉換成其餘兩個比。</p><p>特殊角要由兩個三角形記住：\(45^{\circ}\) 直角三角形的三邊是 \(1,1,\sqrt{2}\)；\(30^{\circ}\)–\(60^{\circ}\) 直角三角形的三邊是 \(1,\sqrt{3},2\)。</p><div class="formula"><span>\(\sin^{2}\theta+\cos^{2}\theta=1\)</span><span>\(\tan\theta=\dfrac{\sin\theta}{\cos\theta}\)</span><span>\(\sin 30^{\circ}=\tfrac{1}{2},\ \cos 30^{\circ}=\tfrac{\sqrt{3}}{2},\ \tan 45^{\circ}=1\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>不使用計算機，求 \(\sin 30^{\circ}+\tan 45^{\circ}\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\dfrac{3}{2}\)</div>
+<ol class="steps">
+<li>\(\sin 30^{\circ}=\dfrac{1}{2}\)（由 \(1,\sqrt{3},2\) 三角形得出）。</li><li>\(\tan 45^{\circ}=1\)（\(1,1,\sqrt{2}\) 三角形的兩條直角邊相等）。</li><li>\(\dfrac{1}{2}+1=\dfrac{3}{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(\sin 30^{\circ}=\frac{\sqrt{3}}{2}\)。那是 \(\cos 30^{\circ}\)；\(\sin\) 由 \(0\) 增至 \(1\)，所以 \(\sin 30^{\circ}=\frac{1}{2}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>已知 \(\sin\theta=\dfrac{3}{5}\)，且 \(\theta\) 是銳角。求 \(\cos\theta\) 及 \(\tan\theta\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\cos\theta=\dfrac{4}{5},\ \tan\theta=\dfrac{3}{4}\)</div>
+<ol class="steps">
+<li>用 \(\sin^{2}\theta+\cos^{2}\theta=1\)：\(\cos^{2}\theta=1-\dfrac{9}{25}=\dfrac{16}{25}\)。</li><li>\(\theta\) 是銳角，所以 \(\cos\theta&gt;0\)，即 \(\cos\theta=\dfrac{4}{5}\)。</li><li>\(\tan\theta=\dfrac{\sin\theta}{\cos\theta}=\dfrac{3/5}{4/5}=\dfrac{3}{4}\)。</li><li>快捷方法：\(3,4,5\) 三角形的對邊是 \(3\)、鄰邊是 \(4\)、斜邊是 \(5\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>化簡下列各式，答案只保留一個三角比。(a) \(\dfrac{1-\cos^{2}\theta}{\sin\theta}\)　(b) \(\dfrac{\sin^{2}\theta}{1-\sin^{2}\theta}\)，其中 \(0^{\circ}&lt;\theta&lt;90^{\circ}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\sin\theta\)　(b) \(\tan^{2}\theta\)</div>
+<ol class="steps">
+<li>(a) 由恆等式，\(1-\cos^{2}\theta=\sin^{2}\theta\)。</li><li>所以 \(\dfrac{1-\cos^{2}\theta}{\sin\theta}=\dfrac{\sin^{2}\theta}{\sin\theta}=\sin\theta\)（因 \(\sin\theta\neq 0\) 而可約去）。</li><li>(b) \(1-\sin^{2}\theta=\cos^{2}\theta\)，所以原式為 \(\dfrac{\sin^{2}\theta}{\cos^{2}\theta}\)。</li><li>\(=\left(\dfrac{\sin\theta}{\cos\theta}\right)^{2}=\tan^{2}\theta\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(1-\cos^{2}\theta\) 換成 \(\sin\theta\)，而不是 \(\sin^{2}\theta\)。這條恆等式聯繫的是<i>平方</i>。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P2_Q20.html" target="_blank" rel="noopener">歷年試題 · 2013 卷二 Q20 ↗</a></div>
+<div class="q__body"><p>已知 \(\tan\theta=\dfrac{5}{12}\)，且 \(\theta\) 是銳角，在不求出 \(\theta\) 的情況下求 \(\sin\theta\) 及 \(\cos\theta\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\sin\theta=\dfrac{5}{13},\ \cos\theta=\dfrac{12}{13}\)</div>
+<ol class="steps">
+<li>畫一個直角三角形，把 \(\theta\) 放在其中一個頂點：對邊 \(=5\)，鄰邊 \(=12\)。</li><li>斜邊 \(=\sqrt{5^{2}+12^{2}}=\sqrt{169}=13\)。</li><li>\(\sin\theta=\dfrac{\text{對邊}}{\text{斜邊}}=\dfrac{5}{13}\)，\(\cos\theta=\dfrac{\text{鄰邊}}{\text{斜邊}}=\dfrac{12}{13}\)。</li><li>核對：\(\dfrac{5/13}{12/13}=\dfrac{5}{12}=\tan\theta\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>連 \(\sin\theta\) 也寫成 \(\frac{5}{12}\)。\(\sin\) 的分母是斜邊 \(13\)，不是鄰邊。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>不使用計算機，求 \(\dfrac{\sin 60^{\circ}-\sin 30^{\circ}}{\cos 60^{\circ}+\cos 30^{\circ}}\) 的值，答案先以 \(a+b\sqrt{3}\) 的形式表示，再準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2-\sqrt{3}\approx 0.268\)</div>
+<ol class="steps">
+<li>代入準確值：\(\dfrac{\frac{\sqrt{3}}{2}-\frac{1}{2}}{\frac{1}{2}+\frac{\sqrt{3}}{2}}\)。</li><li>分子分母同乘 \(2\)：\(\dfrac{\sqrt{3}-1}{1+\sqrt{3}}\)。</li><li>有理化：\(\dfrac{(\sqrt{3}-1)(\sqrt{3}-1)}{(\sqrt{3}+1)(\sqrt{3}-1)}=\dfrac{3-2\sqrt{3}+1}{3-1}\)。</li><li>\(=\dfrac{4-2\sqrt{3}}{2}=2-\sqrt{3}\)。</li><li>\(2-\sqrt{3}\approx 2-1.7321=0.268\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用分子的共軛式來有理化。要在分子分母同乘 \((\sqrt{3}-1)\)，即<i>分母</i>的共軛式。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2026_P2_Q19.html" target="_blank" rel="noopener">歷年試題 · 2026 卷二 Q19 ↗</a></div>
+<div class="q__body"><p>已知 \(\sin\theta+\cos\theta=\dfrac{7}{5}\)，其中 \(45^{\circ}&lt;\theta&lt;90^{\circ}\)。(a) 把兩邊平方，證明 \(\sin\theta\cos\theta=\dfrac{12}{25}\)。(b) 由此求 \(\sin\theta\) 及 \(\cos\theta\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\sin\theta\cos\theta=\dfrac{12}{25}\)　(b) \(\sin\theta=\dfrac{4}{5},\ \cos\theta=\dfrac{3}{5}\)</div>
+<ol class="steps">
+<li>(a) 兩邊平方：\((\sin\theta+\cos\theta)^{2}=\dfrac{49}{25}\)。</li><li>\(\sin^{2}\theta+2\sin\theta\cos\theta+\cos^{2}\theta=\dfrac{49}{25}\)，而 \(\sin^{2}\theta+\cos^{2}\theta=1\)。</li><li>所以 \(1+2\sin\theta\cos\theta=\dfrac{49}{25}\)，即 \(2\sin\theta\cos\theta=\dfrac{24}{25}\)，故 \(\sin\theta\cos\theta=\dfrac{12}{25}\)。</li><li>(b) \(\sin\theta\) 與 \(\cos\theta\) 是方程 \(t^{2}-\dfrac{7}{5}t+\dfrac{12}{25}=0\) 的根，即 \(25t^{2}-35t+12=0\)。</li><li>因式分解：\((5t-3)(5t-4)=0\)，所以 \(t=\dfrac{3}{5}\) 或 \(t=\dfrac{4}{5}\)。</li><li>條件 \(45^{\circ}&lt;\theta&lt;90^{\circ}\) 表示 \(\tan\theta&gt;1\)，即 \(\sin\theta&gt;\cos\theta\)，所以正弦取較大的值。</li><li>因此 \(\sin\theta=\dfrac{4}{5}\)，\(\cos\theta=\dfrac{3}{5}\)。</li><li>核對：\(\dfrac{4}{5}+\dfrac{3}{5}=\dfrac{7}{5}\)，而 \(\left(\dfrac{4}{5}\right)^{2}+\left(\dfrac{3}{5}\right)^{2}=1\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(\sin\theta+\cos\theta=1\)。只有<i>平方</i>之和等於 \(1\)；\(\sin\theta+\cos\theta\) 最大可達 \(\sqrt{2}\)。另外，若沒有 \(\theta&gt;45^{\circ}\) 這個條件，兩個答案可以互換。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>已知 \(4\sin^{2}\theta-3=0\)，其中 \(\theta\) 是銳角。(a) 求 \(\theta\)。(b) 由此在不使用計算機的情況下，求 \(2\cos^{2}\theta-\tan^{2}\theta\) 的值。(c) 求 \(\dfrac{\sin\theta}{\cos\theta}+\dfrac{\cos\theta}{\sin\theta}\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\theta=60^{\circ}\)　(b) \(-\dfrac{5}{2}\)　(c) \(\dfrac{4}{\sqrt{3}}=\dfrac{4\sqrt{3}}{3}\approx 2.31\)</div>
+<ol class="steps">
+<li>(a) \(4\sin^{2}\theta=3 \Rightarrow \sin^{2}\theta=\dfrac{3}{4} \Rightarrow \sin\theta=\dfrac{\sqrt{3}}{2}\)（因 \(\theta\) 是銳角而取正值）。</li><li>滿足 \(\sin\theta=\dfrac{\sqrt{3}}{2}\) 的銳角是 \(\theta=60^{\circ}\)。</li><li>(b) \(\cos 60^{\circ}=\dfrac{1}{2}\)，\(\tan 60^{\circ}=\sqrt{3}\)。</li><li>\(2\cos^{2}60^{\circ}-\tan^{2}60^{\circ}=2\left(\dfrac{1}{4}\right)-(\sqrt{3})^{2}=\dfrac{1}{2}-3=-\dfrac{5}{2}\)。</li><li>(c) \(\dfrac{\sin\theta}{\cos\theta}+\dfrac{\cos\theta}{\sin\theta}=\tan\theta+\dfrac{1}{\tan\theta}\)。</li><li>\(=\sqrt{3}+\dfrac{1}{\sqrt{3}}=\dfrac{3+1}{\sqrt{3}}=\dfrac{4}{\sqrt{3}}=\dfrac{4\sqrt{3}}{3}\approx 2.31\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>連 \(\sin\theta=-\frac{\sqrt{3}}{2}\) 也一併取用。一般來說方程有兩族解，但「\(\theta\) 是銳角」這個條件只保留正根。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>正弦公式與餘弦公式（包括不確定情況） <span class="count">· 7 題</span></h2>
+    <p>該用哪一條公式，以及一個角何時有兩個可能值</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>正弦公式把一條邊與它的<i>對</i>角配成一對，所以必須有一對「邊—對角」。餘弦公式用於已知三邊（求角），或已知兩邊及其夾角（求第三邊）；求角時要用它的變形。</p><p><b>不確定情況：</b>當已知兩邊及一個非夾角，並用正弦公式求角時，\(180^{\circ}-B\) 也可能成立。檢驗方法：只有當三個角相加仍小於 \(180^{\circ}\) 時，這個值才成立。餘弦公式不會有這個麻煩 —— 它只給出唯一的角。</p><div class="formula"><span>\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}\)</span><span>\(c^{2}=a^{2}+b^{2}-2ab\cos C\)</span><span>\(\cos C=\dfrac{a^{2}+b^{2}-c^{2}}{2ab}\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(BC=8\) cm，\(AC=10\) cm，\(\angle ACB=40^{\circ}\)。求 \(AB\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(AB\approx 6.44\) cm</div>
+<ol class="steps">
+<li>已知兩邊及其<i>夾角</i>，所以用餘弦公式，並把 \(AB\) 記作 \(c\)。</li><li>\(c^{2}=8^{2}+10^{2}-2(8)(10)\cos 40^{\circ}\)。</li><li>\(=64+100-160(0.76604\ldots)=164-122.57\)。</li><li>\(c^{2}=41.43\)，所以 \(c=\sqrt{41.43}\approx 6.44\) cm（3 個有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(a=7\) cm，\(\angle A=40^{\circ}\)，\(\angle B=60^{\circ}\)。求 \(b\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(b\approx 9.43\) cm</div>
+<ol class="steps">
+<li>已知 \(A\) 的對邊及兩個角，所以用正弦公式：\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}\)。</li><li>\(b=\dfrac{a\sin B}{\sin A}=\dfrac{7\sin 60^{\circ}}{\sin 40^{\circ}}\)。</li><li>\(=\dfrac{7(0.86603\ldots)}{0.64279\ldots}=\dfrac{6.0622}{0.64279}\)。</li><li>\(b\approx 9.43\) cm（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(a=7\) 與 \(\angle B\) 配成一對。每條邊都要除以它<i>對</i>角的正弦。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P2_Q21.html" target="_blank" rel="noopener">歷年試題 · 2018 卷二 Q21 ↗</a></div>
+<div class="q__body"><p>一個三角形的三邊長分別是 \(5\) cm、\(7\) cm 及 \(8\) cm。求最大的角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(81.8^{\circ}\)</div>
+<ol class="steps">
+<li>最大的角對著最長的邊，即 \(8\) cm。</li><li>\(\cos C=\dfrac{5^{2}+7^{2}-8^{2}}{2(5)(7)}=\dfrac{25+49-64}{70}\)。</li><li>\(=\dfrac{10}{70}=\dfrac{1}{7}\)。</li><li>\(C=\cos^{-1}\left(\dfrac{1}{7}\right)\approx 81.8^{\circ}\)（3 個有效數字）。</li><li>結果是銳角，與此一致：\(8^{2}=64&lt;25+49=74\)，所以這三角形是銳角三角形。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P2_Q23.html" target="_blank" rel="noopener">歷年試題 · 2024 卷二 Q23 ↗</a></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(BC=6\) cm，\(AC=9\) cm，\(\angle BAC=35^{\circ}\)。求 \(\angle ABC\) 所有可能的值，準確至 3 個有效數字，並解釋為何可能有多於一個值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\angle ABC\approx 59.4^{\circ}\) 或 \(120.6^{\circ}\)；兩者都成立，因為 \(35^{\circ}+120.6^{\circ}&lt;180^{\circ}\)</div>
+<ol class="steps">
+<li>用 \(BC\) 與 \(\angle BAC\) 這一對，代入正弦公式：\(\dfrac{6}{\sin 35^{\circ}}=\dfrac{9}{\sin B}\)。</li><li>\(\sin B=\dfrac{9\sin 35^{\circ}}{6}=\dfrac{9(0.57358\ldots)}{6}=0.86036\ldots\)</li><li>銳角的解是 \(B\approx 59.4^{\circ}\)。</li><li>鈍角的解是 \(180^{\circ}-59.4^{\circ}=120.6^{\circ}\)。</li><li>核對三角和：\(35^{\circ}+59.4^{\circ}=94.4^{\circ}&lt;180^{\circ}\) ✔，而 \(35^{\circ}+120.6^{\circ}=155.6^{\circ}&lt;180^{\circ}\) ✔，所以兩個三角形都存在。</li><li>這就是不確定情況：已知兩邊及一個非夾角，不一定能確定唯一的三角形。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>見到計算機給的 \(59.4^{\circ}\) 就停手，忘記 \(180^{\circ}-59.4^{\circ}\)。鈍角的正弦也是正的，所以任何時候都要檢驗第二個解。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(A\) 與 \(B\) 是一條筆直河道的同一岸上兩點，相距 \(120\) m。對岸一點 \(C\) 使得 \(\angle CAB=55^{\circ}\)，\(\angle CBA=65^{\circ}\)。(a) 求 \(\angle ACB\)。(b) 求距離 \(AC\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(60^{\circ}\)　(b) \(AC\approx 126\) m</div>
+<ol class="steps">
+<li>(a) 三角形內角和：\(\angle ACB=180^{\circ}-55^{\circ}-65^{\circ}=60^{\circ}\)。</li><li>(b) 正弦公式：\(\dfrac{AC}{\sin 65^{\circ}}=\dfrac{AB}{\sin 60^{\circ}}\)。</li><li>\(AC=\dfrac{120\sin 65^{\circ}}{\sin 60^{\circ}}=\dfrac{120(0.90631\ldots)}{0.86603\ldots}\)。</li><li>\(AC=\dfrac{108.757}{0.86603}\approx 125.58\)。</li><li>\(AC\approx 126\) m（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>分母用了 \(\angle C=65^{\circ}\)。\(AB=120\) 對著的是<i>第三個</i>角 \(\angle C=60^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一個三角形的三邊長分別是 \(13\) cm、\(14\) cm 及 \(15\) cm。(a) 求 \(15\) cm 那條邊所對的角，準確至 3 個有效數字。(b) 由此求另外兩個角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(67.4^{\circ}\)　(b) \(53.1^{\circ}\) 及 \(59.5^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\cos C=\dfrac{13^{2}+14^{2}-15^{2}}{2(13)(14)}=\dfrac{169+196-225}{364}=\dfrac{140}{364}=\dfrac{5}{13}\)。</li><li>\(C=\cos^{-1}\left(\dfrac{5}{13}\right)\approx 67.4^{\circ}\)（3 個有效數字）。</li><li>(b) 設 \(A\) 是 \(13\) cm 那條邊所對的角：\(\cos A=\dfrac{14^{2}+15^{2}-13^{2}}{2(14)(15)}=\dfrac{196+225-169}{420}=\dfrac{252}{420}=0.6\)。</li><li>\(A=\cos^{-1}(0.6)\approx 53.1^{\circ}\)（3 個有效數字）。</li><li>於是 \(B=180^{\circ}-67.4^{\circ}-53.1^{\circ}=59.5^{\circ}\)。</li><li>用餘弦公式核對 \(B\)：\(\cos B=\dfrac{13^{2}+15^{2}-14^{2}}{2(13)(15)}=\dfrac{169+225-196}{390}=0.50769\ldots\)，得 \(B\approx 59.5^{\circ}\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用正弦公式求第二個角而不作檢驗。求得一個鈍角後，正弦公式可能給出它的補角；此題用餘弦公式較穩妥。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>在 \(\triangle PQR\) 中，\(PQ=9\) cm，\(QR=12\) cm，\(\angle PQR=110^{\circ}\)。(a) 求 \(PR\)，準確至 3 個有效數字。(b) 求 \(\angle QPR\)，準確至 3 個有效數字。(c) 由此求 \(\angle PRQ\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(17.3\) cm　(b) \(40.7^{\circ}\)　(c) \(29.3^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(110^{\circ}\) 是 \(PQ=9\) 與 \(QR=12\) 的夾角，所以用餘弦公式。</li><li>\(PR^{2}=9^{2}+12^{2}-2(9)(12)\cos 110^{\circ}\)。</li><li>\(=81+144-216(-0.34202\ldots)=225+73.88=298.88\)。</li><li>\(PR=\sqrt{298.88}\approx 17.3\) cm（3 個有效數字）。</li><li>(b) 正弦公式：\(\dfrac{\sin\angle QPR}{QR}=\dfrac{\sin 110^{\circ}}{PR}\)。</li><li>\(\sin\angle QPR=\dfrac{12\sin 110^{\circ}}{17.288}=\dfrac{11.276}{17.288}=0.65227\ldots\)</li><li>\(\angle QPR\approx 40.7^{\circ}\)（3 個有效數字）。（鈍角的另一個值 \(139.3^{\circ}\) 不可能，因為三角形內已有 \(110^{\circ}\)。）</li><li>(c) \(\angle PRQ=180^{\circ}-110^{\circ}-40.7^{\circ}=29.3^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>以為餘弦公式中 \(PR\) 是 \(110^{\circ}\) 的對邊就亂配邊。\(110^{\circ}\) 在 \(Q\)，所以對邊是 \(PR\) —— 這沒錯 —— 但公式中兩條已知邊必須是夾出這個角的邊：\(PQ\) 與 \(QR\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>三角形面積與正弦面積關係 <span class="count">· 7 題</span></h2>
+    <p>兩邊之積的一半，乘以夾角的正弦</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>把高寫成 \(b\sin C\)，熟悉的 \(\tfrac{1}{2}bh\) 就變成 \(\tfrac{1}{2}ab\sin C\)。所用的兩條邊必須夾出你所用的角 —— 若不是，先用餘弦公式求出夾角。</p><p>倒過來用同一條公式，可以由面積求角或求邊：\(\sin C=\frac{2\,\text{面積}}{ab}\)。因為 \(\sin C=\sin(180^{\circ}-C)\)，單憑一個面積可能對應兩個角 —— 一定要寫明。複合圖形的面積，沿對角線分割後相加。</p><div class="formula"><span>\(\text{面積}=\tfrac{1}{2}ab\sin C\)</span><span>\(\sin C=\dfrac{2\,\text{面積}}{ab}\)</span><span>\(\text{面積}_{\text{四邊形}}=\tfrac{1}{2}d_{1}d_{2}\sin\theta\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個三角形的兩條邊長分別是 \(6\) cm 及 \(9\) cm，兩邊的夾角是 \(50^{\circ}\)。求它的面積，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(20.7\) cm\(^{2}\)</div>
+<ol class="steps">
+<li>這兩條邊正是夾出已知角的邊，所以 \(\text{面積}=\tfrac{1}{2}(6)(9)\sin 50^{\circ}\)。</li><li>\(=27(0.76604\ldots)=20.68\ldots\)</li><li>\(\approx 20.7\) cm\(^{2}\)（3 個有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個三角形的面積是 \(30\) cm\(^{2}\)，其中兩條邊長分別是 \(8\) cm 及 \(10\) cm。求這兩條邊的夾角所有可能的值，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(48.6^{\circ}\) 或 \(131.4^{\circ}\)</div>
+<ol class="steps">
+<li>\(30=\tfrac{1}{2}(8)(10)\sin\theta=40\sin\theta\)。</li><li>所以 \(\sin\theta=\dfrac{30}{40}=0.75\)。</li><li>銳角的解是 \(\theta=48.6^{\circ}\)（3 個有效數字）。</li><li>鈍角的解是 \(180^{\circ}-48.6^{\circ}=131.4^{\circ}\)（3 個有效數字）。</li><li>兩者都成立：\(\sin 131.4^{\circ}=0.750\) 亦然，所以兩個不同的三角形可以有相同的面積。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只寫 \(48.6^{\circ}\)。面積決定的是 \(\sin\theta\)，而在 \(0^{\circ}\)–\(180^{\circ}\) 之內有兩個角的正弦為正。</p></div>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(a=7\) cm，\(b=8\) cm，\(\angle C=72^{\circ}\)。求這三角形的面積，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(26.6\) cm\(^{2}\)</div>
+<ol class="steps">
+<li>角 \(C\) 正是邊 \(a\) 與邊 \(b\) 的夾角。</li><li>\(\text{面積}=\tfrac{1}{2}ab\sin C=\tfrac{1}{2}(7)(8)\sin 72^{\circ}\)。</li><li>\(=28(0.95106\ldots)=26.63\ldots\)</li><li>\(\approx 26.6\) cm\(^{2}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用了 \(\sin A\) 或 \(\sin B\)。公式中的角必須是所用兩條邊<i>之間</i>的那個角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個三角形的三邊長分別是 \(13\) cm、\(14\) cm 及 \(15\) cm。先求 \(13\) cm 與 \(14\) cm 兩條邊的夾角，再求這三角形的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(84\) cm\(^{2}\)</div>
+<ol class="steps">
+<li>設 \(C\) 是長 \(13\) 與長 \(14\) 兩邊的夾角，其對邊是 \(15\)。</li><li>\(\cos C=\dfrac{13^{2}+14^{2}-15^{2}}{2(13)(14)}=\dfrac{140}{364}=\dfrac{5}{13}\)。</li><li>由於 \(C\) 是銳角，\(\sin C=\sqrt{1-\dfrac{25}{169}}=\sqrt{\dfrac{144}{169}}=\dfrac{12}{13}\)。</li><li>\(\text{面積}=\tfrac{1}{2}(13)(14)\left(\dfrac{12}{13}\right)=84\) cm\(^{2}\)。</li><li>用希羅公式核對：\(s=21\)，面積 \(=\sqrt{21\cdot 8\cdot 7\cdot 6}=\sqrt{7056}=84\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由 \(\cos C=\frac{5}{13}\) 就直接寫 \(\sin C=\frac{5}{13}\)。要用恆等式 \(\sin^{2}C=1-\cos^{2}C\)，然後取正根。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q23.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q23 ↗</a></div>
+<div class="q__body"><p>在 \(\triangle ABC\) 中，\(AB=12\) cm，\(AC=18\) cm，而三角形的面積是 \(90\) cm\(^{2}\)。求 \(\angle BAC\) 所有可能的值，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(56.4^{\circ}\) 或 \(123.6^{\circ}\)</div>
+<ol class="steps">
+<li>\(\text{面積}=\tfrac{1}{2}(AB)(AC)\sin\angle BAC\)。</li><li>\(90=\tfrac{1}{2}(12)(18)\sin\angle BAC=108\sin\angle BAC\)。</li><li>\(\sin\angle BAC=\dfrac{90}{108}=\dfrac{5}{6}=0.83333\ldots\)</li><li>銳角的解：\(\angle BAC=56.4^{\circ}\)（3 個有效數字）。</li><li>鈍角的解：\(180^{\circ}-56.4^{\circ}=123.6^{\circ}\)（3 個有效數字）。兩者的面積都是 \(90\) cm\(^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以 \(12\times 18\) 而不是 \(\tfrac{1}{2}\times 12\times 18\)，得出 \(\sin=\frac{5}{12}\) 及錯誤的角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P1_Q17.html" target="_blank" rel="noopener">歷年試題 · 2023 卷一 Q17 ↗</a></div>
+<div class="q__body"><p>\(ABCD\) 是一個四邊形，其中 \(AB=9\) cm，\(BC=12\) cm，\(\angle ABC=78^{\circ}\)，\(CD=10\) cm，\(DA=8\) cm，\(\angle ADC=62^{\circ}\)。對角線 \(AC\) 把四邊形分成 \(\triangle ABC\) 與 \(\triangle ADC\)。求 \(ABCD\) 的面積，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(88.1\) cm\(^{2}\)</div>
+<ol class="steps">
+<li>\(\triangle ABC\) 的面積 \(=\tfrac{1}{2}(9)(12)\sin 78^{\circ}=54(0.97815\ldots)=52.82\) cm\(^{2}\)。</li><li>\(\triangle ADC\) 的面積 \(=\tfrac{1}{2}(10)(8)\sin 62^{\circ}=40(0.88295\ldots)=35.32\) cm\(^{2}\)。</li><li>總面積 \(=52.82+35.32=88.14\ldots\)</li><li>\(\approx 88.1\) cm\(^{2}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩個三角形重複用了同一對邊再相加。每個三角形都要用它自己的一對邊與自己的夾角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>\(ABCD\) 是一個平行四邊形，其中 \(AB=10\) cm，\(AD=7\) cm，\(\angle DAB=55^{\circ}\)。(a) 求 \(ABCD\) 的面積，準確至 3 個有效數字。(b) 求較短對角線 \(BD\) 的長度，準確至 3 個有效數字。(c) 求較長對角線 \(AC\) 的長度，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(57.3\) cm\(^{2}\)　(b) \(8.29\) cm　(c) \(15.1\) cm</div>
+<ol class="steps">
+<li>(a) 平行四邊形由兩個全等三角形組成，所以面積 \(=2\times\tfrac{1}{2}(10)(7)\sin 55^{\circ}=70\sin 55^{\circ}\)。</li><li>\(=70(0.81915\ldots)=57.34\ldots\approx 57.3\) cm\(^{2}\)（3 個有效數字）。</li><li>(b) 在 \(\triangle ABD\) 中，\(10\) 與 \(7\) 兩邊夾出 \(55^{\circ}\)，所以用餘弦公式：\(BD^{2}=10^{2}+7^{2}-2(10)(7)\cos 55^{\circ}\)。</li><li>\(=100+49-140(0.57358\ldots)=149-80.30=68.70\)。</li><li>\(BD=\sqrt{68.70}\approx 8.29\) cm（3 個有效數字）。</li><li>(c) 平行四邊形的鄰角互補，所以 \(\angle ABC=180^{\circ}-55^{\circ}=125^{\circ}\)。</li><li>\(AC^{2}=10^{2}+7^{2}-2(10)(7)\cos 125^{\circ}=149-140(-0.57358\ldots)=149+80.30=229.3\)。</li><li>\(AC=\sqrt{229.3}\approx 15.1\) cm（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>求 \(AC\) 時又用 \(55^{\circ}\)。對角線 \(AC\) 對著的是 \(B\) 處的角，即 \(125^{\circ}\)，而 \(\cos 125^{\circ}\) 是負數 —— 這正是它成為較長對角線的原因。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>立體三角學：直線與平面的交角、兩平面的交角 <span class="count">· 7 題</span></h2>
+    <p>在立體圖形中找出隱藏的直角三角形</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>每一道立體角的題目，最終都化為一個直角三角形。直線與平面的交角，就是該直線與它在平面上的<i>投影</i>所成的角（由線的一端向平面作垂線）。兩平面的交角，則是在兩個平面內各取一條直線，兩線同時垂直於交線並相交於同一點，這兩線所成的角。</p><p>在正棱錐中，頂點位於底面中心的正上方，所以垂直高度、中心到底邊（或到頂點）的距離，以及斜棱，構成直角三角形。畫圖前先重讀題目，看清楚<i>哪一個</i>頂點在<i>哪一點</i>的正上方。</p><div class="formula"><span>\(\text{直線與平面的交角}=\text{直線與其投影所成的角}\)</span><span>\(\tan\theta=\dfrac{\text{垂直高度}}{\text{水平距離}}\)</span><span>\(\text{長方體的對角線}=\sqrt{l^{2}+w^{2}+h^{2}}\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一支垂直的桿 \(VP\) 立在水平地面上 \(V\) 點。地面上 \(A\) 點距 \(V\) 為 \(12\) m，由 \(A\) 測得 \(P\) 的仰角為 \(35^{\circ}\)。求桿的高度，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(8.40\) m</div>
+<ol class="steps">
+<li>桿是垂直的，地面是水平的，所以 \(\angle PVA=90^{\circ}\)。</li><li>在直角三角形 \(PVA\) 中，\(VP\) 是 \(35^{\circ}\) 角的對邊，\(VA=12\) 是鄰邊。</li><li>\(VP=12\tan 35^{\circ}=12(0.70021\ldots)\)。</li><li>\(VP\approx 8.40\) m（3 個有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>\(P\) 是水平面上 \(V\) 點正上方 \(6\) m 的一點。\(A\) 是該平面上的一點，且 \(VA=9\) m。求由 \(A\) 測得 \(P\) 的仰角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(33.7^{\circ}\)</div>
+<ol class="steps">
+<li>\(VP\) 是垂直的，所以 \(VP\perp\) 該平面，且 \(\angle PVA=90^{\circ}\)。</li><li>由 \(A\) 測得 \(P\) 的仰角就是 \(\angle PAV\)，而 \(\tan\angle PAV=\dfrac{VP}{VA}\)。</li><li>\(\tan\angle PAV=\dfrac{6}{9}=0.6667\)。</li><li>\(\angle PAV\approx 33.7^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>未求出第三邊就用 \(\sin\) 或 \(\cos\)。已知兩條直角邊，直接用 \(\tan\) 便可。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>\(P\) 是水平面上 \(V\) 點正上方 \(8\) cm 的一點。\(A\) 是該平面上的一點，且 \(AP=17\) cm。(a) 求 \(AV\)。(b) 求直線 \(AP\) 與該平面所成的角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(15\) cm　(b) \(28.1^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(VP\) 垂直於該平面，所以 \(\angle PVA=90^{\circ}\)，而 \(AV=\sqrt{AP^{2}-VP^{2}}=\sqrt{17^{2}-8^{2}}\)。</li><li>\(=\sqrt{289-64}=\sqrt{225}=15\) cm。</li><li>(b) \(AP\) 在該平面上的投影是 \(AV\)，所以所求的角是 \(\angle PAV\)。</li><li>\(\sin\angle PAV=\dfrac{VP}{AP}=\dfrac{8}{17}=0.47059\ldots\)</li><li>\(\angle PAV\approx 28.1^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(AP\) 與平面的交角當作 \(\angle APV\)。與平面的交角在 \(A\) 處（即在平面上的那一端），是 \(AP\) 與其投影 \(AV\) 所成的角。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q18.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q18 ↗</a></div>
+<div class="q__body"><p>\(VABCD\) 是一個正棱錐，底面是邊長 \(10\) cm 的正方形 \(ABCD\)。頂點 \(V\) 位於底面中心 \(O\) 的正上方，且 \(VO=12\) cm。\(M\) 是 \(AB\) 的中點。(a) 寫出 \(OM\)。(b) 簡略解釋為何 \(VM\perp AB\)，以及為何 \(\angle VMO\) 是平面 \(VAB\) 與底面所成的角。(c) 求該角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(OM=5\) cm　(c) \(67.4^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(O\) 是正方形的中心，所以它到邊 \(AB\) 的距離是邊長的一半：\(OM=5\) cm。</li><li>(b) \(M\) 是 \(AB\) 的中點，所以 \(OM\perp AB\)；又 \(V\) 在 \(O\) 的正上方，所以平面 \(VOM\) 是垂直的，因而 \(VM\perp AB\)。\(VM\) 與 \(OM\) 都在 \(M\) 處垂直於 \(AB\)，且各在一個平面內，所以 \(\angle VMO\) 就是兩平面的交角。</li><li>(c) \(VO\perp\) 底面，所以 \(\angle VOM=90^{\circ}\)。</li><li>\(\tan\angle VMO=\dfrac{VO}{OM}=\dfrac{12}{5}=2.4\)。</li><li>\(\angle VMO\approx 67.4^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用了 \(OA\) 而不是 \(OM\)。平面 \(VAB\) 包含棱 \(AB\)，所以由 \(O\) 作出的垂線必須落在<i>棱</i> \(AB\) 上，而不是落在某個頂點上。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>\(ABCDEFGH\) 是一個長方體。\(ABCD\) 是它的水平底面，其中 \(AB=8\) cm，\(BC=6\) cm。\(E\)、\(F\)、\(G\)、\(H\) 分別在 \(A\)、\(B\)、\(C\)、\(D\) 的正上方，且 \(CG=5\) cm。求對角線 \(AG\) 與底面 \(ABCD\) 所成的角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(26.6^{\circ}\)</div>
+<ol class="steps">
+<li>\(G\) 在底面上的投影是 \(C\)（因 \(GC\) 是垂直的），所以 \(AG\) 的投影是 \(AC\)。</li><li>所求的角是 \(\angle GAC\)。</li><li>在底面內，\(AC=\sqrt{8^{2}+6^{2}}=\sqrt{100}=10\) cm。</li><li>\(GC\perp\) 底面，所以 \(\angle ACG=90^{\circ}\)，而 \(\tan\angle GAC=\dfrac{GC}{AC}=\dfrac{5}{10}=0.5\)。</li><li>\(\angle GAC\approx 26.6^{\circ}\)（3 個有效數字）。</li><li>用整條對角線核對：\(AG=\sqrt{8^{2}+6^{2}+5^{2}}=\sqrt{125}\approx 11.2\)，而 \(\sin 26.57^{\circ}=\frac{5}{11.18}=0.447\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(AB=8\) 當作投影。\(AG\) 的投影是底面對角線 \(AC=10\)，不是邊 \(AB\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>\(VABCD\) 是一個正棱錐，底面是邊長 \(10\) cm 的正方形 \(ABCD\)。頂點 \(V\) 位於底面中心 \(O\) 的正上方，且 \(VO=12\) cm。(a) 求棱 \(VA\) 與底面 \(ABCD\) 所成的角。(b) 求平面 \(VAB\) 與底面 \(ABCD\) 所成的角。兩個答案均須準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(59.5^{\circ}\)　(b) \(67.4^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(VA\) 在底面上的投影是 \(OA\)，所以所求的角是 \(\angle VAO\)。</li><li>\(AC=\sqrt{10^{2}+10^{2}}=10\sqrt{2}\)，所以 \(OA=\tfrac{1}{2}(10\sqrt{2})=5\sqrt{2}\approx 7.071\) cm。</li><li>\(\tan\angle VAO=\dfrac{VO}{OA}=\dfrac{12}{5\sqrt{2}}=1.6971\ldots\)</li><li>\(\angle VAO\approx 59.5^{\circ}\)（3 個有效數字）。</li><li>(b) 設 \(M\) 是 \(AB\) 的中點，則 \(OM=5\) cm，而 \(\angle VMO\) 就是兩平面的交角。</li><li>\(\tan\angle VMO=\dfrac{12}{5}=2.4\)，所以 \(\angle VMO\approx 67.4^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 部用了 \(OA=5\)。\(5\) 是中心到<i>邊</i>的距離；到<i>頂點</i>的距離是對角線的一半，即 \(5\sqrt{2}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q18.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q18 ↗</a></div>
+<div class="q__body"><p>一支高 \(15\) m 的垂直桅杆 \(TP\) 立在水平地面上的 \(T\) 點。\(A\) 與 \(B\) 是地面上的兩點，且 \(TA=9\) m，\(TB=12\) m，\(\angle ATB=90^{\circ}\)。(a) 求 \(AB\)。(b) \(M\) 是由 \(T\) 向 \(AB\) 所作的垂線的垂足，求 \(TM\)。(c) 求平面 \(PAB\) 與地面所成的角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(15\) m　(b) \(7.2\) m　(c) \(64.4^{\circ}\)</div>
+<ol class="steps">
+<li>(a) \(\angle ATB=90^{\circ}\)，所以 \(AB=\sqrt{9^{2}+12^{2}}=\sqrt{225}=15\) m。</li><li>(b) 用兩種方法表示 \(\triangle ATB\) 的面積：\(\tfrac{1}{2}(9)(12)=54=\tfrac{1}{2}(15)(TM)\)。</li><li>\(TM=\dfrac{108}{15}=7.2\) m。</li><li>(c) \(PT\) 是垂直的，所以 \(PT\perp\) 地面，因而 \(PT\perp TM\)。又按作圖 \(TM\perp AB\)，所以 \(AB\perp\) 平面 \(PTM\)，因此 \(PM\perp AB\)。</li><li>平面 \(PAB\) 與地面所成的角是 \(\angle PMT\)。</li><li>\(\tan\angle PMT=\dfrac{PT}{TM}=\dfrac{15}{7.2}=2.0833\ldots\)</li><li>\(\angle PMT\approx 64.4^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(TA=9\) 當作 \(TM\)。由 \(T\) 向直線 \(AB\) 作的垂線不是 \(TA\) —— 否則 \(\angle TAB\) 就會是 \(90^{\circ}\)，但題目沒有這樣說。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>正弦、餘弦、正切圖像：振幅、週期、變換 <span class="count">· 7 題</span></h2>
+    <p>讀出振幅與週期，再由圖像解方程</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>\(y=a\sin(bx^{\circ})+c\) 的振幅是 \(|a|\)，週期是 \(\frac{360^{\circ}}{b}\)，圖像就是 \(y=\sin x\) 經過拉伸、壓縮與平移。最大值是 \(|a|+c\)，最小值是 \(-|a|+c\)，所以上下平移量 \(c\) 就是兩者的平均數。</p><p>在指定區間內解方程時，用圖像或曲線的對稱性：若 \(\sin\theta=k\) 有一個解 \(\alpha\)，則 \(180^{\circ}-\alpha\) 也是解；餘弦的拍檔是 \(360^{\circ}-\alpha\)；正切則加 \(180^{\circ}\)。不要只寫計算機給的那個答案。</p><div class="formula"><span>\(\text{振幅}=|a|,\ \text{週期}=\dfrac{360^{\circ}}{b}\)</span><span>\(\text{最大}=|a|+c,\ \text{最小}=-|a|+c\)</span><span>\(y=\sin x:\ \text{週期 }360^{\circ};\ y=\tan x:\ \text{週期 }180^{\circ}\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>曲線 \(y=3\sin x^{\circ}\) 在 \(0\le x\le 360\) 上繪出。寫出它的振幅與週期。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>振幅 \(3\)，週期 \(360^{\circ}\)</div>
+<ol class="steps">
+<li>與 \(y=a\sin(bx^{\circ})\) 比較：此處 \(a=3\)，\(b=1\)。</li><li>振幅 \(=|a|=3\)。</li><li>週期 \(=\dfrac{360^{\circ}}{b}=360^{\circ}\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q19.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q19 ↗</a></div>
+<div class="q__body"><p>曲線 \(y=\cos 2x^{\circ}\) 在 \(0\le x\le 360\) 上繪出。(a) 寫出它的振幅。(b) 寫出它的週期。(c) 圖中共繪出多少個完整的週期？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(1\)　(b) \(180^{\circ}\)　(c) \(2\)</div>
+<ol class="steps">
+<li>(a) \(\cos\) 前面的係數是 \(1\)，所以振幅是 \(1\)。</li><li>(b) \(b=2\)，所以週期是 \(\dfrac{360^{\circ}}{2}=180^{\circ}\)。</li><li>(c) \(360^{\circ}\div 180^{\circ}=2\)，所以圖中繪出兩個完整的週期。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把週期讀成 \(2\times 360^{\circ}\)。係數 \(b&gt;1\) 會把曲線<i>壓縮</i>，所以週期變小。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>對於曲線 \(y=2\sin 3x^{\circ}+1\)（\(0\le x\le 360\)），寫出 (a) 振幅；(b) 週期；(c) 最大值，以及在 \(0\le x\le 120\) 中取得最大值時的 \(x\) 值；(d) 最小值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(2\)　(b) \(120^{\circ}\)　(c) 最大值 \(3\)，在 \(x=30^{\circ}\) 時取得　(d) \(-1\)</div>
+<ol class="steps">
+<li>(a) 振幅 \(=|2|=2\)。</li><li>(b) 週期 \(=\dfrac{360^{\circ}}{3}=120^{\circ}\)。</li><li>(c) \(\sin 3x^{\circ}\) 的最大值是 \(1\)，得 \(y=2(1)+1=3\)。這在 \(3x=90\)，即 \(x=30^{\circ}\) 時發生。</li><li>(d) \(\sin 3x^{\circ}\) 的最小值是 \(-1\)，得 \(y=2(-1)+1=-1\)。</li><li>核對：曲線在 \(-1\) 與 \(3\) 之間起伏，所以它的「中線」是 \(y=1\)，與式中的 \(+1\) 相符。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把最大值寫成 \(2\)（即振幅）。\(+1\) 把整條曲線向上提，所以最大值是 \(2+1=3\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>曲線 \(y=\sin x^{\circ}\) 經變換成為曲線 \(y=\sin(x-60)^{\circ}\)。(a) 完整描述這個變換。(b) 寫出新曲線在 \(0\le x\le 360\) 上的 \(x\) 截距。(c) 寫出新曲線的最大值，以及取得最大值時最小的正 \(x\) 值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 向（\(x\) 方向的）右方平移 \(60^{\circ}\)　(b) \(x=60\) 及 \(x=240\)　(c) 最大值 \(1\)，在 \(x=150^{\circ}\) 時取得</div>
+<ol class="steps">
+<li>(a) \(y=\sin(x-60)^{\circ}\) 就是把 \(y=\sin x^{\circ}\) 沿 \(x\) 軸正方向平移 \(60^{\circ}\)。</li><li>(b) 令 \(y=0\)：\(x-60=0,\ 180,\ 360,\ldots\) 所以 \(x=60,\ 240,\ 420,\ldots\) 在區間 \(0\le x\le 360\) 內，截距是 \(x=60\) 與 \(x=240\)。</li><li>(c) 最大值仍是 \(1\)；它在 \(x-60=90\)，即 \(x=150^{\circ}\) 時取得。</li><li>核對：當 \(x=150^{\circ}\)，\(\sin 90^{\circ}=1\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把圖像向左移。括號<i>內</i>的負號會把圖像向<i>右</i>移 \(60^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>在 \(0\le x\le 360\) 內解 \(2\sin x^{\circ}+1=0\)，列出所有解。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(x=210^{\circ}\) 或 \(x=330^{\circ}\)</div>
+<ol class="steps">
+<li>\(2\sin x^{\circ}=-1 \Rightarrow \sin x^{\circ}=-\dfrac{1}{2}\)。</li><li>參考角是 \(30^{\circ}\)（因 \(\sin 30^{\circ}=\dfrac{1}{2}\)）。</li><li>正弦在第三及第四象限為負，所以解是 \(180^{\circ}+30^{\circ}\) 與 \(360^{\circ}-30^{\circ}\)。</li><li>\(x=210^{\circ}\) 或 \(x=330^{\circ}\)。</li><li>核對：\(\sin 210^{\circ}=-0.5\)，\(\sin 330^{\circ}=-0.5\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>答成 \(x=30^{\circ}\) 及 \(150^{\circ}\)，那兩個角的正弦是<i>正</i>的。選象限之前，先看清方程的正負號。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P2_Q24.html" target="_blank" rel="noopener">歷年試題 · 2021 卷二 Q24 ↗</a></div>
+<div class="q__body"><p>曲線 \(y=a\sin(bx^{\circ})+c\)（其中 \(a&gt;0\)、\(b&gt;0\)）的最大值是 \(7\)，最小值是 \(1\)，週期是 \(180^{\circ}\)。(a) 求 \(a\)、\(b\) 及 \(c\)。(b) 求當 \(x=45\) 時 \(y\) 的值。(c) 寫出曲線對稱於哪一條水平線。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(a=3,\ b=2,\ c=4\)　(b) \(y=7\)　(c) \(y=4\)</div>
+<ol class="steps">
+<li>(a) \(\text{最大}-\text{最小}=7-1=6=2a\)，所以 \(a=3\)。</li><li>中線是兩者的平均數：\(c=\dfrac{7+1}{2}=4\)。</li><li>週期 \(=\dfrac{360^{\circ}}{b}=180^{\circ}\)，所以 \(b=2\)。</li><li>因此 \(y=3\sin 2x^{\circ}+4\)。</li><li>(b) \(x=45 \Rightarrow 2x=90\)，而 \(\sin 90^{\circ}=1\)。</li><li>\(y=3(1)+4=7\)。</li><li>(c) 曲線對稱於 \(y=c\) 這條水平線，即 \(y=4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>取 \(c=7\)（最大值）。\(c\) 是上下平移量，是最大值與最小值的平均。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>(a) 在 \(0\le x\le 360\) 內解 \(\tan x^{\circ}=-1\)。(b) 在 \(0\le x\le 180\) 內解 \(2\sin 2x^{\circ}=1\)，列出所有解。(c) 由此寫出 \(\tan x^{\circ}=-1\) 在區間 \(0\le x\le 720\) 內解的數目，並解釋你的答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(x=135^{\circ}\) 或 \(315^{\circ}\)　(b) \(x=15^{\circ}\) 或 \(75^{\circ}\)　(c) \(4\) 個解，因為 \(\tan\) 每 \(180^{\circ}\) 重複一次</div>
+<ol class="steps">
+<li>(a) 參考角是 \(45^{\circ}\)，因為 \(\tan 45^{\circ}=1\)。</li><li>正切在第二及第四象限為負：\(180^{\circ}-45^{\circ}=135^{\circ}\)，\(360^{\circ}-45^{\circ}=315^{\circ}\)。</li><li>(b) \(\sin 2x^{\circ}=\dfrac{1}{2}\)。設 \(u=2x\)，則 \(0\le u\le 360\)。</li><li>在此範圍內 \(\sin u=\dfrac{1}{2}\) 的解是 \(u=30\) 與 \(u=150\)（第三個可能 \(u=390\) 已超出範圍）。</li><li>所以 \(2x=30\) 或 \(2x=150\)，即 \(x=15^{\circ}\) 或 \(x=75^{\circ}\)。</li><li>(c) \(\tan\) 的週期是 \(180^{\circ}\)，所以每多 \(180^{\circ}\) 就多一個解：\(135^{\circ}\)、\(315^{\circ}\)、\(495^{\circ}\)、\(675^{\circ}\)。</li><li>因此在 \(0\le x\le 720\) 內共有 \(4\) 個解。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>解完 \(2\sin 2x=1\) 後忘記把角除以 \(2\)。若你是對 \(2x\) 求解，最後每個解都要減半。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度綜合題：方位角、高度與距離、多個三角形 <span class="count">· 8 題</span></h2>
+    <p>卷一風格、涉及兩至三個三角形的題目</p>
+  </div>
+  <div class="concept">
+ <p><b>核心概念：</b>方位角是由正北<i>順時針</i>量度的角，以三位數字表示（\(076^{\circ}\)、\(315^{\circ}\)）。圖中每一點都要畫上指北箭頭 —— 方位角的錯誤，多數來自把角放在錯的點，或由錯的北線量起。</p><p>長題目通常串連兩個三角形：先用餘弦公式在第一個三角形求一條邊，再用正弦公式（或直角三角形的 \(\tan\)）在第二個三角形求角。求高度時，先處理水平面上的直角三角形，再處理垂直的那個，並把未知的高度作為兩個三角形的公共邊。</p><div class="formula"><span>\(\text{方位角}=\) 由正北順時針量度的角</span><span>\(\text{反方位角}=\text{正方位角}\pm 180^{\circ}\)</span><span>\(\tan(\text{仰角})=\dfrac{\text{高度}}{\text{水平距離}}\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>\(A\) 在 \(O\) 的正東 \(5\) km 處，\(B\) 在 \(O\) 的正北 \(5\) km 處。求由 \(A\) 測得 \(B\) 的方位角。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(315^{\circ}\)</div>
+<ol class="steps">
+<li>在 \(A\) 畫一條指北線。由 \(A\) 至 \(O\) 的方向是正西，即方位角 \(270^{\circ}\)。</li><li>\(OA=5\) km，\(OB=5\) km，且 \(\angle AOB=90^{\circ}\)，所以 \(\tan\angle OAB=\dfrac{OB}{OA}=1\)。</li><li>\(\angle OAB=45^{\circ}\)，由向西的方向向北量度，所以由 \(A\) 測得 \(B\) 的方位角是 \(270^{\circ}+45^{\circ}=315^{\circ}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 \(A\) 由正北順時針量 \(45^{\circ}\)，得 \(045^{\circ}\)。\(B\) 在 \(A\) 的<i>西北</i>方，所以方位角必須在 \(270^{\circ}\) 與 \(360^{\circ}\) 之間。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>由 \(A\) 測得 \(B\) 的方位角是 \(062^{\circ}\)。求由 \(B\) 測得 \(A\) 的方位角。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(242^{\circ}\)</div>
+<ol class="steps">
+<li>\(A\) 與 \(B\) 處的兩條指北線互相平行，所以 \(AB\) 與 \(B\) 處指北線所成的角也是 \(62^{\circ}\)（內錯角，在另一側）。</li><li>反方位角是 \(62^{\circ}+180^{\circ}\)。</li><li>\(=242^{\circ}\)。</li><li>核對：兩個方位角相差 \(180^{\circ}\)，這是必然的。✔</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一艘船由港口 \(O\) 出發，沿方位角 \(040^{\circ}\) 航行 \(12\) km 到達 \(P\)，然後沿方位角 \(130^{\circ}\) 航行 \(9\) km 到達 \(Q\)。(a) 證明 \(\angle OPQ=90^{\circ}\)。(b) 求 \(OQ\)。(c) 求由 \(O\) 測得 \(Q\) 的方位角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 兩個方位角相差 \(90^{\circ}\)　(b) \(15\) km　(c) \(076.9^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 由 \(P\) 測得 \(O\) 的方位角是 \(040^{\circ}+180^{\circ}=220^{\circ}\)；由 \(P\) 測得 \(Q\) 的方位角是 \(130^{\circ}\)。</li><li>\(\angle OPQ=220^{\circ}-130^{\circ}=90^{\circ}\)。</li><li>(b) 在直角三角形 \(OPQ\) 中用畢氏定理：\(OQ=\sqrt{12^{2}+9^{2}}=\sqrt{144+81}=\sqrt{225}=15\) km。</li><li>(c) 在 \(\triangle OPQ\) 中，\(\tan\angle POQ=\dfrac{PQ}{OP}=\dfrac{9}{12}=0.75\)，所以 \(\angle POQ\approx 36.87^{\circ}\)。</li><li>\(Q\) 在 \(OP\) 的順時針方向（即東面），所以它的方位角是 \(040^{\circ}+36.9^{\circ}=076.9^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(36.9^{\circ}\) 加到 \(PQ\) 的方位角上。\(O\) 處的方位角是由 \(O\) 的指北線量起，所以要加的角必須由 \(OP\)（即 \(040^{\circ}\)）量起。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P1_Q19.html" target="_blank" rel="noopener">歷年試題 · 2016 卷一 Q19 ↗</a></div>
+<div class="q__body"><p>一座垂直的塔立在水平地面上 \(F\) 點。由地面上 \(A\) 點測得塔頂 \(T\) 的仰角為 \(40^{\circ}\)。\(B\) 點在 \(A\) 至 \(F\) 的直線上，且比 \(A\) 更接近塔 \(20\) m，由 \(B\) 測得 \(T\) 的仰角為 \(55^{\circ}\)。(a) 設 \(BF=x\) m，塔高為 \(h\) m，寫出兩個關於 \(x\) 與 \(h\) 的方程。(b) 求 \(h\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(h=x\tan 55^{\circ}\) 及 \(h=(x+20)\tan 40^{\circ}\)　(b) \(40.7\) m</div>
+<ol class="steps">
+<li>在直角三角形 \(TBF\) 中：\(\tan 55^{\circ}=\dfrac{h}{x}\)，所以 \(h=x\tan 55^{\circ}=1.4281x\)。</li><li>在直角三角形 \(TAF\) 中：\(AF=x+20\)，\(\tan 40^{\circ}=\dfrac{h}{x+20}\)，所以 \(h=0.83910(x+20)\)。</li><li>(b) 令兩式相等：\(1.4281x=0.83910x+16.782\)。</li><li>\(0.58900x=16.782 \Rightarrow x=28.49\) m。</li><li>\(h=1.4281(28.49)\approx 40.7\) m（3 個有效數字）。</li><li>用第二條方程核對：\(0.83910(28.49+20)=0.83910(48.49)=40.7\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(AF=x-20\)。\(B\) 比 \(A\) <i>更接近</i>塔，所以 \(A\) 是較遠的一點，\(AF=BF+20\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>兩艘船同時離開港口 \(O\)。船 \(P\) 以 \(12\) km/h 沿方位角 \(060^{\circ}\) 航行，船 \(Q\) 以 \(16\) km/h 沿方位角 \(120^{\circ}\) 航行。求 \(2\) 小時後兩船的距離，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(28.8\) km</div>
+<ol class="steps">
+<li>\(2\) 小時後：\(OP=12\times 2=24\) km，\(OQ=16\times 2=32\) km。</li><li>兩條航線的夾角是 \(120^{\circ}-60^{\circ}=60^{\circ}\)，所以 \(\angle POQ=60^{\circ}\)。</li><li>餘弦公式：\(PQ^{2}=24^{2}+32^{2}-2(24)(32)\cos 60^{\circ}\)。</li><li>\(=576+1024-1536(0.5)=1600-768=832\)。</li><li>\(PQ=\sqrt{832}\approx 28.8\) km（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(120^{\circ}\) 當作夾角。\(O\) 處兩條航線的夾角是兩個方位角的<i>差</i>：\(120^{\circ}-60^{\circ}=60^{\circ}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一座垂直的塔 \(TF\) 立在水平地面上的 \(F\) 點。由地面上 \(A\)、\(B\) 兩點測得塔頂 \(T\) 的仰角分別是 \(32^{\circ}\) 與 \(22^{\circ}\)。\(A\)、\(B\)、\(F\) 在同一直線上，而 \(B\) 距塔比 \(A\) 遠 \(60\) m。(a) 求塔的高度，準確至 3 個有效數字。(b) 求距離 \(AF\)，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(68.6\) m　(b) \(110\) m</div>
+<ol class="steps">
+<li>設 \(h=TF\)，\(AF=y\)，則 \(BF=y+60\)。</li><li>由 \(A\)：\(\tan 32^{\circ}=\dfrac{h}{y} \Rightarrow y=\dfrac{h}{\tan 32^{\circ}}=h\cot 32^{\circ}\)。</li><li>由 \(B\)：\(\tan 22^{\circ}=\dfrac{h}{y+60} \Rightarrow y+60=h\cot 22^{\circ}\)。</li><li>相減：\(60=h(\cot 22^{\circ}-\cot 32^{\circ})=h(2.47509-1.60033)=0.87476h\)。</li><li>\(h=\dfrac{60}{0.87476}\approx 68.59\approx 68.6\) m（3 個有效數字）。</li><li>(b) \(AF=y=h\cot 32^{\circ}=68.59(1.60033)\approx 109.8\approx 110\) m（3 個有效數字）。</li><li>核對：\(\tan 22^{\circ}=\dfrac{68.59}{109.8+60}=\dfrac{68.59}{169.8}=0.4039\)。✔</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(60=h(\tan 22^{\circ}-\tan 32^{\circ})\)。水平距離是 \(h\div\tan\theta\)，即 \(h\cot\theta\)，所以要相減的是餘切。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>一支高 \(20\) m 的垂直桅杆 \(TP\) 立在水平地面上的 \(T\) 點。\(A\) 與 \(B\) 是地面上的兩點，且 \(TA=25\) m，\(TB=30\) m，\(\angle ATB=70^{\circ}\)。(a) 求 \(AB\)，準確至 3 個有效數字。(b) 求由 \(A\) 測得 \(P\) 的仰角，準確至 3 個有效數字。(c) 求由 \(B\) 測得 \(P\) 的仰角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(31.8\) m　(b) \(38.7^{\circ}\)　(c) \(33.7^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 在水平三角形 \(ATB\) 中用餘弦公式：\(AB^{2}=25^{2}+30^{2}-2(25)(30)\cos 70^{\circ}\)。</li><li>\(=625+900-1500(0.34202\ldots)=1525-513.03=1011.97\)。</li><li>\(AB=\sqrt{1011.97}\approx 31.8\) m（3 個有效數字）。</li><li>(b) \(PT\) 是垂直的，所以 \(PT\perp\) 地面，\(\angle PTA=90^{\circ}\)。</li><li>\(\tan(\text{由 }A\text{ 測得的仰角})=\dfrac{PT}{TA}=\dfrac{20}{25}=0.8\)。</li><li>仰角 \(\approx 38.7^{\circ}\)（3 個有效數字）。</li><li>(c) \(\tan(\text{由 }B\text{ 測得的仰角})=\dfrac{PT}{TB}=\dfrac{20}{30}=0.66667\)。</li><li>仰角 \(\approx 33.7^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(b)、(c) 兩部用了 \(AB\) 作為水平距離。由 \(A\) 測得的仰角，要用 \(A\) 至桅杆底 \(T\) 的水平距離 \(TA\)，而不是至另一個觀察者的距離。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P1_Q18.html" target="_blank" rel="noopener">歷年試題 · 2024 卷一 Q18 ↗</a></div>
+<div class="q__body"><p>一艘船由港口 \(O\) 出發，沿方位角 \(070^{\circ}\) 航行 \(20\) km 到達 \(A\)，然後改變航向，沿方位角 \(160^{\circ}\) 航行 \(15\) km 到達 \(B\)。(a) 證明 \(\angle OAB=90^{\circ}\)。(b) 求 \(OB\)。(c) 求由 \(O\) 測得 \(B\) 的方位角，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 已證明　(b) \(OB=25\) km　(c) \(106.9^{\circ}\)</div>
+<ol class="steps">
+<li>(a) 由 \(A\) 測得 \(O\) 的方位角是 \(070^{\circ}+180^{\circ}=250^{\circ}\)；由 \(A\) 測得 \(B\) 的方位角是 \(160^{\circ}\)。</li><li>\(\angle OAB=250^{\circ}-160^{\circ}=90^{\circ}\)。</li><li>(b) 畢氏定理：\(OB=\sqrt{20^{2}+15^{2}}=\sqrt{400+225}=\sqrt{625}=25\) km。</li><li>(c) 在直角三角形中，\(\tan\angle AOB=\dfrac{AB}{OA}=\dfrac{15}{20}=0.75\)，所以 \(\angle AOB\approx 36.87^{\circ}\)。</li><li>由 \(O\) 看，\(B\) 在 \(A\) 的方向的順時針一側，所以 \(B\) 的方位角是 \(070^{\circ}+36.9^{\circ}\)。</li><li>\(=106.9^{\circ}\)（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把方位角算成 \(070^{\circ}+90^{\circ}\)。\(\angle OAB=90^{\circ}\) 是在 \(A\) 處，不是 \(O\) 處；\(O\) 處的角必須由三角形求出。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 三角學 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

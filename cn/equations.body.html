@@ -1,0 +1,1017 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 方程 — 7 種題型 50 題（附詳解）","desc":"由 44 道歷年 HKDSE 方程試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：一元一次方程、二元一次聯立方程、以因式分解解二次方程、二次公式與判別式、根之和與根之積、分式與根式方程及直線與曲線方程組，以及考試程度應用題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_equations_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 一元一次方程</a><a href="#t2" data-t="t2">類型 2 · 聯立方程</a><a href="#t3" data-t="t3">類型 3 · 因式分解解二次方程</a><a href="#t4" data-t="t4">類型 4 · 二次公式與判別式</a><a href="#t5" data-t="t5">類型 5 · 根之和與根之積</a><a href="#t6" data-t="t6">類型 6 · 分式與根式方程</a><a href="#t7" data-t="t7">類型 7 · 應用題</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 方程</p>
+    <h1 class="hero__title">方程 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 44 道歷年 DSE 方程試題（2012–2026）整理出七種題型 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>44</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如移項忘記變號、兩邊平方後沒有驗根。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>一元一次方程</td><td>括號、分數與小數係數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>二元一次聯立方程</td><td>消元法與代入法</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>以因式分解解二次方程</td><td>零積法則、十字相乘法、平方差</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>二次公式與判別式</td><td>運用公式及判斷實根數目</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>根之和與根之積</td><td>以 α、β 建立表達式及新方程</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>分式、根式與直線—曲線方程組</td><td>去分母、兩邊平方、代入</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度應用題</td><td>設未知數、列方程、捨去不合理的根</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>一元一次方程 <span class="count">· 7 題</span></h2>
+    <p>括號、分數與小數係數</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>方程就是一個天平。兩邊同時做相同的運算，先去括號，再把每一項乘以各分母的最小公倍數，使分數全部消失，最後把 \(x\) 集中在等號一邊、數字放在另一邊。</p>
+    <div class="formula">
+      <span>\(ax+b=c\Rightarrow x=\frac{c-b}{a}\)</span>
+      <span>\(\frac{a}{b}=\frac{c}{d}\Rightarrow ad=bc\)</span>
+      <span>\(0.4x=\frac{2}{5}x\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q1">
+    <div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P2_Q5.html" target="_blank" rel="noopener">歷年試題 · 2016 卷二 Q5 ↗</a></div>
+    <div class="q__body"><p>解方程 \(4x-7=3x+5\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=12\)</div>
+      <ol class="steps">
+        <li>兩邊同時減 \(3x\)，把 \(x\) 項集中到左邊：\(4x-3x-7=5\)，即 \(x-7=5\)。</li>
+        <li>兩邊同時加 7：\(x=5+7\)。</li>
+        <li>所以 \(x=12\)。</li>
+        <li>驗算：左邊 \(=4(12)-7=48-7=41\)；右邊 \(=3(12)+5=36+5=41\)。兩邊相等。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>移項要變號：\(-7\) 移到等號另一邊就變成 \(+7\)。若寫成 \(x=5-7\)，就會得到錯誤答案 \(-2\)。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q2">
+    <div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>解方程 \(3(2x-5)=4(x+1)-3\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=8\)</div>
+      <ol class="steps">
+        <li>展開左邊：\(3(2x-5)=6x-15\)。</li>
+        <li>展開右邊：\(4(x+1)-3=4x+4-3=4x+1\)。</li>
+        <li>所以 \(6x-15=4x+1\)。兩邊減 \(4x\)：\(2x-15=1\)。</li>
+        <li>兩邊加 15：\(2x=16\)，因此 \(x=8\)。</li>
+        <li>驗算：左邊 \(=3(16-5)=3(11)=33\)；右邊 \(=4(9)-3=36-3=33\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q3">
+    <div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q4.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q4 ↗</a></div>
+    <div class="q__body"><p>解方程 \(0.4x-1.2=0.25x+0.3\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=10\)</div>
+      <ol class="steps">
+        <li>每一項乘以 100，消去小數：\(40x-120=25x+30\)。</li>
+        <li>兩邊減 \(25x\)：\(15x-120=30\)。</li>
+        <li>兩邊加 120：\(15x=150\)，所以 \(x=10\)。</li>
+        <li>驗算：左邊 \(=0.4(10)-1.2=4-1.2=2.8\)；右邊 \(=0.25(10)+0.3=2.5+0.3=2.8\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>乘以 100 時，<i>每一項</i>都要乘，包括常數項 \(1.2\)。漏掉就變成 \(40x-1.2=25x+0.3\)，那是另一條方程。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q4">
+    <div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解方程 \(\frac{x+5}{2}-\frac{x-1}{3}=4\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=7\)</div>
+      <ol class="steps">
+        <li>分母 2 和 3 的最小公倍數是 6。每一項乘以 6：\(3(x+5)-2(x-1)=24\)。</li>
+        <li>展開：\(3x+15-2x+2=24\)。</li>
+        <li>化簡：\(x+17=24\)，所以 \(x=7\)。</li>
+        <li>驗算：\(\frac{7+5}{2}-\frac{7-1}{3}=\frac{12}{2}-\frac{6}{3}=6-2=4\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>\(\frac{x-1}{3}\) 前面的減號要乘進<b>兩項</b>：\(-2(x-1)=-2x+2\)，不是 \(-2x-2\)。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q5">
+    <div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解方程 \(2\left[3(x-2)-4(1-x)\right]=5(x+1)+11\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=4\)</div>
+      <ol class="steps">
+        <li>先算方括號內：\(3(x-2)-4(1-x)=3x-6-4+4x=7x-10\)。</li>
+        <li>再乘以外面的 2：\(2(7x-10)=14x-20\)。</li>
+        <li>展開右邊：\(5(x+1)+11=5x+5+11=5x+16\)。</li>
+        <li>所以 \(14x-20=5x+16\)。於是 \(9x=36\)，得 \(x=4\)。</li>
+        <li>驗算：括號內 \(=3(2)-4(-3)=6+12=18\)，左邊 \(=2(18)=36\)；右邊 \(=5(5)+11=36\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q6">
+    <div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解方程 \(\frac{x+7}{2}-\frac{2x-3}{5}=3\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=-11\)</div>
+      <ol class="steps">
+        <li>2 和 5 的最小公倍數是 10。每一項乘以 10：\(5(x+7)-2(2x-3)=30\)。</li>
+        <li>展開：\(5x+35-4x+6=30\)。</li>
+        <li>化簡：\(x+41=30\)，所以 \(x=30-41=-11\)。</li>
+        <li>驗算：\(\frac{-11+7}{2}-\frac{-22-3}{5}=\frac{-4}{2}-\frac{-25}{5}=-2+5=3\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>負數答案完全合法。很多考生因為 \(x=-11\)「看起來不對」就把它丟掉 —— 判斷對錯要靠驗算，不是靠感覺。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q7">
+    <div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解方程 \(0.6(x-2)+0.25=0.4x+1.35\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=11.5\)</div>
+      <ol class="steps">
+        <li>展開括號：\(0.6x-1.2+0.25=0.4x+1.35\)。</li>
+        <li>合併左邊的常數：\(0.6x-0.95=0.4x+1.35\)。</li>
+        <li>兩邊減 \(0.4x\)：\(0.2x-0.95=1.35\)。再加 0.95：\(0.2x=2.3\)。</li>
+        <li>兩邊除以 0.2：\(x=\frac{2.3}{0.2}=11.5\)。</li>
+        <li>驗算：左邊 \(=0.6(9.5)+0.25=5.7+0.25=5.95\)；右邊 \(=0.4(11.5)+1.35=4.6+1.35=5.95\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>二元一次聯立方程 <span class="count">· 7 題</span></h2>
+    <p>消元法與代入法</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>兩個二元一次方程代表兩條直線，它們的解就是兩線唯一的交點。<b>消元法</b>把其中一條或兩條方程放大，使某個未知數的係數相同而相消；<b>代入法</b>則把一條方程改寫成 \(y=\dots\)，再代入另一條。</p>
+    <div class="formula">
+      <span>\(a_1x+b_1y=c_1\)</span>
+      <span>\(a_2x+b_2y=c_2\)</span>
+      <span>\(\text{唯一解}\iff a_1b_2\ne a_2b_1\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q8">
+    <div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q3.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q3 ↗</a></div>
+    <div class="q__body"><p>解聯立方程
+\[\begin{cases} x+y=13\\ x-y=5\end{cases}\]</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=9,\ y=4\)</div>
+      <ol class="steps">
+        <li>兩式相加，使 \(y\) 相消：\((x+y)+(x-y)=13+5\)，即 \(2x=18\)。</li>
+        <li>因此 \(x=9\)。</li>
+        <li>代入 \(x+y=13\)：\(9+y=13\)，所以 \(y=4\)。</li>
+        <li>用第二式驗算：\(9-4=5\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q9">
+    <div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>解聯立方程 \(y=2x-1\) 及 \(3x+y=14\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=3,\ y=5\)</div>
+      <ol class="steps">
+        <li>把 \(y=2x-1\) 代入 \(3x+y=14\)：\(3x+(2x-1)=14\)。</li>
+        <li>化簡：\(5x-1=14\)，所以 \(5x=15\)，\(x=3\)。</li>
+        <li>於是 \(y=2(3)-1=5\)。</li>
+        <li>驗算：\(3(3)+5=14\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>求出 \(x\) 後，一定要回到<i>最簡單</i>的那條方程求 \(y\)。只交出 \(x\) 就會失掉一半分數。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q10">
+    <div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q2.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q2 ↗</a></div>
+    <div class="q__body"><p>解聯立方程
+\[\begin{cases} 3x+4y=23\\ 5x-2y=21\end{cases}\]</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=5,\ y=2\)</div>
+      <ol class="steps">
+        <li>把第二式乘以 2，使 \(y\) 的係數成為 \(+4\) 與 \(-4\)：\(10x-4y=42\)。</li>
+        <li>與第一式相加：\((3x+4y)+(10x-4y)=23+42\)，即 \(13x=65\)。</li>
+        <li>因此 \(x=5\)。代入 \(3x+4y=23\)：\(15+4y=23\)，所以 \(4y=8\)，\(y=2\)。</li>
+        <li>用第二式驗算：\(5(5)-2(2)=25-4=21\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q11">
+    <div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解聯立方程
+\[\begin{cases} \frac{x}{2}+\frac{y}{3}=4\\[4pt] \frac{x}{3}-\frac{y}{2}=\frac{1}{2}\end{cases}\]</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=6,\ y=3\)</div>
+      <ol class="steps">
+        <li>第一式整條乘以 6 去分母：\(3x+2y=24\)。</li>
+        <li>第二式整條乘以 6 去分母：\(2x-3y=3\)。</li>
+        <li>消去 \(y\)：第一式乘 3、第二式乘 2，得 \(9x+6y=72\) 與 \(4x-6y=6\)。相加得 \(13x=78\)，所以 \(x=6\)。</li>
+        <li>代入 \(3x+2y=24\)：\(18+2y=24\)，所以 \(y=3\)。</li>
+        <li>驗算：\(\frac{6}{2}+\frac{3}{3}=3+1=4\)，且 \(\frac{6}{3}-\frac{3}{2}=2-1.5=0.5\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q12">
+    <div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解聯立方程
+\[\begin{cases} 2(x+3y)=5(y+2)\\ 3(x-y)=10-x\end{cases}\]</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=4,\ y=2\)</div>
+      <ol class="steps">
+        <li>化簡第一式：\(2x+6y=5y+10\)，即 \(2x+y=10\)。</li>
+        <li>化簡第二式：\(3x-3y=10-x\)，即 \(4x-3y=10\)。</li>
+        <li>由 \(2x+y=10\) 得 \(y=10-2x\)。代入：\(4x-3(10-2x)=10\)。</li>
+        <li>於是 \(4x-30+6x=10\)，即 \(10x=40\)，所以 \(x=4\)，\(y=10-8=2\)。</li>
+        <li>驗算：\(3(4-2)=6\)，且 \(10-4=6\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>未化簡就不要代入 —— 括號會遮住係數，很容易出錯。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q13">
+    <div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解聯立方程
+\[\begin{cases} 0.5x+0.8y=4.6\\ 0.3x-0.2y=1.4\end{cases}\]</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=6,\ y=2\)</div>
+      <ol class="steps">
+        <li>兩式同時乘以 10 消去小數：\(5x+8y=46\) 與 \(3x-2y=14\)。</li>
+        <li>第二式乘以 4，使 \(y\) 的係數互相對消：\(12x-8y=56\)。</li>
+        <li>相加：\(17x=102\)，所以 \(x=6\)。</li>
+        <li>代入 \(3x-2y=14\)：\(18-2y=14\)，所以 \(2y=4\)，\(y=2\)。</li>
+        <li>驗算：\(0.5(6)+0.8(2)=3+1.6=4.6\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q14">
+    <div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+    <div class="q__body"><p>(a) 利用代入 \(a=\frac{1}{x}\) 及 \(b=\frac{1}{y}\)，解
+\[\begin{cases} 2a+3b=7\\ 4a-b=7\end{cases}\]
+(b) 由此解 \(\frac{2}{x}+\frac{3}{y}=7\) 及 \(\frac{4}{x}-\frac{1}{y}=7\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \(a=2,\ b=1\)　(b) \(x=\frac{1}{2},\ y=1\)</div>
+      <ol class="steps">
+        <li>由 \(4a-b=7\) 把 \(b\) 變成主項：\(b=4a-7\)。</li>
+        <li>代入 \(2a+3b=7\)：\(2a+3(4a-7)=7\)，即 \(14a-21=7\)。</li>
+        <li>於是 \(14a=28\)，所以 \(a=2\)，\(b=4(2)-7=1\)。驗算：\(2(2)+3(1)=7\)。✓</li>
+        <li>還原：\(\frac{1}{x}=2\Rightarrow x=\frac{1}{2}\)，且 \(\frac{1}{y}=1\Rightarrow y=1\)。</li>
+        <li>代入原式驗算：\(\frac{2}{1/2}+\frac{3}{1}=4+3=7\)，且 \(\frac{4}{1/2}-1=8-1=7\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>最後記得取倒數，並寫明 \(x\ne 0,\ y\ne 0\)。把 \(x=2\) 當成答案，而不是 \(x=\frac{1}{2}\)，是最典型的失誤。</p></div>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>以因式分解解二次方程 <span class="count">· 7 題</span></h2>
+    <p>零積法則、十字相乘法、平方差</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>先把方程整理成一邊剛好是 0，再把另一邊因式分解，然後用零積法則：若 \(AB=0\)，則 \(A=0\) 或 \(B=0\)。切勿兩邊同時除以 \(x\) —— 那會丟掉 \(x=0\) 這個根。</p>
+    <div class="formula">
+      <span>\(x^{2}+(p+q)x+pq=(x+p)(x+q)\)</span>
+      <span>\(a^{2}-b^{2}=(a-b)(a+b)\)</span>
+      <span>\(AB=0\Rightarrow A=0\ \text{或}\ B=0\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q15">
+    <div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P2_Q6.html" target="_blank" rel="noopener">歷年試題 · 2013 卷二 Q6 ↗</a></div>
+    <div class="q__body"><p>解 \(x^{2}-7x+12=0\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=3\ \text{或}\ x=4\)</div>
+      <ol class="steps">
+        <li>找兩個數，乘積是 \(+12\)、和是 \(-7\)：就是 \(-3\) 與 \(-4\)。</li>
+        <li>所以 \(x^{2}-7x+12=(x-3)(x-4)\)，方程變成 \((x-3)(x-4)=0\)。</li>
+        <li>因此 \(x-3=0\) 或 \(x-4=0\)，即 \(x=3\) 或 \(x=4\)。</li>
+        <li>驗算：\(3^{2}-7(3)+12=9-21+12=0\)，且 \(4^{2}-28+12=0\)。正確。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q16">
+    <div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>解 \(x^{2}=5x\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=0\ \text{或}\ x=5\)</div>
+      <ol class="steps">
+        <li>把所有項移到同一邊：\(x^{2}-5x=0\)。</li>
+        <li>抽出公因式 \(x\)：\(x(x-5)=0\)。</li>
+        <li>因此 \(x=0\) 或 \(x-5=0\)，即 \(x=0\) 或 \(x=5\)。</li>
+        <li>驗算：\(0=0\)，且 \(25=5(5)\)。正確。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>兩邊同時除以 \(x\) 只會得 \(x=5\)，丟掉 \(x=0\) 這個根。要分解，不要約去未知數。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q17">
+    <div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P1_Q5.html" target="_blank" rel="noopener">歷年試題 · 2020 卷一 Q5 ↗</a></div>
+    <div class="q__body"><p>解 \(2x^{2}+5x-3=0\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=\frac{1}{2}\ \text{或}\ x=-3\)</div>
+      <ol class="steps">
+        <li>先試 \((2x\ \ )(x\ \ )\)。兩個常數的乘積必須是 \(-3\)，而交叉項相加後要得 \(+5x\)。</li>
+        <li>\((2x-1)(x+3)=2x^{2}+6x-x-3=2x^{2}+5x-3\)。✓</li>
+        <li>由 \((2x-1)(x+3)=0\) 得 \(2x-1=0\) 或 \(x+3=0\)。</li>
+        <li>所以 \(x=\frac{1}{2}\) 或 \(x=-3\)。</li>
+        <li>驗算 \(x=-3\)：\(2(9)+5(-3)-3=18-15-3=0\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q18">
+    <div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解 \(3x^{2}-11x+6=0\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=3\ \text{或}\ x=\frac{2}{3}\)</div>
+      <ol class="steps">
+        <li>首項係數是 3，所以先寫成 \((3x\ \ )(x\ \ )\)。</li>
+        <li>\((3x-2)(x-3)=3x^{2}-9x-2x+6=3x^{2}-11x+6\)。✓</li>
+        <li>令每個因式等於 0：\(3x-2=0\) 或 \(x-3=0\)。</li>
+        <li>所以 \(x=\frac{2}{3}\) 或 \(x=3\)。</li>
+        <li>驗算 \(x=\frac{2}{3}\)：\(3\left(\frac{4}{9}\right)-11\left(\frac{2}{3}\right)+6=\frac{4}{3}-\frac{22}{3}+\frac{18}{3}=0\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>由 \(3x-2=0\) 得出的根是 \(x=\frac{2}{3}\)，不是 \(x=2\)。要除以 \(x\) 的係數，不是常數。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q19">
+    <div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解 \((x+2)(x-5)=3x-10\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=0\ \text{或}\ x=6\)</div>
+      <ol class="steps">
+        <li>展開左邊：\((x+2)(x-5)=x^{2}-3x-10\)。</li>
+        <li>所以 \(x^{2}-3x-10=3x-10\)。兩邊減 \(3x\) 再加 10：\(x^{2}-6x=0\)。</li>
+        <li>因式分解：\(x(x-6)=0\)。</li>
+        <li>因此 \(x=0\) 或 \(x=6\)。</li>
+        <li>驗算 \(x=6\)：左邊 \(=8\times 1=8\)，右邊 \(=18-10=8\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q20">
+    <div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解 \(4(x-1)^{2}=25\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=\frac{7}{2}\ \text{或}\ x=-\frac{3}{2}\)</div>
+      <ol class="steps">
+        <li>把所有項移到同一邊，看成兩個平方之差：\(4(x-1)^{2}-25=0\)，即 \(\left[2(x-1)\right]^{2}-5^{2}=0\)。</li>
+        <li>因式分解：\(\left[2(x-1)-5\right]\left[2(x-1)+5\right]=0\)，即 \((2x-7)(2x+3)=0\)。</li>
+        <li>因此 \(2x-7=0\) 或 \(2x+3=0\)。</li>
+        <li>所以 \(x=\frac{7}{2}\) 或 \(x=-\frac{3}{2}\)。</li>
+        <li>驗算 \(x=-\frac{3}{2}\)：\(4\left(-\frac{5}{2}\right)^{2}=4\left(\frac{25}{4}\right)=25\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>把 \(4(x-1)^{2}=25\) 開平方後只寫 \(2(x-1)=5\)，就只得到一個根。要記得 \(\pm\)：\(2(x-1)=\pm 5\)。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q21">
+    <div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+    <div class="q__body"><p>(a) 因式分解 \(6x^{2}+x-12\)。<br>(b) 由此解 \(6x^{2}+x-12=0\)。<br>(c) 由此解 \(6(y+1)^{2}+(y+1)-12=0\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \((3x-4)(2x+3)\)　(b) \(x=\frac{4}{3}\ \text{或}\ x=-\frac{3}{2}\)　(c) \(y=\frac{1}{3}\ \text{或}\ y=-\frac{5}{2}\)</div>
+      <ol class="steps">
+        <li>(a) 常數的乘積 \(=-12\)，交叉項相加要是 \(+x\)：\((3x-4)(2x+3)=6x^{2}+9x-8x-12=6x^{2}+x-12\)。✓</li>
+        <li>(b) \((3x-4)(2x+3)=0\Rightarrow 3x-4=0\) 或 \(2x+3=0\)，所以 \(x=\frac{4}{3}\) 或 \(x=-\frac{3}{2}\)。</li>
+        <li>(c) 把 (a) 的式中 \(x\) 換成 \((y+1)\)，正好就是左邊，所以 \(y+1=\frac{4}{3}\) 或 \(y+1=-\frac{3}{2}\)。</li>
+        <li>因此 \(y=\frac{4}{3}-1=\frac{1}{3}\) 或 \(y=-\frac{3}{2}-1=-\frac{5}{2}\)。</li>
+        <li>驗算 \(y=\frac{1}{3}\)：\(6\left(\frac{4}{3}\right)^{2}+\frac{4}{3}-12=\frac{32}{3}+\frac{4}{3}-12=12-12=0\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>(c) 要求解的未知數是 \(y\)，不是 \(y+1\)。每個根都要減 1，這一步不能省。</p></div>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>二次公式與判別式 <span class="count">· 7 題</span></h2>
+    <p>運用公式及判斷實根數目</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>當因式分解行不通時，先把方程寫成標準式 \(ax^{2}+bx+c=0\)，再用 \(x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\)。根號內的部分 \(\Delta=b^{2}-4ac\) 就是判別式，它在你開始解之前就已經告訴你有多少個實根。</p>
+    <div class="formula">
+      <span>\(x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\)</span>
+      <span>\(\Delta\gt 0\)：兩個實根</span>
+      <span>\(\Delta=0\)：一個重根</span>
+    </div>
+  </div>
+
+  <article class="q" id="q22">
+    <div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P2_Q36.html" target="_blank" rel="noopener">歷年試題 · 2018 卷二 Q36 ↗</a></div>
+    <div class="q__body"><p>用二次公式解 \(x^{2}+3x-1=0\)，答案以根式表示。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=\frac{-3\pm\sqrt{13}}{2}\)</div>
+      <ol class="steps">
+        <li>認出 \(a=1,\ b=3,\ c=-1\)。</li>
+        <li>判別式：\(b^{2}-4ac=3^{2}-4(1)(-1)=9+4=13\)。</li>
+        <li>代入 \(x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\)：\(x=\frac{-3\pm\sqrt{13}}{2(1)}\)。</li>
+        <li>所以 \(x=\frac{-3+\sqrt{13}}{2}\) 或 \(x=\frac{-3-\sqrt{13}}{2}\)。</li>
+        <li>近似驗算：\(\sqrt{13}\approx 3.606\)，兩根約為 \(0.303\) 與 \(-3.303\)；代入 \(0.303\) 得 \(0.092+0.909-1\approx 0\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q23">
+    <div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>求 \(2x^{2}-5x+3=0\) 的判別式，並由此指出實根的數目。再解該方程作驗證。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(\Delta=1\)，有兩個相異實根；\(x=1\ \text{或}\ x=\frac{3}{2}\)</div>
+      <ol class="steps">
+        <li>此處 \(a=2,\ b=-5,\ c=3\)，所以 \(\Delta=b^{2}-4ac=(-5)^{2}-4(2)(3)=25-24=1\)。</li>
+        <li>因為 \(\Delta=1\gt 0\)，方程有兩個相異實根（而 1 是完全平方，所以兩根是有理數）。</li>
+        <li>代入公式：\(x=\frac{5\pm\sqrt{1}}{4}=\frac{5\pm 1}{4}\)。</li>
+        <li>所以 \(x=\frac{6}{4}=\frac{3}{2}\) 或 \(x=\frac{4}{4}=1\)。</li>
+        <li>驗算：\(2(1)-5+3=0\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>\(b=-5\) 表示 \(b^{2}=(-5)^{2}=25\)。只把 5 平方、又忘記公式中的 \(-b\) 會變成 \(+5\)，是這類題目最常見的符號錯誤。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q24">
+    <div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解 \(x^{2}-6x+4=0\)，答案以根式表示。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=3\pm\sqrt{5}\)</div>
+      <ol class="steps">
+        <li>\(a=1,\ b=-6,\ c=4\)。</li>
+        <li>\(\Delta=(-6)^{2}-4(1)(4)=36-16=20\)。</li>
+        <li>\(x=\frac{6\pm\sqrt{20}}{2}=\frac{6\pm 2\sqrt{5}}{2}\)。</li>
+        <li>約去公因數 2：\(x=3\pm\sqrt{5}\)。</li>
+        <li>驗算：\((3+\sqrt{5})+(3-\sqrt{5})=6\)，且 \((3+\sqrt{5})(3-\sqrt{5})=9-5=4\)，與根之和 \(=6\)、根之積 \(=4\) 相符。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q25">
+    <div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解 \(3x^{2}+2x-4=0\)，答案寫成 \(\frac{p\pm\sqrt{q}}{r}\) 的形式，其中 \(p,q,r\) 為整數。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=\frac{-1\pm\sqrt{13}}{3}\)</div>
+      <ol class="steps">
+        <li>\(a=3,\ b=2,\ c=-4\)。</li>
+        <li>\(\Delta=2^{2}-4(3)(-4)=4+48=52\)。</li>
+        <li>\(x=\frac{-2\pm\sqrt{52}}{2(3)}\)。因 \(52=4\times 13\)，故 \(\sqrt{52}=2\sqrt{13}\)。</li>
+        <li>\(x=\frac{-2\pm 2\sqrt{13}}{6}=\frac{2(-1\pm\sqrt{13})}{6}\)。</li>
+        <li>\(x=\frac{-1\pm\sqrt{13}}{3}\)。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>要先化簡根式才約分。把 \(\frac{-2\pm 2\sqrt{13}}{6}\) 原封不動交上去，通常會失掉表達分。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q26">
+    <div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2025_P2_Q35.html" target="_blank" rel="noopener">歷年試題 · 2025 卷二 Q35 ↗</a></div>
+    <div class="q__body"><p>已知方程 \(kx^{2}+4x+2=0\)（其中 \(k\ne 0\)）有等根。<br>(a) 求 \(k\)。<br>(b) 由此求該根。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \(k=2\)　(b) \(x=-1\)</div>
+      <ol class="steps">
+        <li>(a) 有等根即 \(\Delta=0\)：\(4^{2}-4(k)(2)=0\)。</li>
+        <li>所以 \(16-8k=0\)，得 \(k=2\)。</li>
+        <li>(b) 方程為 \(2x^{2}+4x+2=0\)，即 \(2(x^{2}+2x+1)=0\)，所以 \(2(x+1)^{2}=0\)。</li>
+        <li>因此 \(x=-1\)（重根）。</li>
+        <li>用 \(x=-\frac{b}{2a}=-\frac{4}{2(2)}=-1\) 驗算。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q27">
+    <div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+    <div class="q__body"><p>已知方程 \(x^{2}+(k+1)x+9=0\) 有兩個相異實根。求 \(k\) 的取值範圍。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(k\gt 5\ \text{或}\ k\lt -7\)</div>
+      <ol class="steps">
+        <li>要有兩個相異實根，必須 \(\Delta\gt 0\)。</li>
+        <li>\(\Delta=(k+1)^{2}-4(1)(9)=(k+1)^{2}-36\)。</li>
+        <li>所以 \((k+1)^{2}-36\gt 0\)，即 \((k+1)^{2}\gt 36\)。</li>
+        <li>兩邊開平方：\(k+1\gt 6\) 或 \(k+1\lt -6\)。（不要寫成 \(-6\lt k+1\lt 6\) —— 那是 \(\Delta\lt 0\) 的情況。）</li>
+        <li>因此 \(k\gt 5\) 或 \(k\lt -7\)。</li>
+        <li>驗算 \(k=6\)：\(x^{2}+7x+9=0\)，\(\Delta=49-36=13\gt 0\)。✓ 驗算 \(k=0\)：\(x^{2}+x+9=0\)，\(\Delta=1-36\lt 0\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>\((k+1)^{2}\gt 36\) 這種不等式要分成<b>兩段</b>外區間，不是一段。寫成 \(-7\lt k\lt 5\) 就等於答了相反的問題。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q28">
+    <div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q35.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q35 ↗</a></div>
+    <div class="q__body"><p>考慮方程 \(2x^{2}-6x+k=0\)，其中 \(k\) 為常數。<br>(a) 求使方程有實根的 \(k\) 的範圍。<br>(b) 若方程有等根，求 \(k\) 及該根。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \(k\le\frac{9}{2}\)　(b) \(k=\frac{9}{2}\)，\(x=\frac{3}{2}\)</div>
+      <ol class="steps">
+        <li>(a) 有實根要求 \(\Delta\ge 0\)：\((-6)^{2}-4(2)(k)\ge 0\)。</li>
+        <li>\(36-8k\ge 0\Rightarrow 8k\le 36\Rightarrow k\le\frac{9}{2}\)。</li>
+        <li>(b) 有等根即 \(k=\frac{9}{2}\)，此時 \(2x^{2}-6x+\frac{9}{2}=0\)。</li>
+        <li>整條乘以 2：\(4x^{2}-12x+9=0\)，即 \((2x-3)^{2}=0\)。</li>
+        <li>因此 \(x=\frac{3}{2}\)（重根）。驗算：\(2\left(\frac{9}{4}\right)-9+\frac{9}{2}=\frac{9}{2}-9+\frac{9}{2}=0\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>根之和與根之積 <span class="count">· 7 題</span></h2>
+    <p>以 α、β 建立表達式及新方程</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>對於 \(ax^{2}+bx+c=0\)，設兩根為 \(\alpha\) 與 \(\beta\)，你根本不需要求出這兩個根：\(\alpha+\beta=-\frac{b}{a}\)、\(\alpha\beta=\frac{c}{a}\)。任何關於 \(\alpha,\beta\) 的對稱式都可以只用這兩個量改寫；反過來，由 \(x^{2}-(\text{和})x+(\text{積})=0\) 就可以重建一條二次方程。</p>
+    <div class="formula">
+      <span>\(\alpha+\beta=-\frac{b}{a}\)</span>
+      <span>\(\alpha\beta=\frac{c}{a}\)</span>
+      <span>\(x^{2}-(\alpha+\beta)x+\alpha\beta=0\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q29">
+    <div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P2_Q35.html" target="_blank" rel="noopener">歷年試題 · 2024 卷二 Q35 ↗</a></div>
+    <div class="q__body"><p>方程 \(2x^{2}-7x+3=0\) 的兩根為 \(\alpha\) 及 \(\beta\)。求 \(\alpha+\beta\) 與 \(\alpha\beta\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(\alpha+\beta=\frac{7}{2},\ \alpha\beta=\frac{3}{2}\)</div>
+      <ol class="steps">
+        <li>認出 \(a=2,\ b=-7,\ c=3\)。</li>
+        <li>\(\alpha+\beta=-\frac{b}{a}=-\frac{-7}{2}=\frac{7}{2}\)。</li>
+        <li>\(\alpha\beta=\frac{c}{a}=\frac{3}{2}\)。</li>
+        <li>用因式分解驗算：\(2x^{2}-7x+3=(2x-1)(x-3)\)，兩根為 \(\frac{1}{2}\) 與 3，其和為 \(\frac{7}{2}\)、積為 \(\frac{3}{2}\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>根之和是 \(-\frac{b}{a}\)，前面帶負號。因為 \(b=-7\)，此題的和是正數；漏掉負號就會寫成 \(-\frac{7}{2}\)。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q30">
+    <div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>求一條以 3 與 \(-5\) 為根、係數為整數的二次方程。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x^{2}+2x-15=0\)</div>
+      <ol class="steps">
+        <li>根之和 \(=3+(-5)=-2\)。</li>
+        <li>根之積 \(=3\times(-5)=-15\)。</li>
+        <li>方程為 \(x^{2}-(\text{和})x+(\text{積})=0\)：\(x^{2}-(-2)x+(-15)=0\)。</li>
+        <li>所以 \(x^{2}+2x-15=0\)。</li>
+        <li>驗算：\((x-3)(x+5)=x^{2}+2x-15\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q31">
+    <div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>若 \(\alpha\) 與 \(\beta\) 是 \(x^{2}-4x+1=0\) 的兩根，求 \(\alpha^{2}+\beta^{2}\) 的值。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(14\)</div>
+      <ol class="steps">
+        <li>此處 \(\alpha+\beta=4\)，\(\alpha\beta=1\)。</li>
+        <li>用恆等式 \(\alpha^{2}+\beta^{2}=(\alpha+\beta)^{2}-2\alpha\beta\)。</li>
+        <li>代入：\(\alpha^{2}+\beta^{2}=4^{2}-2(1)=16-2\)。</li>
+        <li>\(=14\)。</li>
+        <li>驗算：兩根為 \(2\pm\sqrt{3}\)，而 \((2+\sqrt{3})^{2}+(2-\sqrt{3})^{2}=(7+4\sqrt{3})+(7-4\sqrt{3})=14\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>\(\alpha^{2}+\beta^{2}\) <b>不等於</b> \((\alpha+\beta)^{2}\)。必須減去交叉項 \(2\alpha\beta\)。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q32">
+    <div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>若 \(\alpha\) 與 \(\beta\) 是 \(2x^{2}+5x-3=0\) 的兩根，求 \(\frac{1}{\alpha}+\frac{1}{\beta}\) 的值。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(\frac{5}{3}\)</div>
+      <ol class="steps">
+        <li>由方程得：\(\alpha+\beta=-\frac{5}{2}\)，\(\alpha\beta=-\frac{3}{2}\)。</li>
+        <li>通分合併：\(\frac{1}{\alpha}+\frac{1}{\beta}=\frac{\alpha+\beta}{\alpha\beta}\)。</li>
+        <li>代入：\(\frac{-5/2}{-3/2}=\frac{-5}{-3}\)。</li>
+        <li>\(=\frac{5}{3}\)。</li>
+        <li>驗算：\(2x^{2}+5x-3=(2x-1)(x+3)\)，兩根為 \(\frac{1}{2},-3\)；於是 \(2-\frac{1}{3}=\frac{5}{3}\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q33">
+    <div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>\(x^{2}-6x+4=0\) 的兩根為 \(\alpha\) 與 \(\beta\)。求以 \(\alpha+1\) 與 \(\beta+1\) 為根的二次方程，答案係數須為整數。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x^{2}-8x+11=0\)</div>
+      <ol class="steps">
+        <li>由 \(x^{2}-6x+4=0\)：\(\alpha+\beta=6\)，\(\alpha\beta=4\)。</li>
+        <li>新根之和 \(=(\alpha+1)+(\beta+1)=(\alpha+\beta)+2=6+2=8\)。</li>
+        <li>新根之積 \(=(\alpha+1)(\beta+1)=\alpha\beta+\alpha+\beta+1=4+6+1=11\)。</li>
+        <li>方程：\(x^{2}-8x+11=0\)。</li>
+        <li>驗算：兩根為 \(4\pm\sqrt{5}\)，即 \(\alpha=3\pm\sqrt{5}\) 全部加 1。和為 \(8\)，積為 \((4+\sqrt{5})(4-\sqrt{5})=16-5=11\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q34">
+    <div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q34.html" target="_blank" rel="noopener">歷年試題 · 2019 卷二 Q34 ↗</a></div>
+    <div class="q__body"><p>\(3x^{2}-2x-4=0\) 的兩根為 \(\alpha\) 與 \(\beta\)。求以 \(2\alpha\) 與 \(2\beta\) 為根的二次方程，答案係數須為整數。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(3x^{2}-4x-16=0\)</div>
+      <ol class="steps">
+        <li>由 \(3x^{2}-2x-4=0\)：\(\alpha+\beta=\frac{2}{3}\)，\(\alpha\beta=-\frac{4}{3}\)。</li>
+        <li>新根之和 \(=2\alpha+2\beta=2(\alpha+\beta)=2\left(\frac{2}{3}\right)=\frac{4}{3}\)。</li>
+        <li>新根之積 \(=(2\alpha)(2\beta)=4\alpha\beta=4\left(-\frac{4}{3}\right)=-\frac{16}{3}\)。</li>
+        <li>方程：\(x^{2}-\frac{4}{3}x-\frac{16}{3}=0\)。整條乘以 3：\(3x^{2}-4x-16=0\)。</li>
+        <li>用公式驗算：\(3x^{2}-4x-16=0\) 的根為 \(\frac{4\pm\sqrt{16+192}}{6}=\frac{4\pm 4\sqrt{13}}{6}\)，而原方程的根為 \(\frac{1\pm\sqrt{13}}{3}\)，乘以 2 後正好吻合。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>新根之積是 \((2\alpha)(2\beta)=4\alpha\beta\) —— 是 4 倍，不是 2 倍。根放大 2 倍，其積就放大 4 倍。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q35">
+    <div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+    <div class="q__body"><p>方程 \(x^{2}-8x+k=0\) 的兩根為 \(\alpha\) 與 \(\beta\)，其中 \(k\) 為常數。<br>(a) 以 \(k\) 表示 \(\alpha^{2}+\beta^{2}\)。<br>(b) 已知 \(\alpha^{2}+\beta^{2}=40\)，求 \(k\)，並由此解該方程。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \(64-2k\)　(b) \(k=12\)；\(x=2\ \text{或}\ x=6\)</div>
+      <ol class="steps">
+        <li>(a) \(\alpha+\beta=8\)，\(\alpha\beta=k\)，所以 \(\alpha^{2}+\beta^{2}=(\alpha+\beta)^{2}-2\alpha\beta=64-2k\)。</li>
+        <li>(b) 令 \(64-2k=40\)：\(2k=24\)，所以 \(k=12\)。</li>
+        <li>方程變成 \(x^{2}-8x+12=0\)，可分解為 \((x-2)(x-6)=0\)。</li>
+        <li>因此 \(x=2\) 或 \(x=6\)。</li>
+        <li>驗算：\(2^{2}+6^{2}=4+36=40\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>分式、根式與直線—曲線方程組 <span class="count">· 7 題</span></h2>
+    <p>去分母、兩邊平方、代入</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>解分式方程時，整條乘以各分母的最小公倍數，然後<b>檢查</b>有沒有解會使分母為 0。解根式方程時，先把根式孤立在一邊，兩邊平方，解完之後<b>逐個根代回原式檢驗</b>，因為平方可能產生偽根。直線與曲線相交，代入後就得到一條二次方程。</p>
+    <div class="formula">
+      <span>\(\frac{a}{b}=\frac{c}{d}\Rightarrow ad=bc\)</span>
+      <span>\(\sqrt{A}=B\Rightarrow A=B^{2},\ B\ge 0\)</span>
+      <span>\(y=mx+k,\ y=ax^{2}+bx+c\Rightarrow ax^{2}+(b-m)x+(c-k)=0\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q36">
+    <div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>解 \(\frac{2x+1}{x}=5\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=\frac{1}{3}\)</div>
+      <ol class="steps">
+        <li>先寫明限制 \(x\ne 0\)。兩邊乘以 \(x\)：\(2x+1=5x\)。</li>
+        <li>移項：\(1=3x\)，所以 \(x=\frac{1}{3}\)。</li>
+        <li>驗算：分子 \(=2\left(\frac{1}{3}\right)+1=\frac{5}{3}\)，而 \(\frac{5/3}{1/3}=5\)。✓</li>
+        <li>\(x=\frac{1}{3}\) 不等於 0，所以接受此解。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q37">
+    <div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+    <div class="q__body"><p>解 \(\sqrt{2x+5}=3\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=2\)</div>
+      <ol class="steps">
+        <li>根式已在獨立一邊，兩邊平方：\(2x+5=3^{2}=9\)。</li>
+        <li>於是 \(2x=4\)，所以 \(x=2\)。</li>
+        <li>代回原式驗算：\(\sqrt{2(2)+5}=\sqrt{9}=3\)。✓</li>
+        <li>因為右邊 3 是正數，沒有根需要捨去。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>平方要對整邊做：\(3^{2}=9\)，不是 \(3\)。另外 \(\sqrt{A}=B\) 要求 \(B\ge 0\)；右邊是負數就完全無解。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q38">
+    <div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>解 \(\frac{5}{2x-1}=\frac{3}{x+3}\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=18\)</div>
+      <ol class="steps">
+        <li>交叉相乘（因 \(2x-1\ne 0\) 且 \(x+3\ne 0\) 才成立）：\(5(x+3)=3(2x-1)\)。</li>
+        <li>展開：\(5x+15=6x-3\)。</li>
+        <li>移項：\(15+3=6x-5x\)，所以 \(x=18\)。</li>
+        <li>驗算：左邊 \(=\frac{5}{35}=\frac{1}{7}\)，右邊 \(=\frac{3}{21}=\frac{1}{7}\)。✓</li>
+        <li>\(x=18\) 時兩個分母都不為 0。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q39">
+    <div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P1_Q7.html" target="_blank" rel="noopener">歷年試題 · 2020 卷一 Q7 ↗</a></div>
+    <div class="q__body"><p>解 \(\frac{x+1}{x-1}-\frac{3}{x+1}=2\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=2\ \text{或}\ x=-3\)</div>
+      <ol class="steps">
+        <li>限制：\(x\ne 1,\ x\ne -1\)。每一項乘以 \((x-1)(x+1)\)：\((x+1)^{2}-3(x-1)=2(x-1)(x+1)\)。</li>
+        <li>展開：\(x^{2}+2x+1-3x+3=2x^{2}-2\)。</li>
+        <li>化簡左邊：\(x^{2}-x+4=2x^{2}-2\)。</li>
+        <li>全部移到同一邊：\(0=x^{2}+x-6\)，即 \((x+3)(x-2)=0\)。</li>
+        <li>所以 \(x=-3\) 或 \(x=2\)，而兩者都不等於 \(\pm 1\)。驗算 \(x=2\)：\(\frac{3}{1}-\frac{3}{3}=3-1=2\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>中間那一項也要乘以整條最小公倍數：\(-\frac{3}{x+1}\times (x-1)(x+1)=-3(x-1)\)。漏掉 \((x-1)\) 這個因式就是最常見的錯。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q40">
+    <div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>解 \(\sqrt{x+5}+x=7\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(x=4\)</div>
+      <ol class="steps">
+        <li>把根式孤立：\(\sqrt{x+5}=7-x\)。這要求 \(7-x\ge 0\)，即 \(x\le 7\)。</li>
+        <li>兩邊平方：\(x+5=(7-x)^{2}=49-14x+x^{2}\)。</li>
+        <li>移項：\(0=x^{2}-15x+44\)，即 \((x-4)(x-11)=0\)，所以 \(x=4\) 或 \(x=11\)。</li>
+        <li>驗算 \(x=4\)：\(\sqrt{9}+4=3+4=7\)。✓</li>
+        <li>驗算 \(x=11\)：\(\sqrt{16}+11=4+11=15\ne 7\)，所以捨去（它違反 \(x\le 7\)）。</li>
+        <li>答案只有 \(x=4\)。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>平方會製造多餘的根 \(x=11\)。寫最終答案前，務必把兩個根都代回原方程檢驗。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q41">
+    <div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P2_Q35.html" target="_blank" rel="noopener">歷年試題 · 2021 卷二 Q35 ↗</a></div>
+    <div class="q__body"><p>曲線 \(y=x^{2}-3x+1\) 與直線 \(y=2x-5\) 相交於兩點。求這兩個交點的坐標。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\((2,-1)\) 及 \((3,1)\)</div>
+      <ol class="steps">
+        <li>在交點上兩個 \(y\) 值相等：\(x^{2}-3x+1=2x-5\)。</li>
+        <li>移項：\(x^{2}-5x+6=0\)。</li>
+        <li>因式分解：\((x-2)(x-3)=0\)，所以 \(x=2\) 或 \(x=3\)。</li>
+        <li>由直線 \(y=2x-5\) 求 \(y\)：\(x=2\) 時 \(y=-1\)；\(x=3\) 時 \(y=1\)。</li>
+        <li>用曲線驗算：\(2^{2}-3(2)+1=-1\)，且 \(3^{2}-9+1=1\)。✓</li>
+        <li>兩個交點為 \((2,-1)\) 及 \((3,1)\)。</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q42">
+    <div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+    <div class="q__body"><p>直線 \(y=2x+k\) 與曲線 \(y=x^{2}-4x+7\) 相切。<br>(a) 求 \(k\)。<br>(b) 求切點的坐標。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) \(k=-2\)　(b) \((3,4)\)</div>
+      <ol class="steps">
+        <li>在切點上兩式同時成立：\(x^{2}-4x+7=2x+k\)。</li>
+        <li>整理成二次方程：\(x^{2}-6x+(7-k)=0\)。</li>
+        <li>(a) 相切代表只有一個解，所以 \(\Delta=0\)：\(36-4(7-k)=0\)。</li>
+        <li>於是 \(36-28+4k=0\)，即 \(4k=-8\)，所以 \(k=-2\)。</li>
+        <li>(b) 代入 \(k=-2\) 後方程為 \(x^{2}-6x+9=0\)，即 \((x-3)^{2}=0\)，所以 \(x=3\)。</li>
+        <li>於是 \(y=2(3)-2=4\)。用曲線驗算：\(9-12+7=4\)。✓ 切點為 \((3,4)\)。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>相切表示 \(\Delta=0\)（一個重根），不是 \(\Delta\gt 0\)。另外，求出 \(x=3\) 後要代回其中一條方程求 \(y\)，不要停在 \(x=3\)。</p></div>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度應用題 <span class="count">· 8 題</span></h2>
+    <p>設未知數、列方程、捨去不合理的根</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>所有應用題都走同樣四步：(1) 引入一個變數並說明它代表甚麼；(2) 把每一句文字翻譯成方程；(3) 解方程；(4) 捨去在實際情境中不合理的根（負長度、零速率、人數太多等）。最後的答案要寫上單位。</p>
+    <div class="formula">
+      <span>\(\text{距離}=\text{速率}\times\text{時間}\)</span>
+      <span>\(\text{工作效率}=\frac{1}{\text{所需時間}}\)</span>
+      <span>\(\text{量}=\text{濃度}\times\text{體積}\)</span>
+    </div>
+  </div>
+
+  <article class="q" id="q43">
+    <div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+    <div class="q__body"><p>三個連續整數之和是 63。求這三個整數。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(20,\ 21,\ 22\)</div>
+      <ol class="steps">
+        <li>設最小的整數為 \(n\)，則其餘兩個是 \(n+1\) 和 \(n+2\)。</li>
+        <li>列方程：\(n+(n+1)+(n+2)=63\)。</li>
+        <li>化簡：\(3n+3=63\)，所以 \(3n=60\)，\(n=20\)。</li>
+        <li>三個整數是 20、21、22。</li>
+        <li>驗算：\(20+21+22=63\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(n,\ n+1,\ n+3\) 就破壞了規律。連續整數相差剛好是 1。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q44">
+    <div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P1_Q7.html" target="_blank" rel="noopener">歷年試題 · 2015 卷一 Q7 ↗</a></div>
+    <div class="q__body"><p>父親現時的年齡是兒子的三倍。12 年後，父親的年齡是兒子的兩倍。求他們現時的年齡。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>兒子 12 歲，父親 36 歲</div>
+      <ol class="steps">
+        <li>設兒子現時 \(x\) 歲，則父親是 \(3x\) 歲。</li>
+        <li>12 年後：兒子 \(x+12\) 歲，父親 \(3x+12\) 歲。</li>
+        <li>依題意：\(3x+12=2(x+12)\)。</li>
+        <li>展開：\(3x+12=2x+24\)，所以 \(x=12\)。</li>
+        <li>兒子 12 歲，父親 \(3(12)=36\) 歲。</li>
+        <li>驗算：12 年後兩人分別是 24 歲與 48 歲，而 \(48=2\times 24\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q45">
+    <div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>一塊長方形告示板的長度比闊度多 5 cm，面積是 84 cm²。求它的尺寸。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>闊 7 cm，長 12 cm</div>
+      <ol class="steps">
+        <li>設闊度為 \(x\) cm，則長度是 \((x+5)\) cm。</li>
+        <li>面積：\(x(x+5)=84\)。</li>
+        <li>展開並移項：\(x^{2}+5x-84=0\)。</li>
+        <li>因式分解：\((x+12)(x-7)=0\)，所以 \(x=7\) 或 \(x=-12\)。</li>
+        <li>闊度不能是負數，所以捨去 \(x=-12\)，取 \(x=7\)。</li>
+        <li>告示板闊 7 cm，長 \(7+5=12\) cm。驗算：\(7\times 12=84\)。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>二次方程的兩個根都要檢視。保留 \(x=-12\) 就會得出「長度」為 \(-7\) cm，完全沒有意義。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q46">
+    <div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+    <div class="q__body"><p>一個正數與其倒數之和是 \(\frac{10}{3}\)。求該數。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(3\) 或 \(\frac{1}{3}\)</div>
+      <ol class="steps">
+        <li>設該數為 \(x\)（\(x\ne 0\)），則 \(x+\frac{1}{x}=\frac{10}{3}\)。</li>
+        <li>每一項乘以 \(3x\)：\(3x^{2}+3=10x\)。</li>
+        <li>移項：\(3x^{2}-10x+3=0\)。</li>
+        <li>因式分解：\((3x-1)(x-3)=0\)，所以 \(x=\frac{1}{3}\) 或 \(x=3\)。</li>
+        <li>兩者都是正數，而且互為倒數，所以兩個答案都成立。</li>
+        <li>驗算 \(x=3\)：\(3+\frac{1}{3}=\frac{10}{3}\)。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q47">
+    <div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+    <div class="q__body"><p>一名單車手騎行 60 km。若速率每小時快 5 km，行程就會少用 1 小時。求實際速率。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(15\ \text{km/h}\)</div>
+      <ol class="steps">
+        <li>設實際速率為 \(v\) km/h（\(v\gt 0\)），所需時間為 \(\frac{60}{v}\) 小時。</li>
+        <li>速率為 \(v+5\) km/h 時，時間是 \(\frac{60}{v+5}\) 小時，比原來少 1 小時。</li>
+        <li>方程：\(\frac{60}{v}-\frac{60}{v+5}=1\)。</li>
+        <li>乘以 \(v(v+5)\)：\(60(v+5)-60v=v(v+5)\)。</li>
+        <li>所以 \(300=v^{2}+5v\)，即 \(v^{2}+5v-300=0\)。</li>
+        <li>因式分解：\((v+20)(v-15)=0\)，所以 \(v=15\)（捨去 \(v=-20\)）。</li>
+        <li>驗算：\(\frac{60}{15}=4\) 小時，\(\frac{60}{20}=3\) 小時，相差 1 小時。✓</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>時間是 \(\frac{\text{距離}}{\text{速率}}\)，不是速率除以距離。另外要清楚寫出捨去負根，才能取得方法分。</p></div>
+    </div>
+  </article>
+
+  <article class="q" id="q48">
+    <div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+    <div class="q__body"><p>一筆 $720 平均分給 \(n\) 名學生。若多 3 名學生，每人就會少收 $8。求 \(n\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>\(n=15\)</div>
+      <ol class="steps">
+        <li>原本每人得 \(\frac{720}{n}\) 元。</li>
+        <li>多 3 名學生後，每人得 \(\frac{720}{n+3}\) 元。</li>
+        <li>相差 $8：\(\frac{720}{n}-\frac{720}{n+3}=8\)。</li>
+        <li>乘以 \(n(n+3)\)：\(720(n+3)-720n=8n(n+3)\)。</li>
+        <li>所以 \(2160=8n^{2}+24n\)。兩邊除以 8：\(n^{2}+3n-270=0\)。</li>
+        <li>因式分解：\((n+18)(n-15)=0\)，所以 \(n=15\)（捨去 \(-18\)）。</li>
+        <li>驗算：\(\frac{720}{15}=48\)，\(\frac{720}{18}=40\)，相差 $8。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q49">
+    <div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P1_Q17.html" target="_blank" rel="noopener">歷年試題 · 2013 卷一 Q17 ↗</a></div>
+    <div class="q__body"><p>甲管單獨注水，\(x\) 小時可注滿一個水箱；乙管單獨注水比甲管多用 3 小時。若兩管同時打開，2 小時可注滿水箱。<br>(a) 證明 \(x^{2}-x-6=0\)。<br>(b) 由此求 \(x\)。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) 已證明　(b) \(x=3\)</div>
+      <ol class="steps">
+        <li>1 小時內，甲管注入水箱的 \(\frac{1}{x}\)，乙管注入水箱的 \(\frac{1}{x+3}\)。</li>
+        <li>兩管合開，1 小時可注入水箱的 \(\frac{1}{2}\)：\(\frac{1}{x}+\frac{1}{x+3}=\frac{1}{2}\)。</li>
+        <li>(a) 乘以 \(2x(x+3)\)：\(2(x+3)+2x=x(x+3)\)。</li>
+        <li>展開：\(4x+6=x^{2}+3x\)，所以 \(x^{2}-x-6=0\)，得證。</li>
+        <li>(b) 因式分解：\((x-3)(x+2)=0\)，所以 \(x=3\) 或 \(x=-2\)。時間必須為正數，故 \(x=3\)。</li>
+        <li>驗算：甲管每小時注入 \(\frac{1}{3}\)，乙管注入 \(\frac{1}{6}\)，合共 \(\frac{1}{3}+\frac{1}{6}=\frac{1}{2}\)，即 2 小時注滿。✓</li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="q" id="q50">
+    <div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">8 分</span></div>
+    <div class="q__body"><p>一名化學家手上有 20 L 濃度 40% 的酸性溶液。<br>(a) 溶液中含有多少升酸？<br>(b) 她加入 \(x\) 升純酸，使混合液變成 60% 酸性。證明 \(0.4x=4\)，並由此求 \(x\)。<br>(c) 驗證最後的濃度。</p></div>
+    <button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+    <div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+      <div class="answer"><span class="answer__label">答案</span>(a) 8 L　(b) \(x=10\)　(c) \(\frac{18}{30}=60\%\)，驗證成立</div>
+      <ol class="steps">
+        <li>(a) 酸 \(=40\%\times 20=0.4\times 20=8\) L（水 \(=12\) L）。</li>
+        <li>(b) 加入 \(x\) L 純酸後：酸 \(=8+x\) L，總體積 \(=20+x\) L。</li>
+        <li>新濃度是 60%：\(\frac{8+x}{20+x}=0.6\)。</li>
+        <li>乘以 \((20+x)\)：\(8+x=12+0.6x\)。</li>
+        <li>兩邊減 \(0.6x\) 再減 8：\(0.4x=4\)，得證。因此 \(x=10\)。</li>
+        <li>(c) 酸 \(=8+10=18\) L，體積 \(=20+10=30\) L，所以濃度是 \(\frac{18}{30}=0.6=60\%\)。✓</li>
+        <li>她需要加入 10 L 純酸。</li>
+      </ol>
+      <div class="hint"><span class="hint__label">常犯錯誤</span><p>加入純酸會同時改變<b>酸的量</b>與<b>總體積</b>。用 \(0.6\times 20\) 當作新的含酸量，就忽略了新加入的 10 L。</p></div>
+    </div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 方程 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

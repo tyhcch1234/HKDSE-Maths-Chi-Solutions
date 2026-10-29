@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港中學文憑試 數學（必修）· 求積法 — 7 種題型 50 題（附詳解）</title>
+<meta name="description" content="由 64 道歷年 HKDSE 求積法試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：複合圖形的周界與面積、圓與扇形、棱柱與圓柱、棱錐、圓錐與球體、相似圖形與立體的比、平截頭體與水位問題，以及考試程度的立體應用題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' },
+  options: { ignoreHtmlClass: 'tex2jax_ignore' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/cn.css">
+</head>
+<body id="top">
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 周界與面積</a><a href="#t2" data-t="t2">類型 2 · 圓與扇形</a><a href="#t3" data-t="t3">類型 3 · 棱柱與圓柱</a><a href="#t4" data-t="t4">類型 4 · 棱錐、圓錐、球體</a><a href="#t5" data-t="t5">類型 5 · 相似圖形與立體</a><a href="#t6" data-t="t6">類型 6 · 平截頭體與水位</a><a href="#t7" data-t="t7">類型 7 · 考試立體問題</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 求積法</p>
+    <h1 class="hero__title">求積法 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 64 道歷年 DSE 求積法試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>64</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如把斜邊當作高，或混淆弧長與扇形面積。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>直線圖形與複合圖形的周界與面積</td><td>分割與填補長方形、三角形與梯形</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>圓：圓周、面積、弧長與扇形面積</td><td>弧、扇形與圓環的計算及正確單位</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>棱柱與圓柱：體積與總表面積</td><td>棱柱體積 = 截面面積 × 長度；圓柱的展開圖</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>棱錐、圓錐與球體：體積與表面積</td><td>斜高、棱柱的三分之一、曲面</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>相似圖形與相似立體：面積比與體積比</td><td>長度、面積、體積比 1 : k : k² : k³</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>平截頭體、切割、組合立體與水位問題</td><td>圓錐平截頭體、浸沒立體與容量</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度立體問題：油漆費用、質量與體積比</td><td>多步的金錢、密度與比例問題</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>直線圖形與複合圖形的周界與面積 <span class="count">· 7 題</span></h2>
+    <p>分割與填補長方形、三角形與梯形</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>複合圖形可切成已知面積的長方形、三角形和梯形，或者用外圍的大長方形減去挖去的部分。周界是整個邊界的總長度 —— 它<i>不</i>等於面積；而從長方形剪去一個角，周界其實不變。</p>
+    <div class="formula"><span>\(A=l\times w\)</span><span>\(A=\frac{1}{2}(a+b)h\)</span><span>\(A=\frac{1}{2}bh\)</span></div>
+  </div>
+  <article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一張長方形卡紙長 12 cm、闊 7 cm。從一個角剪去一個邊長 3 cm 的正方形。求餘下卡紙的 (a) 面積，(b) 周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(75\text{ cm}^{2}\)　(b) \(38\text{ cm}\)</div>
+<ol class="steps">
+<li>原長方形面積 \(=12\times 7=84\text{ cm}^{2}\)；剪去的正方形面積 \(=3\times 3=9\text{ cm}^{2}\)。</li>
+<li>餘下面積 \(=84-9=75\text{ cm}^{2}\)。</li>
+<li>至於周界，剪去一個角會少了兩條 3 cm 的邊，但同時多出兩條 3 cm 的新邊，所以邊界總長與原長方形相同。</li>
+<li>周界 \(=2(12+7)=2\times 19=38\text{ cm}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>很多考生會把周界減去 \(4\times 3=12\text{ cm}\)。逐條邊檢查邊界：走了兩條，又回來兩條。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>圖中 \(ABCDEF\) 是一個 L 形圖形，\(AB\) 在底部水平，\(AF\) 在左邊垂直。沿邊界走一圈：\(AB=10\text{ m}\)，\(BC=5\text{ m}\)（垂直向上），\(CD=6\text{ m}\)（水平向左），\(DE=3\text{ m}\)（垂直向上），\(EF=4\text{ m}\)（水平向左），\(FA=8\text{ m}\)（垂直向下返回 \(A\)）。所有角均為直角。求該圖形的面積與周界。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="-7 16 243 202" width="243" height="202" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:243px">
+<polygon points="40.0,175.0 190.0,175.0 190.0,100.0 100.0,100.0 100.0,55.0 40.0,55.0" fill="#f8fafc" stroke="#1e293b" stroke-width="1.7" stroke-linejoin="round"/>
+<text x="27.0" y="183.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="201.0" y="185.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="202.0" y="104.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="102.0" y="116.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="102.0" y="42.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">E</text>
+<text x="36.0" y="42.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">F</text>
+<text x="115.0" y="192.0" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">10 m</text>
+<text x="210.0" y="143.5" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">5 m</text>
+<text x="145.0" y="89.0" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">6 m</text>
+<text x="118.0" y="77.5" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">3 m</text>
+<text x="70.0" y="44.0" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">4 m</text>
+<text x="19.0" y="115.0" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">8 m</text>
+</svg>
+<figcaption>Q2 附圖</figcaption>
+</figure>
+</div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>面積 \(=62\text{ m}^{2}\)，周界 \(=36\text{ m}\)</div>
+<ol class="steps">
+<li>把圖形補成包圍它的 10 m × 8 m 長方形。缺去的一角是闊 6 m（沿 \(CD\)）、高 3 m（沿 \(DE\)）的長方形。</li>
+<li>核對：\(6+4=10\text{ m}\)（整個闊度），\(5+3=8\text{ m}\)（整個高度），所以缺口的面積是 \(6\times 3=18\text{ m}^{2}\)。</li>
+<li>面積 \(=10\times 8-18=80-18=62\text{ m}^{2}\)。</li>
+<li>周界 \(=AB+BC+CD+DE+EF+FA=10+5+6+3+4+8=36\text{ m}\)。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個花圃是梯形，兩條平行邊分別長 14 m 和 8 m，它們之間的垂直距離是 6 m。草籽的播種率是每 15 m² 用 1 kg。求 (a) 花圃的面積，(b) 所需草籽的質量，準確至 2 位小數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(66\text{ m}^{2}\)　(b) \(4.40\text{ kg}\)</div>
+<ol class="steps">
+<li>梯形面積 \(=\frac{1}{2}(a+b)h\)，其中 \(a=14\)、\(b=8\)、\(h=6\)。</li>
+<li>面積 \(=\frac{1}{2}(14+8)\times 6=\frac{1}{2}\times 22\times 6=66\text{ m}^{2}\)。</li>
+<li>草籽質量 \(=66\div 15=4.4\text{ kg}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>6 m 是垂直高，不是斜邊，所以不可當作三角形的邊來用。另外 \(\frac{1}{2}(a+b)h\) 已包含除以 2，不要再除一次。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個跑道末端由一個 9 m × 5 m 的長方形組成，並在其中一條 5 m 邊的外側畫上半圓。取 \(\pi=3.14\)。求該圖形的 (a) 面積，(b) 周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(54.8\text{ m}^{2}\)　(b) \(30.85\text{ m}\)</div>
+<ol class="steps">
+<li>半圓的直徑是 5 m，所以半徑是 2.5 m。</li>
+<li>面積 \(=9\times 5+\frac{1}{2}\pi(2.5)^{2}=45+0.5\times 3.14\times 6.25=45+9.8125=54.8\text{ m}^{2}\)（準確至 1 位小數）。</li>
+<li>周界由兩條 9 m 的邊、一條<i>沒有</i>畫上半圓的 5 m 邊，以及那段弧組成。</li>
+<li>弧長 \(=\frac{1}{2}\times 2\pi(2.5)=\pi(2.5)=7.85\text{ m}\)，所以周界 \(=9+9+5+7.85=30.85\text{ m}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要把 5 m 的邊加兩次 —— 畫上半圓的那條邊已被弧取代，不再保留。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一塊長方形草坪長 20 m、闊 12 m。草坪外圍四周鋪一條闊度均勻 1.5 m 的小徑。(a) 求小徑的面積。(b) 鋪路每平方米 $85，求總費用。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(105\text{ m}^{2}\)　(b) $8925</div>
+<ol class="steps">
+<li>小徑在<i>每</i>邊各加 1.5 m，所以外圍長方形是 \((20+3)\) m × \((12+3)\) m。</li>
+<li>外圍面積 \(=23\times 15=345\text{ m}^{2}\)；草坪面積 \(=20\times 12=240\text{ m}^{2}\)。</li>
+<li>小徑面積 \(=345-240=105\text{ m}^{2}\)。</li>
+<li>費用 \(=105\times 85=8925\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只在長和闊各加 1.5 m（得 \(21.5\times 13.5\)）是典型錯誤：每條邊的兩端都要加上闊度。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一間屋的立面是一個闊 12 m、高 8 m 的長方形，上面加一個等腰三角形屋頂。屋頂在 12 m 邊的中點上方升高 5 m。求 (a) 整個立面的面積，(b) 立面的周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(126\text{ m}^{2}\)　(b) \(43.6\text{ m}\)（準確至 3 位有效數字）</div>
+<ol class="steps">
+<li>屋頂是底 12 m、高 5 m 的等腰三角形，面積是 \(\frac{1}{2}\times 12\times 5=30\text{ m}^{2}\)。</li>
+<li>長方形面積是 \(12\times 8=96\text{ m}^{2}\)，所以總面積是 \(96+30=126\text{ m}^{2}\)。</li>
+<li>每條斜屋頂邊都是直角三角形的斜邊，兩隻直角邊分別長 6 m（底的一半）和 5 m：\(\sqrt{6^{2}+5^{2}}=\sqrt{36+25}=\sqrt{61}=7.810\text{ m}\)。</li>
+<li>周界 \(=12+8+8+2\times 7.810=28+15.62=43.6\text{ m}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>5 m 是垂直升高，不是斜邊。若把 5 m 當作屋頂的一條邊，會得 \(12+8+8+10=38\text{ m}\)，太小。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一個房間的平面圖是 L 形。由左下角 \(A\) 起逆時針走：\(AB=12\text{ m}\)（水平，底邊），\(BC=9\text{ m}\)（垂直，右邊），\(CD=7\text{ m}\)（水平向左），\(DE=3.5\text{ m}\)（垂直向上），\(EF=5\text{ m}\)（水平向左），\(FA=5.5\text{ m}\)（垂直向下返回 \(A\)）。所有角均為直角。(a) 求地板面積。(b) 求地板周界。(c) 地磚每平方米 $320，求鋪地磚的費用。(d) 沿整個周界裝踢腳線，但須扣除兩個各闊 0.9 m 的門口。若踢腳線每米 $48，求踢腳線的費用。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(90.5\text{ m}^{2}\)　(b) \(42\text{ m}\)　(c) $28 960　(d) $1929.6</div>
+<ol class="steps">
+<li>圖形可放入一個 \(12\times 9\) 的長方形內：核對 \(CD+EF=7+5=12\) 及 \(DE+FA=3.5+5.5=9\)，所以右上角缺去的是 \(5\times 3.5\) 的長方形。</li>
+<li>地板面積 \(=12\times 9-5\times 3.5=108-17.5=90.5\text{ m}^{2}\)。</li>
+<li>周界 \(=12+9+7+3.5+5+5.5=42\text{ m}\)。</li>
+<li>鋪磚費用 \(=90.5\times 320=28\,960\) 元。</li>
+<li>踢腳線長度 \(=42-2\times 0.9=42-1.8=40.2\text{ m}\)。</li>
+<li>踢腳線費用 \(=40.2\times 48=1929.6\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要從面積減去門口 —— 門口是牆上的缺口（周界），不是地板上的洞。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>圓：圓周、面積、弧長與扇形面積 <span class="count">· 7 題</span></h2>
+    <p>弧、扇形與圓環的計算及正確單位</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>扇形是整個圓的 \(\frac{\theta}{360}\)，所以它的弧長和面積都用同一個分數。圓環（環形）是兩個同心圓之差，或同圓心的兩個扇形之差。計算過程保留 \(\pi\)，只在最後一行才捨入。</p>
+    <div class="formula"><span>\(C=2\pi r\)</span><span>\(\text{弧}=\frac{\theta}{360}\times 2\pi r\)</span><span>\(A=\frac{\theta}{360}\times \pi r^{2}\)</span></div>
+  </div>
+  <article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個圓形桌面半徑 7 cm（真實桌子的模型）。取 \(\pi=3.14\)，求 (a) 它的圓周，(b) 它的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(43.96\text{ cm}\)　(b) \(153.86\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>圓周 \(=2\pi r=2\times 3.14\times 7=43.96\text{ cm}\)。</li>
+<li>面積 \(=\pi r^{2}=3.14\times 7^{2}=3.14\times 49=153.86\text{ cm}^{2}\)。</li>
+<li>核對：面積應大於 \(r^{2}=49\)，而圓周應略大於 \(6r=42\)，結果相符。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個圓形池塘的圓周是 62.8 m。取 \(\pi=3.14\)，求 (a) 它的半徑，(b) 它的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(10\text{ m}\)　(b) \(314\text{ m}^{2}\)</div>
+<ol class="steps">
+<li>由 \(C=2\pi r\)：\(62.8=2\times 3.14\times r=6.28r\)。</li>
+<li>所以 \(r=62.8\div 6.28=10\text{ m}\)。</li>
+<li>面積 \(=\pi r^{2}=3.14\times 100=314\text{ m}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要用 \(\pi r\) 去除圓周 —— 由 \(C=2\pi r\) 可知半徑是 \(C\div(2\pi)\)，即 \(C\div 6.28\)，不是 \(C\div 3.14\)。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>半徑 9 cm 的圓中，一個扇形在圓心處對 140° 的角。取 \(\pi=3.14\)，求 (a) 弧長，(b) 扇形面積。每項答案先以 \(\pi\) 表示，並準確至 2 位小數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(7\pi\approx 21.98\text{ cm}\)　(b) \(31.5\pi\approx 98.91\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>這個扇形是整個圓的 \(\frac{140}{360}=\frac{7}{18}\)。</li>
+<li>弧 \(=\frac{7}{18}\times 2\pi(9)=\frac{7}{18}\times 18\pi=7\pi\approx 21.98\text{ cm}\)。</li>
+<li>面積 \(=\frac{7}{18}\times \pi(9)^{2}=\frac{7}{18}\times 81\pi=\frac{7}{2}\times 9\pi=31.5\pi\approx 98.91\text{ cm}^{2}\)。</li>
+<li>核對：\(31.5\pi\) 約為整個圓 \(81\pi\approx 254.3\) 的 \(\frac{7}{18}\)，而 \(98.91\div 254.34\approx 0.389=\frac{7}{18}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>面積用 \(\pi r^{2}\)，要把 \(r\) 平方；用了 \(2\pi r\) 只會得出弧長，不是面積。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q15.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q15 ↗</a></div>
+<div class="q__body"><p>一個扇形的角減少 50%，而半徑增加 \(k\%\)。若扇形的弧長不變，求 \(k\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(k=100\)</div>
+<ol class="steps">
+<li>弧長 \(=2\pi r\times\frac{\theta}{360}=\frac{\pi r\theta}{180}\)，所以弧長固定時，乘積 \(r\theta\) 必須不變。</li>
+<li>新角 \(=(1-50\%)\theta=0.5\theta\)；新半徑 \(=\left(1+\frac{k}{100}\right)r\)。</li>
+<li>弧長相等：\(0.5\theta\times\left(1+\frac{k}{100}\right)r=r\theta\)。</li>
+<li>消去 \(r\theta\)：\(0.5\left(1+\frac{k}{100}\right)=1\)，所以 \(1+\frac{k}{100}=2\)，得 \(k=100\)。</li>
+<li>核對：半徑加倍而角減半，弧長不變。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>記住新半徑是 \(\left(1+\frac{k}{100}\right)r\)，不是 \(kr\)。常見錯誤答案 \(k=50\)，就是以兩個改變幅度相等相反來假設。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個直徑 14 cm 的圓內接於一個正方形，並與四邊相切。取 \(\pi=3.14\)，求 (a) 圓外四個角位的面積，(b) 圓佔正方形的百分比，準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(42.14\text{ cm}^{2}\)　(b) 78.5\%</div>
+<ol class="steps">
+<li>圓與四邊相切，所以正方形的邊長是 14 cm，面積 \(14^{2}=196\text{ cm}^{2}\)。</li>
+<li>圓的半徑是 7 cm，面積 \(3.14\times 49=153.86\text{ cm}^{2}\)。</li>
+<li>四個角位的面積 \(=196-153.86=42.14\text{ cm}^{2}\)。</li>
+<li>百分比 \(=\frac{153.86}{196}\times 100\%=78.5\%\)（準確至 3 位有效數字）。</li>
+<li>核對：圓佔正方形的 \(\frac{\pi}{4}\approx 78.5\%\)，結果相符。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一支雨刷長 60 cm。它的轉軸固定，刷片掃過 120°。刷片的橡膠部分由距轉軸 15 cm 處開始，至最外端為止。取 \(\pi=3.14\)，求 (a) 橡膠掃過的玻璃面積，(b) 刷片末端所畫外弧的長度。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(1125\pi\approx 3532.5\text{ cm}^{2}\)　(b) \(40\pi\approx 125.6\text{ cm}\)</div>
+<ol class="steps">
+<li>掃過的部分是一個圓環扇形：外半徑 60 cm，內半徑 15 cm，角度同為 120°。</li>
+<li>面積 \(=\frac{120}{360}\pi(60^{2}-15^{2})=\frac{1}{3}\pi(3600-225)=\frac{1}{3}\pi(3375)=1125\pi\approx 3532.5\text{ cm}^{2}\)。</li>
+<li>末端只畫出外弧：\(\frac{120}{360}\times 2\pi(60)=\frac{1}{3}\times 120\pi=40\pi\approx 125.6\text{ cm}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>要相減的是平方，不是半徑：\(60^{2}-15^{2}=3375\)；若用 \((60-15)^{2}=2025\)，所得掃過面積會遠太小。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P2_Q19.html" target="_blank" rel="noopener">歷年試題 · 2016 卷二 Q19 ↗</a></div>
+<div class="q__body"><p>圖中 \(OAB\) 和 \(OCD\) 是同心扇形，圓心同為 \(O\)，角同為 \(\theta\)，其中 \(OA=15\text{ cm}\)，\(OC=25\text{ cm}\)。點 \(A\)、\(C\) 在一條半徑上，\(B\)、\(D\) 在另一條半徑上。陰影區域 \(ABDC\) 的面積是 \(60\pi\text{ cm}^{2}\)。(a) 求 \(\theta\)。(b) 求扇形 \(OAB\) 的面積。(c) 求扇形 \(OCD\) 的周界，答案以 \(\pi\) 表示。</p>
+<figure class="figure" style="margin:.75rem 0">
+<svg viewBox="16 70 153 161" width="153" height="161" role="img" xmlns="http://www.w3.org/2000/svg" style="max-width:153px">
+<path d="M 104.0 125.0 A 55 55 0 0 1 104.0 175.0 L 137.0 191.8 A 92 92 0 0 0 137.0 108.2 Z" fill="#dbeafe" stroke="#1e293b" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="55.0" y1="150.0" x2="137.0" y2="108.2" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<line x1="55.0" y1="150.0" x2="137.0" y2="191.8" stroke="#1e293b" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M 78.2 138.2 A 26 26 0 0 1 78.2 161.8" fill="none" stroke="#475569" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="99.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" font-style="normal" fill="#475569" text-anchor="middle" dominant-baseline="middle">θ</text>
+<text x="42.0" y="158.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">O</text>
+<text x="110.0" y="113.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">A</text>
+<text x="143.0" y="96.2" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">C</text>
+<text x="110.0" y="188.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">B</text>
+<text x="143.0" y="204.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">D</text>
+<text x="73.5" y="126.5" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" font-style="normal" fill="#1e293b" text-anchor="middle" dominant-baseline="middle">15 cm</text>
+</svg>
+<figcaption>Q14 附圖</figcaption>
+</figure>
+</div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\theta=54^{\circ}\)　(b) \(33.75\pi\text{ cm}^{2}\)　(c) \(50+7.5\pi\text{ cm}\)</div>
+<ol class="steps">
+<li>兩個扇形角度相同，所以陰影區域是扇形 \(OCD\) 減去扇形 \(OAB\)。</li>
+<li>\(\frac{\theta}{360}\pi(25)^{2}-\frac{\theta}{360}\pi(15)^{2}=60\pi\)</li>
+<li>\(\frac{\theta}{360}\pi(625-225)=60\pi\)</li>
+<li>\(\frac{\theta}{360}\times 400=60\)，所以 \(\frac{\theta}{360}=\frac{60}{400}=0.15\)，得 \(\theta=0.15\times 360^{\circ}=54^{\circ}\)。</li>
+<li>(b) \(OAB\) 的面積 \(=0.15\times\pi(15)^{2}=0.15\times 225\pi=33.75\pi\text{ cm}^{2}\)。</li>
+<li>(c) \(OCD=OC+OD+\text{弧 }CD\)（扇形周界包括兩條半徑）\(=25+25+0.15\times 2\pi(25)=50+7.5\pi\text{ cm}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(c) 中扇形的周界包括兩條半徑。只寫 \(7.5\pi\text{ cm}\)（那段弧）就是典型的陷阱。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>棱柱與圓柱：體積與總表面積 <span class="count">· 7 題</span></h2>
+    <p>棱柱體積 = 截面面積 × 長度；圓柱的展開圖</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>任何棱柱的體積，都是均勻截面面積乘以長度；曲面（側面）面積則是截面周界乘以長度。圓柱就是截面為圓的棱柱，所以它的總表面積多出兩個圓面。</p>
+    <div class="formula"><span>\(V=Ah\)</span><span>\(V=\pi r^{2}h\)</span><span>\(\text{曲面 }S=2\pi rh\)</span></div>
+  </div>
+  <article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個長方體長 8 cm、闊 5 cm、高 3 cm。求 (a) 它的體積，(b) 它的總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(120\text{ cm}^{3}\)　(b) \(158\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>體積 \(=8\times 5\times 3=120\text{ cm}^{3}\)。</li>
+<li>總表面積 \(=2(8\times 5+8\times 3+5\times 3)=2(40+24+15)\)。</li>
+<li>\(=2\times 79=158\text{ cm}^{2}\)。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個實心圓柱的底半徑 7 cm、高 10 cm。取 \(\pi=3.14\)，求 (a) 體積，(b) 曲面面積，(c) 總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(1538.6\text{ cm}^{3}\)　(b) \(439.6\text{ cm}^{2}\)　(c) \(747.32\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>體積 \(=\pi r^{2}h=3.14\times 49\times 10=1538.6\text{ cm}^{3}\)。</li>
+<li>曲面面積 \(=2\pi rh=2\times 3.14\times 7\times 10=439.6\text{ cm}^{2}\)。</li>
+<li>兩個圓形底：\(2\times 3.14\times 49=307.72\text{ cm}^{2}\)。</li>
+<li>總表面積 \(=439.6+307.72=747.32\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>曲面面積不等於總表面積 —— 必須再加上兩個圓形底。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個棱柱的均勻截面是邊長 6 cm、8 cm、10 cm 的三角形，其中 6 cm 與 8 cm 兩邊的夾角是直角。棱柱長 15 cm。求 (a) 體積，(b) 總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(360\text{ cm}^{3}\)　(b) \(408\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>截面面積 \(=\frac{1}{2}\times 6\times 8=24\text{ cm}^{2}\)（直角三角形）。</li>
+<li>體積 \(=24\times 15=360\text{ cm}^{3}\)。</li>
+<li>截面周界是 \(6+8+10=24\text{ cm}\)，所以側面面積 \(=24\times 15=360\text{ cm}^{2}\)。</li>
+<li>總表面積 \(=360+2\times 24=408\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>要確認直角在 6 cm 與 8 cm 兩邊之間：\(6^{2}+8^{2}=100=10^{2}\)，所以 10 cm 是斜邊，不是直角邊。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個圓柱形水桶的內半徑 20 cm，內高 35 cm。取 \(\pi=3.14\)，求 (a) 以 cm\(^{3}\) 表示的容量，(b) 以升表示的容量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(43\,960\text{ cm}^{3}\)　(b) \(43.96\text{ L}\)</div>
+<ol class="steps">
+<li>容量 \(=\pi r^{2}h=3.14\times 400\times 35\)。</li>
+<li>\(=3.14\times 14\,000=43\,960\text{ cm}^{3}\)。</li>
+<li>由於 \(1\text{ L}=1000\text{ cm}^{3}\)，容量 \(=43\,960\div 1000=43.96\text{ L}\)。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個密封圓柱形水箱半徑 1.2 m、高 3 m，需要整體髹漆，包括兩個圓形底。取 \(\pi=3.14\)，求 (a) 需要髹漆的總面積，準確至 3 位有效數字，(b) 每平方米 $42 的費用，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(31.7\text{ m}^{2}\)　(b) $1329</div>
+<ol class="steps">
+<li>曲面面積 \(=2\pi rh=2\times 3.14\times 1.2\times 3=22.608\text{ m}^{2}\)。</li>
+<li>兩個底 \(=2\pi r^{2}=2\times 3.14\times 1.44=9.0432\text{ m}^{2}\)。</li>
+<li>總面積 \(=22.608+9.0432=31.6512\approx 31.7\text{ m}^{2}\)（3 位有效數字）。</li>
+<li>費用 \(=31.6512\times 42=1329.35\approx 1329\) 元。</li>
+<li>注意：計算費用時要用未捨入的面積，否則會引入捨入誤差。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用捨入後的 31.7 乘 42 會得 $1331 —— 費用永遠要用較精確的數值計算。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個直棱柱的截面是邊長 6 cm 的正六邊形，棱柱長 20 cm。取 \(\sqrt{3}=1.732\)，求 (a) 六邊形截面面積，(b) 棱柱體積，(c) 棱柱總表面積，每項準確至 3 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(93.5\text{ cm}^{2}\)　(b) \(1870\text{ cm}^{3}\)　(c) \(907\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>正六邊形可分成 6 個邊長 6 cm 的等邊三角形，每個面積 \(\frac{\sqrt{3}}{4}\times 6^{2}=9\sqrt{3}\)。</li>
+<li>截面面積 \(=6\times 9\sqrt{3}=54\sqrt{3}=54\times 1.732=93.528\approx 93.5\text{ cm}^{2}\)。</li>
+<li>體積 \(=93.528\times 20=1870.56\approx 1870\text{ cm}^{3}\)。</li>
+<li>側面面積 \(=\)（六邊形周界）\(\times\) 長度 \(=6\times 6\times 20=720\text{ cm}^{2}\)。</li>
+<li>總表面積 \(=720+2\times 93.528=720+187.06=907.06\approx 907\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>六邊形有六條 6 cm 的邊，所以周界是 36 cm，不是 6 cm —— 算側面面積時只用一條邊，是很常見的疏忽。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一個半徑 6 cm、高 20 cm 的實心金屬圓柱被熔化，重鑄成一個底面積 12 cm × 10 cm 的長方體，金屬沒有損耗。取 \(\pi=3.14\)，求 (a) 圓柱的體積（以 \(\pi\) 表示），(b) 長方體的高 \(h\)，準確至 3 位有效數字，(c) 長方體的總表面積，準確至 4 位有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(720\pi\text{ cm}^{3}\)　(b) \(18.8\text{ cm}\)　(c) \(1069\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>圓柱體積 \(=\pi(6)^{2}(20)=720\pi\text{ cm}^{3}\)。</li>
+<li>金屬守恆：\(12\times 10\times h=720\pi\)，所以 \(120h=720\pi\)，得 \(h=6\pi\)。</li>
+<li>\(h=6\times 3.14=18.84\approx 18.8\text{ cm}\)（3 位有效數字）。</li>
+<li>以 \(h=18.84\) 計算：總表面積 \(=2(12\times 10+12\times 18.84+10\times 18.84)\)。</li>
+<li>\(=2(120+226.08+188.4)=2(534.48)=1068.96\approx 1069\text{ cm}^{2}\)（4 位有效數字）。</li>
+<li>核對：圓柱體積 \(720\times 3.14=2260.8\text{ cm}^{3}\)，而 \(12\times 10\times 18.84=2260.8\text{ cm}^{3}\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>重鑄保留的是體積，不是表面積 —— 圓柱與長方體的表面積相差頗遠。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>棱錐、圓錐與球體：體積與表面積 <span class="count">· 7 題</span></h2>
+    <p>斜高、棱柱的三分之一、曲面</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>棱錐或圓錐的體積，剛好是同底同高棱柱或圓柱的三分之一。求表面積時需要<i>斜</i>高 \(l\)，由高和底用畢氏定理求出。球體沒有展開圖，所以表面積 \(4\pi r^{2}\) 只能牢牢記住。</p>
+    <div class="formula"><span>\(V=\frac{1}{3}\pi r^{2}h\)</span><span>\(\text{曲面 }S=\pi rl\)</span><span>\(V=\frac{4}{3}\pi r^{3},\ S=4\pi r^{2}\)</span></div>
+  </div>
+  <article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個實心圓錐的底半徑 6 cm、垂直高 8 cm。取 \(\pi=3.14\)，求 (a) 體積，(b) 曲面面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(301.44\text{ cm}^{3}\)　(b) \(188.4\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>斜高 \(l=\sqrt{6^{2}+8^{2}}=\sqrt{100}=10\text{ cm}\)。</li>
+<li>體積 \(=\frac{1}{3}\pi r^{2}h=\frac{1}{3}\times 3.14\times 36\times 8=301.44\text{ cm}^{3}\)。</li>
+<li>曲面面積 \(=\pi rl=3.14\times 6\times 10=188.4\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>曲面面積要用斜高 10 cm，不是垂直高 8 cm。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個實心球體半徑 9 cm。取 \(\pi=3.14\)，求 (a) 體積，(b) 表面積，每項準確至 2 位小數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(3052.08\text{ cm}^{3}\)　(b) \(1017.36\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>體積 \(=\frac{4}{3}\pi r^{3}=\frac{4}{3}\times 3.14\times 729\)。</li>
+<li>\(=\frac{4}{3}\times 2289.06=3052.08\text{ cm}^{3}\)。</li>
+<li>表面積 \(=4\pi r^{2}=4\times 3.14\times 81=1017.36\text{ cm}^{2}\)。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個正棱錐的底是邊長 10 cm 的正方形，垂直高 12 cm，頂點在底中心正上方。求 (a) 一個三角形面的斜高（由頂點到底邊中點），(b) 體積，(c) 總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(13\text{ cm}\)　(b) \(400\text{ cm}^{3}\)　(c) \(360\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>高的垂足就是底的中心，距每條邊的中點 5 cm。</li>
+<li>斜高 \(l=\sqrt{12^{2}+5^{2}}=\sqrt{144+25}=\sqrt{169}=13\text{ cm}\)。</li>
+<li>體積 \(=\frac{1}{3}\times(10\times 10)\times 12=400\text{ cm}^{3}\)。</li>
+<li>四個三角形面每個面積 \(\frac{1}{2}\times 10\times 13=65\text{ cm}^{2}\)。</li>
+<li>總表面積 \(=10\times 10+4\times 65=100+260=360\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>斜高是 \(\sqrt{12^{2}+5^{2}}\)，不是 \(\sqrt{12^{2}+10^{2}}\)：因為高落在中心，所以 5 cm 是底邊的一半。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q9.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q9 ↗</a></div>
+<div class="q__body"><p>有兩個實心金屬球。較大球的半徑等於較小球的直徑，而較大球的半徑是 12 cm。(a) 求每個球的體積，以 \(\pi\) 表示。(b) 求兩個球的表面積之和，以 \(\pi\) 表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 大球 \(2304\pi\text{ cm}^{3}\)，小球 \(288\pi\text{ cm}^{3}\)　(b) \(720\pi\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>設大球半徑 \(R=12\) cm。由於 \(R=2r\)，小球半徑是 \(r=6\) cm。</li>
+<li>大球體積 \(=\frac{4}{3}\pi(12)^{3}=\frac{4}{3}\pi(1728)=2304\pi\text{ cm}^{3}\)。</li>
+<li>小球體積 \(=\frac{4}{3}\pi(6)^{3}=\frac{4}{3}\pi(216)=288\pi\text{ cm}^{3}\)。</li>
+<li>核對比值：\(2304:288=8:1=2^{3}:1^{3}\)，與半徑比 \(2:1\) 相符。✓</li>
+<li>表面積之和 \(=4\pi(12)^{2}+4\pi(6)^{2}=576\pi+144\pi=720\pi\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「較大球的半徑等於較小球的直徑」即 \(R=2r\)，所以半徑比是 \(2:1\) —— 不是 \(1:2\)，更不是相等。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>把一個半徑 6 cm 的半球放在半徑 6 cm、高 10 cm 的圓柱頂部，半球的平面圓面貼在圓柱頂上，組成一個立體。取 \(\pi=3.14\)，求 (a) 該立體的體積，(b) 該立體的總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(504\pi\approx 1582.56\text{ cm}^{3}\)　(b) \(228\pi\approx 715.92\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>半球體積 \(=\frac{2}{3}\pi(6)^{3}=\frac{2}{3}\pi(216)=144\pi\)。</li>
+<li>圓柱體積 \(=\pi(6)^{2}(10)=360\pi\)。總體積 \(=144\pi+360\pi=504\pi\approx 1582.56\text{ cm}^{3}\)。</li>
+<li>表面：半球曲面 \(2\pi(6)^{2}=72\pi\)；圓柱曲面 \(2\pi(6)(10)=120\pi\)；底部圓面 \(\pi(6)^{2}=36\pi\)。</li>
+<li>貼合的那個圓面被遮住，所以完全不予計算。</li>
+<li>總表面積 \(=72\pi+120\pi+36\pi=228\pi\approx 715.92\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要計算半球與圓柱接合的圓面 —— 它在立體內部。同樣也不要漏掉平坦的底。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>從半徑 15 cm、圓心角 216° 的扇形剪出，把兩條直邊重合摺起，形成一個實心圓錐的曲面。取 \(\pi=3.14\)，求 (a) 圓錐的底半徑，(b) 圓錐的高，(c) 圓錐的體積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(9\text{ cm}\)　(b) \(12\text{ cm}\)　(c) \(324\pi\approx 1017.36\text{ cm}^{3}\)</div>
+<ol class="steps">
+<li>扇形的弧成為圓錐底的圓周，扇形的半徑成為斜高：\(l=15\) cm。</li>
+<li>弧長 \(=\frac{216}{360}\times 2\pi(15)=0.6\times 30\pi=18\pi\) cm。</li>
+<li>所以 \(2\pi r=18\pi\)，得 \(r=9\) cm。</li>
+<li>高 \(h=\sqrt{l^{2}-r^{2}}=\sqrt{225-81}=\sqrt{144}=12\) cm。</li>
+<li>體積 \(=\frac{1}{3}\pi(9)^{2}(12)=\frac{1}{3}\pi(81)(12)=324\pi\approx 1017.36\text{ cm}^{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>扇形那 15 cm 的半徑，是圓錐的<i>斜</i>高，不是垂直高。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>一個雪糕筒由底半徑 6 cm、高 8 cm 且完全注滿的正圓錐，以及放在上面、蓋過筒口（平面向下）的半徑 6 cm 半球雪糕組成。取 \(\pi=3.14\)，求 (a) 雪糕的總體積，(b) 圓錐曲面上塗有朱古力的面積，(c) 半球曲面外露的面積，(d) 若曲面（只計圓錐）每 cm\(^{2}\) 的朱古力成本是 $0.05，求朱古力的費用，準確至最接近的分。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(240\pi\approx 753.6\text{ cm}^{3}\)　(b) \(60\pi\approx 188.4\text{ cm}^{2}\)　(c) \(72\pi\approx 226.08\text{ cm}^{2}\)　(d) $9.42</div>
+<ol class="steps">
+<li>圓錐的斜高 \(l=\sqrt{6^{2}+8^{2}}=10\) cm。</li>
+<li>圓錐體積 \(=\frac{1}{3}\pi(36)(8)=96\pi\)；半球體積 \(=\frac{2}{3}\pi(216)=144\pi\)。</li>
+<li>總體積 \(=96\pi+144\pi=240\pi\approx 753.6\text{ cm}^{3}\)。</li>
+<li>(b) 圓錐曲面面積 \(=\pi rl=\pi(6)(10)=60\pi\approx 188.4\text{ cm}^{2}\)。</li>
+<li>(c) 半球曲面面積 \(=2\pi r^{2}=2\pi(36)=72\pi\approx 226.08\text{ cm}^{2}\)。</li>
+<li>(d) 費用 \(=60\pi\times 0.05=188.4\times 0.05=9.42\) 元。</li>
+<li>核對：\(240\pi=240\times 3.14=753.6\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(d) 只計圓錐 —— 這裡外露的半球並沒有塗朱古力。要看清費用指的是哪個曲面。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>相似圖形與相似立體：面積比與體積比 <span class="count">· 7 題</span></h2>
+    <p>長度、面積、體積比 1 : k : k² : k³</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>若兩個相似圖形的對應長度比為 \(k:1\)，則面積比為 \(k^{2}:1\)，體積比為 \(k^{3}:1\)。長度、面積、體積不會以同一個數放大，而長度比永遠等於面積比的平方根、體積比的立方根。</p>
+    <div class="formula"><span>\(\frac{A_{1}}{A_{2}}=k^{2}\)</span><span>\(\frac{V_{1}}{V_{2}}=k^{3}\)</span><span>\(k=\sqrt{\frac{A_{1}}{A_{2}}}=\sqrt[3]{\frac{V_{1}}{V_{2}}}\)</span></div>
+  </div>
+  <article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>兩個長方形相似。較小長方形的短邊與較大長方形對應邊之比是 \(2:5\)。較小長方形的面積是 24 cm\(^{2}\)。求較大長方形的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(150\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>相似圖形的面積比 \(=\)（長度比）\(^{2}\)，所以面積比是 \(2^{2}:5^{2}=4:25\)。</li>
+<li>設較大長方形的面積為 \(A\)，則 \(\frac{24}{A}=\frac{4}{25}\)。</li>
+<li>\(A=24\times\frac{25}{4}=6\times 25=150\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>直接把 \(2:5\) 當作面積比，會得 60 cm\(^{2}\) —— 面積永遠按長度比的平方變化。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>三角形 \(ABC\) 的三邊長 6 cm、8 cm、10 cm。三角形 \(PQR\) 與 \(ABC\) 相似，周界是 48 cm。求 (a) 放大率，(b) \(PQR\) 的面積，已知 \(ABC\) 的面積是 24 cm\(^{2}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(2\)　(b) \(96\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>\(ABC=6+8+10=24\) cm，所以長度放大率是 \(48\div 24=2\)。</li>
+<li>面積比 \(=2^{2}:1=4:1\)。</li>
+<li>\(PQR=4\times 24=96\text{ cm}^{2}\)。</li>
+<li>核對：\(PQR\) 的三邊為 12、16、20，與 \(ABC\) 全部成 \(2:1\)。✓</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩個實心圓錐相似，高分別是 9 cm 和 15 cm。較小圓錐的體積是 189 cm\(^{3}\)。求 (a) 它們的體積比，(b) 較大圓錐的體積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(27:125\)　(b) \(875\text{ cm}^{3}\)</div>
+<ol class="steps">
+<li>長度比 \(=9:15=3:5\)。</li>
+<li>體積比 \(=3^{3}:5^{3}=27:125\)。</li>
+<li>\(\frac{189}{V}=\frac{27}{125}\)，所以 \(V=189\times\frac{125}{27}\)。</li>
+<li>因 \(189\div 27=7\)，故 \(V=7\times 125=875\text{ cm}^{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把比 \(3:5\) 立方得 \(27:125\)，不是 \(9:25\) —— 後者會是曲面面積的比。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩個密封圓柱罐幾何相似。較小罐的總表面積與較大罐的總表面積之比是 \(16:49\)。較大罐的容量是 1715 mL。求 (a) 它們的半徑比，(b) 較小罐的容量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(4:7\)　(b) \(320\text{ mL}\)</div>
+<ol class="steps">
+<li>面積比 \(=16:49\)，所以長度比是 \(\sqrt{16}:\sqrt{49}=4:7\)。</li>
+<li>體積比 \(=4^{3}:7^{3}=64:343\)。</li>
+<li>\(\frac{V}{1715}=\frac{64}{343}\)，所以 \(V=1715\times\frac{64}{343}=5\times 64=320\text{ mL}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>開了兩次平方根，或把 16:49 當作長度比，都會得出遠小於正確值的容量。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q13.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q13 ↗</a></div>
+<div class="q__body"><p>有兩個實心金屬球。較小球的表面積與較大球的表面積之比是 \(4:9\)，而較大球的半徑是 9 cm。(a) 求較小球的半徑。(b) 求它們的體積比。(c) 兩球被熔化並重鑄成兩個實心正圓錐 \(A\) 和 \(B\)。圓錐 \(A\) 的底半徑 6 cm、高 10 cm；圓錐 \(B\) 的底半徑 12 cm。有學生聲稱 \(A\) 與 \(B\) 相似。該說法是否正確？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6\text{ cm}\)　(b) \(8:27\)　(c) 不正確 —— 體積比是 \(9.5:1\)，但半徑比為 \(1:2\) 的相似圓錐，體積比應是 \(1:8\)</div>
+<ol class="steps">
+<li>(a) 相似立體的表面積比為 \(r^{2}:R^{2}\)，所以 \(\frac{r}{9}=\sqrt{\frac{4}{9}}=\frac{2}{3}\)，得 \(r=6\) cm。</li>
+<li>(b) 體積比 \(=2^{3}:3^{3}=8:27\)。核對：\(\frac{4}{3}\pi(6)^{3}=288\pi\)，\(\frac{4}{3}\pi(9)^{3}=972\pi\)，而 \(288:972=8:27\)。✓</li>
+<li>(c) 金屬總量 \(=288\pi+972\pi=1260\pi\)。\(A=\frac{1}{3}\pi(6)^{2}(10)=120\pi\)，所以 \(B=1260\pi-120\pi=1140\pi\)。</li>
+<li>若 \(A\) 與 \(B\) 相似，體積比應為 \(\left(\frac{12}{6}\right)^{3}=8\)，但實際比是 \(\frac{1140\pi}{120\pi}=9.5\)。</li>
+<li>因為 \(9.5\neq 8\)，兩圓錐並不相似；該說法不正確。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩個圓錐的半徑比為 \(1:2\)，高也必須成 \(1:2\)。這裡 \(h_B\) 須為 20 cm，那麼 \(V_B\) 會是 \(960\pi\)，而不是 \(1140\pi\)。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>在三角形 \(ABC\) 中，\(D\) 在 \(AB\) 上，\(E\) 在 \(AC\) 上，且 \(DE\) 平行於 \(BC\)。已知 \(AD:DB=3:2\)，\(BC=20\) cm。(a) 求 \(DE\)。(b) 求三角形 \(ADE\) 的面積與三角形 \(ABC\) 的面積之比。(c) 已知三角形 \(ABC\) 的面積是 150 cm\(^{2}\)，求梯形 \(DBCE\) 的面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(12\text{ cm}\)　(b) \(9:25\)　(c) \(96\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>\(AD:DB=3:2\)，所以 \(AD:AB=3:5\)。因 \(DE\parallel BC\)，三角形 \(ADE\) 與 \(ABC\) 相似（AAA：對應角相等）。</li>
+<li>(a) 對應邊：\(\frac{DE}{BC}=\frac{AD}{AB}=\frac{3}{5}\)，所以 \(DE=\frac{3}{5}\times 20=12\) cm。</li>
+<li>(b) 相似圖形的面積按對應邊的平方變化：\(\frac{[ADE]}{[ABC]}=\left(\frac{3}{5}\right)^{2}=\frac{9}{25}\)。</li>
+<li>(c) \([ADE]=\frac{9}{25}\times 150=54\text{ cm}^{2}\)。</li>
+<li>\(DBCE=150-54=96\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把比寫成 \(AD:AB=3:2\)（方向讀反）會得 \(DE=30\)，比 \(BC\) 更長 —— 三角形被切出的部分不可能如此。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P1_Q14.html" target="_blank" rel="noopener">歷年試題 · 2023 卷一 Q14 ↗</a></div>
+<div class="q__body"><p>一個實心金屬正圓錐的底半徑是 7 cm，曲面面積是 \(175\pi\text{ cm}^{2}\)。(a) 求圓錐的高。(b) 用一個平行於底的平面，把圓錐分成小圓錐 \(X\) 和平截頭體 \(Y\)。\(Y\) 的曲面面積是 \(X\) 的曲面面積的 3 倍。求 \(X\) 與整個圓錐的長度比。(c) 以 \(\pi\) 表示 \(Y\) 的體積。(d) \(Y\) 被熔化並重鑄成底半徑 7 cm 的實心圓柱，求圓柱的高。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(24\text{ cm}\)　(b) \(1:2\)　(c) \(343\pi\text{ cm}^{3}\)　(d) \(7\text{ cm}\)</div>
+<ol class="steps">
+<li>(a) 曲面面積 \(=\pi rl\)：\(\pi(7)l=175\pi\)，所以 \(l=25\) cm。</li>
+<li>高 \(h=\sqrt{l^{2}-r^{2}}=\sqrt{625-49}=\sqrt{576}=24\) cm。</li>
+<li>(b) 整個圓錐 \(=X+Y\)，而曲面面積上 \(Y=3X\)，所以整個 \(=4X\)。</li>
+<li>相似立體的面積比 \(=k^{2}\)：\(k^{2}=\frac{1}{4}\)，故 \(k=\frac{1}{2}\)（即 \(1:2\)）。</li>
+<li>(c) 整個圓錐體積 \(=\frac{1}{3}\pi(7)^{2}(24)=392\pi\)。</li>
+<li>\(V_{X}=\left(\frac{1}{2}\right)^{3}\times 392\pi=49\pi\)，所以 \(V_{Y}=392\pi-49\pi=343\pi\text{ cm}^{3}\)。</li>
+<li>(d) 圓柱：\(\pi(7)^{2}h=343\pi\)，所以 \(49h=343\)，得 \(h=7\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(b) 中 1:4 是<i>面積</i>比，所以長度比是它的平方根 \(\frac{1}{2}\)；而 (c) 的體積倍數是 \((\frac{1}{2})^{3}=\frac{1}{8}\)，不是 \(\frac{1}{4}\)。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>平截頭體、切割、組合立體與水位問題 <span class="count">· 7 題</span></h2>
+    <p>圓錐平截頭體、浸沒立體與容量</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>平截頭體是把圓錐（或棱錐）平行於底切去頂部而成，所以它的體積等於整個立體減去頂部那個相似的小立體。當一個立體完全浸沒在水箱中，水位上升量等於立體體積除以水面面積 —— 這是所有水位問題的關鍵方程。</p>
+    <div class="formula"><span>\(V=\frac{1}{3}\pi h(R^{2}+Rr+r^{2})\)</span><span>\(S=\pi(R+r)l\)</span><span>\(\text{上升}=\frac{V_{\text{立體}}}{A_{\text{水面}}}\)</span></div>
+  </div>
+  <article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個圓錐平截頭體的兩底半徑分別是 10 cm 和 4 cm，高 6 cm。取 \(\pi=3.14\)，求它的體積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(312\pi\approx 979.68\text{ cm}^{3}\)</div>
+<ol class="steps">
+<li>用 \(V=\frac{1}{3}\pi h(R^{2}+Rr+r^{2})\)，其中 \(R=10\)、\(r=4\)、\(h=6\)。</li>
+<li>\(R^{2}+Rr+r^{2}=100+40+16=156\)。</li>
+<li>\(V=\frac{1}{3}\pi(6)(156)=2\pi(156)=312\pi\approx 979.68\text{ cm}^{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>中間項是 \(R^{2}+Rr+r^{2}\)，不是 \((R+r)^{2}=196\)：用後者會得 \(392\pi\)，大了約 25\%。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個長方形水箱的內部尺寸是 1.2 m × 0.8 m × 0.5 m。求 (a) 以 m\(^{3}\) 表示的容量，(b) 以升表示的容量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.48\text{ m}^{3}\)　(b) \(480\text{ L}\)</div>
+<ol class="steps">
+<li>容量 \(=1.2\times 0.8\times 0.5=0.96\times 0.5=0.48\text{ m}^{3}\)。</li>
+<li>由於 \(1\text{ m}^{3}=1000\text{ L}\)，容量 \(=0.48\times 1000=480\text{ L}\)。</li>
+</ol>
+
+</div>
+  </article>
+
+  <article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個圓錐平截頭體的兩底半徑分別是 8 cm 和 5 cm，垂直高 4 cm。取 \(\pi=3.14\)，求 (a) 它的斜高，(b) 曲面面積，(c) 總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(5\text{ cm}\)　(b) \(65\pi\approx 204.1\text{ cm}^{2}\)　(c) \(154\pi\approx 483.56\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>兩半徑之差是 \(8-5=3\) cm，而高是 4 cm，所以 \(l=\sqrt{3^{2}+4^{2}}=5\) cm。</li>
+<li>曲面面積 \(=\pi(R+r)l=\pi(8+5)(5)=65\pi\approx 204.1\text{ cm}^{2}\)。</li>
+<li>兩個圓形底：\(\pi(8)^{2}+\pi(5)^{2}=64\pi+25\pi=89\pi\)。</li>
+<li>總表面積 \(=65\pi+89\pi=154\pi\approx 483.56\text{ cm}^{2}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>斜高用兩半徑之差 \(8-5=3\)，不是和 13。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個長方形水箱的底是 60 cm × 40 cm，深 35 cm，內盛水深 10 cm。把一塊 20 cm × 15 cm × 8 cm 的磚放入水中，磚完全被水覆蓋。(a) 求水箱內原有水的體積，以升表示。(b) 求水位上升量。(c) 求新的水深。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(24\text{ L}\)　(b) \(1\text{ cm}\)　(c) \(11\text{ cm}\)</div>
+<ol class="steps">
+<li>(a) 水的體積 \(=60\times 40\times 10=24\,000\text{ cm}^{3}=24\text{ L}\)。</li>
+<li>(b) 磚的體積 \(=20\times 15\times 8=2400\text{ cm}^{3}\)。</li>
+<li>水面面積固定為 \(60\times 40=2400\text{ cm}^{2}\)。</li>
+<li>上升量 \(=\frac{2400}{2400}=1\text{ cm}\)。</li>
+<li>(c) 新水深 \(=10+1=11\text{ cm}\)，仍在 35 cm 以內，所以沒有溢出。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要把磚的體積加進水箱容量 —— 只有它在水面以下所排開的空間才有影響；本題磚完全浸沒，所以就是它的整個體積。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個倒置的圓錐形容器，頂部底半徑 10 cm，深 15 cm，頂點在底部。注入水至離頂點 9 cm 的深度。取 \(\pi=3.14\)，求 (a) 水面的半徑，(b) 水的體積，(c) 容器被注滿的比例。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6\text{ cm}\)　(b) \(108\pi\approx 339.12\text{ cm}^{3}\)　(c) \(0.216\)</div>
+<ol class="steps">
+<li>水形成一個與整個容器相似的圓錐，所以半徑與深度成正比：\(\frac{r}{10}=\frac{9}{15}\)，得 \(r=6\) cm。</li>
+<li>(b) \(V=\frac{1}{3}\pi(6)^{2}(9)=\frac{1}{3}\pi(36)(9)=108\pi\approx 339.12\text{ cm}^{3}\)。</li>
+<li>(c) 相似立體的體積按長度比的立方變化：比例 \(=\left(\frac{9}{15}\right)^{3}=0.6^{3}=0.216\)。</li>
+<li>核對：總容量 \(=\frac{1}{3}\pi(100)(15)=500\pi\)，而 \(\frac{108\pi}{500\pi}=0.216\)。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>深度比 0.6 不代表裝了 60\% —— 圓錐的體積按立方變化，所以只注滿了 21.6\%。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>把一個底半徑 7 cm、高 24 cm 的正圓錐，放在同半徑、高 12 cm 的圓柱上，兩個圓底完全吻合，組成一個立體。取 \(\pi=3.14\)，求 (a) 該立體的體積，(b) 該立體的總表面積。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(980\pi\approx 3077.2\text{ cm}^{3}\)　(b) \(392\pi\approx 1230.88\text{ cm}^{2}\)</div>
+<ol class="steps">
+<li>圓柱體積 \(=\pi(7)^{2}(12)=588\pi\)。</li>
+<li>圓錐體積 \(=\frac{1}{3}\pi(7)^{2}(24)=\frac{1}{3}\pi(49)(24)=392\pi\)。</li>
+<li>(a) 總體積 \(=588\pi+392\pi=980\pi\approx 3077.2\text{ cm}^{3}\)。</li>
+<li>(b) 圓錐的斜高 \(l=\sqrt{7^{2}+24^{2}}=\sqrt{49+576}=25\) cm。</li>
+<li>表面：圓柱曲面 \(2\pi(7)(12)=168\pi\)；底部圓面 \(\pi(7)^{2}=49\pi\)；圓錐曲面 \(\pi(7)(25)=175\pi\)。</li>
+<li>總表面積 \(=168\pi+49\pi+175\pi=392\pi\approx 1230.88\text{ cm}^{2}\)（接合的圓面被遮住）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>接合的圓面在立體內部：把它算進去會多加 \(49\pi\)，答案便錯。另外 \(l=\sqrt{7^{2}+24^{2}}=25\)，不是 31。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>一個圓柱形水箱的內半徑 25 cm、內高 80 cm。(a) 取 \(\pi=3.14\)，求它的容量（以升表示）。(b) 水箱內水深 30 cm，求水的體積（以升表示）。(c) 把一個底半徑 9 cm、高 24 cm 的實心金屬圓錐放入水中，圓錐完全被水覆蓋。求水位上升量（準確至 3 位有效數字）及新的水深。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(157\text{ L}\)　(b) \(58.875\text{ L}\)　(c) 上升 \(1.04\text{ cm}\)，新水深 \(31.0\text{ cm}\)</div>
+<ol class="steps">
+<li>(a) 容量 \(=\pi(25)^{2}(80)=50\,000\pi=157\,000\text{ cm}^{3}=157\text{ L}\)。</li>
+<li>(b) 水 \(=\pi(25)^{2}(30)=18\,750\pi=58\,875\text{ cm}^{3}=58.875\text{ L}\)。</li>
+<li>(c) 圓錐體積 \(=\frac{1}{3}\pi(9)^{2}(24)=\frac{1}{3}\pi(81)(24)=648\pi\text{ cm}^{3}\)。</li>
+<li>水面面積 \(=\pi(25)^{2}=625\pi\text{ cm}^{2}\)（水位上升時它不變）。</li>
+<li>上升量 \(=\frac{648\pi}{625\pi}=\frac{648}{625}=1.0368\approx 1.04\text{ cm}\)（3 位有效數字）。</li>
+<li>新水深 \(=30+1.0368=31.0368\approx 31.0\text{ cm}\)，仍遠低於 80 cm，所以沒有水溢出。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把上升量留作 \(648\pi\)（忘記除以水面面積），或除以水箱的整個體積而不是水面面積，兩者都很常見。水面面積是 \(625\pi\)，不是 \(50\,000\pi\)。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度立體問題：油漆費用、質量與體積比 <span class="count">· 8 題</span></h2>
+    <p>多步的金錢、密度與比例問題</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>較長的求積法題目會串連三個概念：先算出表面積或體積，再換算單位（cm\(^{2}\) 換 m\(^{2}\)、cm\(^{3}\) 換 L），然後乘以一個率，例如每平方米的費用或每 cm\(^{3}\) 的密度。計算過程保留 \(\pi\) 至最後一步，並在最終答案寫明單位。</p>
+    <div class="formula"><span>\(\text{質量}=\text{體積}\times\text{密度}\)</span><span>\(\text{費用}=\text{面積}\times\text{收費率}\)</span><span>\(1\text{ m}^{3}=1000\text{ L}\)</span></div>
+  </div>
+  <article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個實心金屬長方體的尺寸是 25 cm × 15 cm × 8 cm。該金屬的密度是 7.2 g/cm\(^{3}\)。求 (a) 長方體的體積，(b) 它的質量（以 kg 表示）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(3000\text{ cm}^{3}\)　(b) \(21.6\text{ kg}\)</div>
+<ol class="steps">
+<li>體積 \(=25\times 15\times 8=375\times 8=3000\text{ cm}^{3}\)。</li>
+<li>質量 \(=3000\times 7.2=21\,600\text{ g}\)。</li>
+<li>\(21\,600\text{ g}=21.6\text{ kg}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>密度 7.2 g/cm\(^{3}\) 先得出的是克；要換成千克須除以 1000（不是 100）。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個無蓋圓柱形水箱半徑 1.4 m、高 2.5 m。要在它的外表面塗兩層漆，包括底部但不包括敞開的頂部。取 \(\pi=3.14\)，求 (a) 塗一層漆的面積，(b) 每平方米 $65 的油漆費用，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(28.1\text{ m}^{2}\)　(b) $3657</div>
+<ol class="steps">
+<li>曲面面積 \(=2\pi rh=2\times 3.14\times 1.4\times 2.5=21.98\text{ m}^{2}\)。</li>
+<li>只有底部 \(=\pi r^{2}=3.14\times 1.96=6.1544\text{ m}^{2}\)（沒有頂部）。</li>
+<li>一層漆 \(=21.98+6.1544=28.1344\approx 28.1\text{ m}^{2}\)。</li>
+<li>兩層漆 \(=2\times 28.1344=56.2688\text{ m}^{2}\)。</li>
+<li>費用 \(=56.2688\times 65=3657.47\approx 3657\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>無蓋水箱沒有頂：多加第二個圓面會得 \(34.29\text{ m}^{2}\)，費用高出約 $400。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個半球形圓頂半徑 6 m，只為其外曲面髹漆。取 \(\pi=3.14\)，求 (a) 髹漆的面積，(b) 每平方米 $120 的費用，準確至最接近的元，(c) 若每 m\(^{2}\) 需 0.35 kg 油漆，所用油漆的質量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(226.08\text{ m}^{2}\)　(b) $27 130　(c) \(79.1\text{ kg}\)</div>
+<ol class="steps">
+<li>半球曲面面積 \(=2\pi r^{2}=2\times 3.14\times 36=226.08\text{ m}^{2}\)。</li>
+<li>費用 \(=226.08\times 120=27\,129.6\approx 27\,130\) 元。</li>
+<li>油漆質量 \(=226.08\times 0.35=79.128\approx 79.1\text{ kg}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(4\pi r^{2}\) 是整個球體；圓頂只是它的一半，所以是 \(2\pi r^{2}\)。用整個球體會令費用加倍。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>兩個實心圓錐相似。較小與較大圓錐的底半徑分別是 4 cm 和 10 cm，兩者由相同材料製成。(a) 求它們的體積比。(b) 較小圓錐的質量是 96 g，求較大圓錐的質量。(c) 為較小圓錐的曲面髹漆需 $3.20。以相同每 cm\(^{2}\) 的價錢，求為較大圓錐曲面髹漆的費用。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(8:125\)　(b) \(1500\text{ g}\)　(c) $20</div>
+<ol class="steps">
+<li>長度比 \(=4:10=2:5\)。</li>
+<li>(a) 體積比 \(=2^{3}:5^{3}=8:125\)。</li>
+<li>(b) 質量與體積成正比：\(\frac{m}{96}=\frac{125}{8}\)，所以 \(m=96\times\frac{125}{8}=12\times 125=1500\text{ g}\)。</li>
+<li>(c) 曲面面積按長度比的平方變化：\(2^{2}:5^{2}=4:25\)。</li>
+<li>費用 \(=3.20\times\frac{25}{4}=3.20\times 6.25=20\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(c) 若用體積比算費用，會得 $50 —— 費用跟隨<i>面積</i>，所以比是 \(4:25\)，不是 \(8:125\)。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個無蓋水桶是圓錐平截頭體的形狀，頂部敞開，兩底半徑 24 cm 和 18 cm，垂直高 8 cm。取 \(\pi=3.14\)，求 (a) 水桶的斜高，(b) 所需金屬的總面積（曲面加圓底），(c) 以每 cm\(^{2}\) $0.02 為該金屬塗層的費用。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(10\text{ cm}\)　(b) \(744\pi\approx 2336.16\text{ cm}^{2}\)　(c) $46.72</div>
+<ol class="steps">
+<li>(a) \(l=\sqrt{(24-18)^{2}+8^{2}}=\sqrt{36+64}=10\) cm。</li>
+<li>(b) 曲面面積 \(=\pi(R+r)l=\pi(42)(10)=420\pi\)。</li>
+<li>底 \(=\pi(18)^{2}=324\pi\)。總面積 \(=420\pi+324\pi=744\pi\approx 2336.16\text{ cm}^{2}\)。</li>
+<li>(c) 費用 \(=2336.16\times 0.02=46.7232\approx 46.72\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>水桶無蓋，所以只加一個圓（底部）。若多加頂部圓面，會得 \(1164\pi\) 及約 $73。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一個實心黃銅裝飾品由半徑 3 cm、高 10 cm 的圓柱，加上固定在頂部（平面向下）的半徑 3 cm 半球組成。黃銅的密度是 8.5 g/cm\(^{3}\)，每克 $0.06。取 \(\pi=3.14\)，求 (a) 裝飾品的體積，(b) 它的質量（以 kg 表示），準確至 3 位有效數字，(c) 黃銅的費用，準確至最接近的分。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(108\pi\approx 339.12\text{ cm}^{3}\)　(b) \(2.88\text{ kg}\)　(c) $172.95</div>
+<ol class="steps">
+<li>圓柱 \(=\pi(3)^{2}(10)=90\pi\)。</li>
+<li>半球 \(=\frac{2}{3}\pi(3)^{3}=\frac{2}{3}\pi(27)=18\pi\)。</li>
+<li>(a) 體積 \(=90\pi+18\pi=108\pi\approx 339.12\text{ cm}^{3}\)。</li>
+<li>(b) 質量 \(=339.12\times 8.5=2882.52\text{ g}=2.88252\text{ kg}\approx 2.88\text{ kg}\)（3 位有效數字）。</li>
+<li>(c) 費用 \(=2882.52\times 0.06=172.9512\approx 172.95\) 元。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>半球是 \(\frac{2}{3}\pi r^{3}\)，不是 \(\frac{4}{3}\pi r^{3}\)。用整個球體會多算 \(18\pi\) 的體積，費用約多 $28。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>一個實心金屬圓柱半徑 6 cm、高 16 cm。它被熔化，在沒有金屬損耗下重鑄成多個半徑 2 cm 的小實心球。(a) 求圓柱的體積，以 \(\pi\) 表示。(b) 求一個小球的體積，以 \(\pi\) 表示。(c) 求可製成球的數目。(d) 求所有球的總表面積，並由此求這個總表面積與原圓柱表面積之比，以 \(a:b\) 的形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(576\pi\text{ cm}^{3}\)　(b) \(\frac{32\pi}{3}\text{ cm}^{3}\)　(c) 54　(d) \(864\pi\text{ cm}^{2}\)；比 \(36:11\)</div>
+<ol class="steps">
+<li>(a) \(V=\pi(6)^{2}(16)=576\pi\text{ cm}^{3}\)。</li>
+<li>(b) \(V=\frac{4}{3}\pi(2)^{3}=\frac{32\pi}{3}\text{ cm}^{3}\)。</li>
+<li>(c) 數目 \(=576\pi\div\frac{32\pi}{3}=576\times\frac{3}{32}=18\times 3=54\)。</li>
+<li>(d) 一個球的表面積 \(=4\pi(2)^{2}=16\pi\)，所以 54 個球共 \(54\times 16\pi=864\pi\text{ cm}^{2}\)。</li>
+<li>圓柱表面積 \(=2\pi(6)^{2}+2\pi(6)(16)=72\pi+192\pi=264\pi\text{ cm}^{2}\)。</li>
+<li>比 \(=864\pi:264\pi=864:264=36:11\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>熔化和重鑄保留體積，但不保留表面積：54 個小球的表面積是圓柱的三倍以上。答 \(1:1\) 就是陷阱。</p></div>
+</div>
+  </article>
+
+  <article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>一個容器是圓錐平截頭體，兩端封閉，兩底半徑 20 cm 和 12 cm，高 30 cm。它注滿水，然後把全部水倒入一個底半徑 15 cm、高 20 cm 的空圓柱形水箱。取 \(\pi=3.14\)，求 (a) 容器內水的體積，(b) 圓柱形水箱的容量，(c) 水箱會否溢出；若會，求溢出的水的體積，(d) 水箱內餘下的水深。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(7840\pi\approx 24\,617.6\text{ cm}^{3}\)　(b) \(4500\pi\approx 14\,130\text{ cm}^{3}\)　(c) 會，溢出 \(3340\pi\approx 10\,487.6\text{ cm}^{3}\)　(d) \(20\text{ cm}\)（滿）</div>
+<ol class="steps">
+<li>(a) \(V=\frac{1}{3}\pi(30)(20^{2}+20\times 12+12^{2})=\frac{1}{3}\pi(30)(400+240+144)\)。</li>
+<li>\(=10\pi(784)=7840\pi\approx 24\,617.6\text{ cm}^{3}\)。</li>
+<li>(b) 水箱容量 \(=\pi(15)^{2}(20)=4500\pi\approx 14\,130\text{ cm}^{3}\)。</li>
+<li>(c) 因 \(7840\pi\gt 4500\pi\)，水箱會溢出。</li>
+<li>溢出量 \(=7840\pi-4500\pi=3340\pi\approx 10\,487.6\text{ cm}^{3}\)。</li>
+<li>(d) 溢出後水箱完全注滿，所以餘下的水深就是全滿的 20 cm。</li>
+<li>核對：\(3340\times 3.14=10\,487.6\text{ cm}^{3}\)，即約 10.5 L 流失。✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(d) 的水深不是用平截頭體體積除以水箱底面積求得：水箱只能盛載它的容量，其餘都流到地上。</p></div>
+</div>
+  </article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 求積法 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>
+<script src="assets/cn.js"></script>
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 率、比及變分 — 7 種題型 50 題（附詳解）","desc":"由歷年 HKDSE 率、比及變分試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：比的化簡與記法、按比分配、比的合併與比較、率（速度、密度、單位價、流量）、正比、反比與聯變，以及地圖比例尺與混合物問題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_rate-ratio-variations_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 比的記法</a><a href="#t2" data-t="t2">類型 2 · 按比分配</a><a href="#t3" data-t="t3">類型 3 · 比的合併</a><a href="#t4" data-t="t4">類型 4 · 率</a><a href="#t5" data-t="t5">類型 5 · 正比</a><a href="#t6" data-t="t6">類型 6 · 反比與聯變</a><a href="#t7" data-t="t7">類型 7 · 比例尺與混合物</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 率、比及變分</p>
+    <h1 class="hero__title">率、比及變分 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由歷年 DSE 率、比及變分試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>50</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如比的各項只可以同乘或同除，不可以同加或同減。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>比的化簡與記法</td><td>化簡比、三項比、單位比</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>按給定比分配</td><td>兩份與三份分配、已知相差</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>比的合併與比較</td><td>由 a:b 與 b:c 求 a:b:c、兩階段比的變化</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>率：速度、密度、單位價與流量</td><td>平均速度、單位換算、單位價、流量</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>正比</td><td>y = kx、y = kx²、y = kx³、求 k</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>反比與聯變</td><td>y = k/x、y = k/x²、z ∝ xy²、混合變分</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>地圖、比例尺、混合物與多部分問題</td><td>比例尺、混合物、情境中的聯變</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>比的化簡與記法 <span class="count">· 7 題</span></h2>
+    <p>化簡比、三項比、單位比</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>比是比較兩個<b>同類</b>量，而且必須用同一單位。比的各項同乘或同除一個非零數，比的值不變；所以當各項都是整數而最大公因數（H.C.F.）為 1 時，這個比就是最簡形式。</p>
+    <p>三項比只是把同一個想法逐項推廣；至於單位比，就是把其中一項化為 1 之後再讀出另一項。</p>
+    <div class="formula"><span>\(a:b=\frac{a}{b}\)</span><span>\(a:b:c\)</span><span>\(a:b=1:n\)</span></div>
+  </div>
+
+  <article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>化簡比 \(36:48\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3:4\)</div>
+<ol class="steps">
+<li>先求 36 與 48 的最大公因數（H.C.F.），得 12。</li>
+<li>兩項同除以 12：\(36\div 12=3\)，\(48\div 12=4\)。</li>
+<li>所以 \(36:48=3:4\)。</li>
+<li>驗算：\(3\times 12=36\)，\(4\times 12=48\)，比的值沒有改變。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩項同減一個數（例如 \(36-12:48-12\)）<b>不會</b>保持比的值 —— 只有同乘或同除才可以。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把比 \(\frac{2}{3}:\frac{5}{6}\) 化為最簡整數比。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4:5\)</div>
+<ol class="steps">
+<li>兩項同乘分母 3 與 6 的最小公倍數（L.C.M.），即 6。</li>
+<li>\(\frac{2}{3}\times 6=4\)，\(\frac{5}{6}\times 6=5\)。</li>
+<li>所以 \(\frac{2}{3}:\frac{5}{6}=4:5\)。</li>
+<li>驗算：\(\frac{4}{5}=0.8\)，而 \(\frac{2/3}{5/6}=\frac{2}{3}\times\frac{6}{5}=0.8\)，兩者相等。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>已知 \(a:b=3:5\) 及 \(b:c=4:7\)，求 \(a:b:c\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(12:20:35\)</div>
+<ol class="steps">
+<li>\(b\) 在兩個比之中必須是同一個數。5 與 4 的 L.C.M. 是 20。</li>
+<li>把 \(a:b=3:5\) 寫成 \(12:20\)（兩項同乘 4）。</li>
+<li>把 \(b:c=4:7\) 寫成 \(20:35\)（兩項同乘 5）。</li>
+<li>現在兩個比的 \(b\) 都是 20，所以 \(a:b:c=12:20:35\)。</li>
+<li>驗算：12、20、35 沒有大於 1 的公因數，已是最簡形式。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>直接寫 \(a:b:c=3:5:7\) —— 兩個比不可以逕自接合，必須先把共有的項 \(b\) 化為相同。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>化簡比 45 分鐘 : 2 小時。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3:8\)</div>
+<ol class="steps">
+<li>先化成同一單位：2 小時 \(=2\times 60=120\) 分鐘。</li>
+<li>所以比是 \(45:120\)。</li>
+<li>45 與 120 的 H.C.F. 是 15，兩項同除以 15：\(45\div 15=3\)，\(120\div 15=8\)。</li>
+<li>因此 45 分鐘 : 2 小時 \(=3:8\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不換單位就寫成 \(45:2\)，這個比毫無意義 —— 不同單位的量不能直接相比。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把比 25 g : 2 kg 表示成 \(1:n\) 的形式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(1:80\)</div>
+<ol class="steps">
+<li>先化成同一單位：2 kg \(=2000\) g。</li>
+<li>比 \(=25:2000\)。</li>
+<li>兩項同除以 25：\(25\div 25=1\)，\(2000\div 25=80\)。</li>
+<li>因此 \(25\text{ g}:2\text{ kg}=1:80\)。</li>
+<li>驗算：\(1\times 80=80\)，即每 1 g 對應 80 g；而 \(25\times 80=2000\)，正確。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>(a) 若 \(2x=7y\)，求 \(x:y\)。<br>(b) 若 \(\frac{p}{4}=\frac{q}{9}\)，求 \(p:q\)。<br>(c) 若 \(3m=4n=5p\)，求 \(m:n:p\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(7:2\)　(b) \(4:9\)　(c) \(20:15:12\)</div>
+<ol class="steps">
+<li>(a) 由 \(2x=7y\) 得 \(\frac{x}{y}=\frac{7}{2}\)，所以 \(x:y=7:2\)。</li>
+<li>(b) 由 \(\frac{p}{4}=\frac{q}{9}\) 得 \(9p=4q\)，所以 \(\frac{p}{q}=\frac{4}{9}\)，即 \(p:q=4:9\)。</li>
+<li>(c) 設 \(3m=4n=5p=L\)，則 \(m=\frac{L}{3}\)，\(n=\frac{L}{4}\)，\(p=\frac{L}{5}\)。</li>
+<li>所以 \(m:n:p=\frac{1}{3}:\frac{1}{4}:\frac{1}{5}\)。三項同乘 60（3、4、5 的 L.C.M.），得 \(20:15:12\)。</li>
+<li>驗算：\(3(20)=60\)，\(4(15)=60\)，\(5(12)=60\)，全部相等。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (a) 寫成 \(x:y=2:7\) —— \(x\) 的係數其實是 \(y\) 所佔的份數，不是 \(x\) 的份數。用數字試一試：\(x=7,y=2\) 確實滿足 \(2x=7y\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P1_Q6.html" target="_blank" rel="noopener">歷年試題 · 2023 卷一 Q6 ↗</a></div>
+<div class="q__body"><p>已知 \(a:b=3:4\)、\(b:c=6:5\) 及 \(c:d=2:9\)，求 \(a:b:c:d\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(9:12:10:45\)</div>
+<ol class="steps">
+<li>先合併 \(a:b\) 與 \(b:c\)。4 與 6 的 L.C.M. 是 12。</li>
+<li>\(a:b=3:4=9:12\)（同乘 3）；\(b:c=6:5=12:10\)（同乘 2）。</li>
+<li>所以 \(a:b:c=9:12:10\)，其中 \(c=10\)。</li>
+<li>再把 \(c:d=2:9\) 接上。10 與 2 的 L.C.M. 是 10，所以 \(c:d=10:45\)（同乘 5）。</li>
+<li>因此 \(a:b:c:d=9:12:10:45\)。</li>
+<li>驗算：逐對還原 —— \(9:12=3:4\)，\(12:10=6:5\)，\(10:45=2:9\)，全部正確。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>按給定比分配 <span class="count">· 7 題</span></h2>
+    <p>兩份與三份分配、已知相差</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>要把一個量按 \(a:b:c\) 分配，先把各項相加得總份數 \(a+b+c\)，再求每份的值，最後逐項相乘。</p>
+    <p>若題目給的是<b>相差</b>而不是總量，那個差只對應兩項份數之差，不是總份數。</p>
+    <div class="formula"><span>\(\text{每份}=\frac{\text{總量}}{a+b+c}\)</span><span>\(\text{相差}=(a-b)\times\text{每份}\)</span></div>
+  </div>
+
+  <article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 $240 按 \(3:5\) 分給 Ivy 和 Jon，求兩人各得多少。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>Ivy $90，Jon $150</div>
+<ol class="steps">
+<li>總份數 \(=3+5=8\)。</li>
+<li>每份 \(=240\div 8=30\) 元。</li>
+<li>Ivy：\(3\times 30=90\)；Jon：\(5\times 30=150\)。</li>
+<li>驗算：\(90+150=240\)，正好是全部款項，而且 \(90:150=3:5\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 84 kg 肥料按 \(1:2:4\) 分給三個花園，求每個花園各得多少 kg。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>12 kg、24 kg 及 48 kg</div>
+<ol class="steps">
+<li>總份數 \(=1+2+4=7\)。</li>
+<li>每份 \(=84\div 7=12\) kg。</li>
+<li>三份分別是 \(1\times 12=12\) kg、\(2\times 12=24\) kg、\(4\times 12=48\) kg。</li>
+<li>驗算：\(12+24+48=84\) kg。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只數不同項的個數（這裏是 3）而沒有把各項相加 —— 份數是 7，不是 3。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>$560 按 \(2:5:7\) 分給木匠、油漆匠和水喉匠，求所得最多的一份。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$280</div>
+<ol class="steps">
+<li>總份數 \(=2+5+7=14\)。</li>
+<li>每份 \(=560\div 14=40\) 元。</li>
+<li>最多的一份對應項 7：\(7\times 40=280\) 元。</li>
+<li>驗算：三份分別是 $80、$200、$280，而 \(80+200+280=560\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>問答比賽中三社的分數比是 \(4:5:6\)。領先的社比最後的社多 96 分，求三社的總分。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>720</div>
+<ol class="steps">
+<li>最大項與最小項相差 \(6-4=2\) 份。</li>
+<li>這 2 份代表 96 分，所以每份 \(=96\div 2=48\) 分。</li>
+<li>總份數 \(=4+5+6=15\)，總分 \(=15\times 48=720\)。</li>
+<li>驗算：三社分別得 192、240、288；\(288-192=96\)，且 \(192+240+288=720\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 96 除以總份數 15，而不是除以兩項之差 2。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩位合夥人按 \(7:4\) 分攤一個攤檔的盈利。資深合夥人比初級合夥人多得 $72，求 (a) 總盈利；(b) 初級合夥人所得的份額。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $264　(b) $96</div>
+<ol class="steps">
+<li>相差 \(7-4=3\) 份，對應 $72。</li>
+<li>每份 \(=72\div 3=24\) 元。</li>
+<li>(a) 總份數 \(=7+4=11\)，總盈利 \(=11\times 24=264\) 元。</li>
+<li>(b) 初級合夥人得 \(4\times 24=96\) 元。</li>
+<li>驗算：資深合夥人得 \(7\times 24=168\)，而 \(168-96=72\)，與題目相符。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>Ken、Leo 和 Max 按 \(3:4:5\) 分一筆款項。Ken 與 Leo 共得 $672，求 (a) 款項總額；(b) Max 所得的份額。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $1152　(b) $480</div>
+<ol class="steps">
+<li>Ken 與 Leo 合共佔 \(3+4=7\) 份，而這 7 份值 $672。</li>
+<li>每份 \(=672\div 7=96\) 元。</li>
+<li>(a) 總份數 \(=3+4+5=12\)，款項總額 \(=12\times 96=1152\) 元。</li>
+<li>(b) Max 得 \(5\times 96=480\) 元。</li>
+<li>驗算：Ken \(=288\)、Leo \(=384\)、Max \(=480\)；\(288+384=672\)，總額 1152。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用總份數 12 去除 $672 —— $672 只覆蓋 Ken 與 Leo，即 7 份。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>一筆獎金按 \(4:3:5\) 分給 Amy、Ben 和 Chris。<br>(a) 若獎金為 $1440，求 Chris 所得的份額。<br>(b) 若 Chris 比 Ben 多得 $300，求獎金總額及 Amy 所得的份額。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $600　(b) 獎金 $1800，Amy $600</div>
+<ol class="steps">
+<li>(a) 總份數 \(=4+3+5=12\)，每份 \(=1440\div 12=120\) 元，Chris 得 \(5\times 120=600\) 元。</li>
+<li>(b) Chris 比 Ben 多 \(5-3=2\) 份，而 2 份 \(=300\) 元，所以每份 \(=150\) 元。</li>
+<li>獎金總額 \(=12\times 150=1800\) 元；Amy 得 \(4\times 150=600\) 元。</li>
+<li>驗算 (a)：三份為 480、360、600，合共 1440。驗算 (b)：三份為 600、450、750，相差 \(750-450=300\)。</li>
+<li>注意 (a) 與 (b) 的每份值不同（120 與 150）—— 每一部分是獨立的情況。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>比的合併與比較 <span class="count">· 7 題</span></h2>
+    <p>由 a:b 與 b:c 求 a:b:c、兩階段比的變化</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>兩個比若有共同的項，只要把該項在兩個比中化為相同（用 L.C.M.），就可以串連成一個三項比。要比較兩個比的大小，就把它們寫成分數再交叉相乘。</p>
+    <p>遇到兩階段的變化，先設原來的量是 \(ak\) 和 \(bk\)，寫出變化後的比，再解方程求 \(k\)。</p>
+    <div class="formula"><span>\(a:b,\ b:c\ \Rightarrow\ a:b:c\)</span><span>\(a:b&gt;c:d\iff ad&gt;bc\)</span><span>\(ak\pm m\ :\ bk\pm n\)</span></div>
+  </div>
+
+  <article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(a:b=2:5\) 及 \(b:c=5:4\)，求 \(a:b:c\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2:5:4\)</div>
+<ol class="steps">
+<li>共有的項 \(b\) 在兩個比中都已經是 5，所以不必調整。</li>
+<li>直接順序讀出各項：\(a=2\)，\(b=5\)，\(c=4\)。</li>
+<li>因此 \(a:b:c=2:5:4\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(a:b=3:4\) 及 \(b:c=8:9\)，求最簡形式的 \(a:b:c\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(6:8:9\)</div>
+<ol class="steps">
+<li>\(b\) 的兩個值 4 與 8 的 L.C.M. 是 8。</li>
+<li>把 \(a:b=3:4\) 寫成 \(6:8\)（兩項同乘 2）。</li>
+<li>\(b:c\) 已經是 \(8:9\)，所以 \(a:b:c=6:8:9\)。</li>
+<li>驗算：\(6:8=3:4\)，而 \(8:9\) 沒有改動，答案前後一致。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把第二個比也乘 2 —— 只須調整共有項需要改變的那一個比。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>哪個比較大：\(5:8\) 還是 \(7:11\)？試說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(7:11\) 較大</div>
+<ol class="steps">
+<li>把兩個比寫成分數 \(\frac{5}{8}\) 與 \(\frac{7}{11}\)，再交叉相乘比較。</li>
+<li>\(5\times 11=55\)，\(7\times 8=56\)。</li>
+<li>因為 \(56&gt;55\)，所以 \(\frac{7}{11}&gt;\frac{5}{8}\)。</li>
+<li>以小數驗算：\(\frac{5}{8}=0.625\)，\(\frac{7}{11}\approx 0.636\)，可見 \(7:11\) 確實較大。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只比較前一項（7 &gt; 5）或只比較後一項（11 &gt; 8）—— 比必須整體當作一個分數來比較。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>話劇社男女生人數的比本來是 \(4:5\)。有 6 名男生離社後，比變成 \(3:5\)。求原有的男、女生人數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>男生 24 人，女生 30 人</div>
+<ol class="steps">
+<li>設原有男生 \(4k\) 人、女生 \(5k\) 人。</li>
+<li>6 名男生離開後：\(\frac{4k-6}{5k}=\frac{3}{5}\)。</li>
+<li>交叉相乘：\(5(4k-6)=3(5k)\)，即 \(20k-30=15k\)。</li>
+<li>所以 \(5k=30\)，得 \(k=6\)。</li>
+<li>男生 \(=4\times 6=24\) 人，女生 \(=5\times 6=30\) 人。</li>
+<li>驗算：6 名男生離開後有 18 名男生、30 名女生，而 \(18:30=3:5\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(\frac{4k}{5k-6}\) —— 只有男生改變，所以只有分子減 6。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>已知 \(a:b=1:2\) 及 \(a:c=3:4\)，求 \(a:b:c\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3:6:4\)</div>
+<ol class="steps">
+<li>共有的項是 \(a\)，兩個比中分別是 1 和 3。1 與 3 的 L.C.M. 是 3。</li>
+<li>把 \(a:b=1:2\) 寫成 \(3:6\)（兩項同乘 3）。</li>
+<li>\(a:c=3:4\) 中 \(a=3\)，已經相同。</li>
+<li>因此 \(a:b:c=3:6:4\)。</li>
+<li>驗算：\(3:6=1:2\)，而 \(3:4\) 沒有改動。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>運動日參加者的男女生人數比是 \(7:5\)。後來再有 6 名男生和 6 名女生加入，比變成 \(9:7\)。求最初參加的男、女生人數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>男生 21 人，女生 15 人</div>
+<ol class="steps">
+<li>設原有男生 \(7k\) 人、女生 \(5k\) 人。</li>
+<li>人數改變後：\(\frac{7k+6}{5k+6}=\frac{9}{7}\)。</li>
+<li>交叉相乘：\(7(7k+6)=9(5k+6)\)，即 \(49k+42=45k+54\)。</li>
+<li>所以 \(4k=12\)，得 \(k=3\)。</li>
+<li>男生 \(=7\times 3=21\) 人，女生 \(=5\times 3=15\) 人。</li>
+<li>驗算：\(21+6=27\)、\(15+6=21\)，而 \(27:21=9:7\)，符合要求。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>忘記分母也要加 6 —— 今次兩組都增加，所以兩項都要改變。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>音樂會中成人與兒童人數的比是 \(5:3\)。有 240 名成人和 240 名兒童離場後，比變成 \(9:5\)。<br>(a) 求原有的成人及兒童人數。<br>(b) 音樂會原本共有多少人？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 成人 2400 人，兒童 1440 人　(b) 3840</div>
+<ol class="steps">
+<li>(a) 設原有成人 \(5k\) 人、兒童 \(3k\) 人。</li>
+<li>各有 240 人離場後：\(\frac{5k-240}{3k-240}=\frac{9}{5}\)。</li>
+<li>交叉相乘：\(5(5k-240)=9(3k-240)\)，即 \(25k-1200=27k-2160\)。</li>
+<li>移項：\(2160-1200=27k-25k\)，所以 \(960=2k\)，得 \(k=480\)。</li>
+<li>成人 \(=5\times 480=2400\) 人，兒童 \(=3\times 480=1440\) 人。</li>
+<li>(b) 原本總人數 \(=2400+1440=3840\)。</li>
+<li>驗算：各減 240 人後為 2160 : 1200 \(=9:5\)（兩項同除以 240），正確。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>交叉相乘 \(5(5k-240)=9(3k-240)\) 之後漏掉負號 —— 化簡前先把兩個括號完整展開。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>率：速度、密度、單位價與流量 <span class="count">· 7 題</span></h2>
+    <p>平均速度、單位換算、單位價、流量</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>率是兩個不同單位的量之比，所以答案的單位由除法決定：\(\text{速度}=\frac{\text{距離}}{\text{時間}}\)，\(\text{密度}=\frac{\text{質量}}{\text{體積}}\)，\(\text{流量}=\frac{\text{體積}}{\text{時間}}\)。</p>
+    <p>整段路程的平均速度是<b>總</b>距離除以<b>總</b>時間 —— 絕不是兩個速度的平均值。</p>
+    <div class="formula"><span>\(v=\frac{d}{t}\)</span><span>\(1\text{ km/h}=\frac{1000}{3600}\text{ m/s}\)</span><span>\(\rho=\frac{m}{V}\)</span></div>
+  </div>
+
+  <article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一輛旅遊巴士 2.5 小時行駛 180 km。求它的平均速度（以 km/h 為單位）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(72\) km/h</div>
+<ol class="steps">
+<li>用 \(v=\frac{d}{t}\)，其中 \(d=180\) km，\(t=2.5\) h。</li>
+<li>\(v=\frac{180}{2.5}=72\)。</li>
+<li>驗算：\(72\times 2.5=180\) km，正是題目給的距離。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>某商店以 $42 售出 3.5 kg 白米。求每公斤的單位價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>每公斤 $12</div>
+<ol class="steps">
+<li>單位價 \(=\frac{\text{總成本}}{\text{質量}}=\frac{42}{3.5}\)。</li>
+<li>\(\frac{42}{3.5}=\frac{420}{35}=12\)。</li>
+<li>驗算：\(12\times 3.5=42\) 元。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一列火車以 90 km/h 的穩定速度行駛。把這個速度化為 m/s。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(25\) m/s</div>
+<ol class="steps">
+<li>\(1\text{ km}=1000\text{ m}\)，\(1\text{ h}=3600\text{ s}\)。</li>
+<li>\(90\text{ km/h}=90\times\frac{1000}{3600}\text{ m/s}\)。</li>
+<li>化簡：\(\frac{1000}{3600}=\frac{5}{18}\)，所以速度是 \(90\times\frac{5}{18}=25\) m/s。</li>
+<li>驗算：\(25\times 3.6=90\)；把 m/s 乘以 3.6 就換回 km/h。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>誤乘 \(\frac{3600}{1000}\) —— 同一個速度以 m/s 表示時數值必須<b>較大</b>，而 25 &lt; 90 正好說明正確的換算方向是除以 3.6。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>250 cm³ 清潔液體的質量是 210 g。<br>(a) 求它的密度（以 g/cm³ 為單位）。<br>(b) 求 400 cm³ 這種液體的質量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.84\) g/cm³　(b) 336 g</div>
+<ol class="steps">
+<li>(a) 密度 \(=\frac{\text{質量}}{\text{體積}}=\frac{210}{250}=0.84\) g/cm³。</li>
+<li>(b) 質量 \(=\) 密度 × 體積 \(=0.84\times 400\)。</li>
+<li>\(0.84\times 400=336\) g。</li>
+<li>驗算：400 cm³ 是 250 cm³ 的 1.6 倍，而 \(210\times 1.6=336\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一名單車手首 60 km 以 40 km/h 行駛，接着的 60 km 以 60 km/h 行駛。求整段 120 km 的平均速度。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(48\) km/h</div>
+<ol class="steps">
+<li>首段所需時間 \(=\frac{60}{40}=1.5\) h。</li>
+<li>次段所需時間 \(=\frac{60}{60}=1\) h。</li>
+<li>總時間 \(=1.5+1=2.5\) h，總距離 \(=120\) km。</li>
+<li>平均速度 \(=\frac{120}{2.5}=48\) km/h。</li>
+<li>驗算：48 介乎 40 與 60 之間，而且較接近 40，因為較慢的一段用了較多時間 —— 與預期一致。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把兩個速度取平均得 \(\frac{40+60}{2}=50\) km/h。這樣做只在兩段<b>時間</b>相等時才成立，兩段距離相等時並不成立。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2015 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>一個空長方體水箱的尺寸是 1.8 m × 1.5 m × 0.6 m。抽水機每小時注水 2.4 m³。<br>(a) 求水箱的容量（以升為單位）。<br>(b) 求注滿水箱所需的時間（以分鐘為單位）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 1620 L　(b) 40.5 分鐘</div>
+<ol class="steps">
+<li>(a) 體積 \(=1.8\times 1.5\times 0.6=1.62\) m³。</li>
+<li>因為 \(1\text{ m}^{3}=1000\text{ L}\)，容量是 \(1.62\times 1000=1620\) L。</li>
+<li>(b) 時間 \(=\frac{\text{體積}}{\text{流量}}=\frac{1.62}{2.4}\) 小時。</li>
+<li>\(\frac{1.62}{2.4}=0.675\) h。</li>
+<li>化為分鐘：\(0.675\times 60=40.5\) 分鐘。</li>
+<li>驗算：每小時 2.4 m³ 即每分鐘 40 L，而 \(1620\div 40=40.5\) 分鐘。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一列火車分兩段完成 240 km 的旅程。首 150 km 以 75 km/h 行駛，餘下 90 km 以 90 km/h 行駛。<br>(a) 求整段旅程所需時間。<br>(b) 求整段旅程的平均速度。<br>(c) 若火車以 (b) 求得的平均速度行畢全程 240 km，所需時間會怎樣？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 3 小時　(b) 80 km/h　(c) 完全相同，仍是 3 小時</div>
+<ol class="steps">
+<li>(a) 首段：\(\frac{150}{75}=2\) h；次段：\(\frac{90}{90}=1\) h。合共 \(=3\) h。</li>
+<li>(b) 平均速度 \(=\frac{\text{總距離}}{\text{總時間}}=\frac{240}{3}=80\) km/h。</li>
+<li>(c) 以固定的 80 km/h 行駛，時間會是 \(\frac{240}{80}=3\) h，完全一樣 —— 這正是「平均速度」的意思。</li>
+<li>驗算：\(2\times 75=150\) km，\(1\times 90=90\) km，兩段距離相加為 240 km。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>正比 <span class="count">· 7 題</span></h2>
+    <p>y = kx、y = kx²、y = kx³、求 k</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>\(y\propto x^{n}\) 就是說存在一個非零常數 \(k\)，使 \(y=kx^{n}\)。解題時一定先用已知的一對數值求出 \(k\)，再把公式用於新的數值。</p>
+    <p>由 \(y=kx^{n}\) 可得一個好用的比例式：\(\frac{y_{1}}{y_{2}}=\left(\frac{x_{1}}{x_{2}}\right)^{n}\)。題目只描述變化時，用這個式子可以不必求 \(k\)。</p>
+    <div class="formula"><span>\(y\propto x^{2}\Rightarrow y=kx^{2}\)</span><span>\(k=\frac{y}{x^{n}}\)</span><span>\(\frac{y_{1}}{y_{2}}=\left(\frac{x_{1}}{x_{2}}\right)^{n}\)</span></div>
+  </div>
+
+  <article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x\) 成正變，且當 \(x=4\) 時 \(y=12\)。求當 \(x=7\) 時 \(y\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=21\)</div>
+<ol class="steps">
+<li>寫出 \(y=kx\)。</li>
+<li>代入 \(x=4\)、\(y=12\)：\(12=4k\)，所以 \(k=3\)。</li>
+<li>因此 \(y=3x\)。</li>
+<li>當 \(x=7\)：\(y=3\times 7=21\)。</li>
+<li>驗算：\(x\) 由 4 增至 7（倍數 1.75），而 \(12\times 1.75=21\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x^{2}\) 成正變，且當 \(x=5\) 時 \(y=50\)。求當 \(x=9\) 時 \(y\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=162\)</div>
+<ol class="steps">
+<li>寫出 \(y=kx^{2}\)。</li>
+<li>代入：\(50=k(5)^{2}=25k\)，所以 \(k=2\)。</li>
+<li>因此 \(y=2x^{2}\)。</li>
+<li>當 \(x=9\)：\(y=2\times 81=162\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>求出 \(k\) 之後才平方 —— 平方只作用於 \(x\)，任何時候都不會作用於 \(k\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個金屬立方體的質量 \(M\) g 與其邊長 \(s\) cm 的立方成正變。當 \(s=2\) 時，\(M=24\)。求當 \(s=5\) 時 \(M\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(375\) g</div>
+<ol class="steps">
+<li>寫出 \(M=ks^{3}\)。</li>
+<li>代入 \(s=2\)、\(M=24\)：\(24=k(8)\)，所以 \(k=3\)。</li>
+<li>因此 \(M=3s^{3}\)。</li>
+<li>當 \(s=5\)：\(M=3\times 125=375\) g。</li>
+<li>用比例式驗算：\(\frac{M}{24}=\left(\frac{5}{2}\right)^{3}=15.625\)，而 \(24\times 15.625=375\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>印製 \(n\) 本小冊子的成本 $C 與 \(n\) 成正變。印製 250 本的成本是 $1875。<br>(a) 以 \(n\) 表示 \(C\)。<br>(b) 求印製 480 本的成本。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(C=7.5n\)　(b) $3600</div>
+<ol class="steps">
+<li>寫出 \(C=kn\)。</li>
+<li>代入：\(1875=250k\)，所以 \(k=7.5\)。</li>
+<li>(a) 因此 \(C=7.5n\)（\(C\) 以元為單位，\(n\) 為冊數）。</li>
+<li>(b) \(C=7.5\times 480=3600\)，即 $3600。</li>
+<li>驗算：每本成本 $7.50，480 本以這個單位價計算就是 \(480\times 7.5=3600\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x^{2}\) 成正變，且當 \(x=3\) 時 \(y=45\)。<br>(a) 求變分常數。<br>(b) 求當 \(y=180\) 時 \(x\) 的正值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(k=5\)　(b) \(x=6\)</div>
+<ol class="steps">
+<li>寫出 \(y=kx^{2}\)。</li>
+<li>(a) 代入 \(x=3\)、\(y=45\)：\(45=9k\)，所以 \(k=5\)。因此 \(y=5x^{2}\)。</li>
+<li>(b) 令 \(y=180\)：\(180=5x^{2}\)，所以 \(x^{2}=36\)。</li>
+<li>由此 \(x=6\) 或 \(x=-6\)；題目要求正值，所以 \(x=6\)。</li>
+<li>驗算：\(5\times 6^{2}=5\times 36=180\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P1_Q8.html" target="_blank" rel="noopener">歷年試題 · 2016 卷一 Q8 ↗</a></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x^{2}\) 成正變。當 \(x\) 由 4 增至 6 時，\(y\) 增加 100。<br>(a) 求變分常數。<br>(b) 求當 \(x=4\) 時 \(y\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(k=5\)　(b) \(y=80\)</div>
+<ol class="steps">
+<li>設 \(y=kx^{2}\)。當 \(x=4\) 時 \(y=16k\)；當 \(x=6\) 時 \(y=36k\)。</li>
+<li>增加量是 \(36k-16k=20k\)。</li>
+<li>(a) 所以 \(20k=100\)，得 \(k=5\)。</li>
+<li>(b) 當 \(x=4\)：\(y=5\times 16=80\)。</li>
+<li>驗算：當 \(x=6\) 時 \(y=5\times 36=180\)，而 \(180-80=100\)，與題目所述相符。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫出 \(k(6^{2}-4^{2})=100\) 之後除以 2 而不是除以 20 —— 先完整算出 \(36k-16k\) 才除。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P1_Q8.html" target="_blank" rel="noopener">歷年試題 · 2017 卷一 Q8 ↗</a></div>
+<div class="q__body"><p>一個實心球體的質量 \(W\) g 與其半徑 \(r\) cm 的立方成正變。半徑 3 cm 的球體質量是 216 g。<br>(a) 以 \(r\) 表示 \(W\)。<br>(b) 求同一材料、質量 1000 g 的球體半徑。<br>(c) 第二個球體的半徑是第一個的兩倍，它的質量是第一個的多少倍？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(W=8r^{3}\)　(b) 5 cm　(c) 8 倍</div>
+<ol class="steps">
+<li>寫出 \(W=kr^{3}\)。</li>
+<li>(a) 代入 \(r=3\)、\(W=216\)：\(216=k(27)\)，所以 \(k=8\)。因此 \(W=8r^{3}\)。</li>
+<li>(b) 令 \(W=1000\)：\(8r^{3}=1000\)，所以 \(r^{3}=125\)，得 \(r=5\) cm。</li>
+<li>(c) 若 \(r\) 變為兩倍，\(W\) 會乘以 \(2^{3}=8\)，所以質量是 8 倍。</li>
+<li>驗算 (b)：\(8\times 5^{3}=8\times 125=1000\) g。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>反比與聯變 <span class="count">· 7 題</span></h2>
+    <p>y = k/x、y = k/x²、z ∝ xy²、混合變分</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>\(y\) 與 \(x\) 成反變，就是 \(y=\frac{k}{x}\)，所以乘積 \(xy\) 保持不變。聯變時，每一個被提及的因式都乘進同一個常數：\(z\propto xy^{2}\) 就是 \(z=kxy^{2}\)。</p>
+    <p>遇到正比與反比混合的變分，成正比的因式放在分子，成反比的因式放在分母。</p>
+    <div class="formula"><span>\(y=\frac{k}{x}\)</span><span>\(xy=\text{常數}\)</span><span>\(z=kxy^{2}\)</span></div>
+  </div>
+
+  <article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x\) 成反變，且當 \(x=4\) 時 \(y=6\)。求當 \(x=8\) 時 \(y\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=3\)</div>
+<ol class="steps">
+<li>寫出 \(y=\frac{k}{x}\)，即 \(xy=k\)。</li>
+<li>代入 \(x=4\)、\(y=6\)：\(k=4\times 6=24\)。</li>
+<li>所以 \(y=\frac{24}{x}\)。</li>
+<li>當 \(x=8\)：\(y=\frac{24}{8}=3\)。</li>
+<li>驗算：\(x\) 由 4 增至 8 變為兩倍，\(y\) 就由 6 減為一半得 3 —— 正是反變應有的結果。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(z\) 與 \(x\) 及 \(y\) 成聯變，且當 \(x=3\)、\(y=4\) 時 \(z=24\)。求當 \(x=5\)、\(y=6\) 時 \(z\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(z=60\)</div>
+<ol class="steps">
+<li>寫出 \(z=kxy\)。</li>
+<li>代入：\(24=k(3)(4)=12k\)，所以 \(k=2\)。</li>
+<li>因此 \(z=2xy\)。</li>
+<li>當 \(x=5\)、\(y=6\)：\(z=2\times 5\times 6=60\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>已知 \(y\) 與 \(x^{2}\) 成反變，且當 \(x=2\) 時 \(y=9\)。求當 \(x=3\) 時 \(y\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=4\)</div>
+<ol class="steps">
+<li>寫出 \(y=\frac{k}{x^{2}}\)，即 \(yx^{2}=k\)。</li>
+<li>代入：\(k=9\times 2^{2}=36\)。</li>
+<li>所以 \(y=\frac{36}{x^{2}}\)。</li>
+<li>當 \(x=3\)：\(y=\frac{36}{9}=4\)。</li>
+<li>驗算：\(4\times 3^{2}=36\)，與原來的常數相同。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫對了 \(y=\frac{k}{x^{2}}\)，卻代入 \(k=9\times 2=18\) —— 平方時連 \(x\) 的數值也要一併平方。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>已知 \(z\) 與 \(x\) 成正比，亦與 \(y\) 的平方成正比。當 \(x=3\)、\(y=2\) 時，\(z=48\)。求當 \(x=5\)、\(y=3\) 時 \(z\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(z=180\)</div>
+<ol class="steps">
+<li>寫出 \(z=kxy^{2}\)。</li>
+<li>代入：\(48=k(3)(2^{2})=12k\)，所以 \(k=4\)。</li>
+<li>因此 \(z=4xy^{2}\)。</li>
+<li>當 \(x=5\)、\(y=3\)：\(z=4\times 5\times 9=180\)。</li>
+<li>驗算：\(180=4\times 5\times 9\)，而常數 \(\frac{z}{xy^{2}}=\frac{180}{45}=4\) 沒有改變。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>注滿一個泳池所需的時間 \(t\) 分鐘，與所用抽水管數目 \(n\) 成反變。用 6 條水管需時 40 分鐘。<br>(a) 求用 8 條水管所需的時間 \(t\)。<br>(b) 要在 24 分鐘內注滿泳池，需用多少條水管？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 30 分鐘　(b) 10 條水管</div>
+<ol class="steps">
+<li>寫出 \(t=\frac{k}{n}\)，即 \(nt=k\)。</li>
+<li>代入 \(n=6\)、\(t=40\)：\(k=240\)。因此 \(t=\frac{240}{n}\)。</li>
+<li>(a) \(n=8\)：\(t=\frac{240}{8}=30\) 分鐘。</li>
+<li>(b) \(t=24\)：\(24=\frac{240}{n}\)，所以 \(n=10\) 條水管。</li>
+<li>驗算：\(10\times 24=240\)，\(8\times 30=240\)，變分常數相同。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2020 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>已知 \(z\) 與 \(x\) 成正比，並與 \(y^{2}\) 成反比。當 \(x=8\)、\(y=2\) 時，\(z=6\)。<br>(a) 以 \(x\) 和 \(y\) 表示 \(z\)。<br>(b) 求當 \(x=27\)、\(y=3\) 時 \(z\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(z=\frac{3x}{y^{2}}\)　(b) \(z=9\)</div>
+<ol class="steps">
+<li>寫出 \(z=\frac{kx}{y^{2}}\)：\(x\) 成正比所以放在分子，\(y^{2}\) 成反比所以放在分母。</li>
+<li>(a) 代入 \(x=8\)、\(y=2\)、\(z=6\)：\(6=\frac{8k}{4}=2k\)，所以 \(k=3\)。因此 \(z=\frac{3x}{y^{2}}\)。</li>
+<li>(b) 代入 \(x=27\)、\(y=3\)：\(z=\frac{3\times 27}{9}=\frac{81}{9}=9\)。</li>
+<li>驗算：以 \(k=3\) 計算，\(z=\frac{3(27)}{3^{2}}=9\)，結果一致。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2021 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>築一道牆所需的時間 \(T\) 小時，與牆的面積 \(A\) m² 成正比，並與工人數目 \(n\) 成反比。當 \(A=120\)、\(n=5\) 時，\(T=9\)。<br>(a) 以 \(A\) 和 \(n\) 表示 \(T\)。<br>(b) 求當 \(A=200\)、\(n=15\) 時 \(T\) 的值。<br>(c) 若 15 名工人需 5 小時完成，那麼要在 4 小時內完成面積 320 m² 的牆，需用多少名工人？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T=\frac{0.375A}{n}\)　(b) 5 小時　(c) 30 名工人</div>
+<ol class="steps">
+<li>寫出 \(T=\frac{kA}{n}\)。</li>
+<li>(a) 代入 \(A=120\)、\(n=5\)、\(T=9\)：\(9=\frac{120k}{5}=24k\)，所以 \(k=\frac{9}{24}=0.375\)。因此 \(T=\frac{0.375A}{n}\)。</li>
+<li>(b) \(T=\frac{0.375\times 200}{15}=\frac{75}{15}=5\) 小時。</li>
+<li>(c) 代入 \(T=4\)、\(A=320\)：\(4=\frac{0.375\times 320}{n}=\frac{120}{n}\)，所以 \(n=30\)。</li>
+<li>驗算 (c)：30 名工人做 320 m²，得 \(T=\frac{120}{30}=4\) h，符合要求。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 把 \(4=\frac{120}{n}\) 解成 \(n=\frac{4}{120}\) —— 應先交叉相乘得 \(4n=120\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>地圖、比例尺、混合物與多部分問題 <span class="count">· 8 題</span></h2>
+    <p>比例尺、混合物、情境中的聯變</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>比例尺 \(1:n\) 表示圖上每一個長度都是實際長度的 \(\frac{1}{n}\)，所以實際長度 \(=\) 圖上長度 \(\times n\)。但面積是按 \(n^{2}\) 放大的，因為兩個方向都同時放大了。</p>
+    <p>混合物問題中，其中一種成分的份量固定不變，另一種則被加入；把新的比寫成方程再解。</p>
+    <div class="formula"><span>\(1:n\)</span><span>\(\text{實際長度}=n\times\text{圖上長度}\)</span><span>\(\text{面積倍數}=n^{2}\)</span></div>
+  </div>
+
+  <article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個供 4 人用的食譜需要 300 g 麵粉、200 mL 牛奶和 3 隻雞蛋。求供 10 人用時每種材料所需的份量。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>麵粉 750 g、牛奶 500 mL、雞蛋 7.5 隻</div>
+<ol class="steps">
+<li>各材料的份量與人數成正變：倍數 \(=\frac{10}{4}=2.5\)。</li>
+<li>麵粉：\(300\times 2.5=750\) g。</li>
+<li>牛奶：\(200\times 2.5=500\) mL。</li>
+<li>雞蛋：\(3\times 2.5=7.5\)，即 7 隻全蛋再加半隻（或改為把更大批量按比例調整）。</li>
+<li>驗算：\(750:300=2.5\)，\(500:200=2.5\)，每種材料都用同一個倍數。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把各份量加上 6（人數之差），而不是乘以比 \(\frac{10}{4}\) —— 正比要用乘法，不是加法。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某地圖的比例尺是 \(1:50\,000\)。圖上兩條村落相距 4 cm，求它們之間的實際距離（以 km 為單位）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>2 km</div>
+<ol class="steps">
+<li>實際距離 \(=4\times 50\,000=200\,000\) cm。</li>
+<li>換算：\(200\,000\text{ cm}=2000\text{ m}\)（除以 100）。</li>
+<li>\(2000\text{ m}=2\text{ km}\)（除以 1000）。</li>
+<li>驗算：2 km 即 200 000 cm，而 \(200\,000\div 50\,000=4\) cm，正是圖上距離。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某圖則上 1 cm 代表 2.5 m。<br>(a) 把比例尺寫成 \(1:n\) 形式的比。<br>(b) 圖則上一條走廊長 6.4 cm，求它的實際長度（以米為單位）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(1:250\)　(b) 16 m</div>
+<ol class="steps">
+<li>(a) \(2.5\text{ m}=250\text{ cm}\)，所以圖上 1 cm 代表實際 250 cm：比例尺 \(1:250\)。</li>
+<li>(b) 實際長度 \(=6.4\times 2.5=16\) m（用 1 cm \(=\) 2.5 m）。</li>
+<li>用比驗算：\(6.4\times 250=1600\) cm \(=16\) m。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>比例尺為 \(1:25\,000\) 的地圖上，一個長方形運動場量得 2 cm × 3 cm。<br>(a) 求運動場的實際尺寸（以米為單位）。<br>(b) 求運動場的實際面積（以 m² 為單位）。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 500 m × 750 m　(b) \(375\,000\) m²</div>
+<ol class="steps">
+<li>圖上 1 cm 代表 25 000 cm \(=250\) m。</li>
+<li>(a) \(2\text{ cm}\to 2\times 250=500\) m；\(3\text{ cm}\to 3\times 250=750\) m。</li>
+<li>(b) 面積 \(=500\times 750=375\,000\) m²。</li>
+<li>用面積比例尺驗算：每 cm² 對應 \((25\,000)^{2}\) cm²，所以 \(6\times 625\,000\,000=3.75\times 10^{9}\) cm²，即 375 000 m²。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把圖上面積乘以 25 000 而不是 \(25\,000^{2}\) —— 比例尺作用於長度，所以面積要按它的平方放大。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個 40 L 的容器盛着果汁與水按 \(3:5\) 混合的果汁飲品。要使果汁與水的比變成 \(3:7\)，須加入多少水？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>加水 10 L</div>
+<ol class="steps">
+<li>總份數 \(=3+5=8\)，所以每份 \(=40\div 8=5\) L。</li>
+<li>果汁 \(=3\times 5=15\) L；水 \(=5\times 5=25\) L。</li>
+<li>設加入 \(x\) 升水。果汁的份量不變：\(\frac{15}{25+x}=\frac{3}{7}\)。</li>
+<li>交叉相乘：\(105=75+3x\)，所以 \(3x=30\)，得 \(x=10\)。</li>
+<li>驗算：新飲品共 50 L，其中果汁 15 L、水 35 L，而 \(15:35=3:7\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>加水時把果汁也一起增加 —— 只有水改變，15 L 果汁始終不變。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>質量 80 kg 的合金含銅和鋅，比為 \(7:3\)。要令銅與鋅的比變成 \(7:5\)，須加入多少鋅？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>加鋅 16 kg</div>
+<ol class="steps">
+<li>總份數 \(=7+3=10\)，所以每份 \(=80\div 10=8\) kg。</li>
+<li>銅 \(=7\times 8=56\) kg；鋅 \(=3\times 8=24\) kg。</li>
+<li>設加入 \(x\) kg 鋅；銅的質量仍是 56 kg：\(\frac{56}{24+x}=\frac{7}{5}\)。</li>
+<li>交叉相乘：\(280=168+7x\)，所以 \(7x=112\)，得 \(x=16\)。</li>
+<li>驗算：新的鋅質量 \(=40\) kg，而 \(56:40=7:5\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P1_Q12.html" target="_blank" rel="noopener">歷年試題 · 2023 卷一 Q12 ↗</a></div>
+<div class="q__body"><p>某公園在比例尺 \(1:20\,000\) 的地圖上畫成長方形，量得 7.5 cm × 4 cm。<br>(a) 求公園的實際尺寸（以米為單位）。<br>(b) 求公園的實際面積（以 m² 為單位），並以科學記數法表示答案。<br>(c) 一條長 1 km 的小徑橫越公園，它在地圖上長多少 cm？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 1500 m × 800 m　(b) \(1.2\times 10^{6}\) m²　(c) 5 cm</div>
+<ol class="steps">
+<li>圖上 1 cm 代表 20 000 cm \(=200\) m。</li>
+<li>(a) \(7.5\times 200=1500\) m，\(4\times 200=800\) m。</li>
+<li>(b) 面積 \(=1500\times 800=1\,200\,000=1.2\times 10^{6}\) m²。</li>
+<li>(c) 1 km \(=1000\) m \(=100\,000\) cm，所以地圖上的長度是 \(100\,000\div 20\,000=5\) cm。</li>
+<li>驗算 (c)：\(5\text{ cm}\times 200=1000\) m \(=1\) km，正確。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P1_Q10.html" target="_blank" rel="noopener">歷年試題 · 2024 卷一 Q10 ↗</a></div>
+<div class="q__body"><p>一條金屬線的質量 \(M\) kg 與其長度 \(L\) m 成正比，亦與其直徑 \(d\) mm 的平方成正比。長 20 m、直徑 2 mm 的金屬線質量是 1.2 kg。<br>(a) 以 \(L\) 和 \(d\) 表示 \(M\)。<br>(b) 求長 35 m、直徑 3 mm 的金屬線質量。<br>(c) 兩條同一材料的金屬線直徑分別是 2 mm 和 4 mm，而質量相同，求它們長度之比。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(M=0.015Ld^{2}\)　(b) 4.725 kg　(c) \(4:1\)</div>
+<ol class="steps">
+<li>寫出 \(M=kLd^{2}\)。</li>
+<li>(a) 代入 \(L=20\)、\(d=2\)、\(M=1.2\)：\(1.2=k(20)(4)=80k\)，所以 \(k=0.015\)。因此 \(M=0.015Ld^{2}\)。</li>
+<li>(b) \(M=0.015\times 35\times 3^{2}=0.015\times 35\times 9\)。</li>
+<li>\(0.015\times 35=0.525\)，\(0.525\times 9=4.725\) kg。</li>
+<li>(c) 質量相同時，\(L_{1}d_{1}^{2}=L_{2}d_{2}^{2}\)，所以 \(\frac{L_{1}}{L_{2}}=\frac{d_{2}^{2}}{d_{1}^{2}}=\frac{16}{4}=4\)，即 \(4:1\)。</li>
+<li>驗算 (c)：較粗的一條直徑是兩倍，要質量相同，長度就只可以是四分之一。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 把比寫成 \(2:1\) —— 長度與直徑的<b>平方</b>成反比，所以 \(d\) 加倍時 \(L\) 會變為四分之一。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 率、比及變分 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

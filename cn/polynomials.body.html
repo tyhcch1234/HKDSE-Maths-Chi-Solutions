@@ -1,0 +1,791 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 多項式 — 7 種題型 50 題（附詳解）","desc":"由 89 道歷年 HKDSE 多項式試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：多項式的記法與求值、加減與乘法、恆等式與比較係數、因式分解（提取公因式、分組、十字相乘）、代數恆等式與立方、餘式定理與因式定理，以及考試程度的長除法、HCF／LCM 與多部分證明。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_polynomials_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 記法與求值</a><a href="#t2" data-t="t2">類型 2 · 加減與乘法</a><a href="#t3" data-t="t3">類型 3 · 恆等式</a><a href="#t4" data-t="t4">類型 4 · 因式分解</a><a href="#t5" data-t="t5">類型 5 · 恆等式與立方</a><a href="#t6" data-t="t6">類型 6 · 餘式與因式</a><a href="#t7" data-t="t7">類型 7 · 考試程度</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 多項式</p>
+    <h1 class="hero__title">多項式 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 89 道歷年 DSE 多項式試題（2012–2026）整理成七種題型 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>89</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如比較係數時漏掉負號，整題就會連錯。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>多項式的記法與求值</td><td>次數、係數、常數項，以及計算 f(a)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>多項式的加、減與乘</td><td>合併同類項與展開乘積</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>恆等式與比較係數</td><td>比較兩邊 \(x^{n}\) 的係數</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>因式分解：提取公因式、分組、十字相乘</td><td>先提公因式，再分組或十字相乘</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>代數恆等式：完全平方、平方差、立方</td><td>雙向辨認公式模式</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>餘式定理與因式定理</td><td>代入除式的零點</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度：長除法、HCF／LCM、多部分證明</td><td>在考試壓力下綜合運用整個課題</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>多項式的記法與求值 <span class="count">· 7 題</span></h2>
+    <p>次數、係數、常數項，以及計算 f(a)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>關於 \(x\) 的多項式，是若干個 \(ax^{k}\) 形式的項之和，其中 \(k\) 是整數。先按降冪排列：<i>次數</i>就是最高的次冪，<i>首項係數</i>是該項所帶的數，而<i>常數項</i>不含 \(x\)。求 \(f(a)\) 時把 \(x=a\) 代入每一項 —— 負數要加括號。</p><div class="formula"><span>\(f(a)=a_{n}a^{n}+\cdots+a_{1}a+a_{0}\)</span><span>\(\deg(P\cdot Q)=\deg P+\deg Q\)</span><span>\((-a)^{2}=a^{2},\ (-a)^{3}=-a^{3}\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>設 \(f(x)=3x^{2}-4x+7\)，求 \(f(2)\) 及 \(f(0)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(f(2)=11\)，\(f(0)=7\)</div>
+<ol class="steps">
+<li>把 \(x=2\) 代入每一項：\(f(2)=3(2)^{2}-4(2)+7\)。</li><li>先計次冪：\(=3(4)-8+7=12-8+7\)。</li><li>\(=11\)。</li><li>求 \(f(0)\) 時，所有含 \(x\) 的項都變成 \(0\)，只剩常數項：\(f(0)=3(0)^{2}-4(0)+7=7\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(3(2)^{2}=3\times 4=12\)，不是 \((3\times 2)^{2}=36\)。要先平方 \(x\)，再乘係數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對多項式 \(g(x)=5-2x^{3}+x^{5}-4x\)，寫出 (a) 其次數、(b) 其首項係數、(c) 其常數項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 5　(b) 1　(c) 5</div>
+<ol class="steps">
+<li>先按降冪重寫：\(g(x)=x^{5}-2x^{3}-4x+5\)。</li><li>(a) 出現的 \(x\) 最高次冪是 \(5\)，所以次數是 \(5\)。</li><li>(b) \(x^{5}\) 即 \(1\cdot x^{5}\)，所以首項係數是 \(1\)。</li><li>(c) 不含 \(x\) 的項是 \(5\)，所以常數項是 \(5\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>次數看最高次冪，不是項數 —— 這個多項式有四項，但次數是五。另外 \(x^{5}\) 的係數是 \(1\)，不是 \(0\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>設 \(f(x)=x^{3}-2x^{2}+kx-5\)，其中 \(k\) 是常數。若 \(f(2)=7\)，求 \(k\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(k=6\)</div>
+<ol class="steps">
+<li>代入 \(x=2\)：\(f(2)=(2)^{3}-2(2)^{2}+k(2)-5\)。</li><li>\(=8-2(4)+2k-5=8-8+2k-5=2k-5\)。</li><li>已知 \(f(2)=7\)：\(2k-5=7\)，所以 \(2k=12\)，\(k=6\)。</li><li>驗算：取 \(k=6\)，\(f(2)=8-8+12-5=7\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(-2(2)^{2}=-8\)，不是 \(+8\)：負號屬於整項，而且要先平方。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>展開 \((2x^{2}-3)(x^{2}+4x-1)\)，並由此寫出乘積中 \(x^{2}\) 的係數及常數項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x^{4}+8x^{3}-5x^{2}-12x+3\)；\(x^{2}\) 的係數是 \(-5\)，常數項是 \(3\)</div>
+<ol class="steps">
+<li>把第一個括號的每一項乘以整個第二個括號。</li><li>\(2x^{2}(x^{2}+4x-1)=2x^{4}+8x^{3}-2x^{2}\)。</li><li>\(-3(x^{2}+4x-1)=-3x^{2}-12x+3\)。</li><li>合併同類項：\(2x^{4}+8x^{3}+(-2-3)x^{2}-12x+3=2x^{4}+8x^{3}-5x^{2}-12x+3\)。</li><li>所以 \(x^{2}\) 的係數是 \(-5\)，常數項是 \(3\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(x^{2}\) 項由 \(2x^{2}\times(-1)\) 與 \((-3)\times x^{2}\) 兩次產生。只讀出 \(-2\) 就會得出錯誤的係數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>設 \(P(x)=ax^{3}+bx^{2}+4\)，其中 \(a\) 和 \(b\) 是常數。若 \(P(1)=10\) 及 \(P(-1)=6\)，求 \(a\) 和 \(b\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=2\)，\(b=4\)</div>
+<ol class="steps">
+<li>\(P(1)=a(1)^{3}+b(1)^{2}+4=a+b+4\)。由 \(P(1)=10\)：\(a+b=6\) … (1)。</li><li>\(P(-1)=a(-1)^{3}+b(-1)^{2}+4=-a+b+4\)。由 \(P(-1)=6\)：\(-a+b=2\) … (2)。</li><li>(1) + (2)：\(2b=8\)，所以 \(b=4\)；再由 (1) 得 \(a=2\)。</li><li>驗算：\(P(1)=2+4+4=10\) ✓，\(P(-1)=-2+4+4=6\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 \(x=-1\) 時，三次項變號（\(-a\)），但平方項不變號（\(+b\)）。若兩項都寫成負，方程組就解不出答案。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>設 \(f(x)=2x^{3}-3x^{2}+4x-1\)。求 \(f(x+1)\)，答案按 \(x\) 的降冪排列。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x^{3}+3x^{2}+4x+2\)</div>
+<ol class="steps">
+<li>先寫出需要的兩個展開式：\((x+1)^{3}=x^{3}+3x^{2}+3x+1\) 及 \((x+1)^{2}=x^{2}+2x+1\)。</li><li>\(2(x+1)^{3}=2x^{3}+6x^{2}+6x+2\)，而 \(-3(x+1)^{2}=-3x^{2}-6x-3\)。</li><li>所以 \(f(x+1)=2x^{3}+6x^{2}+6x+2-3x^{2}-6x-3+4x+4-1\)。</li><li>合併同類項：\(2x^{3}+(6-3)x^{2}+(6-6+4)x+(2-3+4-1)=2x^{3}+3x^{2}+4x+2\)。</li><li>以 \(x=0\) 驗算：答案給出 \(2\)，而直接計算 \(f(1)=2-3+4-1=2\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((x+1)^{2}\) 外面的 \(-3\) 要乘三項，所以常數 \(-3\) 不能漏；漏了最後會得 \(+5\) 而不是 \(+2\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>設 \(f(x)=x^{3}+px^{2}+qx+6\)，其中 \(p\) 和 \(q\) 是常數。已知 \(f(1)=16\) 及 \(f(-1)=2\)。<br>(a) 求 \(p\) 和 \(q\)。<br>(b) 由此求 \(f(2)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(p=3,\ q=6\)　(b) \(f(2)=38\)</div>
+<ol class="steps">
+<li>(a) \(f(1)=1+p+q+6=16\)，所以 \(p+q=9\) … (1)。</li><li>\(f(-1)=-1+p-q+6=2\)，所以 \(p-q=-3\) … (2)。</li><li>(1) + (2)：\(2p=6\)，得 \(p=3\)；再由 (1) 得 \(q=6\)。故 \(f(x)=x^{3}+3x^{2}+6x+6\)。</li><li>(b) \(f(2)=2^{3}+3(2)^{2}+6(2)+6=8+12+12+6=38\)。</li><li>以 \(f(-1)\) 驗算 (a)：\(-1+3-6+6=2\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>常見的失誤是寫成 \(f(-1)=-1-p+q+6\)：在 \(x=-1\) 時 \(px^{2}\) 這一項是 \(+p\)，因為 \((-1)^{2}=1\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>多項式的加、減與乘 <span class="count">· 7 題</span></h2>
+    <p>合併同類項與展開乘積</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>多項式相加或相減，只合併<i>同類</i>項 —— 即 \(x\) 的次冪相同者。做減法時，先給被減去的多項式加括號，再把括號內每一項變號。做乘法時，把一個括號的每一項乘以另一個括號的每一項，然後合併；未合併前乘積的項數，等於兩括號項數之積。</p><div class="formula"><span>\(-(a+b-c)=-a-b+c\)</span><span>\((a+b)(c+d)=ac+ad+bc+bd\)</span><span>\(\deg(AB)=\deg A+\deg B\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>化簡 \((3x^{2}-5x+2)+(x^{2}+7x-9)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4x^{2}+2x-7\)</div>
+<ol class="steps">
+<li>把同類項歸在一起：\((3x^{2}+x^{2})+(-5x+7x)+(2-9)\)。</li><li>\(=4x^{2}+2x-7\)。</li><li>以 \(x=1\) 驗算：原式得 \((3-5+2)+(1+7-9)=0+(-1)=-1\)，而 \(4+2-7=-1\) ✓。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>化簡 \((5x^{3}-2x^{2}+4)-(2x^{3}+x^{2}-6x+1)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3x^{3}-3x^{2}+6x+3\)</div>
+<ol class="steps">
+<li>先加括號寫出減法，並把第二個多項式每一項變號：\(5x^{3}-2x^{2}+4-2x^{3}-x^{2}+6x-1\)。</li><li>合併同類項：\((5-2)x^{3}+(-2-1)x^{2}+6x+(4-1)\)。</li><li>\(=3x^{3}-3x^{2}+6x+3\)。</li><li>以 \(x=1\) 驗算：原式 \(=(5-2+4)-(2+1-6+1)=7-(-2)=9\)，而 \(3-3+6+3=9\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>減去一個括號，要把括號內<i>每一項</i>都變號，所以 \(-(-6x)=+6x\)。這類符號錯誤是本科目最常見的失分位。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>化簡 \(2x(3x-4)-3x^{2}(x-2)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(-3x^{3}+12x^{2}-8x\)</div>
+<ol class="steps">
+<li>分別展開兩個乘積：\(2x(3x-4)=6x^{2}-8x\)。</li><li>\(3x^{2}(x-2)=3x^{3}-6x^{2}\)，所以 \(-3x^{2}(x-2)=-3x^{3}+6x^{2}\)。</li><li>相加：\(6x^{2}-8x-3x^{3}+6x^{2}=-3x^{3}+12x^{2}-8x\)。</li><li>以 \(x=2\) 驗算：原式 \(=4(6-4)-12(0)=8\)，答案 \(=-24+48-16=8\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(3x^{2}(x-2)\) 前面的負號要乘兩項：\(-3x^{2}\times(-2)=+6x^{2}\)，不是 \(-6x^{2}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>展開並化簡 \((x-3)(2x+5)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x^{2}-x-15\)</div>
+<ol class="steps">
+<li>把第一個括號的每一項乘以第二個括號的每一項：\(x(2x)+x(5)+(-3)(2x)+(-3)(5)\)。</li><li>\(=2x^{2}+5x-6x-15\)。</li><li>合併 \(x\) 項：\(5x-6x=-x\)，所以答案是 \(2x^{2}-x-15\)。</li><li>以 \(x=1\) 驗算：\((-2)(7)=-14\)，而 \(2-1-15=-14\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要漏掉兩個中間乘積；寫成 \((x-3)(2x+5)=2x^{2}-15\) 就完全沒有 \(x\) 項。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>展開 \((2x-1)(x^{2}+3x-4)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x^{3}+5x^{2}-11x+4\)</div>
+<ol class="steps">
+<li>\(2x(x^{2}+3x-4)=2x^{3}+6x^{2}-8x\)。</li><li>\(-1(x^{2}+3x-4)=-x^{2}-3x+4\)。</li><li>合併同類項：\(2x^{3}+(6-1)x^{2}+(-8-3)x+4=2x^{3}+5x^{2}-11x+4\)。</li><li>以 \(x=-1\) 驗算：\((-3)(1-3-4)=(-3)(-6)=18\)，而 \(-2+5+11+4=18\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>三次式乘一次式，未合併前應有六個乘積、合併後四項。漏掉 \(-1\times(-4)=+4\) 就會失去常數項。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>展開並化簡 \((x+2)^{2}(2x-1)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(2x^{3}+7x^{2}+4x-4\)</div>
+<ol class="steps">
+<li>先平方：\((x+2)^{2}=x^{2}+4x+4\)。</li><li>再乘 \((2x-1)\)：\(2x(x^{2}+4x+4)=2x^{3}+8x^{2}+8x\)。</li><li>\(-1(x^{2}+4x+4)=-x^{2}-4x-4\)。</li><li>相加：\(2x^{3}+(8-1)x^{2}+(8-4)x-4=2x^{3}+7x^{2}+4x-4\)。</li><li>以 \(x=1\) 驗算：\((3)^{2}(1)=9\)，而 \(2+7+4-4=9\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((x+2)^{2}\) 是 \(x^{2}+4x+4\)，不是 \(x^{2}+4\)。括號平方後不可能只剩兩項。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個長方形的長是 \((3x+2)\) cm，闊是 \((2x-5)\) cm，其中 \(x&gt;2.5\)。<br>(a) 以 \(x\) 表示長方形的面積。<br>(b) 求 \(x=4\) 時的面積。<br>(c) 以 \(x\) 表示周界。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((6x^{2}-11x-10)\) cm\(^{2}\)　(b) 42 cm\(^{2}\)　(c) \((10x-6)\) cm</div>
+<ol class="steps">
+<li>(a) 面積 \(=(3x+2)(2x-5)=6x^{2}-15x+4x-10=6x^{2}-11x-10\) cm\(^{2}\)。</li><li>(b) 代入 \(x=4\)：\(6(16)-11(4)-10=96-44-10=42\) cm\(^{2}\)。</li><li>(b) 直接驗算：長 \(=14\) cm，闊 \(=3\) cm，面積 \(=14\times 3=42\) cm\(^{2}\) ✓。</li><li>(c) 周界 \(=2[(3x+2)+(2x-5)]=2(5x-3)=10x-6\) cm。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩個中間乘積要連同符號相加：\(-15x+4x=-11x\)。周界若寫成 \(5x-3\)，就是漏了因子 \(2\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>恆等式與比較係數 <span class="count">· 7 題</span></h2>
+    <p>比較兩邊 \(x^{n}\) 的係數</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>恆等式 \(\equiv\) 對<i>每一個</i> \(x\) 值都成立，所以兩邊同一次冪的 \(x\) 係數必須相等。實際做法：先把乘積那邊完全展開，把各項按降冪排好，然後逐一比較 \(x^{3}\)、\(x^{2}\)、\(x\) 的係數與常數項。先由首項係數與常數項入手 —— 它們各自立刻給出一個未知數。另一種方法是代入巧妙的值（例如見到 \((x-8)\) 就代 \(x=8\)），令整個乘積消失。</p><div class="formula"><span>\(Ax^{2}+Bx+C\equiv ax^{2}+bx+c\Rightarrow A=a,\ B=b,\ C=c\)</span><span>\((x+p)(x+q)=x^{2}+(p+q)x+pq\)</span><span>\((x-2)(ax^{2}+bx+c)=ax^{3}+(b-2a)x^{2}+(c-2b)x-2c\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>若 \((x+3)(x-5)\equiv x^{2}+ax+b\)，求 \(a\) 和 \(b\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=-2\)，\(b=-15\)</div>
+<ol class="steps">
+<li>展開左邊：\((x+3)(x-5)=x^{2}-5x+3x-15=x^{2}-2x-15\)。</li><li>與 \(x^{2}+ax+b\) 比較係數：\(x\) 的係數是 \(a=-2\)，常數項是 \(b=-15\)。</li><li>以 \(x=0\) 驗算：左邊 \(=3\times(-5)=-15\)，右邊 \(=b=-15\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(b\) 是展開後乘積的常數項，即 \(3\times(-5)=-15\)，不是 \(3\)，也不是 \(-5\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>若對所有 \(x\) 值均有 \(A(x+1)+B(x-2)\equiv 5x-4\)，求常數 \(A\) 和 \(B\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(A=2\)，\(B=3\)</div>
+<ol class="steps">
+<li>展開左邊：\(Ax+A+Bx-2B=(A+B)x+(A-2B)\)。</li><li>比較係數：\(A+B=5\) … (1)，\(A-2B=-4\) … (2)。</li><li>(1) − (2)：\(3B=9\)，所以 \(B=3\)；於是 \(A=2\)。</li><li>驗算：\(2(x+1)+3(x-2)=2x+2+3x-6=5x-4\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>常數部分是 \(A-2B\)，不是 \(A-B\)：\(-2\) 要乘 \(B\) 的全部。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>若 \((2x-1)(x+4)\equiv 2x^{2}+px+q\)，求 \(p\) 和 \(q\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(p=7\)，\(q=-4\)</div>
+<ol class="steps">
+<li>展開：\((2x-1)(x+4)=2x^{2}+8x-x-4\)。</li><li>\(=2x^{2}+7x-4\)。</li><li>與 \(2x^{2}+px+q\) 比較：\(p=7\)，\(q=-4\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只比較表面寫出的數字，會得 \(p=-1\) 或 \(p=8\)；必須先把兩個 \(x\) 的乘積合併。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>若對所有 \(x\) 均有 \(x^{2}+ax+7\equiv (x+2)(x+b)+3\)，求 \(a\) 和 \(b\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=4\)，\(b=2\)</div>
+<ol class="steps">
+<li>展開右邊：\((x+2)(x+b)+3=x^{2}+bx+2x+2b+3=x^{2}+(b+2)x+(2b+3)\)。</li><li>比較常數項：\(7=2b+3\)，所以 \(2b=4\)，\(b=2\)。</li><li>比較 \(x\) 的係數：\(a=b+2=4\)。</li><li>驗算：\((x+2)(x+2)+3=x^{2}+4x+4+3=x^{2}+4x+7\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>括號外的 \(+3\) 要在展開<i>之後</i>加到常數項，它不會併入 \(x\) 的係數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P1_Q12.html" target="_blank" rel="noopener">歷年試題 · 2013 Paper 1 Q12 ↗</a></div>
+<div class="q__body"><p>已知 \(x^{3}+ax^{2}+bx+6\equiv (x+1)(x-2)(x+c)\)，其中 \(a\)、\(b\)、\(c\) 是常數。<br>(a) 求 \(a\)、\(b\) 和 \(c\)。<br>(b) 由此解方程 \(x^{3}+ax^{2}+bx+6=0\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(a=-4,\ b=1,\ c=-3\)　(b) \(x=-1,\ 2\) 或 \(3\)</div>
+<ol class="steps">
+<li>(a) 分兩步展開右邊。先算 \((x+1)(x-2)=x^{2}-x-2\)。</li><li>再算 \((x^{2}-x-2)(x+c)=x^{3}+cx^{2}-x^{2}-cx-2x-2c=x^{3}+(c-1)x^{2}+(-c-2)x-2c\)。</li><li>比較常數項：\(-2c=6\)，所以 \(c=-3\)。</li><li>比較 \(x^{2}\) 的係數：\(a=c-1=-4\)。比較 \(x\) 的係數：\(b=-c-2=3-2=1\)。</li><li>所以該多項式為 \(x^{3}-4x^{2}+x+6=(x+1)(x-2)(x-3)\)。</li><li>(b) 乘積為零，只要其中一個因式為零：\(x=-1\)、\(x=2\) 或 \(x=3\)。</li><li>以展開驗算：\((x+1)(x-2)(x-3)=(x^{2}-x-2)(x-3)=x^{3}-4x^{2}+x+6\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>乘積的常數項是 \((1)(-2)(c)=-2c\)，所以 \(c=-3\)，不是 \(+3\)。\(c\) 的正負錯了，\(a\) 和 \(b\) 都會跟着錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q4.html" target="_blank" rel="noopener">歷年試題 · 2019 Paper 2 Q4 ↗</a></div>
+<div class="q__body"><p>若 \(\alpha\) 和 \(\beta\) 是常數，且對所有 \(x\) 值均有 \((x-5)(x+\alpha)-4\equiv (x-7)^{2}+\beta\)，求 \(\alpha\) 和 \(\beta\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\alpha=-9\)，\(\beta=-8\)</div>
+<ol class="steps">
+<li>方法一 —— 代入巧妙的值。取 \(x=5\)，令因式 \((x-5)\) 變成零。</li><li>左邊：\((5-5)(5+\alpha)-4=0-4=-4\)。右邊：\((5-7)^{2}+\beta=4+\beta\)。</li><li>所以 \(-4=4+\beta\)，得 \(\beta=-8\)。</li><li>方法二 —— 比較係數。左邊：\(x^{2}+(\alpha-5)x+(-5\alpha-4)\)。右邊：\(x^{2}-14x+(49+\beta)\)。</li><li>比較 \(x\) 的係數：\(\alpha-5=-14\)，所以 \(\alpha=-9\)。</li><li>檢查常數項：\(-5(-9)-4=41\)，而 \(49+(-8)=41\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>代入 \(x=7\) 而不是 \(x=5\)，左邊不會有任何一項消失。要選令其中一邊括號為零的值，而那一邊是你算得到的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>已知對所有 \(x\) 值均有 \(3x^{2}+x+1\equiv A(x-1)^{2}+B(x-1)+C\)，其中 \(A\)、\(B\)、\(C\) 是常數。<br>(a) 求 \(A\)、\(B\) 和 \(C\)。<br>(b) 由此寫出 \(x=1\) 時該式的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(A=3,\ B=7,\ C=5\)　(b) 5</div>
+<ol class="steps">
+<li>展開右邊：\(A(x^{2}-2x+1)+Bx-B+C=Ax^{2}+(-2A+B)x+(A-B+C)\)。</li><li>比較 \(x^{2}\) 的係數：\(A=3\)。</li><li>比較 \(x\) 的係數：\(-2A+B=1\)，所以 \(-6+B=1\)，\(B=7\)。</li><li>比較常數項：\(A-B+C=1\)，所以 \(3-7+C=1\)，\(C=5\)。</li><li>以展開驗算：\(3(x-1)^{2}+7(x-1)+5=3x^{2}-6x+3+7x-7+5=3x^{2}+x+1\) ✓。</li><li>(b) 代入 \(x=1\)：所有含 \((x-1)\) 的項都消失，所以值就是 \(C=5\)；直接計算 \(3+1+1=5\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>比較常數項時要取 \(A-B+C\)，不是 \(C\)。\(A(x-1)^{2}\) 帶來的 \(+A\) 和 \(B(x-1)\) 帶來的 \(-B\) 都要計入。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>因式分解：提取公因式、分組、十字相乘 <span class="count">· 7 題</span></h2>
+    <p>先提公因式，再分組或十字相乘</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>任何時候都先提取最大公因式（HCF），之後每一步都會變簡單。四項式就兩兩分組，令同一個括號出現兩次，再把該括號提出。對於二次式 \(ax^{2}+bx+c\)，找出兩個數，其積為 \(ac\)、和為 \(b\)；把中間項拆開，再分組分解（十字相乘法）。</p><div class="formula"><span>\(ab+ac=a(b+c)\)</span><span>\(ax^{2}+bx+c\): 積 \(ac\)，和 \(b\)</span><span>\(ac+ad+bc+bd=(a+b)(c+d)\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>因式分解 \(6x^{2}-9x\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3x(2x-3)\)</div>
+<ol class="steps">
+<li>\(6x^{2}\) 與 \(9x\) 的 HCF 是 \(3x\)。</li><li>\(6x^{2}-9x=3x\cdot 2x-3x\cdot 3\)。</li><li>\(=3x(2x-3)\)。</li><li>以展開驗算：\(3x(2x-3)=6x^{2}-9x\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只提出 \(3\)，留下 \(3(2x^{2}-3x)\)，並未分解完成 —— \(x\) 也是公因式。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>因式分解 \(x^{2}+7x+12\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((x+3)(x+4)\)</div>
+<ol class="steps">
+<li>要兩個數，其積為 \(12\)、和為 \(7\)：就是 \(3\) 和 \(4\)。</li><li>\(x^{2}+7x+12=(x+3)(x+4)\)。</li><li>以展開驗算：\(x^{2}+4x+3x+12=x^{2}+7x+12\) ✓。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>因式分解 \(2x^{2}-5x-3\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((2x+1)(x-3)\)</div>
+<ol class="steps">
+<li>此處 \(ac=2\times(-3)=-6\)，\(b=-5\)。兩個數是 \(1\) 和 \(-6\)（積 \(-6\)，和 \(-5\)）。</li><li>拆開中間項：\(2x^{2}+x-6x-3\)。</li><li>分組：\(x(2x+1)-3(2x+1)\)。</li><li>\(=(2x+1)(x-3)\)。驗算：\(2x^{2}-6x+x-3=2x^{2}-5x-3\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩個數的積必須是 \(ac=-6\)，不是 \(c=-3\)。用 \(1\) 和 \(-3\) 會得和 \(-2\)，拆項就失敗。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>因式分解 \(2x^{3}+6x^{2}-x-3\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((x+3)(2x^{2}-1)\)</div>
+<ol class="steps">
+<li>兩兩分組：\((2x^{3}+6x^{2})+(-x-3)\)。</li><li>\(=2x^{2}(x+3)-1(x+3)\)。</li><li>括號 \((x+3)\) 是共同的：\(=(x+3)(2x^{2}-1)\)。</li><li>驗算：\((x+3)(2x^{2}-1)=2x^{3}-x+6x^{2}-3=2x^{3}+6x^{2}-x-3\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由 \(-x-3\) 提出的公因式是 \(-1\)，得 \(-1(x+3)\)。寫成 \(+1(x-3)\) 就與第一個括號對不上。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2026_P1_Q4.html" target="_blank" rel="noopener">歷年試題 · 2026 Paper 1 Q4 ↗</a></div>
+<div class="q__body"><p>因式分解<br>(a) \(2x^{2}y+5xy-12y\)，<br>(b) \(2x^{2}y+5xy-12y-6x+9\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(y(2x-3)(x+4)\)　(b) \((2x-3)\left[y(x+4)-3\right]\)</div>
+<ol class="steps">
+<li>(a) 每一項都含 \(y\)：\(2x^{2}y+5xy-12y=y(2x^{2}+5x-12)\)。</li><li>對 \(2x^{2}+5x-12\)：\(ac=-24\)、\(b=5\)，故用 \(8\) 和 \(-3\)。於是 \(2x^{2}+8x-3x-12=2x(x+4)-3(x+4)=(2x-3)(x+4)\)。</li><li>故 (a) \(=y(2x-3)(x+4)\)。</li><li>(b) 用 (a) 的結果處理首三項，並由最後兩項提出 \(-3\)：\(y(2x-3)(x+4)-3(2x-3)\)。</li><li>兩部分都含 \((2x-3)\)，故 (b) \(=(2x-3)\left[y(x+4)-3\right]\)。</li><li>以展開驗算：\((2x-3)(xy+4y-3)=2x^{2}y+8xy-6x-3xy-12y+9=2x^{2}y+5xy-12y-6x+9\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中最後兩項是 \(-6x+9=-3(2x-3)\)，所以提出的括號是 \(-3\)，不是 \(+3\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>因式分解 \(2x^{2}+xy-6y^{2}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((2x-3y)(x+2y)\)</div>
+<ol class="steps">
+<li>視為關於 \(x\) 的二次式：\(a=2\)，\(b=y\)，\(c=-6y^{2}\)，所以 \(ac=-12y^{2}\)，而需要的和是 \(y\)。</li><li>兩個數是 \(4y\) 和 \(-3y\)（積 \(-12y^{2}\)，和 \(y\)）。</li><li>拆項：\(2x^{2}+4xy-3xy-6y^{2}\)。</li><li>分組：\(2x(x+2y)-3y(x+2y)=(2x-3y)(x+2y)\)。</li><li>驗算：\(2x^{2}+4xy-3xy-6y^{2}=2x^{2}+xy-6y^{2}\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>中間項是 \(1xy\)，不是 \(0\)。忘記它的係數，拆成 \(+4xy-3xy\) 就無法解釋。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P1_Q5.html" target="_blank" rel="noopener">歷年試題 · 2018 Paper 1 Q5 ↗</a></div>
+<div class="q__body"><p>因式分解<br>(a) \(8a^{3}-12a^{2}b\)，<br>(b) \(8a^{3}-12a^{2}b-18ab^{2}+27b^{3}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(4a^{2}(2a-3b)\)　(b) \((2a-3b)^{2}(2a+3b)\)</div>
+<ol class="steps">
+<li>(a) \(8a^{3}\) 與 \(12a^{2}b\) 的 HCF 是 \(4a^{2}\)：\(8a^{3}-12a^{2}b=4a^{2}(2a-3b)\)。</li><li>(b) 把四項分成 (a) 那一對和餘下的一對：\(4a^{2}(2a-3b)-9b^{2}(2a-3b)\)。</li><li>提出 \((2a-3b)\)：\(=(2a-3b)(4a^{2}-9b^{2})\)。</li><li>把平方差分解：\(4a^{2}-9b^{2}=(2a)^{2}-(3b)^{2}=(2a-3b)(2a+3b)\)。</li><li>故 (b) \(=(2a-3b)(2a-3b)(2a+3b)=(2a-3b)^{2}(2a+3b)\)。</li><li>驗算：\((2a-3b)(4a^{2}-9b^{2})=8a^{3}-18ab^{2}-12a^{2}b+27b^{3}\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第二對 \(-18ab^{2}+27b^{3}\) 要提出 \(-9b^{2}\)，才得 \(-9b^{2}(2a-3b)\)。提出 \(+9b^{2}\) 留下的括號永遠對不上。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>代數恆等式：完全平方、平方差、立方 <span class="count">· 7 題</span></h2>
+    <p>雙向辨認公式模式</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>這三組恆等式都可雙向運用 —— 既可用來展開乘積，也可用來辨認模式作因式分解。判斷平方差，就看是否兩個完全平方數相減；判斷完全平方，就核對中間項是否剛好是兩個平方根的乘積之兩倍。至於立方，二次因式 \(a^{2}\mp ab+b^{2}\) 在有理數範圍內不能再分解。</p><div class="formula"><span>\(a^{2}-b^{2}=(a-b)(a+b)\)</span><span>\((a\pm b)^{2}=a^{2}\pm 2ab+b^{2}\)</span><span>\(a^{3}\pm b^{3}=(a\pm b)(a^{2}\mp ab+b^{2})\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>展開 \((3x+2)(3x-2)\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(9x^{2}-4\)</div>
+<ol class="steps">
+<li>這是平方差，其中 \(a=3x\)、\(b=2\)。</li><li>\((3x+2)(3x-2)=(3x)^{2}-(2)^{2}\)。</li><li>\(=9x^{2}-4\)。</li><li>以完整展開驗算：\(9x^{2}-6x+6x-4=9x^{2}-4\) ✓ —— 中間兩項互相抵消。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((3x)^{2}=9x^{2}\)，不是 \(3x^{2}\)。係數也要一併平方。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>展開 \((2a-5b)^{2}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4a^{2}-20ab+25b^{2}\)</div>
+<ol class="steps">
+<li>用 \((A-B)^{2}=A^{2}-2AB+B^{2}\)，其中 \(A=2a\)、\(B=5b\)。</li><li>\(A^{2}=4a^{2}\)，\(2AB=2(2a)(5b)=20ab\)，\(B^{2}=25b^{2}\)。</li><li>\((2a-5b)^{2}=4a^{2}-20ab+25b^{2}\)。</li><li>以 \(a=2,b=1\) 驗算：\((4-5)^{2}=1\)，而 \(16-40+25=1\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((2a-5b)^{2}\neq 4a^{2}+25b^{2}\)。中間項 \(-20ab\) 不可略去。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>因式分解 \(16x^{2}-81y^{2}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((4x+9y)(4x-9y)\)</div>
+<ol class="steps">
+<li>兩項都是完全平方：\(16x^{2}=(4x)^{2}\)，\(81y^{2}=(9y)^{2}\)。</li><li>套用 \(a^{2}-b^{2}=(a+b)(a-b)\)，其中 \(a=4x\)、\(b=9y\)。</li><li>\(16x^{2}-81y^{2}=(4x+9y)(4x-9y)\)。</li><li>驗算：\((4x)^{2}-(9y)^{2}=16x^{2}-81y^{2}\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>平方和 \(16x^{2}+81y^{2}\) <i>不能</i>分解。只有平方差才可以。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把 \(x^{4}-16\) 完全因式分解。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((x^{2}+4)(x+2)(x-2)\)</div>
+<ol class="steps">
+<li>把 \(x^{4}\) 寫成 \((x^{2})^{2}\)，把 \(16\) 寫成 \(4^{2}\)：\(x^{4}-16=(x^{2})^{2}-4^{2}\)。</li><li>平方差：\(=(x^{2}+4)(x^{2}-4)\)。</li><li>第二個括號又是平方差：\(x^{2}-4=(x+2)(x-2)\)。</li><li>所以 \(x^{4}-16=(x^{2}+4)(x+2)(x-2)\)，而 \(x^{2}+4\) 不能再分解。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>停在 \((x^{2}+4)(x^{2}-4)\) 並未完成 —— \(x^{2}-4\) 仍可分解。相反，\(x^{2}+4\) 則無法再拆。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2012_P1_Q3.html" target="_blank" rel="noopener">歷年試題 · 2012 Paper 1 Q3 ↗</a></div>
+<div class="q__body"><p>因式分解<br>(a) \(4p^{2}-20pq+25q^{2}\)，<br>(b) \(4p^{2}-20pq+25q^{2}+6p-15q\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((2p-5q)^{2}\)　(b) \((2p-5q)(2p-5q+3)\)</div>
+<ol class="steps">
+<li>(a) 核對模式：\(4p^{2}=(2p)^{2}\)，\(25q^{2}=(5q)^{2}\)，而中間項 \(-20pq=-2(2p)(5q)\)。</li><li>所以 (a) \(=(2p-5q)^{2}\)。</li><li>(b) 最後兩項有公因式 \(3\)：\(6p-15q=3(2p-5q)\)。</li><li>所以整個式子為 \((2p-5q)^{2}+3(2p-5q)\)。</li><li>提出共同的括號：\(=(2p-5q)\left[(2p-5q)+3\right]=(2p-5q)(2p-5q+3)\)。</li><li>驗算：\((2p-5q)^{2}+6p-15q=4p^{2}-20pq+25q^{2}+6p-15q\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中把 \((2p-5q)\) 視為單一字母 \(A\)：整個式子是 \(A^{2}+3A=A(A+3)\)，不是 \(A^{2}+3\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>利用恆等式 \(a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})\)，因式分解 \(64x^{3}-27y^{3}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\((4x-3y)(16x^{2}+12xy+9y^{2})\)</div>
+<ol class="steps">
+<li>把每一項寫成立方：\(64x^{3}=(4x)^{3}\)，\(27y^{3}=(3y)^{3}\)，所以 \(a=4x\)、\(b=3y\)。</li><li>於是 \(a^{2}=16x^{2}\)，\(ab=(4x)(3y)=12xy\)，\(b^{2}=9y^{2}\)。</li><li>\(64x^{3}-27y^{3}=(4x-3y)(16x^{2}+12xy+9y^{2})\)。</li><li>以展開驗算：\(64x^{3}+48x^{2}y+36xy^{2}-48x^{2}y-36xy^{2}-27y^{3}=64x^{3}-27y^{3}\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>二次因式是 \(+ab\)，所以中間項是 \(+12xy\)。寫成 \(-12xy\) 是立方和的情況。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>已知 \(x+y=9\) 及 \(xy=14\)。<br>(a) 求 \(x^{2}+y^{2}\)。<br>(b) 由此求 \((x-y)^{2}\) 的值。<br>(c) 利用 \(x^{3}+y^{3}=(x+y)(x^{2}-xy+y^{2})\)，求 \(x^{3}+y^{3}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 53　(b) 25　(c) 351</div>
+<ol class="steps">
+<li>(a) 由 \((x+y)^{2}=x^{2}+2xy+y^{2}\) 出發，得 \(x^{2}+y^{2}=(x+y)^{2}-2xy\)。</li><li>\(=9^{2}-2(14)=81-28=53\)。</li><li>(b) \((x-y)^{2}=x^{2}-2xy+y^{2}=(x^{2}+y^{2})-2xy=53-28=25\)。</li><li>(c) \(x^{2}-xy+y^{2}=53-14=39\)，所以 \(x^{3}+y^{3}=(9)(39)=351\)。</li><li>驗算：解 \(x+y=9\)、\(xy=14\) 得 \(x=7,\ y=2\)。於是 \(7^{2}+2^{2}=53\)、\((7-2)^{2}=25\)、\(343+8=351\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (a) 中要修正的是 \(-2xy\)，不是 \(+2xy\)。另外 \(x-y=\pm 5\)，所以寫 \((x-y)^{2}\) 比直接寫 \(x-y=5\) 穩妥。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>餘式定理與因式定理 <span class="count">· 7 題</span></h2>
+    <p>代入除式的零點</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>當 \(f(x)\) 除以 \((x-a)\) 時，餘式就是 \(f(a)\) —— 不必做長除法。若除式是 \((bx-a)\)，先解 \(bx-a=0\)，再代入該值。因式定理就是餘式 \(=0\) 的特例：\((x-a)\) 是因式，當且僅當 \(f(a)=0\)。所以求餘式的題目其實是代入題，而判斷因式的題目就變成解一條短方程。</p><div class="formula"><span>\(f(x)=(x-a)Q(x)+f(a)\)</span><span>\(\text{除式 }bx-a:\ x=\frac{a}{b}\)</span><span>\((x-a)\text{ 是因式}\iff f(a)=0\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求 \(f(x)=x^{3}+2x^{2}-5x+1\) 除以 \(x-2\) 的餘式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>7</div>
+<ol class="steps">
+<li>由餘式定理，餘式是 \(f(2)\)。</li><li>\(f(2)=2^{3}+2(2)^{2}-5(2)+1\)。</li><li>\(=8+8-10+1\)。</li><li>\(=7\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以 \(x-2\) 即代入 \(x=+2\)。用 \(-2\) 得到的是除以 \(x+2\) 的餘式。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求 \(f(x)=2x^{3}-4x^{2}+x-3\) 除以 \(x+1\) 的餘式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(-10\)</div>
+<ol class="steps">
+<li>由 \(x+1=0\) 得 \(x=-1\)，所以餘式是 \(f(-1)\)。</li><li>\(f(-1)=2(-1)^{3}-4(-1)^{2}+(-1)-3\)。</li><li>\(=-2-4-1-3\)。</li><li>\(=-10\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((-1)^{3}=-1\)，但 \((-1)^{2}=+1\)，所以首兩項是 \(-2\) 和 \(-4\)。若兩項都當作正數，餘式就會錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>設 \(f(x)=x^{3}-2x^{2}-5x+6\)。<br>(a) 證明 \(x-3\) 是 \(f(x)\) 的因式。<br>(b) 由此把 \(f(x)\) 完全因式分解。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(f(3)=0\)　(b) \((x-3)(x+2)(x-1)\)</div>
+<ol class="steps">
+<li>(a) \(f(3)=3^{3}-2(3)^{2}-5(3)+6=27-18-15+6=0\)。</li><li>因為 \(f(3)=0\)，由因式定理，\(x-3\) 是 \(f(x)\) 的因式。</li><li>(b) 除以 \(x-3\)：\(f(x)=(x-3)(x^{2}+x-2)\)。</li><li>把二次式分解：\(x^{2}+x-2=(x+2)(x-1)\)。</li><li>所以 \(f(x)=(x-3)(x+2)(x-1)\)。</li><li>以展開驗算：\((x-3)(x^{2}+x-2)=x^{3}+x^{2}-2x-3x^{2}-3x+6=x^{3}-2x^{2}-5x+6\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>餘式為零只證明可整除；要連二次的商也分解，答案才算完整。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>設 \(f(x)=2x^{3}+ax^{2}-7x+3\)，其中 \(a\) 是常數。若 \(x-1\) 是 \(f(x)\) 的因式，求 \(a\)，並由此把 \(f(x)\) 因式分解。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=2\)；\(f(x)=(x-1)(2x^{2}+4x-3)\)</div>
+<ol class="steps">
+<li>由因式定理，\(f(1)=0\)：\(2(1)^{3}+a(1)^{2}-7(1)+3=0\)。</li><li>\(2+a-7+3=0\)，所以 \(a-2=0\)，\(a=2\)。</li><li>此時 \(f(x)=2x^{3}+2x^{2}-7x+3\)。除以 \(x-1\)，得 \(2x^{2}+4x-3\)。</li><li>核對除法：\((x-1)(2x^{2}+4x-3)=2x^{3}+4x^{2}-3x-2x^{2}-4x+3=2x^{3}+2x^{2}-7x+3\) ✓。</li><li>二次因式的判別式為 \(16+24=40\)，不是完全平方，所以在有理數範圍內不能再分解。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(f(1)=0\) 給出 \(2+a-7+3=0\)，即 \(a=2\)。在 \(-7(1)\) 上錯一個符號就得 \(a=12\)，整題毀掉。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q7.html" target="_blank" rel="noopener">歷年試題 · 2017 Paper 2 Q7 ↗</a></div>
+<div class="q__body"><p>設 \(p(x)=2x^{2}-7x+c\)，其中 \(c\) 是常數。已知 \(p(x)\) 可被 \(x-5\) 整除。<br>(a) 求 \(c\)。<br>(b) 求 \(p(x)\) 除以 \(2x+1\) 的餘式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(c=-15\)　(b) \(-11\)</div>
+<ol class="steps">
+<li>(a) 可被 \(x-5\) 整除即 \(p(5)=0\)：\(2(25)-7(5)+c=50-35+c=15+c\)。</li><li>所以 \(15+c=0\)，\(c=-15\)；故 \(p(x)=2x^{2}-7x-15\)。</li><li>(b) 由 \(2x+1=0\) 得 \(x=-\frac{1}{2}\)，所以餘式是 \(p\left(-\frac{1}{2}\right)\)。</li><li>\(p\left(-\frac{1}{2}\right)=2\left(\frac{1}{4}\right)-7\left(-\frac{1}{2}\right)-15=\frac{1}{2}+\frac{7}{2}-15\)。</li><li>\(=4-15=-11\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除式是 \(2x+1\)，要代入的值是 \(-\frac{1}{2}\)，不是 \(-1\)。另外 \(-7\times(-\frac{1}{2})=+\frac{7}{2}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>設 \(f(x)=2x^{3}+x^{2}-13x+6\)。<br>(a) 證明 \(x-2\) 是 \(f(x)\) 的因式。<br>(b) 把 \(f(x)\) 完全因式分解。<br>(c) 由此解 \(f(x)=0\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(f(2)=0\)　(b) \((x-2)(2x-1)(x+3)\)　(c) \(x=2,\ \frac{1}{2}\) 或 \(-3\)</div>
+<ol class="steps">
+<li>(a) \(f(2)=2(8)+4-26+6=16+4-26+6=0\)，所以 \(x-2\) 是因式。</li><li>(b) 相除：\(f(x)=(x-2)(2x^{2}+5x-3)\)。</li><li>把二次式分解：\(2x^{2}+5x-3=2x^{2}+6x-x-3=(2x-1)(x+3)\)。</li><li>所以 \(f(x)=(x-2)(2x-1)(x+3)\)。</li><li>核對常數項：\((-2)(-1)(3)=6\) ✓，與題目的 \(+6\) 相符。</li><li>(c) 每個因式都可以為零：\(x=2\)、\(x=\frac{1}{2}\) 或 \(x=-3\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>核對常數項是最快的防錯方法：三個常數相乘必須得 \(+6\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P1_Q7.html" target="_blank" rel="noopener">歷年試題 · 2014 Paper 1 Q7 ↗</a></div>
+<div class="q__body"><p>設 \(f(x)=4x^{3}-5x^{2}-18x+c\)，其中 \(c\) 是常數。當 \(f(x)\) 除以 \(x-2\) 時，餘式是 \(-33\)。<br>(a) 求 \(c\)。<br>(b) \(x+1\) 是否 \(f(x)\) 的因式？試解釋。<br>(c) 解 \(f(x)=0\)。所有根都是有理數嗎？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(c=-9\)　(b) 是，\(f(-1)=0\)　(c) \(x=-1,\ 3,\ -\frac{3}{4}\)；所有根都是有理數</div>
+<ol class="steps">
+<li>(a) \(f(2)=4(8)-5(4)-18(2)+c=32-20-36+c=-24+c\)。</li><li>已知 \(-24+c=-33\)，所以 \(c=-9\)，而 \(f(x)=4x^{3}-5x^{2}-18x-9\)。</li><li>(b) \(f(-1)=4(-1)-5(1)+18-9=-4-5+18-9=0\)。</li><li>因為 \(f(-1)=0\)，由因式定理，\(x+1\) <i>是</i>因式。</li><li>(c) 除以 \(x+1\)：\(4x^{3}-5x^{2}-18x-9=(x+1)(4x^{2}-9x-9)\)。</li><li>把 \(4x^{2}-9x-9\) 分解：積 \(-36\)、和 \(-9\)，故拆成 \(-12x+3x\)：\(4x^{2}-12x+3x-9=(x-3)(4x+3)\)。</li><li>所以 \(f(x)=(x+1)(x-3)(4x+3)\)，根為 \(x=-1,\ 3,\ -\frac{3}{4}\)。</li><li>三個都是整數或整數的分數，所以每個根都是有理數。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (c) 中 \(-\frac{3}{4}\) 仍然是有理數：有理數就是兩個整數之比。不要因為它不是整數就說它無理。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度：長除法、HCF／LCM、多部分證明 <span class="count">· 8 題</span></h2>
+    <p>在考試壓力下綜合運用整個課題</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>卷一的多項式題目把各種技巧串連起來：先用因式定理求未知常數，再相除得出二次的商，然後把它完全分解。長除法要按降冪排列，缺項要補 \(0x\)。求 HCF 與 LCM 時，先把每個多項式分解為質因式的乘積 —— HCF 取每個公因式的<i>最低</i>次冪，LCM 則取每個因式的<i>最高</i>次冪。</p><div class="formula"><span>\(f(x)=(x-a)Q(x)+R\)</span><span>\(\text{HCF}: \text{最低次冪} \quad \text{LCM}: \text{最高次冪}\)</span><span>\(\text{HCF}\times\text{LCM}=P\times Q\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 \(x^{2}+5x+6\) 除以 \(x+2\)，寫出商及餘式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>商 \(x+3\)，餘式 \(0\)</div>
+<ol class="steps">
+<li>\(x^{2}\div x=x\)。相乘：\(x(x+2)=x^{2}+2x\)。</li><li>相減：\((x^{2}+5x+6)-(x^{2}+2x)=3x+6\)。</li><li>\(3x\div x=3\)。相乘：\(3(x+2)=3x+6\)。</li><li>相減：\((3x+6)-(3x+6)=0\)。商是 \(x+3\)，餘式是 \(0\)。</li><li>驗算：\((x+2)(x+3)=x^{2}+5x+6\) ✓。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求 \(4x^{2}y\) 與 \(6xy^{3}\) 的 HCF 及 LCM。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>HCF \(=2xy\)，LCM \(=12x^{2}y^{3}\)</div>
+<ol class="steps">
+<li>先把兩式寫成質因式的乘積：\(4x^{2}y=2^{2}\cdot x^{2}\cdot y\)，\(6xy^{3}=2\cdot 3\cdot x\cdot y^{3}\)。</li><li>HCF 取每個公因式的最低次冪：\(2^{1}x^{1}y^{1}=2xy\)。</li><li>LCM 取每個因式的最高次冪：\(2^{2}\cdot 3\cdot x^{2}\cdot y^{3}=12x^{2}y^{3}\)。</li><li>驗算：\(\text{HCF}\times\text{LCM}=2xy\times 12x^{2}y^{3}=24x^{3}y^{4}\)，而 \(4x^{2}y\times 6xy^{3}=24x^{3}y^{4}\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>HCF 不是 \(2x^{2}y^{3}\)：HCF 必須同時整除兩式，所以取<i>最小</i>次冪，不是最大。</p></div>
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求 \(3x^{3}+x^{2}-4x+5\) 除以 \(x+2\) 的商及餘式。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>商 \(3x^{2}-5x+6\)，餘式 \(-7\)</div>
+<ol class="steps">
+<li>\(3x^{3}\div x=3x^{2}\)；減去 \(3x^{2}(x+2)=3x^{3}+6x^{2}\)，餘下 \(-5x^{2}-4x+5\)。</li><li>\(-5x^{2}\div x=-5x\)；減去 \(-5x(x+2)=-5x^{2}-10x\)，餘下 \(6x+5\)。</li><li>\(6x\div x=6\)；減去 \(6(x+2)=6x+12\)，餘下 \(-7\)。</li><li>所以商是 \(3x^{2}-5x+6\)，餘式是 \(-7\)。</li><li>以餘式定理驗算：\(f(-2)=3(-8)+4+8+5=-24+17=-7\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>從 \(6x+5\) 減去 \(6x+12\)，餘式是 \(-7\)，不是 \(+7\)。減去較大的數，餘式就是負數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求 \(x^{2}-4\) 與 \(x^{2}-x-6\) 的 HCF 及 LCM，答案以因式分解形式表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>HCF \(=x+2\)，LCM \(=(x+2)(x-2)(x-3)\)</div>
+<ol class="steps">
+<li>先把兩式分解：\(x^{2}-4=(x+2)(x-2)\)，\(x^{2}-x-6=(x-3)(x+2)\)。</li><li>兩式唯一的公因式是 \(x+2\)，所以 HCF \(=x+2\)。</li><li>LCM 要包含每個因式的最高次冪：\((x+2)(x-2)(x-3)\)。</li><li>驗算：把 LCM 展開得 \(x^{3}-3x^{2}-4x+12\)，除以 \(x^{2}-4\) 餘下 \(x-3\)，除以 \(x^{2}-x-6\) 餘下 \(x-2\) —— 兩者都是多項式 ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>LCM 中的公因式 \((x+2)\) 只取一次。寫成 \((x+2)^{2}(x-2)(x-3)\) 就不是最小公倍式。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>設 \(f(x)=2x^{3}+px^{2}+qx-6\)，其中 \(p\) 和 \(q\) 是常數。已知 \(x-1\) 和 \(x+1\) 都是 \(f(x)\) 的因式。<br>(a) 求 \(p\) 和 \(q\)。<br>(b) 由此把 \(f(x)\) 完全因式分解。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(p=6,\ q=-2\)　(b) \(2(x+3)(x-1)(x+1)\)</div>
+<ol class="steps">
+<li>(a) \(f(1)=2+p+q-6=0\)，所以 \(p+q=4\) … (1)。</li><li>\(f(-1)=-2+p-q-6=0\)，所以 \(p-q=8\) … (2)。</li><li>(1)+(2)：\(2p=12\)，所以 \(p=6\)；於是 \(q=-2\)。</li><li>故 \(f(x)=2x^{3}+6x^{2}-2x-6\)。</li><li>(b) 以分組法分解：\(2x^{3}+6x^{2}-2x-6=2x^{2}(x+3)-2(x+3)=(x+3)(2x^{2}-2)\)。</li><li>而 \(2x^{2}-2=2(x^{2}-1)=2(x-1)(x+1)\)，所以 \(f(x)=2(x+3)(x-1)(x+1)\)。</li><li>核對常數項：\(2\times 3\times(-1)\times 1=-6\) ✓，與題目的 \(-6\) 相符。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (b) 中由 \(2x^{2}-2\) 提出的 \(2\) 不能丟：要寫 \(2(x^{2}-1)\)，不是 \(x^{2}-1\)。另外留意 \(f(-1)=0\) 給出 \(-2+p-q-6\)，即 \(p-q=8\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>設 \(f(x)=6x^{3}+x^{2}-19x+6\)。<br>(a) 證明 \(3x-1\) 是 \(f(x)\) 的因式。<br>(b) 把 \(f(x)\) 完全因式分解。<br>(c) 由此解 \(f(x)=0\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(f\left(\frac{1}{3}\right)=0\)　(b) \((3x-1)(2x-3)(x+2)\)　(c) \(x=\frac{1}{3},\ \frac{3}{2}\) 或 \(-2\)</div>
+<ol class="steps">
+<li>(a) 由 \(3x-1=0\) 得 \(x=\frac{1}{3}\)。於是 \(f\left(\frac{1}{3}\right)=6\left(\frac{1}{27}\right)+\frac{1}{9}-\frac{19}{3}+6\)。</li><li>\(=\frac{2}{9}+\frac{1}{9}-\frac{57}{9}+\frac{54}{9}=\frac{0}{9}=0\)，所以 \(3x-1\) 是因式。</li><li>(b) 把 \(6x^{3}+x^{2}-19x+6\) 除以 \(3x-1\)：\(6x^{3}\div 3x=2x^{2}\)，減去 \(6x^{3}-2x^{2}\) 得 \(3x^{2}-19x\)。</li><li>\(3x^{2}\div 3x=x\)，減去 \(3x^{2}-x\) 得 \(-18x+6\)；然後 \(-18x\div 3x=-6\)，減去 \(-18x+6\) 得 \(0\)。</li><li>所以 \(f(x)=(3x-1)(2x^{2}+x-6)=(3x-1)(2x-3)(x+2)\)。</li><li>(c) \(x=\frac{1}{3}\)、\(x=\frac{3}{2}\) 或 \(x=-2\)。</li><li>以 \(x=-2\) 代入驗算：\(6(-8)+4+38+6=-48+48=0\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因式是 \(3x-1\)，所以根是 \(x=\frac{1}{3}\)，不是 \(x=-\frac{1}{3}\)。先解 \(3x-1=0\)，再代入。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>(a) 證明 \(n^{3}-n\equiv (n-1)n(n+1)\)。<br>(b) 解釋為何對每個正整數 \(n\)，\(n^{3}-n\) 都可被 \(6\) 整除。<br>(c) 以 \(n=10\) 求商，驗證上述結果。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \((n-1)n(n+1)=n^{3}-n\)　(b) 三個連續整數中有一個是偶數，有一個是 \(3\) 的倍數　(c) \(990=6\times 165\)</div>
+<ol class="steps">
+<li>(a) 展開乘積：\((n-1)n(n+1)=n(n^{2}-1)=n^{3}-n\)。</li><li>所以對每個 \(n\) 值，兩式都相同 —— 這是恆等式。</li><li>(b) 由 (a)，\(n^{3}-n=(n-1)n(n+1)\) 是三個連續整數的乘積。</li><li>三個連續整數中剛好有一個是偶數，所以乘積可被 \(2\) 整除。</li><li>三個連續整數中剛好有一個是 \(3\) 的倍數，所以乘積可被 \(3\) 整除。</li><li>因為 \(2\) 與 \(3\) 互質，乘積可被 \(2\times 3=6\) 整除。</li><li>(c) 取 \(n=10\)：\(10^{3}-10=1000-10=990\)，而 \(990\div 6=165\)，所以 \(990=6\times 165\) ✓。</li><li>也用因式形式核對：\(9\times 10\times 11=990\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要只拿一個數去驗證：可被 \(6\) 整除需要同時有因式 \(2\) 和因式 \(3\)，而證明必須解釋為何兩者永遠都存在。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>設 \(f(x)=2x^{3}-3x^{2}-11x+6\)。<br>(a) 證明 \(x-3\) 是 \(f(x)\) 的因式。<br>(b) 把 \(f(x)\) 完全因式分解。<br>(c) 解方程 \(f(x)=0\)。<br>(d) 求 \(f(x)\) 除以 \(x+1\) 的餘式。<br>(e) 寫出 \(f(x)\) 除以 \(2x-1\) 的餘式，並說明理由。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(f(3)=0\)　(b) \((x-3)(x+2)(2x-1)\)　(c) \(x=3,\ -2,\ \frac{1}{2}\)　(d) \(12\)　(e) \(0\)，因為 \(2x-1\) 是因式</div>
+<ol class="steps">
+<li>(a) \(f(3)=2(27)-3(9)-11(3)+6=54-27-33+6=0\)。</li><li>因為 \(f(3)=0\)，由因式定理，\(x-3\) 是 \(f(x)\) 的因式。</li><li>(b) 相除：\(f(x)=(x-3)(2x^{2}+3x-2)\)。以展開核對：\((x-3)(2x^{2}+3x-2)=2x^{3}+3x^{2}-2x-6x^{2}-9x+6=2x^{3}-3x^{2}-11x+6\) ✓。</li><li>把二次式分解：\(2x^{2}+3x-2=(2x-1)(x+2)\)，所以 \(f(x)=(x-3)(2x-1)(x+2)\)。</li><li>(c) \(x=3\)、\(x=\frac{1}{2}\) 或 \(x=-2\)。</li><li>(d) 餘式 \(=f(-1)=2(-1)-3(1)+11+6=-2-3+11+6=12\)。</li><li>(e) 由因式定理，令 \(2x-1=0\) 得 \(x=\frac{1}{2}\)：\(f\left(\frac{1}{2}\right)=2\left(\frac{1}{8}\right)-3\left(\frac{1}{4}\right)-\frac{11}{2}+6=\frac{1}{4}-\frac{3}{4}-\frac{11}{2}+6\)</li><li>\(=-\frac{1}{2}-\frac{11}{2}+6=-6+6=0\)。餘式是 \(0\)，這也與 (b) 中 \((2x-1)\) 是因式相符。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>在 (e) 中除式 \(2x-1\) 要取 \(x=\frac{1}{2}\)，不是 \(x=2\)。另外餘式為零正好與因式分解中出現 \((2x-1)\) 一致 —— 是免費的驗算。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 多項式 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

@@ -1,0 +1,1000 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 百分數 — 7 種題型 50 題（附詳解）","desc":"由 28 道歷年 HKDSE 百分數試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：百分數增減、兩量比較、標價折扣與盈利、一賺一蝕陷阱、複利息與折舊、加權百分數，以及公式、幾何與變分中的百分數。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_Percentages_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 百分數增減</a><a href="#t2" data-t="t2">類型 2 · 兩量比較</a><a href="#t3" data-t="t3">類型 3 · 折扣與盈利</a><a href="#t4" data-t="t4">類型 4 · 一賺一蝕陷阱</a><a href="#t5" data-t="t5">類型 5 · 複利息</a><a href="#t6" data-t="t6">類型 6 · 加權百分數</a><a href="#t7" data-t="t7">類型 7 · 公式與變分</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 百分數</p>
+    <h1 class="hero__title">百分數 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 28 道歷年 DSE 百分數試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>28</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如盈利百分率以成本為基數，不是售價。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>百分數基本增減</td><td>增加、減少、求原值、求增減百分率</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>兩量比較</td><td>「A 比 B 多／少 r%」及其逆算</td><td style='text-align:center'>8</td></tr><tr><td><b>類型 3</b></td><td>標價、折扣、成本與盈利</td><td>成本 → 標價 → 售價 → 盈利</td><td style='text-align:center'>9</td></tr><tr><td><b>類型 4</b></td><td>「一賺一蝕」陷阱</td><td>兩件貨品售價相同，一件 +x%、一件 −x%</td><td style='text-align:center'>6</td></tr><tr><td><b>類型 5</b></td><td>複利息、增長與折舊</td><td>本利和、利息、折舊、反求本金</td><td style='text-align:center'>8</td></tr><tr><td><b>類型 6</b></td><td>部分與整體（加權百分數）</td><td>兩組合併或兩批貨混合</td><td style='text-align:center'>6</td></tr><tr><td><b>類型 7</b></td><td>公式、幾何與變分中的百分數</td><td>面積、體積與正比／反比</td><td style='text-align:center'>6</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>百分數增減 <span class="count">· 7 題</span></h2>
+    <p>增加、減少、求原值、求增減百分率</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>百分數就是分母為 100 的分數。所以「增加 \(r\%\)」就是把原值乘以 \(\left(1+\frac{r}{100}\right)\)，「減少 \(r\%\)」就是乘以 \(\left(1-\frac{r}{100}\right)\)。每次計算前先問一句：<b>基數是甚麼？</b></p>
+<div class="formula">
+  <span>增加 \(r\%\)：\(\;\times\left(1+\dfrac{r}{100}\right)\)</span>
+  <span>減少 \(r\%\)：\(\;\times\left(1-\dfrac{r}{100}\right)\)</span>
+  <span>百分數增減：\(\;\dfrac{\text{新值}-\text{原值}}{\text{原值}}\times100\%\)</span>
+</div>
+  </div>
+  <article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 45 增加 20%。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>54</div>
+<ol class="steps">
+<li>增加 20% 就是保留原本的 100%，再加 20%，所以新值是原值的 \(100\%+20\%=120\%\)。</li>
+<li>以倍數表示：\(45\times\left(1+\frac{20}{100}\right)=45\times1.2\)。</li>
+<li>\(45\times1.2=54\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要寫成 \(45+20\)。20% 是一個比例，不是 20 個單位。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 80 減少 35%。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>52</div>
+<ol class="steps">
+<li>減少 35% 後，剩下原值的 \(100\%-35\%=65\%\)。</li>
+<li>\(80\times\left(1-\frac{35}{100}\right)=80\times0.65\)。</li>
+<li>\(80\times0.65=52\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「減少 35%」不是「減至 35%」。前者乘以 0.65，後者乘以 0.35。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>某貨品的標價是 $250，現以 18% 折扣售出。求售價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$205</div>
+<ol class="steps">
+<li>折扣 18% 後，售價是標價的 \(100\%-18\%=82\%\)。</li>
+<li>售價 \(=250\times0.82\)。</li>
+<li>\(250\times0.82=205\)，所以售價是 $205。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>某數的 12% 是 54，求該數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>450</div>
+<ol class="steps">
+<li>設該數為 \(x\)，則 \(12\%\times x=54\)，即 \(0.12x=54\)。</li>
+<li>所以 \(x=\frac{54}{0.12}\)。</li>
+<li>\(x=450\)。</li>
+<li><b>驗算：</b>\(450\times12\%=54\) ✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由百分數反求原值是逆運算 —— 要<b>除以</b>百分數，不是乘。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某班學生人數由 40 人增至 46 人。求增加百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>15%</div>
+<ol class="steps">
+<li>百分數增減的基數是<b>原本</b>的數值，即 40 名學生。</li>
+<li>增加量 \(=46-40=6\) 名學生。</li>
+<li>增加百分率 \(=\frac{6}{40}\times100\%\)。</li>
+<li>\(=\frac{600}{40}\%=15\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>分母是舊值 40，不是新值 46。用 46 會得出 \(\frac{6}{46}\approx13\%\)，是錯的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某學生的體重由 64 kg 減至 56 kg。求減少百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>12.5%</div>
+<ol class="steps">
+<li>基數是原本的體重 64 kg。</li>
+<li>體重減少量 \(=64-56=8\) kg。</li>
+<li>減少百分率 \(=\frac{8}{64}\times100\%\)。</li>
+<li>\(=\frac{1}{8}\times100\%=12.5\%\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某貨品先減價 30%，新價然後再增加 30%。求相對原價的百分數增減。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>下跌 9%</div>
+<ol class="steps">
+<li>把原價定為 100（把基數設為 100 是最穩妥的習慣）。</li>
+<li>減價 30% 後：\(100\times0.7=70\)。</li>
+<li>把<b>新</b>價增加 30%：\(70\times1.3=91\)。</li>
+<li>相對原本的 100，增減為 \(\frac{91-100}{100}\times100\%=-9\%\)。</li>
+<li>所以最終價格比原價<b>低 9%</b>。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>先減 30% 再升 30% 不會互相抵銷：兩個百分數的基數不同（100 和 70）。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>兩量比較 <span class="count">· 8 題</span></h2>
+    <p>「A 比 B 多／少 r%」及其逆算</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>在「A 比 B 多 \(r\%\)」中，基數是 <b>B</b>，所以 \(A=B\left(1+\frac{r}{100}\right)\)。「比」字後面的量永遠是基數。同一個差額，基數不同，得出的百分數就不同。</p>
+<div class="formula">
+  <span>由 B 求 A：\(\;A=B\left(1\pm\dfrac{r}{100}\right)\)</span>
+  <span>由 A 反求 B：\(\;B=\dfrac{A}{1\pm\frac{r}{100}}\)</span>
+  <span>「多／少 \(r\%\)」：\(\;\dfrac{|A-B|}{B}\times100\%\)</span>
+</div>
+  </div>
+  <article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>A 有 $500，B 有 $400。A 的金額比 B 多百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>25%</div>
+<ol class="steps">
+<li>「A 比 B 多」以 <b>B</b>（$400）為基數。</li>
+<li>差額 \(=500-400=100\)。</li>
+<li>百分數 \(=\frac{100}{400}\times100\%=25\%\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>沿用上題的金額（A 有 $500，B 有 $400），B 的金額比 A 少百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>20%</div>
+<ol class="steps">
+<li>現在「B 比 A 少」，以 <b>A</b>（$500）為基數。</li>
+<li>差額仍是 \(500-400=100\)。</li>
+<li>百分數 \(=\frac{100}{500}\times100\%=20\%\)。</li>
+<li>所以同樣是 $100 的差距，既可以說成「多 25%」，也可以說成「少 20%」。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>方向一倒轉，基數也倒轉，所以答案並不對稱。這是最常見的失分來源。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>某校男生人數比女生少 20%。若有女生 250 人，男生有多少人？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>200</div>
+<ol class="steps">
+<li>「比女生少 20%」以 250 名女生為基數。</li>
+<li>男生 \(=250\times\left(1-\frac{20}{100}\right)=250\times0.8\)。</li>
+<li>\(250\times0.8=200\)，所以男生有 200 人。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某校男生人數比女生多 25%，全校共有學生 540 人。求男生及女生的人數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>男生 300 人，女生 240 人</div>
+<ol class="steps">
+<li>設女生有 \(x\) 人。男生多 25%，即有 \(1.25x\) 名男生。</li>
+<li>總數：\(x+1.25x=540\)。</li>
+<li>\(2.25x=540\Rightarrow x=\frac{540}{2.25}=240\)。</li>
+<li>女生 \(=240\) 人；男生 \(=1.25\times240=300\) 人。</li>
+<li><b>驗算：</b>\(300+240=540\) ✓ 且 \(\frac{300-240}{240}=25\%\) ✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要算 \(540\times0.25\)。25% 的基數是<b>女生</b>人數，不是全校人數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2012_P1_Q4.html" target="_blank" rel="noopener">歷年試題 · 2012 卷一 Q4 ↗</a></div>
+<div class="q__body"><p>Ada 的日薪比 Billy 高 20%，而 Billy 的日薪比 Christine 低 20%。已知 Billy 的日薪是 $480，</p>
+<p>(a) 求 Ada 的日薪；<br>(b) 誰的日薪最高？解釋你的答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $576　(b) Christine</div>
+<ol class="steps">
+<li><b>(a)</b> Ada 比 Billy 高 20%，基數是 Billy 的 $480：</li>
+<li>\(480\times1.2=576\)。Ada 每日賺 $576。</li>
+<li><b>(b)</b> Billy 比 Christine 低 20%，所以 \(480=0.8\times(\text{Christine})\)。</li>
+<li>Christine \(=\frac{480}{0.8}=600\)。</li>
+<li>比較：Christine $600 > Ada $576 > Billy $480，所以 <b>Christine</b> 賺得最多。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「Billy 比 Christine 低 20%」要以<b>除以</b> 0.8 還原，不是乘以 1.2。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2016_P2_Q10.html" target="_blank" rel="noopener">歷年試題 · 2016 卷二 Q10 ↗</a></div>
+<div class="q__body"><p>Donald 的月薪比 Peter 高 25%，而 Peter 的月薪比 Teresa 低 25%。若 Donald 的月薪是 $33 360，求 Teresa 的月薪。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$35 584</div>
+<ol class="steps">
+<li>Donald \(=1.25\times\) Peter，所以 Peter \(=\frac{33\,360}{1.25}=26\,688\)。</li>
+<li>Peter \(=0.75\times\) Teresa，所以 Teresa \(=\frac{26\,688}{0.75}\)。</li>
+<li>\(26\,688\div0.75=35\,584\)。</li>
+<li>Teresa 的月薪是 $35 584。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩步都是<b>逆運算</b>（先除以 1.25，再除以 0.75）。順方向相乘會得出陷阱答案 $31 275。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某貨品的成本是 $250，售價比成本高 20%。售價然後再減少 15%。求新的盈利百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>2%</div>
+<ol class="steps">
+<li>原售價 \(=250\times1.2=300\)。</li>
+<li>減少 15%：新售價 \(=300\times0.85=255\)。</li>
+<li>盈利 \(=255-250=5\)，以成本 $250 為基數。</li>
+<li>盈利百分率 \(=\frac{5}{250}\times100\%=2\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>15% 的折扣以<b>售價 300</b> 為基數，但盈利百分率以<b>成本 250</b> 為基數 —— 兩者基數不同。</p></div>
+</div>
+</article>
+
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q9.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q9 ↗</a></div>
+<div class="q__body"><p>某玩具的成本比其售價低 \(x\%\)。售出該玩具後，盈利百分率是 25%。求 \(x\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>20</div>
+<ol class="steps">
+<li>盈利百分率以<b>成本</b>為基數：\(\frac{\text{售價}-\text{成本}}{\text{成本}}=25\%\)。</li>
+<li>因此售價 \(=1.25\times\) 成本，即成本 \(=\frac{\text{售價}}{1.25}=0.8\times\) 售價。</li>
+<li>成本是售價的 80%，即比售價低 \(100\%-80\%=20\%\)。</li>
+<li>所以 \(x=20\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>陷阱是看到「25%」就答 \(x=25\)。25% 以成本為基數，20% 以售價為基數 —— 兩者互為倒數。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>標價、折扣、成本與盈利 <span class="count">· 9 題</span></h2>
+    <p>成本 → 標價 → 售價 → 盈利</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>三個量串成一條「價格鏈」。動筆計算前，先把各環節的關係寫下來：</p>
+<div class="formula">
+  <span>售價 \(=\) 標價 \(\times(1-\text{折扣率})\)</span>
+  <span>盈利 \(=\) 售價 \(-\) 成本</span>
+  <span>盈利百分率 \(=\dfrac{\text{盈利}}{\text{成本}}\times100\%\)</span>
+</div>
+<p>記住：<b>折扣</b>永遠以<b>標價</b>為基數，而<b>盈利百分率</b>永遠以<b>成本</b>為基數。蝕本時公式一樣，只是盈利為負數。</p>
+  </div>
+  <article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P1_Q6.html" target="_blank" rel="noopener">歷年試題 · 2014 卷一 Q6 ↗</a></div>
+<div class="q__body"><p>某玩具的標價是 $255，現以標價的 40% 折扣售出。</p>
+<p>(a) 求該玩具的售價。<br>(b) 若盈利百分率是 2%，求該玩具的成本。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $153　(b) $150</div>
+<ol class="steps">
+<li><b>(a)</b> 折扣 40% 後，售價是標價的 60%：\(255\times0.6=153\)。</li>
+<li><b>(b)</b> 盈利百分率以成本 \(C\) 為基數：\(\frac{153-C}{C}=2\%\)。</li>
+<li>所以 \(153=1.02C\)。</li>
+<li>\(C=\frac{153}{1.02}=150\)。成本是 $150。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「40% 折扣」即買家付 60%，不要乘以 0.4。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P1_Q6.html" target="_blank" rel="noopener">歷年試題 · 2015 卷一 Q6 ↗</a></div>
+<div class="q__body"><p>某書的成本是 $250，盈利百分率是 20%。</p>
+<p>(a) 求該書的售價。<br>(b) 若該書以標價的 25% 折扣售出，求標價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $300　(b) $400</div>
+<ol class="steps">
+<li><b>(a)</b> 售價 \(=250\times(1+20\%)=250\times1.2=300\)。</li>
+<li><b>(b)</b> 售價是標價 \(M\) 的 75%：\(300=0.75M\)。</li>
+<li>\(M=\frac{300}{0.75}=400\)。標價是 $400。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P1_Q5.html" target="_blank" rel="noopener">歷年試題 · 2019 卷一 Q5 ↗</a></div>
+<div class="q__body"><p>某銀包以標價的 25% 折扣售出，售價是 $690。</p>
+<p>(a) 求該銀包的標價。<br>(b) 盈利百分率是 15%。求該銀包的成本。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $920　(b) $600</div>
+<ol class="steps">
+<li><b>(a)</b> \(690=0.75M\Rightarrow M=\frac{690}{0.75}=920\)。</li>
+<li><b>(b)</b> 售價 \(=1.15\times\) 成本。</li>
+<li>成本 \(=\frac{690}{1.15}=600\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P1_Q5.html" target="_blank" rel="noopener">歷年試題 · 2022 卷一 Q5 ↗</a></div>
+<div class="q__body"><p>某風扇以標價的 30% 折扣售出。盈利是 $78，盈利百分率是 26%。求該風扇的標價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$540</div>
+<ol class="steps">
+<li>由盈利百分率：\(\frac{78}{C}=26\%\Rightarrow C=\frac{78}{0.26}=300\)。</li>
+<li>售價 \(=\) 成本 \(+\) 盈利 \(=300+78=378\)。</li>
+<li>售價是標價的 70%：\(378=0.7M\)。</li>
+<li>\(M=\frac{378}{0.7}=540\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>盈利百分率以成本為基數，所以第一步必須是 \($78\div0.26\)，不可把 $78 當成標價的 26%。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P1_Q6.html" target="_blank" rel="noopener">歷年試題 · 2021 卷一 Q6 ↗</a></div>
+<div class="q__body"><p>某襯衫的標價比成本多 $80。該襯衫以標價的 10% 折扣售出，盈利百分率是 30%。求該襯衫的標價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$260</div>
+<ol class="steps">
+<li>設成本為 \(C\)，則標價是 \(C+80\)。</li>
+<li>折扣 10% 後，售價是 \(0.9(C+80)\)。</li>
+<li>盈利百分率 30% 表示售價等於 \(1.3C\)。</li>
+<li>所以 \(0.9(C+80)=1.3C\)。</li>
+<li>展開：\(0.9C+72=1.3C\)，故 \(0.4C=72\)，得 \(C=180\)。</li>
+<li>標價 \(=180+80=260\)，即 $260。</li>
+<li><b>驗算：</b>售價 \(=260\times0.9=234\)；盈利 \(=234-180=54\)；\(\frac{54}{180}=30\%\) ✓</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P1_Q6.html" target="_blank" rel="noopener">歷年試題 · 2024 卷一 Q6 ↗</a></div>
+<div class="q__body"><p>某計數機的標價比成本高 40%。該計數機以標價的 25% 折扣售出，盈利是 $13。求該計數機的標價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$364</div>
+<ol class="steps">
+<li>設成本為 \(C\)，則標價是 \(1.4C\)。</li>
+<li>售價 \(=1.4C\times0.75=1.05C\)。</li>
+<li>盈利 \(=1.05C-C=0.05C\)。</li>
+<li>已知盈利是 $13：\(0.05C=13\Rightarrow C=260\)。</li>
+<li>標價 \(=1.4\times260=364\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>先設成本為 \(C\)，把標價、售價、盈利全部用 \(C\) 表示，最後才代入數字。</p></div>
+</div>
+</article>
+
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P1_Q7.html" target="_blank" rel="noopener">歷年試題 · 2018 卷一 Q7 ↗</a></div>
+<div class="q__body"><p>某花瓶的標價比成本高 30%。以標價的 40% 折扣售出該花瓶，蝕 $88。求該花瓶的標價。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$520</div>
+<ol class="steps">
+<li>設成本為 \(C\)。標價 \(=1.3C\)。</li>
+<li>售價 \(=1.3C\times0.6=0.78C\)。</li>
+<li>因為 \(0.78C\lt C\)，所以是蝕本，蝕款為 \(C-0.78C=0.22C\)。</li>
+<li>\(0.22C=88\Rightarrow C=400\)。</li>
+<li>標價 \(=1.3\times400=520\)。</li>
+<li><b>驗算：</b>售價 \(=520\times0.6=312\)；蝕款 \(=400-312=88\) ✓</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P2_Q11.html" target="_blank" rel="noopener">歷年試題 · 2023 卷二 Q11 ↗</a></div>
+<div class="q__body"><p>某外套的標價比成本高 60%。以標價的 25% 折扣售出該外套，盈利 $104。求該外套的成本。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$520</div>
+<ol class="steps">
+<li>設成本為 \(C\)。標價 \(=1.6C\)。</li>
+<li>售價 \(=1.6C\times0.75=1.2C\)。</li>
+<li>盈利 \(=1.2C-C=0.2C\)。</li>
+<li>\(0.2C=104\Rightarrow C=520\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2025_P1_Q7.html" target="_blank" rel="noopener">歷年試題 · 2025 卷一 Q7 ↗</a></div>
+<div class="q__body"><p>某紀念品的售價是 $378。該紀念品以標價的 60% 折扣售出，而標價比成本高 75%。</p>
+<p>(a) 求該紀念品的標價。<br>(b) 求該紀念品的成本。<br>(c) 售出該紀念品後是賺還是蝕？解釋你的答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $630　(b) $360　(c) 賺 $18</div>
+<ol class="steps">
+<li><b>(a)</b> \(378=0.6M\Rightarrow M=\frac{378}{0.6}=630\)。</li>
+<li><b>(b)</b> 標價比成本高 75%：\(630=1.75C\)。</li>
+<li>\(C=\frac{630}{1.75}=360\)。</li>
+<li><b>(c)</b> 售價 $378 \(\gt \) 成本 $360，所以有<b>盈利</b>。</li>
+<li>盈利 \(=378-360=18\)，即賺 $18（盈利百分率 \(=\frac{18}{360}=5\%\)）。</li>
+</ol>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>「一賺一蝕」陷阱 <span class="count">· 6 題</span></h2>
+    <p>兩件貨品售價相同，一件 +x%、一件 −x%</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>賺 \(x\%\) 和蝕 \(x\%\) 都是以<b>兩個不同的成本</b>為基數，絕不是以同一個售價為基數。兩件貨品售價相同，成本自然不同，所以賺到的錢與蝕掉的錢不可能相等。</p>
+<div class="formula">
+  <span>賺 \(x\%\)：\(\;C=\dfrac{S}{1+\frac{x}{100}}\)</span>
+  <span>蝕 \(x\%\)：\(\;C=\dfrac{S}{1-\frac{x}{100}}\)</span>
+  <span>售價同為 \(S\)，一 \(+x\%\) 一 \(-x\%\)：整體蝕 \(=\dfrac{x^{2}}{100}\%\)</span>
+</div>
+<p>最後一行是速算公式：<b>同一售價下一賺一蝕同一百分率，整體必然蝕 \(\frac{x^2}{100}\%\)。</b></p>
+  </div>
+  <article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>兩件貨品各售 $600，一件賺 20%，另一件蝕 20%。求整體盈利或虧蝕百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>整體蝕 4%</div>
+<ol class="steps">
+<li>賺 20% 那件的成本：\(\frac{600}{1.2}=500\)。</li>
+<li>蝕 20% 那件的成本：\(\frac{600}{0.8}=750\)。</li>
+<li>總成本 \(=500+750=1250\)；總售價 \(=1200\)。</li>
+<li>蝕款 \(=1250-1200=50\)。</li>
+<li>虧蝕百分率 \(=\frac{50}{1250}\times100\%=4\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「+20% 然後 −20%，所以打和」是錯的：蝕本那件成本較高，蝕掉的錢比賺到的多。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P2_Q10.html" target="_blank" rel="noopener">歷年試題 · 2013 卷二 Q10 ↗</a></div>
+<div class="q__body"><p>Susan 以每輛 $80 080 售出兩輛車。其中一輛賺 30%，另一輛蝕 30%。兩宗交易之後，Susan</p>
+<p>A. 蝕 $15 840。　B. 賺 $5 544。　C. 賺 $10 296。　D. 沒有賺也沒有蝕。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>A（蝕 $15 840）</div>
+<ol class="steps">
+<li>賺 30% 那輛車的成本：\(\frac{80\,080}{1.3}=61\,600\)。</li>
+<li>蝕 30% 那輛車的成本：\(\frac{80\,080}{0.7}=114\,400\)。</li>
+<li>總成本 \(=61\,600+114\,400=176\,000\)。</li>
+<li>總售價 \(=80\,080\times2=160\,160\)。</li>
+<li>蝕款 \(=176\,000-160\,160=15\,840\)。</li>
+<li>答案是 <b>A</b>。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用公式核對：\(\frac{30^2}{100}\%=9\%\)，而 \(176\,000\times9\%=15\,840\) ✓</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩件貨品各售 $2 000，一件賺 25%，另一件蝕 25%。求整體虧蝕百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>蝕 6.25%</div>
+<ol class="steps">
+<li>賺 25% 那件：成本 \(=\frac{2000}{1.25}=1600\)。</li>
+<li>蝕 25% 那件：成本 \(=\frac{2000}{0.75}=\frac{8000}{3}\approx2666.67\)。</li>
+<li>總成本 \(=\frac{12\,800}{3}\)；總售價 \(=4000=\frac{12\,000}{3}\)。</li>
+<li>蝕款 \(=\frac{800}{3}\approx266.67\)。</li>
+<li>虧蝕百分率 \(=\frac{800/3}{12\,800/3}=\frac{800}{12\,800}=6.25\%\)。</li>
+<li>用公式核對：\(\frac{25^{2}}{100}\%=6.25\%\) ✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>千萬不要寫成「(25 − 25)% = 0」：只有基數相同時，百分數才可以相加或相減。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>兩件貨品各售 $3 000，一件賺 20%，另一件蝕 20%。求整體蝕款及虧蝕百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>蝕 $250，即 4%</div>
+<ol class="steps">
+<li>賺 20% 那件：成本 \(=\frac{3000}{1.2}=2500\)。</li>
+<li>蝕 20% 那件：成本 \(=\frac{3000}{0.8}=3750\)。</li>
+<li>總成本 \(=6250\)；總售價 \(=6000\)。</li>
+<li>蝕款 \(=6250-6000=250\)。</li>
+<li>虧蝕百分率 \(=\frac{250}{6250}\times100\%=4\%\)，與 \(\frac{20^2}{100}\%=4\%\) 相符。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>貨品 A 售 $1 380，賺 15%；貨品 B 售 $960，蝕 20%。求整體盈利或虧蝕百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>整體蝕 2.5%</div>
+<ol class="steps">
+<li>A 的成本 \(=\frac{1380}{1.15}=1200\)。</li>
+<li>B 的成本 \(=\frac{960}{0.8}=1200\)。</li>
+<li>總成本 \(=2400\)；總售價 \(=1380+960=2340\)。</li>
+<li>蝕款 \(=2400-2340=60\)。</li>
+<li>虧蝕百分率 \(=\frac{60}{2400}\times100\%=2.5\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>這裡兩件成本剛好相同，但百分率仍然要以<b>總成本</b>為基數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某商人把貨品的標價定為成本加 40%，然後以 30% 折扣售出，並聲稱仍有 2% 盈利。他的說法正確嗎？求實際的盈利或虧蝕百分率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>說法錯誤；實際是蝕 2%</div>
+<ol class="steps">
+<li>設成本為 \(C\)。標價 \(=1.4C\)。</li>
+<li>售價 \(=1.4C\times0.7=0.98C\)。</li>
+<li>因為 \(0.98C\lt C\)，他實際上是<b>蝕本</b>。</li>
+<li>蝕款 \(=C-0.98C=0.02C\)，所以虧蝕百分率是 \(\frac{0.02C}{C}=2\%\)。</li>
+<li>他用的數字對，方向卻錯了：售價是成本的 98%，是蝕 2% 而非賺 2%。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>即時檢查：\(1.4\times0.7=0.98\lt 1\)，所以必然是蝕。加價與折扣從來不會簡單抵銷。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>複利息、增長與折舊 <span class="count">· 8 題</span></h2>
+    <p>本利和、利息、折舊、反求本金</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>複利息就是「利上利」。每一期都以<b>上一期的本利和</b>為基數，所以增長是指數式。</p>
+<div class="formula">
+  <span>本利和：\(\;A=P\left(1+\dfrac{r}{n}\right)^{nt}\)</span>
+  <span>利息：\(\;I=A-P\)</span>
+  <span>增長／衰減：\(\;A=P(1\pm r)^{t}\)</span>
+</div>
+<p>其中 \(P\) 是本金，\(r\) 是年利率（以小數表示），\(n\) 是每年計息期數，\(t\) 是年數。每期利率 \(=\frac{r}{n}\)，總期數 \(=nt\)。</p>
+  </div>
+  <article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>存入 $10 000，年利率 5%，每年複利一次。求 2 年後的本利和及利息。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>本利和 $11 025，利息 $1 025</div>
+<ol class="steps">
+<li>\(P=10\,000\)，\(r=0.05\)，\(n=1\)，\(t=2\)，所以共有 2 期。</li>
+<li>\(A=10\,000(1+0.05)^{2}=10\,000\times1.1025\)。</li>
+<li>\(A=11\,025\)。</li>
+<li>利息 \(=11\,025-10\,000=1\,025\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>單利息只得 \(10\,000\times5\%\times2=1\,000\)。多出的 $25 就是「利上利」。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q10.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q10 ↗</a></div>
+<div class="q__body"><p>存入 $2 000，年利率 5%，每半年複利一次。求 4 年後的利息，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$437</div>
+<ol class="steps">
+<li>每年計息兩次，4 年共 \(2\times4=8\) 期。</li>
+<li>每期利率 \(=\frac{5\%}{2}=2.5\%\)。</li>
+<li>\(A=2000(1.025)^{8}=2000\times1.218403\ldots\)</li>
+<li>\(A\approx2436.81\)。</li>
+<li>利息 \(=2436.81-2000=436.81\approx437\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「每半年」不是把利率加倍：而是把利率<b>減半</b>、期數<b>加倍</b>。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P2_Q11.html" target="_blank" rel="noopener">歷年試題 · 2013 卷二 Q11 ↗</a></div>
+<div class="q__body"><p>存入 $50 000，年利率 8%，為期 1 年，每月複利一次。求利息，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$4 150</div>
+<ol class="steps">
+<li>每月複利，一年有 12 期，每期利率為 \(\frac{0.08}{12}\)。</li>
+<li>\(A=50\,000\left(1+\frac{0.08}{12}\right)^{12}\)。</li>
+<li>\(A\approx54\,149.98\)。</li>
+<li>利息 \(=54\,149.98-50\,000=4\,149.98\approx4\,150\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>單利息只得 \(50\,000\times8\%=4\,000\) —— 那就是干擾答案。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q10.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q10 ↗</a></div>
+<div class="q__body"><p>存入 $50 000，年利率 6%，為期 3 年，每季複利一次。求本利和，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$59 781</div>
+<ol class="steps">
+<li>每年 4 季，3 年共 \(4\times3=12\) 期。</li>
+<li>每期利率 \(=\frac{6\%}{4}=1.5\%\)。</li>
+<li>\(A=50\,000(1.015)^{12}\)。</li>
+<li>\(A\approx59\,780.91\)，即約 $59 781。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某機器值 $80 000，每年折舊 15%。求 4 年後的價值，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$41 761</div>
+<ol class="steps">
+<li>每年折舊 15%，即每年乘以 \(1-0.15=0.85\)。</li>
+<li>4 年後的價值 \(=80\,000\times0.85^{4}\)。</li>
+<li>\(0.85^{2}=0.7225\)，所以 \(0.85^{4}=0.52200625\)。</li>
+<li>\(80\,000\times0.52200625=41\,760.5\approx41\,761\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>折舊也是複利式：要乘 0.85 四次，不是減去 \(4\times15\%\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某城市人口 250 000，每年增長 3%。求 3 年後的人口，準確至最接近的百位。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>273 200</div>
+<ol class="steps">
+<li>每年增長 3%，即每年乘以 1.03。</li>
+<li>3 年後的人口 \(=250\,000\times1.03^{3}\)。</li>
+<li>\(1.03^{3}=1.092727\)。</li>
+<li>\(250\,000\times1.092727=273\,181.75\)。</li>
+<li>準確至最接近的百位：273 200。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P2_Q11.html" target="_blank" rel="noopener">歷年試題 · 2022 卷二 Q11 ↗</a></div>
+<div class="q__body"><p>存入 $60 000，年利率 4%，每季複利一次，為期 2 年 6 個月。求本利和，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$66 277</div>
+<ol class="steps">
+<li>2 年 6 個月 \(=2.5\) 年，所以期數是 \(2.5\times4=10\)。</li>
+<li>每期利率 \(=\frac{4\%}{4}=1\%\)。</li>
+<li>\(A=60\,000(1.01)^{10}\)。</li>
+<li>\(1.01^{10}\approx1.104622\)。</li>
+<li>\(A\approx66\,277.33\)，即約 $66 277。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>要把 2 年 6 個月換算成 10 個季度期，不是 2.5 期或 3 期。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>存入一筆款項，年利率 4%，每年複利一次。2 年後的本利和是 $54 080。求本金。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>$50 000</div>
+<ol class="steps">
+<li>設本金為 \(P\)，則 \(P(1.04)^{2}=54\,080\)。</li>
+<li>\((1.04)^{2}=1.0816\)。</li>
+<li>\(P=\frac{54\,080}{1.0816}\)。</li>
+<li>\(P=50\,000\)。</li>
+<li><b>驗算：</b>\(50\,000\times1.04^{2}=54\,080\) ✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>反求本金就是要<b>除以</b> \((1+r)^{t}\)，跟由百分數反求原值完全一樣。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>部分與整體（加權百分數） <span class="count">· 6 題</span></h2>
+    <p>兩組合併或兩批貨混合</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>整體百分數不是各組百分數的簡單平均，而是<b>加權</b>平均。最可靠的做法是<b>把總數定為 100</b>，把百分數變成具體數量。</p>
+<div class="formula">
+  <span>整體百分數 \(=\dfrac{\text{各部分之和}}{\text{總數}}\times100\%\)</span>
+  <span>兩批合併：\(\;\dfrac{a\cdot p_1+b\cdot p_2}{a+b}\)</span>
+</div>
+  </div>
+  <article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>合金 A 的質量是 200 g，含銀 30%；合金 B 的質量是 300 g，含銀 50%。把兩塊合金熔合後，混合物含銀百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>42%</div>
+<ol class="steps">
+<li>A 含銀：\(200\times30\%=60\) g。</li>
+<li>B 含銀：\(300\times50\%=150\) g。</li>
+<li>總含銀量 \(=210\) g；總質量 \(=500\) g。</li>
+<li>百分數 \(=\frac{210}{500}\times100\%=42\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不是 \(\frac{30\%+50\%}{2}=40\%\)：較重的一塊所佔份量較大。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>400 g 鹽水含鹽 12%。加入 100 g 純水後，鹽水的濃度是多少？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>9.6%</div>
+<ol class="steps">
+<li>原有的鹽：\(400\times12\%=48\) g，加水後不變。</li>
+<li>新的總質量 \(=400+100=500\) g。</li>
+<li>新濃度 \(=\frac{48}{500}\times100\%=9.6\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>加水只令分母變大，所以濃度必然下降。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一批 500 件貨品中，首 150 件的次品率是 4%，其餘 350 件的次品率是 2%。求整批貨品的次品率。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>2.6%</div>
+<ol class="steps">
+<li>第一組的次品：\(150\times4\%=6\) 件。</li>
+<li>第二組的次品：\(350\times2\%=7\) 件。</li>
+<li>次品總數 \(=13\) 件。</li>
+<li>次品率 \(=\frac{13}{500}\times100\%=2.6\%\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2012_P2_Q8.html" target="_blank" rel="noopener">歷年試題 · 2012 卷二 Q8 ↗</a></div>
+<div class="q__body"><p>某公司 37.5% 的僱員是女性。若 60% 的男僱員和 80% 的女僱員已婚，求該公司已婚僱員的百分比。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>67.5%</div>
+<ol class="steps">
+<li>男性佔全體員工 \(100\%-37.5\%=62.5\%\)。</li>
+<li>已婚男性佔全公司的比例：\(62.5\%\times60\%=0.625\times0.6=0.375=37.5\%\)。</li>
+<li>已婚女性佔全公司的比例：\(37.5\%\times80\%=0.375\times0.8=0.30=30\%\)。</li>
+<li>已婚僱員 \(=37.5\%+30\%=67.5\%\)。</li>
+<li><b>另法：</b>設公司有 1000 名僱員 —— 625 男、375 女；已婚 \(=625\times0.6+375\times0.8=375+300=675\)，即 67.5%。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2021_P2_Q9.html" target="_blank" rel="noopener">歷年試題 · 2021 卷二 Q9 ↗</a></div>
+<div class="q__body"><p>某校 33% 的學生超重。已知 60% 的學生是女生，而 45% 的女生超重。若 \(x\%\) 的男生超重，求 \(x\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>15</div>
+<ol class="steps">
+<li>男生佔全校 \(100\%-60\%=40\%\)。</li>
+<li>超重女生佔全校的比例：\(60\%\times45\%=27\%\)。</li>
+<li>超重男生佔全校的比例：\(33\%-27\%=6\%\)。</li>
+<li>這 6% 是佔<b>全校</b>的比例，而男生只佔全校 40%，所以男生的超重率是 \(\frac{6\%}{40\%}=\frac{6}{40}=15\%\)。</li>
+<li>因此 \(x=15\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>最後一步是大多數人失分之處：6% 是<b>全校</b>的 6%，不是<b>男生</b>的 6%。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 4/4"><span>★</span><span>★</span><span>★</span><span>★</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P2_Q11.html" target="_blank" rel="noopener">歷年試題 · 2024 卷二 Q11 ↗</a></div>
+<div class="q__body"><p>某校 40% 的學生是女生，而 \(\beta\%\) 的女生是外籍學生。30% 的男生是外籍學生。若外籍學生的人數等於女生的人數，求 \(\beta\)。</p>
+<p>A. 20　B. 45　C. 55　D. 80</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>C（55）</div>
+<ol class="steps">
+<li>設全校有 100 名學生：40 名女生、60 名男生。</li>
+<li>女生有 40 人，而這數目等於外籍學生的人數。</li>
+<li>外籍女生 \(=40\times\frac{\beta}{100}=0.4\beta\)；外籍男生 \(=60\times30\%=18\)。</li>
+<li>所以 \(0.4\beta+18=40\)。</li>
+<li>\(0.4\beta=22\Rightarrow\beta=55\)。</li>
+<li>答案是 <b>C</b>。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把總數定為 100，三個百分數就變成普通數目，代數運算也省掉了。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>公式、幾何與變分中的百分數 <span class="count">· 6 題</span></h2>
+    <p>面積、體積與正比／反比</p>
+  </div>
+  <div class="concept">
+    <p><b>核心概念：</b>若 \(y\propto x^{n}\) 而 \(x\) 改變 \(r\%\)，則 \(y\) 改變 \(\left(1+\frac{r}{100}\right)^{n}-1\)。面積按長度的平方變化，體積按立方變化。</p>
+<div class="formula">
+  <span>長度 \(\times k\) \(\Rightarrow\) 面積 \(\times k^{2}\)</span>
+  <span>長度 \(\times k\) \(\Rightarrow\) 體積 \(\times k^{3}\)</span>
+  <span>變分 \(z=\dfrac{kx^{2}}{y}\)：把每個變數換成新的倍數，再化簡</span>
+</div>
+<p>標準做法：把「增加 \(r\%\)」寫成「乘以 \(1+\frac{r}{100}\)」，代入公式，然後讀出最後的倍數。</p>
+  </div>
+  <article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某圓的半徑增加 20%。其面積增加百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>44%</div>
+<ol class="steps">
+<li>面積 \(=\pi r^{2}\)，與半徑的平方成正比。</li>
+<li>新半徑 \(=1.2r\)。</li>
+<li>新面積 \(=\pi(1.2r)^{2}=1.44\pi r^{2}\)。</li>
+<li>面積變成原來的 1.44 倍，即增加 \((1.44-1)\times100\%=44\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>面積增加 44%，不是 20%：平方作用在倍數上，不是作用在百分數上。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某長方形的長增加 15%，闊減少 10%。其面積改變百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>增加 3.5%</div>
+<ol class="steps">
+<li>設原長為 \(L\)、原闊為 \(W\)；原面積 \(=LW\)。</li>
+<li>新長 \(=1.15L\)，新闊 \(=0.9W\)。</li>
+<li>新面積 \(=1.15L\times0.9W=1.035LW\)。</li>
+<li>面積變成原來的 1.035 倍，即增加 \(3.5\%\)。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某正方形的面積增加 69%。其邊長增加百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>30%</div>
+<ol class="steps">
+<li>設原邊長為 \(a\)；原面積 \(=a^{2}\)。</li>
+<li>新面積 \(=1.69a^{2}\)。</li>
+<li>新邊長 \(=\sqrt{1.69a^{2}}=1.3a\)。</li>
+<li>邊長變成原來的 1.3 倍，即增加 \(30\%\)。</li>
+<li><b>驗算：</b>\(1.3^{2}=1.69\) ✓</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>這是逆向問題：要取面積倍數的平方根，不是把百分數減半。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q10.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q10 ↗</a></div>
+<div class="q__body"><p>若某扇形的半徑減少 50%，而其圓心角減少 \(x\%\)，使面積減少 90%，求 \(x\)。</p>
+<p>A. 20　B. 40　C. 60　D. 80</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>C（60）</div>
+<ol class="steps">
+<li>扇形面積 \(=\pi r^{2}\times\frac{\theta}{360^{\circ}}\)，與 \(r^{2}\theta\) 成正比。</li>
+<li>新半徑 \(=0.5r\)；新圓心角 \(=\left(1-\frac{x}{100}\right)\theta\)。</li>
+<li>新面積 \(=0.5^{2}\times\left(1-\frac{x}{100}\right)\times\) 原面積。</li>
+<li>面積減少 90%，所以新面積是原面積的 10%：\(0.25\left(1-\frac{x}{100}\right)=0.1\)。</li>
+<li>\(1-\frac{x}{100}=0.4\Rightarrow\frac{x}{100}=0.6\)。</li>
+<li>\(x=60\)，所以答案是 <b>C</b>。</li>
+</ol>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P2_Q13.html" target="_blank" rel="noopener">歷年試題 · 2024 卷二 Q13 ↗</a></div>
+<div class="q__body"><p>已知 \(z\) 隨 \(x\) 的平方正變，並隨 \(y\) 反變。若 \(x\) 增加 20%，而 \(y\) 減少 20%，則 \(z\)</p>
+<p>A. 增加 20%。　B. 減少 20%。　C. 增加 80%。　D. 減少 80%。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>C（增加 80%）</div>
+<ol class="steps">
+<li>由題意，\(z=\frac{kx^{2}}{y}\)。</li>
+<li>新的 \(x=1.2x\)；新的 \(y=0.8y\)。</li>
+<li>新的 \(z=\frac{k(1.2x)^{2}}{0.8y}=\frac{1.44}{0.8}\cdot\frac{kx^{2}}{y}=1.8z\)。</li>
+<li>\(z\) 變成原來的 1.8 倍，即增加 \(80\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(y\) 變小會令 \(z\) <b>變大</b>（反變）。先判斷方向，再計算倍數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>某圓柱的底半徑增加 10%，高減少 10%。其體積改變百分之幾？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>增加 8.9%</div>
+<ol class="steps">
+<li>體積 \(=\pi r^{2}h\)。</li>
+<li>新半徑 \(=1.1r\)；新高 \(=0.9h\)。</li>
+<li>新體積 \(=\pi(1.1r)^{2}(0.9h)=\pi r^{2}h\times1.21\times0.9\)。</li>
+<li>\(1.21\times0.9=1.089\)。</li>
+<li>體積增加 \((1.089-1)\times100\%=8.9\%\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>半徑的 10% 平方後變成 21%，足以抵銷高度那 10% 的減幅。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 百分數 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

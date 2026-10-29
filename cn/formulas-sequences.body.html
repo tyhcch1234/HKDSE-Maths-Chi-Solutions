@@ -1,0 +1,786 @@
+<!--PAGE
+{"title":"香港中學文憑試 數學（必修）· 公式與數列 — 7 種題型 50 題（附詳解）","desc":"由 65 道歷年 HKDSE 公式與數列試題（2012–2026）整理出七種題型，配 50 道由淺入深的練習：公式代入與主項變換、由文字或圖案建立公式、等差數列的公差與通項、等差數列求和、等比數列的公比與通項、等比數列求和與應用，以及考試程度的混合與遞推題。每題附答案、逐步詳解與常犯錯誤提示，適合中四至中六溫習及應試。","file":"DSE_formulas-sequences_50_Questions.html"}
+PAGE-->
+
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 公式代入與主項變換</a><a href="#t2" data-t="t2">類型 2 · 由文字建立公式</a><a href="#t3" data-t="t3">類型 3 · 等差數列</a><a href="#t4" data-t="t4">類型 4 · 等差數列求和</a><a href="#t5" data-t="t5">類型 5 · 等比數列</a><a href="#t6" data-t="t6">類型 6 · 等比數列求和</a><a href="#t7" data-t="t7">類型 7 · 考試程度</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 公式與數列</p>
+    <h1 class="hero__title">公式與數列 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 65 道歷年 DSE 公式與數列試題（2012–2026）整理而成 · 由熱身到考試程度分級編排 · 每題附完整詳解</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>65</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol><li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li><li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li><li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如等差數列由第 1 項到第 10 項只有 9 步，不是 10 步。</li><li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li></ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>公式代入與主項變換</td><td>改寫公式，包括 \(x\) 同時在兩邊</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>由文字或圖案建立公式</td><td>把描述或表格化成代數規則</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>等差數列：公差與通項</td><td>運用 \(T_{n}=a+(n-1)d\)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>等差數列求和：項數與和</td><td>先數清項數，再用 \(S_{n}\)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>等比數列：公比與通項</td><td>運用 \(T_{n}=ar^{n-1}\)</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>等比數列求和與應用</td><td>增長、折舊、分期供款與無限項之和</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>考試程度：混合與遞推數列</td><td>遞推關係、生活圖案、多部分求和</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>公式代入與主項變換 <span class="count">· 7 題</span></h2>
+    <p>改寫公式，包括 \(x\) 同時在兩邊</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>「代入」就是把每個字母換成它的值，負數要加括號。變換主項與解方程用的是同一套平衡步驟：先去分母，再展開括號，然後把所有含新主項的項集中在一邊並提出因式，最後才除以係數。若主項出現在分母，先整式乘以該分母。</p><div class="formula"><span>\(\frac{a}{b}=c\Rightarrow a=bc\)</span><span>\(Ax+B=Cx\Rightarrow x(C-A)=B\)</span><span>\(\text{按相反次序逆運算}\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>已知 \(v=u+at\)，當 \(u=8\)、\(a=-2.5\)、\(t=6\) 時，求 \(v\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(v=-7\)</div>
+<ol class="steps">
+<li>逐個代入：\(v=8+(-2.5)(6)\)。</li><li>\(=8-15\)。</li><li>\(=-7\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>減速度 \(-2.5\) 必須保留負號：\(8+(-2.5)(6)=8-15\)，不是 \(8+15\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把公式 \(y=3x-7\) 的主項變為 \(x\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(x=\frac{y+7}{3}\)</div>
+<ol class="steps">
+<li>兩邊加 \(7\)：\(y+7=3x\)。</li><li>兩邊除以 \(3\)：\(x=\frac{y+7}{3}\)。</li><li>以 \(x=2\) 驗算：則 \(y=6-7=-1\)，而 \(\frac{-1+7}{3}=2\) ✓。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把 \(A=\pi r^{2}\) 的主項變為 \(r\)，其中 \(r&gt;0\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(r=\sqrt{\frac{A}{\pi}}\)</div>
+<ol class="steps">
+<li>兩邊除以 \(\pi\)：\(\frac{A}{\pi}=r^{2}\)。</li><li>因為 \(r&gt;0\)，取正平方根：\(r=\sqrt{\frac{A}{\pi}}\)。</li><li>以 \(r=3\) 驗算：\(A=9\pi\)，而 \(\sqrt{\frac{9\pi}{\pi}}=\sqrt{9}=3\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要寫成 \(r=\frac{A}{\pi}\) —— 平方要用開方還原，不是用除法。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把 \(S=\frac{n}{2}(a+l)\) 的主項變為 \(a\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=\frac{2S}{n}-l\)</div>
+<ol class="steps">
+<li>兩邊乘以 \(2\)：\(2S=n(a+l)\)。</li><li>除以 \(n\)：\(\frac{2S}{n}=a+l\)。</li><li>減去 \(l\)：\(a=\frac{2S}{n}-l\)。</li><li>以 \(n=4,\ a=3,\ l=7\) 驗算：\(S=\frac{4}{2}(10)=20\)，而 \(\frac{40}{4}-7=10-7=3\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>先乘以 \(2\) 再除以 \(n\)；若只把右邊其中一項除以 \(n\)，會得 \(\frac{2S}{n}=a+\frac{l}{n}\)，那是錯的。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2026_P1_Q1.html" target="_blank" rel="noopener">歷年試題 · 2026 卷一 Q1 ↗</a></div>
+<div class="q__body"><p>把公式 \(\frac{x}{3}-1=\frac{2x-y}{4}\) 的主項變為 \(x\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(x=\frac{3y-12}{2}\)</div>
+<ol class="steps">
+<li>各項乘以最小公倍數 \(12\)：\(4x-12=3(2x-y)\)。</li><li>展開右邊：\(4x-12=6x-3y\)。</li><li>把 \(x\) 項集中在一邊：\(-12+3y=6x-4x\)，即 \(-12+3y=2x\)。</li><li>除以 \(2\)：\(x=\frac{3y-12}{2}\)。</li><li>以 \(y=6\) 驗算：\(x=3\)，原式左邊 \(\frac{3}{3}-1=0\)，右邊 \(\frac{6-6}{4}=0\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>乘以 \(12\) 要把兩個分母都消去：\(\frac{x}{3}\times 12=4x\)、\(\frac{2x-y}{4}\times 12=3(2x-y)\)。漏掉括號就會丟失 \(-3y\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2024_P1_Q2.html" target="_blank" rel="noopener">歷年試題 · 2024 卷一 Q2 ↗</a></div>
+<div class="q__body"><p>把公式 \(\frac{2y+3}{y-1}=x\) 的主項變為 \(y\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(y=\frac{x+3}{x-2}\)</div>
+<ol class="steps">
+<li>兩邊乘以 \((y-1)\)：\(2y+3=x(y-1)\)。</li><li>展開：\(2y+3=xy-x\)。</li><li>把 \(y\) 項集中在一邊：\(2y-xy=-x-3\)。</li><li>提出因式：\(y(2-x)=-x-3\)。</li><li>除以 \((2-x)\)，再把分子分母同乘 \(-1\)：\(y=\frac{-x-3}{2-x}=\frac{x+3}{x-2}\)。</li><li>以 \(x=5\) 驗算：\(y=\frac{8}{3}\)，而 \(\frac{2(8/3)+3}{8/3-1}=\frac{25/3}{5/3}=5\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>提出因式後得 \(y(2-x)\)，除以它便是 \(\frac{-x-3}{2-x}\)。整理時只改一個符號會得 \(\frac{x+3}{2-x}\)，那是正確答案的負值。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個密封圓柱體的總表面積為 \(A=2\pi r(r+h)\)。<br>(a) 把公式的主項變為 \(h\)。<br>(b) 當 \(A=176\pi\)、\(r=4\) 時，求 \(h\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(h=\frac{A}{2\pi r}-r\)　(b) \(h=18\)</div>
+<ol class="steps">
+<li>(a) 兩邊除以 \(2\pi r\)：\(\frac{A}{2\pi r}=r+h\)。</li><li>減去 \(r\)：\(h=\frac{A}{2\pi r}-r\)。</li><li>(b) 代入 \(A=176\pi\)、\(r=4\)：\(h=\frac{176\pi}{2\pi(4)}-4\)。</li><li>\(=\frac{176\pi}{8\pi}-4=22-4\)。</li><li>\(=18\)。</li><li>驗算：\(A=2\pi(4)(4+18)=8\pi(22)=176\pi\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>要把 \(2\pi r\) 視為一個整體來除：\(\frac{A}{2\pi r}=r+h\)。逐項去分（例如未除先減 \(r\)）會完全改變答案。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>由文字或圖案建立公式 <span class="count">· 7 題</span></h2>
+    <p>把描述或表格化成代數規則</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>公式是對每個輸入都成立的規則，所以既有可變的部分，也有固定的部分。文字題中，把一次性收費（常數）與每單位收費（係數）分開，再用其中一個已知情況檢驗公式。圖案題中，用相鄰兩項相減找出每一步的差，再調整常數，使第一項符合題意。</p><div class="formula"><span>\(T_{n}=\text{步長}\times n+\text{常數}\)</span><span>\(\text{總額}=\text{固定收費}+\text{每單位收費}\times\text{數量}\)</span><span>\(\text{以 } T_{1}\text{ 與 }T_{2}\text{ 檢驗}\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一間送貨公司收取固定費用 $35，另加每公里 $4.50。設行車距離為 \(d\) km 時收費為 \(C\) 元，寫出 \(C\) 的公式，並求 \(d=12\) 時的 \(C\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(C=35+4.5d\)，且 \(C=89\)</div>
+<ol class="steps">
+<li>固定費用 \(35\) 不論距離遠近都要付，所以是常數。</li><li>與距離有關的部分是 \(4.5\times d\)，因此 \(C=35+4.5d\)。</li><li>代入 \(d=12\)：\(C=35+4.5(12)=35+54=89\)。</li><li>所以 12 km 的收費是 $89。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>不要寫成 \(C=(35+4.5)d\)：$35 只付一次，不是每公里付一次。</p></div>
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>用火柴砌成一列正方形圖案。第 1 個圖形用 \(5\) 根火柴，此後每個新圖形多用 \(4\) 根。<br>(a) 寫出第 \(n\) 個圖形所用火柴數目 \(M\) 的公式。<br>(b) 求第 12 個圖形所用的火柴數目。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(M=4n+1\)　(b) 49</div>
+<ol class="steps">
+<li>每個圖形多用 \(4\) 根火柴，所以可變部分是 \(4n\)。</li><li>設 \(M=4n+c\)，代入 \(n=1\)：\(4+c=5\)，所以 \(c=1\)。</li><li>因此 \(M=4n+1\)。</li><li>(b) \(M=4(12)+1=48+1=49\)。</li><li>以 \(n=2\) 驗算：\(4(2)+1=9\)，即 \(5+4\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 1 個圖形已經有 \(5\) 根，所以規則是 \(4n+1\)，不是 \(4n\)。代入 \(n=1\) 是找常數最快的方法。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>下表列出長度為 \(n\) 的圍邊所用瓷磚數目 \(T\)：</p><table><tr><th>\(n\)</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>\(T\)</th><td>7</td><td>12</td><td>17</td><td>22</td></tr></table><p>(a) 求 \(T\) 以 \(n\) 表示的公式。<br>(b) 長度為 \(20\) 的圍邊需用多少塊瓷磚？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T=5n+2\)　(b) 102</div>
+<ol class="steps">
+<li>數值每次增加 \(12-7=5\)，所以 \(n\) 的係數是 \(5\)。</li><li>設 \(T=5n+c\)，用 \(n=1,\ T=7\)：\(5+c=7\)，所以 \(c=2\)。</li><li>因此 \(T=5n+2\)；以 \(n=3\) 驗算：\(15+2=17\) ✓。</li><li>(b) \(T=5(20)+2=100+2=102\) 塊瓷磚。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>只用 \(T=5n\) 的話，\(n=1\) 時得 \(5\)，但表上是 \(7\)。常數 \(+2\) 要靠代入一組已知數據求出。</p></div>
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一家健身中心收取入會費 $300，之後每月 $180。設入會 \(m\) 個月後共付 \(T\) 元。<br>(a) 寫出 \(T\) 以 \(m\) 表示的公式。<br>(b) 當 \(T=2100\) 時，求 \(m\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T=300+180m\)　(b) \(m=10\)</div>
+<ol class="steps">
+<li>(a) 入會費 \(300\) 只付一次，\(180\) 則每月都要付：\(T=300+180m\)。</li><li>(b) 代入 \(T=2100\)：\(300+180m=2100\)。</li><li>減去 \(300\)：\(180m=1800\)。</li><li>除以 \(180\)：\(m=10\)。</li><li>驗算：\(300+180(10)=300+1800=2100\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(180m\) 只計每月供款 —— \(300\) 是另計的。像 \(m=\frac{2100}{180}=11.67\) 這類答案就是忘了它。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>小圓點排成一個個六邊形環。第 1 環有 \(6\) 點，此後每一環都比前一環多 \(5\) 點。<br>(a) 寫出第 \(n\) 環點數 \(D\) 的公式。<br>(b) 哪一環恰好有 \(101\) 點？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(D=5n+1\)　(b) 第 20 環</div>
+<ol class="steps">
+<li>(a) 每一步是 \(5\)，所以設 \(D=5n+c\)；用 \(n=1,\ D=6\) 得 \(5+c=6\)，所以 \(c=1\)。</li><li>因此 \(D=5n+1\)；以 \(n=2\) 驗算：\(11=6+5\) ✓。</li><li>(b) 解 \(5n+1=101\)：\(5n=100\)，所以 \(n=20\)。</li><li>驗算：\(5(20)+1=101\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(b) 問的是環的<i>編號</i>，所以答案是 \(n=20\)，不是 \(101\)。把 \(5n+1=101\) 變換主項，求的是環號而非點數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個水箱盛有 \(600\) 升水，並以每分鐘 \(15\) 升的穩定速率排空。\(t\) 分鐘後水箱內的水量為 \(V\) 升。<br>(a) 寫出 \(V\) 以 \(t\) 表示的公式。<br>(b) 求 \(25\) 分鐘後的 \(V\)。<br>(c) 水箱要多久才完全排空？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(V=600-15t\)　(b) \(225\) 升　(c) \(40\) 分鐘</div>
+<ol class="steps">
+<li>(a) 水量減少 \(15t\)，所以 \(V=600-15t\)。</li><li>(b) \(V=600-15(25)=600-375=225\)。</li><li>(c) 排空即 \(V=0\)：\(600-15t=0\)，所以 \(15t=600\)，\(t=40\)。</li><li>驗算 (c)：\(40\) 分鐘共排出 \(15\times 40=600\) 升，正好是全部容量 ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>遞減的量要有負號：\(V=600-15t\)，不是 \(600+15t\)。另外這公式只在 \(0\le t\le 40\) 時才有意義。</p></div>
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一名售貨員的月薪為底薪 $12,000，另加營業額的 \(5\%\) 作佣金。<br>(a) 設她的營業額為 \(s\) 元，寫出月入 \(S\) 元的公式。<br>(b) 求 \(s=80\,000\) 時的 \(S\)。<br>(c) 若要月入 $19,500，營業額須為多少？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(S=12\,000+0.05s\)　(b) $16,000　(c) $150,000</div>
+<ol class="steps">
+<li>(a) \(s\) 的 \(5\%\) 是 \(0.05s\)，所以 \(S=12\,000+0.05s\)。</li><li>(b) \(S=12\,000+0.05(80\,000)=12\,000+4000=16\,000\)。</li><li>(c) 代入 \(S=19\,500\)：\(12\,000+0.05s=19\,500\)。</li><li>減去 \(12\,000\)：\(0.05s=7500\)。</li><li>除以 \(0.05\)：\(s=150\,000\)。</li><li>驗算：\(150\,000\) 的 \(5\%\) 是 \(7500\)，而 \(12\,000+7500=19\,500\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(5\%\) 是 \(0.05\)，不是 \(5\)。用 \(5s\) 會得出荒謬的收入；另外 (c) 要除以 \(0.05\)（即乘以 \(20\)），不是除以 \(5\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>等差數列：公差與通項 <span class="count">· 7 題</span></h2>
+    <p>運用 \(T_{n}=a+(n-1)d\)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>等差數列中，每一項都由前一項加上同一個數 \(d\)（公差）而得，所以經常用 \(T_{2}-T_{1}=T_{3}-T_{2}\) 檢驗。通項是 \(T_{n}=a+(n-1)d\) —— 注意是 \(n-1\)，不是 \(n\)。已知兩項時，可列出關於 \(a\) 與 \(d\) 的兩個聯立方程，兩式相減即可先求 \(d\)。</p><div class="formula"><span>\(d=T_{n+1}-T_{n}\)</span><span>\(T_{n}=a+(n-1)d\)</span><span>\(T_{m}-T_{k}=(m-k)d\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對等差數列 \(5,\ 9,\ 13,\ \ldots\)，求公差 \(d\) 及第 10 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(d=4\)，\(T_{10}=41\)</div>
+<ol class="steps">
+<li>\(d=9-5=4\)（驗算：\(13-9=4\) ✓）。</li><li>\(T_{n}=a+(n-1)d\)，其中 \(a=5\)、\(d=4\)。</li><li>\(T_{10}=5+(10-1)(4)=5+9(4)=5+36=41\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由第 1 項到第 10 項只有 \(9\) 步，不是 \(10\) 步。用 \(10d\) 會得 \(45\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求等差數列 \(7,\ 4,\ 1,\ \ldots\) 的第 20 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(-50\)</div>
+<ol class="steps">
+<li>\(d=4-7=-3\)。</li><li>\(T_{20}=7+(20-1)(-3)\)。</li><li>\(=7+19(-3)=7-57\)。</li><li>\(=-50\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(19\times(-3)=-57\)，所以該項是 \(7-57=-50\)。漏掉負號就會變成 \(+64\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某等差數列的第 5 項是 \(17\)，第 9 項是 \(33\)。求首項 \(a\) 與公差 \(d\)，並由此寫出通項 \(T_{n}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a=1\)，\(d=4\)，\(T_{n}=4n-3\)</div>
+<ol class="steps">
+<li>\(T_{5}=a+4d=17\) … (1)，\(T_{9}=a+8d=33\) … (2)。</li><li>(2) − (1)：\(4d=16\)，所以 \(d=4\)。</li><li>代入 (1)：\(a+16=17\)，所以 \(a=1\)。</li><li>\(T_{n}=1+(n-1)(4)=4n-3\)。</li><li>驗算：\(T_{5}=20-3=17\) ✓，\(T_{9}=36-3=33\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩式相減能消去 \(a\)，因為兩項用的是同一個 \(a\)。若寫成 \(T_{9}=a+9d\) 而不是 \(a+8d\)，會得 \(d=3.4\)，與數據不符。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q35.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q35 ↗</a></div>
+<div class="q__body"><p>判斷下列各項是否等差數列，並說明理由。<br>(a) \(8-4a,\ 9-5a,\ 10-6a\)<br>(b) \(3,\ 7,\ 12,\ 18,\ \ldots\)</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 是，公差為 \(1-a\)　(b) 不是，相鄰差為 \(4,5,6\)</div>
+<ol class="steps">
+<li>數列是等差數列，當且僅當相鄰兩項之差全部相等。</li><li>(a) \(T_{2}-T_{1}=(9-5a)-(8-4a)=1-a\)。</li><li>\(T_{3}-T_{2}=(10-6a)-(9-5a)=1-a\)。</li><li>兩個差都等於 \(1-a\)，所以 (a) <i>是</i>等差數列（不論 \(a\) 取何值）。</li><li>(b) \(7-3=4\)、\(12-7=5\)、\(18-12=6\)。差值不是常數，所以 (b) 不是等差數列。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 各項含字母 \(a\)，但 \(a\) 在此是固定的常數 —— 只需各差值彼此相等，不必是具體數字。</p></div>
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>在 \(4\) 與 \(24\) 之間插入三個數，使這五個數組成等差數列。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(9,\ 14,\ 19\)</div>
+<ol class="steps">
+<li>五項代表由 \(4\) 到 \(24\) 共有四段相等的差。</li><li>\(T_{5}=a+4d\)，所以 \(4+4d=24\)。</li><li>\(4d=20\)，得 \(d=5\)。</li><li>五個數為 \(4,\ 9,\ 14,\ 19,\ 24\)。</li><li>驗算：每步是 \(5\)，末項是 \(24\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>插入三個數會產生<i>四</i>個間隔，所以要除以 \(4\)，不是 \(3\)。除以 \(3\) 得 \(d=\frac{20}{3}\)，各項便不是整數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某等差數列的第 3 項是 \(10\)，第 11 項是 \(42\)。<br>(a) 求首項與公差。<br>(b) 求數列中第一個大於 \(200\) 的項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(a=2,\ d=4\)　(b) 第 51 項，其值為 \(202\)</div>
+<ol class="steps">
+<li>(a) \(T_{3}=a+2d=10\) … (1)，\(T_{11}=a+10d=42\) … (2)。</li><li>(2) − (1)：\(8d=32\)，所以 \(d=4\)；再由 \(a+8=10\) 得 \(a=2\)。</li><li>因此 \(T_{n}=2+4(n-1)=4n-2\)。</li><li>(b) 解 \(4n-2&gt;200\)：\(4n&gt;202\)，即 \(n&gt;50.5\)。</li><li>最小的整數是 \(n=51\)，而 \(T_{51}=4(51)-2=202\)。</li><li>驗算：\(T_{50}=198&lt;200\)，\(T_{51}=202&gt;200\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(n&gt;50.5\) 表示第一個整數是 \(51\)，不是 \(50\)。永遠要檢驗邊界兩側。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某劇院第一行有 \(18\) 個座位。之後每一行都比前一行多 \(2\) 個座位，全院共 \(25\) 行。<br>(a) 寫出第 \(n\) 行座位數目的公式。<br>(b) 哪一行恰好有 \(60\) 個座位？<br>(c) 有沒有某一行恰好有 \(75\) 個座位？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T_{n}=2n+16\)　(b) 第 22 行　(c) 沒有，因為 \(2n+16\) 恆為偶數</div>
+<ol class="steps">
+<li>(a) \(a=18\)、\(d=2\)，所以 \(T_{n}=18+(n-1)(2)=2n+16\)。</li><li>(b) 解 \(2n+16=60\)：\(2n=44\)，所以 \(n=22\)。</li><li>驗算：第 22 行有 \(2(22)+16=60\) 個座位 ✓。</li><li>(c) 解 \(2n+16=75\)：\(2n=59\)，所以 \(n=29.5\)，不是整數。</li><li>而且 \(2n+16=2(n+8)\) 恆為偶數，不可能等於奇數 \(75\)。所以不存在這一行。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(c) 中 \(n\) 不是整數即代表沒有這一行 —— 不要把 \(29.5\) 進位成 \(30\) 並說第 30 行。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>等差數列求和：項數與和 <span class="count">· 7 題</span></h2>
+    <p>先數清項數，再用 \(S_{n}\)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>求首 \(n\) 項之和有兩條公式：已知末項時用 \(S_{n}=\frac{n}{2}(a+l)\)，其餘情況用 \(S_{n}=\frac{n}{2}\left[2a+(n-1)d\right]\)。大部分失分都來自把項數 \(n\) 數錯，所以求和前必先用 \(l=a+(n-1)d\) 求出 \(n\)，並緊記 \(T_{n}=S_{n}-S_{n-1}\)。</p><div class="formula"><span>\(S_{n}=\frac{n}{2}(a+l)\)</span><span>\(S_{n}=\frac{n}{2}[2a+(n-1)d]\)</span><span>\(n=\frac{l-a}{d}+1\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求等差數列 \(3,\ 7,\ 11,\ \ldots\) 首 \(20\) 項之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(820\)</div>
+<ol class="steps">
+<li>\(a=3\)、\(d=4\)、\(n=20\)。</li><li>先求末項：\(T_{20}=3+19(4)=79\)。</li><li>\(S_{20}=\frac{20}{2}(3+79)=10(82)\)。</li><li>\(=820\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(S_{n}=\frac{n}{2}(a+l)\) 用的是<i>首項與末項</i>。把 \(T_{1}\) 用兩次，或用 \(n=21\)，都會得出錯的總和。</p></div>
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求等差級數 \(2+5+8+\cdots+62\) 之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(672\)</div>
+<ol class="steps">
+<li>\(a=2\)、\(d=3\)，末項 \(l=62\)。</li><li>先求 \(n\)：\(62=2+(n-1)(3)\)，即 \(60=3(n-1)\)，\(n-1=20\)，得 \(n=21\)。</li><li>\(S_{21}=\frac{21}{2}(2+62)=\frac{21}{2}(64)=21\times 32\)。</li><li>\(=672\)。</li><li>驗算：\(S_{21}\) 應有 \(21\) 項，平均每項為 \(\frac{2+62}{2}=32\)，所以 \(21\times 32=672\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>共有 \(21\) 項，不是 \(20\) 項：項數是 \(\frac{62-2}{3}+1=21\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>求 \(100\) 與 \(300\) 之間所有 \(7\) 的倍數之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(5586\)</div>
+<ol class="steps">
+<li>大於 \(100\) 的最小 \(7\) 的倍數是 \(105=7\times 15\)。</li><li>小於 \(300\) 的最大 \(7\) 的倍數是 \(294=7\times 42\)。</li><li>項數：\(\frac{294-105}{7}+1=27+1=28\)。</li><li>\(S_{28}=\frac{28}{2}(105+294)=14(399)\)。</li><li>\(=5586\)。</li><li>驗算：\(399\times 14=399\times 10+399\times 4=3990+1596=5586\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(100\) 與 \(300\) 都不是 \(7\) 的倍數，所以級數由 \(105\) 起、到 \(294\) 止。用 \(100\) 或 \(300\) 作端點會令項數出錯。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某數列首 \(n\) 項之和為 \(S_{n}=n^{2}+3n\)。<br>(a) 求第 10 項。<br>(b) 求首項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T_{10}=22\)　(b) \(T_{1}=4\)</div>
+<ol class="steps">
+<li>(a) \(T_{10}=S_{10}-S_{9}\)。</li><li>\(S_{10}=100+30=130\)，\(S_{9}=81+27=108\)。</li><li>\(T_{10}=130-108=22\)。</li><li>(b) \(S_{1}\) 只含首項，所以 \(T_{1}=S_{1}=1+3=4\)。</li><li>驗算：數列為 \(4,\ 6,\ 8,\ 10,\ldots\)（公差 \(2\)），且 \(S_{n}=\frac{n}{2}[8+2(n-1)]=n(n+3)=n^{2}+3n\) ✓ ——所以 \(T_{10}=4+9(2)=22\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 10 項不是 \(S_{10}\)：\(S_{10}\) 是首十項的總和。要用 \(T_{n}=S_{n}-S_{n-1}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>求所有能被 \(5\) 整除的三位數之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(98\,550\)</div>
+<ol class="steps">
+<li>這些數是 \(100,\ 105,\ 110,\ \ldots,\ 995\)，公差 \(d=5\) 的等差數列。</li><li>項數：\(n=\frac{995-100}{5}+1=179+1=180\)。</li><li>\(S_{180}=\frac{180}{2}(100+995)=90(1095)\)。</li><li>\(=98\,550\)。</li><li>驗算：平均每項為 \(\frac{1095}{2}=547.5\)，而 \(180\times 547.5=98\,550\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>最小的三位 \(5\) 的倍數是 \(100\)，最大是 \(995\)，不是 \(999\)。把 \(999\) 計入就破壞了公差 \(5\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某音樂廳第一行有 \(20\) 個座位。之後每一行都比前一行多 \(3\) 個座位，全場共 \(30\) 行。<br>(a) 求最後一行的座位數目。<br>(b) 求全場座位總數。<br>(c) 另一個音樂廳有 \(30\) 行，每行 \(30\) 個座位。求兩個音樂廳座位數目之差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(107\) 個座位　(b) \(1905\) 個座位　(c) \(1005\) 個座位</div>
+<ol class="steps">
+<li>(a) \(T_{30}=20+29(3)=20+87=107\) 個座位。</li><li>(b) \(S_{30}=\frac{30}{2}(20+107)=15(127)\)。</li><li>\(15\times 127=1905\) 個座位。</li><li>(c) 第二個音樂廳有 \(30\times 30=900\) 個座位。</li><li>\(1905-900=1005\)，所以第一個音樂廳多 \(1005\) 個座位。</li><li>驗算 (a)：數列 \(20,\ 23,\ 26,\ldots\) 在 \(29\) 步內共增加 \(87\)，得 \(107\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 由第 1 行到第 30 行只有 \(29\) 次增加，不是 \(30\) 次。另外要先比較兩個總數，才判斷哪個較多。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>文迪第一個月儲 $500，之後每個月比上月多儲 $40。<br>(a) 她第 12 個月儲多少？<br>(b) 12 個月後她共儲了多少？<br>(c) 求她的儲蓄總額首次超過 $20,000 所需的最少月數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $940　(b) $8640　(c) \(22\) 個月</div>
+<ol class="steps">
+<li>(a) \(T_{12}=500+11(40)=500+440=940\)，即 $940。</li><li>(b) \(S_{12}=\frac{12}{2}(500+940)=6(1440)=8640\)，即 $8640。</li><li>(c) \(S_{n}=\frac{n}{2}\left[2(500)+(n-1)(40)\right]=\frac{n}{2}(960+40n)=20n^{2}+480n\)。</li><li>要求 \(20n^{2}+480n&gt;20\,000\)，即 \(n^{2}+24n-1000&gt;0\)。</li><li>試整數：\(n=21\)：\(441+504=945&lt;1000\)；\(n=22\)：\(484+528=1012&gt;1000\)。</li><li>所以最少要 \(22\) 個月。驗算總額：\(S_{22}=20(484)+480(22)=9680+10\,560=20\,240&gt;20\,000\) ✓（而 \(S_{21}=18\,900\)）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>整個運算要用 \(S_{n}\)（總和），不是 \(T_{n}\)。另外 \(n^{2}+24n-1000&gt;0\) 要取正根（約 \(21.8\)）之上最小的整數，即 \(22\)。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>等比數列：公比與通項 <span class="count">· 7 題</span></h2>
+    <p>運用 \(T_{n}=ar^{n-1}\)</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>等比數列中，每一項都是前一項乘以同一個數 \(r\)（公比），可用 \(\frac{T_{2}}{T_{1}}=\frac{T_{3}}{T_{2}}\) 檢驗。通項是 \(T_{n}=ar^{n-1}\)。已知兩項時，把兩式相除可消去 \(a\)，得出 \(r^{m-k}\)，再取相應的方根。公比為負數時正負號會交替；\(r\) 也可以是 \(1\) 以下的分數，此時各項越來越小。</p><div class="formula"><span>\(r=\frac{T_{n+1}}{T_{n}}\)</span><span>\(T_{n}=ar^{n-1}\)</span><span>\(\frac{T_{m}}{T_{k}}=r^{m-k}\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>對等比數列 \(3,\ 6,\ 12,\ \ldots\)，求公比及第 8 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(r=2\)，\(T_{8}=384\)</div>
+<ol class="steps">
+<li>\(r=\frac{6}{3}=2\)（驗算：\(\frac{12}{6}=2\) ✓）。</li><li>\(T_{n}=ar^{n-1}\)，其中 \(a=3\)、\(r=2\)。</li><li>\(T_{8}=3(2)^{7}=3(128)=384\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 8 項用 \(r^{7}\)，不是 \(r^{8}\)。由第 1 項到第 8 項只乘了 \(7\) 次。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求等比數列 \(81,\ 27,\ 9,\ \ldots\) 的第 6 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{1}{3}\)</div>
+<ol class="steps">
+<li>\(r=\frac{27}{81}=\frac{1}{3}\)。</li><li>\(T_{6}=81\left(\frac{1}{3}\right)^{5}\)。</li><li>\(=81\times\frac{1}{243}\)。</li><li>\(=\frac{1}{3}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(\left(\frac{1}{3}\right)^{5}=\frac{1}{243}\)，不是 \(\frac{1}{15}\)：指數要同時作用於分子與分母。</p></div>
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某等比數列的第 3 項是 \(12\)，第 6 項是 \(96\)。求公比與首項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(r=2\)，\(a=3\)</div>
+<ol class="steps">
+<li>\(T_{3}=ar^{2}=12\)，\(T_{6}=ar^{5}=96\)。</li><li>兩式相除：\(\frac{ar^{5}}{ar^{2}}=\frac{96}{12}\)，所以 \(r^{3}=8\)。</li><li>因此 \(r=2\)。</li><li>代入 \(ar^{2}=12\)：\(4a=12\)，所以 \(a=3\)。</li><li>驗算：\(T_{6}=3(2)^{5}=96\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>兩項相除得 \(r^{6-3}=r^{3}\)，不是 \(r^{2}\)。若用 \(r^{2}\)，會得 \(r=\sqrt{8}\)，與數據不符。</p></div>
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某等比數列的首項為 \(5\)，公比為 \(-2\)。求其第 7 項與第 8 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(T_{7}=320\)，\(T_{8}=-640\)</div>
+<ol class="steps">
+<li>\(T_{7}=5(-2)^{6}\)。</li><li>因為指數是偶數，\((-2)^{6}=64\)，所以 \(T_{7}=5(64)=320\)。</li><li>\(T_{8}=5(-2)^{7}=5(-128)=-640\)。</li><li>驗算遞推：\(T_{8}=T_{7}\times(-2)=320\times(-2)=-640\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\((-2)^{6}=+64\)，但 \((-2)^{7}=-128\)：負數的偶次方為正，奇次方為負。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>等比數列 \(2,\ 6,\ 18,\ \ldots\) 繼續下去。求使第 \(n\) 項大於 \(1000\) 的最小 \(n\) 值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(n=7\)</div>
+<ol class="steps">
+<li>\(a=2\)、\(r=3\)，所以 \(T_{n}=2(3)^{n-1}\)。</li><li>要求 \(2(3)^{n-1}&gt;1000\)，即 \(3^{n-1}&gt;500\)。</li><li>試各次方：\(3^{5}=243\)（太小），\(3^{6}=729\)（足夠大）。</li><li>所以 \(n-1=6\)，得 \(n=7\)。</li><li>驗算：\(T_{6}=2(243)=486&lt;1000\)，而 \(T_{7}=2(729)=1458&gt;1000\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由 \(3^{n-1}&gt;500\) 得 \(n-1\ge 6\)，所以 \(n=7\)。忘記 \(-1\) 會得 \(n=6\)，但 \(T_{6}=486\) 仍低於 \(1000\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個球從 \(2\) m 高處落下。每次反彈後，它彈起的高度是前一次高度的 \(0.6\)。<br>(a) 求第 4 次反彈後所達的高度。<br>(b) 第幾次反彈後，高度首次低於 \(10\) cm？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(0.2592\) m（約 \(25.9\) cm）　(b) 第 6 次反彈</div>
+<ol class="steps">
+<li>(a) 各次高度組成等比數列，第 1 次反彈時 \(a=2(0.6)=1.2\) m，\(r=0.6\)。</li><li>第 4 次反彈後的高度 \(=1.2(0.6)^{3}=1.2(0.216)=0.2592\) m。</li><li>(b) 要求 \(1.2(0.6)^{n-1}&lt;0.1\)，即 \((0.6)^{n-1}&lt;\frac{1}{12}\approx 0.0833\)。</li><li>試算：\((0.6)^{4}=0.1296\)，\((0.6)^{5}=0.07776\)。</li><li>所以 \(n-1=5\)，得 \(n=6\)：第 6 次反彈。</li><li>驗算：第 5 次反彈後高 \(1.2(0.6)^{4}=0.1555\) m（高於 \(10\) cm），第 6 次後為 \(1.2(0.6)^{5}=0.0933\) m（低於 \(10\) cm）✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 1 次反彈的高度是 \(2\times 0.6=1.2\) m，所以 \(a=1.2\)，不是 \(2\)。另外比較前要把 \(10\) cm 換成 \(0.1\) m。</p></div>
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>一個細菌培養開始時有 \(500\) 個細菌，每 \(3\) 小時數目增加一倍。<br>(a) 求 \(12\) 小時後的細菌數目。<br>(b) 寫出 \(t\) 小時後的細菌數目。<br>(c) 求細菌數目首次超過 \(100\,000\) 所需的最少整數小時。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(8000\)　(b) \(500\times 2^{t/3}\)　(c) \(24\) 小時</div>
+<ol class="steps">
+<li>(a) \(12\) 小時共 \(12\div 3=4\) 個倍增週期，所以數目是 \(500\times 2^{4}=500\times 16=8000\)。</li><li>(b) \(t\) 小時內的倍增週期數是 \(\frac{t}{3}\)，所以數目是 \(500\times 2^{t/3}\)。</li><li>(c) 要求 \(500\times 2^{t/3}&gt;100\,000\)，即 \(2^{t/3}&gt;200\)。</li><li>由於 \(2^{7}=128\)、\(2^{8}=256\)，所以 \(\frac{t}{3}\) 要達到 \(8\)。</li><li>因此 \(t=24\) 小時；驗算 \(500\times 2^{8}=500\times 256=128\,000&gt;100\,000\) ✓，而 \(t=21\) 時 \(500\times 2^{7}=64\,000&lt;100\,000\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>指數是 \(\frac{t}{3}\)，不是 \(t\)：每 \(3\) 小時才倍增一次。用 \(2^{t}\) 會得出荒謬的答案。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>等比數列求和與應用 <span class="count">· 7 題</span></h2>
+    <p>增長、折舊、分期供款與無限項之和</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>等比數列首 \(n\) 項之和為 \(S_{n}=\frac{a(r^{n}-1)}{r-1}\)（\(r\neq 1\)），也可寫成 \(\frac{a(1-r^{n})}{1-r}\)。若 \(|r|&lt;1\)，級數收斂，無限項之和為 \(S_{\infty}=\frac{a}{1-r}\)。百分數的連續變化同屬等比：每期增長 \(p\%\) 即 \(r=1+\frac{p}{100}\)，折舊即 \(r=1-\frac{p}{100}\)。</p><div class="formula"><span>\(S_{n}=\frac{a(r^{n}-1)}{r-1}\)</span><span>\(S_{\infty}=\frac{a}{1-r},\ |r|&lt;1\)</span><span>\(\text{增長： } r=1+\frac{p}{100}\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>求等比數列 \(2,\ 6,\ 18,\ \ldots\) 首 \(6\) 項之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(728\)</div>
+<ol class="steps">
+<li>\(a=2\)、\(r=3\)、\(n=6\)。</li><li>\(S_{6}=\frac{2(3^{6}-1)}{3-1}=\frac{2(729-1)}{2}\)。</li><li>\(=728\)。</li><li>直接相加驗算：\(2+6+18+54+162+486=728\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(3^{6}=729\)，不是 \(18\)。另外分母是 \(r-1=2\)，不是 \(r\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求 \(1+\frac{1}{2}+\frac{1}{4}+\cdots\) 首 \(8\) 項之和，答案以分數表示。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(\frac{255}{128}\)</div>
+<ol class="steps">
+<li>\(a=1\)、\(r=\frac{1}{2}\)、\(n=8\)。</li><li>\(S_{8}=\frac{1\left(1-\left(\frac{1}{2}\right)^{8}\right)}{1-\frac{1}{2}}\)。</li><li>\(=\frac{1-\frac{1}{256}}{\frac{1}{2}}=2\left(\frac{255}{256}\right)\)。</li><li>\(=\frac{255}{128}\)（約 \(1.992\)）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以 \(1-\frac{1}{2}=\frac{1}{2}\) 即乘以 \(2\)。漏了這個因數會得 \(\frac{255}{256}\)，而不是 \(\frac{255}{128}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>求等比級數 \(12+6+3+\cdots\) 的無限項之和。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(24\)</div>
+<ol class="steps">
+<li>\(a=12\)，\(r=\frac{6}{12}=\frac{1}{2}\)。</li><li>因為 \(|r|&lt;1\)，級數收斂，所以 \(S_{\infty}=\frac{a}{1-r}\)。</li><li>\(S_{\infty}=\frac{12}{1-\frac{1}{2}}=\frac{12}{\frac{1}{2}}\)。</li><li>\(=24\)。</li><li>驗算：\(S_{10}=12\times\frac{1-(1/2)^{10}}{1/2}\approx 23.977\)，接近 \(24\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(S_{\infty}=\frac{a}{1-r}\) 只在 \(|r|&lt;1\) 時適用。此處 \(r=\frac{1}{2}\) 符合條件；若 \(r=2\)，級數便沒有無限項之和。</p></div>
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某等比級數的首項為 \(3\)，公比為 \(2\)。首 \(n\) 項之和為 \(189\)，求 \(n\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(n=6\)</div>
+<ol class="steps">
+<li>\(S_{n}=\frac{3(2^{n}-1)}{2-1}=3(2^{n}-1)\)。</li><li>設 \(3(2^{n}-1)=189\)，所以 \(2^{n}-1=63\)。</li><li>\(2^{n}=64=2^{6}\)，故 \(n=6\)。</li><li>驗算：\(3+6+12+24+48+96=189\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>要先兩邊除以 \(3\)，再加 \(1\)：次序是 \(S_{n}\to 2^{n}-1\to 2^{n}\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一部機器價值 $48,000，每年貶值 \(15\%\)。<br>(a) 求 \(4\) 年後的價值，準確至最接近的元。<br>(b) 求這 \(4\) 年的總折舊額。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $25,056　(b) $22,944</div>
+<ol class="steps">
+<li>每年價值乘以 \(1-0.15=0.85\)，所以各年價值組成等比數列，\(a=48\,000\)、\(r=0.85\)。</li><li>(a) \(4\) 年後的價值 \(=48\,000(0.85)^{4}\)。</li><li>\((0.85)^{4}=0.52200625\)，所以價值為 \(48\,000\times 0.52200625=25\,056.3\)。</li><li>準確至最接近的元：$25,056。</li><li>(b) 折舊額 \(=48\,000-25\,056=22\,944\)，即 $22,944。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>每年蝕 \(15\%\) 表示 \(r=0.85\)，不是 \(r=-0.15\)。連續乘以 \(1-0.15\) 與「每年減去原價的 \(15\%\)」並不相同。</p></div>
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>彼得第一年儲 $2000，之後每年儲蓄額增加 \(8\%\)。<br>(a) 他第 10 年儲多少？<br>(b) 求首 10 年的儲蓄總額，準確至最接近的元。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $3998（準確至最接近的元）　(b) $28,973</div>
+<ol class="steps">
+<li>每年儲蓄額組成等比數列，\(a=2000\)、\(r=1.08\)。</li><li>(a) \(T_{10}=2000(1.08)^{9}\)。而 \((1.08)^{9}=1.999004\ldots\)，所以 \(T_{10}\approx 3998.0\)。</li><li>他第 10 年約儲 $3998。</li><li>(b) \(S_{10}=\frac{2000\left[(1.08)^{10}-1\right]}{1.08-1}\)。</li><li>\((1.08)^{10}=2.158924997\ldots\)，所以括號內為 \(1.158924997\ldots\)。</li><li>\(S_{10}=\frac{2000\times 1.158924997}{0.08}=2000\times 14.48656246\approx 28\,973.1\)。</li><li>儲蓄總額 \(\approx\) $28,973。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 10 年要用 \(r^{9}\)，不是 \(r^{10}\)。(b) 的分母是 \(r-1=0.08\)，除以 \(0.08\) 等於把括號乘以 \(12.5\)，不是乘以 \(0.08\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>某公司 2020 年的營業額為 $2 百萬，此後每年增加 \(10\%\)。<br>(a) 求 2025 年的營業額，準確至 $0.01 百萬。<br>(b) 求 2020 年至 2025 年（包括首尾兩年）的營業額總和，準確至 $0.1 百萬。<br>(c) 哪一年的營業額首次超過 $5 百萬？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $3.22 百萬　(b) $15.4 百萬　(c) 2030 年</div>
+<ol class="steps">
+<li>營業額組成等比數列：\(a=2\)（百萬）、\(r=1.1\)，並以 2020 年為第 1 項。</li><li>(a) 2025 年是第 6 項：\(T_{6}=2(1.1)^{5}=2(1.61051)=3.22102\approx 3.22\)，即 $3.22 百萬。</li><li>(b) \(S_{6}=\frac{2\left[(1.1)^{6}-1\right]}{1.1-1}=\frac{2(1.771561-1)}{0.1}\)。</li><li>\(=\frac{2(0.771561)}{0.1}=2\times 7.71561=15.43122\approx 15.4\)，即 $15.4 百萬。</li><li>(c) 要求 \(2(1.1)^{n-1}&gt;5\)，即 \((1.1)^{n-1}&gt;2.5\)。</li><li>試算：\((1.1)^{9}=2.3579\)、\((1.1)^{10}=2.5937\)，所以 \(n-1=10\)，\(n=11\)。</li><li>第 11 項即年份 \(2020+10=2030\)。驗算：\(2(1.1)^{10}=5.187&gt;5\) ✓，而 \(2(1.1)^{9}=4.716&lt;5\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 1 項是 2020 年，所以年份是 \(2020+(n-1)\)。把 \(n=11\) 當作 2031 年會差一年；用 \((1.1)^{n}\) 代替 \((1.1)^{n-1}\) 亦有同樣問題。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>考試程度：混合與遞推數列 <span class="count">· 8 題</span></h2>
+    <p>遞推關係、生活圖案、多部分求和</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>遞推關係用較前的項定義每一項，所以要逐項推算（若已知較後的項，則倒推）。如果每次的增加量本身成等差數列，總和就是等差數列求和。長題目中先辨清每一部分要用哪個工具：求單一項用 \(T_{n}\)，求總和用 \(S_{n}\)，問「最少值」就要列不等式。</p><div class="formula"><span>\(T_{n+1}=f(T_{n})\)</span><span>\(T_{n}=S_{n}-S_{n-1}\)</span><span>\(\sum_{k=1}^{n}(2k+2)=n(n+3)\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某數列由 \(T_{1}=3\) 及 \(T_{n+1}=2T_{n}+1\) 定義。求 \(T_{3}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(T_{3}=15\)</div>
+<ol class="steps">
+<li>取 \(n=1\)：\(T_{2}=2T_{1}+1=2(3)+1=7\)。</li><li>取 \(n=2\)：\(T_{3}=2T_{2}+1=2(7)+1=15\)。</li><li>所以數列由 \(3,\ 7,\ 15,\ \ldots\) 開始，而 \(T_{3}=15\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>每一項都要用<i>前一項</i>，所以不能由 \(T_{1}\) 直接求 \(T_{3}\)。跳過 \(T_{2}\) 會得 \(7\) 而不是 \(15\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>數列 \(1,\ 4,\ 9,\ 16,\ \ldots\) 由平方數組成。<br>(a) 寫出第 \(n\) 項的公式。<br>(b) 求第 12 項。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T_{n}=n^{2}\)　(b) \(144\)</div>
+<ol class="steps">
+<li>\(1=1^{2}\)、\(4=2^{2}\)、\(9=3^{2}\)、\(16=4^{2}\)，所以 \(T_{n}=n^{2}\)。</li><li>(b) \(T_{12}=12^{2}=144\)。</li><li>驗算差值：\(T_{n+1}-T_{n}=(n+1)^{2}-n^{2}=2n+1\)，得 \(3,\ 5,\ 7,\ldots\) ✓。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P2_Q13.html" target="_blank" rel="noopener">歷年試題 · 2017 卷二 Q13 ↗</a></div>
+<div class="q__body"><p>某設計的第 1 個圖案有 \(1\) 點。對任何正整數 \(n\)，第 \((n+1)\) 個圖案是由第 \(n\) 個圖案加上 \((2n+2)\) 點而成。求第 7 個圖案的點數。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(55\) 點</div>
+<ol class="steps">
+<li>設 \(T_{n}\) 為第 \(n\) 個圖案的點數，則 \(T_{n+1}=T_{n}+(2n+2)\)，且 \(T_{1}=1\)。</li><li>當 \(n=1,2,\ldots,6\) 時，所加的點數依次為 \(4,\ 6,\ 8,\ 10,\ 12,\ 14\)。</li><li>由第 1 個圖案到第 7 個圖案共加 \(6\) 次，所以 \(T_{7}=1+(4+6+8+10+12+14)\)。</li><li>括號內是 \(6\) 項的等差級數：\(\frac{6}{2}(4+14)=3(18)=54\)。</li><li>\(T_{7}=1+54=55\)。</li><li>用封閉式 \(T_{n}=n^{2}+n-1\) 驗算：\(49+7-1=55\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>由圖案 1 到圖案 7 只需加 \(6\) 次，不是 \(7\) 次。加七次會多出一項 \(16\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2023_P2_Q14.html" target="_blank" rel="noopener">歷年試題 · 2023 卷二 Q14 ↗</a></div>
+<div class="q__body"><p>設 \(a_{n}\) 為某數列的第 \(n\) 項。已知對每個正整數 \(n\)，\(a_{n+2}=a_{n}+a_{n+1}\)，且 \(a_{6}=23\)、\(a_{8}=60\)。求 \(a_{3}\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(a_{3}=5\)</div>
+<ol class="steps">
+<li>把關係式改寫成可倒推的形式：\(a_{n}=a_{n+2}-a_{n+1}\)。</li><li>取 \(n=6\)：\(a_{7}=a_{8}-a_{6}=60-23=37\)。</li><li>取 \(n=5\)：\(a_{5}=a_{7}-a_{6}=37-23=14\)。</li><li>取 \(n=4\)：\(a_{4}=a_{6}-a_{5}=23-14=9\)。</li><li>取 \(n=3\)：\(a_{3}=a_{5}-a_{4}=14-9=5\)。</li><li>向前驗算：\(5+9=14\)、\(9+14=23\)、\(14+23=37\)、\(23+37=60\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>倒推要用 \(a_{n}=a_{n+2}-a_{n+1}\)：減去緊接右邊的一項。把減法次序倒轉會產生迅速發散的負數。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>某數列首 \(n\) 項之和為 \(S_{n}=3n^{2}+n\)。<br>(a) 求第 \(n\) 項 \(T_{n}\)。<br>(b) 由此求 \(T_{10}\)。<br>(c) 證明該數列是等差數列。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(T_{n}=6n-2\)　(b) \(T_{10}=58\)　(c) \(T_{n+1}-T_{n}=6\)，為常數</div>
+<ol class="steps">
+<li>(a) \(T_{n}=S_{n}-S_{n-1}=3n^{2}+n-\left[3(n-1)^{2}+(n-1)\right]\)。</li><li>展開括號：\(3(n-1)^{2}+(n-1)=3n^{2}-6n+3+n-1=3n^{2}-5n+2\)。</li><li>所以 \(T_{n}=(3n^{2}+n)-(3n^{2}-5n+2)=6n-2\)。</li><li>(b) \(T_{10}=60-2=58\)。</li><li>(c) \(T_{n+1}-T_{n}=\left[6(n+1)-2\right]-(6n-2)=6\)，為常數，所以數列是等差數列，\(d=6\)。</li><li>驗算：\(S_{1}=4=T_{1}\)；\(S_{2}=12+2=14\)，而 \(T_{1}+T_{2}=4+10=14\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>\(S_{n-1}\) 要在<i>兩處</i>都代入 \((n-1)\)：\(3(n-1)^{2}+(n-1)\)。只展開平方會得 \(T_{n}=6n-1\)，而不是 \(6n-2\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>彼得在訓練的第一週跑 \(2\) km，此後每週增加 \(0.4\) km。<br>(a) 求他第 10 週跑的距離。<br>(b) 求他首 10 週跑的總距離。<br>(c) 求他每週距離首次超過 \(10\) km 的那一週。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(5.6\) km　(b) \(38\) km　(c) 第 22 週</div>
+<ol class="steps">
+<li>(a) \(T_{n}=2+0.4(n-1)\)，所以 \(T_{10}=2+0.4(9)=2+3.6=5.6\) km。</li><li>(b) \(S_{10}=\frac{10}{2}(2+5.6)=5(7.6)=38\) km。</li><li>(c) 要求 \(2+0.4(n-1)&gt;10\)：\(0.4(n-1)&gt;8\)，所以 \(n-1&gt;20\)，\(n&gt;21\)。</li><li>最小的整數是 \(n=22\)，此時 \(T_{22}=2+0.4(21)=10.4\) km。</li><li>驗算：\(T_{21}=2+0.4(20)=10\) km 剛好相等，所以第 21 週仍未<i>超過</i> \(10\) km ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「超過 \(10\) km」是嚴格不等式，所以 \(n=21\)（剛好 \(10\) km）不合；由 \(n-1&gt;20\) 得 \(n&gt;21\)，答案為 \(22\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span></div>
+<div class="q__body"><p>某等差數列首 \(5\) 項之和為 \(45\)，接着的 \(5\) 項之和為 \(195\)。<br>(a) 求首項與公差。<br>(b) 求第 11 項。<br>(c) 求使首 \(n\) 項之和大於 \(1000\) 的最小 \(n\) 值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(a=-3,\ d=6\)　(b) \(T_{11}=57\)　(c) \(n=20\)</div>
+<ol class="steps">
+<li>(a) \(S_{5}=45\)：\(\frac{5}{2}(2a+4d)=45\)，即 \(5(a+2d)=45\)，得 \(a+2d=9\) … (1)。</li><li>接着的 \(5\) 項給出 \(S_{10}-S_{5}=195\)，所以 \(S_{10}=240\)：\(\frac{10}{2}(2a+9d)=240\)，即 \(2a+9d=48\) … (2)。</li><li>由 (1) 得 \(a=9-2d\)。代入 (2)：\(18-4d+9d=48\)，所以 \(5d=30\)，\(d=6\)，而 \(a=9-12=-3\)。</li><li>(b) \(T_{11}=-3+10(6)=57\)。</li><li>(c) \(S_{n}=\frac{n}{2}\left[2(-3)+(n-1)(6)\right]=\frac{n}{2}(6n-12)=3n^{2}-6n\)。</li><li>要求 \(3n^{2}-6n&gt;1000\)。試 \(n=19\)：\(1083-114=969\)（不足）；\(n=20\)：\(1200-120=1080&gt;1000\)。</li><li>所以最小是 \(n=20\)。驗算 (a)：\(-3+3+9+15+21=45\) ✓，接着五項 \(27+33+39+45+51=195\) ✓。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>「接着的 \(5\) 項」是 \(S_{10}-S_{5}\)，不是 \(S_{10}\)。把 \(195\) 當作 \(S_{10}\) 會得 \(d=\frac{5}{3}\)，與題給的和不符。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">8 分</span></div>
+<div class="q__body"><p>瑪麗在 2020 年入職，年薪 $300,000，之後每年增加 $10,000。彼得亦於 2020 年入職，年薪 $250,000，之後每年增加 \(5\%\)。<br>(a) 求瑪麗 2029 年的年薪。<br>(b) 求彼得 2029 年的年薪，準確至最接近的元。<br>(c) 求瑪麗 2020 年至 2029 年（包括首尾兩年）的總收入。<br>(d) 彼得的年薪在哪一年首次超過瑪麗？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $390,000　(b) $387,832　(c) $3,450,000　(d) 2030 年</div>
+<ol class="steps">
+<li>瑪麗的年薪成等差數列，\(a=300\,000\)、\(d=10\,000\)；彼得的年薪成等比數列，\(a=250\,000\)、\(r=1.05\)。2020 年為第 1 項。</li><li>(a) 2029 年是第 10 項：\(T_{10}=300\,000+9(10\,000)=390\,000\)。</li><li>(b) 彼得：\(T_{10}=250\,000(1.05)^{9}\)。因 \((1.05)^{9}=1.5513282\ldots\)，故 \(T_{10}=387\,832.05\ldots\approx 387\,832\)。</li><li>(c) \(S_{10}=\frac{10}{2}(300\,000+390\,000)=5(690\,000)=3\,450\,000\)。</li><li>(d) 2029 年彼得賺 \(387\,832&lt;390\,000\)，所以要試下一年。瑪麗 2030 年：\(390\,000+10\,000=400\,000\)。</li><li>彼得 2030 年：\(250\,000(1.05)^{10}=250\,000(1.6288946\ldots)=407\,223.6\)，約 $407,224。</li><li>由於 \(407\,224&gt;400\,000\)，彼得的年薪在 2030 年首次超過瑪麗。</li><li>驗算上一年確實較低：\(387\,832&lt;390\,000\) ✓，所以交點在 2029 與 2030 年之間。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>第 10 項是 2029 年，因為年份是 \(2020+(n-1)\)。計算 2030 年時等比項用 \((1.05)^{10}\)；若仍用 \((1.05)^{9}\)，彼得會一直低於瑪麗，答案便會移後。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 公式與數列 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>

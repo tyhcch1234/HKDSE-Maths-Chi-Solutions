@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港中學文憑試 數學（必修）· 估算、近似與誤差 — 7 種題型 50 題（附詳解）</title>
+<meta name="description" content="由 23 道歷年 HKDSE 估算、近似與誤差試題（2012–2026）整理而成的七種題型：小數位與有效數字、科學記數法、以 1 個有效數字估算、絕對誤差與最大絕對誤差、相對誤差與百分誤差、量度區間與上下限、計算量的誤差與適當準確度。共 50 題分級練習，每題附完整步驟詳解及常犯錯誤提示。">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+  svg: { fontCache: 'global' },
+  options: { ignoreHtmlClass: 'tex2jax_ignore' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<link rel="stylesheet" href="assets/cn.css">
+</head>
+<body id="top">
+<div class="typebar">
+  <div class="typebar__inner"><a href="#t1" data-t="t1">類型 1 · 小數位與有效數字</a><a href="#t2" data-t="t2">類型 2 · 科學記數法</a><a href="#t3" data-t="t3">類型 3 · 以 1 個有效數字估算</a><a href="#t4" data-t="t4">類型 4 · 絕對誤差</a><a href="#t5" data-t="t5">類型 5 · 相對誤差</a><a href="#t6" data-t="t6">類型 6 · 上下限與區間</a><a href="#t7" data-t="t7">類型 7 · 結果的誤差</a></div>
+  <div class="progress"><div class="progress__fill" id="pfill"></div></div>
+</div>
+
+<div class="container">
+  <header class="hero">
+    <p class="hero__eyebrow">香港中學文憑試 數學（必修部分）· 估算、近似與誤差</p>
+    <h1 class="hero__title">估算、近似與誤差 — 7 種題型，50 題練習</h1>
+    <p class="hero__subtitle">由 23 道歷年 DSE 估算、近似與誤差試題（2012–2026）整理成七種題型，由熱身到考試程度分級編排，每題附完整步驟詳解。</p>
+    <div class="hero__stats">
+      <span class="stat"><b>7</b> 種題型</span>
+      <span class="stat"><b>50</b> 道題目</span>
+      <span class="stat"><b>23</b> 個歷年試題來源</span>
+      <span class="stat"><b>100%</b> 附詳解</span>
+    </div>
+    <p class="hero__back"><a href="DSE_Maths_By_Topic.html">← 按課題索引</a>　·　<a href="index.html">按年份索引</a></p>
+  </header>
+
+  <div class="note-card">
+    <h2>如何使用這 50 題</h2>
+    <ol>
+      <li><b>先做後看。</b>每題先在紙上完成，再按「顯示答案及詳解」逐行核對 —— 不要一開始就讀詳解。</li>
+      <li><b>按題型次序做。</b>七種題型由淺入深；每種題型的前幾題是單步計算，最後一至兩題是考試程度的多部分題目。</li>
+      <li><b>讀一讀「常犯錯誤」。</b>那正是考生失分的地方 —— 例如前導零不算有效數字，相對誤差的分母是真值而非量度值。</li>
+      <li><b>與真實試卷對照。</b>不少題目改編自歷年試題；題卡右邊的標籤可打開原題及其完整詳解。</li>
+    </ol>
+    <p class="legend">難度：★ 熱身　★★ 鞏固　★★★ 考試程度　★★★★ 挑戰（DSE 4 分以上題型）</p>
+  </div>
+
+  <div class="card" style="padding:1.1rem 1.2rem;">
+    <h2 class="card__title" style="margin-top:0;">七種題型</h2>
+    <div class="toc-table-wrap">
+    <table class="table toc-table">
+      <thead><tr><th>類型</th><th>名稱</th><th>重點</th><th style="text-align:center">題數</th></tr></thead>
+      <tbody><tr><td><b>類型 1</b></td><td>捨入至小數位及有效數字</td><td>小數位、有效數字、末尾零</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 2</b></td><td>科學記數法與數量級</td><td>標準式、10 的冪的乘法與除法</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 3</b></td><td>以 1 個有效數字估算</td><td>計算前先把每個數捨入至 1 個有效數字</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 4</b></td><td>絕對誤差與最大絕對誤差</td><td>量度的誤差、捨入單位的一半</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 5</b></td><td>相對誤差與百分誤差</td><td>比較誤差、量度的百分誤差</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 6</b></td><td>量度區間、上限與下限</td><td>區間、和、積與商的上下限</td><td style='text-align:center'>7</td></tr><tr><td><b>類型 7</b></td><td>計算量的誤差與適當準確度</td><td>誤差傳入面積、體積與速率；選擇準確度</td><td style='text-align:center'>8</td></tr></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button id="expandAll">全部展開</button>
+    <button id="collapseAll">全部收起</button>
+    <span class="spacer"></span>
+    <span id="ptext">已展開 0 / 50 題</span>
+  </div>
+
+<section class="type-section" id="t1">
+  <div class="type-head">
+    <div class="type-head__no">類型 1</div>
+    <h2>捨入至小數位及有效數字 <span class="count">· 7 題</span></h2>
+    <p>小數位、有效數字、末尾零</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>捨入至 \(n\) 個小數位，就是保留小數點後 \(n\) 個數字。捨入至 \(n\) 個有效數字，就是由第一個非零數字起數 \(n\) 個數字 —— 前導零永遠不算有效數字。</p><p>只須看所保留最後一個數字之後的那一個數字：5 或以上進位，否則不變。為顯示準確度而保留的末尾零必須寫出來。</p><div class="formula"><span>\(7.8362\to 7.84\ (2\text{ 位小數})\)</span><span>\(0.004\,728\to 0.004\,73\ (3\text{ 位有效數字})\)</span></div>
+  </div>
+<article class="q" id="q1">
+<div class="q__head"><span class="q__no">Q1</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 7.8362 捨入至 (a) 2 個小數位，(b) 1 個小數位。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q1-sol" data-target="q1-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q1-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 7.84　(b) 7.8</div>
+<ol class="steps">
+<li>(a) 保留小數點後兩個數字：7.83。下一位是 6，不小於 5，所以要進位：7.84。</li><li>(b) 保留小數點後一個數字：7.8。下一位是 3，小於 5，所以不變：7.8。</li><li>驗算：7.8362 與 7.84 相差 0.0038，與 7.83 相差 0.0062，所以較接近 7.84。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q2">
+<div class="q__head"><span class="q__no">Q2</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 0.004 728 捨入至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q2-sol" data-target="q2-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q2-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>0.004 73</div>
+<ol class="steps">
+<li>前導零 0.00 只是佔位，不是有效數字；第一個有效數字是 4。</li><li>數三個有效數字：4、7、2 —— 但下一位是 8。</li><li>因為 8 ≥ 5，把 2 進位成 3：0.004 73。</li><li>驗算：0.004 728 = \(4.728\times 10^{-3}\)，而 \(4.728\) 取 3 個有效數字是 \(4.73\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把前導零算作有效數字，答成 0.005。前導零只表示這個數的大小，與準確度無關。</p></div>
+</div>
+</article>
+
+<article class="q" id="q3">
+<div class="q__head"><span class="q__no">Q3</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把 9.9963 捨入至 (a) 3 個有效數字，(b) 2 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q3-sol" data-target="q3-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q3-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 10.0　(b) 10</div>
+<ol class="steps">
+<li>(a) 9.9963 的頭三個有效數字是 9、9、9；下一位是 6，所以要進位。\(9.99+0.01=10.00\)，取 3 個有效數字寫成 10.0。</li><li>(b) 頭兩個有效數字是 9、9；下一位是 9，所以再次進位：10。</li><li>驗算：9.9963 與 10 相差 0.0037，所以 10.0 是合理的 3 個有效數字答案。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>取 3 個有效數字時寫成 10.00 —— 為顯示準確度而保留的零只可去到第三個有效數字，即 10.0。</p></div>
+</div>
+</article>
+
+<article class="q" id="q4">
+<div class="q__head"><span class="q__no">Q4</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某場館據報可容納 34 567 名觀眾。把這個數捨入至 (a) 3 個有效數字，(b) 4 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q4-sol" data-target="q4-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q4-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 34 600　(b) 34 570</div>
+<ol class="steps">
+<li>(a) 34 567 的頭三個有效數字是 3、4、5；下一位是 6，不小於 5，所以把 5 進位成 6。右邊各數位都變成零：34 600。</li><li>(b) 頭四個有效數字是 3、4、5、6；下一位是 7，所以把 6 進位成 7：34 570。</li><li>驗算：34 600 與 34 567 相差 67，34 570 只相差 3，所以兩個答案都已是在該準確度下最接近的值。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 5 和 6 直接刪去而答成 34 500 —— 進位後空出的數位必須補零。</p></div>
+</div>
+</article>
+
+<article class="q" id="q5">
+<div class="q__head"><span class="q__no">Q5</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把 0.030 456 捨入至 (a) 3 個有效數字，(b) 4 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q5-sol" data-target="q5-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q5-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.0305　(b) 0.030 46</div>
+<ol class="steps">
+<li>前導零 0.0 不是有效數字，所以有效數字由 3 開始：各數字依次為 3、0、4、5、6。</li><li>(a) 取三個有效數字得 3、0、4；下一位是 5，所以進位：0.0305。</li><li>(b) 取四個有效數字得 3、0、4、5；下一位是 6，所以進位：0.030 46。</li><li>驗算：答案的大小仍然一樣（約 0.03），改變的只是準確度。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q6">
+<div class="q__head"><span class="q__no">Q6</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>把 61.995 捨入至 (a) 2 個小數位，(b) 3 個有效數字，(c) 2 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q6-sol" data-target="q6-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q6-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 62.00　(b) 62.0　(c) 62</div>
+<ol class="steps">
+<li>(a) 取兩個小數位保留 61.99；下一位是 5，所以要進位。\(61.99+0.01=62.00\)，這兩個零必須寫出。</li><li>(b) 取三個有效數字保留 6、1、9；下一位是 9，所以進位：62.0。</li><li>(c) 取兩個有效數字保留 6、1；下一位是 9，所以進位：62。</li><li>驗算：三個答案在所要求的準確度下都等於 62，只是保留的數字個數不同。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 部寫成 62 —— 62 只有 2 個有效數字；2 個小數位必須寫成 62.00。</p></div>
+</div>
+</article>
+
+<article class="q" id="q7">
+<div class="q__head"><span class="q__no">Q7</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2017_P1_Q9.html" target="_blank" rel="noopener">歷年試題 · 2017 卷一 Q9 ↗</a></div>
+<div class="q__body"><p>取 \(\pi=3.14159\ldots\)。<br>(a) 把 \(\pi\) 準確至 4 個有效數字寫出。<br>(b) 利用 (a) 的答案，估算半徑 2.5 cm 的圓的周界。<br>(c) 真實周界為 \(15.707\,96\ldots\) cm。求 (b) 中估算值的絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q7-sol" data-target="q7-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q7-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 3.142　(b) 15.71 cm　(c) 約 0.002 cm</div>
+<ol class="steps">
+<li>(a) 3.14159… 的頭四個有效數字是 3、1、4、1；下一位是 5，所以進位：3.142。</li><li>(b) \(C=2\pi r\approx 2\times 3.142\times 2.5\)。</li><li>\(2\times 2.5=5\)，所以 \(C\approx 5\times 3.142=15.71\) cm。</li><li>(c) 絕對誤差 \(=15.71-15.707\,96\ldots=0.002\,04\ldots\)，即約 0.002 cm。</li><li>驗算：這個誤差遠小於捨入單位 0.0005 乘以 5 所得的 0.0025，所以估算的表現符合預期。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t2">
+  <div class="type-head">
+    <div class="type-head__no">類型 2</div>
+    <h2>科學記數法與數量級 <span class="count">· 7 題</span></h2>
+    <p>標準式、10 的冪的乘法與除法</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>科學記數法把一個數寫成 \(a\times 10^{n}\)，其中 \(1\le a&lt;10\)，\(n\) 為整數。指數 \(n\) 顯示小數點移動了多少位：大數向左移，小數向右移。</p><p>做乘法或除法時，把數字部分與 10 的冪分開處理，最後再把答案調回標準式。</p><div class="formula"><span>\(a\times 10^{n},\ 1\le a&lt;10\)</span><span>\(10^{m}\times 10^{n}=10^{m+n}\)</span><span>\(\frac{10^{m}}{10^{n}}=10^{m-n}\)</span></div>
+  </div>
+<article class="q" id="q8">
+<div class="q__head"><span class="q__no">Q8</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 45 600 寫成科學記數法。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q8-sol" data-target="q8-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q8-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4.56\times 10^{4}\)</div>
+<ol class="steps">
+<li>把小數點放在第一個非零數字之後：4.56。</li><li>由 45 600 起，小數點向左移了 4 位，所以指數是 4。</li><li>因此 \(45\,600=4.56\times 10^{4}\)。</li><li>驗算：\(4.56\times 10\,000=45\,600\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q9">
+<div class="q__head"><span class="q__no">Q9</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把 0.000 307 寫成科學記數法。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q9-sol" data-target="q9-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q9-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(3.07\times 10^{-4}\)</div>
+<ol class="steps">
+<li>第一個非零數字是 3，所以寫成 3.07。</li><li>由 3.07 還原為 0.000 307，小數點要向左移 4 位，所以指數是 \(-4\)。</li><li>因此 \(0.000\,307=3.07\times 10^{-4}\)。</li><li>驗算：\(3.07\times 10^{-4}=3.07\div 10\,000=0.000\,307\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>寫成 \(30.7\times 10^{-5}\) —— 數值正確，但不是標準式，因為 30.7 不小於 10。</p></div>
+</div>
+</article>
+
+<article class="q" id="q10">
+<div class="q__head"><span class="q__no">Q10</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>計算 \((3.2\times 10^{5})\times(4.5\times 10^{-3})\)，並以科學記數法表示答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q10-sol" data-target="q10-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q10-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(1.44\times 10^{3}\)</div>
+<ol class="steps">
+<li>先把數字相乘：\(3.2\times 4.5=14.4\)。</li><li>再把指數相加：\(10^{5}\times 10^{-3}=10^{5-3}=10^{2}\)。</li><li>所以乘積是 \(14.4\times 10^{2}\)。</li><li>化為標準式：\(14.4\times 10^{2}=1.44\times 10^{3}\)。</li><li>驗算：\(1.44\times 1000=1440\)，而 \(320\,000\times 0.0045=1440\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q11">
+<div class="q__head"><span class="q__no">Q11</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>計算 \(\frac{8.4\times 10^{-6}}{2.1\times 10^{-9}}\)，並以科學記數法表示答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q11-sol" data-target="q11-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q11-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(4\times 10^{3}\)</div>
+<ol class="steps">
+<li>先把數字相除：\(8.4\div 2.1=4\)。</li><li>再把指數相減：\(10^{-6}\div 10^{-9}=10^{-6-(-9)}=10^{3}\)。</li><li>所以商是 \(4\times 10^{3}\)，即 4000。</li><li>驗算：\(4\times 10^{3}\times 2.1\times 10^{-9}=8.4\times 10^{-6}\)。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>做除法時把指數相加 —— 除法要相減，所以 \(-6-(-9)=+3\)，不是 \(-15\)。</p></div>
+</div>
+</article>
+
+<article class="q" id="q12">
+<div class="q__head"><span class="q__no">Q12</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某城市的人口約為 \(5\times 10^{8}\)，某鎮的人口約為 \(2\times 10^{5}\)。城市人口是該鎮人口的多少倍？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q12-sol" data-target="q12-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q12-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>2500 倍</div>
+<ol class="steps">
+<li>所求的倍數 \(=\frac{5\times 10^{8}}{2\times 10^{5}}\)。</li><li>數字部分：\(5\div 2=2.5\)。指數部分：\(10^{8-5}=10^{3}\)。</li><li>所以倍數是 \(2.5\times 10^{3}=2500\)。</li><li>驗算：\(2500\times 2\times 10^{5}=5000\times 10^{5}=5\times 10^{8}\)，正確。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q13">
+<div class="q__head"><span class="q__no">Q13</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span></div>
+<div class="q__body"><p>(a) 把 0.000 000 482 寫成科學記數法。<br>(b) 一個紅血球的直徑約為 \(7\times 10^{-6}\) m。要把多少個這樣的紅血球排成一列，才可橫越 \(3.5\times 10^{-2}\) m 的距離？</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q13-sol" data-target="q13-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q13-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(4.82\times 10^{-7}\)　(b) 5000 個</div>
+<ol class="steps">
+<li>(a) 第一個非零數字是 4，而小數點要移 7 位才到達 0.000 000 482，所以答案是 \(4.82\times 10^{-7}\)。</li><li>(b) 紅血球數目 \(=\frac{3.5\times 10^{-2}}{7\times 10^{-6}}\)。</li><li>數字部分：\(3.5\div 7=0.5\)。指數部分：\(10^{-2-(-6)}=10^{4}\)。</li><li>所以商是 \(0.5\times 10^{4}=5\times 10^{3}=5000\)。</li><li>驗算：\(5000\times 7\times 10^{-6}=35\,000\times 10^{-6}=3.5\times 10^{-2}\) m。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q14">
+<div class="q__head"><span class="q__no">Q14</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2022_P2_Q6.html" target="_blank" rel="noopener">歷年試題 · 2022 卷二 Q6 ↗</a></div>
+<div class="q__body"><p>一光年約為 \(9.46\times 10^{12}\) km。某顆遙遠的恒星距離地球 \(4.2\times 10^{14}\) km。<br>(a) 該恒星距離地球多少光年？以科學記數法表示，準確至 3 個有效數字。<br>(b) 光速約為 \(3.0\times 10^{5}\) km/s。該恒星的光要多少秒才到達地球？以科學記數法表示答案。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q14-sol" data-target="q14-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q14-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(4.44\times 10^{1}\) 光年　(b) \(1.4\times 10^{9}\) s</div>
+<ol class="steps">
+<li>(a) 光年數 \(=\frac{4.2\times 10^{14}}{9.46\times 10^{12}}\)。</li><li>數字部分：\(4.2\div 9.46=0.44397\ldots\)；指數部分：\(10^{14-12}=10^{2}\)。</li><li>所以距離是 \(0.44397\times 10^{2}=44.397\ldots\) 光年，即 \(4.44\times 10^{1}\)（3 個有效數字）。</li><li>(b) 時間 \(=\frac{4.2\times 10^{14}}{3.0\times 10^{5}}\) 秒。</li><li>\(4.2\div 3.0=1.4\)，而 \(10^{14-5}=10^{9}\)，所以時間是 \(1.4\times 10^{9}\) s。</li><li>驗算：\(1.4\times 10^{9}\) s 約為 \(1.4\times 10^{9}\div(3.15\times 10^{7})\approx 44\) 年，與 (a) 的結果一致。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>(a) 部答成 \(4.44\times 10^{2}\) —— 商 \(0.44397\times 10^{2}\) 必須改寫成小數點前只有一個數字。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t3">
+  <div class="type-head">
+    <div class="type-head__no">類型 3</div>
+    <h2>以 1 個有效數字估算 <span class="count">· 7 題</span></h2>
+    <p>計算前先把每個數捨入至 1 個有效數字</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>要估算一個計算，先把<i>每一個</i>數都捨入至 1 個有效數字，然後才計算。答案不要求準確 —— 只求快捷，並顯示結果的大約大小。</p><p>估算同時是驗算：若精確答案與估算相差很遠，你多半是在計算上出了錯。</p><div class="formula"><span>\(38\times 21\approx 40\times 20\)</span><span>\(\frac{4.87\times 19.3}{0.52}\approx\frac{5\times 20}{0.5}\)</span></div>
+  </div>
+<article class="q" id="q15">
+<div class="q__head"><span class="q__no">Q15</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把每個數捨入至 1 個有效數字，估算 \(38\times 21\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q15-sol" data-target="q15-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q15-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 800</div>
+<ol class="steps">
+<li>捨入至 1 個有效數字：\(38\to 40\)，\(21\to 20\)。</li><li>相乘：\(40\times 20=800\)。</li><li>與精確值 \(38\times 21=798\) 比較，非常接近，所以這個估算可靠。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q16">
+<div class="q__head"><span class="q__no">Q16</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>把每個數捨入至 1 個有效數字，估算 \(587\div 19\)。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q16-sol" data-target="q16-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q16-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 30</div>
+<ol class="steps">
+<li>捨入：\(587\to 600\)，\(19\to 20\)。</li><li>相除：\(600\div 20=30\)。</li><li>驗算：精確值約為 30.9，所以估算接近。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q17">
+<div class="q__head"><span class="q__no">Q17</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>把每個數捨入至 1 個有效數字，估算 \(\frac{4.87\times 19.3}{0.52}\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q17-sol" data-target="q17-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q17-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 200</div>
+<ol class="steps">
+<li>逐個數捨入：\(4.87\to 5\)，\(19.3\to 20\)，\(0.52\to 0.5\)。</li><li>分子：\(5\times 20=100\)。</li><li>相除：\(100\div 0.5=200\)。</li><li>驗算：除以 0.5 等於把分子加倍，所以估算值 200 合理；精確值約為 181。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 0.52 捨入成 1 而不是 0.5 —— 小於 1 的數，其唯一一個有效數字就是第一個非零數字，這裏是十分位上的 5。</p></div>
+</div>
+</article>
+
+<article class="q" id="q18">
+<div class="q__head"><span class="q__no">Q18</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>估算 \(\frac{0.613\times 47.2}{8.9}\) 的值，答案準確至 1 個小數位。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q18-sol" data-target="q18-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q18-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 3.3</div>
+<ol class="steps">
+<li>捨入：\(0.613\to 0.6\)，\(47.2\to 50\)，\(8.9\to 9\)。</li><li>分子：\(0.6\times 50=30\)。</li><li>相除：\(30\div 9=3.333\ldots\)，所以估算是 3.3（1 個小數位）。</li><li>驗算：精確值約為 3.25，與估算接近。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q19">
+<div class="q__head"><span class="q__no">Q19</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>估算 \(\frac{(2.98)^{2}\times 41}{0.198}\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q19-sol" data-target="q19-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q19-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 1800</div>
+<ol class="steps">
+<li>把每個數捨入至 1 個有效數字：\(2.98\to 3\)，\(41\to 40\)，\(0.198\to 0.2\)。</li><li>平方：\(3^{2}=9\)。</li><li>分子：\(9\times 40=360\)。</li><li>相除：\(360\div 0.2=1800\)。</li><li>驗算：除以 0.2 等於乘以 5，而 \(360\times 5=1800\)。精確值為 \(\frac{8.8804\times 41}{0.198}\approx 1839\)，所以估算的誤差約在 2% 以內。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q20">
+<div class="q__head"><span class="q__no">Q20</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個水箱呈長方體形，尺寸為 1.98 m、0.51 m 及 1.02 m。<br>(a) 把每個尺寸捨入至 1 個有效數字，估算它的體積。<br>(b) 精確體積約為 1.03 m³。試評述你的估算。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q20-sol" data-target="q20-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q20-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 約 1 m³　(b) 估算誤差約在 3% 以內 —— 作為快速核算可以接受</div>
+<ol class="steps">
+<li>(a) \(1.98\to 2\)，\(0.51\to 0.5\)，\(1.02\to 1\)。</li><li>體積 \(\approx 2\times 0.5\times 1=1\) m³。</li><li>(b) 百分差 \(=\frac{1.03-1}{1.03}\times 100\%\approx 2.9\%\)。</li><li>所以估算比精確值低約 3%，完全在 1 個有效數字估算應有的準確度範圍之內。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 0.51 捨入成 1 而不是 0.5 —— 0.51 的第一個有效數字是 5，位於十分位。</p></div>
+</div>
+</article>
+
+<article class="q" id="q21">
+<div class="q__head"><span class="q__no">Q21</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2020_P2_Q14.html" target="_blank" rel="noopener">歷年試題 · 2020 卷二 Q14 ↗</a></div>
+<div class="q__body"><p>把每個係數捨入至 1 個有效數字，估算 \(\frac{(6.2\times 10^{5})(3.9\times 10^{-2})}{1.9\times 10^{3}}\) 的值。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q21-sol" data-target="q21-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q21-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>約 12</div>
+<ol class="steps">
+<li>只把係數捨入：\(6.2\to 6\)，\(3.9\to 4\)，\(1.9\to 2\)。10 的冪是準確值，保持不變。</li><li>分子：\(6\times 4\times 10^{5}\times 10^{-2}=24\times 10^{3}\)。</li><li>相除：\(\frac{24\times 10^{3}}{2\times 10^{3}}=\frac{24}{2}\times 10^{0}=12\)。</li><li>驗算：\(12\times 1.9\times 10^{3}\approx 2.28\times 10^{4}\)，而精確的分子是 \(2.418\times 10^{4}\)，所以估算合理。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>連 10 的冪也捨入（\(10^{5}\to 10^{5}\)、\(10^{-2}\to 10^{0}\)）：只有係數要捨入至 1 個有效數字；改動指數會完全改變答案的大小。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t4">
+  <div class="type-head">
+    <div class="type-head__no">類型 4</div>
+    <h2>絕對誤差與最大絕對誤差 <span class="count">· 7 題</span></h2>
+    <p>量度的誤差、捨入單位的一半</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>絕對誤差 \(=\) 量度值 \(-\) 真值，所以它與該量度有相同的單位。若量度是捨入至最接近的單位 \(u\)，則<i>最大絕對誤差</i>為 \(\frac{u}{2}\)，因為真值與量度值最多只可相差半個單位。</p><p>由所給的準確度讀出捨入單位：準確至最接近的 cm 即 \(u=1\) cm；準確至 2 個小數位即 \(u=0.01\)。</p><div class="formula"><span>\(\text{絕對誤差}=|\text{量度值}-\text{真值}|\)</span><span>\(\text{最大絕對誤差}=\frac{u}{2}\)</span></div>
+  </div>
+<article class="q" id="q22">
+<div class="q__head"><span class="q__no">Q22</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一支鉛筆量得長 24 cm，準確至最接近的 cm。求這個量度的最大絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q22-sol" data-target="q22-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q22-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>0.5 cm</div>
+<ol class="steps">
+<li>捨入單位是 1 cm（最接近的 cm）。</li><li>最大絕對誤差 \(=\frac{1}{2}=0.5\) cm。</li><li>所以真實長度介乎 23.5 cm 與 24.5 cm 之間。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q23">
+<div class="q__head"><span class="q__no">Q23</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一袋蘋果的質量為 3.6 kg，準確至最接近的 0.1 kg。求最大絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q23-sol" data-target="q23-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q23-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>0.05 kg</div>
+<ol class="steps">
+<li>捨入單位是 0.1 kg。</li><li>最大絕對誤差 \(=\frac{0.1}{2}=0.05\) kg。</li><li>驗算：真實質量介乎 3.55 kg 與 3.65 kg 之間，兩端與 3.6 kg 都相差 0.05 kg。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q24">
+<div class="q__head"><span class="q__no">Q24</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個秒錶記錄跑手的時間為 45 s，準確至最接近的 5 s。<br>(a) 求最大絕對誤差。<br>(b) 寫出真實時間可能值的範圍。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q24-sol" data-target="q24-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q24-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 2.5 s　(b) \(42.5\le t&lt;47.5\)</div>
+<ol class="steps">
+<li>(a) 捨入單位是 5 s，所以最大絕對誤差是 \(\frac{5}{2}=2.5\) s。</li><li>(b) 真實時間最多可比 45 s 少 2.5 s 或多 2.5 s：\(45-2.5=42.5\)，\(45+2.5=47.5\)。</li><li>因此 \(42.5\le t&lt;47.5\) 秒（上端不包含，因為 47.5 s 會進位成 50 s）。</li><li>驗算：44 s 在區間之內，並捨入成 45 s，符合要求。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 5 s 當作最大絕對誤差 —— 5 s 只是捨入單位，讀數與真值最多只可相差半個單位。</p></div>
+</div>
+</article>
+
+<article class="q" id="q25">
+<div class="q__head"><span class="q__no">Q25</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某學生記錄一種化學品的質量為 260 g，但真實質量是 258 g。<br>(a) 求這個記錄的絕對誤差。<br>(b) 若天平的讀數準確至最接近的 10 g，求最大絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q25-sol" data-target="q25-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q25-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 2 g　(b) 5 g</div>
+<ol class="steps">
+<li>(a) 絕對誤差 \(=260-258=2\) g。</li><li>(b) 捨入單位是 10 g，所以最大絕對誤差是 \(\frac{10}{2}=5\) g。</li><li>驗算：記錄的 260 g 與 255 g 至 265 g 之間任何真實質量都相符，而 258 g 正在這個範圍之內。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q26">
+<div class="q__head"><span class="q__no">Q26</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一根桿長 63 cm，準確至最接近的 cm。<br>(a) 求最大絕對誤差。<br>(b) 寫出其真實長度 \(L\) 可能值的區間。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q26-sol" data-target="q26-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q26-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.5 cm　(b) \(62.5\le L&lt;63.5\)</div>
+<ol class="steps">
+<li>(a) 捨入單位 \(=1\) cm，所以最大絕對誤差 \(=\frac{1}{2}=0.5\) cm。</li><li>(b) \(63-0.5=62.5\)，\(63+0.5=63.5\)。</li><li>因此 \(62.5\le L&lt;63.5\) cm。</li><li>驗算：區間內每個值都捨入成 63 cm，而 63.5 cm 會捨入成 64 cm，所以不包含在內。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q27">
+<div class="q__head"><span class="q__no">Q27</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2019_P2_Q6.html" target="_blank" rel="noopener">歷年試題 · 2019 卷二 Q6 ↗</a></div>
+<div class="q__body"><p>一包糖的標籤為 1.5 kg，準確至 2 個有效數字。<br>(a) 寫出捨入單位，並由此求最大絕對誤差。<br>(b) 求可能質量的區間。<br>(c) 求 3 包這種糖的總質量的最大絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q27-sol" data-target="q27-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q27-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.1 kg，即 0.05 kg　(b) \(1.45\le m&lt;1.55\)　(c) 0.15 kg</div>
+<ol class="steps">
+<li>(a) 1.5 kg 有 2 個有效數字，所以是捨入至最接近的 0.1 kg。最大絕對誤差 \(=\frac{0.1}{2}=0.05\) kg。</li><li>(b) \(1.5-0.05=1.45\)，\(1.5+0.05=1.55\)，所以 \(1.45\le m&lt;1.55\) kg。</li><li>(c) 每包最多可相差 0.05 kg，所以 3 包最多可相差 \(3\times 0.05=0.15\) kg。</li><li>驗算：最大可能的總質量是 \(3\times 1.55=4.65\) kg，最小是 \(3\times 1.45=4.35\) kg；兩端與 \(3\times 1.5=4.5\) kg 都相差 0.15 kg。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>正確判斷 1.5 kg 是準確至最接近的 0.1 kg，卻仍用 0.1 kg 作為誤差；或忘記把各量合併時誤差會相加。</p></div>
+</div>
+</article>
+
+<article class="q" id="q28">
+<div class="q__head"><span class="q__no">Q28</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一個長方形田地量得 40 m × 25 m，每個長度均準確至最接近的 m。<br>(a) 求每個量度的最大絕對誤差。<br>(b) 求周界最大及最小可能值。<br>(c) 求周界的最大絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q28-sol" data-target="q28-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q28-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.5 m　(b) 132 m 及 128 m　(c) 2 m</div>
+<ol class="steps">
+<li>(a) 每個長度都捨入至最接近的 1 m，所以最大絕對誤差是 0.5 m。</li><li>(b) 量得的周界 \(=2(40+25)=130\) m。</li><li>最大：\(2(40.5+25.5)=2\times 66=132\) m。最小：\(2(39.5+24.5)=2\times 64=128\) m。</li><li>(c) 最大絕對誤差 \(=132-130=130-128=2\) m。</li><li>驗算：\(2(0.5+0.5)=2\) m，數值相同 —— 四個「半米」誤差正如預期般合成。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t5">
+  <div class="type-head">
+    <div class="type-head__no">類型 5</div>
+    <h2>相對誤差與百分誤差 <span class="count">· 7 題</span></h2>
+    <p>比較誤差、量度的百分誤差</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>相對誤差 \(=\frac{\text{絕對誤差}}{\text{真值}}\)，所以它沒有單位，可讓不同量的誤差公平比較。百分誤差就是把相對誤差寫成百分數。</p><p>當真值未知時，把最大絕對誤差除以量度值，便得最大相對誤差。</p><div class="formula"><span>\(\text{相對誤差}=\frac{\text{絕對誤差}}{\text{真值}}\)</span><span>\(\text{百分誤差}=\text{相對誤差}\times 100\%\)</span></div>
+  </div>
+<article class="q" id="q29">
+<div class="q__head"><span class="q__no">Q29</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>店員估計一個箱可裝 48 瓶，但實際上可裝 50 瓶。<br>(a) 求絕對誤差。<br>(b) 求百分誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q29-sol" data-target="q29-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q29-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 2 瓶　(b) 4%</div>
+<ol class="steps">
+<li>(a) 絕對誤差 \(=|48-50|=2\) 瓶。</li><li>(b) 相對誤差 \(=\frac{2}{50}=0.04\)。</li><li>百分誤差 \(=0.04\times 100\%=4\%\)。</li><li>驗算：50 的 \(4\%\) 是 2，正是絕對誤差。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>除以估算值（48）而不是真值（50）。定義中的分母是<i>真值</i>。</p></div>
+</div>
+</article>
+
+<article class="q" id="q30">
+<div class="q__head"><span class="q__no">Q30</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個層架量得寬 80 cm，準確至最接近的 cm。求這個量度的最大百分誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q30-sol" data-target="q30-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q30-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>0.625%</div>
+<ol class="steps">
+<li>最大絕對誤差 \(=\frac{1}{2}=0.5\) cm。</li><li>最大相對誤差 \(=\frac{0.5}{80}=0.00625\)。</li><li>百分誤差 \(=0.00625\times 100\%=0.625\%\)。</li><li>驗算：80 cm 的 \(0.625\%\) 是 0.5 cm。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q31">
+<div class="q__head"><span class="q__no">Q31</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一袋馬鈴薯的質量為 4.8 kg，準確至最接近的 0.1 kg。求最大百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q31-sol" data-target="q31-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q31-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>1.04%</div>
+<ol class="steps">
+<li>捨入單位 \(=0.1\) kg，所以最大絕對誤差 \(=\frac{0.1}{2}=0.05\) kg。</li><li>最大相對誤差 \(=\frac{0.05}{4.8}\)。</li><li>\(\frac{0.05}{4.8}=0.0104166\ldots\)</li><li>百分誤差 \(=0.0104166\ldots\times 100\%=1.04166\ldots\%\)，即 1.04%（3 個有效數字）。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q32">
+<div class="q__head"><span class="q__no">Q32</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某學生估計一個瓶的容量為 250 mL。真實容量是 240 mL。求百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q32-sol" data-target="q32-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q32-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>4.17%</div>
+<ol class="steps">
+<li>絕對誤差 \(=|250-240|=10\) mL。</li><li>真值是 240 mL，所以相對誤差 \(=\frac{10}{240}\)。</li><li>\(\frac{10}{240}=0.041666\ldots\)</li><li>百分誤差 \(=4.1666\ldots\%\)，即 4.17%（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 250 作分母而得出 4.00%。分母必須是真值 240 mL。</p></div>
+</div>
+</article>
+
+<article class="q" id="q33">
+<div class="q__head"><span class="q__no">Q33</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一幅比例圖上，圓形池塘的直徑量得 12 cm，準確至最接近的 cm。<br>(a) 求直徑的最大絕對誤差。<br>(b) 求直徑的最大百分誤差。<br>(c) 周界以 \(\pi\times\) 直徑計算。求周界的最大百分誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q33-sol" data-target="q33-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q33-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.5 cm　(b) 4.17%　(c) 4.17%</div>
+<ol class="steps">
+<li>(a) 最大絕對誤差 \(=\frac{1}{2}=0.5\) cm。</li><li>(b) \(\frac{0.5}{12}=0.041666\ldots\)，所以最大百分誤差是 4.17%（3 個有效數字）。</li><li>(c) 周界 \(C=\pi d\)，即 \(C\) 是 \(d\) 的常數倍。每個 \(C\) 值都乘以同一個常數，所以相對誤差不變。</li><li>示範：最大 \(C=12.5\pi\)，最小 \(C=11.5\pi\)，真值 \(C=12\pi\)。則 \(\frac{12.5\pi-12\pi}{12\pi}=\frac{0.5}{12}=4.17\%\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q34">
+<div class="q__head"><span class="q__no">Q34</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2015_P2_Q4.html" target="_blank" rel="noopener">歷年試題 · 2015 卷二 Q4 ↗</a></div>
+<div class="q__body"><p>一個秒錶顯示時間為 3.4 s，準確至 1 個小數位。求這個時間的最大百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q34-sol" data-target="q34-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q34-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>1.47%</div>
+<ol class="steps">
+<li>準確至 1 個小數位，即捨入單位是 0.1 s。</li><li>最大絕對誤差 \(=\frac{0.1}{2}=0.05\) s。</li><li>最大相對誤差 \(=\frac{0.05}{3.4}=0.0147058\ldots\)</li><li>百分誤差 \(=1.47058\ldots\%\)，即 1.47%（3 個有效數字）。</li><li>驗算：3.4 s 的 \(1.47\%\) 約為 0.05 s。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q35">
+<div class="q__head"><span class="q__no">Q35</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一個長方形量得 8 cm × 5 cm，每個長度均準確至最接近的 cm。<br>(a) 求最大可能面積。<br>(b) 求面積的最大百分誤差，準確至 3 個有效數字。<br>(c) 求最小可能面積及其百分誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q35-sol" data-target="q35-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q35-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 46.75 cm²　(b) 16.9%　(c) 33.75 cm²，15.6%</div>
+<ol class="steps">
+<li>每個長度最多可相差 0.5 cm：最大尺寸是 8.5 cm 與 5.5 cm，最小是 7.5 cm 與 4.5 cm。</li><li>量得的面積 \(=8\times 5=40\) cm²。</li><li>(a) 最大面積 \(=8.5\times 5.5=46.75\) cm²。</li><li>(b) 誤差 \(=46.75-40=6.75\) cm²，所以百分誤差是 \(\frac{6.75}{40}\times 100\%=16.875\%\)，即 16.9%（3 個有效數字）。</li><li>(c) 最小面積 \(=7.5\times 4.5=33.75\) cm²；誤差 \(=40-33.75=6.25\) cm²，得 \(\frac{6.25}{40}\times 100\%=15.625\%\)，即 15.6%。</li><li>所以最大百分誤差取兩者中較大者，即 16.9%。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把兩條邊的百分誤差相加（\(6.25\%+10\%\)）就停手 —— 那只是近似值；應直接計算上下限的面積。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t6">
+  <div class="type-head">
+    <div class="type-head__no">類型 6</div>
+    <h2>量度區間、上限與下限 <span class="count">· 7 題</span></h2>
+    <p>區間、和、積與商的上下限</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>一個量度 \(x\) 若捨入至最接近的單位 \(u\)，則真值滿足 \(x-\frac{u}{2}\le \text{真值}&lt;x+\frac{u}{2}\)。下限包含在內，上限則不包含。</p><p>至於組合：和的上限取各上限；差的上限取「上限減下限」；正量的積，上限取「上限 × 上限」；商的上限取「上限 ÷ 下限」。</p><div class="formula"><span>\(\text{下限}=x-\frac{u}{2},\ \text{上限}=x+\frac{u}{2}\)</span><span>\(\text{上限}(a-b)=\text{上限}(a)-\text{下限}(b)\)</span><span>\(\text{上限}\left(\frac{a}{b}\right)=\frac{\text{上限}(a)}{\text{下限}(b)}\)</span></div>
+  </div>
+<article class="q" id="q36">
+<div class="q__head"><span class="q__no">Q36</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一條繩長 5.4 cm，準確至 1 個小數位。寫出其真實長度 \(x\) 可能值的區間。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q36-sol" data-target="q36-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q36-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(5.35\le x&lt;5.45\)</div>
+<ol class="steps">
+<li>準確至 1 個小數位，即捨入單位是 0.1 cm。</li><li>最大絕對誤差 \(=\frac{0.1}{2}=0.05\) cm。</li><li>下限 \(=5.4-0.05=5.35\)；上限 \(=5.4+0.05=5.45\)。</li><li>因此 \(5.35\le x&lt;5.45\) cm。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q37">
+<div class="q__head"><span class="q__no">Q37</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">2 分</span></div>
+<div class="q__body"><p>一個包裹的質量為 320 g，準確至 2 個有效數字。求可能質量 \(m\) 的區間。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q37-sol" data-target="q37-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q37-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(315\le m&lt;325\)</div>
+<ol class="steps">
+<li>320 g 取 2 個有效數字，即捨入至最接近的 10 g，所以捨入單位是 10 g。</li><li>最大絕對誤差 \(=\frac{10}{2}=5\) g。</li><li>下限 \(=320-5=315\) g；上限 \(=320+5=325\) g。</li><li>因此 \(315\le m&lt;325\) g。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>因為數字以 0 結尾就用 1 g 作捨入單位 —— 取 2 個有效數字時，準確度是最接近的 10 g。</p></div>
+</div>
+</article>
+
+<article class="q" id="q38">
+<div class="q__head"><span class="q__no">Q38</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一項賽跑計時為 12.5 s，準確至 3 個有效數字。求真實時間 \(t\) 的下限與上限。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q38-sol" data-target="q38-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q38-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>\(12.45\le t&lt;12.55\)</div>
+<ol class="steps">
+<li>12.5 有 3 個有效數字，即捨入至最接近的 0.1 s。</li><li>最大絕對誤差 \(=\frac{0.1}{2}=0.05\) s。</li><li>下限 \(=12.5-0.05=12.45\)；上限 \(=12.5+0.05=12.55\)。</li><li>因此 \(12.45\le t&lt;12.55\) s。</li><li>驗算：12.52 s 在區間之內，並捨入成 12.5 s。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q39">
+<div class="q__head"><span class="q__no">Q39</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>某數 \(x\) 給出為 7，準確至 1 個有效數字。<br>(a) 寫出 \(x\) 可能值的區間。<br>(b) 求 \(2x+1\) 的上限。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q39-sol" data-target="q39-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q39-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(6.5\le x&lt;7.5\)　(b) 16</div>
+<ol class="steps">
+<li>(a) 7 取 1 個有效數字，即捨入至最接近的 1，所以最大絕對誤差是 0.5。因此 \(6.5\le x&lt;7.5\)。</li><li>(b) \(2x+1\) 隨 \(x\) 增大而增大，所以最大值來自最大的 \(x\)。</li><li>取 \(x=7.5\)：\(2(7.5)+1=16\)。</li><li>所以 \(2x+1\) 的上限是 16（由於 \(x&lt;7.5\)，此值不能達到）。</li><li>用下限驗算：\(x=6.5\) 時得 14，整個式的取值範圍為 \([14,16)\)。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q40">
+<div class="q__head"><span class="q__no">Q40</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個包裹的質量為 4.6 kg，準確至最接近的 0.1 kg。五個這樣的包裹放上一架手推車。<br>(a) 求五個包裹總質量的上限。<br>(b) 求總質量的下限。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q40-sol" data-target="q40-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q40-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 23.25 kg　(b) 22.75 kg</div>
+<ol class="steps">
+<li>每個質量 \(m\) 滿足 \(4.55\le m&lt;4.65\)。</li><li>(a) 總質量的上限 \(=5\times 4.65=23.25\) kg。</li><li>(b) 總質量的下限 \(=5\times 4.55=22.75\) kg。</li><li>驗算：中間值 \(5\times 4.6=23\) kg 位於上下限之間，與兩者各相差 0.25 kg。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q41">
+<div class="q__head"><span class="q__no">Q41</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">5 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2018_P2_Q14.html" target="_blank" rel="noopener">歷年試題 · 2018 卷二 Q14 ↗</a></div>
+<div class="q__body"><p>兩個數給出為 \(x=3.6\) 及 \(y=8.2\)，均準確至 2 個有效數字。<br>(a) 寫出 \(x\) 的上限與 \(y\) 的下限。<br>(b) 由此求 \(\frac{x}{y}\) 的上限，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q41-sol" data-target="q41-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q41-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) \(\text{上限}(x)=3.65\)，\(\text{下限}(y)=8.15\)　(b) 0.448</div>
+<ol class="steps">
+<li>每個數都捨入至最接近的 0.1，所以每個數最多可相差 0.05。</li><li>(a) \(\text{上限}(x)=3.6+0.05=3.65\)，\(\text{下限}(y)=8.2-0.05=8.15\)。</li><li>(b) 分數在分子最大、分母最小時最大：\(\frac{x}{y}\le\frac{3.65}{8.15}\)。</li><li>\(\frac{3.65}{8.15}=0.44785\ldots\)</li><li>所以上限是 0.448（3 個有效數字）。</li><li>驗算：結果略高於中心值 \(\frac{3.6}{8.2}=0.439\)，這是必然的。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\text{上限}(y)\) 作分母 —— 除以最大可能的 \(y\) 只會得出<i>最小</i>的商。</p></div>
+</div>
+</article>
+
+<article class="q" id="q42">
+<div class="q__head"><span class="q__no">Q42</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span></div>
+<div class="q__body"><p>一張長方形卡紙量得 15 cm × 9 cm，每個長度均準確至最接近的 cm。<br>(a) 求其面積的下限與上限。<br>(b) 求面積的最大絕對誤差。<br>(c) 說明面積 150 cm² 是否可能。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q42-sol" data-target="q42-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q42-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 123.25 cm² 與 147.25 cm²　(b) 12.25 cm²　(c) 不可能，150 cm² 不會出現</div>
+<ol class="steps">
+<li>每個長度最多可相差 0.5 cm：\(14.5\le l&lt;15.5\)，\(8.5\le w&lt;9.5\)。</li><li>(a) 面積下限 \(=14.5\times 8.5=123.25\) cm²；上限 \(=15.5\times 9.5=147.25\) cm²。</li><li>(b) 量得的面積 \(=15\times 9=135\) cm²。誤差：\(147.25-135=12.25\) 及 \(135-123.25=11.75\)，所以最大絕對誤差是 12.25 cm²。</li><li>(c) 由於最大可能面積是 147.25 cm²，面積 150 cm² 不可能出現。</li><li>驗算：\(147.25&gt;135&gt;123.25\)，量得的面積必在自己的上下限之內，符合預期。</li>
+</ol>
+
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+<section class="type-section" id="t7">
+  <div class="type-head">
+    <div class="type-head__no">類型 7</div>
+    <h2>計算量的誤差與適當準確度 <span class="count">· 8 題</span></h2>
+    <p>誤差傳入面積、體積與速率；選擇準確度</p>
+  </div>
+  <div class="concept">
+<p><b>核心概念：</b>量度合併時，誤差也一併合併。要把各量度取極值來計算該量：最大的答案用最大的分子值與最小的分母值，反之亦然。</p><p>答案的準確度不會高於最不準確的那個量度，所以不要寫出比數據所能支持更多的有效數字。</p><div class="formula"><span>\(A_{\max}=(x+\tfrac{u}{2})^{2}\)</span><span>\(\text{上限}(ab)=\text{上限}(a)\times\text{上限}(b)\)</span><span>\(\text{上限}\left(\frac{a}{b}\right)=\frac{\text{上限}(a)}{\text{下限}(b)}\)</span></div>
+  </div>
+<article class="q" id="q43">
+<div class="q__head"><span class="q__no">Q43</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一間書店售出 198 本書，每本 $48。<br>(a) 把每個數捨入至 1 個有效數字，估算總收入。<br>(b) 求確切收入，以及你估算值的絕對誤差。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q43-sol" data-target="q43-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q43-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) $10 000　(b) $9504，誤差 $496</div>
+<ol class="steps">
+<li>(a) \(198\to 200\)，\(48\to 50\)，所以估算是 \(200\times 50=10\,000\) 元。</li><li>(b) 確切收入 \(=198\times 48\)。</li><li>\(198\times 48=198\times(50-2)=9900-396=9504\)。</li><li>絕對誤差 \(=10\,000-9504=496\)，約為真值的 5%。</li><li>所以估算的方向正確，但絕不可當作實際收入引用。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把 48 捨入成 40 —— 捨入至 1 個有效數字是取<i>最接近</i>的那個值，而 48 較接近 50 而非 40。</p></div>
+</div>
+</article>
+
+<article class="q" id="q44">
+<div class="q__head"><span class="q__no">Q44</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一塊正方形瓷磚的邊長為 6 cm，準確至最接近的 cm。<br>(a) 求其面積的下限。<br>(b) 求其面積的上限。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q44-sol" data-target="q44-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q44-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 30.25 cm²　(b) 42.25 cm²</div>
+<ol class="steps">
+<li>邊長 \(s\) 滿足 \(5.5\le s&lt;6.5\)。</li><li>(a) 面積下限 \(=5.5^{2}=30.25\) cm²。</li><li>(b) 面積上限 \(=6.5^{2}=42.25\) cm²。</li><li>驗算：量得的面積是 \(36\) cm²，位於上下限之間。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q45">
+<div class="q__head"><span class="q__no">Q45</span><span class="q__stars" title="難度 1/4"><span>★</span><span class="off">☆</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">3 分</span></div>
+<div class="q__body"><p>一個水壺盛水 2.4 L，準確至 1 個小數位。<br>(a) 求最大可能的體積（以 L 為單位）。<br>(b) 把這個最大體積化為 mL。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q45-sol" data-target="q45-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q45-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 2.45 L　(b) 2450 mL</div>
+<ol class="steps">
+<li>捨入單位是 0.1 L，所以最大絕對誤差是 0.05 L。</li><li>(a) 最大體積 \(=2.4+0.05=2.45\) L。</li><li>(b) \(1\text{ L}=1000\text{ mL}\)，所以 \(2.45\times 1000=2450\) mL。</li><li>驗算：體積若達 2.45 L 或以上便會進位成 2.5 L，所以真實體積必須小於 2.45 L。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q46">
+<div class="q__head"><span class="q__no">Q46</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一個金屬立方體的邊長為 4 cm，準確至最接近的 cm。求其體積的下限與上限。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q46-sol" data-target="q46-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q46-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>42.875 cm³ 與 91.125 cm³</div>
+<ol class="steps">
+<li>邊長 \(e\) 滿足 \(3.5\le e&lt;4.5\)。</li><li>體積 \(=e^{3}\)。</li><li>下限 \(=3.5^{3}=3.5\times 3.5\times 3.5=12.25\times 3.5=42.875\) cm³。</li><li>上限 \(=4.5^{3}=20.25\times 4.5=91.125\) cm³。</li><li>驗算：量得的體積是 \(64\) cm³，穩妥地落在這個區間之內。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(3\times 0.5=1.5\) cm³ 作體積的誤差 —— 邊長的誤差在立方時會被放大，所以必須用極端的邊長計算上下限。</p></div>
+</div>
+</article>
+
+<article class="q" id="q47">
+<div class="q__head"><span class="q__no">Q47</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>一塊長方形告示板量得 12 cm × 7 cm，每個長度均準確至最接近的 cm。求其周界的最大百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q47-sol" data-target="q47-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q47-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>5.26%</div>
+<ol class="steps">
+<li>量得的周界 \(=2(12+7)=38\) cm。</li><li>每個長度最多可相差 0.5 cm，所以最大周界是 \(2(12.5+7.5)=40\) cm，最小是 \(2(11.5+6.5)=36\) cm。</li><li>最大絕對誤差 \(=40-38=2\) cm。</li><li>最大百分誤差 \(=\frac{2}{38}\times 100\%=5.263\ldots\%\)，即 5.26%（3 個有效數字）。</li><li>用最小周界驗算：\(38-36=2\) cm，兩個方向的誤差相同。</li>
+</ol>
+
+</div>
+</article>
+
+<article class="q" id="q48">
+<div class="q__head"><span class="q__no">Q48</span><span class="q__stars" title="難度 2/4"><span>★</span><span>★</span><span class="off">☆</span><span class="off">☆</span></span><span class="badge badge--mark">4 分</span></div>
+<div class="q__body"><p>二十顆相同的波子合共重 76 g，準確至最接近的 g。<br>(a) 估算一顆波子的質量。<br>(b) 求這個估算的最大百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q48-sol" data-target="q48-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q48-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 3.8 g　(b) 0.658%</div>
+<ol class="steps">
+<li>(a) 一顆波子的質量 \(=\frac{76}{20}=3.8\) g。</li><li>總質量準確至最接近的 g，所以其最大絕對誤差是 0.5 g。</li><li>(b) 這個誤差由 20 顆波子分擔：每顆 \(\frac{0.5}{20}=0.025\) g。</li><li>最大百分誤差 \(=\frac{0.025}{3.8}\times 100\%=0.65789\ldots\%\)，即 0.658%（3 個有效數字）。</li><li>驗算：3.8 g 的 \(0.658\%\) 約為 0.025 g，符合要求。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 0.5 g 除以 76 g —— 這個誤差屬於總質量，所以必須先除以 20，才是一顆波子的誤差。</p></div>
+</div>
+</article>
+
+<article class="q" id="q49">
+<div class="q__head"><span class="q__no">Q49</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">6 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2013_P1_Q8.html" target="_blank" rel="noopener">歷年試題 · 2013 卷一 Q8 ↗</a></div>
+<div class="q__body"><p>一個水箱呈長方體形，尺寸為 1.2 m、0.8 m 及 0.5 m，每個尺寸均準確至最接近的 0.1 m。<br>(a) 求其體積的下限。<br>(b) 求其體積的上限。<br>(c) 求體積的最大百分誤差，準確至 3 個有效數字。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q49-sol" data-target="q49-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q49-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 0.388 125 m³　(b) 0.584 375 m³　(c) 21.7%</div>
+<ol class="steps">
+<li>每個尺寸最多可相差 0.05 m：最小尺寸是 1.15、0.75、0.45，最大是 1.25、0.85、0.55。</li><li>(a) 下限 \(=1.15\times 0.75\times 0.45=0.8625\times 0.45=0.388\,125\) m³。</li><li>(b) 上限 \(=1.25\times 0.85\times 0.55=1.0625\times 0.55=0.584\,375\) m³。</li><li>(c) 量得的體積 \(=1.2\times 0.8\times 0.5=0.48\) m³。</li><li>誤差：\(0.48-0.388\,125=0.091\,875\) 及 \(0.584\,375-0.48=0.104\,375\)。</li><li>最大百分誤差 \(=\frac{0.104\,375}{0.48}\times 100\%=21.744\ldots\%\)，即 21.7%（3 個有效數字）。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>把三個 0.05 m 的誤差當作百分數相加（約 4% + 6% + 10%）—— 只要把極端尺寸相乘，就能準確求出真正的上下限。</p></div>
+</div>
+</article>
+
+<article class="q" id="q50">
+<div class="q__head"><span class="q__no">Q50</span><span class="q__stars" title="難度 3/4"><span>★</span><span>★</span><span>★</span><span class="off">☆</span></span><span class="badge badge--mark">7 分</span><a class="q__src" href="https://tyhcch1234.github.io/HKDSE-Maths-Solutions/2014_P2_Q11.html" target="_blank" rel="noopener">歷年試題 · 2014 卷二 Q11 ↗</a></div>
+<div class="q__body"><p>一輛汽車行駛 240 km，準確至最接近的 10 km，所用時間為 3.0 h，準確至最接近的 0.1 h。<br>(a) 寫出距離的上限與下限。<br>(b) 求平均速率的上限，準確至 3 個有效數字。<br>(c) 求平均速率的下限，準確至 3 個有效數字。<br>(d) 真實平均速率有可能是 84 km/h 嗎？試解釋。</p></div>
+<button class="q__toggle" aria-expanded="false" aria-controls="q50-sol" data-target="q50-sol">顯示答案及詳解</button>
+<div class="q__sol tex2jax_ignore" id="q50-sol" hidden>
+<div class="answer"><span class="answer__label">答案</span>(a) 235 km 與 245 km　(b) 83.1 km/h　(c) 77.0 km/h　(d) 不可能</div>
+<ol class="steps">
+<li>(a) 距離捨入至最接近的 10 km，所以半個單位是 5 km：\(235\le d&lt;245\)。</li><li>時間捨入至最接近的 0.1 h，所以半個單位是 0.05 h：\(2.95\le t&lt;3.05\)。</li><li>(b) 距離最大、時間最小時速率最大：\(\frac{245}{2.95}=83.0508\ldots\) km/h，即 83.1 km/h（3 個有效數字）。</li><li>(c) 距離最小、時間最大時速率最小：\(\frac{235}{3.05}=77.0492\ldots\) km/h，即 77.0 km/h（3 個有效數字）。</li><li>(d) 最大可能平均速率為 83.05… km/h，小於 84 km/h，所以 84 km/h 不可能。</li><li>驗算：中心值 \(\frac{240}{3}=80\) km/h 位於 77.0 與 83.1 之間，符合預期。</li>
+</ol>
+<div class="hint"><span class="hint__label">常犯錯誤</span><p>用 \(\frac{245}{3.05}\) 求上限 —— 最大的商需要<i>最小</i>的分母。</p></div>
+</div>
+</article>
+
+  <div class="type-foot"><a href="#top">↑ 返回目錄</a></div>
+</section>
+
+
+  <footer class="footer">
+    <p>香港中學文憑試 數學（必修部分）· 估算、近似與誤差 — 7 種題型，50 題練習</p>
+    <p><a href="DSE_Maths_By_Topic.html">按課題索引</a> · <a href="index.html">按年份索引</a> · 題目改編自 2012–2026 年 DSE；詳解供教學使用。</p>
+  </footer>
+</div>
+<script src="assets/cn.js"></script>
+</body>
+</html>
